@@ -46,6 +46,74 @@ $('.jq-ph-box input').each( function(){
   }
 });
 /*========================================================================
+  load common parts　
+======================================================================== */
+// var navType = $('body').attr('id');
+
+// //nav type
+// if( navType === 'nav-type00'){
+//   var pageUrl = ['header.html', 'footer.html', 'nav-00.html', 'components.html'];
+// }
+
+// //get parts
+// for( var i = 0; i < pageUrl.length; i++){
+//   function pageGet(i){
+//     var urlList = pageUrl[i];
+//     $.ajax({
+//       type: 'GET',
+//       url: urlList,
+//       dataType: 'html',
+//       timeout: 20000,
+//       success: function(html){
+//         //ｈｔｍｌ
+//         if( i === 0){$('.jq-load-header').html(html);}
+//         if( i === 1){$('.jq-load-footer').html(html);}
+//         if( i === 2){$('.jq-load-nav').html(html);}
+//         if( i === 3){$('.jq-load-components').html(html);}
+//       },
+//       error: function(){
+//           //error 
+//       }
+//     });
+//   }
+//   pageGet(i);
+// }
+/*========================================================================
+  [return] return targetClass
+======================================================================== */
+// function thisClassGet(clickThis, returnClass){
+//   //get class
+//   var thisClass = $(clickThis).attr('class');
+//   //split class　
+//   thisClass = thisClass.split(" ");
+//   //return class
+//   var thisClass = $.grep(thisClass, function(value, index) {
+//     return value.indexOf(returnClass) >= 0;
+//   });
+//   var targetClass = '.' + thisClass;
+//   //console.log(targetClass);
+//   return targetClass;
+// }
+/*========================================================================
+   same label
+======================================================================== */
+//click target
+// $( '.jq-label-same-table td, .jq-label-same-table th' ).on({
+//   'mouseenter': function(){
+//     //this
+//     var clickThis = $(this);
+//     //return class
+//     var returnClass = 'jq-same-';
+//     //target class
+//     var targetClass = thisClassGet(clickThis, returnClass);
+//     $(targetClass).addClass('is-focus');
+//   },
+//   'mouseleave': function(parentClass){
+//     //delete class
+//     $(this).parents('.jq-label-same-table').find('.is-focus').removeClass('is-focus');
+//   }
+// });
+/*========================================================================
 	Login
 ======================================================================== */
 // var userId = $('#userId');
@@ -194,39 +262,77 @@ function toolTipOn(target){
 /*========================================================================
   popup
 ======================================================================== */
-$('.jq-popup-open').on('click', function(){
-  var windowWidth = $(window).outerWidth(true);
-  var popupPosi = $(this).position();
-  var topPosi = popupPosi.top + 25;
-  var thisWidth = $(this).width();
-  var rightPosi = windowWidth - popupPosi.left - thisWidth + 10;
-  var id = '.jq-popup-content1';
-  var clicker = $(this).children('.jq-clickable');
-  popupMenuOn(topPosi, rightPosi, id, clicker);
-});
+// $('body').on('click', '.jq-popup-open', function(){
+//   var windowWidth = $(window).outerWidth(true);
+//   var popupPosi = $(this).offset();
+//   var topPosi = popupPosi.top + 25;
+//       topPosi = topPosi - 90; //header height
+//   var thisWidth = $(this).width();
+//   var rightPosi = windowWidth - popupPosi.left - thisWidth + 7;
+//   //this
+//   var clickThis = $(this);
+//   //return class
+//   var returnClass = 'jq-popup-num';
+//   //target class
+//   var targetClass = thisClassGet(clickThis, returnClass);
 
-function popupMenuOn(topPosi, rightPosi, id, clicker){
-  //コンテンツの表示
-  $('.jq-popup-changer').removeClass('current');
-  $(id).addClass('current');
+//   var clicker = $(this).children('.jq-clickable');
+//   popupMenuOn(topPosi, rightPosi, targetClass, clicker);
+// });
 
-  //ポップアップの座標
-  $('.jq-popup-posi').css({
-    top: topPosi,
-    right: rightPosi
-  });
-  //ポップアップ表示
-  $('.jq-popup').show(300);
+// function popupMenuOn(topPosi, rightPosi, targetClass, clicker){
+//   //show contents
+//   $('.jq-popup-posi').removeClass('is-current');
+//   $('.jq-popup').children(targetClass).addClass('is-current');
 
-  //背景のカーテンも一緒に表示
-  $('.jq-cartain').show();
+//   //position
+//   $('.jq-popup-posi').css({
+//     top:'',
+//     left:'',
+//     right:''
+//   }).css({
+//     top: topPosi,
+//     right: rightPosi
+//   });
+//   //show popup
+//   $('.jq-popup').show(300);
 
-  //閉じるボタン
-  $('.jq-popup-close, .jq-cartain').on('click', function(){
-    $('.jq-popup').hide(300);
-    $('.jq-cartain').hide();
-  });
-};
+//   //show cartain
+//   $('.jq-cartain').show();
+
+//   //click close button
+//   $('.jq-popup-close, .jq-cartain').on('click', function(){
+//     $('.jq-popup').hide(300);
+//     $('.jq-cartain').hide();
+//   });
+// };
+/*========================================================================
+  modal 
+======================================================================== */
+// $('body').on('click', '.jq-modal-open', function(){
+//   //this
+//   var clickThis = $(this);
+//   //return class
+//   var returnClass = 'jq-modal-num';
+//   //target class
+//   var targetClass = thisClassGet(clickThis, returnClass);
+
+//   //show contents
+//   $('.jq-modal-posi').removeClass('is-current');
+//   $('.jq-modal').children(targetClass).addClass('is-current');
+
+//   //show modal
+//   $('.jq-modal').show();
+
+//   //show cartain
+//   $('.jq-cartain').show();
+
+//   //click close button
+//   $('.jq-modal-close, .jq-cartain').on('click', function(){
+//     $('.jq-modal').hide();
+//     $('.jq-cartain').hide();
+//   });
+// });
 /*========================================================================
   loader
 ======================================================================== */
@@ -240,11 +346,11 @@ $('.jq-loader-off').on('click', function(){
   collapse
 ======================================================================== */
 $('.jq-collapse-switcher').on('click', function(){
-  //トリガーのidを取得して同じクラス名があれば開く
+  //get id
   var id = '.' + $(this).attr('id');
   $(id).slideToggle();
 
-  //オプションで開閉アイコンがあれば処理
+  //icon
   var point = $(this).children();
   var option = point.attr('class');
 
@@ -275,44 +381,43 @@ $('#jq-TabSelect li a').on('click', function(){
 ======================================================================== */
 
 //
-$('.jq-col-on').on('click', function(){
-  var id = '.' + $(this).attr('id');
-  //contents
-  $('.jq-col-lighting').removeClass('fw-bg-green');
-  $(id).addClass('fw-bg-green');
-});
-/*========================================================================
-  HTMLソース表示
-======================================================================== */
-//押したトリガーのIDを取得して、同じ名前のテキストファイルがあれば処理をする
-$('.jq-text-load').on('click', function(){
-  var textFile =$(this).attr('id');
-  textFile = 'doc/' + textFile.replace("jq-file-", "") + '.txt';
-  var title = $(this).text().trim();
+// $('.jq-col-on').on('click', function(){
+//   var id = '.' + $(this).attr('id');
+//   //contents
+//   $('.jq-col-lighting').removeClass('fw-bg-green');
+//   $(id).addClass('fw-bg-green');
+// });
+// /*========================================================================
+//   view html
+// ======================================================================== */
+// //get id
+// $('.jq-text-load').on('click', function(){
+//   var textFile =$(this).attr('id');
+//   textFile = 'doc/' + textFile.replace("jq-file-", "") + '.txt';
+//   var title = $(this).text().trim();
 
-  //非同期でテキストファイルを読込
-  $.ajax({
-    url:textFile,
-    dataType : 'text',
-    success: function(data){
-      //alert(data);
-      //背景のカーテンも一緒に表示
-      $('.jq-cartain').show();
+//   //load　text
+//   $.ajax({
+//     url:textFile,
+//     dataType : 'text',
+//     success: function(data){
+//       //show cartain
+//       $('.jq-cartain').show();
 
-      //タイトルを表示
-      $('.jq-souce-title').text('').text(title);
+//       //show title
+//       $('.jq-souce-title').text('').text(title);
 
-      //モーダルを表示
-      $('.jq-souce-view').text(data.replace(/\r\n/g,"\n")); //firefoxの改行を消す
-      $('.jq-modal, .jq-modal-souce-viwer').slideDown(300);
+//       //show modal
+//       $('.jq-souce-view').text(data.replace(/\r\n/g,"\n")); //firefoxの改行を消す
+//       $('.jq-modal, .jq-modal-souce-viwer').slideDown(300);
 
-      //閉じるボタン
-      $('.jq-modal-close, .jq-cartain').on('click', function(){
-        $('.jq-modal, .jq-modal-souce-viwer').slideUp(300);
-        $('.jq-cartain').hide();
-      });
-    }
-  });
-});
+//       //close botton
+//       $('.jq-modal-close, .jq-cartain').on('click', function(){
+//         $('.jq-modal, .jq-modal-souce-viwer').slideUp(300);
+//         $('.jq-cartain').hide();
+//       });
+//     }
+//   });
+// });
 ////////////////////////////////////////////////////////////
 });

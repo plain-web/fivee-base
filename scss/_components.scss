@@ -358,42 +358,46 @@ label{
  ▼ default
 ============================================================== */
 .cp-modal{
-  .st-body{
-    @include posi-fix(0,auto,auto,50%);
-    margin-left:-25%;
+  >.st-body{
+    @include posi-fix(100px,auto,auto,50%);
     border:2px solid $cl-brd-base;
     @include border-radius(5px, 5px);
     @include box-shadow(rgba($cl-brd-base, 0.5) 0 0 7px);
-    background:$cl-bg-white;
+    background:$cl-bg-modal-body;
+    display:none;
     @include min-width(400px);
-    z-index:1;
+    z-index:2;
+    &.is-current{
+      display:block;
+    }
     >.st-inner{
       .cp-modal-header{
         .st-inner{
-          padding:10px 28px 10px 15px;
+          padding:20px 28px 10px 20px;
           position:relative;
           background:$cl-bg-modal-header;
-          a.cp-close{
+          a.fw-close{
             @include posi-abs(5px,5px,auto,auto);
+            font-size:$fs-h5;
             i{
-              font-size:$fs-h2;
+              font-size:$fs-h5;
             }
           }
         }
       }
       .cp-modal-body{
         >.st-inner{
-          background:$cl-bg-modal-body;
-          max-width:620px;
+          //max-width:620px;
           max-height:570px;
           overflow-y:auto;
-          padding:10px 15px 30px;
-          .cp-modal-img{max-height:550px;}
+          padding:10px 20px;
+          .fw-modal-img{max-height:550px;}
         }
       }
       .cp-modal-footer{
         .st-inner{
-          padding:10px 15px;
+          @include brd-top;
+          padding:20px;
           background:$cl-bg-modal-footer;
         }
       }
@@ -416,43 +420,23 @@ label{
  * "popup"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
-.cp-popup{
-  .st-body{
+.fw-popup{
+  >.lo-body{
     @include posi-abs(0,auto,auto,auto);
     border:1px solid $cl-brd-base;
-    @include border-radius(5px, 5px);
+    @include border-radius(7px, 5px);
     @include box-shadow(rgba($cl-brd-base, 0.5) 0 0 5px);
-    background:$cl-bg-popup;
+    //background:$popup-base;
+    display:none;
+    overflow:auto;
     max-height:300px;
     max-width: 300px;
-    overflow:auto;
-    z-index:1;
-    .st-inner{
-      .cp-popup-box{
-        padding:12px;
-        display:none;
-        &.current{
-          display:block;
-        }
-        // ul.cp-menu-vertical{
-        //   margin:0 -12px;
-        //   li{
-        //     margin-bottom:5px;
-        //     line-height:$lh-form;
-        //     a{
-        //       display:block;
-        //       line-height:$lh-form;
-        //       padding:0 12px;
-        //       &:hover{
-        //         background:$cl-txt-theme;
-        //       }
-        //     }
-        //     &:last-child{
-        //       margin-bottom:0;
-        //     }
-        //   }
-        // }
-      }
+    z-index:2;
+    &.is-current{
+      display:block;
+    }
+    >.lo-inner{
+      padding:12px;
     }
   }
 }
