@@ -1,0 +1,1342 @@
+@import "compass";
+@import "structure";
+/*
+ * components.scss
+ * include:
+ * "images" "fonts" "forms" "buttons" "navs" "tabs" "modals" "popup"
+ * "tooltips" "tables" "messages" "notifications" "breadclumb"
+ * "paginations" "titles" "panels" "wall" "carets" "badges" "loading"
+ * "collapse" "wizard" "stamps" "toolbar" "menu"
+ *
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "images"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+img{
+  border:0;
+  width:100%;
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "fonts"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ *
+ * =============================================================
+ ▼ heading
+============================================================== */
+h1{font-size:$fs-h1;}
+h2{font-size:$fs-h2;}
+h3{font-size:$fs-h3;}
+h4{font-size:$fs-h4;}
+h5{font-size:$fs-h5;}
+h6{font-size:$fs-h6;}
+/* =============================================================
+ ▼ font-family
+============================================================= */
+.cp-fontfamily{
+  font-family:$ff-base;
+}
+/* =============================================================
+ ▼ webfont
+============================================================== */
+i{
+  font-size:$fs-base;
+  color:$cl-txt-base;
+  @include min-width(16px);
+}
+a{
+  i{
+    color:$cl-txt-link;
+    &:hover{
+      color:$cl-txt-hover;
+    }
+  }
+}
+
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "forms"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ *
+ * =============================================================
+ ▼ default form
+============================================================= */
+.cp-focus{
+  @include brd(1px,solid,$cl-theme);
+  background:$cl-theme2;
+  @include easeout;
+}
+select,
+input[type="text"],
+input[type="password"]{
+  height:$lh-form;
+  margin:0;
+  padding:0 7px;
+  line-height:$lh-form;
+  font-size:100%;
+  vertical-align:middle;
+  outline: none;
+}
+input[type="checkbox"],
+input[type="radio"]{
+  border:0;
+  margin:0;
+  padding:0;
+}
+select{padding:0;}
+label{
+  input[type="checkbox"],
+  input[type="radio"]{
+    margin-top:4px;
+  }
+}
+/* =============================================================
+ ▼ formset
+============================================================= */
+// .cp-formset{
+//   //display:table;
+//   label{
+//     display:block;
+//     position:relative;
+//     line-height:$lh-form;
+//     input{display:block;}
+//     &.cp-combo{
+//       @include clearfix;
+//       .cp-input{
+//         float:left;
+//         input{
+//           @include border-right-radius(0);
+//         }
+//       }
+//       .cp-icon-inset{
+//         float:left;
+//         .cp-icon,
+//         a{
+//           margin-left:0;
+//           border-left:0;
+//           @include border-left-radius(0);
+//         }
+//       }
+//     }
+//     &.cp-combo-inset{
+//       position:relative;
+//       .cp-input{
+//         input{
+//           padding-left:25px;
+//         }
+//       }
+//       .cp-icon-inset{
+//         @include posi-abs(0,auto,auto,7px);
+//       }
+//     }
+//     &.cp-combo-inset-rev{
+//       position:relative;
+//       .cp-input{
+//         input{
+//           padding-right:25px;
+//         }
+//       }
+//     }
+//     &.cp-check-radio{
+//       @include clearfix;
+//       .cp-check,
+//       .cp-radio{
+//         @include posi-abs(0,auto,auto,0);
+//         text-align:left;
+//         input{
+//           margin-top:7px;
+//         }
+//       }
+//       .cp-keyword{
+//         margin-left:16px;
+//       }
+//     }
+//   }
+// }
+/* =============================================================
+ ▼ ime mode
+============================================================= */
+.cp-ime-auto{ime-mode: normal;}
+.cp-ime-ja{ime-mode: active;}
+.cp-ime-en{ime-mode: inactive;}
+.cp-ime-off{ime-mode: disabled;}
+
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "buttons"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ *
+ * =============================================================
+ ▼ btn
+============================================================== */
+.cp-btn{
+  text-align:center;
+  padding:4px 12px;
+  line-height:$lh-btn;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-decoration:none;
+  outline:none;
+  color:$cl-txt-base;
+  i{color:$cl-txt-base;}
+  background:$cl-btn-base; // for oldie
+  font-family:$ff-base;
+  font-size:$fs-base;
+  @include brd;
+  @include border-radius(3px 3px);
+  @include gradation($cl-white, $cl-btn-base);
+  //@include gradation-ie(#ffffffff, #ffeeeeee); // for oldie
+  &:hover{
+    background:$cl-btn-darken; // for oldie
+    @include brd(1px,solid,$cl-brd-darken);
+    @include gradation($cl-white-darken, $cl-btn-darken);
+    //@include gradation-ie(#FFf2f2f2, #FFe1e1e1); // for oldie
+  }
+  //for oldie
+  &.cp-disabled{
+    &:hover{
+      background:$cl-btn-base;
+      cursor: default;
+    }
+  }
+}
+
+//theme
+.cp-btn-theme{
+  @extend .cp-btn;
+  color:$cl-txt-rev;
+  i{color:$cl-txt-rev;}
+  background:$cl-theme; // for oldie
+  @include brd(1px,solid,$cl-theme);
+  @include gradation($cl-theme, $cl-theme);
+  //@include gradation-ie(#ff499d59, #ff499d59); // for oldie
+  &:hover{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    background:$cl-theme-darken; // for oldie
+    @include brd(1px,solid,$cl-theme-darken);
+    @include gradation($cl-theme-darken, $cl-theme-darken);
+    //@include gradation-ie(#FF418c4f, #FF418c4f); // for oldie
+  }
+  //for oldie
+  &.cp-disabled{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    &:hover{
+      background:$cl-theme;
+      cursor: default;
+    }
+  }
+}
+//fixed
+.cp-btn-fix{
+  @extend .cp-btn;
+  width:100%;
+}
+//large
+.cp-btn-large{
+  @extend .cp-btn;
+  font-size:$fs-h6;
+  padding:7px 50px;
+  @include min-width(0);
+}
+//mini
+.cp-btn-mini{
+  @extend .cp-btn;
+  font-size:$fs-midium;
+  padding:2px 5px;
+  line-height:$lh-reset;
+  @include min-width(0);
+}
+//combo
+.cp-btn-combo-left{
+  @include border-right-radius(0);
+}
+.cp-btn-combo{
+@include border-radius(0);
+  border-left:0;
+  &:hover{
+    border-left:0;
+  }
+}
+.cp-btn-combo-right{
+@include border-left-radius(0);
+  border-left:0;
+  &:hover{
+    border-left:0;
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "navs"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.side-menu{
+  .one-block{
+    @include brd-bottom;
+    .st-inner{
+    }
+    &.menu-children{
+      display:none;
+      @include brd-bottom(0);
+    }
+    &.current{
+      background-color:$cl-theme1;
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "tabs"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.cp-tab{
+  .cp-tab-btn{
+    >.st-inner{
+      ul{
+        padding-top:3px;
+        li{
+          position:relative;
+          @include brd(1px,solid,$cl-brd-base);
+          border-bottom:0;
+          background:$cl-gray;
+          margin-right:5px;
+          @include border-top-radius(3px);
+          a{
+            padding:6px 10px;
+            line-height:$lh-btn;
+            text-align:center;
+            display:block;
+            @include overflow-max(250px);
+          }
+          .cp-underbar{
+            @include posi-abs(auto,auto,0,0);
+            z-index:1;
+            width:100%;
+            height:1px;
+            background:$cl-brd-base;
+          }
+          &.current{
+            @include border-top-radius(0);
+            @include brd-top(3px,solid,$cl-theme);
+            margin-top:-2px;
+            a{
+              background:$cl-bg-tab;
+              color:#333;
+              font-weight:bold;
+            }
+            .cp-underbar{display:none;}
+            &:last-child{margin-right:0;}
+          }
+        }
+      }
+    }
+  }
+  //content
+  .cp-tab-content{
+    margin-top:-1px;
+    background:$cl-bg-tab;
+    >.st-inner{
+      overflow-x:auto;
+      padding:20px 15px;
+      @include brd(1px,solid,$cl-brd-base);
+      .jq-tab-switcher{
+        display:none;
+        &.current{display:block;}
+      }
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "modals"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ *
+ * =============================================================
+ ▼ default
+============================================================== */
+.cp-modal{
+  .st-body{
+    @include posi-fix(0,auto,auto,50%);
+    margin-left:-25%;
+    border:2px solid $cl-brd-base;
+    @include border-radius(5px, 5px);
+    @include box-shadow(rgba($cl-brd-base, 0.5) 0 0 7px);
+    background:$cl-bg-white;
+    @include min-width(400px);
+    z-index:1;
+    >.st-inner{
+      .cp-modal-header{
+        .st-inner{
+          padding:10px 28px 10px 15px;
+          position:relative;
+          background:$cl-bg-modal-header;
+          a.cp-close{
+            @include posi-abs(5px,5px,auto,auto);
+            i{
+              font-size:$fs-h2;
+            }
+          }
+        }
+      }
+      .cp-modal-body{
+        >.st-inner{
+          background:$cl-bg-modal-body;
+          max-width:620px;
+          max-height:570px;
+          overflow-y:auto;
+          padding:10px 15px 30px;
+          .cp-modal-img{max-height:550px;}
+        }
+      }
+      .cp-modal-footer{
+        .st-inner{
+          padding:10px 15px;
+          background:$cl-bg-modal-footer;
+        }
+      }
+    }
+  }
+}
+/* =============================================================
+ ▼ cartain
+============================================================== */
+.cp-cartain{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+}
+
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "popup"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.cp-popup{
+  .st-body{
+    @include posi-abs(0,auto,auto,auto);
+    border:1px solid $cl-brd-base;
+    @include border-radius(5px, 5px);
+    @include box-shadow(rgba($cl-brd-base, 0.5) 0 0 5px);
+    background:$cl-bg-popup;
+    max-height:300px;
+    max-width: 300px;
+    overflow:auto;
+    z-index:1;
+    .st-inner{
+      .cp-popup-box{
+        padding:12px;
+        display:none;
+        &.current{
+          display:block;
+        }
+        // ul.cp-menu-vertical{
+        //   margin:0 -12px;
+        //   li{
+        //     margin-bottom:5px;
+        //     line-height:$lh-form;
+        //     a{
+        //       display:block;
+        //       line-height:$lh-form;
+        //       padding:0 12px;
+        //       &:hover{
+        //         background:$cl-txt-theme;
+        //       }
+        //     }
+        //     &:last-child{
+        //       margin-bottom:0;
+        //     }
+        //   }
+        // }
+      }
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "tooltip"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.cp-tooltip{
+  .st-body{
+    z-index:1;
+    .st-inner{
+      .cp-tooltip-box{
+        background-color:$cl-bg-tooltip;
+        color:$cl-txt-rev;
+        padding:7px 10px;
+        @include border-radius(3px);
+        @include posi-abs(auto,auto,auto,auto);
+        .st-inner{
+          @include overflow-max(500px);
+        }
+      }
+      .cp-balloon{
+        @include posi-abs(auto,auto,auto,auto);
+        .cp-triangle-bottom{
+          margin-top:-6px;
+          border-top: 8px solid $cl-bg-tooltip;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+        }
+      }
+    }
+  }
+}
+.cp-tooltip-key{display:none;}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "tables"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ *
+ * =============================================================
+ ▼ default table
+============================================================= */
+table.cp-table{
+  line-height:$lh-table;
+  @include brd;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background:$cl-white;
+  tbody{
+    tr{
+      &.selected{td{background-color:$cl-theme1-lighten;}}
+    }
+  }
+  tr,colgroup{
+    th{
+      padding:$pd-table;
+      font-size:$fs-base;
+      background:$cl-bg-table-header;
+      @include brd-right(1px,solid,$cl-brd-base);
+      @include brd-bottom(1px,solid,$cl-brd-base);
+      white-space: nowrap;
+      font-weight:bold;
+    }
+    td{
+      padding:$pd-table;
+      @include brd-right(1px,solid,$cl-brd-base);
+      @include brd-bottom(1px,solid,$cl-brd-base);
+    }
+    th:last-child,
+    td:last-child{border-right-width:none;}
+    tbody:last-child td{border-bottom-width:none;}
+
+    //背景色
+    .cp-bg-white{background:$cl-bg-white;}
+    .cp-bg-red{background:$cl-bg-red;}
+    .cp-bg-orange{background: $cl-bg-orange;}
+    .cp-bg-blue{background:$cl-bg-blue;}
+    .cp-bg-green{background:$cl-bg-green;}
+    .cp-bg-yellow{background:$cl-bg-yellow;}
+    .cp-bg-black{background:$cl-bg-black;}
+    .cp-bg-gray{background:$cl-bg-gray;}
+    .cp-bg-gray1{background:$cl-bg-gray1;}
+    .cp-bg-gray2{background:$cl-bg-gray2;}
+    .cp-bg-theme{background:$cl-bg-theme;}
+
+    //ボーダー(th,td)
+    .cp-brd0{@include brd(0, solid, $cl-brd-base);}
+    .cp-brd1{@include brd(1px, solid, $cl-brd-base);}
+    .cp-brd2{@include brd(2px, solid, $cl-brd-base);}
+    .cp-brd3{@include brd(3px, solid, $cl-brd-base);}
+    .cp-brd0-top{@include brd-top(0);}
+    .cp-brd1-top{@include brd-top(1px, solid, $cl-brd-base);}
+    .cp-brd2-top{@include brd-top(2px, solid, $cl-brd-base);}
+    .cp-brd3-top{@include brd-top(3px, solid, $cl-brd-base);}
+    .cp-brd0-right{@include brd-right(0);}
+    .cp-brd1-right{@include brd-right(1px, solid, $cl-brd-base);}
+    .cp-brd2-right{@include brd-right(2px, solid, $cl-brd-base);}
+    .cp-brd3-right{@include brd-right(3px, solid, $cl-brd-base);}
+    .cp-brd0-bottom{@include brd-bottom(0, solid, $cl-brd-base);}
+    .cp-brd1-bottom{@include brd-bottom(1px, solid, $cl-brd-base);}
+    .cp-brd2-bottom{@include brd-bottom(2px, solid, $cl-brd-base);}
+    .cp-brd3-bottom{@include brd-bottom(3px, solid, $cl-brd-base);}
+    .cp-brd0-left{@include brd-left(0);}
+    .cp-brd1-left{@include brd-left(1px, solid, $cl-brd-base);}
+    .cp-brd2-left{@include brd-left(2px, solid, $cl-brd-base);}
+    .cp-brd3-left{@include brd-left(3px, solid, $cl-brd-base);}
+    //ボーダー(tr配下のth,td)
+    &.cp-brd0{th,td{@include brd(0);}}
+    &.cp-brd1{th,td{@include brd(1px, solid, $cl-brd-base);}}
+    &.cp-brd2{th,td{@include brd(2px, solid, $cl-brd-base);}}
+    &.cp-brd3{th,td{@include brd(3px, solid, $cl-brd-base);}}
+    &.cp-brd0-top{th,td{@include brd-top(0, $cl-brd-base);}}
+    &.cp-brd1-top{th,td{@include brd-top(1px, solid, $cl-brd-base);}}
+    &.cp-brd2-top{th,td{@include brd-top(2px, solid, $cl-brd-base);}}
+    &.cp-brd3-top{th,td{@include brd-top(3px, solid, $cl-brd-base);}}
+    &.cp-brd0-right{th,td{@include brd-right(0, $cl-brd-base);}}
+    &.cp-brd1-right{th,td{@include brd-right(1px, solid, $cl-brd-base);}}
+    &.cp-brd2-right{th,td{@include brd-right(2px, solid, $cl-brd-base);}}
+    &.cp-brd3-right{th,td{@include brd-right(3px, solid, $cl-brd-base);}}
+    &.cp-brd0-bottom{th,td{@include brd-bottom(0);}}
+    &.cp-brd1-bottom{th,td{@include brd-bottom(1px, solid, $cl-brd-base);}}
+    &.cp-brd2-bottom{th,td{@include brd-bottom(2px, solid, $cl-brd-base);}}
+    &.cp-brd3-bottom{th,td{@include brd-bottom(3px, solid, $cl-brd-base);}}
+    &.cp-brd0-left{th,td{@include brd-left(0);}}
+    &.cp-brd1-left{th,td{@include brd-left(1px, solid, $cl-brd-base);}}
+    &.cp-brd2-left{th,td{@include brd-left(2px, solid, $cl-brd-base);}}
+    &.cp-brd3-left{th,td{@include brd-left(3px, solid, $cl-brd-base);}}
+
+    //ボーダー、テーマカラー(th,td)
+    .cp-brd1-theme{@include brd(1px, solid, $cl-theme);}
+    .cp-brd2-theme{@include brd(2px, solid, $cl-theme);}
+    .cp-brd3-theme{@include brd(3px, solid, $cl-theme);}
+    .cp-brd1-top-theme{@include brd-top(1px, solid, $cl-theme);}
+    .cp-brd2-top-theme{@include brd-top(2px, solid, $cl-theme);}
+    .cp-brd3-top-theme{@include brd-top(3px, solid, $cl-theme);}
+    .cp-brd1-right-theme{@include brd-right(1px, solid, $cl-theme);}
+    .cp-brd2-right-theme{@include brd-right(2px, solid, $cl-theme);}
+    .cp-brd3-right-theme{@include brd-right(3px, solid, $cl-theme);}
+    .cp-brd1-bottom-theme{@include brd-bottom(1px, solid, $cl-theme);}
+    .cp-brd2-bottom-theme{@include brd-bottom(2px, solid, $cl-theme);}
+    .cp-brd3-bottom-theme{@include brd-bottom(3px, solid, $cl-theme);}
+    .cp-brd1-left-theme{@include brd-left(1px, solid, $cl-theme);}
+    .cp-brd2-left-theme{@include brd-left(2px, solid, $cl-theme);}
+    .cp-brd3-left-theme{@include brd-left(3px, solid, $cl-theme);}
+    //ボーダー、テーマカラー(tr配下のth,td)
+    &.cp-brd1-theme{th,td{@include brd(1px, solid, $cl-theme);}}
+    &.cp-brd2-theme{th,td{@include brd(2px, solid, $cl-theme);}}
+    &.cp-brd3-theme{th,td{@include brd(3px, solid, $cl-theme);}}
+    &.cp-brd1-top-theme{th,td{@include brd-top(1px, solid, $cl-theme);}}
+    &.cp-brd2-top-theme{th,td{@include brd-top(2px, solid, $cl-theme);}}
+    &.cp-brd3-top-theme{th,td{@include brd-top(3px, solid, $cl-theme);}}
+    &.cp-brd1-right-theme{th,td{@include brd-right(1px, solid, $cl-theme);}}
+    &.cp-brd2-right-theme{th,td{@include brd-right(2px, solid, $cl-theme);}}
+    &.cp-brd3-right-theme{th,td{@include brd-right(3px, solid, $cl-theme);}}
+    &.cp-brd1-bottom-theme{th,td{@include brd-bottom(1px, solid, $cl-theme);}}
+    &.cp-brd2-bottom-theme{th,td{@include brd-bottom(2px, solid, $cl-theme);}}
+    &.cp-brd3-bottom-theme{th,td{@include brd-bottom(3px, solid, $cl-theme);}}
+    &.cp-brd1-left-theme{th,td{@include brd-left(1px, solid, $cl-theme);}}
+    &.cp-brd2-left-theme{th,td{@include brd-left(2px, solid, $cl-theme);}}
+    &.cp-brd3-left-theme{th,td{@include brd-left(3px, solid, $cl-theme);}}
+
+    //ボーダー、赤(th,td)
+    .cp-brd1-red{@include brd(1px, solid, $cl-red);}
+    .cp-brd2-red{@include brd(2px, solid, $cl-red);}
+    .cp-brd3-red{@include brd(3px, solid, $cl-red);}
+    .cp-brd1-top-red{@include brd-top(1px, solid, $cl-red);}
+    .cp-brd2-top-red{@include brd-top(2px, solid, $cl-red);}
+    .cp-brd3-top-red{@include brd-top(3px, solid, $cl-red);}
+    .cp-brd1-right-red{@include brd-right(1px, solid, $cl-red);}
+    .cp-brd2-right-red{@include brd-right(2px, solid, $cl-red);}
+    .cp-brd3-right-red{@include brd-right(3px, solid, $cl-red);}
+    .cp-brd1-bottom-red{@include brd-bottom(1px, solid, $cl-red);}
+    .cp-brd2-bottom-red{@include brd-bottom(2px, solid, $cl-red);}
+    .cp-brd3-bottom-red{@include brd-bottom(3px, solid, $cl-red);}
+    .cp-brd1-left-red{@include brd-left(1px, solid, $cl-red);}
+    .cp-brd2-left-red{@include brd-left(2px, solid, $cl-red);}
+    .cp-brd3-left-red{@include brd-left(3px, solid, $cl-red);}
+    //ボーダー、赤(tr配下のth,td)
+    &.cp-brd1-red{th,td{@include brd(1px, solid, $cl-red);}}
+    &.cp-brd2-red{th,td{@include brd(2px, solid, $cl-red);}}
+    &.cp-brd3-red{th,td{@include brd(3px, solid, $cl-red);}}
+    &.cp-brd1-top-red{th,td{@include brd-top(1px, solid, $cl-red);}}
+    &.cp-brd2-top-red{th,td{@include brd-top(2px, solid, $cl-red);}}
+    &.cp-brd3-top-red{th,td{@include brd-top(3px, solid, $cl-red);}}
+    &.cp-brd1-right-red{th,td{@include brd-right(1px, solid, $cl-red);}}
+    &.cp-brd2-right-red{th,td{@include brd-right(2px, solid, $cl-red);}}
+    &.cp-brd3-right-red{th,td{@include brd-right(3px, solid, $cl-red);}}
+    &.cp-brd1-bottom-red{th,td{@include brd-bottom(1px, solid, $cl-red);}}
+    &.cp-brd2-bottom-red{th,td{@include brd-bottom(2px, solid, $cl-red);}}
+    &.cp-brd3-bottom-red{th,td{@include brd-bottom(3px, solid, $cl-red);}}
+    &.cp-brd1-left-red{th,td{@include brd-left(1px, solid, $cl-red);}}
+    &.cp-brd2-left-red{th,td{@include brd-left(2px, solid, $cl-red);}}
+    &.cp-brd3-left-red{th,td{@include brd-left(3px, solid, $cl-red);}}
+
+    //ドットボーダー(th,td)
+    .cp-brd1-dotted{@include brd(1px, dotted, $cl-brd-base);}
+    .cp-brd2-dotted{@include brd(2px, dotted, $cl-brd-base);}
+    .cp-brd3-dotted{@include brd(3px, dotted, $cl-brd-base);}
+    .cp-brd1-top-dotted{@include brd-top(1px, dotted, $cl-brd-base);}
+    .cp-brd2-top-dotted{@include brd-top(2px, dotted, $cl-brd-base);}
+    .cp-brd3-top-dotted{@include brd-top(3px, dotted, $cl-brd-base);}
+    .cp-brd1-right-dotted{@include brd-right(1px, dotted, $cl-brd-base);}
+    .cp-brd2-right-dotted{@include brd-right(2px, dotted, $cl-brd-base);}
+    .cp-brd3-right-dotted{@include brd-right(3px, dotted, $cl-brd-base);}
+    .cp-brd1-bottom-dotted{@include brd-bottom(1px, dotted, $cl-brd-base);}
+    .cp-brd2-bottom-dotted{@include brd-bottom(2px, dotted, $cl-brd-base);}
+    .cp-brd3-bottom-dotted{@include brd-bottom(3px, dotted, $cl-brd-base);}
+    .cp-brd1-left-dotted{@include brd-left(1px, dotted, $cl-brd-base);}
+    .cp-brd2-left-dotted{@include brd-left(2px, dotted, $cl-brd-base);}
+    .cp-brd3-left-dotted{@include brd-left(3px, dotted, $cl-brd-base);}
+//ドットボーダー(tr配下のth,td)
+    &.cp-brd1-dotted{th,td{@include brd(1px, dotted, $cl-brd-base);}}
+    &.cp-brd2-dotted{th,td{@include brd(2px, dotted, $cl-brd-base);}}
+    &.cp-brd3-dotted{th,td{@include brd(3px, dotted, $cl-brd-base);}}
+    &.cp-brd1-top-dotted{th,td{@include brd-top(1px, dotted, $cl-brd-base);}}
+    &.cp-brd2-top-dotted{th,td{@include brd-top(2px, dotted, $cl-brd-base);}}
+    &.cp-brd3-top-dotted{th,td{@include brd-top(3px, dotted, $cl-brd-base);}}
+    &.cp-brd0-right-dotted{th,td{@include brd-right(0, $cl-brd-base);}}
+    &.cp-brd1-right-dotted{th,td{@include brd-right(1px, dotted, $cl-brd-base);}}
+    &.cp-brd2-right-dotted{th,td{@include brd-right(2px, dotted, $cl-brd-base);}}
+    &.cp-brd3-right-dotted{th,td{@include brd-right(3px, dotted, $cl-brd-base);}}
+    &.cp-brd1-bottom-dotted{th,td{@include brd-bottom(1px, dotted, $cl-brd-base);}}
+    &.cp-brd2-bottom-dotted{th,td{@include brd-bottom(2px, dotted, $cl-brd-base);}}
+    &.cp-brd3-bottom-dotted{th,td{@include brd-bottom(3px, dotted, $cl-brd-base);}}
+    &.cp-brd1-left-dotted{th,td{@include brd-left(1px, dotted, $cl-brd-base);}}
+    &.cp-brd2-left-dotted{th,td{@include brd-left(2px, dotted, $cl-brd-base);}}
+    &.cp-brd3-left-dotted{th,td{@include brd-left(3px, dotted, $cl-brd-base);}}
+
+    //ダッシュボーダー、テーマカラー(th,td)
+    .cp-brd1-dotted-theme{@include brd(1px, dotted, $cl-theme);}
+    .cp-brd2-dotted-theme{@include brd(2px, dotted, $cl-theme);}
+    .cp-brd3-dotted-theme{@include brd(3px, dotted, $cl-theme);}
+    .cp-brd1-top-dotted-theme{@include brd-top(1px, dotted, $cl-theme);}
+    .cp-brd2-top-dotted-theme{@include brd-top(2px, dotted, $cl-theme);}
+    .cp-brd3-top-dotted-theme{@include brd-top(3px, dotted, $cl-theme);}
+    .cp-brd1-right-dotted-theme{@include brd-right(1px, dotted, $cl-theme);}
+    .cp-brd2-right-dotted-theme{@include brd-right(2px, dotted, $cl-theme);}
+    .cp-brd3-right-dotted-theme{@include brd-right(3px, dotted, $cl-theme);}
+    .cp-brd1-bottom-dotted-theme{@include brd-bottom(1px, dotted, $cl-theme);}
+    .cp-brd2-bottom-dotted-theme{@include brd-bottom(2px, dotted, $cl-theme);}
+    .cp-brd3-bottom-dotted-theme{@include brd-bottom(3px, dotted, $cl-theme);}
+    .cp-brd1-left-dotted-theme{@include brd-left(1px, dotted, $cl-theme);}
+    .cp-brd2-left-dotted-theme{@include brd-left(2px, dotted, $cl-theme);}
+    .cp-brd3-left-dotted-theme{@include brd-left(3px, dotted, $cl-theme);}
+    //ダッシュボーダー、テーマカラー(tr配下のth,td)
+    &.cp-brd1-dotted-theme{th,td{@include brd(1px, dotted, $cl-theme);}}
+    &.cp-brd2-dotted-theme{th,td{@include brd(2px, dotted, $cl-theme);}}
+    &.cp-brd3-dotted-theme{th,td{@include brd(3px, dotted, $cl-theme);}}
+    &.cp-brd1-top-dotted-theme{th,td{@include brd-top(1px, dotted, $cl-theme);}}
+    &.cp-brd2-top-dotted-theme{th,td{@include brd-top(2px, dotted, $cl-theme);}}
+    &.cp-brd3-top-dotted-theme{th,td{@include brd-top(3px, dotted, $cl-theme);}}
+    &.cp-brd1-right-dotted-theme{th,td{@include brd-right(1px, dotted, $cl-theme);}}
+    &.cp-brd2-right-dotted-theme{th,td{@include brd-right(2px, dotted, $cl-theme);}}
+    &.cp-brd3-right-dotted-theme{th,td{@include brd-right(3px, dotted, $cl-theme);}}
+    &.cp-brd1-bottom-dotted-theme{th,td{@include brd-bottom(1px, dotted, $cl-theme);}}
+    &.cp-brd2-bottom-dotted-theme{th,td{@include brd-bottom(2px, dotted, $cl-theme);}}
+    &.cp-brd3-bottom-dotted-theme{th,td{@include brd-bottom(3px, dotted, $cl-theme);}}
+    &.cp-brd1-left-dotted-theme{th,td{@include brd-left(1px, dotted, $cl-theme);}}
+    &.cp-brd2-left-dotted-theme{th,td{@include brd-left(2px, dotted, $cl-theme);}}
+    &.cp-brd3-left-dotted-theme{th,td{@include brd-left(3px, dotted, $cl-theme);}}
+
+    //ダッシュボーダー、赤(th,td)
+    .cp-brd1-dotted-red{@include brd(1px, dotted, $cl-red);}
+    .cp-brd2-dotted-red{@include brd(2px, dotted, $cl-red);}
+    .cp-brd3-dotted-red{@include brd(3px, dotted, $cl-red);}
+    .cp-brd1-top-dotted-red{@include brd-top(1px, dotted, $cl-red);}
+    .cp-brd2-top-dotted-red{@include brd-top(2px, dotted, $cl-red);}
+    .cp-brd3-top-dotted-red{@include brd-top(3px, dotted, $cl-red);}
+    .cp-brd1-right-dotted-red{@include brd-right(1px, dotted, $cl-red);}
+    .cp-brd2-right-dotted-red{@include brd-right(2px, dotted, $cl-red);}
+    .cp-brd3-right-dotted-red{@include brd-right(3px, dotted, $cl-red);}
+    .cp-brd1-bottom-dotted-red{@include brd-bottom(1px, dotted, $cl-red);}
+    .cp-brd2-bottom-dotted-red{@include brd-bottom(2px, dotted, $cl-red);}
+    .cp-brd3-bottom-dotted-red{@include brd-bottom(3px, dotted, $cl-red);}
+    .cp-brd1-left-dotted-red{@include brd-left(1px, dotted, $cl-red);}
+    .cp-brd2-left-dotted-red{@include brd-left(2px, dotted, $cl-red);}
+    .cp-brd3-left-dotted-red{@include brd-left(3px, dotted, $cl-red);}
+    //ダッシュボーダー、赤(tr配下のth,td)
+    &.cp-brd1-dotted-red{th,td{@include brd(1px, dotted, $cl-red);}}
+    &.cp-brd2-dotted-red{th,td{@include brd(2px, dotted, $cl-red);}}
+    &.cp-brd3-dotted-red{th,td{@include brd(3px, dotted, $cl-red);}}
+    &.cp-brd1-top-dotted-red{th,td{@include brd-top(1px, dotted, $cl-red);}}
+    &.cp-brd2-top-dotted-red{th,td{@include brd-top(2px, dotted, $cl-red);}}
+    &.cp-brd3-top-dotted-red{th,td{@include brd-top(3px, dotted, $cl-red);}}
+    &.cp-brd1-right-dotted-red{th,td{@include brd-right(1px, dotted, $cl-red);}}
+    &.cp-brd2-right-dotted-red{th,td{@include brd-right(2px, dotted, $cl-red);}}
+    &.cp-brd3-right-dotted-red{th,td{@include brd-right(3px, dotted, $cl-red);}}
+    &.cp-brd1-bottom-dotted-red{th,td{@include brd-bottom(1px, dotted, $cl-red);}}
+    &.cp-brd2-bottom-dotted-red{th,td{@include brd-bottom(2px, dotted, $cl-red);}}
+    &.cp-brd3-bottom-dotted-red{th,td{@include brd-bottom(3px, dotted, $cl-red);}}
+    &.cp-brd1-left-dotted-red{th,td{@include brd-left(1px, dotted, $cl-red);}}
+    &.cp-brd2-left-dotted-red{th,td{@include brd-left(2px, dotted, $cl-red);}}
+    &.cp-brd3-left-dotted-red{th,td{@include brd-left(3px, dotted, $cl-red);}}
+
+    //ダッシュボーダー(th,td)
+    .cp-brd1-dashed{@include brd(1px, dashed, $cl-brd-base);}
+    .cp-brd2-dashed{@include brd(2px, dashed, $cl-brd-base);}
+    .cp-brd3-dashed{@include brd(3px, dashed, $cl-brd-base);}
+    .cp-brd1-top-dashed{@include brd-top(1px, dashed, $cl-brd-base);}
+    .cp-brd2-top-dashed{@include brd-top(2px, dashed, $cl-brd-base);}
+    .cp-brd3-top-dashed{@include brd-top(3px, dashed, $cl-brd-base);}
+    .cp-brd1-right-dashed{@include brd-right(1px, dashed, $cl-brd-base);}
+    .cp-brd2-right-dashed{@include brd-right(2px, dashed, $cl-brd-base);}
+    .cp-brd3-right-dashed{@include brd-right(3px, dashed, $cl-brd-base);}
+    .cp-brd1-bottom-dashed{@include brd-bottom(1px, dashed, $cl-brd-base);}
+    .cp-brd2-bottom-dashed{@include brd-bottom(2px, dashed, $cl-brd-base);}
+    .cp-brd3-bottom-dashed{@include brd-bottom(3px, dashed, $cl-brd-base);}
+    .cp-brd1-left-dashed{@include brd-left(1px, dashed, $cl-brd-base);}
+    .cp-brd2-left-dashed{@include brd-left(2px, dashed, $cl-brd-base);}
+    .cp-brd3-left-dashed{@include brd-left(3px, dashed, $cl-brd-base);}
+    //ダッシュボーダー(tr配下のth,td)
+    &.cp-brd1-dashed{th,td{@include brd(1px, dashed, $cl-brd-base);}}
+    &.cp-brd2-dashed{th,td{@include brd(2px, dashed, $cl-brd-base);}}
+    &.cp-brd3-dashed{th,td{@include brd(3px, dashed, $cl-brd-base);}}
+    &.cp-brd1-top-dashed{th,td{@include brd-top(1px, dashed, $cl-brd-base);}}
+    &.cp-brd2-top-dashed{th,td{@include brd-top(2px, dashed, $cl-brd-base);}}
+    &.cp-brd3-top-dashed{th,td{@include brd-top(3px, dashed, $cl-brd-base);}}
+    &.cp-brd0-right-dashed{th,td{@include brd-right(0, $cl-brd-base);}}
+    &.cp-brd1-right-dashed{th,td{@include brd-right(1px, dashed, $cl-brd-base);}}
+    &.cp-brd2-right-dashed{th,td{@include brd-right(2px, dashed, $cl-brd-base);}}
+    &.cp-brd3-right-dashed{th,td{@include brd-right(3px, dashed, $cl-brd-base);}}
+    &.cp-brd1-bottom-dashed{th,td{@include brd-bottom(1px, dashed, $cl-brd-base);}}
+    &.cp-brd2-bottom-dashed{th,td{@include brd-bottom(2px, dashed, $cl-brd-base);}}
+    &.cp-brd3-bottom-dashed{th,td{@include brd-bottom(3px, dashed, $cl-brd-base);}}
+    &.cp-brd1-left-dashed{th,td{@include brd-left(1px, dashed, $cl-brd-base);}}
+    &.cp-brd2-left-dashed{th,td{@include brd-left(2px, dashed, $cl-brd-base);}}
+    &.cp-brd3-left-dashed{th,td{@include brd-left(3px, dashed, $cl-brd-base);}}
+
+    //ダッシュボーダー、テーマカラー(th,td)
+    .cp-brd1-dashed-theme{@include brd(1px, dashed, $cl-theme);}
+    .cp-brd2-dashed-theme{@include brd(2px, dashed, $cl-theme);}
+    .cp-brd3-dashed-theme{@include brd(3px, dashed, $cl-theme);}
+    .cp-brd1-top-dashed-theme{@include brd-top(1px, dashed, $cl-theme);}
+    .cp-brd2-top-dashed-theme{@include brd-top(2px, dashed, $cl-theme);}
+    .cp-brd3-top-dashed-theme{@include brd-top(3px, dashed, $cl-theme);}
+    .cp-brd1-right-dashed-theme{@include brd-right(1px, dashed, $cl-theme);}
+    .cp-brd2-right-dashed-theme{@include brd-right(2px, dashed, $cl-theme);}
+    .cp-brd3-right-dashed-theme{@include brd-right(3px, dashed, $cl-theme);}
+    .cp-brd1-bottom-dashed-theme{@include brd-bottom(1px, dashed, $cl-theme);}
+    .cp-brd2-bottom-dashed-theme{@include brd-bottom(2px, dashed, $cl-theme);}
+    .cp-brd3-bottom-dashed-theme{@include brd-bottom(3px, dashed, $cl-theme);}
+    .cp-brd1-left-dashed-theme{@include brd-left(1px, dashed, $cl-theme);}
+    .cp-brd2-left-dashed-theme{@include brd-left(2px, dashed, $cl-theme);}
+    .cp-brd3-left-dashed-theme{@include brd-left(3px, dashed, $cl-theme);}
+
+    //ダッシュボーダー、テーマカラー(tr配下のth,td)
+    &.cp-brd1-dashed-theme{th,td{@include brd(1px, dashed, $cl-theme);}}
+    &.cp-brd2-dashed-theme{th,td{@include brd(2px, dashed, $cl-theme);}}
+    &.cp-brd3-dashed-theme{th,td{@include brd(3px, dashed, $cl-theme);}}
+    &.cp-brd1-top-dashed-theme{th,td{@include brd-top(1px, dashed, $cl-theme);}}
+    &.cp-brd2-top-dashed-theme{th,td{@include brd-top(2px, dashed, $cl-theme);}}
+    &.cp-brd3-top-dashed-theme{th,td{@include brd-top(3px, dashed, $cl-theme);}}
+    &.cp-brd1-right-dashed-theme{th,td{@include brd-right(1px, dashed, $cl-theme);}}
+    &.cp-brd2-right-dashed-theme{th,td{@include brd-right(2px, dashed, $cl-theme);}}
+    &.cp-brd3-right-dashed-theme{th,td{@include brd-right(3px, dashed, $cl-theme);}}
+    &.cp-brd1-bottom-dashed-theme{th,td{@include brd-bottom(1px, dashed, $cl-theme);}}
+    &.cp-brd2-bottom-dashed-theme{th,td{@include brd-bottom(2px, dashed, $cl-theme);}}
+    &.cp-brd3-bottom-dashed-theme{th,td{@include brd-bottom(3px, dashed, $cl-theme);}}
+    &.cp-brd1-left-dashed-theme{th,td{@include brd-left(1px, dashed, $cl-theme);}}
+    &.cp-brd2-left-dashed-theme{th,td{@include brd-left(2px, dashed, $cl-theme);}}
+    &.cp-brd3-left-dashed-theme{th,td{@include brd-left(3px, dashed, $cl-theme);}}
+
+    //ダッシュボーダー、赤(th,td)
+    .cp-brd1-dashed-red{@include brd(1px, dashed, $cl-red);}
+    .cp-brd2-dashed-red{@include brd(2px, dashed, $cl-red);}
+    .cp-brd3-dashed-red{@include brd(3px, dashed, $cl-red);}
+    .cp-brd1-top-dashed-red{@include brd-top(1px, dashed, $cl-red);}
+    .cp-brd2-top-dashed-red{@include brd-top(2px, dashed, $cl-red);}
+    .cp-brd3-top-dashed-red{@include brd-top(3px, dashed, $cl-red);}
+    .cp-brd1-right-dashed-red{@include brd-right(1px, dashed, $cl-red);}
+    .cp-brd2-right-dashed-red{@include brd-right(2px, dashed, $cl-red);}
+    .cp-brd3-right-dashed-red{@include brd-right(3px, dashed, $cl-red);}
+    .cp-brd1-bottom-dashed-red{@include brd-bottom(1px, dashed, $cl-red);}
+    .cp-brd2-bottom-dashed-red{@include brd-bottom(2px, dashed, $cl-red);}
+    .cp-brd3-bottom-dashed-red{@include brd-bottom(3px, dashed, $cl-red);}
+    .cp-brd1-left-dashed-red{@include brd-left(1px, dashed, $cl-red);}
+    .cp-brd2-left-dashed-red{@include brd-left(2px, dashed, $cl-red);}
+    .cp-brd3-left-dashed-red{@include brd-left(3px, dashed, $cl-red);}
+    //ダッシュボーダー、赤(tr配下のth,td)
+    &.cp-brd1-dashed-red{th,td{@include brd(1px, dashed, $cl-red);}}
+    &.cp-brd2-dashed-red{th,td{@include brd(2px, dashed, $cl-red);}}
+    &.cp-brd3-dashed-red{th,td{@include brd(3px, dashed, $cl-red);}}
+    &.cp-brd1-top-dashed-red{th,td{@include brd-top(1px, dashed, $cl-red);}}
+    &.cp-brd2-top-dashed-red{th,td{@include brd-top(2px, dashed, $cl-red);}}
+    &.cp-brd3-top-dashed-red{th,td{@include brd-top(3px, dashed, $cl-red);}}
+    &.cp-brd1-right-dashed-red{th,td{@include brd-right(1px, dashed, $cl-red);}}
+    &.cp-brd2-right-dashed-red{th,td{@include brd-right(2px, dashed, $cl-red);}}
+    &.cp-brd3-right-dashed-red{th,td{@include brd-right(3px, dashed, $cl-red);}}
+    &.cp-brd1-bottom-dashed-red{th,td{@include brd-bottom(1px, dashed, $cl-red);}}
+    &.cp-brd2-bottom-dashed-red{th,td{@include brd-bottom(2px, dashed, $cl-red);}}
+    &.cp-brd3-bottom-dashed-red{th,td{@include brd-bottom(3px, dashed, $cl-red);}}
+    &.cp-brd1-left-dashed-red{th,td{@include brd-left(1px, dashed, $cl-red);}}
+    &.cp-brd2-left-dashed-red{th,td{@include brd-left(2px, dashed, $cl-red);}}
+    &.cp-brd3-left-dashed-red{th,td{@include brd-left(3px, dashed, $cl-red);}}
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "messages"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.cp-messages{
+  .st-inner{
+    &.current{display:block;}
+    display:none;
+    @include brd(1px,solid,$cl-theme);
+    padding:7px 10px;
+    @include border-radius(3px);
+    @include box-shadow(rgba($cl-brd-base, 0.3) 1px 2px 5px);
+    i{font-size:$fs-h5;}
+    &.cp-messages-alert{
+      @include brd(1px,solid,$cl-red);
+      background: $cl-bg-alert;
+      color:$cl-red;
+      i{color:$cl-red;}
+    }
+    &.cp-messages-success{
+      @include brd(1px,solid,$cl-success);
+      background: $cl-bg-success;
+      color:$cl-success;
+      i{color:$cl-success;}
+    }
+    &.cp-messages-info{
+      @include brd(1px,solid,$cl-info);
+      background: $cl-bg-info;
+      color:$cl-info;
+      i{color:$cl-info;}
+    }
+    &.cp-messages-warning{
+      @include brd(1px,solid,$cl-warning);
+      background: $cl-bg-warning;
+      color:$cl-warning;
+      i{color:$cl-warning;}
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "notifications"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.cp-toast{
+  .st-body{
+    @include posi-fix(0,20%,auto,20%);
+    .st-inner{
+      &.current{display:block;}
+      display:none;
+      @include brd(1px,solid,$cl-theme);
+      padding:7px 10px;
+      @include border-radius(3px);
+      @include box-shadow(rgba($cl-brd-base, 0.3) 1px 2px 5px);
+      i{font-size:$fs-h5;}
+      &.cp-toast-alert{
+        @include brd(1px,solid,$cl-red);
+        background: $cl-bg-alert;
+        color:$cl-red;
+        i{color:$cl-red;}
+      }
+      &.cp-toast-success{
+        @include brd(1px,solid,$cl-success);
+        background: $cl-bg-success;
+        color:$cl-success;
+        i{color:$cl-success;}
+      }
+      &.cp-toast-info{
+        @include brd(1px,solid,$cl-info);
+        background: $cl-bg-info;
+        color:$cl-info;
+        i{color:$cl-info;}
+      }
+      &.cp-toast-warning{
+        @include brd(1px,solid,$cl-warning);
+        background: $cl-bg-warning;
+        color:$cl-warning;
+        i{color:$cl-warning;}
+      }
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "beadclumb"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.cp-breadcrumb{
+  .st-inner{
+    @include brd-bottom;
+    background:$cl-gray2;
+    padding:5px 10px;
+    ul{
+      li{line-height:20px;}
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "paginations"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.cp-pagination{
+  ul.cp-float{
+    li{
+      border:1px solid $cl-brd-base;
+      @include border-radius(3px, 3px);
+      padding:3px 1px;
+    }
+  }
+}
+.cp-paging-btn{
+  .st-body{
+    @include posi-abs(-18px,30px,auto,auto);
+    margin-left:-32px;
+    .st-inner{
+      >ul{
+        >li{
+          @include min-width(0);
+          a{
+            width:36px;
+            height:36px;
+            display:block;
+            @include brd;
+            @include border-radius(18px);
+            @include box-shadow(rgba($cl-brd-base, 0.3) 1px 0 3px);
+            text-align:center;
+            background:$cl-white;
+            line-height:36px;
+            i{font-size:$fs-h4;}
+            &:hover{
+              background:$cl-theme1-lighten;
+            }
+          }
+          &.is-disabled{
+            @include opacity(1);
+            a{
+              background:$cl-gray2;
+              color:#aaa;
+              @include box-shadow(none);
+              i{color:#aaa;}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.cp-paging-btn-bottom{
+  @extend .cp-paging-btn;
+  .st-body{
+    @include posi-abs(auto,30px,-18px,auto);
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "titles"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+ //page
+.cp-page-summary{
+  ul{
+    li{
+      line-height:22px;
+      .sumary{
+        color:$cl-txt-sub;
+      }
+    }
+  }
+}
+//contents
+.cp-contents-summary{
+  ul{
+    li{
+      line-height:22px;
+      .sumary{
+        color:$cl-txt-sub;
+      }
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "panels"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.cp-panel{
+  >.st-body{
+    position:relative;
+    >.st-inner{
+      padding:20px;
+      @include brd(1px,solid,$cl-gray);
+      @include border-radius(3px);
+      overflow-x: auto;
+    }
+  }
+}
+.cp-panel-mini{
+  @extend .cp-panel;
+  >.st-body{
+    >.st-inner{
+      padding:7px;
+      font-size:12px;
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "wall"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.cp-wall{
+  .st-body{
+    @include brd;
+    .st-inner{
+      @include brd(1px,solid,$cl-white);
+      background:$cl-bg-wall;
+      padding:7px 10px;
+      .st-outer{
+        @include brd-left(5px,solid,#ccc);
+        padding-left:7px;
+        font-size:12px;
+      }
+    }
+  }
+}
+.cp-wall-supplement{
+  @extend .cp-wall;
+  .st-body{
+    .st-inner{
+      background:$cl-bg-wall-supplement;
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "caret"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.cp-triangle{
+  @include clearfix;
+  vertical-align:middle;
+  display: inline-block;
+  height: 0;
+  width: 0;
+}
+.cp-triangle-top{
+  @extend .cp-triangle;
+  border-bottom: 4px solid #fff;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+.cp-triangle-left{
+  @extend .cp-triangle;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right: 4px solid #fff;
+}
+.cp-triangle-right{
+  @extend .cp-triangle;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #fff;
+}
+.cp-triangle-bottom{
+  @extend .cp-triangle;
+  border-top: 4px solid #fff;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "badges"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.cp-badge{
+  @include border-radius(50%, 50%);
+  padding:0 3px;
+  display:inline-block;
+  background:$cl-bg-badge;
+  line-height:$lh-badge;
+  min-width:16px;
+  text-align:center;
+  font-size:$fs-small;
+  i{
+    line-height:$lh-badge;
+    color:$cl-txt-base;
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "loading"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.cp-loader{
+  .st-body{
+    @include posi-fix(50%,0,0,50%);
+    .st-inner{
+      @include boxset;
+      @include box-shadow-base;
+      width:180px;
+      margin-left:-90px;
+      margin-top:-90px;
+      padding:20px;
+      text-align:center;
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "collapse"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.cp-collapse-horizontal{
+  .st-inner{
+    @include brd-top(1px,dotted,$cl-brd-base);
+    .cp-collapse-switch-box{
+      @include border-bottom-radius(5px);
+      background:$cl-bg-gray2;
+      display:inline-block;
+      @include min-width(50px);
+      &:hover{
+        background:$cl-bg-gray;
+      }
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "wizard"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ *
+ * =============================================================
+ ▼ step circle
+============================================================== */
+.cp-step-box{
+  >.st-body{
+    >.st-inner{
+      ul{
+        li{
+          position:relative;
+          .cp-step-point{
+            height:40px;
+            width:40px;
+            @include brd(4px,solid,$cl-bg-gray2);
+            @include border-radius(40px);
+            @include posi-abs(0,0,auto,auto);
+            text-align:center;
+            line-height:35px;
+            z-index:1;
+            background:$cl-bg-white;
+          }
+          .cp-step-bar{
+            height:4px;
+            background:$cl-bg-gray2;
+            @include posi-abs(20px,0,auto,0);
+          }
+          .cp-step-title{
+            width:80px;
+            margin-top:50px;
+            margin-left:auto;
+            margin-right:-20px;
+            text-align: center;
+          }
+          &.current{
+            .cp-step-point{
+              @include brd(4px,solid,$cl-bg-theme);
+            }
+            .cp-step-bar{background:$cl-bg-theme;}
+          }
+        }
+      }
+    }
+  }
+}
+/* =============================================================
+ ▼ step
+============================================================== */
+.components-stepbar{
+  $stepbar-base:#ddd;
+  $stepbar-base-current:#098DB1;
+  //width:1000px;
+  ul{
+    li{
+      font-size:11px;
+      line-height:14px;
+      min-height: 14px;
+      background:$stepbar-base;
+      font-weight:bold;
+      font-family: メイリオ, Meiryo;
+      .components-stepbar-keyword{
+        width:122px;
+        padding:10px;
+        padding-right:0;
+        display:block;
+        text-decoration:none;
+        color:#333;
+        overflow:hidden;
+        white-space:nowrap;
+        &:hover{text-decoration:underline;}
+      }
+      .components-triangle{
+        position:relative;
+        width:19px;
+        height:34px;
+        .cp-triangle-right{
+          border-top: 17px solid transparent;
+          border-bottom: 17px solid transparent;
+          border-left: 17px solid $stepbar-base;
+        }
+        .components-triangle-front{
+          @include posi-abs(0,2px,auto,0);
+          z-index:1;
+        }
+        .components-triangle-bg{
+          @include posi-abs(0,0,auto,auto);
+          .cp-triangle-right{
+            border-left: 17px solid #aaa;
+          }
+        }
+      }
+      &.is-current{
+        .components-stepbar-keyword{
+          color:#fff;
+          background:$stepbar-base-current;
+        }
+        .components-triangle-front{
+          @include posi-abs(0,2px,auto,0);
+          z-index:1;
+          .cp-triangle-right{
+            border-left: 17px solid $stepbar-base-current;
+          }
+        }
+      }
+      &.is-past{
+        @extend .is-current;
+        background:$stepbar-base-current;
+        .components-stepbar-keyword{
+          background:$stepbar-base;
+          color:#333;
+        }
+        .components-triangle-front{
+          .cp-triangle-right{
+            border-left: 17px solid $stepbar-base;
+          }
+        }
+      }
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "stamps"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.cp-stamp{
+  width:50px;
+  height:50px;
+  @include brd(2px,solid,$cl-red);
+  @include border-radius(50%);
+  position:relative;
+  .cp-stamp-key{
+    text-align:center;
+    line-height:50px;
+    color:$cl-red;
+    font-weight:bold;
+  }
+  .cp-stamp-back{
+    @include posi-abs(-11px,auto,auto,3px);
+    text-align:center;
+    font-size:50px;
+    color:$cl-red;
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "toolbar"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ *
+ * =============================================================
+ ▼ step circle
+============================================================== */
+.cp-toolbar{
+  .lo-inner{
+    padding:5px 15px;
+    @include border-radius(3px);
+  }
+}
+/*■■■■■■■■■■■■■■■■■■■■■■■■    "menu"   ■■■■■■■■■■■■■■■■■■■■■■■*/

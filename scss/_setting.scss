@@ -1,0 +1,328 @@
+@import "compass";
+/*
+ * setting.scss
+ * include:
+ * "variables" "mixins" "base"
+ */
+
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+// "variables"
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+//app body size
+$app-minWidth: 910px;
+$app-minHeight: auto;
+$app-maxWidth: auto;
+$app-maxHeight: auto;
+
+//app font family
+$ff-base: Arial,Verdana,"Helvetica Neue",Helvetica,sans-serif;
+
+//font size
+$fs-base:13px;
+$fs-small:10px;
+$fs-midium:12px;
+$fs-large:14px;
+$fs-h6:16px;
+$fs-h5:18px;
+$fs-h4:20px;
+$fs-h3:22px;
+$fs-h2:24px;
+$fs-h1:26px;
+
+//line height
+$lh-reset:1.0;
+$lh-base:1.4;
+$lh-form:30px;
+$lh-table:1.4;
+$lh-btn:20px;
+$lh-badge:16px;
+$lh-txt:1.4;
+
+// theme color
+$cl-theme: #485169;
+$cl-theme1: #555;
+$cl-theme2: #111;
+
+$cl-theme-darken: darken( $cl-theme, 5% );
+$cl-theme1-darken: darken( $cl-theme1, 5% );
+$cl-theme1-lighten: lighten( $cl-theme1, 5% );
+
+//body background color
+$cl-bg-body: #fff;
+
+//color
+$cl-white:#fff;
+$cl-red:#cc3300;
+$cl-orange:#B59654;
+$cl-blue:#548BB5;
+$cl-green:#689C51;
+$cl-black:#555;
+$cl-yellow:#F4DD17;
+$cl-gray:#f5f5f5;
+$cl-gray1:#f9f9f9;
+$cl-gray2:#eee;
+$cl-gray3:#ddd;
+$cl-gray4:#ccc;
+$cl-gray5:#bbb;
+
+$cl-white-darken: darken( $cl-white, 15% );
+
+//bg color
+$cl-bg-white: $cl-white;
+$cl-bg-red: #FFEEF3;
+$cl-bg-orange: #FFF5DE;
+$cl-bg-blue: #EEF9FF;
+$cl-bg-green: #EFFFEE;
+$cl-bg-yellow: #FDFFEE;
+$cl-bg-black: $cl-black;
+$cl-bg-gray: $cl-gray;
+$cl-bg-gray1: $cl-gray1;
+$cl-bg-gray2: $cl-gray2;
+$cl-bg-theme: $cl-theme;
+
+//text color
+$cl-txt-base: #333;
+$cl-txt-sub : #666;
+$cl-txt-rev : #fff;
+$cl-txt-theme : $cl-theme;
+$cl-txt-link:#0088ff;
+$cl-txt-hover: darken( $cl-txt-link, 15% );
+
+//border color
+$cl-brd-base:#ccc;
+$cl-brd-theme: $cl-theme;
+
+$cl-brd-lighten: lighten( $cl-brd-base, 5% );
+$cl-brd-darken: darken( $cl-brd-base, 5% );
+
+//focus color
+$cl-focus :#0095FF;
+
+//button color
+$cl-btn-base:#eee;
+$cl-btn-hover: darken( $cl-btn-base, 5% );
+
+$cl-btn-darken: darken( $cl-btn-base, 5% );
+
+//userinfo color
+$cl-alert: #cc3300;
+$cl-success: #3E7B13;
+$cl-info: #4F8AB4;
+$cl-warning: #857F6A;
+
+//userinfo background color
+$cl-bg-alert: lighten( $cl-alert, 5% );
+$cl-bg-success: lighten( $cl-success, 5% );
+$cl-bg-info: lighten( $cl-info, 5% );
+$cl-bg-warning: lighten( $cl-warning, 5% );
+
+//delete color
+$cl-delete: $cl-red;
+$cl-delete-darken: darken( $cl-delete, 5% );
+
+//header
+$cl-bg-header: $cl-theme;
+
+//nav
+$cl-bg-nav: #eaecef;
+$cl-bg-nav-current: $cl-theme;
+
+//tab
+$cl-bg-tab: $cl-theme;
+$cl-bg-tab-current: $cl-theme;
+
+//toorbar
+$cl-bg-toolbar: $cl-gray;
+
+//footer
+$cl-bg-footer: $cl-theme;
+
+//table
+$cl-bg-table-header : $cl-gray2;
+$cl-bg-table-header2:#2562a5;
+$cl-bg-table-header3:#999;
+$pd-table:7px;
+
+//modal
+$cl-bg-modal-header: $cl-theme;
+$cl-bg-modal-body: #fff;
+$cl-bg-modal-footer: $cl-gray;
+
+//popup
+$cl-bg-popup:#fff;
+
+//tooltip
+$cl-bg-tooltip:#666;
+
+//wall
+$cl-bg-wall: #f6f6f6;
+$cl-bg-wall-supplement:#FEFDDA;
+
+//badge size
+$cl-bg-badge:$cl-red;
+
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+// "mixins"
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+@mixin side($size){
+  padding:0 $size;
+}
+@mixin posi-fix($top, $right, $bottom, $left){
+  position:fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin posi-abs($top, $right, $bottom, $left){
+  position:absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin brd($width: 1px, $style: solid, $color: $cl-brd-base){
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+}
+@mixin brd-top($width: 1px, $style: solid, $color: $cl-brd-base){
+  border-top-width: $width;
+  border-top-style: $style;
+  border-top-color: $color;
+}
+@mixin brd-right($width: 1px, $style: solid, $color: $cl-brd-base){
+  border-right-width: $width;
+  border-right-style: $style;
+  border-right-color: $color;
+}
+@mixin brd-bottom($width: 1px, $style: solid, $color: $cl-brd-base){
+  border-bottom-width: $width;
+  border-bottom-style: $style;
+  border-bottom-color: $color;
+}
+@mixin brd-left($width: 1px, $style: solid, $color: $cl-brd-base){
+  border-left-width: $width;
+  border-left-style: $style;
+  border-left-color: $color;
+}
+
+@mixin centering($width: 200px){
+  margin:auto;
+  width: $width;
+}
+
+@mixin gradation($start:#fff, $end:#e3e3e3) {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $start), color-stop(50%, $end), color-stop(100%, $end));
+  background-image: -moz-linear-gradient($start, $end, $end);
+  background-image: -webkit-linear-gradient($start, $end, $end);
+  background-image: linear-gradient($start, $end, $end);
+}
+@mixin gradation-ie($start:#ffffffff, $end:#FFE3E3E3) {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#{$start}', endColorstr='#{$end}');
+}
+
+@mixin overflow-fix($max:300px){
+  width: $max;
+  @include ellipsis;
+}
+@mixin overflow-max($max:300px){
+  max-width: $max;
+  @include ellipsis;
+}
+
+@mixin boxset($bg: $cl-gray, $radius: 3px, $width: 1px, $type: solid, $color: $cl-brd-base){
+  background: $bg;
+  border: $width $type $color;
+  @include border-radius($radius);
+}
+
+@mixin box-shadow-base{
+  @include box-shadow(0 3px 5px rgba($cl-txt-base, .25));
+}
+
+@mixin easeout{
+  @include transition( all 0.3s ease-out);
+}
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+// "base"
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+/* =============================================================
+ ▼ app base
+============================================================= */
+html,body {
+  margin:0;
+  padding: 0;
+  @include min-width($app-minWidth);
+}
+body {
+  position: relative;
+  background: $cl-bg-body;
+  font-size: $fs-base;
+  color: $cl-txt-base;
+  line-height: $lh-base;
+  font-family: $ff-base;
+}
+*,*:before, *:after {box-sizing: border-box;}
+dl,dt,dd,ul,li,p,h1, h2, h3, h4, h5, h6{
+  margin:0;
+  padding:0;
+}
+ul{
+  list-style-type: none;
+  &.cp-list-decimal{
+    li{
+      list-style-type:decimal;
+      margin-left:23px;
+    }
+  }
+}
+small{font-size: $fs-small;}
+em{font-style:normal;}
+hr{
+  border: 0;
+  height: 1px;
+  padding:0;
+  margin:0;
+  background: $cl-brd-base;
+  &.is-dotted{
+    height:0;
+    background:none;
+    @include brd-bottom(1px,dotted,$cl-brd-base);
+  }
+}
+/* =============================================================
+ ▼ anchor
+============================================================== */
+a{
+  text-decoration:none;
+  outline:none;
+  color: $cl-txt-link;
+  &:hover{
+    text-decoration:underline;
+    color: $cl-txt-hover;
+    @include opacity(0.8);
+    @include transition(all 0.3s ease-in-out);
+    img{
+     @include opacity(0.8);
+     @include transition(all 0.3s ease-in-out);
+    }
+  }
+  &.is-link{
+    text-decoration:underline;
+    &:hover{
+      text-decoration:none;
+      color: $cl-txt-hover;
+    }
+  }
+  &.is-nolink{
+    text-decoration:none;
+    color: $cl-txt-base;
+    &:hover{
+      text-decoration:none;
+      color: $cl-txt-base;
+    }
+  }
+}
