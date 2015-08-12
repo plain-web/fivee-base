@@ -64,17 +64,17 @@ footer{
       // page-nav ////////////////////////////////////
       >.page-nav{
         >.st-body{
-          width:180px;
-          background:$cl-bg-nav;
-          @include brd-right;
-          .md-main-nav{
-
+          width:200px;
+          margin:15px;
+          >.st-inner{
+            padding:15px;
+            background:$cl-bg-nav;
           }
         }
       }
       // page-main ////////////////////////////
       >.page-main{
-        margin-left:180px;
+        margin-left:220px;
         >.st-body{
           >.st-inner{
             padding:20px;

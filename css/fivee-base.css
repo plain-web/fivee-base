@@ -2503,6 +2503,63 @@ a.is-nolink:hover {
   opacity: 1;
 }
 
+/* =============================================================
+ ▼ box-shadow
+============================================================== */
+.ef-shadow01 {
+  -moz-box-shadow: 0 0 5px rgba(51, 51, 51, 0.1);
+  -webkit-box-shadow: 0 0 5px rgba(51, 51, 51, 0.1);
+  box-shadow: 0 0 5px rgba(51, 51, 51, 0.1);
+}
+
+.ef-shadow02 {
+  -moz-box-shadow: 0 0 5px rgba(51, 51, 51, 0.2);
+  -webkit-box-shadow: 0 0 5px rgba(51, 51, 51, 0.2);
+  box-shadow: 0 0 5px rgba(51, 51, 51, 0.2);
+}
+
+.ef-shadow03 {
+  -moz-box-shadow: 0 0 5px rgba(51, 51, 51, 0.3);
+  -webkit-box-shadow: 0 0 5px rgba(51, 51, 51, 0.3);
+  box-shadow: 0 0 5px rgba(51, 51, 51, 0.3);
+}
+
+.ef-shadow04 {
+  -moz-box-shadow: 0 0 5px rgba(51, 51, 51, 0.4);
+  -webkit-box-shadow: 0 0 5px rgba(51, 51, 51, 0.4);
+  box-shadow: 0 0 5px rgba(51, 51, 51, 0.4);
+}
+
+.ef-shadow05 {
+  -moz-box-shadow: 0 0 5px rgba(51, 51, 51, 0.5);
+  -webkit-box-shadow: 0 0 5px rgba(51, 51, 51, 0.5);
+  box-shadow: 0 0 5px rgba(51, 51, 51, 0.5);
+}
+
+.ef-shadow06 {
+  -moz-box-shadow: 0 0 5px rgba(51, 51, 51, 0.6);
+  -webkit-box-shadow: 0 0 5px rgba(51, 51, 51, 0.6);
+  box-shadow: 0 0 5px rgba(51, 51, 51, 0.6);
+}
+
+.ef-shadow07 {
+  -moz-box-shadow: 0 0 5px rgba(51, 51, 51, 0.7);
+  -webkit-box-shadow: 0 0 5px rgba(51, 51, 51, 0.7);
+  box-shadow: 0 0 5px rgba(51, 51, 51, 0.7);
+}
+
+.ef-shadow08 {
+  -moz-box-shadow: 0 0 5px rgba(51, 51, 51, 0.8);
+  -webkit-box-shadow: 0 0 5px rgba(51, 51, 51, 0.8);
+  box-shadow: 0 0 5px rgba(51, 51, 51, 0.8);
+}
+
+.ef-shadow09 {
+  -moz-box-shadow: 0 0 5px rgba(51, 51, 51, 0.9);
+  -webkit-box-shadow: 0 0 5px rgba(51, 51, 51, 0.9);
+  box-shadow: 0 0 5px rgba(51, 51, 51, 0.9);
+}
+
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "view"
@@ -3318,14 +3375,15 @@ footer .st-body .st-inner .st-outer.centering {
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .page-container > .st-body > .st-inner > .page-nav > .st-body {
-  width: 180px;
+  width: 200px;
+  margin: 15px;
+}
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner {
+  padding: 15px;
   background: #eaecef;
-  border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: #ccc;
 }
 .page-container > .st-body > .st-inner > .page-main {
-  margin-left: 180px;
+  margin-left: 220px;
 }
 .page-container > .st-body > .st-inner > .page-main > .st-body > .st-inner {
   padding: 20px;
@@ -3411,17 +3469,6 @@ a i:hover {
  * =============================================================
  ▼ default form
 ============================================================= */
-.cp-focus {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #485169;
-  background: #111;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
 select,
 input[type="text"],
 input[type="password"] {
@@ -3517,6 +3564,12 @@ label input[type="radio"] {
   background-image: -moz-linear-gradient(#d9d9d9, #e1e1e1, #e1e1e1);
   background-image: -webkit-linear-gradient(#d9d9d9, #e1e1e1, #e1e1e1);
   background-image: linear-gradient(#d9d9d9, #e1e1e1, #e1e1e1);
+}
+.cp-btn:active, .cp-btn-theme:active, .cp-btn-fix:active, .cp-btn-large:active, .cp-btn-mini:active {
+  background: #bfbfbf;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #bfbfbf;
 }
 .cp-btn.cp-disabled:hover, .cp-disabled.cp-btn-theme:hover, .cp-disabled.cp-btn-fix:hover, .cp-disabled.cp-btn-large:hover, .cp-disabled.cp-btn-mini:hover {
   background: #eee;
@@ -3917,6 +3970,22 @@ table.cp-table colgroup td:last-child {
 }
 table.cp-table tr tbody:last-child td, table.cp-table colgroup tbody:last-child td {
   border-bottom-width: none;
+}
+table.cp-table tr .is-refresh, table.cp-table colgroup .is-refresh {
+  background: #EFFFEE;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+table.cp-table tr .ef-vrt, table.cp-table colgroup .ef-vrt {
+  vertical-align: top;
+}
+table.cp-table tr .ef-vrm, table.cp-table colgroup .ef-vrm {
+  vertical-align: middle;
+}
+table.cp-table tr .ef-vrb, table.cp-table colgroup .ef-vrb {
+  vertical-align: bottom;
 }
 table.cp-table tr .cp-bg-white, table.cp-table colgroup .cp-bg-white {
   background: #fff;

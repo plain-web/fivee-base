@@ -61,11 +61,11 @@ a{
  * =============================================================
  ▼ default form
 ============================================================= */
-.cp-focus{
-  @include brd(1px,solid,$cl-theme);
-  background:$cl-theme2;
-  @include easeout;
-}
+// .cp-focus{
+//   @include brd(1px,solid,$cl-theme);
+//   background:$cl-theme2;
+//   @include easeout;
+// }
 select,
 input[type="text"],
 input[type="password"]{
@@ -193,6 +193,10 @@ label{
     @include brd(1px,solid,$cl-brd-darken);
     @include gradation($cl-white-darken, $cl-btn-darken);
     //@include gradation-ie(#FFf2f2f2, #FFe1e1e1); // for oldie
+  }
+  &:active{
+    background:$cl-brd-darken; // for oldie
+    @include brd(1px,solid,$cl-brd-darken);
   }
   //for oldie
   &.cp-disabled{
@@ -510,7 +514,16 @@ table.cp-table{
     td:last-child{border-right-width:none;}
     tbody:last-child td{border-bottom-width:none;}
 
-    //背景色
+    .is-refresh{
+      background:$cl-bg-green;
+      @include transition( all 0.5s ease-out);
+    }
+    //vertical
+    .ef-vrt{vertical-align:top;}
+    .ef-vrm{vertical-align:middle;}
+    .ef-vrb{vertical-align:bottom;}
+
+    //background
     .cp-bg-white{background:$cl-bg-white;}
     .cp-bg-red{background:$cl-bg-red;}
     .cp-bg-orange{background: $cl-bg-orange;}
@@ -523,7 +536,7 @@ table.cp-table{
     .cp-bg-gray2{background:$cl-bg-gray2;}
     .cp-bg-theme{background:$cl-bg-theme;}
 
-    //ボーダー(th,td)
+    //border(th,td)
     .cp-brd0{@include brd(0, solid, $cl-brd-base);}
     .cp-brd1{@include brd(1px, solid, $cl-brd-base);}
     .cp-brd2{@include brd(2px, solid, $cl-brd-base);}
@@ -544,7 +557,7 @@ table.cp-table{
     .cp-brd1-left{@include brd-left(1px, solid, $cl-brd-base);}
     .cp-brd2-left{@include brd-left(2px, solid, $cl-brd-base);}
     .cp-brd3-left{@include brd-left(3px, solid, $cl-brd-base);}
-    //ボーダー(tr配下のth,td)
+    //border(tr > th,td)
     &.cp-brd0{th,td{@include brd(0);}}
     &.cp-brd1{th,td{@include brd(1px, solid, $cl-brd-base);}}
     &.cp-brd2{th,td{@include brd(2px, solid, $cl-brd-base);}}
@@ -566,7 +579,7 @@ table.cp-table{
     &.cp-brd2-left{th,td{@include brd-left(2px, solid, $cl-brd-base);}}
     &.cp-brd3-left{th,td{@include brd-left(3px, solid, $cl-brd-base);}}
 
-    //ボーダー、テーマカラー(th,td)
+    //border theme(th,td)
     .cp-brd1-theme{@include brd(1px, solid, $cl-theme);}
     .cp-brd2-theme{@include brd(2px, solid, $cl-theme);}
     .cp-brd3-theme{@include brd(3px, solid, $cl-theme);}
@@ -582,7 +595,7 @@ table.cp-table{
     .cp-brd1-left-theme{@include brd-left(1px, solid, $cl-theme);}
     .cp-brd2-left-theme{@include brd-left(2px, solid, $cl-theme);}
     .cp-brd3-left-theme{@include brd-left(3px, solid, $cl-theme);}
-    //ボーダー、テーマカラー(tr配下のth,td)
+    //border theme(tr > th,td)
     &.cp-brd1-theme{th,td{@include brd(1px, solid, $cl-theme);}}
     &.cp-brd2-theme{th,td{@include brd(2px, solid, $cl-theme);}}
     &.cp-brd3-theme{th,td{@include brd(3px, solid, $cl-theme);}}
@@ -599,7 +612,7 @@ table.cp-table{
     &.cp-brd2-left-theme{th,td{@include brd-left(2px, solid, $cl-theme);}}
     &.cp-brd3-left-theme{th,td{@include brd-left(3px, solid, $cl-theme);}}
 
-    //ボーダー、赤(th,td)
+    //border red(th,td)
     .cp-brd1-red{@include brd(1px, solid, $cl-red);}
     .cp-brd2-red{@include brd(2px, solid, $cl-red);}
     .cp-brd3-red{@include brd(3px, solid, $cl-red);}
@@ -615,7 +628,7 @@ table.cp-table{
     .cp-brd1-left-red{@include brd-left(1px, solid, $cl-red);}
     .cp-brd2-left-red{@include brd-left(2px, solid, $cl-red);}
     .cp-brd3-left-red{@include brd-left(3px, solid, $cl-red);}
-    //ボーダー、赤(tr配下のth,td)
+    //border red(tr > th,td)
     &.cp-brd1-red{th,td{@include brd(1px, solid, $cl-red);}}
     &.cp-brd2-red{th,td{@include brd(2px, solid, $cl-red);}}
     &.cp-brd3-red{th,td{@include brd(3px, solid, $cl-red);}}
@@ -632,7 +645,7 @@ table.cp-table{
     &.cp-brd2-left-red{th,td{@include brd-left(2px, solid, $cl-red);}}
     &.cp-brd3-left-red{th,td{@include brd-left(3px, solid, $cl-red);}}
 
-    //ドットボーダー(th,td)
+    //border dotted(th,td)
     .cp-brd1-dotted{@include brd(1px, dotted, $cl-brd-base);}
     .cp-brd2-dotted{@include brd(2px, dotted, $cl-brd-base);}
     .cp-brd3-dotted{@include brd(3px, dotted, $cl-brd-base);}
@@ -648,7 +661,7 @@ table.cp-table{
     .cp-brd1-left-dotted{@include brd-left(1px, dotted, $cl-brd-base);}
     .cp-brd2-left-dotted{@include brd-left(2px, dotted, $cl-brd-base);}
     .cp-brd3-left-dotted{@include brd-left(3px, dotted, $cl-brd-base);}
-//ドットボーダー(tr配下のth,td)
+    //border dotted(tr > th,td)
     &.cp-brd1-dotted{th,td{@include brd(1px, dotted, $cl-brd-base);}}
     &.cp-brd2-dotted{th,td{@include brd(2px, dotted, $cl-brd-base);}}
     &.cp-brd3-dotted{th,td{@include brd(3px, dotted, $cl-brd-base);}}
@@ -666,7 +679,7 @@ table.cp-table{
     &.cp-brd2-left-dotted{th,td{@include brd-left(2px, dotted, $cl-brd-base);}}
     &.cp-brd3-left-dotted{th,td{@include brd-left(3px, dotted, $cl-brd-base);}}
 
-    //ダッシュボーダー、テーマカラー(th,td)
+    //boder dotted theme(th,td)
     .cp-brd1-dotted-theme{@include brd(1px, dotted, $cl-theme);}
     .cp-brd2-dotted-theme{@include brd(2px, dotted, $cl-theme);}
     .cp-brd3-dotted-theme{@include brd(3px, dotted, $cl-theme);}
@@ -682,7 +695,7 @@ table.cp-table{
     .cp-brd1-left-dotted-theme{@include brd-left(1px, dotted, $cl-theme);}
     .cp-brd2-left-dotted-theme{@include brd-left(2px, dotted, $cl-theme);}
     .cp-brd3-left-dotted-theme{@include brd-left(3px, dotted, $cl-theme);}
-    //ダッシュボーダー、テーマカラー(tr配下のth,td)
+    //border dotted theme(tr > th,td)
     &.cp-brd1-dotted-theme{th,td{@include brd(1px, dotted, $cl-theme);}}
     &.cp-brd2-dotted-theme{th,td{@include brd(2px, dotted, $cl-theme);}}
     &.cp-brd3-dotted-theme{th,td{@include brd(3px, dotted, $cl-theme);}}
@@ -699,7 +712,7 @@ table.cp-table{
     &.cp-brd2-left-dotted-theme{th,td{@include brd-left(2px, dotted, $cl-theme);}}
     &.cp-brd3-left-dotted-theme{th,td{@include brd-left(3px, dotted, $cl-theme);}}
 
-    //ダッシュボーダー、赤(th,td)
+    //border dotted red(th,td)
     .cp-brd1-dotted-red{@include brd(1px, dotted, $cl-red);}
     .cp-brd2-dotted-red{@include brd(2px, dotted, $cl-red);}
     .cp-brd3-dotted-red{@include brd(3px, dotted, $cl-red);}
@@ -715,7 +728,7 @@ table.cp-table{
     .cp-brd1-left-dotted-red{@include brd-left(1px, dotted, $cl-red);}
     .cp-brd2-left-dotted-red{@include brd-left(2px, dotted, $cl-red);}
     .cp-brd3-left-dotted-red{@include brd-left(3px, dotted, $cl-red);}
-    //ダッシュボーダー、赤(tr配下のth,td)
+    //border dotted red(tr > th,td)
     &.cp-brd1-dotted-red{th,td{@include brd(1px, dotted, $cl-red);}}
     &.cp-brd2-dotted-red{th,td{@include brd(2px, dotted, $cl-red);}}
     &.cp-brd3-dotted-red{th,td{@include brd(3px, dotted, $cl-red);}}
@@ -732,7 +745,7 @@ table.cp-table{
     &.cp-brd2-left-dotted-red{th,td{@include brd-left(2px, dotted, $cl-red);}}
     &.cp-brd3-left-dotted-red{th,td{@include brd-left(3px, dotted, $cl-red);}}
 
-    //ダッシュボーダー(th,td)
+    //ダborder dashed(th,td)
     .cp-brd1-dashed{@include brd(1px, dashed, $cl-brd-base);}
     .cp-brd2-dashed{@include brd(2px, dashed, $cl-brd-base);}
     .cp-brd3-dashed{@include brd(3px, dashed, $cl-brd-base);}
@@ -748,7 +761,7 @@ table.cp-table{
     .cp-brd1-left-dashed{@include brd-left(1px, dashed, $cl-brd-base);}
     .cp-brd2-left-dashed{@include brd-left(2px, dashed, $cl-brd-base);}
     .cp-brd3-left-dashed{@include brd-left(3px, dashed, $cl-brd-base);}
-    //ダッシュボーダー(tr配下のth,td)
+    //border dashed (tr > th,td)
     &.cp-brd1-dashed{th,td{@include brd(1px, dashed, $cl-brd-base);}}
     &.cp-brd2-dashed{th,td{@include brd(2px, dashed, $cl-brd-base);}}
     &.cp-brd3-dashed{th,td{@include brd(3px, dashed, $cl-brd-base);}}
@@ -766,7 +779,7 @@ table.cp-table{
     &.cp-brd2-left-dashed{th,td{@include brd-left(2px, dashed, $cl-brd-base);}}
     &.cp-brd3-left-dashed{th,td{@include brd-left(3px, dashed, $cl-brd-base);}}
 
-    //ダッシュボーダー、テーマカラー(th,td)
+    //border dashed theme(th,td)
     .cp-brd1-dashed-theme{@include brd(1px, dashed, $cl-theme);}
     .cp-brd2-dashed-theme{@include brd(2px, dashed, $cl-theme);}
     .cp-brd3-dashed-theme{@include brd(3px, dashed, $cl-theme);}
@@ -783,7 +796,7 @@ table.cp-table{
     .cp-brd2-left-dashed-theme{@include brd-left(2px, dashed, $cl-theme);}
     .cp-brd3-left-dashed-theme{@include brd-left(3px, dashed, $cl-theme);}
 
-    //ダッシュボーダー、テーマカラー(tr配下のth,td)
+    //border dashed theme(tr > th,td)
     &.cp-brd1-dashed-theme{th,td{@include brd(1px, dashed, $cl-theme);}}
     &.cp-brd2-dashed-theme{th,td{@include brd(2px, dashed, $cl-theme);}}
     &.cp-brd3-dashed-theme{th,td{@include brd(3px, dashed, $cl-theme);}}
@@ -800,7 +813,7 @@ table.cp-table{
     &.cp-brd2-left-dashed-theme{th,td{@include brd-left(2px, dashed, $cl-theme);}}
     &.cp-brd3-left-dashed-theme{th,td{@include brd-left(3px, dashed, $cl-theme);}}
 
-    //ダッシュボーダー、赤(th,td)
+    //border dashed red(th,td)
     .cp-brd1-dashed-red{@include brd(1px, dashed, $cl-red);}
     .cp-brd2-dashed-red{@include brd(2px, dashed, $cl-red);}
     .cp-brd3-dashed-red{@include brd(3px, dashed, $cl-red);}
@@ -816,7 +829,7 @@ table.cp-table{
     .cp-brd1-left-dashed-red{@include brd-left(1px, dashed, $cl-red);}
     .cp-brd2-left-dashed-red{@include brd-left(2px, dashed, $cl-red);}
     .cp-brd3-left-dashed-red{@include brd-left(3px, dashed, $cl-red);}
-    //ダッシュボーダー、赤(tr配下のth,td)
+    //border dashed red(tr > th,td)
     &.cp-brd1-dashed-red{th,td{@include brd(1px, dashed, $cl-red);}}
     &.cp-brd2-dashed-red{th,td{@include brd(2px, dashed, $cl-red);}}
     &.cp-brd3-dashed-red{th,td{@include brd(3px, dashed, $cl-red);}}

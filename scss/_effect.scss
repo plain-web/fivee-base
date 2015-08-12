@@ -612,6 +612,36 @@
 .ef-op08{@include opacity(0.8);}
 .ef-op09{@include opacity(0.9);}
 .ef-op10{@include opacity(1.0);}
+/* =============================================================
+ ▼ box-shadow
+============================================================== */
+.ef-shadow01{
+  @include box-shadow(0 0 5px rgba($cl-txt-base, .1));
+}
+.ef-shadow02{
+  @include box-shadow(0 0 5px rgba($cl-txt-base, .2));
+}
+.ef-shadow03{
+  @include box-shadow(0 0 5px rgba($cl-txt-base, .3));
+}
+.ef-shadow04{
+  @include box-shadow(0 0 5px rgba($cl-txt-base, .4));
+}
+.ef-shadow05{
+  @include box-shadow(0 0 5px rgba($cl-txt-base, .5));
+}
+.ef-shadow06{
+  @include box-shadow(0 0 5px rgba($cl-txt-base, .6));
+}
+.ef-shadow07{
+  @include box-shadow(0 0 5px rgba($cl-txt-base, .7));
+}
+.ef-shadow08{
+  @include box-shadow(0 0 5px rgba($cl-txt-base, .8));
+}
+.ef-shadow09{
+  @include box-shadow(0 0 5px rgba($cl-txt-base, .9));
+}
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "view"
@@ -764,6 +794,10 @@ ul.ef-float15{
 .ef-easeout{
   @include easeout;
 }
+// .is-focus{
+//   background:$cl-bg-green;
+//   @include easeout;
+// }
 /* =============================================================
  ▼ rotate
 ============================================================= */

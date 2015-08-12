@@ -81,19 +81,19 @@ $('.jq-ph-box input').each( function(){
 /*========================================================================
   [return] return targetClass
 ======================================================================== */
-// function thisClassGet(clickThis, returnClass){
-//   //get class
-//   var thisClass = $(clickThis).attr('class');
-//   //split class　
-//   thisClass = thisClass.split(" ");
-//   //return class
-//   var thisClass = $.grep(thisClass, function(value, index) {
-//     return value.indexOf(returnClass) >= 0;
-//   });
-//   var targetClass = '.' + thisClass;
-//   //console.log(targetClass);
-//   return targetClass;
-// }
+function thisClassGet(clickThis, returnClass){
+  //get class
+  var thisClass = $(clickThis).attr('class');
+  //split class　
+  thisClass = thisClass.split(" ");
+  //return class
+  var thisClass = $.grep(thisClass, function(value, index) {
+    return value.indexOf(returnClass) >= 0;
+  });
+  var targetClass = '.' + thisClass;
+  //console.log(targetClass);
+  return targetClass;
+}
 /*========================================================================
    same label
 ======================================================================== */
@@ -113,6 +113,19 @@ $('.jq-ph-box input').each( function(){
 //     $(this).parents('.jq-label-same-table').find('.is-focus').removeClass('is-focus');
 //   }
 // });
+/*========================================================================
+  focus target
+======================================================================== */
+$('body').on('click', '.jq-focus-on', function(){
+  $('.jq-focus-target').addClass('is-focus');
+  //show cartain
+  $('.jq-cartain').show();
+  //click cartain
+  $('.jq-cartain').on('click', function(){
+    $('.jq-focus-target').removeClass('is-focus');
+    $(this).hide();
+  });
+});
 /*========================================================================
 	Login
 ======================================================================== */
@@ -137,6 +150,21 @@ $('.jq-ph-box input').each( function(){
 // 	}
 
 // });
+/*========================================================================
+  equalizer
+======================================================================== */
+// var gridTarget = $('.jq-equalizer-width li'); //target
+// var listHiretsu = []; 
+
+// if(gridTarget){
+//   $(gridTarget).each(function(i) {
+//     var targetWidth = $(gridTarget).eq(i).width(); //get width
+//     listHiretsu.push(targetWidth);
+//   });
+
+//   var maxWidth =  Math.max.apply(null, listHiretsu); //max
+//   $(gridTarget).width(maxWidth); 
+// }
 /*========================================================================
 	resize
 ======================================================================== */
@@ -333,6 +361,38 @@ function toolTipOn(target){
 //     $('.jq-cartain').hide();
 //   });
 // });
+/*========================================================================
+  toast 
+======================================================================== */
+$('body').on('click', '.jq-toast-open', function(){
+  var clickThis = $(this);
+  var returnClass = 'jq-toast-num';
+  var targetClass = thisClassGet(clickThis, returnClass);
+
+  //show contents
+  $('.jq-toast-posi').removeClass('is-current');
+  $('.jq-toast').find(targetClass).addClass('is-current');
+
+  //show toast
+  $('.jq-toast').show();
+
+  //show cartain
+  $('.jq-cartain').show().addClass('fw-bg-white fw-op05');
+
+  //set　timer
+  var timer;
+  timer = setTimeout( function(){ 
+    $('.jq-toast').hide(700);
+    $('.jq-cartain').hide(700);
+  }, 4000);
+
+  //click cartain
+  $('.jq-load-components').on('click', '.jq-cartain', function(){
+    $('.jq-toast').hide(700);
+    $('.jq-cartain').hide(700);
+    clearTimeout(timer);　
+  });
+});
 /*========================================================================
   loader
 ======================================================================== */
