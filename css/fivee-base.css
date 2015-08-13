@@ -23,7 +23,7 @@ html, body {
 
 body {
   position: relative;
-  background: #fff;
+  background: #f6f6f6;
   font-size: 13px;
   color: #333;
   line-height: 1.4;
@@ -3374,13 +3374,32 @@ footer .st-body .st-inner .st-outer.centering {
  * "container"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
+.page-container > .st-body > .st-inner {
+  margin-bottom: 30px;
+}
 .page-container > .st-body > .st-inner > .page-nav > .st-body {
   width: 200px;
   margin: 15px;
 }
 .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner {
-  padding: 15px;
-  background: #eaecef;
+  padding: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+  background: #fff;
+}
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner i, .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner a {
+  color: #333;
+}
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner ul li a {
+  padding: 0 10px;
+  display: block;
+}
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner ul li:hover a, .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner ul li.is-current a, .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .components-stepbar ul li.is-past a, .components-stepbar .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner ul li.is-past a {
+  background: #f6f6f6;
 }
 .page-container > .st-body > .st-inner > .page-main {
   margin-left: 220px;

@@ -61,14 +61,32 @@ footer{
 .page-container{
   >.st-body{
     >.st-inner{
+      margin-bottom:30px;
       // page-nav ////////////////////////////////////
       >.page-nav{
         >.st-body{
           width:200px;
           margin:15px;
           >.st-inner{
-            padding:15px;
+            padding:10px;
+            @include border-radius(5px);
+            @include brd;
             background:$cl-bg-nav;
+            i,a{color:$cl-txt-base;}
+            ul{
+              li{
+                a{
+                    padding:0 10px;
+                    display:block;
+                  }
+                &:hover,
+                &.is-current{
+                  a{
+                    background:$cl-bg-nav-current;
+                  }
+                }
+              }
+            }
           }
         }
       }

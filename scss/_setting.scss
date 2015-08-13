@@ -48,7 +48,7 @@ $cl-theme1-darken: darken( $cl-theme1, 5% );
 $cl-theme1-lighten: lighten( $cl-theme1, 5% );
 
 //body background color
-$cl-bg-body: #fff;
+$cl-bg-body: #f6f6f6;
 
 //color
 $cl-white:#fff;
@@ -124,8 +124,8 @@ $cl-delete-darken: darken( $cl-delete, 5% );
 $cl-bg-header: $cl-theme;
 
 //nav
-$cl-bg-nav: #eaecef;
-$cl-bg-nav-current: $cl-theme;
+$cl-bg-nav: #fff;
+$cl-bg-nav-current: #f6f6f6;
 
 //tab
 $cl-bg-tab: $cl-theme;
