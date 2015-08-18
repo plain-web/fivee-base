@@ -306,6 +306,75 @@
 .ef-mw800{@include min-width(800px);}
 .ef-mw900{@include min-width(900px);}
 /* =============================================================
+ ▼ height (px)
+============================================================== */
+.ef-h0{height:0;}
+.ef-h3{height:3px;}
+.ef-h7{height:7px;}
+.ef-h10{height:10px;}
+.ef-h20{height:20px;}
+.ef-h30{height:30px;}
+.ef-h40{height:40px;}
+.ef-h50{height:50px;}
+.ef-h60{height:60px;}
+.ef-h70{height:70px;}
+.ef-h80{height:80px;}
+.ef-h90{height:90px;}
+.ef-h100{height:100px;}
+.ef-h110{height:110px;}
+.ef-h120{height:120px;}
+.ef-h130{height:130px;}
+.ef-h140{height:140px;}
+.ef-h150{height:150px;}
+.ef-h160{height:160px;}
+.ef-h170{height:170px;}
+.ef-h180{height:180px;}
+.ef-h190{height:190px;}
+.ef-h200{height:200px;}
+.ef-h210{height:210px;}
+.ef-h220{height:220px;}
+.ef-h230{height:230px;}
+.ef-h240{height:240px;}
+.ef-h250{height:250px;}
+.ef-h260{height:260px;}
+.ef-h270{height:270px;}
+.ef-h280{height:280px;}
+.ef-h290{height:290px;}
+.ef-h300{height:300px;}
+.ef-h310{height:310px;}
+.ef-h320{height:320px;}
+.ef-h330{height:330px;}
+.ef-h340{height:340px;}
+.ef-h350{height:350px;}
+.ef-h360{height:360px;}
+.ef-h370{height:370px;}
+.ef-h380{height:380px;}
+.ef-h390{height:390px;}
+.ef-h400{height:400px;}
+.ef-h410{height:410px;}
+.ef-h420{height:420px;}
+.ef-h430{height:430px;}
+.ef-h440{height:440px;}
+.ef-h450{height:450px;}
+.ef-h460{height:460px;}
+.ef-h470{height:470px;}
+.ef-h480{height:480px;}
+.ef-h490{height:490px;}
+.ef-h500{height:500px;}
+.ef-h510{height:510px;}
+.ef-h520{height:520px;}
+.ef-h530{height:530px;}
+.ef-h540{height:540px;}
+.ef-h550{height:550px;}
+.ef-h560{height:560px;}
+.ef-h570{height:570px;}
+.ef-h580{height:580px;}
+.ef-h590{height:590px;}
+.ef-h600{height:600px;}
+.ef-h700{height:700px;}
+.ef-h800{height:800px;}
+.ef-h900{height:900px;}
+/* =============================================================
  ▼ min-height
 ============================================================== */
 .ef-mh0{@include min-height(0);}
@@ -615,33 +684,15 @@
 /* =============================================================
  ▼ box-shadow
 ============================================================== */
-.ef-shadow01{
-  @include box-shadow(0 0 5px rgba($cl-txt-base, .1));
-}
-.ef-shadow02{
-  @include box-shadow(0 0 5px rgba($cl-txt-base, .2));
-}
-.ef-shadow03{
-  @include box-shadow(0 0 5px rgba($cl-txt-base, .3));
-}
-.ef-shadow04{
-  @include box-shadow(0 0 5px rgba($cl-txt-base, .4));
-}
-.ef-shadow05{
-  @include box-shadow(0 0 5px rgba($cl-txt-base, .5));
-}
-.ef-shadow06{
-  @include box-shadow(0 0 5px rgba($cl-txt-base, .6));
-}
-.ef-shadow07{
-  @include box-shadow(0 0 5px rgba($cl-txt-base, .7));
-}
-.ef-shadow08{
-  @include box-shadow(0 0 5px rgba($cl-txt-base, .8));
-}
-.ef-shadow09{
-  @include box-shadow(0 0 5px rgba($cl-txt-base, .9));
-}
+.ef-shadow01{@include box-shadow(0 0 5px rgba($cl-txt-base, .1));}
+.ef-shadow02{@include box-shadow(0 0 5px rgba($cl-txt-base, .2));}
+.ef-shadow03{@include box-shadow(0 0 5px rgba($cl-txt-base, .3));}
+.ef-shadow04{@include box-shadow(0 0 5px rgba($cl-txt-base, .4));}
+.ef-shadow05{@include box-shadow(0 0 5px rgba($cl-txt-base, .5));}
+.ef-shadow06{@include box-shadow(0 0 5px rgba($cl-txt-base, .6));}
+.ef-shadow07{@include box-shadow(0 0 5px rgba($cl-txt-base, .7));}
+.ef-shadow08{@include box-shadow(0 0 5px rgba($cl-txt-base, .8));}
+.ef-shadow09{@include box-shadow(0 0 5px rgba($cl-txt-base, .9));}
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "view"

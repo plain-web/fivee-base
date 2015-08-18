@@ -84,75 +84,23 @@ input[type="radio"]{
   padding:0;
 }
 select{padding:0;}
-label{
-  input[type="checkbox"],
-  input[type="radio"]{
-    margin-top:4px;
-  }
-}
 /* =============================================================
  ▼ formset
 ============================================================= */
-// .cp-formset{
-//   //display:table;
-//   label{
-//     display:block;
-//     position:relative;
-//     line-height:$lh-form;
-//     input{display:block;}
-//     &.cp-combo{
-//       @include clearfix;
-//       .cp-input{
-//         float:left;
-//         input{
-//           @include border-right-radius(0);
-//         }
-//       }
-//       .cp-icon-inset{
-//         float:left;
-//         .cp-icon,
-//         a{
-//           margin-left:0;
-//           border-left:0;
-//           @include border-left-radius(0);
-//         }
-//       }
-//     }
-//     &.cp-combo-inset{
-//       position:relative;
-//       .cp-input{
-//         input{
-//           padding-left:25px;
-//         }
-//       }
-//       .cp-icon-inset{
-//         @include posi-abs(0,auto,auto,7px);
-//       }
-//     }
-//     &.cp-combo-inset-rev{
-//       position:relative;
-//       .cp-input{
-//         input{
-//           padding-right:25px;
-//         }
-//       }
-//     }
-//     &.cp-check-radio{
-//       @include clearfix;
-//       .cp-check,
-//       .cp-radio{
-//         @include posi-abs(0,auto,auto,0);
-//         text-align:left;
-//         input{
-//           margin-top:7px;
-//         }
-//       }
-//       .cp-keyword{
-//         margin-left:16px;
-//       }
-//     }
-//   }
-// }
+label{
+  &.cp-radio,
+  &.cp-checkbox{
+    position:relative;
+    display:block;
+    padding-left:20px;
+    input[type="checkbox"],
+    input[type="radio"]{
+      @include posi-abs(50%,auto,auto,auto);
+      margin-top:-6px;
+      margin-left:-20px;
+    }
+  }
+}
 /* =============================================================
  ▼ ime mode
 ============================================================= */
@@ -189,6 +137,9 @@ label{
   @include gradation($cl-white, $cl-btn-base);
   //@include gradation-ie(#ffffffff, #ffeeeeee); // for oldie
   &:hover{
+    text-decoration:none;
+    color:$cl-txt-base;
+    i{color:$cl-txt-base;}
     background:$cl-btn-darken; // for oldie
     @include brd(1px,solid,$cl-brd-darken);
     @include gradation($cl-white-darken, $cl-btn-darken);
@@ -937,7 +888,7 @@ table.cp-table{
  */
 .cp-breadcrumb{
   .st-inner{
-    @include brd-bottom;
+    @include brd-top;
     background:$cl-gray2;
     padding:5px 10px;
     ul{
@@ -1007,28 +958,28 @@ table.cp-table{
  * "titles"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
- //page
-.cp-page-summary{
-  ul{
-    li{
-      line-height:22px;
-      .sumary{
-        color:$cl-txt-sub;
-      }
-    }
-  }
-}
-//contents
-.cp-contents-summary{
-  ul{
-    li{
-      line-height:22px;
-      .sumary{
-        color:$cl-txt-sub;
-      }
-    }
-  }
-}
+//  //page
+// .cp-page-summary{
+//   ul{
+//     li{
+//       line-height:22px;
+//       .sumary{
+//         colnor:$cl-txt-sub;
+//       }
+//     }
+//   }
+// }
+// //contents
+// .cp-contents-summary{
+//   ul{
+//     li{
+//       line-height:22px;
+//       .sumary{
+//         color:$cl-txt-sub;
+//       }
+//     }
+//   }
+// }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "panels"
@@ -1038,10 +989,10 @@ table.cp-table{
   >.st-body{
     position:relative;
     >.st-inner{
+      @include brd;
+      @include border-radius(5px);
       padding:20px;
-      @include brd(1px,solid,$cl-gray);
-      @include border-radius(3px);
-      overflow-x: auto;
+      overflow: auto;
     }
   }
 }
@@ -1050,7 +1001,6 @@ table.cp-table{
   >.st-body{
     >.st-inner{
       padding:7px;
-      font-size:12px;
     }
   }
 }
@@ -1304,23 +1254,44 @@ table.cp-table{
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .cp-stamp{
-  width:50px;
-  height:50px;
-  @include brd(2px,solid,$cl-red);
-  @include border-radius(50%);
-  position:relative;
-  .cp-stamp-key{
-    text-align:center;
-    line-height:50px;
-    color:$cl-red;
-    font-weight:bold;
-  }
-  .cp-stamp-back{
-    @include posi-abs(-11px,auto,auto,3px);
-    text-align:center;
-    font-size:50px;
-    color:$cl-red;
-  }
+  @include border-radius(3px);
+  padding:0 3px;
+  display:inline-block;
+  text-align:center;
+  font-size:$fs-small;
+  height:15px;
+  min-width:15px;
+  line-height:15px;
+}
+.cp-stamp-gray{
+  @extend .cp-stamp;
+  background:$cl-stamp-gray;
+  color:$cl-txt-rev;
+}
+.cp-stamp-red{
+  @extend .cp-stamp;
+  background:$cl-stamp-red;
+  color:$cl-txt-rev;
+}
+.cp-stamp-green{
+  @extend .cp-stamp;
+  background:$cl-stamp-green;
+  color:$cl-txt-rev;
+}
+.cp-stamp-orange{
+  @extend .cp-stamp;
+  background:$cl-stamp-orange;
+  color:$cl-txt-rev;
+}
+.cp-stamp-blue{
+  @extend .cp-stamp;
+  background:$cl-stamp-blue;
+  color:$cl-txt-rev;
+}
+.cp-stamp-yellow{
+  @extend .cp-stamp;
+  background:$cl-stamp-yellow;
+  color:$cl-txt-rev;
 }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■

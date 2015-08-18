@@ -168,25 +168,25 @@ $('body').on('click', '.jq-focus-on', function(){
 /*========================================================================
 	resize
 ======================================================================== */
-function resize(){
-  var wHeight = $(window).height();
-  var hHeight = $('#jq-Header').outerHeight();
-  var fHeight = $('#jq-Footer').outerHeight();
-  var cHeight = hHeight + fHeight;
-  cHeight = wHeight - cHeight;
-  $('#jq-LeftCanvas').css('height', cHeight);
-}
+// function resize(){
+//   var wHeight = $(window).height();
+//   var hHeight = $('#jq-Header').outerHeight();
+//   var fHeight = $('#jq-Footer').outerHeight();
+//   var cHeight = hHeight + fHeight;
+//   cHeight = wHeight - cHeight;
+//   $('#jq-LeftCanvas').css('height', cHeight);
+// }
 
-var timer = false;
-$(window).resize(function() {
-  if (timer !== false) {
-    clearTimeout(timer);
-  }
-  timer = setTimeout(function() {
-    resize();
-  }, 40);
-});
-resize();
+// var timer = false;
+// $(window).resize(function() {
+//   if (timer !== false) {
+//     clearTimeout(timer);
+//   }
+//   timer = setTimeout(function() {
+//     resize();
+//   }, 40);
+// });
+// resize();
 
 /*========================================================================
 side menu
@@ -204,6 +204,32 @@ $('.jq-menu-parents').on('click', function(){
     $(id).slideToggle().addClass('enable');
   }
 });
+/*========================================================================
+   collapse nav
+======================================================================== */
+// $('main').on('click', '.jq-navCollapse-switcher', function(){
+//   var id = '.' + $(this).attr('id');
+//   var thisSwitch = $(this);
+
+//   $(id).animate({width: 'toggle'}, 300);
+
+//   //option icon
+//   var point = $(this).children();
+//   var option = point.attr('class');
+
+//   //callback
+//   if( option === 'fa fa-caret-left' ){
+//     point.removeClass().addClass('fa fa-caret-right'); //icon
+//     $('.main-contents').animate({'margin-left': '50px'}, 300); //right column
+//     $(thisSwitch).css('height', '500px'); //switch
+//   }else if( option === 'fa fa-caret-right' ){
+//     point.removeClass().addClass('fa fa-caret-left'); //icon
+//     $('.main-contents').animate({'margin-left': '250px'}, 300); //right column
+//     $(thisSwitch).css('height', ''); //switch
+//   }else{
+//     return false;
+//   }
+// });
 /*========================================================================
   bookmark
 ======================================================================== */
@@ -451,33 +477,64 @@ $('#jq-TabSelect li a').on('click', function(){
 //   view html
 // ======================================================================== */
 // //get id
-// $('.jq-text-load').on('click', function(){
-//   var textFile =$(this).attr('id');
-//   textFile = 'doc/' + textFile.replace("jq-file-", "") + '.txt';
-//   var title = $(this).text().trim();
+$('.jq-text-load').on('click', function(){
+  var textFile =$(this).attr('id');
+  textFile = 'doc/' + textFile.replace("jq-file-", "") + '.txt';
+  var title = $(this).text().trim();
 
-//   //load　text
-//   $.ajax({
-//     url:textFile,
-//     dataType : 'text',
-//     success: function(data){
-//       //show cartain
-//       $('.jq-cartain').show();
+  //load　text
+  $.ajax({
+    url:textFile,
+    dataType : 'text',
+    success: function(data){
+      //show cartain
+      $('.jq-cartain').show();
 
-//       //show title
-//       $('.jq-souce-title').text('').text(title);
+      //show title
+      $('.jq-souce-title').text('').text(title);
 
-//       //show modal
-//       $('.jq-souce-view').text(data.replace(/\r\n/g,"\n")); //firefoxの改行を消す
-//       $('.jq-modal, .jq-modal-souce-viwer').slideDown(300);
+      //show modal
+      $('.jq-souce-view').text(data.replace(/\r\n/g,"\n")); //firefoxの改行を消す
+      $('.jq-modal, .jq-modal-souce-viwer').slideDown(300);
 
-//       //close botton
-//       $('.jq-modal-close, .jq-cartain').on('click', function(){
-//         $('.jq-modal, .jq-modal-souce-viwer').slideUp(300);
-//         $('.jq-cartain').hide();
-//       });
-//     }
-//   });
-// });
+      //close botton
+      $('.jq-modal-close, .jq-cartain').on('click', function(){
+        $('.jq-modal, .jq-modal-souce-viwer').slideUp(300);
+        $('.jq-cartain').hide();
+      });
+    }
+  });
+});
+/*========================================================================
+  view html
+======================================================================== */
+$('.jq-html-show').on('click', function(){
+  var clickThis = $(this);
+  var returnClass = 'jq-example-num';
+  var targetClass = thisClassGet(clickThis, returnClass);
+
+  fileUrl = 'doc/' + targetClass.replace(".jq-example-num", "") + '.txt';
+  var drawClass = targetClass.replace(".jq-example-num", ".jq-example-tag-num");
+
+  console.log(drawClass)
+
+  $.ajax({
+    url:fileUrl,
+    dataType : 'text',
+    success: function(data){
+      var htmlSouce = data.replace(/\r\n/g,"\n"); //for firefox
+
+      $(drawClass).find('code').text('').text(htmlSouce);
+      $(drawClass).toggle(300);
+      $('.jq-modal, .jq-modal-souce-viwer').slideDown(300);
+
+      //閉じるボタン
+      $('.jq-modal-close, .jq-cartain').on('click', function(){
+        $('.jq-modal, .jq-modal-souce-viwer').slideUp(300);
+        $('.jq-cartain').hide();
+      });
+    }
+  });
+});
 ////////////////////////////////////////////////////////////
 });
