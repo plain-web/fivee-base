@@ -514,25 +514,25 @@ $('.jq-html-show').on('click', function(){
   var targetClass = thisClassGet(clickThis, returnClass);
 
   fileUrl = 'doc/' + targetClass.replace(".jq-example-num", "") + '.txt';
-  var drawClass = targetClass.replace(".jq-example-num", ".jq-example-tag-num");
-
-  console.log(drawClass)
-
+  var drawClass = targetClass.slice(0,18);
+      drawClass = drawClass.replace(".jq-example-num", ".jq-example-tag-num");
+var drawFlg = false;
   $.ajax({
     url:fileUrl,
     dataType : 'text',
     success: function(data){
-      var htmlSouce = data.replace(/\r\n/g,"\n"); //for firefox
+      var htmlSouce = data.replace(/\r\n/g,"\n"); // trim for firefox
 
       $(drawClass).find('code').text('').text(htmlSouce);
-      $(drawClass).toggle(300);
-      $('.jq-modal, .jq-modal-souce-viwer').slideDown(300);
 
-      //閉じるボタン
-      $('.jq-modal-close, .jq-cartain').on('click', function(){
-        $('.jq-modal, .jq-modal-souce-viwer').slideUp(300);
-        $('.jq-cartain').hide();
-      });
+      
+      if( drawFlg === targetClass){
+        $(drawClass).hide(300);
+      }else{
+        $(drawClass).show(300);
+        drawFlg = targetClass;
+      }
+      console.log(drawFlg,targetClass)
     }
   });
 });
