@@ -1,0 +1,8 @@
+<ul class="ef-float ef-lh30">
+  <li>
+    <label class="cp-checkbox">
+      <input type="checkbox">
+      Fivee-base01
+    </label>
+  </li>
+</ul>

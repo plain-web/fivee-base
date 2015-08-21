@@ -508,31 +508,51 @@ $('.jq-text-load').on('click', function(){
 /*========================================================================
   view html
 ======================================================================== */
+var drawFlg = [];
+var drawClassFlg = [];
+
 $('.jq-html-show').on('click', function(){
+  //return targetClass
   var clickThis = $(this);
   var returnClass = 'jq-example-num';
   var targetClass = thisClassGet(clickThis, returnClass);
-
-  fileUrl = 'doc/' + targetClass.replace(".jq-example-num", "") + '.txt';
-  var drawClass = targetClass.slice(0,18);
-      drawClass = drawClass.replace(".jq-example-num", ".jq-example-tag-num");
-var drawFlg = false;
+  //filepath
+  var fileUrl = 'doc/' + targetClass.replace(".jq-example-num", "") + '.txt';
+  //draw html
+  var drawClass = targetClass.slice(0,18).replace(".jq-example-num", ".jq-example-tag-num");
+  //check array
+  var checkValue = $.inArray(targetClass, drawFlg);
+  //check last array
+  var lastValue = drawFlg[drawFlg.length-1];
+  //check last array
+  var lastDrawClassValue = drawClassFlg[drawClassFlg.length-1];
+  
   $.ajax({
     url:fileUrl,
     dataType : 'text',
     success: function(data){
+      //　button toggle/////////////////////////////////////////////////////////
       var htmlSouce = data.replace(/\r\n/g,"\n"); // trim for firefox
+      console.log(lastDrawClassValue)
 
-      $(drawClass).find('code').text('').text(htmlSouce);
-
-      
-      if( drawFlg === targetClass){
-        $(drawClass).hide(300);
-      }else{
+      if( checkValue === -1){ //check same value
+        $(drawClass + ' pre').text('').text(htmlSouce);
         $(drawClass).show(300);
-        drawFlg = targetClass;
+        drawFlg = [];　
+        drawFlg.push(targetClass);
+      }else if( targetClass !== lastValue){　//　check targClass and value
+        $(drawClass + ' pre').text('').text(htmlSouce);
+        drawFlg.push(targetClass);
+      }else{
+        $(drawClass).hide(300);
+        drawFlg = [];
       }
-      console.log(drawFlg,targetClass)
+      //draw area /////////////////////////////////////////////////////////
+      if( drawClass !== lastDrawClassValue){　//　check targClass and value
+        $(lastDrawClassValue).hide(300);
+        drawClassFlg = [];
+        drawClassFlg.push(drawClass);
+      }
     }
   });
 });
