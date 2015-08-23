@@ -2898,40 +2898,74 @@ a.is-disabled {
   float: right;
 }
 
-ul.ef-float, ul.ef-float0, ul.ef-float15 {
+ul.ef-float {
   overflow: hidden;
   *zoom: 1;
   margin: 0;
   padding: 0;
 }
-ul.ef-float > li, ul.ef-float0 > li, ul.ef-float15 > li {
+ul.ef-float > li {
+  float: left;
+}
+ul.ef-float > li.ef-float-right {
+  float: right;
+}
+
+ul.ef-float0, ul.ef-float3, ul.ef-float7, ul.ef-float10, ul.ef-float20, ul.ef-float30 {
+  overflow: hidden;
+  *zoom: 1;
+  margin: 0;
+  padding: 0;
+}
+ul.ef-float0 > li, ul.ef-float3 > li, ul.ef-float7 > li, ul.ef-float10 > li, ul.ef-float20 > li, ul.ef-float30 > li {
   float: left;
   margin-right: 7px;
 }
-ul.ef-float > li.ef-float-right, ul.ef-float0 > li.ef-float-right, ul.ef-float15 > li.ef-float-right {
+ul.ef-float0 > li.ef-float-right, ul.ef-float3 > li.ef-float-right, ul.ef-float7 > li.ef-float-right, ul.ef-float10 > li.ef-float-right, ul.ef-float20 > li.ef-float-right, ul.ef-float30 > li.ef-float-right {
   float: right;
   margin-left: 7px;
   margin-right: 0;
 }
-ul.ef-float > li.ef-float-right:first-child, ul.ef-float0 > li.ef-float-right:first-child, ul.ef-float15 > li.ef-float-right:first-child {
+ul.ef-float0 > li.ef-float-right:first-child, ul.ef-float3 > li.ef-float-right:first-child, ul.ef-float7 > li.ef-float-right:first-child, ul.ef-float10 > li.ef-float-right:first-child, ul.ef-float20 > li.ef-float-right:first-child, ul.ef-float30 > li.ef-float-right:first-child {
   margin-right: 0;
 }
-ul.ef-float > li:last-child, ul.ef-float0 > li:last-child, ul.ef-float15 > li:last-child {
+ul.ef-float0 > li:last-child, ul.ef-float3 > li:last-child, ul.ef-float7 > li:last-child, ul.ef-float10 > li:last-child, ul.ef-float20 > li:last-child, ul.ef-float30 > li:last-child {
   margin-right: 0;
 }
 
-ul.ef-float0 > li {
-  margin-right: 0;
+ul.ef-float3 > li {
+  margin-right: 3px;
 }
-ul.ef-float0 > li.ef-right {
-  margin-left: 0;
+ul.ef-float3 > li.ef-right {
+  margin-left: 3px;
 }
 
-ul.ef-float15 > li {
-  margin-right: 15px;
+ul.ef-float7 > li {
+  margin-right: 7px;
 }
-ul.ef-float15 > li.ef-right {
-  margin-left: 15px;
+ul.ef-float7 > li.ef-right {
+  margin-left: 7px;
+}
+
+ul.ef-float10 > li {
+  margin-right: 10px;
+}
+ul.ef-float10 > li.ef-right {
+  margin-left: 10px;
+}
+
+ul.ef-float20 > li {
+  margin-right: 20px;
+}
+ul.ef-float20 > li.ef-right {
+  margin-left: 20px;
+}
+
+ul.ef-float30 > li {
+  margin-right: 30px;
+}
+ul.ef-float30 > li.ef-right {
+  margin-left: 30px;
 }
 
 /* =============================================================

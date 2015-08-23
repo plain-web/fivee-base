@@ -742,6 +742,13 @@ ul.ef-float{
   @include clearfix;
   margin:0;
   padding:0;
+  >li{float:left;}
+  >li.ef-float-right{float:right;}
+}
+ul.ef-float0{
+  @include clearfix;
+  margin:0;
+  padding:0;
   >li{
     float:left;
     margin-right:7px;
@@ -756,15 +763,30 @@ ul.ef-float{
   }
   >li:last-child{margin-right:0;}
 }
-ul.ef-float0{
-  @extend ul.ef-float;
-  >li{margin-right:0;}
-  >li.ef-right{margin-left:0;}
+ul.ef-float3{
+  @extend ul.ef-float0;
+  >li{margin-right:3px;}
+  >li.ef-right{margin-left:3px;}
 }
-ul.ef-float15{
-  @extend ul.ef-float;
-  >li{margin-right:15px;}
-  >li.ef-right{margin-left:15px;}
+ul.ef-float7{
+  @extend ul.ef-float0;
+  >li{margin-right:7px;}
+  >li.ef-right{margin-left:7px;}
+}
+ul.ef-float10{
+  @extend ul.ef-float0;
+  >li{margin-right:10px;}
+  >li.ef-right{margin-left:10px;}
+}
+ul.ef-float20{
+  @extend ul.ef-float0;
+  >li{margin-right:20px;}
+  >li.ef-right{margin-left:20px;}
+}
+ul.ef-float30{
+  @extend ul.ef-float0;
+  >li{margin-right:30px;}
+  >li.ef-right{margin-left:30px;}
 }
 
 /* =============================================================
