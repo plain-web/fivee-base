@@ -889,7 +889,7 @@ table.cp-table{
 .cp-breadcrumb{
   .st-inner{
     @include brd-top;
-    background:$cl-gray2;
+    background:$cl-bg-gray2;
     padding:5px 10px;
     ul{
       li{line-height:20px;}

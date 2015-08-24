@@ -56,14 +56,16 @@ $cl-red:#cc3300;
 $cl-orange:#B59654;
 $cl-blue:#548BB5;
 $cl-green:#689C51;
-$cl-black:#555;
 $cl-yellow:#F4DD17;
-$cl-gray:#f5f5f5;
-$cl-gray1:#f9f9f9;
-$cl-gray2:#eee;
-$cl-gray3:#ddd;
-$cl-gray4:#ccc;
-$cl-gray5:#bbb;
+$cl-black:#000;
+$cl-gray:#333;
+$cl-gray1:#444;
+$cl-gray2:#555;
+$cl-gray3:#666;
+$cl-gray4:#777;
+$cl-gray5:#888;
+$cl-gray6:#999;
+$cl-gray7:#aaa;
 
 $cl-white-darken: darken( $cl-white, 15% );
 
@@ -75,9 +77,14 @@ $cl-bg-blue: #EEF9FF;
 $cl-bg-green: #EFFFEE;
 $cl-bg-yellow: #FDFFEE;
 $cl-bg-black: $cl-black;
-$cl-bg-gray: $cl-gray;
-$cl-bg-gray1: $cl-gray1;
-$cl-bg-gray2: $cl-gray2;
+$cl-bg-gray:#f5f5f5;
+$cl-bg-gray1:#f9f9f9;
+$cl-bg-gray2:#eee;
+$cl-bg-gray3:#ddd;
+$cl-bg-gray4:#ccc;
+$cl-bg-gray5:#bbb;
+$cl-bg-gray6:#aaa;
+$cl-bg-gray7:#999;
 $cl-bg-theme: $cl-theme;
 
 //text color
