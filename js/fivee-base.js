@@ -189,20 +189,30 @@ $('body').on('click', '.jq-focus-on', function(){
 // resize();
 
 /*========================================================================
-side menu
+nav
 ======================================================================== */
 //CSS
-$('.jq-menu-parents').on('click', function(){
-  var target = $(this).hasClass('current');
-  if( target ){
-    $(this).removeClass('current');
-    var id = '.' + $(this).attr('id');
-    $(id).slideToggle().removeClass('enable');
-  }else{
-    $(this).addClass('current');
-    var id = '.' + $(this).attr('id');
-    $(id).slideToggle().addClass('enable');
+$('.jq-nav a').on('click', function(){
+  $('.jq-nav li').removeClass('is-current');
+  $(this).parents('li').addClass('is-current');
+
+  var navParents = $(this).hasClass('jq-nav-parents');
+
+  if(navParents){
+    var clickThis = $(this);
+    var returnClass = 'jq-nav-num';
+    var targetClass = thisClassGet(clickThis, returnClass);
   }
+  
+  // if( target ){
+  //   $(this).removeClass('is-current');
+  //   var id = '.' + $(this).attr('id');
+  //   $(id).slideToggle().removeClass('enable');
+  // }else{
+  //   $(this).addClass('is-current');
+  //   var id = '.' + $(this).attr('id');
+  //   $(id).slideToggle().addClass('enable');
+  // }
 });
 /*========================================================================
    collapse nav
