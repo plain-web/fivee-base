@@ -191,17 +191,22 @@ $('body').on('click', '.jq-focus-on', function(){
 /*========================================================================
 nav
 ======================================================================== */
-//CSS
 $('.jq-nav a').on('click', function(){
+  //background-color
   $('.jq-nav li').removeClass('is-current');
   $(this).parents('li').addClass('is-current');
 
+  //var navParents = $(this).hasClass('jq-nav-parents');
   var navParents = $(this).hasClass('jq-nav-parents');
 
   if(navParents){
     var clickThis = $(this);
     var returnClass = 'jq-nav-num';
     var targetClass = thisClassGet(clickThis, returnClass);
+
+    $('.jq-nav-child' + targetClass).parents('li').slideToggle()
+    console.log('.jq-nav-child' + targetClass)
+
   }
   
   // if( target ){
