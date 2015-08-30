@@ -81,16 +81,17 @@ $('.jq-ph-box input').each( function(){
 /*========================================================================
   [return] return targetClass
 ======================================================================== */
+var clickThis, returnClass, targetClass, thisClass;
 function thisClassGet(clickThis, returnClass){
   //get class
-  var thisClass = $(clickThis).attr('class');
+  thisClass = $(clickThis).attr('class');
   //split class　
   thisClass = thisClass.split(" ");
   //return class
-  var thisClass = $.grep(thisClass, function(value, index) {
+  thisClass = $.grep(thisClass, function(value, index) {
     return value.indexOf(returnClass) >= 0;
   });
-  var targetClass = '.' + thisClass;
+  targetClass = '.' + thisClass;
   //console.log(targetClass);
   return targetClass;
 }
@@ -101,11 +102,11 @@ function thisClassGet(clickThis, returnClass){
 // $( '.jq-label-same-table td, .jq-label-same-table th' ).on({
 //   'mouseenter': function(){
 //     //this
-//     var clickThis = $(this);
+//     clickThis = $(this);
 //     //return class
-//     var returnClass = 'jq-same-';
+//     returnClass = 'jq-same-';
 //     //target class
-//     var targetClass = thisClassGet(clickThis, returnClass);
+//     targetClass = thisClassGet(clickThis, returnClass);
 //     $(targetClass).addClass('is-focus');
 //   },
 //   'mouseleave': function(parentClass){
@@ -192,32 +193,46 @@ $('body').on('click', '.jq-focus-on', function(){
 nav
 ======================================================================== */
 $('.jq-nav a').on('click', function(){
+  //parents class
+  var navClass = $(this).parents('.jq-nav');
+  //parent click class
+  var parentClass = $(this).parent('li');
+
   //background-color
-  $('.jq-nav li').removeClass('is-current');
-  $(this).parents('li').addClass('is-current');
+  navClass.find('li').removeClass('is-current');
+  parentClass.addClass('is-current');
 
-  //var navParents = $(this).hasClass('jq-nav-parents');
-  var navParents = $(this).hasClass('jq-nav-parents');
-
-  if(navParents){
-    var clickThis = $(this);
-    var returnClass = 'jq-nav-num';
-    var targetClass = thisClassGet(clickThis, returnClass);
-
-    $('.jq-nav-child' + targetClass).parents('li').slideToggle()
-    console.log('.jq-nav-child' + targetClass)
-
+  //presence class
+  var hasclass = parentClass.attr('class');
+  if(hasclass){
+    var matchKey = hasclass.match('parents');
+    if(matchKey){
+      clickThis = parentClass;
+      returnClass = 'jq-nav-parents-num';
+      targetClass = thisClassGet(clickThis, returnClass);
+      targetClass = targetClass.replace('parents', 'child');
+      //caret
+      var webFont = parentClass.find('.jq-nav-caret i').eq(0);
+      var webFontClass = webFont.attr('class');
+      //toggle targetClass
+      var openFlg = navClass.find(targetClass).is(':visible');
+      if(!openFlg){
+        navClass.find(targetClass).show(500);
+        //web font
+        if(webFont){
+          webFontClass = webFontClass.replace('down', 'up');
+          $(webFont).removeClass().addClass(webFontClass);
+        }
+      }else{
+        navClass.find(targetClass).hide(100);
+        //web font
+        if(webFont){
+          webFontClass = webFontClass.replace('up', 'down');
+          $(webFont).removeClass().addClass(webFontClass);
+        }
+      }
+    }
   }
-  
-  // if( target ){
-  //   $(this).removeClass('is-current');
-  //   var id = '.' + $(this).attr('id');
-  //   $(id).slideToggle().removeClass('enable');
-  // }else{
-  //   $(this).addClass('is-current');
-  //   var id = '.' + $(this).attr('id');
-  //   $(id).slideToggle().addClass('enable');
-  // }
 });
 /*========================================================================
    collapse nav
@@ -339,11 +354,11 @@ function toolTipOn(target){
 //   var thisWidth = $(this).width();
 //   var rightPosi = windowWidth - popupPosi.left - thisWidth + 7;
 //   //this
-//   var clickThis = $(this);
+//   clickThis = $(this);
 //   //return class
-//   var returnClass = 'jq-popup-num';
+//   returnClass = 'jq-popup-num';
 //   //target class
-//   var targetClass = thisClassGet(clickThis, returnClass);
+//   targetClass = thisClassGet(clickThis, returnClass);
 
 //   var clicker = $(this).children('.jq-clickable');
 //   popupMenuOn(topPosi, rightPosi, targetClass, clicker);
@@ -380,11 +395,11 @@ function toolTipOn(target){
 ======================================================================== */
 // $('body').on('click', '.jq-modal-open', function(){
 //   //this
-//   var clickThis = $(this);
+//   clickThis = $(this);
 //   //return class
-//   var returnClass = 'jq-modal-num';
+//   returnClass = 'jq-modal-num';
 //   //target class
-//   var targetClass = thisClassGet(clickThis, returnClass);
+//   targetClass = thisClassGet(clickThis, returnClass);
 
 //   //show contents
 //   $('.jq-modal-posi').removeClass('is-current');
@@ -406,9 +421,9 @@ function toolTipOn(target){
   toast 
 ======================================================================== */
 $('body').on('click', '.jq-toast-open', function(){
-  var clickThis = $(this);
-  var returnClass = 'jq-toast-num';
-  var targetClass = thisClassGet(clickThis, returnClass);
+  clickThis = $(this);
+  returnClass = 'jq-toast-num';
+  targetClass = thisClassGet(clickThis, returnClass);
 
   //show contents
   $('.jq-toast-posi').removeClass('is-current');
@@ -488,38 +503,6 @@ $('#jq-TabSelect li a').on('click', function(){
 //   $('.jq-col-lighting').removeClass('fw-bg-green');
 //   $(id).addClass('fw-bg-green');
 // });
-// /*========================================================================
-//   view html
-// ======================================================================== */
-// //get id
-$('.jq-text-load').on('click', function(){
-  var textFile =$(this).attr('id');
-  textFile = 'doc/' + textFile.replace("jq-file-", "") + '.txt';
-  var title = $(this).text().trim();
-
-  //load　text
-  $.ajax({
-    url:textFile,
-    dataType : 'text',
-    success: function(data){
-      //show cartain
-      $('.jq-cartain').show();
-
-      //show title
-      $('.jq-souce-title').text('').text(title);
-
-      //show modal
-      $('.jq-souce-view').text(data.replace(/\r\n/g,"\n")); //firefoxの改行を消す
-      $('.jq-modal, .jq-modal-souce-viwer').slideDown(300);
-
-      //close botton
-      $('.jq-modal-close, .jq-cartain').on('click', function(){
-        $('.jq-modal, .jq-modal-souce-viwer').slideUp(300);
-        $('.jq-cartain').hide();
-      });
-    }
-  });
-});
 /*========================================================================
   view html
 ======================================================================== */
@@ -528,9 +511,9 @@ var drawClassFlg = [];
 
 $('.jq-html-show').on('click', function(){
   //return targetClass
-  var clickThis = $(this);
-  var returnClass = 'jq-example-num';
-  var targetClass = thisClassGet(clickThis, returnClass);
+  clickThis = $(this);
+  returnClass = 'jq-example-num';
+  targetClass = thisClassGet(clickThis, returnClass);
   //filepath
   var fileUrl = 'doc/' + targetClass.replace(".jq-example-num", "") + '.txt';
   //draw html

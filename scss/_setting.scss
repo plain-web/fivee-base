@@ -133,6 +133,7 @@ $cl-bg-header: $cl-theme;
 //nav
 $cl-bg-nav: #fff;
 $cl-bg-nav-current: #f6f6f6;
+$cl-bg-nav-hover:  darken( $cl-bg-nav-current, 5% );
 
 //tab
 $cl-bg-tab: $cl-theme;

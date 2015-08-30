@@ -68,21 +68,26 @@ footer{
           width:200px;
           margin:15px;
           >.st-inner{
-            padding:10px;
-            @include border-radius(5px);
-            @include brd;
-            background:$cl-bg-nav;
-            i,a{color:$cl-txt-base;}
-            ul{
-              li{
-                a{
+            .md-main-nav{
+              padding:10px;
+              @include border-radius(5px);
+              @include brd;
+              background:$cl-bg-nav;
+              i,a{color:$cl-txt-base;}
+              ul{
+                display:block;
+                li{
+                  a{
                     padding:0 10px;
                     display:block;
+                    &:hover{
+                      background:$cl-bg-nav-hover;
+                    }
                   }
-                &:hover,
-                &.is-current{
-                  a{
-                    background:$cl-bg-nav-current;
+                  &.is-current{
+                    >a{
+                      background:$cl-bg-nav-current;
+                    }
                   }
                 }
               }

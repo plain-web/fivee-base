@@ -3710,7 +3710,7 @@ footer .st-body .st-inner .st-outer.centering {
   width: 200px;
   margin: 15px;
 }
-.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner {
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav {
   padding: 10px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -3720,14 +3720,20 @@ footer .st-body .st-inner .st-outer.centering {
   border-color: #ccc;
   background: #fff;
 }
-.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner i, .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner a {
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav i, .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav a {
   color: #333;
 }
-.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner ul li a {
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav ul {
+  display: block;
+}
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav ul li a {
   padding: 0 10px;
   display: block;
 }
-.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner ul li:hover a, .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner ul li.is-current a, .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .components-stepbar ul li.is-past a, .components-stepbar .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner ul li.is-past a {
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav ul li a:hover {
+  background: #e9e9e9;
+}
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav ul li.is-current > a, .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav .components-stepbar ul li.is-past > a, .components-stepbar .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav ul li.is-past > a {
   background: #f6f6f6;
 }
 .page-container > .st-body > .st-inner > .page-contents {
@@ -4031,7 +4037,7 @@ label.cp-checkbox input[type="radio"] {
 
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "navs"
+ * "nav"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .side-menu .one-block {
