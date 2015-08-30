@@ -205,12 +205,12 @@ $('.jq-nav a').on('click', function(){
   //presence class
   var hasclass = parentClass.attr('class');
   if(hasclass){
-    var matchKey = hasclass.match('parents');
+    var matchKey = hasclass.match('parent');
     if(matchKey){
       clickThis = parentClass;
-      returnClass = 'jq-nav-parents-num';
+      returnClass = 'jq-nav-parent-num';
       targetClass = thisClassGet(clickThis, returnClass);
-      targetClass = targetClass.replace('parents', 'child');
+      targetClass = targetClass.replace('parent', 'child');
       //caret
       var webFont = parentClass.find('.jq-nav-caret i').eq(0);
       var webFontClass = webFont.attr('class');
@@ -219,14 +219,14 @@ $('.jq-nav a').on('click', function(){
       if(!openFlg){
         navClass.find(targetClass).show(500);
         //web font
-        if(webFont){
+        if(webFont && webFontClass){
           webFontClass = webFontClass.replace('down', 'up');
           $(webFont).removeClass().addClass(webFontClass);
         }
       }else{
         navClass.find(targetClass).hide(100);
         //web font
-        if(webFont){
+        if(webFont && webFontClass){
           webFontClass = webFontClass.replace('up', 'down');
           $(webFont).removeClass().addClass(webFontClass);
         }

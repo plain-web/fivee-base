@@ -42,7 +42,7 @@ h6{font-size:$fs-h6;}
 i{
   font-size:$fs-base;
   color:$cl-txt-base;
-  @include min-width(16px);
+  @include min-width(1em);
 }
 a{
   i{

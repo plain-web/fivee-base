@@ -3805,7 +3805,7 @@ h6 {
 i {
   font-size: 13px;
   color: #333;
-  min-width: 16px;
+  min-width: 1em;
 }
 
 a i {
