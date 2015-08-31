@@ -2912,6 +2912,21 @@ a.is-disabled {
   position: relative;
 }
 
+.ef-posi-abs {
+  position: absolute;
+}
+
+.ef-posi-fix {
+  position: fixed;
+}
+
+/* =============================================================
+ ▼ centering
+============================================================== */
+.ef-box-center {
+  margin: auto;
+}
+
 /* =============================================================
  ▼ float
 ============================================================== */
@@ -3692,10 +3707,6 @@ footer .st-body {
 footer .st-body .st-inner {
   padding: 3px 20px;
   color: #fff;
-}
-footer .st-body .st-inner .st-outer.centering {
-  margin: auto;
-  width: 220px;
 }
 
 /*
