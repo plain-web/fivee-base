@@ -393,30 +393,30 @@ function toolTipOn(target){
 /*========================================================================
   modal 
 ======================================================================== */
-// $('body').on('click', '.jq-modal-open', function(){
-//   //this
-//   clickThis = $(this);
-//   //return class
-//   returnClass = 'jq-modal-num';
-//   //target class
-//   targetClass = thisClassGet(clickThis, returnClass);
+$('.jq-modal-open').on('click', function(){
+  //this
+  clickThis = $(this);
+  //return class
+  returnClass = 'jq-modal-num';
+  //target class
+  targetClass = thisClassGet(clickThis, returnClass);
 
-//   //show contents
-//   $('.jq-modal-posi').removeClass('is-current');
-//   $('.jq-modal').children(targetClass).addClass('is-current');
+  //show contents
+  $('.jq-modal-posi').removeClass('is-current');
+  $('.jq-modal').children(targetClass).addClass('is-current');
 
-//   //show modal
-//   $('.jq-modal').show();
+  //show modal
+  $('.jq-modal').show();
 
-//   //show cartain
-//   $('.jq-cartain').show();
+  //show cartain
+  $('.jq-cartain').show();
 
-//   //click close button
-//   $('.jq-modal-close, .jq-cartain').on('click', function(){
-//     $('.jq-modal').hide();
-//     $('.jq-cartain').hide();
-//   });
-// });
+  //click close button
+  $('.jq-modal-close, .jq-cartain').on('click', function(){
+    $('.jq-modal').hide();
+    $('.jq-cartain').hide();
+  });
+});
 /*========================================================================
   toast 
 ======================================================================== */
@@ -433,7 +433,7 @@ $('body').on('click', '.jq-toast-open', function(){
   $('.jq-toast').show();
 
   //show cartain
-  $('.jq-cartain').show().addClass('fw-bg-white fw-op05');
+  $('.jq-cartain').show().addClass('ef-bg-white ef-op05');
 
   //set　timer
   var timer;
@@ -500,8 +500,8 @@ $('#jq-TabSelect li a').on('click', function(){
 // $('.jq-col-on').on('click', function(){
 //   var id = '.' + $(this).attr('id');
 //   //contents
-//   $('.jq-col-lighting').removeClass('fw-bg-green');
-//   $(id).addClass('fw-bg-green');
+//   $('.jq-col-lighting').removeClass('ef-bg-green');
+//   $(id).addClass('ef-bg-green');
 // });
 /*========================================================================
   view html

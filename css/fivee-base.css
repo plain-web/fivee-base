@@ -4187,7 +4187,7 @@ label.cp-checkbox input[type="radio"] {
   position: relative;
   background: #485169;
 }
-.cp-modal > .st-body > .st-inner .cp-modal-header .st-inner a.fw-close {
+.cp-modal > .st-body > .st-inner .cp-modal-header .st-inner a.cp-modal-close {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -4195,7 +4195,7 @@ label.cp-checkbox input[type="radio"] {
   left: auto;
   font-size: 18px;
 }
-.cp-modal > .st-body > .st-inner .cp-modal-header .st-inner a.fw-close i {
+.cp-modal > .st-body > .st-inner .cp-modal-header .st-inner a.cp-modal-close i {
   font-size: 18px;
 }
 .cp-modal > .st-body > .st-inner .cp-modal-body > .st-inner {
@@ -4203,7 +4203,7 @@ label.cp-checkbox input[type="radio"] {
   overflow-y: auto;
   padding: 10px 20px;
 }
-.cp-modal > .st-body > .st-inner .cp-modal-body > .st-inner .fw-modal-img {
+.cp-modal > .st-body > .st-inner .cp-modal-body > .st-inner .cp-modal-img {
   max-height: 550px;
 }
 .cp-modal > .st-body > .st-inner .cp-modal-footer .st-inner {
@@ -4230,7 +4230,7 @@ label.cp-checkbox input[type="radio"] {
  * "popup"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
-.fw-popup > .lo-body {
+.cp-popup > .lo-body {
   position: absolute;
   top: 0;
   right: auto;
@@ -4249,10 +4249,10 @@ label.cp-checkbox input[type="radio"] {
   max-width: 300px;
   z-index: 2;
 }
-.fw-popup > .lo-body.is-current, .components-stepbar ul .fw-popup > li.lo-body.is-past {
+.cp-popup > .lo-body.is-current, .components-stepbar ul .cp-popup > li.lo-body.is-past {
   display: block;
 }
-.fw-popup > .lo-body > .lo-inner {
+.cp-popup > .lo-body > .lo-inner {
   padding: 12px;
 }
 

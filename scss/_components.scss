@@ -331,7 +331,7 @@ label{
           padding:20px 28px 10px 20px;
           position:relative;
           background:$cl-bg-modal-header;
-          a.fw-close{
+          a.cp-modal-close{
             @include posi-abs(5px,5px,auto,auto);
             font-size:$fs-h5;
             i{
@@ -346,7 +346,7 @@ label{
           max-height:570px;
           overflow-y:auto;
           padding:10px 20px;
-          .fw-modal-img{max-height:550px;}
+          .cp-modal-img{max-height:550px;}
         }
       }
       .cp-modal-footer{
@@ -375,7 +375,7 @@ label{
  * "popup"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
-.fw-popup{
+.cp-popup{
   >.lo-body{
     @include posi-abs(0,auto,auto,auto);
     border:1px solid $cl-brd-base;
