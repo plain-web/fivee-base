@@ -44,11 +44,6 @@ footer{
     background-color:$cl-theme;
     .st-inner{
       padding:3px 20px;
-      // .st-outer{
-      //   &.centering{
-      //     @include centering(220px);
-      //   }
-      // }
       color:$cl-txt-rev;
     }
   }

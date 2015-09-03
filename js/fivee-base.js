@@ -401,20 +401,23 @@ $('.jq-modal-open').on('click', function(){
   //target class
   targetClass = thisClassGet(clickThis, returnClass);
 
+  var thisModal = $('.jq-modal').children(targetClass)
+  var modalWidth = thisModal.outerWidth()/2;
+
   //show contents
   $('.jq-modal-posi').removeClass('is-current');
-  $('.jq-modal').children(targetClass).addClass('is-current');
+  thisModal.addClass('is-current').css('margin-left', -modalWidth);
 
   //show modal
   $('.jq-modal').show();
 
   //show cartain
-  $('.jq-cartain').show();
+  $('.jq-cartain').show().addClass('is-gray');
 
   //click close button
   $('.jq-modal-close, .jq-cartain').on('click', function(){
     $('.jq-modal').hide();
-    $('.jq-cartain').hide();
+    $('.jq-cartain').hide().addClass('is-gray');
   });
 });
 /*========================================================================

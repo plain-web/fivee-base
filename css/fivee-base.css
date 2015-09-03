@@ -42,7 +42,7 @@ dl, dt, dd, ul, li, p, h1, h2, h3, h4, h5, h6 {
 ul {
   list-style-type: none;
 }
-ul.cp-list-decimal li {
+ul.ef-list-decimal > li {
   list-style-type: decimal;
   margin-left: 23px;
 }
@@ -76,11 +76,11 @@ hr.is-dotted {
 a {
   text-decoration: none;
   outline: none;
-  color: #0088ff;
+  color: #448CCF;
 }
 a:hover {
   text-decoration: underline;
-  color: #005fb3;
+  color: #29659e;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
   -moz-transition: all 0.3s ease-in-out;
@@ -101,7 +101,7 @@ a.is-link {
 }
 a.is-link:hover {
   text-decoration: none;
-  color: #005fb3;
+  color: #29659e;
 }
 a.is-nolink {
   text-decoration: none;
@@ -160,35 +160,35 @@ a.is-nolink:hover {
 }
 
 .ef-cl-gray {
-  color: #333;
-}
-
-.ef-cl-gray1 {
-  color: #444;
-}
-
-.ef-cl-gray2 {
-  color: #555;
-}
-
-.ef-cl-gray3 {
   color: #666;
 }
 
-.ef-cl-gray4 {
-  color: #777;
-}
-
-.ef-cl-gray5 {
+.ef-cl-gray1 {
   color: #888;
 }
 
-.ef-cl-gray6 {
+.ef-cl-gray2 {
   color: #999;
 }
 
-.ef-cl-gray7 {
+.ef-cl-gray3 {
   color: #aaa;
+}
+
+.ef-cl-gray4 {
+  color: #bbb;
+}
+
+.ef-cl-gray5 {
+  color: #ccc;
+}
+
+.ef-cl-gray6 {
+  color: #ddd;
+}
+
+.ef-cl-gray7 {
+  color: #eee;
 }
 
 .ef-cl-theme {
@@ -196,7 +196,7 @@ a.is-nolink:hover {
 }
 
 .ef-cl-link {
-  color: #0088ff;
+  color: #448CCF;
 }
 
 /* =============================================================
@@ -2896,7 +2896,7 @@ a.is-disabled {
 }
 
 .is-grayout {
-  background-color: #333;
+  background-color: #666;
   color: #000;
 }
 
@@ -3820,10 +3820,10 @@ i {
 }
 
 a i {
-  color: #0088ff;
+  color: #448CCF;
 }
 a i:hover {
-  color: #005fb3;
+  color: #29659e;
 }
 
 /*
@@ -3939,10 +3939,10 @@ label.cp-checkbox input[type="radio"] {
   border-width: 1px;
   border-style: solid;
   border-color: #bfbfbf;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d9d9d9), color-stop(50%, #e1e1e1), color-stop(100%, #e1e1e1));
-  background-image: -moz-linear-gradient(#d9d9d9, #e1e1e1, #e1e1e1);
-  background-image: -webkit-linear-gradient(#d9d9d9, #e1e1e1, #e1e1e1);
-  background-image: linear-gradient(#d9d9d9, #e1e1e1, #e1e1e1);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eee), color-stop(50%, #e1e1e1), color-stop(100%, #e1e1e1));
+  background-image: -moz-linear-gradient(#eee, #e1e1e1, #e1e1e1);
+  background-image: -webkit-linear-gradient(#eee, #e1e1e1, #e1e1e1);
+  background-image: linear-gradient(#eeeeee, #e1e1e1, #e1e1e1);
 }
 .cp-btn:hover i, .cp-btn-theme:hover i, .cp-btn-fix:hover i, .cp-btn-large:hover i, .cp-btn-mini:hover i {
   color: #333;
@@ -4080,7 +4080,7 @@ label.cp-checkbox input[type="radio"] {
   border-style: solid;
   border-color: #ccc;
   border-bottom: 0;
-  background: #333;
+  background: #666;
   margin-right: 5px;
   -moz-border-radius-topleft: 3px;
   -webkit-border-top-left-radius: 3px;
@@ -4167,13 +4167,12 @@ label.cp-checkbox input[type="radio"] {
   right: auto;
   bottom: auto;
   left: 50%;
-  border: 2px solid #ccc;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
   -moz-border-radius: 5px / 5px;
   -webkit-border-radius: 5px 5px;
   border-radius: 5px / 5px;
-  -moz-box-shadow: rgba(204, 204, 204, 0.5) 0 0 7px;
-  -webkit-box-shadow: rgba(204, 204, 204, 0.5) 0 0 7px;
-  box-shadow: rgba(204, 204, 204, 0.5) 0 0 7px;
   background: #fff;
   display: none;
   min-width: 400px;
@@ -4183,35 +4182,36 @@ label.cp-checkbox input[type="radio"] {
   display: block;
 }
 .cp-modal > .st-body > .st-inner .cp-modal-header .st-inner {
-  padding: 20px 28px 10px 20px;
+  padding: 10px;
   position: relative;
-  background: #485169;
+  background: #CAD5D9;
 }
-.cp-modal > .st-body > .st-inner .cp-modal-header .st-inner a.cp-modal-close {
+.cp-modal > .st-body > .st-inner .cp-modal-header .st-inner .cp-modal-title {
+  padding-right: 10px;
+}
+.cp-modal > .st-body > .st-inner .cp-modal-header .st-inner .cp-modal-close {
   position: absolute;
-  top: 5px;
+  top: 50%;
   right: 5px;
   bottom: auto;
   left: auto;
-  font-size: 18px;
-}
-.cp-modal > .st-body > .st-inner .cp-modal-header .st-inner a.cp-modal-close i {
-  font-size: 18px;
+  margin-top: -15px;
 }
 .cp-modal > .st-body > .st-inner .cp-modal-body > .st-inner {
-  max-height: 570px;
+  max-width: 500px;
+  max-height: 500px;
   overflow-y: auto;
   padding: 10px 20px;
 }
 .cp-modal > .st-body > .st-inner .cp-modal-body > .st-inner .cp-modal-img {
-  max-height: 550px;
+  max-height: 500px;
 }
 .cp-modal > .st-body > .st-inner .cp-modal-footer .st-inner {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #ccc;
-  padding: 20px;
-  background: #333;
+  padding: 10px 20px;
+  background: #f6f6f6;
 }
 
 /* =============================================================
@@ -4223,6 +4223,21 @@ label.cp-checkbox input[type="radio"] {
   right: 0;
   bottom: 0;
   left: 0;
+}
+.cp-cartain.is-white {
+  background: #fff;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}
+.cp-cartain.is-black {
+  background: #000;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+.cp-cartain.is-gray {
+  background: #666;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
 }
 
 /*
@@ -4311,7 +4326,7 @@ label.cp-checkbox input[type="radio"] {
  * =============================================================
  ▼ default table
 ============================================================= */
-table.cp-table {
+table.cp-table-base {
   line-height: 1.4;
   border-width: 1px;
   border-style: solid;
@@ -4320,13 +4335,13 @@ table.cp-table {
   border-spacing: 0;
   background: #fff;
 }
-table.cp-table tbody tr.selected td {
+table.cp-table-base tbody tr.selected td {
   background-color: #626262;
 }
-table.cp-table tr th, table.cp-table colgroup th {
+table.cp-table-base tr th, table.cp-table-base colgroup th {
   padding: 7px;
   font-size: 13px;
-  background: #555;
+  background: #999;
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #ccc;
@@ -4336,7 +4351,7 @@ table.cp-table tr th, table.cp-table colgroup th {
   white-space: nowrap;
   font-weight: bold;
 }
-table.cp-table tr td, table.cp-table colgroup td {
+table.cp-table-base tr td, table.cp-table-base colgroup td {
   padding: 7px;
   border-right-width: 1px;
   border-right-style: solid;
@@ -4345,1469 +4360,1469 @@ table.cp-table tr td, table.cp-table colgroup td {
   border-bottom-style: solid;
   border-bottom-color: #ccc;
 }
-table.cp-table tr th:last-child,
-table.cp-table tr td:last-child, table.cp-table colgroup th:last-child,
-table.cp-table colgroup td:last-child {
+table.cp-table-base tr th:last-child,
+table.cp-table-base tr td:last-child, table.cp-table-base colgroup th:last-child,
+table.cp-table-base colgroup td:last-child {
   border-right-width: none;
 }
-table.cp-table tr tbody:last-child td, table.cp-table colgroup tbody:last-child td {
+table.cp-table-base tr tbody:last-child td, table.cp-table-base colgroup tbody:last-child td {
   border-bottom-width: none;
 }
-table.cp-table tr .is-refresh, table.cp-table colgroup .is-refresh {
+table.cp-table-base tr .is-refresh, table.cp-table-base colgroup .is-refresh {
   background: #EFFFEE;
   -moz-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
-table.cp-table tr .ef-vrt, table.cp-table colgroup .ef-vrt {
+table.cp-table-base tr .ef-vrt, table.cp-table-base colgroup .ef-vrt {
   vertical-align: top;
 }
-table.cp-table tr .ef-vrm, table.cp-table colgroup .ef-vrm {
+table.cp-table-base tr .ef-vrm, table.cp-table-base colgroup .ef-vrm {
   vertical-align: middle;
 }
-table.cp-table tr .ef-vrb, table.cp-table colgroup .ef-vrb {
+table.cp-table-base tr .ef-vrb, table.cp-table-base colgroup .ef-vrb {
   vertical-align: bottom;
 }
-table.cp-table tr .cp-bg-white, table.cp-table colgroup .cp-bg-white {
+table.cp-table-base tr .cp-bg-white, table.cp-table-base colgroup .cp-bg-white {
   background: #fff;
 }
-table.cp-table tr .cp-bg-red, table.cp-table colgroup .cp-bg-red {
+table.cp-table-base tr .cp-bg-red, table.cp-table-base colgroup .cp-bg-red {
   background: #FFEEF3;
 }
-table.cp-table tr .cp-bg-orange, table.cp-table colgroup .cp-bg-orange {
+table.cp-table-base tr .cp-bg-orange, table.cp-table-base colgroup .cp-bg-orange {
   background: #FFF5DE;
 }
-table.cp-table tr .cp-bg-blue, table.cp-table colgroup .cp-bg-blue {
+table.cp-table-base tr .cp-bg-blue, table.cp-table-base colgroup .cp-bg-blue {
   background: #EEF9FF;
 }
-table.cp-table tr .cp-bg-green, table.cp-table colgroup .cp-bg-green {
+table.cp-table-base tr .cp-bg-green, table.cp-table-base colgroup .cp-bg-green {
   background: #EFFFEE;
 }
-table.cp-table tr .cp-bg-yellow, table.cp-table colgroup .cp-bg-yellow {
+table.cp-table-base tr .cp-bg-yellow, table.cp-table-base colgroup .cp-bg-yellow {
   background: #FDFFEE;
 }
-table.cp-table tr .cp-bg-black, table.cp-table colgroup .cp-bg-black {
+table.cp-table-base tr .cp-bg-black, table.cp-table-base colgroup .cp-bg-black {
   background: #000;
 }
-table.cp-table tr .cp-bg-gray, table.cp-table colgroup .cp-bg-gray {
+table.cp-table-base tr .cp-bg-gray, table.cp-table-base colgroup .cp-bg-gray {
   background: #f5f5f5;
 }
-table.cp-table tr .cp-bg-gray1, table.cp-table colgroup .cp-bg-gray1 {
+table.cp-table-base tr .cp-bg-gray1, table.cp-table-base colgroup .cp-bg-gray1 {
   background: #f9f9f9;
 }
-table.cp-table tr .cp-bg-gray2, table.cp-table colgroup .cp-bg-gray2 {
+table.cp-table-base tr .cp-bg-gray2, table.cp-table-base colgroup .cp-bg-gray2 {
   background: #eee;
 }
-table.cp-table tr .cp-bg-theme, table.cp-table colgroup .cp-bg-theme {
+table.cp-table-base tr .cp-bg-theme, table.cp-table-base colgroup .cp-bg-theme {
   background: #485169;
 }
-table.cp-table tr .cp-brd0, table.cp-table colgroup .cp-brd0 {
+table.cp-table-base tr .cp-brd0, table.cp-table-base colgroup .cp-brd0 {
   border-width: 0;
   border-style: solid;
   border-color: #ccc;
 }
-table.cp-table tr .cp-brd1, table.cp-table colgroup .cp-brd1 {
+table.cp-table-base tr .cp-brd1, table.cp-table-base colgroup .cp-brd1 {
   border-width: 1px;
   border-style: solid;
   border-color: #ccc;
 }
-table.cp-table tr .cp-brd2, table.cp-table colgroup .cp-brd2 {
+table.cp-table-base tr .cp-brd2, table.cp-table-base colgroup .cp-brd2 {
   border-width: 2px;
   border-style: solid;
   border-color: #ccc;
 }
-table.cp-table tr .cp-brd3, table.cp-table colgroup .cp-brd3 {
+table.cp-table-base tr .cp-brd3, table.cp-table-base colgroup .cp-brd3 {
   border-width: 3px;
   border-style: solid;
   border-color: #ccc;
 }
-table.cp-table tr .cp-brd0-top, table.cp-table colgroup .cp-brd0-top {
+table.cp-table-base tr .cp-brd0-top, table.cp-table-base colgroup .cp-brd0-top {
   border-top-width: 0;
   border-top-style: solid;
   border-top-color: #ccc;
 }
-table.cp-table tr .cp-brd1-top, table.cp-table colgroup .cp-brd1-top {
+table.cp-table-base tr .cp-brd1-top, table.cp-table-base colgroup .cp-brd1-top {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #ccc;
 }
-table.cp-table tr .cp-brd2-top, table.cp-table colgroup .cp-brd2-top {
+table.cp-table-base tr .cp-brd2-top, table.cp-table-base colgroup .cp-brd2-top {
   border-top-width: 2px;
   border-top-style: solid;
   border-top-color: #ccc;
 }
-table.cp-table tr .cp-brd3-top, table.cp-table colgroup .cp-brd3-top {
+table.cp-table-base tr .cp-brd3-top, table.cp-table-base colgroup .cp-brd3-top {
   border-top-width: 3px;
   border-top-style: solid;
   border-top-color: #ccc;
 }
-table.cp-table tr .cp-brd0-right, table.cp-table colgroup .cp-brd0-right {
+table.cp-table-base tr .cp-brd0-right, table.cp-table-base colgroup .cp-brd0-right {
   border-right-width: 0;
   border-right-style: solid;
   border-right-color: #ccc;
 }
-table.cp-table tr .cp-brd1-right, table.cp-table colgroup .cp-brd1-right {
+table.cp-table-base tr .cp-brd1-right, table.cp-table-base colgroup .cp-brd1-right {
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #ccc;
 }
-table.cp-table tr .cp-brd2-right, table.cp-table colgroup .cp-brd2-right {
+table.cp-table-base tr .cp-brd2-right, table.cp-table-base colgroup .cp-brd2-right {
   border-right-width: 2px;
   border-right-style: solid;
   border-right-color: #ccc;
 }
-table.cp-table tr .cp-brd3-right, table.cp-table colgroup .cp-brd3-right {
+table.cp-table-base tr .cp-brd3-right, table.cp-table-base colgroup .cp-brd3-right {
   border-right-width: 3px;
   border-right-style: solid;
   border-right-color: #ccc;
 }
-table.cp-table tr .cp-brd0-bottom, table.cp-table colgroup .cp-brd0-bottom {
+table.cp-table-base tr .cp-brd0-bottom, table.cp-table-base colgroup .cp-brd0-bottom {
   border-bottom-width: 0;
   border-bottom-style: solid;
   border-bottom-color: #ccc;
 }
-table.cp-table tr .cp-brd1-bottom, table.cp-table colgroup .cp-brd1-bottom {
+table.cp-table-base tr .cp-brd1-bottom, table.cp-table-base colgroup .cp-brd1-bottom {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #ccc;
 }
-table.cp-table tr .cp-brd2-bottom, table.cp-table colgroup .cp-brd2-bottom {
+table.cp-table-base tr .cp-brd2-bottom, table.cp-table-base colgroup .cp-brd2-bottom {
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: #ccc;
 }
-table.cp-table tr .cp-brd3-bottom, table.cp-table colgroup .cp-brd3-bottom {
+table.cp-table-base tr .cp-brd3-bottom, table.cp-table-base colgroup .cp-brd3-bottom {
   border-bottom-width: 3px;
   border-bottom-style: solid;
   border-bottom-color: #ccc;
 }
-table.cp-table tr .cp-brd0-left, table.cp-table colgroup .cp-brd0-left {
+table.cp-table-base tr .cp-brd0-left, table.cp-table-base colgroup .cp-brd0-left {
   border-left-width: 0;
   border-left-style: solid;
   border-left-color: #ccc;
 }
-table.cp-table tr .cp-brd1-left, table.cp-table colgroup .cp-brd1-left {
+table.cp-table-base tr .cp-brd1-left, table.cp-table-base colgroup .cp-brd1-left {
   border-left-width: 1px;
   border-left-style: solid;
   border-left-color: #ccc;
 }
-table.cp-table tr .cp-brd2-left, table.cp-table colgroup .cp-brd2-left {
+table.cp-table-base tr .cp-brd2-left, table.cp-table-base colgroup .cp-brd2-left {
   border-left-width: 2px;
   border-left-style: solid;
   border-left-color: #ccc;
 }
-table.cp-table tr .cp-brd3-left, table.cp-table colgroup .cp-brd3-left {
+table.cp-table-base tr .cp-brd3-left, table.cp-table-base colgroup .cp-brd3-left {
   border-left-width: 3px;
   border-left-style: solid;
   border-left-color: #ccc;
 }
-table.cp-table tr.cp-brd0 th, table.cp-table tr.cp-brd0 td, table.cp-table colgroup.cp-brd0 th, table.cp-table colgroup.cp-brd0 td {
+table.cp-table-base tr.cp-brd0 th, table.cp-table-base tr.cp-brd0 td, table.cp-table-base colgroup.cp-brd0 th, table.cp-table-base colgroup.cp-brd0 td {
   border-width: 0;
   border-style: solid;
   border-color: #ccc;
 }
-table.cp-table tr.cp-brd1 th, table.cp-table tr.cp-brd1 td, table.cp-table colgroup.cp-brd1 th, table.cp-table colgroup.cp-brd1 td {
+table.cp-table-base tr.cp-brd1 th, table.cp-table-base tr.cp-brd1 td, table.cp-table-base colgroup.cp-brd1 th, table.cp-table-base colgroup.cp-brd1 td {
   border-width: 1px;
   border-style: solid;
   border-color: #ccc;
 }
-table.cp-table tr.cp-brd2 th, table.cp-table tr.cp-brd2 td, table.cp-table colgroup.cp-brd2 th, table.cp-table colgroup.cp-brd2 td {
+table.cp-table-base tr.cp-brd2 th, table.cp-table-base tr.cp-brd2 td, table.cp-table-base colgroup.cp-brd2 th, table.cp-table-base colgroup.cp-brd2 td {
   border-width: 2px;
   border-style: solid;
   border-color: #ccc;
 }
-table.cp-table tr.cp-brd3 th, table.cp-table tr.cp-brd3 td, table.cp-table colgroup.cp-brd3 th, table.cp-table colgroup.cp-brd3 td {
+table.cp-table-base tr.cp-brd3 th, table.cp-table-base tr.cp-brd3 td, table.cp-table-base colgroup.cp-brd3 th, table.cp-table-base colgroup.cp-brd3 td {
   border-width: 3px;
   border-style: solid;
   border-color: #ccc;
 }
-table.cp-table tr.cp-brd0-top th, table.cp-table tr.cp-brd0-top td, table.cp-table colgroup.cp-brd0-top th, table.cp-table colgroup.cp-brd0-top td {
+table.cp-table-base tr.cp-brd0-top th, table.cp-table-base tr.cp-brd0-top td, table.cp-table-base colgroup.cp-brd0-top th, table.cp-table-base colgroup.cp-brd0-top td {
   border-top-width: 0;
   border-top-style: #ccc;
   border-top-color: #ccc;
 }
-table.cp-table tr.cp-brd1-top th, table.cp-table tr.cp-brd1-top td, table.cp-table colgroup.cp-brd1-top th, table.cp-table colgroup.cp-brd1-top td {
+table.cp-table-base tr.cp-brd1-top th, table.cp-table-base tr.cp-brd1-top td, table.cp-table-base colgroup.cp-brd1-top th, table.cp-table-base colgroup.cp-brd1-top td {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #ccc;
 }
-table.cp-table tr.cp-brd2-top th, table.cp-table tr.cp-brd2-top td, table.cp-table colgroup.cp-brd2-top th, table.cp-table colgroup.cp-brd2-top td {
+table.cp-table-base tr.cp-brd2-top th, table.cp-table-base tr.cp-brd2-top td, table.cp-table-base colgroup.cp-brd2-top th, table.cp-table-base colgroup.cp-brd2-top td {
   border-top-width: 2px;
   border-top-style: solid;
   border-top-color: #ccc;
 }
-table.cp-table tr.cp-brd3-top th, table.cp-table tr.cp-brd3-top td, table.cp-table colgroup.cp-brd3-top th, table.cp-table colgroup.cp-brd3-top td {
+table.cp-table-base tr.cp-brd3-top th, table.cp-table-base tr.cp-brd3-top td, table.cp-table-base colgroup.cp-brd3-top th, table.cp-table-base colgroup.cp-brd3-top td {
   border-top-width: 3px;
   border-top-style: solid;
   border-top-color: #ccc;
 }
-table.cp-table tr.cp-brd0-right th, table.cp-table tr.cp-brd0-right td, table.cp-table colgroup.cp-brd0-right th, table.cp-table colgroup.cp-brd0-right td {
+table.cp-table-base tr.cp-brd0-right th, table.cp-table-base tr.cp-brd0-right td, table.cp-table-base colgroup.cp-brd0-right th, table.cp-table-base colgroup.cp-brd0-right td {
   border-right-width: 0;
   border-right-style: #ccc;
   border-right-color: #ccc;
 }
-table.cp-table tr.cp-brd1-right th, table.cp-table tr.cp-brd1-right td, table.cp-table colgroup.cp-brd1-right th, table.cp-table colgroup.cp-brd1-right td {
+table.cp-table-base tr.cp-brd1-right th, table.cp-table-base tr.cp-brd1-right td, table.cp-table-base colgroup.cp-brd1-right th, table.cp-table-base colgroup.cp-brd1-right td {
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #ccc;
 }
-table.cp-table tr.cp-brd2-right th, table.cp-table tr.cp-brd2-right td, table.cp-table colgroup.cp-brd2-right th, table.cp-table colgroup.cp-brd2-right td {
+table.cp-table-base tr.cp-brd2-right th, table.cp-table-base tr.cp-brd2-right td, table.cp-table-base colgroup.cp-brd2-right th, table.cp-table-base colgroup.cp-brd2-right td {
   border-right-width: 2px;
   border-right-style: solid;
   border-right-color: #ccc;
 }
-table.cp-table tr.cp-brd3-right th, table.cp-table tr.cp-brd3-right td, table.cp-table colgroup.cp-brd3-right th, table.cp-table colgroup.cp-brd3-right td {
+table.cp-table-base tr.cp-brd3-right th, table.cp-table-base tr.cp-brd3-right td, table.cp-table-base colgroup.cp-brd3-right th, table.cp-table-base colgroup.cp-brd3-right td {
   border-right-width: 3px;
   border-right-style: solid;
   border-right-color: #ccc;
 }
-table.cp-table tr.cp-brd0-bottom th, table.cp-table tr.cp-brd0-bottom td, table.cp-table colgroup.cp-brd0-bottom th, table.cp-table colgroup.cp-brd0-bottom td {
+table.cp-table-base tr.cp-brd0-bottom th, table.cp-table-base tr.cp-brd0-bottom td, table.cp-table-base colgroup.cp-brd0-bottom th, table.cp-table-base colgroup.cp-brd0-bottom td {
   border-bottom-width: 0;
   border-bottom-style: solid;
   border-bottom-color: #ccc;
 }
-table.cp-table tr.cp-brd1-bottom th, table.cp-table tr.cp-brd1-bottom td, table.cp-table colgroup.cp-brd1-bottom th, table.cp-table colgroup.cp-brd1-bottom td {
+table.cp-table-base tr.cp-brd1-bottom th, table.cp-table-base tr.cp-brd1-bottom td, table.cp-table-base colgroup.cp-brd1-bottom th, table.cp-table-base colgroup.cp-brd1-bottom td {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #ccc;
 }
-table.cp-table tr.cp-brd2-bottom th, table.cp-table tr.cp-brd2-bottom td, table.cp-table colgroup.cp-brd2-bottom th, table.cp-table colgroup.cp-brd2-bottom td {
+table.cp-table-base tr.cp-brd2-bottom th, table.cp-table-base tr.cp-brd2-bottom td, table.cp-table-base colgroup.cp-brd2-bottom th, table.cp-table-base colgroup.cp-brd2-bottom td {
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: #ccc;
 }
-table.cp-table tr.cp-brd3-bottom th, table.cp-table tr.cp-brd3-bottom td, table.cp-table colgroup.cp-brd3-bottom th, table.cp-table colgroup.cp-brd3-bottom td {
+table.cp-table-base tr.cp-brd3-bottom th, table.cp-table-base tr.cp-brd3-bottom td, table.cp-table-base colgroup.cp-brd3-bottom th, table.cp-table-base colgroup.cp-brd3-bottom td {
   border-bottom-width: 3px;
   border-bottom-style: solid;
   border-bottom-color: #ccc;
 }
-table.cp-table tr.cp-brd0-left th, table.cp-table tr.cp-brd0-left td, table.cp-table colgroup.cp-brd0-left th, table.cp-table colgroup.cp-brd0-left td {
+table.cp-table-base tr.cp-brd0-left th, table.cp-table-base tr.cp-brd0-left td, table.cp-table-base colgroup.cp-brd0-left th, table.cp-table-base colgroup.cp-brd0-left td {
   border-left-width: 0;
   border-left-style: solid;
   border-left-color: #ccc;
 }
-table.cp-table tr.cp-brd1-left th, table.cp-table tr.cp-brd1-left td, table.cp-table colgroup.cp-brd1-left th, table.cp-table colgroup.cp-brd1-left td {
+table.cp-table-base tr.cp-brd1-left th, table.cp-table-base tr.cp-brd1-left td, table.cp-table-base colgroup.cp-brd1-left th, table.cp-table-base colgroup.cp-brd1-left td {
   border-left-width: 1px;
   border-left-style: solid;
   border-left-color: #ccc;
 }
-table.cp-table tr.cp-brd2-left th, table.cp-table tr.cp-brd2-left td, table.cp-table colgroup.cp-brd2-left th, table.cp-table colgroup.cp-brd2-left td {
+table.cp-table-base tr.cp-brd2-left th, table.cp-table-base tr.cp-brd2-left td, table.cp-table-base colgroup.cp-brd2-left th, table.cp-table-base colgroup.cp-brd2-left td {
   border-left-width: 2px;
   border-left-style: solid;
   border-left-color: #ccc;
 }
-table.cp-table tr.cp-brd3-left th, table.cp-table tr.cp-brd3-left td, table.cp-table colgroup.cp-brd3-left th, table.cp-table colgroup.cp-brd3-left td {
+table.cp-table-base tr.cp-brd3-left th, table.cp-table-base tr.cp-brd3-left td, table.cp-table-base colgroup.cp-brd3-left th, table.cp-table-base colgroup.cp-brd3-left td {
   border-left-width: 3px;
   border-left-style: solid;
   border-left-color: #ccc;
 }
-table.cp-table tr .cp-brd1-theme, table.cp-table colgroup .cp-brd1-theme {
+table.cp-table-base tr .cp-brd1-theme, table.cp-table-base colgroup .cp-brd1-theme {
   border-width: 1px;
   border-style: solid;
   border-color: #485169;
 }
-table.cp-table tr .cp-brd2-theme, table.cp-table colgroup .cp-brd2-theme {
+table.cp-table-base tr .cp-brd2-theme, table.cp-table-base colgroup .cp-brd2-theme {
   border-width: 2px;
   border-style: solid;
   border-color: #485169;
 }
-table.cp-table tr .cp-brd3-theme, table.cp-table colgroup .cp-brd3-theme {
+table.cp-table-base tr .cp-brd3-theme, table.cp-table-base colgroup .cp-brd3-theme {
   border-width: 3px;
   border-style: solid;
   border-color: #485169;
 }
-table.cp-table tr .cp-brd1-top-theme, table.cp-table colgroup .cp-brd1-top-theme {
+table.cp-table-base tr .cp-brd1-top-theme, table.cp-table-base colgroup .cp-brd1-top-theme {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #485169;
 }
-table.cp-table tr .cp-brd2-top-theme, table.cp-table colgroup .cp-brd2-top-theme {
+table.cp-table-base tr .cp-brd2-top-theme, table.cp-table-base colgroup .cp-brd2-top-theme {
   border-top-width: 2px;
   border-top-style: solid;
   border-top-color: #485169;
 }
-table.cp-table tr .cp-brd3-top-theme, table.cp-table colgroup .cp-brd3-top-theme {
+table.cp-table-base tr .cp-brd3-top-theme, table.cp-table-base colgroup .cp-brd3-top-theme {
   border-top-width: 3px;
   border-top-style: solid;
   border-top-color: #485169;
 }
-table.cp-table tr .cp-brd1-right-theme, table.cp-table colgroup .cp-brd1-right-theme {
+table.cp-table-base tr .cp-brd1-right-theme, table.cp-table-base colgroup .cp-brd1-right-theme {
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #485169;
 }
-table.cp-table tr .cp-brd2-right-theme, table.cp-table colgroup .cp-brd2-right-theme {
+table.cp-table-base tr .cp-brd2-right-theme, table.cp-table-base colgroup .cp-brd2-right-theme {
   border-right-width: 2px;
   border-right-style: solid;
   border-right-color: #485169;
 }
-table.cp-table tr .cp-brd3-right-theme, table.cp-table colgroup .cp-brd3-right-theme {
+table.cp-table-base tr .cp-brd3-right-theme, table.cp-table-base colgroup .cp-brd3-right-theme {
   border-right-width: 3px;
   border-right-style: solid;
   border-right-color: #485169;
 }
-table.cp-table tr .cp-brd1-bottom-theme, table.cp-table colgroup .cp-brd1-bottom-theme {
+table.cp-table-base tr .cp-brd1-bottom-theme, table.cp-table-base colgroup .cp-brd1-bottom-theme {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #485169;
 }
-table.cp-table tr .cp-brd2-bottom-theme, table.cp-table colgroup .cp-brd2-bottom-theme {
+table.cp-table-base tr .cp-brd2-bottom-theme, table.cp-table-base colgroup .cp-brd2-bottom-theme {
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: #485169;
 }
-table.cp-table tr .cp-brd3-bottom-theme, table.cp-table colgroup .cp-brd3-bottom-theme {
+table.cp-table-base tr .cp-brd3-bottom-theme, table.cp-table-base colgroup .cp-brd3-bottom-theme {
   border-bottom-width: 3px;
   border-bottom-style: solid;
   border-bottom-color: #485169;
 }
-table.cp-table tr .cp-brd1-left-theme, table.cp-table colgroup .cp-brd1-left-theme {
+table.cp-table-base tr .cp-brd1-left-theme, table.cp-table-base colgroup .cp-brd1-left-theme {
   border-left-width: 1px;
   border-left-style: solid;
   border-left-color: #485169;
 }
-table.cp-table tr .cp-brd2-left-theme, table.cp-table colgroup .cp-brd2-left-theme {
+table.cp-table-base tr .cp-brd2-left-theme, table.cp-table-base colgroup .cp-brd2-left-theme {
   border-left-width: 2px;
   border-left-style: solid;
   border-left-color: #485169;
 }
-table.cp-table tr .cp-brd3-left-theme, table.cp-table colgroup .cp-brd3-left-theme {
+table.cp-table-base tr .cp-brd3-left-theme, table.cp-table-base colgroup .cp-brd3-left-theme {
   border-left-width: 3px;
   border-left-style: solid;
   border-left-color: #485169;
 }
-table.cp-table tr.cp-brd1-theme th, table.cp-table tr.cp-brd1-theme td, table.cp-table colgroup.cp-brd1-theme th, table.cp-table colgroup.cp-brd1-theme td {
+table.cp-table-base tr.cp-brd1-theme th, table.cp-table-base tr.cp-brd1-theme td, table.cp-table-base colgroup.cp-brd1-theme th, table.cp-table-base colgroup.cp-brd1-theme td {
   border-width: 1px;
   border-style: solid;
   border-color: #485169;
 }
-table.cp-table tr.cp-brd2-theme th, table.cp-table tr.cp-brd2-theme td, table.cp-table colgroup.cp-brd2-theme th, table.cp-table colgroup.cp-brd2-theme td {
+table.cp-table-base tr.cp-brd2-theme th, table.cp-table-base tr.cp-brd2-theme td, table.cp-table-base colgroup.cp-brd2-theme th, table.cp-table-base colgroup.cp-brd2-theme td {
   border-width: 2px;
   border-style: solid;
   border-color: #485169;
 }
-table.cp-table tr.cp-brd3-theme th, table.cp-table tr.cp-brd3-theme td, table.cp-table colgroup.cp-brd3-theme th, table.cp-table colgroup.cp-brd3-theme td {
+table.cp-table-base tr.cp-brd3-theme th, table.cp-table-base tr.cp-brd3-theme td, table.cp-table-base colgroup.cp-brd3-theme th, table.cp-table-base colgroup.cp-brd3-theme td {
   border-width: 3px;
   border-style: solid;
   border-color: #485169;
 }
-table.cp-table tr.cp-brd1-top-theme th, table.cp-table tr.cp-brd1-top-theme td, table.cp-table colgroup.cp-brd1-top-theme th, table.cp-table colgroup.cp-brd1-top-theme td {
+table.cp-table-base tr.cp-brd1-top-theme th, table.cp-table-base tr.cp-brd1-top-theme td, table.cp-table-base colgroup.cp-brd1-top-theme th, table.cp-table-base colgroup.cp-brd1-top-theme td {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #485169;
 }
-table.cp-table tr.cp-brd2-top-theme th, table.cp-table tr.cp-brd2-top-theme td, table.cp-table colgroup.cp-brd2-top-theme th, table.cp-table colgroup.cp-brd2-top-theme td {
+table.cp-table-base tr.cp-brd2-top-theme th, table.cp-table-base tr.cp-brd2-top-theme td, table.cp-table-base colgroup.cp-brd2-top-theme th, table.cp-table-base colgroup.cp-brd2-top-theme td {
   border-top-width: 2px;
   border-top-style: solid;
   border-top-color: #485169;
 }
-table.cp-table tr.cp-brd3-top-theme th, table.cp-table tr.cp-brd3-top-theme td, table.cp-table colgroup.cp-brd3-top-theme th, table.cp-table colgroup.cp-brd3-top-theme td {
+table.cp-table-base tr.cp-brd3-top-theme th, table.cp-table-base tr.cp-brd3-top-theme td, table.cp-table-base colgroup.cp-brd3-top-theme th, table.cp-table-base colgroup.cp-brd3-top-theme td {
   border-top-width: 3px;
   border-top-style: solid;
   border-top-color: #485169;
 }
-table.cp-table tr.cp-brd1-right-theme th, table.cp-table tr.cp-brd1-right-theme td, table.cp-table colgroup.cp-brd1-right-theme th, table.cp-table colgroup.cp-brd1-right-theme td {
+table.cp-table-base tr.cp-brd1-right-theme th, table.cp-table-base tr.cp-brd1-right-theme td, table.cp-table-base colgroup.cp-brd1-right-theme th, table.cp-table-base colgroup.cp-brd1-right-theme td {
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #485169;
 }
-table.cp-table tr.cp-brd2-right-theme th, table.cp-table tr.cp-brd2-right-theme td, table.cp-table colgroup.cp-brd2-right-theme th, table.cp-table colgroup.cp-brd2-right-theme td {
+table.cp-table-base tr.cp-brd2-right-theme th, table.cp-table-base tr.cp-brd2-right-theme td, table.cp-table-base colgroup.cp-brd2-right-theme th, table.cp-table-base colgroup.cp-brd2-right-theme td {
   border-right-width: 2px;
   border-right-style: solid;
   border-right-color: #485169;
 }
-table.cp-table tr.cp-brd3-right-theme th, table.cp-table tr.cp-brd3-right-theme td, table.cp-table colgroup.cp-brd3-right-theme th, table.cp-table colgroup.cp-brd3-right-theme td {
+table.cp-table-base tr.cp-brd3-right-theme th, table.cp-table-base tr.cp-brd3-right-theme td, table.cp-table-base colgroup.cp-brd3-right-theme th, table.cp-table-base colgroup.cp-brd3-right-theme td {
   border-right-width: 3px;
   border-right-style: solid;
   border-right-color: #485169;
 }
-table.cp-table tr.cp-brd1-bottom-theme th, table.cp-table tr.cp-brd1-bottom-theme td, table.cp-table colgroup.cp-brd1-bottom-theme th, table.cp-table colgroup.cp-brd1-bottom-theme td {
+table.cp-table-base tr.cp-brd1-bottom-theme th, table.cp-table-base tr.cp-brd1-bottom-theme td, table.cp-table-base colgroup.cp-brd1-bottom-theme th, table.cp-table-base colgroup.cp-brd1-bottom-theme td {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #485169;
 }
-table.cp-table tr.cp-brd2-bottom-theme th, table.cp-table tr.cp-brd2-bottom-theme td, table.cp-table colgroup.cp-brd2-bottom-theme th, table.cp-table colgroup.cp-brd2-bottom-theme td {
+table.cp-table-base tr.cp-brd2-bottom-theme th, table.cp-table-base tr.cp-brd2-bottom-theme td, table.cp-table-base colgroup.cp-brd2-bottom-theme th, table.cp-table-base colgroup.cp-brd2-bottom-theme td {
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: #485169;
 }
-table.cp-table tr.cp-brd3-bottom-theme th, table.cp-table tr.cp-brd3-bottom-theme td, table.cp-table colgroup.cp-brd3-bottom-theme th, table.cp-table colgroup.cp-brd3-bottom-theme td {
+table.cp-table-base tr.cp-brd3-bottom-theme th, table.cp-table-base tr.cp-brd3-bottom-theme td, table.cp-table-base colgroup.cp-brd3-bottom-theme th, table.cp-table-base colgroup.cp-brd3-bottom-theme td {
   border-bottom-width: 3px;
   border-bottom-style: solid;
   border-bottom-color: #485169;
 }
-table.cp-table tr.cp-brd1-left-theme th, table.cp-table tr.cp-brd1-left-theme td, table.cp-table colgroup.cp-brd1-left-theme th, table.cp-table colgroup.cp-brd1-left-theme td {
+table.cp-table-base tr.cp-brd1-left-theme th, table.cp-table-base tr.cp-brd1-left-theme td, table.cp-table-base colgroup.cp-brd1-left-theme th, table.cp-table-base colgroup.cp-brd1-left-theme td {
   border-left-width: 1px;
   border-left-style: solid;
   border-left-color: #485169;
 }
-table.cp-table tr.cp-brd2-left-theme th, table.cp-table tr.cp-brd2-left-theme td, table.cp-table colgroup.cp-brd2-left-theme th, table.cp-table colgroup.cp-brd2-left-theme td {
+table.cp-table-base tr.cp-brd2-left-theme th, table.cp-table-base tr.cp-brd2-left-theme td, table.cp-table-base colgroup.cp-brd2-left-theme th, table.cp-table-base colgroup.cp-brd2-left-theme td {
   border-left-width: 2px;
   border-left-style: solid;
   border-left-color: #485169;
 }
-table.cp-table tr.cp-brd3-left-theme th, table.cp-table tr.cp-brd3-left-theme td, table.cp-table colgroup.cp-brd3-left-theme th, table.cp-table colgroup.cp-brd3-left-theme td {
+table.cp-table-base tr.cp-brd3-left-theme th, table.cp-table-base tr.cp-brd3-left-theme td, table.cp-table-base colgroup.cp-brd3-left-theme th, table.cp-table-base colgroup.cp-brd3-left-theme td {
   border-left-width: 3px;
   border-left-style: solid;
   border-left-color: #485169;
 }
-table.cp-table tr .cp-brd1-red, table.cp-table colgroup .cp-brd1-red {
+table.cp-table-base tr .cp-brd1-red, table.cp-table-base colgroup .cp-brd1-red {
   border-width: 1px;
   border-style: solid;
   border-color: #cc3300;
 }
-table.cp-table tr .cp-brd2-red, table.cp-table colgroup .cp-brd2-red {
+table.cp-table-base tr .cp-brd2-red, table.cp-table-base colgroup .cp-brd2-red {
   border-width: 2px;
   border-style: solid;
   border-color: #cc3300;
 }
-table.cp-table tr .cp-brd3-red, table.cp-table colgroup .cp-brd3-red {
+table.cp-table-base tr .cp-brd3-red, table.cp-table-base colgroup .cp-brd3-red {
   border-width: 3px;
   border-style: solid;
   border-color: #cc3300;
 }
-table.cp-table tr .cp-brd1-top-red, table.cp-table colgroup .cp-brd1-top-red {
+table.cp-table-base tr .cp-brd1-top-red, table.cp-table-base colgroup .cp-brd1-top-red {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #cc3300;
 }
-table.cp-table tr .cp-brd2-top-red, table.cp-table colgroup .cp-brd2-top-red {
+table.cp-table-base tr .cp-brd2-top-red, table.cp-table-base colgroup .cp-brd2-top-red {
   border-top-width: 2px;
   border-top-style: solid;
   border-top-color: #cc3300;
 }
-table.cp-table tr .cp-brd3-top-red, table.cp-table colgroup .cp-brd3-top-red {
+table.cp-table-base tr .cp-brd3-top-red, table.cp-table-base colgroup .cp-brd3-top-red {
   border-top-width: 3px;
   border-top-style: solid;
   border-top-color: #cc3300;
 }
-table.cp-table tr .cp-brd1-right-red, table.cp-table colgroup .cp-brd1-right-red {
+table.cp-table-base tr .cp-brd1-right-red, table.cp-table-base colgroup .cp-brd1-right-red {
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #cc3300;
 }
-table.cp-table tr .cp-brd2-right-red, table.cp-table colgroup .cp-brd2-right-red {
+table.cp-table-base tr .cp-brd2-right-red, table.cp-table-base colgroup .cp-brd2-right-red {
   border-right-width: 2px;
   border-right-style: solid;
   border-right-color: #cc3300;
 }
-table.cp-table tr .cp-brd3-right-red, table.cp-table colgroup .cp-brd3-right-red {
+table.cp-table-base tr .cp-brd3-right-red, table.cp-table-base colgroup .cp-brd3-right-red {
   border-right-width: 3px;
   border-right-style: solid;
   border-right-color: #cc3300;
 }
-table.cp-table tr .cp-brd1-bottom-red, table.cp-table colgroup .cp-brd1-bottom-red {
+table.cp-table-base tr .cp-brd1-bottom-red, table.cp-table-base colgroup .cp-brd1-bottom-red {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr .cp-brd2-bottom-red, table.cp-table colgroup .cp-brd2-bottom-red {
+table.cp-table-base tr .cp-brd2-bottom-red, table.cp-table-base colgroup .cp-brd2-bottom-red {
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr .cp-brd3-bottom-red, table.cp-table colgroup .cp-brd3-bottom-red {
+table.cp-table-base tr .cp-brd3-bottom-red, table.cp-table-base colgroup .cp-brd3-bottom-red {
   border-bottom-width: 3px;
   border-bottom-style: solid;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr .cp-brd1-left-red, table.cp-table colgroup .cp-brd1-left-red {
+table.cp-table-base tr .cp-brd1-left-red, table.cp-table-base colgroup .cp-brd1-left-red {
   border-left-width: 1px;
   border-left-style: solid;
   border-left-color: #cc3300;
 }
-table.cp-table tr .cp-brd2-left-red, table.cp-table colgroup .cp-brd2-left-red {
+table.cp-table-base tr .cp-brd2-left-red, table.cp-table-base colgroup .cp-brd2-left-red {
   border-left-width: 2px;
   border-left-style: solid;
   border-left-color: #cc3300;
 }
-table.cp-table tr .cp-brd3-left-red, table.cp-table colgroup .cp-brd3-left-red {
+table.cp-table-base tr .cp-brd3-left-red, table.cp-table-base colgroup .cp-brd3-left-red {
   border-left-width: 3px;
   border-left-style: solid;
   border-left-color: #cc3300;
 }
-table.cp-table tr.cp-brd1-red th, table.cp-table tr.cp-brd1-red td, table.cp-table colgroup.cp-brd1-red th, table.cp-table colgroup.cp-brd1-red td {
+table.cp-table-base tr.cp-brd1-red th, table.cp-table-base tr.cp-brd1-red td, table.cp-table-base colgroup.cp-brd1-red th, table.cp-table-base colgroup.cp-brd1-red td {
   border-width: 1px;
   border-style: solid;
   border-color: #cc3300;
 }
-table.cp-table tr.cp-brd2-red th, table.cp-table tr.cp-brd2-red td, table.cp-table colgroup.cp-brd2-red th, table.cp-table colgroup.cp-brd2-red td {
+table.cp-table-base tr.cp-brd2-red th, table.cp-table-base tr.cp-brd2-red td, table.cp-table-base colgroup.cp-brd2-red th, table.cp-table-base colgroup.cp-brd2-red td {
   border-width: 2px;
   border-style: solid;
   border-color: #cc3300;
 }
-table.cp-table tr.cp-brd3-red th, table.cp-table tr.cp-brd3-red td, table.cp-table colgroup.cp-brd3-red th, table.cp-table colgroup.cp-brd3-red td {
+table.cp-table-base tr.cp-brd3-red th, table.cp-table-base tr.cp-brd3-red td, table.cp-table-base colgroup.cp-brd3-red th, table.cp-table-base colgroup.cp-brd3-red td {
   border-width: 3px;
   border-style: solid;
   border-color: #cc3300;
 }
-table.cp-table tr.cp-brd1-top-red th, table.cp-table tr.cp-brd1-top-red td, table.cp-table colgroup.cp-brd1-top-red th, table.cp-table colgroup.cp-brd1-top-red td {
+table.cp-table-base tr.cp-brd1-top-red th, table.cp-table-base tr.cp-brd1-top-red td, table.cp-table-base colgroup.cp-brd1-top-red th, table.cp-table-base colgroup.cp-brd1-top-red td {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #cc3300;
 }
-table.cp-table tr.cp-brd2-top-red th, table.cp-table tr.cp-brd2-top-red td, table.cp-table colgroup.cp-brd2-top-red th, table.cp-table colgroup.cp-brd2-top-red td {
+table.cp-table-base tr.cp-brd2-top-red th, table.cp-table-base tr.cp-brd2-top-red td, table.cp-table-base colgroup.cp-brd2-top-red th, table.cp-table-base colgroup.cp-brd2-top-red td {
   border-top-width: 2px;
   border-top-style: solid;
   border-top-color: #cc3300;
 }
-table.cp-table tr.cp-brd3-top-red th, table.cp-table tr.cp-brd3-top-red td, table.cp-table colgroup.cp-brd3-top-red th, table.cp-table colgroup.cp-brd3-top-red td {
+table.cp-table-base tr.cp-brd3-top-red th, table.cp-table-base tr.cp-brd3-top-red td, table.cp-table-base colgroup.cp-brd3-top-red th, table.cp-table-base colgroup.cp-brd3-top-red td {
   border-top-width: 3px;
   border-top-style: solid;
   border-top-color: #cc3300;
 }
-table.cp-table tr.cp-brd1-right-red th, table.cp-table tr.cp-brd1-right-red td, table.cp-table colgroup.cp-brd1-right-red th, table.cp-table colgroup.cp-brd1-right-red td {
+table.cp-table-base tr.cp-brd1-right-red th, table.cp-table-base tr.cp-brd1-right-red td, table.cp-table-base colgroup.cp-brd1-right-red th, table.cp-table-base colgroup.cp-brd1-right-red td {
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #cc3300;
 }
-table.cp-table tr.cp-brd2-right-red th, table.cp-table tr.cp-brd2-right-red td, table.cp-table colgroup.cp-brd2-right-red th, table.cp-table colgroup.cp-brd2-right-red td {
+table.cp-table-base tr.cp-brd2-right-red th, table.cp-table-base tr.cp-brd2-right-red td, table.cp-table-base colgroup.cp-brd2-right-red th, table.cp-table-base colgroup.cp-brd2-right-red td {
   border-right-width: 2px;
   border-right-style: solid;
   border-right-color: #cc3300;
 }
-table.cp-table tr.cp-brd3-right-red th, table.cp-table tr.cp-brd3-right-red td, table.cp-table colgroup.cp-brd3-right-red th, table.cp-table colgroup.cp-brd3-right-red td {
+table.cp-table-base tr.cp-brd3-right-red th, table.cp-table-base tr.cp-brd3-right-red td, table.cp-table-base colgroup.cp-brd3-right-red th, table.cp-table-base colgroup.cp-brd3-right-red td {
   border-right-width: 3px;
   border-right-style: solid;
   border-right-color: #cc3300;
 }
-table.cp-table tr.cp-brd1-bottom-red th, table.cp-table tr.cp-brd1-bottom-red td, table.cp-table colgroup.cp-brd1-bottom-red th, table.cp-table colgroup.cp-brd1-bottom-red td {
+table.cp-table-base tr.cp-brd1-bottom-red th, table.cp-table-base tr.cp-brd1-bottom-red td, table.cp-table-base colgroup.cp-brd1-bottom-red th, table.cp-table-base colgroup.cp-brd1-bottom-red td {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr.cp-brd2-bottom-red th, table.cp-table tr.cp-brd2-bottom-red td, table.cp-table colgroup.cp-brd2-bottom-red th, table.cp-table colgroup.cp-brd2-bottom-red td {
+table.cp-table-base tr.cp-brd2-bottom-red th, table.cp-table-base tr.cp-brd2-bottom-red td, table.cp-table-base colgroup.cp-brd2-bottom-red th, table.cp-table-base colgroup.cp-brd2-bottom-red td {
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr.cp-brd3-bottom-red th, table.cp-table tr.cp-brd3-bottom-red td, table.cp-table colgroup.cp-brd3-bottom-red th, table.cp-table colgroup.cp-brd3-bottom-red td {
+table.cp-table-base tr.cp-brd3-bottom-red th, table.cp-table-base tr.cp-brd3-bottom-red td, table.cp-table-base colgroup.cp-brd3-bottom-red th, table.cp-table-base colgroup.cp-brd3-bottom-red td {
   border-bottom-width: 3px;
   border-bottom-style: solid;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr.cp-brd1-left-red th, table.cp-table tr.cp-brd1-left-red td, table.cp-table colgroup.cp-brd1-left-red th, table.cp-table colgroup.cp-brd1-left-red td {
+table.cp-table-base tr.cp-brd1-left-red th, table.cp-table-base tr.cp-brd1-left-red td, table.cp-table-base colgroup.cp-brd1-left-red th, table.cp-table-base colgroup.cp-brd1-left-red td {
   border-left-width: 1px;
   border-left-style: solid;
   border-left-color: #cc3300;
 }
-table.cp-table tr.cp-brd2-left-red th, table.cp-table tr.cp-brd2-left-red td, table.cp-table colgroup.cp-brd2-left-red th, table.cp-table colgroup.cp-brd2-left-red td {
+table.cp-table-base tr.cp-brd2-left-red th, table.cp-table-base tr.cp-brd2-left-red td, table.cp-table-base colgroup.cp-brd2-left-red th, table.cp-table-base colgroup.cp-brd2-left-red td {
   border-left-width: 2px;
   border-left-style: solid;
   border-left-color: #cc3300;
 }
-table.cp-table tr.cp-brd3-left-red th, table.cp-table tr.cp-brd3-left-red td, table.cp-table colgroup.cp-brd3-left-red th, table.cp-table colgroup.cp-brd3-left-red td {
+table.cp-table-base tr.cp-brd3-left-red th, table.cp-table-base tr.cp-brd3-left-red td, table.cp-table-base colgroup.cp-brd3-left-red th, table.cp-table-base colgroup.cp-brd3-left-red td {
   border-left-width: 3px;
   border-left-style: solid;
   border-left-color: #cc3300;
 }
-table.cp-table tr .cp-brd1-dotted, table.cp-table colgroup .cp-brd1-dotted {
+table.cp-table-base tr .cp-brd1-dotted, table.cp-table-base colgroup .cp-brd1-dotted {
   border-width: 1px;
   border-style: dotted;
   border-color: #ccc;
 }
-table.cp-table tr .cp-brd2-dotted, table.cp-table colgroup .cp-brd2-dotted {
+table.cp-table-base tr .cp-brd2-dotted, table.cp-table-base colgroup .cp-brd2-dotted {
   border-width: 2px;
   border-style: dotted;
   border-color: #ccc;
 }
-table.cp-table tr .cp-brd3-dotted, table.cp-table colgroup .cp-brd3-dotted {
+table.cp-table-base tr .cp-brd3-dotted, table.cp-table-base colgroup .cp-brd3-dotted {
   border-width: 3px;
   border-style: dotted;
   border-color: #ccc;
 }
-table.cp-table tr .cp-brd1-top-dotted, table.cp-table colgroup .cp-brd1-top-dotted {
+table.cp-table-base tr .cp-brd1-top-dotted, table.cp-table-base colgroup .cp-brd1-top-dotted {
   border-top-width: 1px;
   border-top-style: dotted;
   border-top-color: #ccc;
 }
-table.cp-table tr .cp-brd2-top-dotted, table.cp-table colgroup .cp-brd2-top-dotted {
+table.cp-table-base tr .cp-brd2-top-dotted, table.cp-table-base colgroup .cp-brd2-top-dotted {
   border-top-width: 2px;
   border-top-style: dotted;
   border-top-color: #ccc;
 }
-table.cp-table tr .cp-brd3-top-dotted, table.cp-table colgroup .cp-brd3-top-dotted {
+table.cp-table-base tr .cp-brd3-top-dotted, table.cp-table-base colgroup .cp-brd3-top-dotted {
   border-top-width: 3px;
   border-top-style: dotted;
   border-top-color: #ccc;
 }
-table.cp-table tr .cp-brd1-right-dotted, table.cp-table colgroup .cp-brd1-right-dotted {
+table.cp-table-base tr .cp-brd1-right-dotted, table.cp-table-base colgroup .cp-brd1-right-dotted {
   border-right-width: 1px;
   border-right-style: dotted;
   border-right-color: #ccc;
 }
-table.cp-table tr .cp-brd2-right-dotted, table.cp-table colgroup .cp-brd2-right-dotted {
+table.cp-table-base tr .cp-brd2-right-dotted, table.cp-table-base colgroup .cp-brd2-right-dotted {
   border-right-width: 2px;
   border-right-style: dotted;
   border-right-color: #ccc;
 }
-table.cp-table tr .cp-brd3-right-dotted, table.cp-table colgroup .cp-brd3-right-dotted {
+table.cp-table-base tr .cp-brd3-right-dotted, table.cp-table-base colgroup .cp-brd3-right-dotted {
   border-right-width: 3px;
   border-right-style: dotted;
   border-right-color: #ccc;
 }
-table.cp-table tr .cp-brd1-bottom-dotted, table.cp-table colgroup .cp-brd1-bottom-dotted {
+table.cp-table-base tr .cp-brd1-bottom-dotted, table.cp-table-base colgroup .cp-brd1-bottom-dotted {
   border-bottom-width: 1px;
   border-bottom-style: dotted;
   border-bottom-color: #ccc;
 }
-table.cp-table tr .cp-brd2-bottom-dotted, table.cp-table colgroup .cp-brd2-bottom-dotted {
+table.cp-table-base tr .cp-brd2-bottom-dotted, table.cp-table-base colgroup .cp-brd2-bottom-dotted {
   border-bottom-width: 2px;
   border-bottom-style: dotted;
   border-bottom-color: #ccc;
 }
-table.cp-table tr .cp-brd3-bottom-dotted, table.cp-table colgroup .cp-brd3-bottom-dotted {
+table.cp-table-base tr .cp-brd3-bottom-dotted, table.cp-table-base colgroup .cp-brd3-bottom-dotted {
   border-bottom-width: 3px;
   border-bottom-style: dotted;
   border-bottom-color: #ccc;
 }
-table.cp-table tr .cp-brd1-left-dotted, table.cp-table colgroup .cp-brd1-left-dotted {
+table.cp-table-base tr .cp-brd1-left-dotted, table.cp-table-base colgroup .cp-brd1-left-dotted {
   border-left-width: 1px;
   border-left-style: dotted;
   border-left-color: #ccc;
 }
-table.cp-table tr .cp-brd2-left-dotted, table.cp-table colgroup .cp-brd2-left-dotted {
+table.cp-table-base tr .cp-brd2-left-dotted, table.cp-table-base colgroup .cp-brd2-left-dotted {
   border-left-width: 2px;
   border-left-style: dotted;
   border-left-color: #ccc;
 }
-table.cp-table tr .cp-brd3-left-dotted, table.cp-table colgroup .cp-brd3-left-dotted {
+table.cp-table-base tr .cp-brd3-left-dotted, table.cp-table-base colgroup .cp-brd3-left-dotted {
   border-left-width: 3px;
   border-left-style: dotted;
   border-left-color: #ccc;
 }
-table.cp-table tr.cp-brd1-dotted th, table.cp-table tr.cp-brd1-dotted td, table.cp-table colgroup.cp-brd1-dotted th, table.cp-table colgroup.cp-brd1-dotted td {
+table.cp-table-base tr.cp-brd1-dotted th, table.cp-table-base tr.cp-brd1-dotted td, table.cp-table-base colgroup.cp-brd1-dotted th, table.cp-table-base colgroup.cp-brd1-dotted td {
   border-width: 1px;
   border-style: dotted;
   border-color: #ccc;
 }
-table.cp-table tr.cp-brd2-dotted th, table.cp-table tr.cp-brd2-dotted td, table.cp-table colgroup.cp-brd2-dotted th, table.cp-table colgroup.cp-brd2-dotted td {
+table.cp-table-base tr.cp-brd2-dotted th, table.cp-table-base tr.cp-brd2-dotted td, table.cp-table-base colgroup.cp-brd2-dotted th, table.cp-table-base colgroup.cp-brd2-dotted td {
   border-width: 2px;
   border-style: dotted;
   border-color: #ccc;
 }
-table.cp-table tr.cp-brd3-dotted th, table.cp-table tr.cp-brd3-dotted td, table.cp-table colgroup.cp-brd3-dotted th, table.cp-table colgroup.cp-brd3-dotted td {
+table.cp-table-base tr.cp-brd3-dotted th, table.cp-table-base tr.cp-brd3-dotted td, table.cp-table-base colgroup.cp-brd3-dotted th, table.cp-table-base colgroup.cp-brd3-dotted td {
   border-width: 3px;
   border-style: dotted;
   border-color: #ccc;
 }
-table.cp-table tr.cp-brd1-top-dotted th, table.cp-table tr.cp-brd1-top-dotted td, table.cp-table colgroup.cp-brd1-top-dotted th, table.cp-table colgroup.cp-brd1-top-dotted td {
+table.cp-table-base tr.cp-brd1-top-dotted th, table.cp-table-base tr.cp-brd1-top-dotted td, table.cp-table-base colgroup.cp-brd1-top-dotted th, table.cp-table-base colgroup.cp-brd1-top-dotted td {
   border-top-width: 1px;
   border-top-style: dotted;
   border-top-color: #ccc;
 }
-table.cp-table tr.cp-brd2-top-dotted th, table.cp-table tr.cp-brd2-top-dotted td, table.cp-table colgroup.cp-brd2-top-dotted th, table.cp-table colgroup.cp-brd2-top-dotted td {
+table.cp-table-base tr.cp-brd2-top-dotted th, table.cp-table-base tr.cp-brd2-top-dotted td, table.cp-table-base colgroup.cp-brd2-top-dotted th, table.cp-table-base colgroup.cp-brd2-top-dotted td {
   border-top-width: 2px;
   border-top-style: dotted;
   border-top-color: #ccc;
 }
-table.cp-table tr.cp-brd3-top-dotted th, table.cp-table tr.cp-brd3-top-dotted td, table.cp-table colgroup.cp-brd3-top-dotted th, table.cp-table colgroup.cp-brd3-top-dotted td {
+table.cp-table-base tr.cp-brd3-top-dotted th, table.cp-table-base tr.cp-brd3-top-dotted td, table.cp-table-base colgroup.cp-brd3-top-dotted th, table.cp-table-base colgroup.cp-brd3-top-dotted td {
   border-top-width: 3px;
   border-top-style: dotted;
   border-top-color: #ccc;
 }
-table.cp-table tr.cp-brd0-right-dotted th, table.cp-table tr.cp-brd0-right-dotted td, table.cp-table colgroup.cp-brd0-right-dotted th, table.cp-table colgroup.cp-brd0-right-dotted td {
+table.cp-table-base tr.cp-brd0-right-dotted th, table.cp-table-base tr.cp-brd0-right-dotted td, table.cp-table-base colgroup.cp-brd0-right-dotted th, table.cp-table-base colgroup.cp-brd0-right-dotted td {
   border-right-width: 0;
   border-right-style: #ccc;
   border-right-color: #ccc;
 }
-table.cp-table tr.cp-brd1-right-dotted th, table.cp-table tr.cp-brd1-right-dotted td, table.cp-table colgroup.cp-brd1-right-dotted th, table.cp-table colgroup.cp-brd1-right-dotted td {
+table.cp-table-base tr.cp-brd1-right-dotted th, table.cp-table-base tr.cp-brd1-right-dotted td, table.cp-table-base colgroup.cp-brd1-right-dotted th, table.cp-table-base colgroup.cp-brd1-right-dotted td {
   border-right-width: 1px;
   border-right-style: dotted;
   border-right-color: #ccc;
 }
-table.cp-table tr.cp-brd2-right-dotted th, table.cp-table tr.cp-brd2-right-dotted td, table.cp-table colgroup.cp-brd2-right-dotted th, table.cp-table colgroup.cp-brd2-right-dotted td {
+table.cp-table-base tr.cp-brd2-right-dotted th, table.cp-table-base tr.cp-brd2-right-dotted td, table.cp-table-base colgroup.cp-brd2-right-dotted th, table.cp-table-base colgroup.cp-brd2-right-dotted td {
   border-right-width: 2px;
   border-right-style: dotted;
   border-right-color: #ccc;
 }
-table.cp-table tr.cp-brd3-right-dotted th, table.cp-table tr.cp-brd3-right-dotted td, table.cp-table colgroup.cp-brd3-right-dotted th, table.cp-table colgroup.cp-brd3-right-dotted td {
+table.cp-table-base tr.cp-brd3-right-dotted th, table.cp-table-base tr.cp-brd3-right-dotted td, table.cp-table-base colgroup.cp-brd3-right-dotted th, table.cp-table-base colgroup.cp-brd3-right-dotted td {
   border-right-width: 3px;
   border-right-style: dotted;
   border-right-color: #ccc;
 }
-table.cp-table tr.cp-brd1-bottom-dotted th, table.cp-table tr.cp-brd1-bottom-dotted td, table.cp-table colgroup.cp-brd1-bottom-dotted th, table.cp-table colgroup.cp-brd1-bottom-dotted td {
+table.cp-table-base tr.cp-brd1-bottom-dotted th, table.cp-table-base tr.cp-brd1-bottom-dotted td, table.cp-table-base colgroup.cp-brd1-bottom-dotted th, table.cp-table-base colgroup.cp-brd1-bottom-dotted td {
   border-bottom-width: 1px;
   border-bottom-style: dotted;
   border-bottom-color: #ccc;
 }
-table.cp-table tr.cp-brd2-bottom-dotted th, table.cp-table tr.cp-brd2-bottom-dotted td, table.cp-table colgroup.cp-brd2-bottom-dotted th, table.cp-table colgroup.cp-brd2-bottom-dotted td {
+table.cp-table-base tr.cp-brd2-bottom-dotted th, table.cp-table-base tr.cp-brd2-bottom-dotted td, table.cp-table-base colgroup.cp-brd2-bottom-dotted th, table.cp-table-base colgroup.cp-brd2-bottom-dotted td {
   border-bottom-width: 2px;
   border-bottom-style: dotted;
   border-bottom-color: #ccc;
 }
-table.cp-table tr.cp-brd3-bottom-dotted th, table.cp-table tr.cp-brd3-bottom-dotted td, table.cp-table colgroup.cp-brd3-bottom-dotted th, table.cp-table colgroup.cp-brd3-bottom-dotted td {
+table.cp-table-base tr.cp-brd3-bottom-dotted th, table.cp-table-base tr.cp-brd3-bottom-dotted td, table.cp-table-base colgroup.cp-brd3-bottom-dotted th, table.cp-table-base colgroup.cp-brd3-bottom-dotted td {
   border-bottom-width: 3px;
   border-bottom-style: dotted;
   border-bottom-color: #ccc;
 }
-table.cp-table tr.cp-brd1-left-dotted th, table.cp-table tr.cp-brd1-left-dotted td, table.cp-table colgroup.cp-brd1-left-dotted th, table.cp-table colgroup.cp-brd1-left-dotted td {
+table.cp-table-base tr.cp-brd1-left-dotted th, table.cp-table-base tr.cp-brd1-left-dotted td, table.cp-table-base colgroup.cp-brd1-left-dotted th, table.cp-table-base colgroup.cp-brd1-left-dotted td {
   border-left-width: 1px;
   border-left-style: dotted;
   border-left-color: #ccc;
 }
-table.cp-table tr.cp-brd2-left-dotted th, table.cp-table tr.cp-brd2-left-dotted td, table.cp-table colgroup.cp-brd2-left-dotted th, table.cp-table colgroup.cp-brd2-left-dotted td {
+table.cp-table-base tr.cp-brd2-left-dotted th, table.cp-table-base tr.cp-brd2-left-dotted td, table.cp-table-base colgroup.cp-brd2-left-dotted th, table.cp-table-base colgroup.cp-brd2-left-dotted td {
   border-left-width: 2px;
   border-left-style: dotted;
   border-left-color: #ccc;
 }
-table.cp-table tr.cp-brd3-left-dotted th, table.cp-table tr.cp-brd3-left-dotted td, table.cp-table colgroup.cp-brd3-left-dotted th, table.cp-table colgroup.cp-brd3-left-dotted td {
+table.cp-table-base tr.cp-brd3-left-dotted th, table.cp-table-base tr.cp-brd3-left-dotted td, table.cp-table-base colgroup.cp-brd3-left-dotted th, table.cp-table-base colgroup.cp-brd3-left-dotted td {
   border-left-width: 3px;
   border-left-style: dotted;
   border-left-color: #ccc;
 }
-table.cp-table tr .cp-brd1-dotted-theme, table.cp-table colgroup .cp-brd1-dotted-theme {
+table.cp-table-base tr .cp-brd1-dotted-theme, table.cp-table-base colgroup .cp-brd1-dotted-theme {
   border-width: 1px;
   border-style: dotted;
   border-color: #485169;
 }
-table.cp-table tr .cp-brd2-dotted-theme, table.cp-table colgroup .cp-brd2-dotted-theme {
+table.cp-table-base tr .cp-brd2-dotted-theme, table.cp-table-base colgroup .cp-brd2-dotted-theme {
   border-width: 2px;
   border-style: dotted;
   border-color: #485169;
 }
-table.cp-table tr .cp-brd3-dotted-theme, table.cp-table colgroup .cp-brd3-dotted-theme {
+table.cp-table-base tr .cp-brd3-dotted-theme, table.cp-table-base colgroup .cp-brd3-dotted-theme {
   border-width: 3px;
   border-style: dotted;
   border-color: #485169;
 }
-table.cp-table tr .cp-brd1-top-dotted-theme, table.cp-table colgroup .cp-brd1-top-dotted-theme {
+table.cp-table-base tr .cp-brd1-top-dotted-theme, table.cp-table-base colgroup .cp-brd1-top-dotted-theme {
   border-top-width: 1px;
   border-top-style: dotted;
   border-top-color: #485169;
 }
-table.cp-table tr .cp-brd2-top-dotted-theme, table.cp-table colgroup .cp-brd2-top-dotted-theme {
+table.cp-table-base tr .cp-brd2-top-dotted-theme, table.cp-table-base colgroup .cp-brd2-top-dotted-theme {
   border-top-width: 2px;
   border-top-style: dotted;
   border-top-color: #485169;
 }
-table.cp-table tr .cp-brd3-top-dotted-theme, table.cp-table colgroup .cp-brd3-top-dotted-theme {
+table.cp-table-base tr .cp-brd3-top-dotted-theme, table.cp-table-base colgroup .cp-brd3-top-dotted-theme {
   border-top-width: 3px;
   border-top-style: dotted;
   border-top-color: #485169;
 }
-table.cp-table tr .cp-brd1-right-dotted-theme, table.cp-table colgroup .cp-brd1-right-dotted-theme {
+table.cp-table-base tr .cp-brd1-right-dotted-theme, table.cp-table-base colgroup .cp-brd1-right-dotted-theme {
   border-right-width: 1px;
   border-right-style: dotted;
   border-right-color: #485169;
 }
-table.cp-table tr .cp-brd2-right-dotted-theme, table.cp-table colgroup .cp-brd2-right-dotted-theme {
+table.cp-table-base tr .cp-brd2-right-dotted-theme, table.cp-table-base colgroup .cp-brd2-right-dotted-theme {
   border-right-width: 2px;
   border-right-style: dotted;
   border-right-color: #485169;
 }
-table.cp-table tr .cp-brd3-right-dotted-theme, table.cp-table colgroup .cp-brd3-right-dotted-theme {
+table.cp-table-base tr .cp-brd3-right-dotted-theme, table.cp-table-base colgroup .cp-brd3-right-dotted-theme {
   border-right-width: 3px;
   border-right-style: dotted;
   border-right-color: #485169;
 }
-table.cp-table tr .cp-brd1-bottom-dotted-theme, table.cp-table colgroup .cp-brd1-bottom-dotted-theme {
+table.cp-table-base tr .cp-brd1-bottom-dotted-theme, table.cp-table-base colgroup .cp-brd1-bottom-dotted-theme {
   border-bottom-width: 1px;
   border-bottom-style: dotted;
   border-bottom-color: #485169;
 }
-table.cp-table tr .cp-brd2-bottom-dotted-theme, table.cp-table colgroup .cp-brd2-bottom-dotted-theme {
+table.cp-table-base tr .cp-brd2-bottom-dotted-theme, table.cp-table-base colgroup .cp-brd2-bottom-dotted-theme {
   border-bottom-width: 2px;
   border-bottom-style: dotted;
   border-bottom-color: #485169;
 }
-table.cp-table tr .cp-brd3-bottom-dotted-theme, table.cp-table colgroup .cp-brd3-bottom-dotted-theme {
+table.cp-table-base tr .cp-brd3-bottom-dotted-theme, table.cp-table-base colgroup .cp-brd3-bottom-dotted-theme {
   border-bottom-width: 3px;
   border-bottom-style: dotted;
   border-bottom-color: #485169;
 }
-table.cp-table tr .cp-brd1-left-dotted-theme, table.cp-table colgroup .cp-brd1-left-dotted-theme {
+table.cp-table-base tr .cp-brd1-left-dotted-theme, table.cp-table-base colgroup .cp-brd1-left-dotted-theme {
   border-left-width: 1px;
   border-left-style: dotted;
   border-left-color: #485169;
 }
-table.cp-table tr .cp-brd2-left-dotted-theme, table.cp-table colgroup .cp-brd2-left-dotted-theme {
+table.cp-table-base tr .cp-brd2-left-dotted-theme, table.cp-table-base colgroup .cp-brd2-left-dotted-theme {
   border-left-width: 2px;
   border-left-style: dotted;
   border-left-color: #485169;
 }
-table.cp-table tr .cp-brd3-left-dotted-theme, table.cp-table colgroup .cp-brd3-left-dotted-theme {
+table.cp-table-base tr .cp-brd3-left-dotted-theme, table.cp-table-base colgroup .cp-brd3-left-dotted-theme {
   border-left-width: 3px;
   border-left-style: dotted;
   border-left-color: #485169;
 }
-table.cp-table tr.cp-brd1-dotted-theme th, table.cp-table tr.cp-brd1-dotted-theme td, table.cp-table colgroup.cp-brd1-dotted-theme th, table.cp-table colgroup.cp-brd1-dotted-theme td {
+table.cp-table-base tr.cp-brd1-dotted-theme th, table.cp-table-base tr.cp-brd1-dotted-theme td, table.cp-table-base colgroup.cp-brd1-dotted-theme th, table.cp-table-base colgroup.cp-brd1-dotted-theme td {
   border-width: 1px;
   border-style: dotted;
   border-color: #485169;
 }
-table.cp-table tr.cp-brd2-dotted-theme th, table.cp-table tr.cp-brd2-dotted-theme td, table.cp-table colgroup.cp-brd2-dotted-theme th, table.cp-table colgroup.cp-brd2-dotted-theme td {
+table.cp-table-base tr.cp-brd2-dotted-theme th, table.cp-table-base tr.cp-brd2-dotted-theme td, table.cp-table-base colgroup.cp-brd2-dotted-theme th, table.cp-table-base colgroup.cp-brd2-dotted-theme td {
   border-width: 2px;
   border-style: dotted;
   border-color: #485169;
 }
-table.cp-table tr.cp-brd3-dotted-theme th, table.cp-table tr.cp-brd3-dotted-theme td, table.cp-table colgroup.cp-brd3-dotted-theme th, table.cp-table colgroup.cp-brd3-dotted-theme td {
+table.cp-table-base tr.cp-brd3-dotted-theme th, table.cp-table-base tr.cp-brd3-dotted-theme td, table.cp-table-base colgroup.cp-brd3-dotted-theme th, table.cp-table-base colgroup.cp-brd3-dotted-theme td {
   border-width: 3px;
   border-style: dotted;
   border-color: #485169;
 }
-table.cp-table tr.cp-brd1-top-dotted-theme th, table.cp-table tr.cp-brd1-top-dotted-theme td, table.cp-table colgroup.cp-brd1-top-dotted-theme th, table.cp-table colgroup.cp-brd1-top-dotted-theme td {
+table.cp-table-base tr.cp-brd1-top-dotted-theme th, table.cp-table-base tr.cp-brd1-top-dotted-theme td, table.cp-table-base colgroup.cp-brd1-top-dotted-theme th, table.cp-table-base colgroup.cp-brd1-top-dotted-theme td {
   border-top-width: 1px;
   border-top-style: dotted;
   border-top-color: #485169;
 }
-table.cp-table tr.cp-brd2-top-dotted-theme th, table.cp-table tr.cp-brd2-top-dotted-theme td, table.cp-table colgroup.cp-brd2-top-dotted-theme th, table.cp-table colgroup.cp-brd2-top-dotted-theme td {
+table.cp-table-base tr.cp-brd2-top-dotted-theme th, table.cp-table-base tr.cp-brd2-top-dotted-theme td, table.cp-table-base colgroup.cp-brd2-top-dotted-theme th, table.cp-table-base colgroup.cp-brd2-top-dotted-theme td {
   border-top-width: 2px;
   border-top-style: dotted;
   border-top-color: #485169;
 }
-table.cp-table tr.cp-brd3-top-dotted-theme th, table.cp-table tr.cp-brd3-top-dotted-theme td, table.cp-table colgroup.cp-brd3-top-dotted-theme th, table.cp-table colgroup.cp-brd3-top-dotted-theme td {
+table.cp-table-base tr.cp-brd3-top-dotted-theme th, table.cp-table-base tr.cp-brd3-top-dotted-theme td, table.cp-table-base colgroup.cp-brd3-top-dotted-theme th, table.cp-table-base colgroup.cp-brd3-top-dotted-theme td {
   border-top-width: 3px;
   border-top-style: dotted;
   border-top-color: #485169;
 }
-table.cp-table tr.cp-brd1-right-dotted-theme th, table.cp-table tr.cp-brd1-right-dotted-theme td, table.cp-table colgroup.cp-brd1-right-dotted-theme th, table.cp-table colgroup.cp-brd1-right-dotted-theme td {
+table.cp-table-base tr.cp-brd1-right-dotted-theme th, table.cp-table-base tr.cp-brd1-right-dotted-theme td, table.cp-table-base colgroup.cp-brd1-right-dotted-theme th, table.cp-table-base colgroup.cp-brd1-right-dotted-theme td {
   border-right-width: 1px;
   border-right-style: dotted;
   border-right-color: #485169;
 }
-table.cp-table tr.cp-brd2-right-dotted-theme th, table.cp-table tr.cp-brd2-right-dotted-theme td, table.cp-table colgroup.cp-brd2-right-dotted-theme th, table.cp-table colgroup.cp-brd2-right-dotted-theme td {
+table.cp-table-base tr.cp-brd2-right-dotted-theme th, table.cp-table-base tr.cp-brd2-right-dotted-theme td, table.cp-table-base colgroup.cp-brd2-right-dotted-theme th, table.cp-table-base colgroup.cp-brd2-right-dotted-theme td {
   border-right-width: 2px;
   border-right-style: dotted;
   border-right-color: #485169;
 }
-table.cp-table tr.cp-brd3-right-dotted-theme th, table.cp-table tr.cp-brd3-right-dotted-theme td, table.cp-table colgroup.cp-brd3-right-dotted-theme th, table.cp-table colgroup.cp-brd3-right-dotted-theme td {
+table.cp-table-base tr.cp-brd3-right-dotted-theme th, table.cp-table-base tr.cp-brd3-right-dotted-theme td, table.cp-table-base colgroup.cp-brd3-right-dotted-theme th, table.cp-table-base colgroup.cp-brd3-right-dotted-theme td {
   border-right-width: 3px;
   border-right-style: dotted;
   border-right-color: #485169;
 }
-table.cp-table tr.cp-brd1-bottom-dotted-theme th, table.cp-table tr.cp-brd1-bottom-dotted-theme td, table.cp-table colgroup.cp-brd1-bottom-dotted-theme th, table.cp-table colgroup.cp-brd1-bottom-dotted-theme td {
+table.cp-table-base tr.cp-brd1-bottom-dotted-theme th, table.cp-table-base tr.cp-brd1-bottom-dotted-theme td, table.cp-table-base colgroup.cp-brd1-bottom-dotted-theme th, table.cp-table-base colgroup.cp-brd1-bottom-dotted-theme td {
   border-bottom-width: 1px;
   border-bottom-style: dotted;
   border-bottom-color: #485169;
 }
-table.cp-table tr.cp-brd2-bottom-dotted-theme th, table.cp-table tr.cp-brd2-bottom-dotted-theme td, table.cp-table colgroup.cp-brd2-bottom-dotted-theme th, table.cp-table colgroup.cp-brd2-bottom-dotted-theme td {
+table.cp-table-base tr.cp-brd2-bottom-dotted-theme th, table.cp-table-base tr.cp-brd2-bottom-dotted-theme td, table.cp-table-base colgroup.cp-brd2-bottom-dotted-theme th, table.cp-table-base colgroup.cp-brd2-bottom-dotted-theme td {
   border-bottom-width: 2px;
   border-bottom-style: dotted;
   border-bottom-color: #485169;
 }
-table.cp-table tr.cp-brd3-bottom-dotted-theme th, table.cp-table tr.cp-brd3-bottom-dotted-theme td, table.cp-table colgroup.cp-brd3-bottom-dotted-theme th, table.cp-table colgroup.cp-brd3-bottom-dotted-theme td {
+table.cp-table-base tr.cp-brd3-bottom-dotted-theme th, table.cp-table-base tr.cp-brd3-bottom-dotted-theme td, table.cp-table-base colgroup.cp-brd3-bottom-dotted-theme th, table.cp-table-base colgroup.cp-brd3-bottom-dotted-theme td {
   border-bottom-width: 3px;
   border-bottom-style: dotted;
   border-bottom-color: #485169;
 }
-table.cp-table tr.cp-brd1-left-dotted-theme th, table.cp-table tr.cp-brd1-left-dotted-theme td, table.cp-table colgroup.cp-brd1-left-dotted-theme th, table.cp-table colgroup.cp-brd1-left-dotted-theme td {
+table.cp-table-base tr.cp-brd1-left-dotted-theme th, table.cp-table-base tr.cp-brd1-left-dotted-theme td, table.cp-table-base colgroup.cp-brd1-left-dotted-theme th, table.cp-table-base colgroup.cp-brd1-left-dotted-theme td {
   border-left-width: 1px;
   border-left-style: dotted;
   border-left-color: #485169;
 }
-table.cp-table tr.cp-brd2-left-dotted-theme th, table.cp-table tr.cp-brd2-left-dotted-theme td, table.cp-table colgroup.cp-brd2-left-dotted-theme th, table.cp-table colgroup.cp-brd2-left-dotted-theme td {
+table.cp-table-base tr.cp-brd2-left-dotted-theme th, table.cp-table-base tr.cp-brd2-left-dotted-theme td, table.cp-table-base colgroup.cp-brd2-left-dotted-theme th, table.cp-table-base colgroup.cp-brd2-left-dotted-theme td {
   border-left-width: 2px;
   border-left-style: dotted;
   border-left-color: #485169;
 }
-table.cp-table tr.cp-brd3-left-dotted-theme th, table.cp-table tr.cp-brd3-left-dotted-theme td, table.cp-table colgroup.cp-brd3-left-dotted-theme th, table.cp-table colgroup.cp-brd3-left-dotted-theme td {
+table.cp-table-base tr.cp-brd3-left-dotted-theme th, table.cp-table-base tr.cp-brd3-left-dotted-theme td, table.cp-table-base colgroup.cp-brd3-left-dotted-theme th, table.cp-table-base colgroup.cp-brd3-left-dotted-theme td {
   border-left-width: 3px;
   border-left-style: dotted;
   border-left-color: #485169;
 }
-table.cp-table tr .cp-brd1-dotted-red, table.cp-table colgroup .cp-brd1-dotted-red {
+table.cp-table-base tr .cp-brd1-dotted-red, table.cp-table-base colgroup .cp-brd1-dotted-red {
   border-width: 1px;
   border-style: dotted;
   border-color: #cc3300;
 }
-table.cp-table tr .cp-brd2-dotted-red, table.cp-table colgroup .cp-brd2-dotted-red {
+table.cp-table-base tr .cp-brd2-dotted-red, table.cp-table-base colgroup .cp-brd2-dotted-red {
   border-width: 2px;
   border-style: dotted;
   border-color: #cc3300;
 }
-table.cp-table tr .cp-brd3-dotted-red, table.cp-table colgroup .cp-brd3-dotted-red {
+table.cp-table-base tr .cp-brd3-dotted-red, table.cp-table-base colgroup .cp-brd3-dotted-red {
   border-width: 3px;
   border-style: dotted;
   border-color: #cc3300;
 }
-table.cp-table tr .cp-brd1-top-dotted-red, table.cp-table colgroup .cp-brd1-top-dotted-red {
+table.cp-table-base tr .cp-brd1-top-dotted-red, table.cp-table-base colgroup .cp-brd1-top-dotted-red {
   border-top-width: 1px;
   border-top-style: dotted;
   border-top-color: #cc3300;
 }
-table.cp-table tr .cp-brd2-top-dotted-red, table.cp-table colgroup .cp-brd2-top-dotted-red {
+table.cp-table-base tr .cp-brd2-top-dotted-red, table.cp-table-base colgroup .cp-brd2-top-dotted-red {
   border-top-width: 2px;
   border-top-style: dotted;
   border-top-color: #cc3300;
 }
-table.cp-table tr .cp-brd3-top-dotted-red, table.cp-table colgroup .cp-brd3-top-dotted-red {
+table.cp-table-base tr .cp-brd3-top-dotted-red, table.cp-table-base colgroup .cp-brd3-top-dotted-red {
   border-top-width: 3px;
   border-top-style: dotted;
   border-top-color: #cc3300;
 }
-table.cp-table tr .cp-brd1-right-dotted-red, table.cp-table colgroup .cp-brd1-right-dotted-red {
+table.cp-table-base tr .cp-brd1-right-dotted-red, table.cp-table-base colgroup .cp-brd1-right-dotted-red {
   border-right-width: 1px;
   border-right-style: dotted;
   border-right-color: #cc3300;
 }
-table.cp-table tr .cp-brd2-right-dotted-red, table.cp-table colgroup .cp-brd2-right-dotted-red {
+table.cp-table-base tr .cp-brd2-right-dotted-red, table.cp-table-base colgroup .cp-brd2-right-dotted-red {
   border-right-width: 2px;
   border-right-style: dotted;
   border-right-color: #cc3300;
 }
-table.cp-table tr .cp-brd3-right-dotted-red, table.cp-table colgroup .cp-brd3-right-dotted-red {
+table.cp-table-base tr .cp-brd3-right-dotted-red, table.cp-table-base colgroup .cp-brd3-right-dotted-red {
   border-right-width: 3px;
   border-right-style: dotted;
   border-right-color: #cc3300;
 }
-table.cp-table tr .cp-brd1-bottom-dotted-red, table.cp-table colgroup .cp-brd1-bottom-dotted-red {
+table.cp-table-base tr .cp-brd1-bottom-dotted-red, table.cp-table-base colgroup .cp-brd1-bottom-dotted-red {
   border-bottom-width: 1px;
   border-bottom-style: dotted;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr .cp-brd2-bottom-dotted-red, table.cp-table colgroup .cp-brd2-bottom-dotted-red {
+table.cp-table-base tr .cp-brd2-bottom-dotted-red, table.cp-table-base colgroup .cp-brd2-bottom-dotted-red {
   border-bottom-width: 2px;
   border-bottom-style: dotted;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr .cp-brd3-bottom-dotted-red, table.cp-table colgroup .cp-brd3-bottom-dotted-red {
+table.cp-table-base tr .cp-brd3-bottom-dotted-red, table.cp-table-base colgroup .cp-brd3-bottom-dotted-red {
   border-bottom-width: 3px;
   border-bottom-style: dotted;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr .cp-brd1-left-dotted-red, table.cp-table colgroup .cp-brd1-left-dotted-red {
+table.cp-table-base tr .cp-brd1-left-dotted-red, table.cp-table-base colgroup .cp-brd1-left-dotted-red {
   border-left-width: 1px;
   border-left-style: dotted;
   border-left-color: #cc3300;
 }
-table.cp-table tr .cp-brd2-left-dotted-red, table.cp-table colgroup .cp-brd2-left-dotted-red {
+table.cp-table-base tr .cp-brd2-left-dotted-red, table.cp-table-base colgroup .cp-brd2-left-dotted-red {
   border-left-width: 2px;
   border-left-style: dotted;
   border-left-color: #cc3300;
 }
-table.cp-table tr .cp-brd3-left-dotted-red, table.cp-table colgroup .cp-brd3-left-dotted-red {
+table.cp-table-base tr .cp-brd3-left-dotted-red, table.cp-table-base colgroup .cp-brd3-left-dotted-red {
   border-left-width: 3px;
   border-left-style: dotted;
   border-left-color: #cc3300;
 }
-table.cp-table tr.cp-brd1-dotted-red th, table.cp-table tr.cp-brd1-dotted-red td, table.cp-table colgroup.cp-brd1-dotted-red th, table.cp-table colgroup.cp-brd1-dotted-red td {
+table.cp-table-base tr.cp-brd1-dotted-red th, table.cp-table-base tr.cp-brd1-dotted-red td, table.cp-table-base colgroup.cp-brd1-dotted-red th, table.cp-table-base colgroup.cp-brd1-dotted-red td {
   border-width: 1px;
   border-style: dotted;
   border-color: #cc3300;
 }
-table.cp-table tr.cp-brd2-dotted-red th, table.cp-table tr.cp-brd2-dotted-red td, table.cp-table colgroup.cp-brd2-dotted-red th, table.cp-table colgroup.cp-brd2-dotted-red td {
+table.cp-table-base tr.cp-brd2-dotted-red th, table.cp-table-base tr.cp-brd2-dotted-red td, table.cp-table-base colgroup.cp-brd2-dotted-red th, table.cp-table-base colgroup.cp-brd2-dotted-red td {
   border-width: 2px;
   border-style: dotted;
   border-color: #cc3300;
 }
-table.cp-table tr.cp-brd3-dotted-red th, table.cp-table tr.cp-brd3-dotted-red td, table.cp-table colgroup.cp-brd3-dotted-red th, table.cp-table colgroup.cp-brd3-dotted-red td {
+table.cp-table-base tr.cp-brd3-dotted-red th, table.cp-table-base tr.cp-brd3-dotted-red td, table.cp-table-base colgroup.cp-brd3-dotted-red th, table.cp-table-base colgroup.cp-brd3-dotted-red td {
   border-width: 3px;
   border-style: dotted;
   border-color: #cc3300;
 }
-table.cp-table tr.cp-brd1-top-dotted-red th, table.cp-table tr.cp-brd1-top-dotted-red td, table.cp-table colgroup.cp-brd1-top-dotted-red th, table.cp-table colgroup.cp-brd1-top-dotted-red td {
+table.cp-table-base tr.cp-brd1-top-dotted-red th, table.cp-table-base tr.cp-brd1-top-dotted-red td, table.cp-table-base colgroup.cp-brd1-top-dotted-red th, table.cp-table-base colgroup.cp-brd1-top-dotted-red td {
   border-top-width: 1px;
   border-top-style: dotted;
   border-top-color: #cc3300;
 }
-table.cp-table tr.cp-brd2-top-dotted-red th, table.cp-table tr.cp-brd2-top-dotted-red td, table.cp-table colgroup.cp-brd2-top-dotted-red th, table.cp-table colgroup.cp-brd2-top-dotted-red td {
+table.cp-table-base tr.cp-brd2-top-dotted-red th, table.cp-table-base tr.cp-brd2-top-dotted-red td, table.cp-table-base colgroup.cp-brd2-top-dotted-red th, table.cp-table-base colgroup.cp-brd2-top-dotted-red td {
   border-top-width: 2px;
   border-top-style: dotted;
   border-top-color: #cc3300;
 }
-table.cp-table tr.cp-brd3-top-dotted-red th, table.cp-table tr.cp-brd3-top-dotted-red td, table.cp-table colgroup.cp-brd3-top-dotted-red th, table.cp-table colgroup.cp-brd3-top-dotted-red td {
+table.cp-table-base tr.cp-brd3-top-dotted-red th, table.cp-table-base tr.cp-brd3-top-dotted-red td, table.cp-table-base colgroup.cp-brd3-top-dotted-red th, table.cp-table-base colgroup.cp-brd3-top-dotted-red td {
   border-top-width: 3px;
   border-top-style: dotted;
   border-top-color: #cc3300;
 }
-table.cp-table tr.cp-brd1-right-dotted-red th, table.cp-table tr.cp-brd1-right-dotted-red td, table.cp-table colgroup.cp-brd1-right-dotted-red th, table.cp-table colgroup.cp-brd1-right-dotted-red td {
+table.cp-table-base tr.cp-brd1-right-dotted-red th, table.cp-table-base tr.cp-brd1-right-dotted-red td, table.cp-table-base colgroup.cp-brd1-right-dotted-red th, table.cp-table-base colgroup.cp-brd1-right-dotted-red td {
   border-right-width: 1px;
   border-right-style: dotted;
   border-right-color: #cc3300;
 }
-table.cp-table tr.cp-brd2-right-dotted-red th, table.cp-table tr.cp-brd2-right-dotted-red td, table.cp-table colgroup.cp-brd2-right-dotted-red th, table.cp-table colgroup.cp-brd2-right-dotted-red td {
+table.cp-table-base tr.cp-brd2-right-dotted-red th, table.cp-table-base tr.cp-brd2-right-dotted-red td, table.cp-table-base colgroup.cp-brd2-right-dotted-red th, table.cp-table-base colgroup.cp-brd2-right-dotted-red td {
   border-right-width: 2px;
   border-right-style: dotted;
   border-right-color: #cc3300;
 }
-table.cp-table tr.cp-brd3-right-dotted-red th, table.cp-table tr.cp-brd3-right-dotted-red td, table.cp-table colgroup.cp-brd3-right-dotted-red th, table.cp-table colgroup.cp-brd3-right-dotted-red td {
+table.cp-table-base tr.cp-brd3-right-dotted-red th, table.cp-table-base tr.cp-brd3-right-dotted-red td, table.cp-table-base colgroup.cp-brd3-right-dotted-red th, table.cp-table-base colgroup.cp-brd3-right-dotted-red td {
   border-right-width: 3px;
   border-right-style: dotted;
   border-right-color: #cc3300;
 }
-table.cp-table tr.cp-brd1-bottom-dotted-red th, table.cp-table tr.cp-brd1-bottom-dotted-red td, table.cp-table colgroup.cp-brd1-bottom-dotted-red th, table.cp-table colgroup.cp-brd1-bottom-dotted-red td {
+table.cp-table-base tr.cp-brd1-bottom-dotted-red th, table.cp-table-base tr.cp-brd1-bottom-dotted-red td, table.cp-table-base colgroup.cp-brd1-bottom-dotted-red th, table.cp-table-base colgroup.cp-brd1-bottom-dotted-red td {
   border-bottom-width: 1px;
   border-bottom-style: dotted;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr.cp-brd2-bottom-dotted-red th, table.cp-table tr.cp-brd2-bottom-dotted-red td, table.cp-table colgroup.cp-brd2-bottom-dotted-red th, table.cp-table colgroup.cp-brd2-bottom-dotted-red td {
+table.cp-table-base tr.cp-brd2-bottom-dotted-red th, table.cp-table-base tr.cp-brd2-bottom-dotted-red td, table.cp-table-base colgroup.cp-brd2-bottom-dotted-red th, table.cp-table-base colgroup.cp-brd2-bottom-dotted-red td {
   border-bottom-width: 2px;
   border-bottom-style: dotted;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr.cp-brd3-bottom-dotted-red th, table.cp-table tr.cp-brd3-bottom-dotted-red td, table.cp-table colgroup.cp-brd3-bottom-dotted-red th, table.cp-table colgroup.cp-brd3-bottom-dotted-red td {
+table.cp-table-base tr.cp-brd3-bottom-dotted-red th, table.cp-table-base tr.cp-brd3-bottom-dotted-red td, table.cp-table-base colgroup.cp-brd3-bottom-dotted-red th, table.cp-table-base colgroup.cp-brd3-bottom-dotted-red td {
   border-bottom-width: 3px;
   border-bottom-style: dotted;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr.cp-brd1-left-dotted-red th, table.cp-table tr.cp-brd1-left-dotted-red td, table.cp-table colgroup.cp-brd1-left-dotted-red th, table.cp-table colgroup.cp-brd1-left-dotted-red td {
+table.cp-table-base tr.cp-brd1-left-dotted-red th, table.cp-table-base tr.cp-brd1-left-dotted-red td, table.cp-table-base colgroup.cp-brd1-left-dotted-red th, table.cp-table-base colgroup.cp-brd1-left-dotted-red td {
   border-left-width: 1px;
   border-left-style: dotted;
   border-left-color: #cc3300;
 }
-table.cp-table tr.cp-brd2-left-dotted-red th, table.cp-table tr.cp-brd2-left-dotted-red td, table.cp-table colgroup.cp-brd2-left-dotted-red th, table.cp-table colgroup.cp-brd2-left-dotted-red td {
+table.cp-table-base tr.cp-brd2-left-dotted-red th, table.cp-table-base tr.cp-brd2-left-dotted-red td, table.cp-table-base colgroup.cp-brd2-left-dotted-red th, table.cp-table-base colgroup.cp-brd2-left-dotted-red td {
   border-left-width: 2px;
   border-left-style: dotted;
   border-left-color: #cc3300;
 }
-table.cp-table tr.cp-brd3-left-dotted-red th, table.cp-table tr.cp-brd3-left-dotted-red td, table.cp-table colgroup.cp-brd3-left-dotted-red th, table.cp-table colgroup.cp-brd3-left-dotted-red td {
+table.cp-table-base tr.cp-brd3-left-dotted-red th, table.cp-table-base tr.cp-brd3-left-dotted-red td, table.cp-table-base colgroup.cp-brd3-left-dotted-red th, table.cp-table-base colgroup.cp-brd3-left-dotted-red td {
   border-left-width: 3px;
   border-left-style: dotted;
   border-left-color: #cc3300;
 }
-table.cp-table tr .cp-brd1-dashed, table.cp-table colgroup .cp-brd1-dashed {
+table.cp-table-base tr .cp-brd1-dashed, table.cp-table-base colgroup .cp-brd1-dashed {
   border-width: 1px;
   border-style: dashed;
   border-color: #ccc;
 }
-table.cp-table tr .cp-brd2-dashed, table.cp-table colgroup .cp-brd2-dashed {
+table.cp-table-base tr .cp-brd2-dashed, table.cp-table-base colgroup .cp-brd2-dashed {
   border-width: 2px;
   border-style: dashed;
   border-color: #ccc;
 }
-table.cp-table tr .cp-brd3-dashed, table.cp-table colgroup .cp-brd3-dashed {
+table.cp-table-base tr .cp-brd3-dashed, table.cp-table-base colgroup .cp-brd3-dashed {
   border-width: 3px;
   border-style: dashed;
   border-color: #ccc;
 }
-table.cp-table tr .cp-brd1-top-dashed, table.cp-table colgroup .cp-brd1-top-dashed {
+table.cp-table-base tr .cp-brd1-top-dashed, table.cp-table-base colgroup .cp-brd1-top-dashed {
   border-top-width: 1px;
   border-top-style: dashed;
   border-top-color: #ccc;
 }
-table.cp-table tr .cp-brd2-top-dashed, table.cp-table colgroup .cp-brd2-top-dashed {
+table.cp-table-base tr .cp-brd2-top-dashed, table.cp-table-base colgroup .cp-brd2-top-dashed {
   border-top-width: 2px;
   border-top-style: dashed;
   border-top-color: #ccc;
 }
-table.cp-table tr .cp-brd3-top-dashed, table.cp-table colgroup .cp-brd3-top-dashed {
+table.cp-table-base tr .cp-brd3-top-dashed, table.cp-table-base colgroup .cp-brd3-top-dashed {
   border-top-width: 3px;
   border-top-style: dashed;
   border-top-color: #ccc;
 }
-table.cp-table tr .cp-brd1-right-dashed, table.cp-table colgroup .cp-brd1-right-dashed {
+table.cp-table-base tr .cp-brd1-right-dashed, table.cp-table-base colgroup .cp-brd1-right-dashed {
   border-right-width: 1px;
   border-right-style: dashed;
   border-right-color: #ccc;
 }
-table.cp-table tr .cp-brd2-right-dashed, table.cp-table colgroup .cp-brd2-right-dashed {
+table.cp-table-base tr .cp-brd2-right-dashed, table.cp-table-base colgroup .cp-brd2-right-dashed {
   border-right-width: 2px;
   border-right-style: dashed;
   border-right-color: #ccc;
 }
-table.cp-table tr .cp-brd3-right-dashed, table.cp-table colgroup .cp-brd3-right-dashed {
+table.cp-table-base tr .cp-brd3-right-dashed, table.cp-table-base colgroup .cp-brd3-right-dashed {
   border-right-width: 3px;
   border-right-style: dashed;
   border-right-color: #ccc;
 }
-table.cp-table tr .cp-brd1-bottom-dashed, table.cp-table colgroup .cp-brd1-bottom-dashed {
+table.cp-table-base tr .cp-brd1-bottom-dashed, table.cp-table-base colgroup .cp-brd1-bottom-dashed {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   border-bottom-color: #ccc;
 }
-table.cp-table tr .cp-brd2-bottom-dashed, table.cp-table colgroup .cp-brd2-bottom-dashed {
+table.cp-table-base tr .cp-brd2-bottom-dashed, table.cp-table-base colgroup .cp-brd2-bottom-dashed {
   border-bottom-width: 2px;
   border-bottom-style: dashed;
   border-bottom-color: #ccc;
 }
-table.cp-table tr .cp-brd3-bottom-dashed, table.cp-table colgroup .cp-brd3-bottom-dashed {
+table.cp-table-base tr .cp-brd3-bottom-dashed, table.cp-table-base colgroup .cp-brd3-bottom-dashed {
   border-bottom-width: 3px;
   border-bottom-style: dashed;
   border-bottom-color: #ccc;
 }
-table.cp-table tr .cp-brd1-left-dashed, table.cp-table colgroup .cp-brd1-left-dashed {
+table.cp-table-base tr .cp-brd1-left-dashed, table.cp-table-base colgroup .cp-brd1-left-dashed {
   border-left-width: 1px;
   border-left-style: dashed;
   border-left-color: #ccc;
 }
-table.cp-table tr .cp-brd2-left-dashed, table.cp-table colgroup .cp-brd2-left-dashed {
+table.cp-table-base tr .cp-brd2-left-dashed, table.cp-table-base colgroup .cp-brd2-left-dashed {
   border-left-width: 2px;
   border-left-style: dashed;
   border-left-color: #ccc;
 }
-table.cp-table tr .cp-brd3-left-dashed, table.cp-table colgroup .cp-brd3-left-dashed {
+table.cp-table-base tr .cp-brd3-left-dashed, table.cp-table-base colgroup .cp-brd3-left-dashed {
   border-left-width: 3px;
   border-left-style: dashed;
   border-left-color: #ccc;
 }
-table.cp-table tr.cp-brd1-dashed th, table.cp-table tr.cp-brd1-dashed td, table.cp-table colgroup.cp-brd1-dashed th, table.cp-table colgroup.cp-brd1-dashed td {
+table.cp-table-base tr.cp-brd1-dashed th, table.cp-table-base tr.cp-brd1-dashed td, table.cp-table-base colgroup.cp-brd1-dashed th, table.cp-table-base colgroup.cp-brd1-dashed td {
   border-width: 1px;
   border-style: dashed;
   border-color: #ccc;
 }
-table.cp-table tr.cp-brd2-dashed th, table.cp-table tr.cp-brd2-dashed td, table.cp-table colgroup.cp-brd2-dashed th, table.cp-table colgroup.cp-brd2-dashed td {
+table.cp-table-base tr.cp-brd2-dashed th, table.cp-table-base tr.cp-brd2-dashed td, table.cp-table-base colgroup.cp-brd2-dashed th, table.cp-table-base colgroup.cp-brd2-dashed td {
   border-width: 2px;
   border-style: dashed;
   border-color: #ccc;
 }
-table.cp-table tr.cp-brd3-dashed th, table.cp-table tr.cp-brd3-dashed td, table.cp-table colgroup.cp-brd3-dashed th, table.cp-table colgroup.cp-brd3-dashed td {
+table.cp-table-base tr.cp-brd3-dashed th, table.cp-table-base tr.cp-brd3-dashed td, table.cp-table-base colgroup.cp-brd3-dashed th, table.cp-table-base colgroup.cp-brd3-dashed td {
   border-width: 3px;
   border-style: dashed;
   border-color: #ccc;
 }
-table.cp-table tr.cp-brd1-top-dashed th, table.cp-table tr.cp-brd1-top-dashed td, table.cp-table colgroup.cp-brd1-top-dashed th, table.cp-table colgroup.cp-brd1-top-dashed td {
+table.cp-table-base tr.cp-brd1-top-dashed th, table.cp-table-base tr.cp-brd1-top-dashed td, table.cp-table-base colgroup.cp-brd1-top-dashed th, table.cp-table-base colgroup.cp-brd1-top-dashed td {
   border-top-width: 1px;
   border-top-style: dashed;
   border-top-color: #ccc;
 }
-table.cp-table tr.cp-brd2-top-dashed th, table.cp-table tr.cp-brd2-top-dashed td, table.cp-table colgroup.cp-brd2-top-dashed th, table.cp-table colgroup.cp-brd2-top-dashed td {
+table.cp-table-base tr.cp-brd2-top-dashed th, table.cp-table-base tr.cp-brd2-top-dashed td, table.cp-table-base colgroup.cp-brd2-top-dashed th, table.cp-table-base colgroup.cp-brd2-top-dashed td {
   border-top-width: 2px;
   border-top-style: dashed;
   border-top-color: #ccc;
 }
-table.cp-table tr.cp-brd3-top-dashed th, table.cp-table tr.cp-brd3-top-dashed td, table.cp-table colgroup.cp-brd3-top-dashed th, table.cp-table colgroup.cp-brd3-top-dashed td {
+table.cp-table-base tr.cp-brd3-top-dashed th, table.cp-table-base tr.cp-brd3-top-dashed td, table.cp-table-base colgroup.cp-brd3-top-dashed th, table.cp-table-base colgroup.cp-brd3-top-dashed td {
   border-top-width: 3px;
   border-top-style: dashed;
   border-top-color: #ccc;
 }
-table.cp-table tr.cp-brd0-right-dashed th, table.cp-table tr.cp-brd0-right-dashed td, table.cp-table colgroup.cp-brd0-right-dashed th, table.cp-table colgroup.cp-brd0-right-dashed td {
+table.cp-table-base tr.cp-brd0-right-dashed th, table.cp-table-base tr.cp-brd0-right-dashed td, table.cp-table-base colgroup.cp-brd0-right-dashed th, table.cp-table-base colgroup.cp-brd0-right-dashed td {
   border-right-width: 0;
   border-right-style: #ccc;
   border-right-color: #ccc;
 }
-table.cp-table tr.cp-brd1-right-dashed th, table.cp-table tr.cp-brd1-right-dashed td, table.cp-table colgroup.cp-brd1-right-dashed th, table.cp-table colgroup.cp-brd1-right-dashed td {
+table.cp-table-base tr.cp-brd1-right-dashed th, table.cp-table-base tr.cp-brd1-right-dashed td, table.cp-table-base colgroup.cp-brd1-right-dashed th, table.cp-table-base colgroup.cp-brd1-right-dashed td {
   border-right-width: 1px;
   border-right-style: dashed;
   border-right-color: #ccc;
 }
-table.cp-table tr.cp-brd2-right-dashed th, table.cp-table tr.cp-brd2-right-dashed td, table.cp-table colgroup.cp-brd2-right-dashed th, table.cp-table colgroup.cp-brd2-right-dashed td {
+table.cp-table-base tr.cp-brd2-right-dashed th, table.cp-table-base tr.cp-brd2-right-dashed td, table.cp-table-base colgroup.cp-brd2-right-dashed th, table.cp-table-base colgroup.cp-brd2-right-dashed td {
   border-right-width: 2px;
   border-right-style: dashed;
   border-right-color: #ccc;
 }
-table.cp-table tr.cp-brd3-right-dashed th, table.cp-table tr.cp-brd3-right-dashed td, table.cp-table colgroup.cp-brd3-right-dashed th, table.cp-table colgroup.cp-brd3-right-dashed td {
+table.cp-table-base tr.cp-brd3-right-dashed th, table.cp-table-base tr.cp-brd3-right-dashed td, table.cp-table-base colgroup.cp-brd3-right-dashed th, table.cp-table-base colgroup.cp-brd3-right-dashed td {
   border-right-width: 3px;
   border-right-style: dashed;
   border-right-color: #ccc;
 }
-table.cp-table tr.cp-brd1-bottom-dashed th, table.cp-table tr.cp-brd1-bottom-dashed td, table.cp-table colgroup.cp-brd1-bottom-dashed th, table.cp-table colgroup.cp-brd1-bottom-dashed td {
+table.cp-table-base tr.cp-brd1-bottom-dashed th, table.cp-table-base tr.cp-brd1-bottom-dashed td, table.cp-table-base colgroup.cp-brd1-bottom-dashed th, table.cp-table-base colgroup.cp-brd1-bottom-dashed td {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   border-bottom-color: #ccc;
 }
-table.cp-table tr.cp-brd2-bottom-dashed th, table.cp-table tr.cp-brd2-bottom-dashed td, table.cp-table colgroup.cp-brd2-bottom-dashed th, table.cp-table colgroup.cp-brd2-bottom-dashed td {
+table.cp-table-base tr.cp-brd2-bottom-dashed th, table.cp-table-base tr.cp-brd2-bottom-dashed td, table.cp-table-base colgroup.cp-brd2-bottom-dashed th, table.cp-table-base colgroup.cp-brd2-bottom-dashed td {
   border-bottom-width: 2px;
   border-bottom-style: dashed;
   border-bottom-color: #ccc;
 }
-table.cp-table tr.cp-brd3-bottom-dashed th, table.cp-table tr.cp-brd3-bottom-dashed td, table.cp-table colgroup.cp-brd3-bottom-dashed th, table.cp-table colgroup.cp-brd3-bottom-dashed td {
+table.cp-table-base tr.cp-brd3-bottom-dashed th, table.cp-table-base tr.cp-brd3-bottom-dashed td, table.cp-table-base colgroup.cp-brd3-bottom-dashed th, table.cp-table-base colgroup.cp-brd3-bottom-dashed td {
   border-bottom-width: 3px;
   border-bottom-style: dashed;
   border-bottom-color: #ccc;
 }
-table.cp-table tr.cp-brd1-left-dashed th, table.cp-table tr.cp-brd1-left-dashed td, table.cp-table colgroup.cp-brd1-left-dashed th, table.cp-table colgroup.cp-brd1-left-dashed td {
+table.cp-table-base tr.cp-brd1-left-dashed th, table.cp-table-base tr.cp-brd1-left-dashed td, table.cp-table-base colgroup.cp-brd1-left-dashed th, table.cp-table-base colgroup.cp-brd1-left-dashed td {
   border-left-width: 1px;
   border-left-style: dashed;
   border-left-color: #ccc;
 }
-table.cp-table tr.cp-brd2-left-dashed th, table.cp-table tr.cp-brd2-left-dashed td, table.cp-table colgroup.cp-brd2-left-dashed th, table.cp-table colgroup.cp-brd2-left-dashed td {
+table.cp-table-base tr.cp-brd2-left-dashed th, table.cp-table-base tr.cp-brd2-left-dashed td, table.cp-table-base colgroup.cp-brd2-left-dashed th, table.cp-table-base colgroup.cp-brd2-left-dashed td {
   border-left-width: 2px;
   border-left-style: dashed;
   border-left-color: #ccc;
 }
-table.cp-table tr.cp-brd3-left-dashed th, table.cp-table tr.cp-brd3-left-dashed td, table.cp-table colgroup.cp-brd3-left-dashed th, table.cp-table colgroup.cp-brd3-left-dashed td {
+table.cp-table-base tr.cp-brd3-left-dashed th, table.cp-table-base tr.cp-brd3-left-dashed td, table.cp-table-base colgroup.cp-brd3-left-dashed th, table.cp-table-base colgroup.cp-brd3-left-dashed td {
   border-left-width: 3px;
   border-left-style: dashed;
   border-left-color: #ccc;
 }
-table.cp-table tr .cp-brd1-dashed-theme, table.cp-table colgroup .cp-brd1-dashed-theme {
+table.cp-table-base tr .cp-brd1-dashed-theme, table.cp-table-base colgroup .cp-brd1-dashed-theme {
   border-width: 1px;
   border-style: dashed;
   border-color: #485169;
 }
-table.cp-table tr .cp-brd2-dashed-theme, table.cp-table colgroup .cp-brd2-dashed-theme {
+table.cp-table-base tr .cp-brd2-dashed-theme, table.cp-table-base colgroup .cp-brd2-dashed-theme {
   border-width: 2px;
   border-style: dashed;
   border-color: #485169;
 }
-table.cp-table tr .cp-brd3-dashed-theme, table.cp-table colgroup .cp-brd3-dashed-theme {
+table.cp-table-base tr .cp-brd3-dashed-theme, table.cp-table-base colgroup .cp-brd3-dashed-theme {
   border-width: 3px;
   border-style: dashed;
   border-color: #485169;
 }
-table.cp-table tr .cp-brd1-top-dashed-theme, table.cp-table colgroup .cp-brd1-top-dashed-theme {
+table.cp-table-base tr .cp-brd1-top-dashed-theme, table.cp-table-base colgroup .cp-brd1-top-dashed-theme {
   border-top-width: 1px;
   border-top-style: dashed;
   border-top-color: #485169;
 }
-table.cp-table tr .cp-brd2-top-dashed-theme, table.cp-table colgroup .cp-brd2-top-dashed-theme {
+table.cp-table-base tr .cp-brd2-top-dashed-theme, table.cp-table-base colgroup .cp-brd2-top-dashed-theme {
   border-top-width: 2px;
   border-top-style: dashed;
   border-top-color: #485169;
 }
-table.cp-table tr .cp-brd3-top-dashed-theme, table.cp-table colgroup .cp-brd3-top-dashed-theme {
+table.cp-table-base tr .cp-brd3-top-dashed-theme, table.cp-table-base colgroup .cp-brd3-top-dashed-theme {
   border-top-width: 3px;
   border-top-style: dashed;
   border-top-color: #485169;
 }
-table.cp-table tr .cp-brd1-right-dashed-theme, table.cp-table colgroup .cp-brd1-right-dashed-theme {
+table.cp-table-base tr .cp-brd1-right-dashed-theme, table.cp-table-base colgroup .cp-brd1-right-dashed-theme {
   border-right-width: 1px;
   border-right-style: dashed;
   border-right-color: #485169;
 }
-table.cp-table tr .cp-brd2-right-dashed-theme, table.cp-table colgroup .cp-brd2-right-dashed-theme {
+table.cp-table-base tr .cp-brd2-right-dashed-theme, table.cp-table-base colgroup .cp-brd2-right-dashed-theme {
   border-right-width: 2px;
   border-right-style: dashed;
   border-right-color: #485169;
 }
-table.cp-table tr .cp-brd3-right-dashed-theme, table.cp-table colgroup .cp-brd3-right-dashed-theme {
+table.cp-table-base tr .cp-brd3-right-dashed-theme, table.cp-table-base colgroup .cp-brd3-right-dashed-theme {
   border-right-width: 3px;
   border-right-style: dashed;
   border-right-color: #485169;
 }
-table.cp-table tr .cp-brd1-bottom-dashed-theme, table.cp-table colgroup .cp-brd1-bottom-dashed-theme {
+table.cp-table-base tr .cp-brd1-bottom-dashed-theme, table.cp-table-base colgroup .cp-brd1-bottom-dashed-theme {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   border-bottom-color: #485169;
 }
-table.cp-table tr .cp-brd2-bottom-dashed-theme, table.cp-table colgroup .cp-brd2-bottom-dashed-theme {
+table.cp-table-base tr .cp-brd2-bottom-dashed-theme, table.cp-table-base colgroup .cp-brd2-bottom-dashed-theme {
   border-bottom-width: 2px;
   border-bottom-style: dashed;
   border-bottom-color: #485169;
 }
-table.cp-table tr .cp-brd3-bottom-dashed-theme, table.cp-table colgroup .cp-brd3-bottom-dashed-theme {
+table.cp-table-base tr .cp-brd3-bottom-dashed-theme, table.cp-table-base colgroup .cp-brd3-bottom-dashed-theme {
   border-bottom-width: 3px;
   border-bottom-style: dashed;
   border-bottom-color: #485169;
 }
-table.cp-table tr .cp-brd1-left-dashed-theme, table.cp-table colgroup .cp-brd1-left-dashed-theme {
+table.cp-table-base tr .cp-brd1-left-dashed-theme, table.cp-table-base colgroup .cp-brd1-left-dashed-theme {
   border-left-width: 1px;
   border-left-style: dashed;
   border-left-color: #485169;
 }
-table.cp-table tr .cp-brd2-left-dashed-theme, table.cp-table colgroup .cp-brd2-left-dashed-theme {
+table.cp-table-base tr .cp-brd2-left-dashed-theme, table.cp-table-base colgroup .cp-brd2-left-dashed-theme {
   border-left-width: 2px;
   border-left-style: dashed;
   border-left-color: #485169;
 }
-table.cp-table tr .cp-brd3-left-dashed-theme, table.cp-table colgroup .cp-brd3-left-dashed-theme {
+table.cp-table-base tr .cp-brd3-left-dashed-theme, table.cp-table-base colgroup .cp-brd3-left-dashed-theme {
   border-left-width: 3px;
   border-left-style: dashed;
   border-left-color: #485169;
 }
-table.cp-table tr.cp-brd1-dashed-theme th, table.cp-table tr.cp-brd1-dashed-theme td, table.cp-table colgroup.cp-brd1-dashed-theme th, table.cp-table colgroup.cp-brd1-dashed-theme td {
+table.cp-table-base tr.cp-brd1-dashed-theme th, table.cp-table-base tr.cp-brd1-dashed-theme td, table.cp-table-base colgroup.cp-brd1-dashed-theme th, table.cp-table-base colgroup.cp-brd1-dashed-theme td {
   border-width: 1px;
   border-style: dashed;
   border-color: #485169;
 }
-table.cp-table tr.cp-brd2-dashed-theme th, table.cp-table tr.cp-brd2-dashed-theme td, table.cp-table colgroup.cp-brd2-dashed-theme th, table.cp-table colgroup.cp-brd2-dashed-theme td {
+table.cp-table-base tr.cp-brd2-dashed-theme th, table.cp-table-base tr.cp-brd2-dashed-theme td, table.cp-table-base colgroup.cp-brd2-dashed-theme th, table.cp-table-base colgroup.cp-brd2-dashed-theme td {
   border-width: 2px;
   border-style: dashed;
   border-color: #485169;
 }
-table.cp-table tr.cp-brd3-dashed-theme th, table.cp-table tr.cp-brd3-dashed-theme td, table.cp-table colgroup.cp-brd3-dashed-theme th, table.cp-table colgroup.cp-brd3-dashed-theme td {
+table.cp-table-base tr.cp-brd3-dashed-theme th, table.cp-table-base tr.cp-brd3-dashed-theme td, table.cp-table-base colgroup.cp-brd3-dashed-theme th, table.cp-table-base colgroup.cp-brd3-dashed-theme td {
   border-width: 3px;
   border-style: dashed;
   border-color: #485169;
 }
-table.cp-table tr.cp-brd1-top-dashed-theme th, table.cp-table tr.cp-brd1-top-dashed-theme td, table.cp-table colgroup.cp-brd1-top-dashed-theme th, table.cp-table colgroup.cp-brd1-top-dashed-theme td {
+table.cp-table-base tr.cp-brd1-top-dashed-theme th, table.cp-table-base tr.cp-brd1-top-dashed-theme td, table.cp-table-base colgroup.cp-brd1-top-dashed-theme th, table.cp-table-base colgroup.cp-brd1-top-dashed-theme td {
   border-top-width: 1px;
   border-top-style: dashed;
   border-top-color: #485169;
 }
-table.cp-table tr.cp-brd2-top-dashed-theme th, table.cp-table tr.cp-brd2-top-dashed-theme td, table.cp-table colgroup.cp-brd2-top-dashed-theme th, table.cp-table colgroup.cp-brd2-top-dashed-theme td {
+table.cp-table-base tr.cp-brd2-top-dashed-theme th, table.cp-table-base tr.cp-brd2-top-dashed-theme td, table.cp-table-base colgroup.cp-brd2-top-dashed-theme th, table.cp-table-base colgroup.cp-brd2-top-dashed-theme td {
   border-top-width: 2px;
   border-top-style: dashed;
   border-top-color: #485169;
 }
-table.cp-table tr.cp-brd3-top-dashed-theme th, table.cp-table tr.cp-brd3-top-dashed-theme td, table.cp-table colgroup.cp-brd3-top-dashed-theme th, table.cp-table colgroup.cp-brd3-top-dashed-theme td {
+table.cp-table-base tr.cp-brd3-top-dashed-theme th, table.cp-table-base tr.cp-brd3-top-dashed-theme td, table.cp-table-base colgroup.cp-brd3-top-dashed-theme th, table.cp-table-base colgroup.cp-brd3-top-dashed-theme td {
   border-top-width: 3px;
   border-top-style: dashed;
   border-top-color: #485169;
 }
-table.cp-table tr.cp-brd1-right-dashed-theme th, table.cp-table tr.cp-brd1-right-dashed-theme td, table.cp-table colgroup.cp-brd1-right-dashed-theme th, table.cp-table colgroup.cp-brd1-right-dashed-theme td {
+table.cp-table-base tr.cp-brd1-right-dashed-theme th, table.cp-table-base tr.cp-brd1-right-dashed-theme td, table.cp-table-base colgroup.cp-brd1-right-dashed-theme th, table.cp-table-base colgroup.cp-brd1-right-dashed-theme td {
   border-right-width: 1px;
   border-right-style: dashed;
   border-right-color: #485169;
 }
-table.cp-table tr.cp-brd2-right-dashed-theme th, table.cp-table tr.cp-brd2-right-dashed-theme td, table.cp-table colgroup.cp-brd2-right-dashed-theme th, table.cp-table colgroup.cp-brd2-right-dashed-theme td {
+table.cp-table-base tr.cp-brd2-right-dashed-theme th, table.cp-table-base tr.cp-brd2-right-dashed-theme td, table.cp-table-base colgroup.cp-brd2-right-dashed-theme th, table.cp-table-base colgroup.cp-brd2-right-dashed-theme td {
   border-right-width: 2px;
   border-right-style: dashed;
   border-right-color: #485169;
 }
-table.cp-table tr.cp-brd3-right-dashed-theme th, table.cp-table tr.cp-brd3-right-dashed-theme td, table.cp-table colgroup.cp-brd3-right-dashed-theme th, table.cp-table colgroup.cp-brd3-right-dashed-theme td {
+table.cp-table-base tr.cp-brd3-right-dashed-theme th, table.cp-table-base tr.cp-brd3-right-dashed-theme td, table.cp-table-base colgroup.cp-brd3-right-dashed-theme th, table.cp-table-base colgroup.cp-brd3-right-dashed-theme td {
   border-right-width: 3px;
   border-right-style: dashed;
   border-right-color: #485169;
 }
-table.cp-table tr.cp-brd1-bottom-dashed-theme th, table.cp-table tr.cp-brd1-bottom-dashed-theme td, table.cp-table colgroup.cp-brd1-bottom-dashed-theme th, table.cp-table colgroup.cp-brd1-bottom-dashed-theme td {
+table.cp-table-base tr.cp-brd1-bottom-dashed-theme th, table.cp-table-base tr.cp-brd1-bottom-dashed-theme td, table.cp-table-base colgroup.cp-brd1-bottom-dashed-theme th, table.cp-table-base colgroup.cp-brd1-bottom-dashed-theme td {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   border-bottom-color: #485169;
 }
-table.cp-table tr.cp-brd2-bottom-dashed-theme th, table.cp-table tr.cp-brd2-bottom-dashed-theme td, table.cp-table colgroup.cp-brd2-bottom-dashed-theme th, table.cp-table colgroup.cp-brd2-bottom-dashed-theme td {
+table.cp-table-base tr.cp-brd2-bottom-dashed-theme th, table.cp-table-base tr.cp-brd2-bottom-dashed-theme td, table.cp-table-base colgroup.cp-brd2-bottom-dashed-theme th, table.cp-table-base colgroup.cp-brd2-bottom-dashed-theme td {
   border-bottom-width: 2px;
   border-bottom-style: dashed;
   border-bottom-color: #485169;
 }
-table.cp-table tr.cp-brd3-bottom-dashed-theme th, table.cp-table tr.cp-brd3-bottom-dashed-theme td, table.cp-table colgroup.cp-brd3-bottom-dashed-theme th, table.cp-table colgroup.cp-brd3-bottom-dashed-theme td {
+table.cp-table-base tr.cp-brd3-bottom-dashed-theme th, table.cp-table-base tr.cp-brd3-bottom-dashed-theme td, table.cp-table-base colgroup.cp-brd3-bottom-dashed-theme th, table.cp-table-base colgroup.cp-brd3-bottom-dashed-theme td {
   border-bottom-width: 3px;
   border-bottom-style: dashed;
   border-bottom-color: #485169;
 }
-table.cp-table tr.cp-brd1-left-dashed-theme th, table.cp-table tr.cp-brd1-left-dashed-theme td, table.cp-table colgroup.cp-brd1-left-dashed-theme th, table.cp-table colgroup.cp-brd1-left-dashed-theme td {
+table.cp-table-base tr.cp-brd1-left-dashed-theme th, table.cp-table-base tr.cp-brd1-left-dashed-theme td, table.cp-table-base colgroup.cp-brd1-left-dashed-theme th, table.cp-table-base colgroup.cp-brd1-left-dashed-theme td {
   border-left-width: 1px;
   border-left-style: dashed;
   border-left-color: #485169;
 }
-table.cp-table tr.cp-brd2-left-dashed-theme th, table.cp-table tr.cp-brd2-left-dashed-theme td, table.cp-table colgroup.cp-brd2-left-dashed-theme th, table.cp-table colgroup.cp-brd2-left-dashed-theme td {
+table.cp-table-base tr.cp-brd2-left-dashed-theme th, table.cp-table-base tr.cp-brd2-left-dashed-theme td, table.cp-table-base colgroup.cp-brd2-left-dashed-theme th, table.cp-table-base colgroup.cp-brd2-left-dashed-theme td {
   border-left-width: 2px;
   border-left-style: dashed;
   border-left-color: #485169;
 }
-table.cp-table tr.cp-brd3-left-dashed-theme th, table.cp-table tr.cp-brd3-left-dashed-theme td, table.cp-table colgroup.cp-brd3-left-dashed-theme th, table.cp-table colgroup.cp-brd3-left-dashed-theme td {
+table.cp-table-base tr.cp-brd3-left-dashed-theme th, table.cp-table-base tr.cp-brd3-left-dashed-theme td, table.cp-table-base colgroup.cp-brd3-left-dashed-theme th, table.cp-table-base colgroup.cp-brd3-left-dashed-theme td {
   border-left-width: 3px;
   border-left-style: dashed;
   border-left-color: #485169;
 }
-table.cp-table tr .cp-brd1-dashed-red, table.cp-table colgroup .cp-brd1-dashed-red {
+table.cp-table-base tr .cp-brd1-dashed-red, table.cp-table-base colgroup .cp-brd1-dashed-red {
   border-width: 1px;
   border-style: dashed;
   border-color: #cc3300;
 }
-table.cp-table tr .cp-brd2-dashed-red, table.cp-table colgroup .cp-brd2-dashed-red {
+table.cp-table-base tr .cp-brd2-dashed-red, table.cp-table-base colgroup .cp-brd2-dashed-red {
   border-width: 2px;
   border-style: dashed;
   border-color: #cc3300;
 }
-table.cp-table tr .cp-brd3-dashed-red, table.cp-table colgroup .cp-brd3-dashed-red {
+table.cp-table-base tr .cp-brd3-dashed-red, table.cp-table-base colgroup .cp-brd3-dashed-red {
   border-width: 3px;
   border-style: dashed;
   border-color: #cc3300;
 }
-table.cp-table tr .cp-brd1-top-dashed-red, table.cp-table colgroup .cp-brd1-top-dashed-red {
+table.cp-table-base tr .cp-brd1-top-dashed-red, table.cp-table-base colgroup .cp-brd1-top-dashed-red {
   border-top-width: 1px;
   border-top-style: dashed;
   border-top-color: #cc3300;
 }
-table.cp-table tr .cp-brd2-top-dashed-red, table.cp-table colgroup .cp-brd2-top-dashed-red {
+table.cp-table-base tr .cp-brd2-top-dashed-red, table.cp-table-base colgroup .cp-brd2-top-dashed-red {
   border-top-width: 2px;
   border-top-style: dashed;
   border-top-color: #cc3300;
 }
-table.cp-table tr .cp-brd3-top-dashed-red, table.cp-table colgroup .cp-brd3-top-dashed-red {
+table.cp-table-base tr .cp-brd3-top-dashed-red, table.cp-table-base colgroup .cp-brd3-top-dashed-red {
   border-top-width: 3px;
   border-top-style: dashed;
   border-top-color: #cc3300;
 }
-table.cp-table tr .cp-brd1-right-dashed-red, table.cp-table colgroup .cp-brd1-right-dashed-red {
+table.cp-table-base tr .cp-brd1-right-dashed-red, table.cp-table-base colgroup .cp-brd1-right-dashed-red {
   border-right-width: 1px;
   border-right-style: dashed;
   border-right-color: #cc3300;
 }
-table.cp-table tr .cp-brd2-right-dashed-red, table.cp-table colgroup .cp-brd2-right-dashed-red {
+table.cp-table-base tr .cp-brd2-right-dashed-red, table.cp-table-base colgroup .cp-brd2-right-dashed-red {
   border-right-width: 2px;
   border-right-style: dashed;
   border-right-color: #cc3300;
 }
-table.cp-table tr .cp-brd3-right-dashed-red, table.cp-table colgroup .cp-brd3-right-dashed-red {
+table.cp-table-base tr .cp-brd3-right-dashed-red, table.cp-table-base colgroup .cp-brd3-right-dashed-red {
   border-right-width: 3px;
   border-right-style: dashed;
   border-right-color: #cc3300;
 }
-table.cp-table tr .cp-brd1-bottom-dashed-red, table.cp-table colgroup .cp-brd1-bottom-dashed-red {
+table.cp-table-base tr .cp-brd1-bottom-dashed-red, table.cp-table-base colgroup .cp-brd1-bottom-dashed-red {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr .cp-brd2-bottom-dashed-red, table.cp-table colgroup .cp-brd2-bottom-dashed-red {
+table.cp-table-base tr .cp-brd2-bottom-dashed-red, table.cp-table-base colgroup .cp-brd2-bottom-dashed-red {
   border-bottom-width: 2px;
   border-bottom-style: dashed;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr .cp-brd3-bottom-dashed-red, table.cp-table colgroup .cp-brd3-bottom-dashed-red {
+table.cp-table-base tr .cp-brd3-bottom-dashed-red, table.cp-table-base colgroup .cp-brd3-bottom-dashed-red {
   border-bottom-width: 3px;
   border-bottom-style: dashed;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr .cp-brd1-left-dashed-red, table.cp-table colgroup .cp-brd1-left-dashed-red {
+table.cp-table-base tr .cp-brd1-left-dashed-red, table.cp-table-base colgroup .cp-brd1-left-dashed-red {
   border-left-width: 1px;
   border-left-style: dashed;
   border-left-color: #cc3300;
 }
-table.cp-table tr .cp-brd2-left-dashed-red, table.cp-table colgroup .cp-brd2-left-dashed-red {
+table.cp-table-base tr .cp-brd2-left-dashed-red, table.cp-table-base colgroup .cp-brd2-left-dashed-red {
   border-left-width: 2px;
   border-left-style: dashed;
   border-left-color: #cc3300;
 }
-table.cp-table tr .cp-brd3-left-dashed-red, table.cp-table colgroup .cp-brd3-left-dashed-red {
+table.cp-table-base tr .cp-brd3-left-dashed-red, table.cp-table-base colgroup .cp-brd3-left-dashed-red {
   border-left-width: 3px;
   border-left-style: dashed;
   border-left-color: #cc3300;
 }
-table.cp-table tr.cp-brd1-dashed-red th, table.cp-table tr.cp-brd1-dashed-red td, table.cp-table colgroup.cp-brd1-dashed-red th, table.cp-table colgroup.cp-brd1-dashed-red td {
+table.cp-table-base tr.cp-brd1-dashed-red th, table.cp-table-base tr.cp-brd1-dashed-red td, table.cp-table-base colgroup.cp-brd1-dashed-red th, table.cp-table-base colgroup.cp-brd1-dashed-red td {
   border-width: 1px;
   border-style: dashed;
   border-color: #cc3300;
 }
-table.cp-table tr.cp-brd2-dashed-red th, table.cp-table tr.cp-brd2-dashed-red td, table.cp-table colgroup.cp-brd2-dashed-red th, table.cp-table colgroup.cp-brd2-dashed-red td {
+table.cp-table-base tr.cp-brd2-dashed-red th, table.cp-table-base tr.cp-brd2-dashed-red td, table.cp-table-base colgroup.cp-brd2-dashed-red th, table.cp-table-base colgroup.cp-brd2-dashed-red td {
   border-width: 2px;
   border-style: dashed;
   border-color: #cc3300;
 }
-table.cp-table tr.cp-brd3-dashed-red th, table.cp-table tr.cp-brd3-dashed-red td, table.cp-table colgroup.cp-brd3-dashed-red th, table.cp-table colgroup.cp-brd3-dashed-red td {
+table.cp-table-base tr.cp-brd3-dashed-red th, table.cp-table-base tr.cp-brd3-dashed-red td, table.cp-table-base colgroup.cp-brd3-dashed-red th, table.cp-table-base colgroup.cp-brd3-dashed-red td {
   border-width: 3px;
   border-style: dashed;
   border-color: #cc3300;
 }
-table.cp-table tr.cp-brd1-top-dashed-red th, table.cp-table tr.cp-brd1-top-dashed-red td, table.cp-table colgroup.cp-brd1-top-dashed-red th, table.cp-table colgroup.cp-brd1-top-dashed-red td {
+table.cp-table-base tr.cp-brd1-top-dashed-red th, table.cp-table-base tr.cp-brd1-top-dashed-red td, table.cp-table-base colgroup.cp-brd1-top-dashed-red th, table.cp-table-base colgroup.cp-brd1-top-dashed-red td {
   border-top-width: 1px;
   border-top-style: dashed;
   border-top-color: #cc3300;
 }
-table.cp-table tr.cp-brd2-top-dashed-red th, table.cp-table tr.cp-brd2-top-dashed-red td, table.cp-table colgroup.cp-brd2-top-dashed-red th, table.cp-table colgroup.cp-brd2-top-dashed-red td {
+table.cp-table-base tr.cp-brd2-top-dashed-red th, table.cp-table-base tr.cp-brd2-top-dashed-red td, table.cp-table-base colgroup.cp-brd2-top-dashed-red th, table.cp-table-base colgroup.cp-brd2-top-dashed-red td {
   border-top-width: 2px;
   border-top-style: dashed;
   border-top-color: #cc3300;
 }
-table.cp-table tr.cp-brd3-top-dashed-red th, table.cp-table tr.cp-brd3-top-dashed-red td, table.cp-table colgroup.cp-brd3-top-dashed-red th, table.cp-table colgroup.cp-brd3-top-dashed-red td {
+table.cp-table-base tr.cp-brd3-top-dashed-red th, table.cp-table-base tr.cp-brd3-top-dashed-red td, table.cp-table-base colgroup.cp-brd3-top-dashed-red th, table.cp-table-base colgroup.cp-brd3-top-dashed-red td {
   border-top-width: 3px;
   border-top-style: dashed;
   border-top-color: #cc3300;
 }
-table.cp-table tr.cp-brd1-right-dashed-red th, table.cp-table tr.cp-brd1-right-dashed-red td, table.cp-table colgroup.cp-brd1-right-dashed-red th, table.cp-table colgroup.cp-brd1-right-dashed-red td {
+table.cp-table-base tr.cp-brd1-right-dashed-red th, table.cp-table-base tr.cp-brd1-right-dashed-red td, table.cp-table-base colgroup.cp-brd1-right-dashed-red th, table.cp-table-base colgroup.cp-brd1-right-dashed-red td {
   border-right-width: 1px;
   border-right-style: dashed;
   border-right-color: #cc3300;
 }
-table.cp-table tr.cp-brd2-right-dashed-red th, table.cp-table tr.cp-brd2-right-dashed-red td, table.cp-table colgroup.cp-brd2-right-dashed-red th, table.cp-table colgroup.cp-brd2-right-dashed-red td {
+table.cp-table-base tr.cp-brd2-right-dashed-red th, table.cp-table-base tr.cp-brd2-right-dashed-red td, table.cp-table-base colgroup.cp-brd2-right-dashed-red th, table.cp-table-base colgroup.cp-brd2-right-dashed-red td {
   border-right-width: 2px;
   border-right-style: dashed;
   border-right-color: #cc3300;
 }
-table.cp-table tr.cp-brd3-right-dashed-red th, table.cp-table tr.cp-brd3-right-dashed-red td, table.cp-table colgroup.cp-brd3-right-dashed-red th, table.cp-table colgroup.cp-brd3-right-dashed-red td {
+table.cp-table-base tr.cp-brd3-right-dashed-red th, table.cp-table-base tr.cp-brd3-right-dashed-red td, table.cp-table-base colgroup.cp-brd3-right-dashed-red th, table.cp-table-base colgroup.cp-brd3-right-dashed-red td {
   border-right-width: 3px;
   border-right-style: dashed;
   border-right-color: #cc3300;
 }
-table.cp-table tr.cp-brd1-bottom-dashed-red th, table.cp-table tr.cp-brd1-bottom-dashed-red td, table.cp-table colgroup.cp-brd1-bottom-dashed-red th, table.cp-table colgroup.cp-brd1-bottom-dashed-red td {
+table.cp-table-base tr.cp-brd1-bottom-dashed-red th, table.cp-table-base tr.cp-brd1-bottom-dashed-red td, table.cp-table-base colgroup.cp-brd1-bottom-dashed-red th, table.cp-table-base colgroup.cp-brd1-bottom-dashed-red td {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr.cp-brd2-bottom-dashed-red th, table.cp-table tr.cp-brd2-bottom-dashed-red td, table.cp-table colgroup.cp-brd2-bottom-dashed-red th, table.cp-table colgroup.cp-brd2-bottom-dashed-red td {
+table.cp-table-base tr.cp-brd2-bottom-dashed-red th, table.cp-table-base tr.cp-brd2-bottom-dashed-red td, table.cp-table-base colgroup.cp-brd2-bottom-dashed-red th, table.cp-table-base colgroup.cp-brd2-bottom-dashed-red td {
   border-bottom-width: 2px;
   border-bottom-style: dashed;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr.cp-brd3-bottom-dashed-red th, table.cp-table tr.cp-brd3-bottom-dashed-red td, table.cp-table colgroup.cp-brd3-bottom-dashed-red th, table.cp-table colgroup.cp-brd3-bottom-dashed-red td {
+table.cp-table-base tr.cp-brd3-bottom-dashed-red th, table.cp-table-base tr.cp-brd3-bottom-dashed-red td, table.cp-table-base colgroup.cp-brd3-bottom-dashed-red th, table.cp-table-base colgroup.cp-brd3-bottom-dashed-red td {
   border-bottom-width: 3px;
   border-bottom-style: dashed;
   border-bottom-color: #cc3300;
 }
-table.cp-table tr.cp-brd1-left-dashed-red th, table.cp-table tr.cp-brd1-left-dashed-red td, table.cp-table colgroup.cp-brd1-left-dashed-red th, table.cp-table colgroup.cp-brd1-left-dashed-red td {
+table.cp-table-base tr.cp-brd1-left-dashed-red th, table.cp-table-base tr.cp-brd1-left-dashed-red td, table.cp-table-base colgroup.cp-brd1-left-dashed-red th, table.cp-table-base colgroup.cp-brd1-left-dashed-red td {
   border-left-width: 1px;
   border-left-style: dashed;
   border-left-color: #cc3300;
 }
-table.cp-table tr.cp-brd2-left-dashed-red th, table.cp-table tr.cp-brd2-left-dashed-red td, table.cp-table colgroup.cp-brd2-left-dashed-red th, table.cp-table colgroup.cp-brd2-left-dashed-red td {
+table.cp-table-base tr.cp-brd2-left-dashed-red th, table.cp-table-base tr.cp-brd2-left-dashed-red td, table.cp-table-base colgroup.cp-brd2-left-dashed-red th, table.cp-table-base colgroup.cp-brd2-left-dashed-red td {
   border-left-width: 2px;
   border-left-style: dashed;
   border-left-color: #cc3300;
 }
-table.cp-table tr.cp-brd3-left-dashed-red th, table.cp-table tr.cp-brd3-left-dashed-red td, table.cp-table colgroup.cp-brd3-left-dashed-red th, table.cp-table colgroup.cp-brd3-left-dashed-red td {
+table.cp-table-base tr.cp-brd3-left-dashed-red th, table.cp-table-base tr.cp-brd3-left-dashed-red td, table.cp-table-base colgroup.cp-brd3-left-dashed-red th, table.cp-table-base colgroup.cp-brd3-left-dashed-red td {
   border-left-width: 3px;
   border-left-style: dashed;
   border-left-color: #cc3300;
@@ -6018,7 +6033,7 @@ table.cp-table tr.cp-brd3-left-dashed-red th, table.cp-table tr.cp-brd3-left-das
   opacity: 1;
 }
 .cp-paging-btn .st-body .st-inner > ul > li.is-disabled a, .cp-paging-btn-bottom .st-body .st-inner > ul > li.is-disabled a {
-  background: #555;
+  background: #999;
   color: #aaa;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -6166,7 +6181,7 @@ table.cp-table tr.cp-brd3-left-dashed-red th, table.cp-table tr.cp-brd3-left-das
   left: 50%;
 }
 .cp-loader .st-body .st-inner {
-  background: #333;
+  background: #666;
   border: 1px solid #ccc;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -6358,7 +6373,7 @@ table.cp-table tr.cp-brd3-left-dashed-red th, table.cp-table tr.cp-brd3-left-das
 }
 
 .cp-stamp-gray {
-  background: #333;
+  background: #666;
   color: #fff;
 }
 

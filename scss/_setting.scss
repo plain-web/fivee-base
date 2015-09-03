@@ -58,16 +58,31 @@ $cl-blue:#548BB5;
 $cl-green:#689C51;
 $cl-yellow:#F4DD17;
 $cl-black:#000;
-$cl-gray:#333;
-$cl-gray1:#444;
-$cl-gray2:#555;
-$cl-gray3:#666;
-$cl-gray4:#777;
-$cl-gray5:#888;
-$cl-gray6:#999;
-$cl-gray7:#aaa;
+$cl-gray:#666;
+$cl-gray1:#888;
+$cl-gray2:#999;
+$cl-gray3:#aaa;
+$cl-gray4:#bbb;
+$cl-gray5:#ccc;
+$cl-gray6:#ddd;
+$cl-gray7:#eee;
 
-$cl-white-darken: darken( $cl-white, 15% );
+//text color
+$cl-txt-white:#fff;
+$cl-txt-red:#cc3300;
+$cl-txt-orange:#B59654;
+$cl-txt-blue:#548BB5;
+$cl-txt-green:#689C51;
+$cl-txt-yellow:#F4DD17;
+$cl-txt-black:#000;
+$cl-txt-gray:#333;
+$cl-txt-gray1:#444;
+$cl-txt-gray2:#555;
+$cl-txt-gray3:#666;
+$cl-txt-gray4:#777;
+$cl-txt-gray5:#888;
+$cl-txt-gray6:#999;
+$cl-txt-gray7:#aaa;
 
 //bg color
 $cl-bg-white: $cl-white;
@@ -91,8 +106,8 @@ $cl-bg-theme: $cl-theme;
 $cl-txt-base: #333;
 $cl-txt-sub : #666;
 $cl-txt-rev : #fff;
+$cl-txt-link:#448CCF;
 $cl-txt-theme : $cl-theme;
-$cl-txt-link:#0088ff;
 $cl-txt-hover: darken( $cl-txt-link, 15% );
 
 //border color
@@ -152,9 +167,9 @@ $cl-bg-table-header3:#999;
 $pd-table:7px;
 
 //modal
-$cl-bg-modal-header: $cl-theme;
+$cl-bg-modal-header: #CAD5D9;
 $cl-bg-modal-body: #fff;
-$cl-bg-modal-footer: $cl-gray;
+$cl-bg-modal-footer: #f6f6f6;
 
 //popup
 $cl-bg-popup:#fff;
@@ -288,8 +303,8 @@ dl,dt,dd,ul,li,p,h1, h2, h3, h4, h5, h6{
 }
 ul{
   list-style-type: none;
-  &.cp-list-decimal{
-    li{
+  &.ef-list-decimal{
+    >li{
       list-style-type:decimal;
       margin-left:23px;
     }
