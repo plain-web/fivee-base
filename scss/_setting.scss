@@ -35,6 +35,7 @@ $lh-base:1.4;
 $lh-form:30px;
 $lh-table:1.4;
 $lh-btn:20px;
+$lh-btn-mini:16px;
 $lh-badge:16px;
 $lh-txt:1.4;
 
@@ -118,10 +119,11 @@ $cl-brd-lighten: lighten( $cl-brd-base, 5% );
 $cl-brd-darken: darken( $cl-brd-base, 5% );
 
 //focus color
-$cl-focus :#0095FF;
+$cl-brd-focus :#8691C1;
+$cl-bg-focus :#EDF3F7;
 
 //button color
-$cl-btn-base:#eee;
+$cl-btn-base:#f9f9f9;
 $cl-btn-hover: darken( $cl-btn-base, 5% );
 
 $cl-btn-darken: darken( $cl-btn-base, 5% );
@@ -161,9 +163,11 @@ $cl-bg-toolbar: $cl-gray;
 $cl-bg-footer: $cl-theme;
 
 //table
-$cl-bg-table-header : $cl-gray2;
-$cl-bg-table-header2:#2562a5;
-$cl-bg-table-header3:#999;
+$cl-bg-table-header : #e5e5e5;
+$cl-bg-table-th-hover : $cl-bg-gray;
+$cl-bg-table-td-hover : $cl-bg-gray;
+$cl-bg-table-highlight : $cl-bg-gray;
+$cl-bg-table-select : $cl-gray2;
 $pd-table:7px;
 
 //modal
@@ -195,9 +199,7 @@ $cl-stamp-yellow:$cl-yellow;
 // ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 // "mixins"
 // ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-@mixin side($size){
-  padding:0 $size;
-}
+
 @mixin posi-fix($top, $right, $bottom, $left){
   position:fixed;
   top: $top;
@@ -255,12 +257,20 @@ $cl-stamp-yellow:$cl-yellow;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#{$start}', endColorstr='#{$end}');
 }
 
-@mixin overflow-fix($max:300px){
+@mixin width-overflow($max:900px){
   width: $max;
   @include ellipsis;
 }
-@mixin overflow-max($max:300px){
+@mixin width-overflow-max($max:900px){
   max-width: $max;
+  @include ellipsis;
+}
+@mixin height-overflow($max:900px){
+  height: $max;
+  @include ellipsis;
+}
+@mixin height-overflow-max($max:900px){
+  max-height: $max;
   @include ellipsis;
 }
 
@@ -308,6 +318,54 @@ ul{
       list-style-type:decimal;
       margin-left:23px;
     }
+  }
+  &.ef-list-hover-white{
+    li:hover{>a{background:$cl-bg-theme;}}
+  }
+  &.ef-list-hover-red{
+    li:hover{>a{background:$cl-bg-red;}}
+  }
+  &.ef-list-hover-orange{
+    li:hover{>a{background:$cl-bg-orange;}}
+  }
+  &.ef-list-hover-blue{
+    li:hover{>a{background:$cl-bg-blue;}}
+  }
+  &.ef-list-hover-green{
+    li:hover{>a{background:$cl-bg-green;}}
+  }
+  &.ef-list-hover-yellow{
+    li:hover{>a{background:$cl-bg-yellow;}}
+  }
+  &.ef-list-hover-black{
+    li:hover{>a{background:$cl-bg-black;}}
+  }
+  &.ef-list-hover-gray{
+    li:hover{>a{background:$cl-bg-gray;}}
+  }
+  &.ef-list-hover-gray1{
+    li:hover{>a{background:$cl-bg-gray1;}}
+  }
+  &.ef-list-hover-gray2{
+    li:hover{>a{background:$cl-bg-gray2;}}
+  }
+  &.ef-list-hover-gray3{
+    li:hover{>a{background:$cl-bg-gray3;}}
+  }
+  &.ef-list-hover-gray4{
+    li:hover{>a{background:$cl-bg-gray4;}}
+  }
+  &.ef-list-hover-gray5{
+    li:hover{>a{background:$cl-bg-gray5;}}
+  }
+  &.ef-list-hover-gray6{
+    li:hover{>a{background:$cl-bg-gray6;}}
+  }
+  &.ef-list-hover-gray7{
+    li:hover{>a{background:$cl-bg-gray7;}}
+  }
+  &.ef-list-hover-theme{
+    li:hover{>a{background:$cl-bg-theme;}}
   }
 }
 small{font-size: $fs-small;}

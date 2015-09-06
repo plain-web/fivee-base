@@ -224,9 +224,9 @@
 .ef-w580{width:580px;}
 .ef-w590{width:590px;}
 .ef-w600{width:600px;}
-.ef-w700{width:700px;}
-.ef-w800{width:800px;}
-.ef-w900{width:900px;}
+// .ef-w700{width:700px;}
+// .ef-w800{width:800px;}
+// .ef-w900{width:900px;}
 /* =============================================================
  ▼ min-width (%)
 ============================================================== */
@@ -309,9 +309,9 @@
 .ef-mw580{@include min-width(580px);}
 .ef-mw590{@include min-width(590px);}
 .ef-mw600{@include min-width(600px);}
-.ef-mw700{@include min-width(700px);}
-.ef-mw800{@include min-width(800px);}
-.ef-mw900{@include min-width(900px);}
+// .ef-mw700{@include min-width(700px);}
+// .ef-mw800{@include min-width(800px);}
+// .ef-mw900{@include min-width(900px);}
 /* =============================================================
  ▼ height (px)
 ============================================================== */
@@ -378,9 +378,9 @@
 .ef-h580{height:580px;}
 .ef-h590{height:590px;}
 .ef-h600{height:600px;}
-.ef-h700{height:700px;}
-.ef-h800{height:800px;}
-.ef-h900{height:900px;}
+// .ef-h700{height:700px;}
+// .ef-h800{height:800px;}
+// .ef-h900{height:900px;}
 /* =============================================================
  ▼ min-height
 ============================================================== */
@@ -447,9 +447,9 @@
 .ef-mh580{@include min-height(580px);}
 .ef-mh590{@include min-height(590px);}
 .ef-mh600{@include min-height(600px);}
-.ef-mh700{@include min-height(700px);}
-.ef-mh800{@include min-height(800px);}
-.ef-mh900{@include min-height(900px);}
+// .ef-mh700{@include min-height(700px);}
+// .ef-mh800{@include min-height(800px);}
+// .ef-mh900{@include min-height(900px);}
 /* =============================================================
  ▼ padding
 ============================================================== */
@@ -806,68 +806,252 @@ ul.ef-float30{
  ▼ overflow
 ============================================================== */
 // max-width
-.ef-ovf-max10{@include overflow-max(10px);}
-.ef-ovf-max20{@include overflow-max(20px);}
-.ef-ovf-max30{@include overflow-max(30px);}
-.ef-ovf-max40{@include overflow-max(40px);}
-.ef-ovf-max50{@include overflow-max(50px);}
-.ef-ovf-max60{@include overflow-max(60px);}
-.ef-ovf-max70{@include overflow-max(70px);}
-.ef-ovf-max80{@include overflow-max(80px);}
-.ef-ovf-max90{@include overflow-max(90px);}
-.ef-ovf-max100{@include overflow-max(100px);}
-.ef-ovf-max110{@include overflow-max(110px);}
-.ef-ovf-max120{@include overflow-max(120px);}
-.ef-ovf-max130{@include overflow-max(130px);}
-.ef-ovf-max140{@include overflow-max(140px);}
-.ef-ovf-max150{@include overflow-max(150px);}
-.ef-ovf-max160{@include overflow-max(160px);}
-.ef-ovf-max170{@include overflow-max(170px);}
-.ef-ovf-max180{@include overflow-max(180px);}
-.ef-ovf-max190{@include overflow-max(190px);}
-.ef-ovf-max200{@include overflow-max(200px);}
-.ef-ovf-max210{@include overflow-max(210px);}
-.ef-ovf-max220{@include overflow-max(220px);}
-.ef-ovf-max230{@include overflow-max(230px);}
-.ef-ovf-max240{@include overflow-max(240px);}
-.ef-ovf-max250{@include overflow-max(250px);}
-.ef-ovf-max260{@include overflow-max(260px);}
-.ef-ovf-max270{@include overflow-max(270px);}
-.ef-ovf-max280{@include overflow-max(280px);}
-.ef-ovf-max290{@include overflow-max(290px);}
-.ef-ovf-max{@include overflow-max;}
+.ef-mw10-ovf{@include width-overflow-max(10px);}
+.ef-mw20-ovf{@include width-overflow-max(20px);}
+.ef-mw30-ovf{@include width-overflow-max(30px);}
+.ef-mw40-ovf{@include width-overflow-max(40px);}
+.ef-mw50-ovf{@include width-overflow-max(50px);}
+.ef-mw60-ovf{@include width-overflow-max(60px);}
+.ef-mw70-ovf{@include width-overflow-max(70px);}
+.ef-mw80-ovf{@include width-overflow-max(80px);}
+.ef-mw90-ovf{@include width-overflow-max(90px);}
+.ef-mw100-ovf{@include width-overflow-max(100px);}
+.ef-mw110-ovf{@include width-overflow-max(110px);}
+.ef-mw120-ovf{@include width-overflow-max(120px);}
+.ef-mw130-ovf{@include width-overflow-max(130px);}
+.ef-mw140-ovf{@include width-overflow-max(140px);}
+.ef-mw150-ovf{@include width-overflow-max(150px);}
+.ef-mw160-ovf{@include width-overflow-max(160px);}
+.ef-mw170-ovf{@include width-overflow-max(170px);}
+.ef-mw180-ovf{@include width-overflow-max(180px);}
+.ef-mw190-ovf{@include width-overflow-max(190px);}
+.ef-mw200-ovf{@include width-overflow-max(200px);}
+.ef-mw210-ovf{@include width-overflow-max(210px);}
+.ef-mw220-ovf{@include width-overflow-max(220px);}
+.ef-mw230-ovf{@include width-overflow-max(230px);}
+.ef-mw240-ovf{@include width-overflow-max(240px);}
+.ef-mw250-ovf{@include width-overflow-max(250px);}
+.ef-mw260-ovf{@include width-overflow-max(260px);}
+.ef-mw270-ovf{@include width-overflow-max(270px);}
+.ef-mw280-ovf{@include width-overflow-max(280px);}
+.ef-mw290-ovf{@include width-overflow-max(290px);}
+.ef-mw300-ovf{@include width-overflow-max(300px);}
+.ef-mw310-ovf{@include width-overflow-max(310px);}
+.ef-mw320-ovf{@include width-overflow-max(320px);}
+.ef-mw330-ovf{@include width-overflow-max(330px);}
+.ef-mw340-ovf{@include width-overflow-max(340px);}
+.ef-mw350-ovf{@include width-overflow-max(350px);}
+.ef-mw360-ovf{@include width-overflow-max(360px);}
+.ef-mw370-ovf{@include width-overflow-max(370px);}
+.ef-mw380-ovf{@include width-overflow-max(380px);}
+.ef-mw390-ovf{@include width-overflow-max(390px);}
+.ef-mw400-ovf{@include width-overflow-max(400px);}
+.ef-mw410-ovf{@include width-overflow-max(410px);}
+.ef-mw420-ovf{@include width-overflow-max(420px);}
+.ef-mw430-ovf{@include width-overflow-max(430px);}
+.ef-mw440-ovf{@include width-overflow-max(440px);}
+.ef-mw450-ovf{@include width-overflow-max(450px);}
+.ef-mw460-ovf{@include width-overflow-max(460px);}
+.ef-mw470-ovf{@include width-overflow-max(470px);}
+.ef-mw480-ovf{@include width-overflow-max(480px);}
+.ef-mw490-ovf{@include width-overflow-max(490px);}
+.ef-mw500-ovf{@include width-overflow-max(500px);}
+.ef-mw510-ovf{@include width-overflow-max(510px);}
+.ef-mw520-ovf{@include width-overflow-max(520px);}
+.ef-mw530-ovf{@include width-overflow-max(530px);}
+.ef-mw540-ovf{@include width-overflow-max(540px);}
+.ef-mw550-ovf{@include width-overflow-max(550px);}
+.ef-mw560-ovf{@include width-overflow-max(560px);}
+.ef-mw570-ovf{@include width-overflow-max(570px);}
+.ef-mw580-ovf{@include width-overflow-max(580px);}
+.ef-mw590-ovf{@include width-overflow-max(590px);}
+.ef-mw600-ovf{@include width-overflow-max(600px);}
 
 // width
-.ef-ovf-fix10{@include overflow-fix(10px);}
-.ef-ovf-fix20{@include overflow-fix(20px);}
-.ef-ovf-fix30{@include overflow-fix(30px);}
-.ef-ovf-fix40{@include overflow-fix(40px);}
-.ef-ovf-fix50{@include overflow-fix(50px);}
-.ef-ovf-fix60{@include overflow-fix(60px);}
-.ef-ovf-fix70{@include overflow-fix(70px);}
-.ef-ovf-fix80{@include overflow-fix(80px);}
-.ef-ovf-fix90{@include overflow-fix(90px);}
-.ef-ovf-fix100{@include overflow-fix(100px);}
-.ef-ovf-fix110{@include overflow-fix(110px);}
-.ef-ovf-fix120{@include overflow-fix(120px);}
-.ef-ovf-fix130{@include overflow-fix(130px);}
-.ef-ovf-fix140{@include overflow-fix(140px);}
-.ef-ovf-fix150{@include overflow-fix(150px);}
-.ef-ovf-fix160{@include overflow-fix(160px);}
-.ef-ovf-fix170{@include overflow-fix(170px);}
-.ef-ovf-fix180{@include overflow-fix(180px);}
-.ef-ovf-fix190{@include overflow-fix(190px);}
-.ef-ovf-fix200{@include overflow-fix(200px);}
-.ef-ovf-fix210{@include overflow-fix(210px);}
-.ef-ovf-fix220{@include overflow-fix(220px);}
-.ef-ovf-fix230{@include overflow-fix(230px);}
-.ef-ovf-fix240{@include overflow-fix(240px);}
-.ef-ovf-fix250{@include overflow-fix(250px);}
-.ef-ovf-fix260{@include overflow-fix(260px);}
-.ef-ovf-fix270{@include overflow-fix(270px);}
-.ef-ovf-fix280{@include overflow-fix(280px);}
-.ef-ovf-fix290{@include overflow-fix(290px);}
-.ef-ovf-fix{@include overflow-fix;}
+.ef-w10-ovf{@include width-overflow(10px);}
+.ef-w20-ovf{@include width-overflow(20px);}
+.ef-w30-ovf{@include width-overflow(30px);}
+.ef-w40-ovf{@include width-overflow(40px);}
+.ef-w50-ovf{@include width-overflow(50px);}
+.ef-w60-ovf{@include width-overflow(60px);}
+.ef-w70-ovf{@include width-overflow(70px);}
+.ef-w80-ovf{@include width-overflow(80px);}
+.ef-w90-ovf{@include width-overflow(90px);}
+.ef-w100-ovf{@include width-overflow(100px);}
+.ef-w110-ovf{@include width-overflow(110px);}
+.ef-w120-ovf{@include width-overflow(120px);}
+.ef-w130-ovf{@include width-overflow(130px);}
+.ef-w140-ovf{@include width-overflow(140px);}
+.ef-w150-ovf{@include width-overflow(150px);}
+.ef-w160-ovf{@include width-overflow(160px);}
+.ef-w170-ovf{@include width-overflow(170px);}
+.ef-w180-ovf{@include width-overflow(180px);}
+.ef-w190-ovf{@include width-overflow(190px);}
+.ef-w200-ovf{@include width-overflow(200px);}
+.ef-w210-ovf{@include width-overflow(210px);}
+.ef-w220-ovf{@include width-overflow(220px);}
+.ef-w230-ovf{@include width-overflow(230px);}
+.ef-w240-ovf{@include width-overflow(240px);}
+.ef-w250-ovf{@include width-overflow(250px);}
+.ef-w260-ovf{@include width-overflow(260px);}
+.ef-w270-ovf{@include width-overflow(270px);}
+.ef-w280-ovf{@include width-overflow(280px);}
+.ef-w290-ovf{@include width-overflow(290px);}
+.ef-w300-ovf{@include width-overflow(300px);}
+.ef-w310-ovf{@include width-overflow(310px);}
+.ef-w320-ovf{@include width-overflow(320px);}
+.ef-w330-ovf{@include width-overflow(330px);}
+.ef-w340-ovf{@include width-overflow(340px);}
+.ef-w350-ovf{@include width-overflow(350px);}
+.ef-w360-ovf{@include width-overflow(360px);}
+.ef-w370-ovf{@include width-overflow(370px);}
+.ef-w380-ovf{@include width-overflow(380px);}
+.ef-w390-ovf{@include width-overflow(390px);}
+.ef-w400-ovf{@include width-overflow(400px);}
+.ef-w410-ovf{@include width-overflow(410px);}
+.ef-w420-ovf{@include width-overflow(420px);}
+.ef-w430-ovf{@include width-overflow(430px);}
+.ef-w440-ovf{@include width-overflow(440px);}
+.ef-w450-ovf{@include width-overflow(450px);}
+.ef-w460-ovf{@include width-overflow(460px);}
+.ef-w470-ovf{@include width-overflow(470px);}
+.ef-w480-ovf{@include width-overflow(480px);}
+.ef-w490-ovf{@include width-overflow(490px);}
+.ef-w500-ovf{@include width-overflow(500px);}
+.ef-w510-ovf{@include width-overflow(510px);}
+.ef-w520-ovf{@include width-overflow(520px);}
+.ef-w530-ovf{@include width-overflow(530px);}
+.ef-w540-ovf{@include width-overflow(540px);}
+.ef-w550-ovf{@include width-overflow(550px);}
+.ef-w560-ovf{@include width-overflow(560px);}
+.ef-w570-ovf{@include width-overflow(570px);}
+.ef-w580-ovf{@include width-overflow(580px);}
+.ef-w590-ovf{@include width-overflow(590px);}
+.ef-w600-ovf{@include width-overflow(600px);}
+
+// max-height
+.ef-mh10-ovf{@include height-overflow-max(10px);}
+.ef-mh20-ovf{@include height-overflow-max(20px);}
+.ef-mh30-ovf{@include height-overflow-max(30px);}
+.ef-mh40-ovf{@include height-overflow-max(40px);}
+.ef-mh50-ovf{@include height-overflow-max(50px);}
+.ef-mh60-ovf{@include height-overflow-max(60px);}
+.ef-mh70-ovf{@include height-overflow-max(70px);}
+.ef-mh80-ovf{@include height-overflow-max(80px);}
+.ef-mh90-ovf{@include height-overflow-max(90px);}
+.ef-mh100-ovf{@include height-overflow-max(100px);}
+.ef-mh110-ovf{@include height-overflow-max(110px);}
+.ef-mh120-ovf{@include height-overflow-max(120px);}
+.ef-mh130-ovf{@include height-overflow-max(130px);}
+.ef-mh140-ovf{@include height-overflow-max(140px);}
+.ef-mh150-ovf{@include height-overflow-max(150px);}
+.ef-mh160-ovf{@include height-overflow-max(160px);}
+.ef-mh170-ovf{@include height-overflow-max(170px);}
+.ef-mh180-ovf{@include height-overflow-max(180px);}
+.ef-mh190-ovf{@include height-overflow-max(190px);}
+.ef-mh200-ovf{@include height-overflow-max(200px);}
+.ef-mh210-ovf{@include height-overflow-max(210px);}
+.ef-mh220-ovf{@include height-overflow-max(220px);}
+.ef-mh230-ovf{@include height-overflow-max(230px);}
+.ef-mh240-ovf{@include height-overflow-max(240px);}
+.ef-mh250-ovf{@include height-overflow-max(250px);}
+.ef-mh260-ovf{@include height-overflow-max(260px);}
+.ef-mh270-ovf{@include height-overflow-max(270px);}
+.ef-mh280-ovf{@include height-overflow-max(280px);}
+.ef-mh290-ovf{@include height-overflow-max(290px);}
+.ef-mh300-ovf{@include height-overflow-max(300px);}
+.ef-mh310-ovf{@include height-overflow-max(310px);}
+.ef-mh320-ovf{@include height-overflow-max(320px);}
+.ef-mh330-ovf{@include height-overflow-max(330px);}
+.ef-mh340-ovf{@include height-overflow-max(340px);}
+.ef-mh350-ovf{@include height-overflow-max(350px);}
+.ef-mh360-ovf{@include height-overflow-max(360px);}
+.ef-mh370-ovf{@include height-overflow-max(370px);}
+.ef-mh380-ovf{@include height-overflow-max(380px);}
+.ef-mh390-ovf{@include height-overflow-max(390px);}
+.ef-mh400-ovf{@include height-overflow-max(400px);}
+.ef-mh410-ovf{@include height-overflow-max(410px);}
+.ef-mh420-ovf{@include height-overflow-max(420px);}
+.ef-mh430-ovf{@include height-overflow-max(430px);}
+.ef-mh440-ovf{@include height-overflow-max(440px);}
+.ef-mh450-ovf{@include height-overflow-max(450px);}
+.ef-mh460-ovf{@include height-overflow-max(460px);}
+.ef-mh470-ovf{@include height-overflow-max(470px);}
+.ef-mh480-ovf{@include height-overflow-max(480px);}
+.ef-mh490-ovf{@include height-overflow-max(490px);}
+.ef-mh500-ovf{@include height-overflow-max(500px);}
+.ef-mh510-ovf{@include height-overflow-max(510px);}
+.ef-mh520-ovf{@include height-overflow-max(520px);}
+.ef-mh530-ovf{@include height-overflow-max(530px);}
+.ef-mh540-ovf{@include height-overflow-max(540px);}
+.ef-mh550-ovf{@include height-overflow-max(550px);}
+.ef-mh560-ovf{@include height-overflow-max(560px);}
+.ef-mh570-ovf{@include height-overflow-max(570px);}
+.ef-mh580-ovf{@include height-overflow-max(580px);}
+.ef-mh590-ovf{@include height-overflow-max(590px);}
+.ef-mh600-ovf{@include height-overflow-max(600px);}
+
+// height
+.ef-h10-ovf{@include height-overflow(10px);}
+.ef-h20-ovf{@include height-overflow(20px);}
+.ef-h30-ovf{@include height-overflow(30px);}
+.ef-h40-ovf{@include height-overflow(40px);}
+.ef-h50-ovf{@include height-overflow(50px);}
+.ef-h60-ovf{@include height-overflow(60px);}
+.ef-h70-ovf{@include height-overflow(70px);}
+.ef-h80-ovf{@include height-overflow(80px);}
+.ef-h90-ovf{@include height-overflow(90px);}
+.ef-h100-ovf{@include height-overflow(100px);}
+.ef-h110-ovf{@include height-overflow(110px);}
+.ef-h120-ovf{@include height-overflow(120px);}
+.ef-h130-ovf{@include height-overflow(130px);}
+.ef-h140-ovf{@include height-overflow(140px);}
+.ef-h150-ovf{@include height-overflow(150px);}
+.ef-h160-ovf{@include height-overflow(160px);}
+.ef-h170-ovf{@include height-overflow(170px);}
+.ef-h180-ovf{@include height-overflow(180px);}
+.ef-h190-ovf{@include height-overflow(190px);}
+.ef-h200-ovf{@include height-overflow(200px);}
+.ef-h210-ovf{@include height-overflow(210px);}
+.ef-h220-ovf{@include height-overflow(220px);}
+.ef-h230-ovf{@include height-overflow(230px);}
+.ef-h240-ovf{@include height-overflow(240px);}
+.ef-h250-ovf{@include height-overflow(250px);}
+.ef-h260-ovf{@include height-overflow(260px);}
+.ef-h270-ovf{@include height-overflow(270px);}
+.ef-h280-ovf{@include height-overflow(280px);}
+.ef-h290-ovf{@include height-overflow(290px);}
+.ef-h300-ovf{@include height-overflow(300px);}
+.ef-h310-ovf{@include height-overflow(310px);}
+.ef-h320-ovf{@include height-overflow(320px);}
+.ef-h330-ovf{@include height-overflow(330px);}
+.ef-h340-ovf{@include height-overflow(340px);}
+.ef-h350-ovf{@include height-overflow(350px);}
+.ef-h360-ovf{@include height-overflow(360px);}
+.ef-h370-ovf{@include height-overflow(370px);}
+.ef-h380-ovf{@include height-overflow(380px);}
+.ef-h390-ovf{@include height-overflow(390px);}
+.ef-h400-ovf{@include height-overflow(400px);}
+.ef-h410-ovf{@include height-overflow(410px);}
+.ef-h420-ovf{@include height-overflow(420px);}
+.ef-h430-ovf{@include height-overflow(430px);}
+.ef-h440-ovf{@include height-overflow(440px);}
+.ef-h450-ovf{@include height-overflow(450px);}
+.ef-h460-ovf{@include height-overflow(460px);}
+.ef-h470-ovf{@include height-overflow(470px);}
+.ef-h480-ovf{@include height-overflow(480px);}
+.ef-h490-ovf{@include height-overflow(490px);}
+.ef-h500-ovf{@include height-overflow(500px);}
+.ef-h510-ovf{@include height-overflow(510px);}
+.ef-h520-ovf{@include height-overflow(520px);}
+.ef-h530-ovf{@include height-overflow(530px);}
+.ef-h540-ovf{@include height-overflow(540px);}
+.ef-h550-ovf{@include height-overflow(550px);}
+.ef-h560-ovf{@include height-overflow(560px);}
+.ef-h570-ovf{@include height-overflow(570px);}
+.ef-h580-ovf{@include height-overflow(580px);}
+.ef-h590-ovf{@include height-overflow(590px);}
+.ef-h600-ovf{@include height-overflow(600px);}
 
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -884,6 +1068,14 @@ ul.ef-float30{
 //   background:$cl-bg-green;
 //   @include easeout;
 // }
+.ef-brd-focus{
+  @include brd(1px,solid,$cl-brd-focus);
+  @include easeout;
+}
+.ef-bg-focus{
+  background:$cl-bg-focus;
+  @include easeout;
+}
 /* =============================================================
  ▼ rotate
 ============================================================= */

@@ -61,11 +61,6 @@ a{
  * =============================================================
  ▼ default form
 ============================================================= */
-// .cp-focus{
-//   @include brd(1px,solid,$cl-theme);
-//   background:$cl-theme2;
-//   @include easeout;
-// }
 select,
 input[type="text"],
 input[type="password"]{
@@ -76,14 +71,24 @@ input[type="password"]{
   font-size:100%;
   vertical-align:middle;
   outline: none;
+  @include brd;
+  @include border-radius(3px);
+  font-family: $ff-base;
+  &:focus{
+   @extend .ef-bg-focus;
+   @extend .ef-brd-focus;
+  }
 }
 input[type="checkbox"],
 input[type="radio"]{
   border:0;
   margin:0;
   padding:0;
+  display: block;
 }
-select{padding:0;}
+select{
+  padding:0;
+}
 /* =============================================================
  ▼ formset
 ============================================================= */
@@ -201,8 +206,8 @@ label{
 .cp-btn-mini{
   @extend .cp-btn;
   font-size:$fs-midium;
-  padding:2px 5px;
-  line-height:$lh-reset;
+  padding:3px;
+  line-height:$lh-btn-mini;
   @include min-width(0);
 }
 //combo
@@ -264,7 +269,7 @@ label{
             line-height:$lh-btn;
             text-align:center;
             display:block;
-            @include overflow-max(250px);
+            @include width-overflow-max(250px);
           }
           .cp-underbar{
             @include posi-abs(auto,auto,0,0);
@@ -316,8 +321,7 @@ label{
   >.st-body{
     @include posi-fix(100px,auto,auto,50%);
     @include brd(1px,solid,$cl-brd-base);
-    @include border-radius(5px, 5px);
-    background:$cl-bg-modal-body;
+    @include border-radius(5px);
     display:none;
     @include min-width(400px);
     z-index:2;
@@ -330,6 +334,7 @@ label{
           padding:10px;
           position:relative;
           background:$cl-bg-modal-header;
+          @include border-top-radius(5px);
           .cp-modal-title{padding-right:10px;}
           .cp-modal-close{
             @include posi-abs(50%,5px,auto,auto);
@@ -338,12 +343,9 @@ label{
         }
       }
       .cp-modal-body{
+        background:$cl-bg-modal-body;
         >.st-inner{
-          max-width:500px;
-          max-height:500px;
-          overflow-y:auto;
-          padding:10px 20px;
-          .cp-modal-img{max-height:500px;}
+          padding:10px 10px 20px;
         }
       }
       .cp-modal-footer{
@@ -351,6 +353,7 @@ label{
           @include brd-top;
           padding:10px 20px;
           background:$cl-bg-modal-footer;
+          @include border-bottom-radius(5px);
         }
       }
     }
@@ -375,7 +378,7 @@ label{
   }
   &.is-gray{
     background:$cl-gray;
-    @include opacity(0.3);
+    @include opacity(0.12);
   }
 }
 
@@ -420,7 +423,7 @@ label{
         @include border-radius(3px);
         @include posi-abs(auto,auto,auto,auto);
         .st-inner{
-          @include overflow-max(500px);
+          @include width-overflow-max(500px);
         }
       }
       .cp-balloon{
@@ -450,9 +453,27 @@ table.cp-table-base{
   border-collapse: collapse;
   border-spacing: 0;
   background:$cl-white;
-  tbody{
-    tr{
-      &.selected{td{background-color:$cl-theme1-lighten;}}
+  //hover tr 
+  thead,tbody{
+    &.cp-th-hover{
+      tr:hover{
+        th{
+          background-color:$cl-bg-table-th-hover;
+          &.cp-reset-th{
+            background-color:$cl-bg-table-header;
+          }
+        }
+      }
+    }
+    &.cp-td-hover{
+      tr:hover{
+        td{
+          background-color:$cl-bg-table-td-hover;
+          &.cp-reset-td{
+            background-color:$cl-white;
+          }
+        }
+      }
     }
   }
   tr,colgroup{
@@ -464,6 +485,7 @@ table.cp-table-base{
       @include brd-bottom(1px,solid,$cl-brd-base);
       white-space: nowrap;
       font-weight:bold;
+      a,i{color:$cl-txt-base;}
     }
     td{
       padding:$pd-table;
@@ -474,10 +496,41 @@ table.cp-table-base{
     td:last-child{border-right-width:none;}
     tbody:last-child td{border-bottom-width:none;}
 
-    .is-refresh{
-      background:$cl-bg-green;
-      @include transition( all 0.5s ease-out);
+    //hover single cloumn
+    &.cp-th-hover{
+      th:hover{
+        background-color:$cl-bg-table-th-hover;
+        &.cp-reset-th{
+          background-color:$cl-bg-table-header;
+        }
+      }
     }
+    &.cp-td-hover{
+      td:hover{
+        background-color:$cl-bg-table-td-hover;
+        &.cp-reset-td{
+          background-color:$cl-white;
+        }
+      }
+    }
+    &.is-highlight{
+      td{background-color:$cl-bg-table-highlight;}
+      &.cp-reset-td{
+        td{background-color:$cl-white;}
+      }
+    }
+    &.is-select{
+      td{background-color:$cl-bg-table-select;}
+      &.cp-reset-td{
+        td{background-color:$cl-white;}
+      }
+    }
+    // &.is-select{
+    //   td{background-color:$cl-bg-table-select;}
+    //   &.cp-reset-td{
+    //     td{background-color:$cl-white;}
+    //   }
+    // }
     //vertical
     .ef-vrt{vertical-align:top;}
     .ef-vrm{vertical-align:middle;}

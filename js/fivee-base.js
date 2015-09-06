@@ -95,25 +95,7 @@ function thisClassGet(clickThis, returnClass){
   //console.log(targetClass);
   return targetClass;
 }
-/*========================================================================
-   same label
-======================================================================== */
-//click target
-// $( '.jq-label-same-table td, .jq-label-same-table th' ).on({
-//   'mouseenter': function(){
-//     //this
-//     clickThis = $(this);
-//     //return class
-//     returnClass = 'jq-same-';
-//     //target class
-//     targetClass = thisClassGet(clickThis, returnClass);
-//     $(targetClass).addClass('is-focus');
-//   },
-//   'mouseleave': function(parentClass){
-//     //delete class
-//     $(this).parents('.jq-label-same-table').find('.is-focus').removeClass('is-focus');
-//   }
-// });
+
 /*========================================================================
   focus target
 ======================================================================== */
@@ -234,6 +216,26 @@ $('.jq-nav a').on('click', function(){
     }
   }
 });
+/*========================================================================
+   nav current / page load
+======================================================================== */
+var navCurrent = $('.jq-nav .is-current').parents('ul'); 
+//presence class
+var hasclass = navCurrent.attr('class');
+if(hasclass){
+  var matchKey = hasclass.match('child');
+  if(matchKey){
+    navCurrent.show(500);
+    //caret
+    var webFont = navCurrent.parents('li').find('.jq-nav-caret i').eq(0);
+    var webFontClass = webFont.attr('class');
+    //web font
+    if(webFont && webFontClass){
+      webFontClass = webFontClass.replace('down', 'up');
+      $(webFont).removeClass().addClass(webFontClass);
+    }
+  }
+}
 /*========================================================================
    collapse nav
 ======================================================================== */
@@ -498,14 +500,84 @@ $('#jq-TabSelect li a').on('click', function(){
 /*========================================================================
   table hightlight
 ======================================================================== */
+//select
+$('.jq-tr-select tr').on('click', function(){
+  $(this).toggleClass('is-select');
+});
 
-//
+//colgroup
 // $('.jq-col-on').on('click', function(){
 //   var id = '.' + $(this).attr('id');
 //   //contents
 //   $('.jq-col-lighting').removeClass('ef-bg-green');
 //   $(id).addClass('ef-bg-green');
 // });
+/*========================================================================
+   same label
+======================================================================== */
+//click target
+// $( '.jq-label-same-table td, .jq-label-same-table th' ).on({
+//   'mouseenter': function(){
+//     //this
+//     clickThis = $(this);
+//     //return class
+//     returnClass = 'jq-same-';
+//     //target class
+//     targetClass = thisClassGet(clickThis, returnClass);
+//     $(targetClass).addClass('is-focus');
+//   },
+//   'mouseleave': function(parentClass){
+//     //delete class
+//     $(this).parents('.jq-label-same-table').find('.is-focus').removeClass('is-focus');
+//   }
+// });
+/*========================================================================
+  checkbox
+======================================================================== */
+$('.jq-check input').on('change', function(){
+  //presence class
+  var hasclass = $(this).attr('class');
+  if(hasclass){
+    var matchKeyParent = hasclass.match('parent');
+    var matchKeyChild = hasclass.match('child');
+    //allcheck
+    if(matchKeyParent){
+      var clickThis = $(this);
+      var returnClass = 'jq-check-parent-num';
+      var targetClass = thisClassGet(clickThis, returnClass);
+      targetClass = targetClass.replace('parent', 'child');
+
+      //check 'checked'
+      var targetChecked = $(this).prop('checked');
+      //on off
+      if( targetChecked ){
+        $(targetClass).prop("checked", true);
+      }else{
+        $(targetClass).prop("checked", false);
+      }
+      //after check
+      checkedHandler.trHightLight(targetClass)
+    }
+    //singlecheck
+    if(matchKeyChild){
+      var clickThis = $(this);
+      var returnClass = 'jq-check-child-num';
+      var targetClass = thisClassGet(clickThis, returnClass);
+
+      //after check
+      checkedHandler.trHightLight(targetClass)
+    }
+  }
+  console.log(hasclass)
+});
+
+//event handler
+var checkedHandler = {
+  trHightLight: function(targetClass){
+    $('input'+ targetClass).parents('tr').removeClass('is-highlight');
+    $('input'+ targetClass + ':checked').parents('tr').addClass('is-highlight');
+  }
+}
 /*========================================================================
   view html
 ======================================================================== */
