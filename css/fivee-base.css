@@ -42,9 +42,13 @@ dl, dt, dd, ul, li, p, h1, h2, h3, h4, h5, h6 {
 ul {
   list-style-type: none;
 }
+ul.ef-list-disc > li {
+  list-style-type: disc;
+  margin-left: 1em;
+}
 ul.ef-list-decimal > li {
   list-style-type: decimal;
-  margin-left: 23px;
+  margin-left: 28px;
 }
 ul.ef-list-hover-white li:hover > a {
   background: #485169;
@@ -129,8 +133,6 @@ a {
 a:hover {
   text-decoration: underline;
   color: #29659e;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1765,6 +1767,17 @@ a.is-nolink:hover {
 }
 
 /* =============================================================
+ ▼ ellipsis
+============================================================== */
+.ef-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+/* =============================================================
  ▼ padding
 ============================================================== */
 .ef-pd0 {
@@ -3016,2162 +3029,1202 @@ ul.ef-float30 > li.ef-right {
 ============================================================== */
 .ef-mw10-ovf {
   max-width: 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw20-ovf {
   max-width: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw30-ovf {
   max-width: 30px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw40-ovf {
   max-width: 40px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw50-ovf {
   max-width: 50px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw60-ovf {
   max-width: 60px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw70-ovf {
   max-width: 70px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw80-ovf {
   max-width: 80px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw90-ovf {
   max-width: 90px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw100-ovf {
   max-width: 100px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw110-ovf {
   max-width: 110px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw120-ovf {
   max-width: 120px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw130-ovf {
   max-width: 130px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw140-ovf {
   max-width: 140px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw150-ovf {
   max-width: 150px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw160-ovf {
   max-width: 160px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw170-ovf {
   max-width: 170px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw180-ovf {
   max-width: 180px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw190-ovf {
   max-width: 190px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw200-ovf {
   max-width: 200px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw210-ovf {
   max-width: 210px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw220-ovf {
   max-width: 220px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw230-ovf {
   max-width: 230px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw240-ovf {
   max-width: 240px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw250-ovf {
   max-width: 250px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw260-ovf {
   max-width: 260px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw270-ovf {
   max-width: 270px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw280-ovf {
   max-width: 280px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw290-ovf {
   max-width: 290px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw300-ovf {
   max-width: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw310-ovf {
   max-width: 310px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw320-ovf {
   max-width: 320px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw330-ovf {
   max-width: 330px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw340-ovf {
   max-width: 340px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw350-ovf {
   max-width: 350px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw360-ovf {
   max-width: 360px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw370-ovf {
   max-width: 370px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw380-ovf {
   max-width: 380px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw390-ovf {
   max-width: 390px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw400-ovf {
   max-width: 400px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw410-ovf {
   max-width: 410px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw420-ovf {
   max-width: 420px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw430-ovf {
   max-width: 430px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw440-ovf {
   max-width: 440px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw450-ovf {
   max-width: 450px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw460-ovf {
   max-width: 460px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw470-ovf {
   max-width: 470px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw480-ovf {
   max-width: 480px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw490-ovf {
   max-width: 490px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw500-ovf {
   max-width: 500px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw510-ovf {
   max-width: 510px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw520-ovf {
   max-width: 520px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw530-ovf {
   max-width: 530px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw540-ovf {
   max-width: 540px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw550-ovf {
   max-width: 550px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw560-ovf {
   max-width: 560px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw570-ovf {
   max-width: 570px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw580-ovf {
   max-width: 580px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw590-ovf {
   max-width: 590px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mw600-ovf {
   max-width: 600px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w10-ovf {
   width: 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w20-ovf {
   width: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w30-ovf {
   width: 30px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w40-ovf {
   width: 40px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w50-ovf {
   width: 50px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w60-ovf {
   width: 60px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w70-ovf {
   width: 70px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w80-ovf {
   width: 80px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w90-ovf {
   width: 90px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w100-ovf {
   width: 100px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w110-ovf {
   width: 110px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w120-ovf {
   width: 120px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w130-ovf {
   width: 130px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w140-ovf {
   width: 140px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w150-ovf {
   width: 150px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w160-ovf {
   width: 160px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w170-ovf {
   width: 170px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w180-ovf {
   width: 180px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w190-ovf {
   width: 190px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w200-ovf {
   width: 200px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w210-ovf {
   width: 210px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w220-ovf {
   width: 220px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w230-ovf {
   width: 230px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w240-ovf {
   width: 240px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w250-ovf {
   width: 250px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w260-ovf {
   width: 260px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w270-ovf {
   width: 270px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w280-ovf {
   width: 280px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w290-ovf {
   width: 290px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w300-ovf {
   width: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w310-ovf {
   width: 310px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w320-ovf {
   width: 320px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w330-ovf {
   width: 330px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w340-ovf {
   width: 340px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w350-ovf {
   width: 350px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w360-ovf {
   width: 360px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w370-ovf {
   width: 370px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w380-ovf {
   width: 380px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w390-ovf {
   width: 390px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w400-ovf {
   width: 400px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w410-ovf {
   width: 410px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w420-ovf {
   width: 420px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w430-ovf {
   width: 430px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w440-ovf {
   width: 440px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w450-ovf {
   width: 450px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w460-ovf {
   width: 460px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w470-ovf {
   width: 470px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w480-ovf {
   width: 480px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w490-ovf {
   width: 490px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w500-ovf {
   width: 500px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w510-ovf {
   width: 510px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w520-ovf {
   width: 520px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w530-ovf {
   width: 530px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w540-ovf {
   width: 540px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w550-ovf {
   width: 550px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w560-ovf {
   width: 560px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w570-ovf {
   width: 570px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w580-ovf {
   width: 580px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w590-ovf {
   width: 590px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-w600-ovf {
   width: 600px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 
 .ef-mh10-ovf {
   max-height: 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh20-ovf {
   max-height: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh30-ovf {
   max-height: 30px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh40-ovf {
   max-height: 40px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh50-ovf {
   max-height: 50px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh60-ovf {
   max-height: 60px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh70-ovf {
   max-height: 70px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh80-ovf {
   max-height: 80px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh90-ovf {
   max-height: 90px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh100-ovf {
   max-height: 100px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh110-ovf {
   max-height: 110px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh120-ovf {
   max-height: 120px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh130-ovf {
   max-height: 130px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh140-ovf {
   max-height: 140px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh150-ovf {
   max-height: 150px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh160-ovf {
   max-height: 160px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh170-ovf {
   max-height: 170px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh180-ovf {
   max-height: 180px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh190-ovf {
   max-height: 190px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh200-ovf {
   max-height: 200px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh210-ovf {
   max-height: 210px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh220-ovf {
   max-height: 220px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh230-ovf {
   max-height: 230px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh240-ovf {
   max-height: 240px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh250-ovf {
   max-height: 250px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh260-ovf {
   max-height: 260px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh270-ovf {
   max-height: 270px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh280-ovf {
   max-height: 280px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh290-ovf {
   max-height: 290px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh300-ovf {
   max-height: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh310-ovf {
   max-height: 310px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh320-ovf {
   max-height: 320px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh330-ovf {
   max-height: 330px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh340-ovf {
   max-height: 340px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh350-ovf {
   max-height: 350px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh360-ovf {
   max-height: 360px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh370-ovf {
   max-height: 370px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh380-ovf {
   max-height: 380px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh390-ovf {
   max-height: 390px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh400-ovf {
   max-height: 400px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh410-ovf {
   max-height: 410px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh420-ovf {
   max-height: 420px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh430-ovf {
   max-height: 430px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh440-ovf {
   max-height: 440px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh450-ovf {
   max-height: 450px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh460-ovf {
   max-height: 460px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh470-ovf {
   max-height: 470px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh480-ovf {
   max-height: 480px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh490-ovf {
   max-height: 490px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh500-ovf {
   max-height: 500px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh510-ovf {
   max-height: 510px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh520-ovf {
   max-height: 520px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh530-ovf {
   max-height: 530px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh540-ovf {
   max-height: 540px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh550-ovf {
   max-height: 550px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh560-ovf {
   max-height: 560px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh570-ovf {
   max-height: 570px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh580-ovf {
   max-height: 580px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh590-ovf {
   max-height: 590px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-mh600-ovf {
   max-height: 600px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h10-ovf {
   height: 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h20-ovf {
   height: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h30-ovf {
   height: 30px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h40-ovf {
   height: 40px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h50-ovf {
   height: 50px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h60-ovf {
   height: 60px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h70-ovf {
   height: 70px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h80-ovf {
   height: 80px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h90-ovf {
   height: 90px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h100-ovf {
   height: 100px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h110-ovf {
   height: 110px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h120-ovf {
   height: 120px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h130-ovf {
   height: 130px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h140-ovf {
   height: 140px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h150-ovf {
   height: 150px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h160-ovf {
   height: 160px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h170-ovf {
   height: 170px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h180-ovf {
   height: 180px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h190-ovf {
   height: 190px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h200-ovf {
   height: 200px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h210-ovf {
   height: 210px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h220-ovf {
   height: 220px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h230-ovf {
   height: 230px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h240-ovf {
   height: 240px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h250-ovf {
   height: 250px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h260-ovf {
   height: 260px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h270-ovf {
   height: 270px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h280-ovf {
   height: 280px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h290-ovf {
   height: 290px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h300-ovf {
   height: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h310-ovf {
   height: 310px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h320-ovf {
   height: 320px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h330-ovf {
   height: 330px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h340-ovf {
   height: 340px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h350-ovf {
   height: 350px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h360-ovf {
   height: 360px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h370-ovf {
   height: 370px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h380-ovf {
   height: 380px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h390-ovf {
   height: 390px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h400-ovf {
   height: 400px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h410-ovf {
   height: 410px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h420-ovf {
   height: 420px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h430-ovf {
   height: 430px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h440-ovf {
   height: 440px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h450-ovf {
   height: 450px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h460-ovf {
   height: 460px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h470-ovf {
   height: 470px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h480-ovf {
   height: 480px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h490-ovf {
   height: 490px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h500-ovf {
   height: 500px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h510-ovf {
   height: 510px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h520-ovf {
   height: 520px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h530-ovf {
   height: 530px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h540-ovf {
   height: 540px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h550-ovf {
   height: 550px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h560-ovf {
   height: 560px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h570-ovf {
   height: 570px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h580-ovf {
   height: 580px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h590-ovf {
   height: 590px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 .ef-h600-ovf {
   height: 600px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-y: auto;
 }
 
 /*
@@ -5565,7 +4618,7 @@ label.cp-checkbox input[type="radio"] {
   text-decoration: none;
   outline: none;
   color: #333;
-  background: #f9f9f9;
+  background: #eee;
   font-family: Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 13px;
   border-width: 1px;
@@ -5574,10 +4627,10 @@ label.cp-checkbox input[type="radio"] {
   -moz-border-radius: 3px 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px 3px;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fff), color-stop(50%, #f9f9f9), color-stop(100%, #f9f9f9));
-  background-image: -moz-linear-gradient(#fff, #f9f9f9, #f9f9f9);
-  background-image: -webkit-linear-gradient(#fff, #f9f9f9, #f9f9f9);
-  background-image: linear-gradient(#ffffff, #f9f9f9, #f9f9f9);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f6f6f6), color-stop(50%, #eee), color-stop(100%, #eee));
+  background-image: -moz-linear-gradient(#f6f6f6, #eee, #eee);
+  background-image: -webkit-linear-gradient(#f6f6f6, #eee, #eee);
+  background-image: linear-gradient(#f6f6f6, #eeeeee, #eeeeee);
 }
 .cp-btn i, .cp-btn-theme i, .cp-btn-fix i, .cp-btn-large i, .cp-btn-mini i {
   color: #333;
@@ -5585,26 +4638,30 @@ label.cp-checkbox input[type="radio"] {
 .cp-btn:hover, .cp-btn-theme:hover, .cp-btn-fix:hover, .cp-btn-large:hover, .cp-btn-mini:hover {
   text-decoration: none;
   color: #333;
-  background: #ececec;
+  background: #f6f6f6;
   border-width: 1px;
   border-style: solid;
-  border-color: #bfbfbf;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f9f9f9), color-stop(50%, #ececec), color-stop(100%, #ececec));
-  background-image: -moz-linear-gradient(#f9f9f9, #ececec, #ececec);
-  background-image: -webkit-linear-gradient(#f9f9f9, #ececec, #ececec);
-  background-image: linear-gradient(#f9f9f9, #ececec, #ececec);
+  border-color: #d9d9d9;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f6f6f6), color-stop(50%, #f6f6f6), color-stop(100%, #f6f6f6));
+  background-image: -moz-linear-gradient(#f6f6f6, #f6f6f6, #f6f6f6);
+  background-image: -webkit-linear-gradient(#f6f6f6, #f6f6f6, #f6f6f6);
+  background-image: linear-gradient(#f6f6f6, #f6f6f6, #f6f6f6);
 }
 .cp-btn:hover i, .cp-btn-theme:hover i, .cp-btn-fix:hover i, .cp-btn-large:hover i, .cp-btn-mini:hover i {
   color: #333;
 }
 .cp-btn:active, .cp-btn-theme:active, .cp-btn-fix:active, .cp-btn-large:active, .cp-btn-mini:active {
-  background: #bfbfbf;
+  background: #eee;
   border-width: 1px;
   border-style: solid;
-  border-color: #bfbfbf;
+  border-color: #ccc;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eee), color-stop(50%, #eee), color-stop(100%, #eee));
+  background-image: -moz-linear-gradient(#eee, #eee, #eee);
+  background-image: -webkit-linear-gradient(#eee, #eee, #eee);
+  background-image: linear-gradient(#eeeeee, #eeeeee, #eeeeee);
 }
 .cp-btn.cp-disabled:hover, .cp-disabled.cp-btn-theme:hover, .cp-disabled.cp-btn-fix:hover, .cp-disabled.cp-btn-large:hover, .cp-disabled.cp-btn-mini:hover {
-  background: #f9f9f9;
+  background: #eee;
   cursor: default;
 }
 
@@ -5614,27 +4671,37 @@ label.cp-checkbox input[type="radio"] {
   border-width: 1px;
   border-style: solid;
   border-color: #485169;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #485169), color-stop(50%, #485169), color-stop(100%, #485169));
-  background-image: -moz-linear-gradient(#485169, #485169, #485169);
-  background-image: -webkit-linear-gradient(#485169, #485169, #485169);
-  background-image: linear-gradient(#485169, #485169, #485169);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #525d78), color-stop(50%, #485169), color-stop(100%, #485169));
+  background-image: -moz-linear-gradient(#525d78, #485169, #485169);
+  background-image: -webkit-linear-gradient(#525d78, #485169, #485169);
+  background-image: linear-gradient(#525d78, #485169, #485169);
 }
 .cp-btn-theme i {
   color: #fff;
 }
 .cp-btn-theme:hover {
   color: #fff;
-  background: #3e455a;
+  background: #525d78;
   border-width: 1px;
   border-style: solid;
-  border-color: #3e455a;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3e455a), color-stop(50%, #3e455a), color-stop(100%, #3e455a));
-  background-image: -moz-linear-gradient(#3e455a, #3e455a, #3e455a);
-  background-image: -webkit-linear-gradient(#3e455a, #3e455a, #3e455a);
-  background-image: linear-gradient(#3e455a, #3e455a, #3e455a);
+  border-color: #525d78;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #525d78), color-stop(50%, #525d78), color-stop(100%, #525d78));
+  background-image: -moz-linear-gradient(#525d78, #525d78, #525d78);
+  background-image: -webkit-linear-gradient(#525d78, #525d78, #525d78);
+  background-image: linear-gradient(#525d78, #525d78, #525d78);
 }
 .cp-btn-theme:hover i {
   color: #fff;
+}
+.cp-btn-theme:active {
+  background: #485169;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #485169;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #485169), color-stop(50%, #485169), color-stop(100%, #485169));
+  background-image: -moz-linear-gradient(#485169, #485169, #485169);
+  background-image: -webkit-linear-gradient(#485169, #485169, #485169);
+  background-image: linear-gradient(#485169, #485169, #485169);
 }
 .cp-btn-theme.cp-disabled {
   color: #fff;
@@ -5745,11 +4812,7 @@ label.cp-checkbox input[type="radio"] {
   text-align: center;
   display: block;
   max-width: 250px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 .cp-tab .cp-tab-btn > .st-inner ul li .cp-underbar {
   position: absolute;
@@ -5952,11 +5015,7 @@ label.cp-checkbox input[type="radio"] {
 }
 .cp-tooltip .st-body .st-inner .cp-tooltip-box .st-inner {
   max-width: 500px;
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
+  overflow-x: auto;
 }
 .cp-tooltip .st-body .st-inner .cp-balloon {
   position: absolute;
@@ -5996,17 +5055,17 @@ table.cp-table-base {
 table.cp-table-base thead.cp-th-hover tr:hover th, table.cp-table-base tbody.cp-th-hover tr:hover th {
   background-color: #f5f5f5;
 }
-table.cp-table-base thead.cp-th-hover tr:hover th.cp-reset-th, table.cp-table-base tbody.cp-th-hover tr:hover th.cp-reset-th {
+table.cp-table-base thead.cp-th-hover tr:hover th.cp-th-reset, table.cp-table-base tbody.cp-th-hover tr:hover th.cp-th-reset {
   background-color: #e5e5e5;
 }
 table.cp-table-base thead.cp-td-hover tr:hover td, table.cp-table-base tbody.cp-td-hover tr:hover td {
   background-color: #f5f5f5;
 }
-table.cp-table-base thead.cp-td-hover tr:hover td.cp-reset-td, table.cp-table-base tbody.cp-td-hover tr:hover td.cp-reset-td {
+table.cp-table-base thead.cp-td-hover tr:hover td.cp-td-reset, table.cp-table-base tbody.cp-td-hover tr:hover td.cp-td-reset {
   background-color: #fff;
 }
 table.cp-table-base tr th, table.cp-table-base colgroup th {
-  padding: 7px;
+  padding: 5px;
   font-size: 13px;
   background: #e5e5e5;
   border-right-width: 1px;
@@ -6022,7 +5081,7 @@ table.cp-table-base tr th a, table.cp-table-base tr th i, table.cp-table-base co
   color: #333;
 }
 table.cp-table-base tr td, table.cp-table-base colgroup td {
-  padding: 7px;
+  padding: 5px;
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #ccc;
@@ -6041,25 +5100,25 @@ table.cp-table-base tr tbody:last-child td, table.cp-table-base colgroup tbody:l
 table.cp-table-base tr.cp-th-hover th:hover, table.cp-table-base colgroup.cp-th-hover th:hover {
   background-color: #f5f5f5;
 }
-table.cp-table-base tr.cp-th-hover th:hover.cp-reset-th, table.cp-table-base colgroup.cp-th-hover th:hover.cp-reset-th {
+table.cp-table-base tr.cp-th-hover th:hover.cp-th-reset, table.cp-table-base colgroup.cp-th-hover th:hover.cp-th-reset {
   background-color: #e5e5e5;
 }
 table.cp-table-base tr.cp-td-hover td:hover, table.cp-table-base colgroup.cp-td-hover td:hover {
   background-color: #f5f5f5;
 }
-table.cp-table-base tr.cp-td-hover td:hover.cp-reset-td, table.cp-table-base colgroup.cp-td-hover td:hover.cp-reset-td {
+table.cp-table-base tr.cp-td-hover td:hover.cp-td-reset, table.cp-table-base colgroup.cp-td-hover td:hover.cp-td-reset {
   background-color: #fff;
 }
 table.cp-table-base tr.is-highlight td, table.cp-table-base colgroup.is-highlight td {
   background-color: #f5f5f5;
 }
-table.cp-table-base tr.is-highlight.cp-reset-td td, table.cp-table-base colgroup.is-highlight.cp-reset-td td {
+table.cp-table-base tr.is-highlight.cp-td-reset td, table.cp-table-base colgroup.is-highlight.cp-td-reset td {
   background-color: #fff;
 }
 table.cp-table-base tr.is-select td, table.cp-table-base colgroup.is-select td {
   background-color: #999;
 }
-table.cp-table-base tr.is-select.cp-reset-td td, table.cp-table-base colgroup.is-select.cp-reset-td td {
+table.cp-table-base tr.is-select.cp-td-reset td, table.cp-table-base colgroup.is-select.cp-td-reset td {
   background-color: #fff;
 }
 table.cp-table-base tr .ef-vrt, table.cp-table-base colgroup .ef-vrt {
@@ -7771,28 +6830,106 @@ table.cp-table-base tr.cp-brd3-left-dashed-red th, table.cp-table-base tr.cp-brd
  * "wall"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
-.cp-wall .st-body, .cp-wall-supplement .st-body {
+.cp-remarks .st-inner, .cp-remarks-red .st-inner, .cp-remarks-orange .st-inner, .cp-remarks-blue .st-inner, .cp-remarks-green .st-inner, .cp-remarks-yellow .st-inner, .cp-remarks-black .st-inner, .cp-remarks-gray .st-inner, .cp-remarks-gray1 .st-inner, .cp-remarks-gray2 .st-inner, .cp-remarks-gray3 .st-inner, .cp-remarks-gray4 .st-inner, .cp-remarks-gray5 .st-inner, .cp-remarks-gray6 .st-inner, .cp-remarks-gray7 .st-inner {
+  background: #fff;
   border-width: 1px;
   border-style: solid;
   border-color: #ccc;
-}
-.cp-wall .st-body .st-inner, .cp-wall-supplement .st-body .st-inner {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #fff;
-  background: #f6f6f6;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   padding: 7px 10px;
 }
-.cp-wall .st-body .st-inner .st-outer, .cp-wall-supplement .st-body .st-inner .st-outer {
+.cp-remarks .st-inner .st-outer, .cp-remarks-red .st-inner .st-outer, .cp-remarks-orange .st-inner .st-outer, .cp-remarks-blue .st-inner .st-outer, .cp-remarks-green .st-inner .st-outer, .cp-remarks-yellow .st-inner .st-outer, .cp-remarks-black .st-inner .st-outer, .cp-remarks-gray .st-inner .st-outer, .cp-remarks-gray1 .st-inner .st-outer, .cp-remarks-gray2 .st-inner .st-outer, .cp-remarks-gray3 .st-inner .st-outer, .cp-remarks-gray4 .st-inner .st-outer, .cp-remarks-gray5 .st-inner .st-outer, .cp-remarks-gray6 .st-inner .st-outer, .cp-remarks-gray7 .st-inner .st-outer {
   border-left-width: 5px;
   border-left-style: solid;
-  border-left-color: #ccc;
+  border-left-color: #fff;
   padding-left: 7px;
   font-size: 12px;
 }
 
-.cp-wall-supplement .st-body .st-inner {
-  background: #FEFDDA;
+.cp-remarks-red .st-inner .st-outer {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #cc3300;
+}
+
+.cp-remarks-orange .st-inner .st-outer {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #B59654;
+}
+
+.cp-remarks-blue .st-inner .st-outer {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #548BB5;
+}
+
+.cp-remarks-green .st-inner .st-outer {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #689C51;
+}
+
+.cp-remarks-yellow .st-inner .st-outer {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #F4DD17;
+}
+
+.cp-remarks-black .st-inner .st-outer {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #000;
+}
+
+.cp-remarks-gray .st-inner .st-outer {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #666;
+}
+
+.cp-remarks-gray1 .st-inner .st-outer {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #888;
+}
+
+.cp-remarks-gray2 .st-inner .st-outer {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #999;
+}
+
+.cp-remarks-gray3 .st-inner .st-outer {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #aaa;
+}
+
+.cp-remarks-gray4 .st-inner .st-outer {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #bbb;
+}
+
+.cp-remarks-gray5 .st-inner .st-outer {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #ccc;
+}
+
+.cp-remarks-gray6 .st-inner .st-outer {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #ddd;
+}
+
+.cp-remarks-gray7 .st-inner .st-outer {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #eee;
 }
 
 /*

@@ -139,20 +139,21 @@ label{
   font-size:$fs-base;
   @include brd;
   @include border-radius(3px 3px);
-  @include gradation($cl-white, $cl-btn-base);
+  @include gradation($cl-btn-lighten, $cl-btn-base);
   //@include gradation-ie(#ffffffff, #ffeeeeee); // for oldie
   &:hover{
     text-decoration:none;
     color:$cl-txt-base;
     i{color:$cl-txt-base;}
-    background:$cl-btn-darken; // for oldie
-    @include brd(1px,solid,$cl-brd-darken);
-    @include gradation($cl-btn-base, $cl-btn-darken);
+    background:$cl-btn-lighten; // for oldie
+    @include brd(1px,solid,$cl-brd-lighten);
+    @include gradation($cl-btn-lighten, $cl-btn-lighten);
     //@include gradation-ie(#FFf2f2f2, #FFe1e1e1); // for oldie
   }
   &:active{
-    background:$cl-brd-darken; // for oldie
-    @include brd(1px,solid,$cl-brd-darken);
+    background:$cl-btn-base; // for oldie
+    @include brd;
+    @include gradation($cl-btn-base, $cl-btn-base);
   }
   //for oldie
   &.cp-disabled{
@@ -170,15 +171,18 @@ label{
   i{color:$cl-txt-rev;}
   background:$cl-theme; // for oldie
   @include brd(1px,solid,$cl-theme);
-  @include gradation($cl-theme, $cl-theme);
-  //@include gradation-ie(#ff499d59, #ff499d59); // for oldie
+  @include gradation($cl-theme-lighten, $cl-theme);
   &:hover{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
-    background:$cl-theme-darken; // for oldie
-    @include brd(1px,solid,$cl-theme-darken);
-    @include gradation($cl-theme-darken, $cl-theme-darken);
-    //@include gradation-ie(#FF418c4f, #FF418c4f); // for oldie
+    background:$cl-theme-lighten; // for oldie
+    @include brd(1px,solid,$cl-theme-lighten);
+    @include gradation($cl-theme-lighten, $cl-theme-lighten);
+  }
+  &:active{
+    background:$cl-theme; // for oldie
+    @include brd(1px,solid,$cl-theme);
+    @include gradation($cl-theme, $cl-theme);
   }
   //for oldie
   &.cp-disabled{
@@ -459,7 +463,7 @@ table.cp-table-base{
       tr:hover{
         th{
           background-color:$cl-bg-table-th-hover;
-          &.cp-reset-th{
+          &.cp-th-reset{
             background-color:$cl-bg-table-header;
           }
         }
@@ -469,7 +473,7 @@ table.cp-table-base{
       tr:hover{
         td{
           background-color:$cl-bg-table-td-hover;
-          &.cp-reset-td{
+          &.cp-td-reset{
             background-color:$cl-white;
           }
         }
@@ -500,7 +504,7 @@ table.cp-table-base{
     &.cp-th-hover{
       th:hover{
         background-color:$cl-bg-table-th-hover;
-        &.cp-reset-th{
+        &.cp-th-reset{
           background-color:$cl-bg-table-header;
         }
       }
@@ -508,26 +512,26 @@ table.cp-table-base{
     &.cp-td-hover{
       td:hover{
         background-color:$cl-bg-table-td-hover;
-        &.cp-reset-td{
+        &.cp-td-reset{
           background-color:$cl-white;
         }
       }
     }
     &.is-highlight{
       td{background-color:$cl-bg-table-highlight;}
-      &.cp-reset-td{
+      &.cp-td-reset{
         td{background-color:$cl-white;}
       }
     }
     &.is-select{
       td{background-color:$cl-bg-table-select;}
-      &.cp-reset-td{
+      &.cp-td-reset{
         td{background-color:$cl-white;}
       }
     }
     // &.is-select{
     //   td{background-color:$cl-bg-table-select;}
-    //   &.cp-reset-td{
+    //   &.cp-td-reset{
     //     td{background-color:$cl-white;}
     //   }
     // }
@@ -1071,29 +1075,132 @@ table.cp-table-base{
  * "wall"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
-.cp-wall{
-  .st-body{
+.cp-remarks{
+  .st-inner{
+    background:$cl-bg-remarks;
     @include brd;
-    .st-inner{
-      @include brd(1px,solid,$cl-white);
-      background:$cl-bg-wall;
-      padding:7px 10px;
-      .st-outer{
-        @include brd-left(5px,solid,#ccc);
-        padding-left:7px;
-        font-size:12px;
-      }
+    @include border-radius(3px);
+    padding:7px 10px;
+    .st-outer{
+      @include brd-left(5px,solid,#fff);
+      padding-left:7px;
+      font-size:12px;
     }
   }
 }
-.cp-wall-supplement{
-  @extend .cp-wall;
-  .st-body{
-    .st-inner{
-      background:$cl-bg-wall-supplement;
+.cp-remarks-red{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-red);
     }
   }
 }
+.cp-remarks-orange{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-orange);
+    }
+  }
+}
+.cp-remarks-blue{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-blue);
+    }
+  }
+}
+.cp-remarks-green{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-green);
+    }
+  }
+}
+.cp-remarks-yellow{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-yellow);
+    }
+  }
+}
+.cp-remarks-black{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-black);
+    }
+  }
+}
+.cp-remarks-gray{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-gray);
+    }
+  }
+}
+.cp-remarks-gray1{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-gray1);
+    }
+  }
+}
+.cp-remarks-gray2{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-gray2);
+    }
+  }
+}
+.cp-remarks-gray3{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-gray3);
+    }
+  }
+}
+.cp-remarks-gray4{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-gray4);
+    }
+  }
+}
+.cp-remarks-gray5{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-gray5);
+    }
+  }
+}
+.cp-remarks-gray6{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-gray6);
+    }
+  }
+}
+.cp-remarks-gray7{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-gray7);
+    }
+  }
+}
+
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "caret"

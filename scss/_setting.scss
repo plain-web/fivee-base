@@ -45,6 +45,7 @@ $cl-theme1: #555;
 $cl-theme2: #111;
 
 $cl-theme-darken: darken( $cl-theme, 5% );
+$cl-theme-lighten: lighten( $cl-theme, 5% );
 $cl-theme1-darken: darken( $cl-theme1, 5% );
 $cl-theme1-lighten: lighten( $cl-theme1, 5% );
 
@@ -85,6 +86,13 @@ $cl-txt-gray5:#888;
 $cl-txt-gray6:#999;
 $cl-txt-gray7:#aaa;
 
+//text color
+$cl-txt-base: #333;
+$cl-txt-rev : #fff;
+$cl-txt-link:#448CCF;
+$cl-txt-theme : $cl-theme;
+$cl-txt-hover: darken( $cl-txt-link, 15% );
+
 //bg color
 $cl-bg-white: $cl-white;
 $cl-bg-red: #FFEEF3;
@@ -103,14 +111,6 @@ $cl-bg-gray6:#aaa;
 $cl-bg-gray7:#999;
 $cl-bg-theme: $cl-theme;
 
-//text color
-$cl-txt-base: #333;
-$cl-txt-sub : #666;
-$cl-txt-rev : #fff;
-$cl-txt-link:#448CCF;
-$cl-txt-theme : $cl-theme;
-$cl-txt-hover: darken( $cl-txt-link, 15% );
-
 //border color
 $cl-brd-base:#ccc;
 $cl-brd-theme: $cl-theme;
@@ -123,10 +123,10 @@ $cl-brd-focus :#8691C1;
 $cl-bg-focus :#EDF3F7;
 
 //button color
-$cl-btn-base:#f9f9f9;
-$cl-btn-hover: darken( $cl-btn-base, 5% );
-
+$cl-btn-base:#eee;
+$cl-btn-lighten: lighten( $cl-btn-base, 3% );
 $cl-btn-darken: darken( $cl-btn-base, 5% );
+$cl-btn-hover: darken( $cl-btn-base, 5% );
 
 //userinfo color
 $cl-alert: #cc3300;
@@ -168,7 +168,7 @@ $cl-bg-table-th-hover : $cl-bg-gray;
 $cl-bg-table-td-hover : $cl-bg-gray;
 $cl-bg-table-highlight : $cl-bg-gray;
 $cl-bg-table-select : $cl-gray2;
-$pd-table:7px;
+$pd-table:5px;
 
 //modal
 $cl-bg-modal-header: #CAD5D9;
@@ -181,9 +181,9 @@ $cl-bg-popup:#fff;
 //tooltip
 $cl-bg-tooltip:#666;
 
-//wall
-$cl-bg-wall: #f6f6f6;
-$cl-bg-wall-supplement:#FEFDDA;
+//remarks
+$cl-bg-remarks: #fff;
+$cl-bg-remarks-supplement:#FEFDDA;
 
 //badge size
 $cl-bg-badge:$cl-red;
@@ -259,19 +259,19 @@ $cl-stamp-yellow:$cl-yellow;
 
 @mixin width-overflow($max:900px){
   width: $max;
-  @include ellipsis;
+  overflow-x: auto;
 }
 @mixin width-overflow-max($max:900px){
   max-width: $max;
-  @include ellipsis;
+  overflow-x: auto;
 }
 @mixin height-overflow($max:900px){
   height: $max;
-  @include ellipsis;
+  overflow-y: auto;
 }
 @mixin height-overflow-max($max:900px){
   max-height: $max;
-  @include ellipsis;
+  overflow-y: auto;
 }
 
 @mixin boxset($bg: $cl-gray, $radius: 3px, $width: 1px, $type: solid, $color: $cl-brd-base){
@@ -313,10 +313,16 @@ dl,dt,dd,ul,li,p,h1, h2, h3, h4, h5, h6{
 }
 ul{
   list-style-type: none;
+  &.ef-list-disc{
+    >li{
+      list-style-type:disc;
+      margin-left:1em;
+    }
+  }
   &.ef-list-decimal{
     >li{
       list-style-type:decimal;
-      margin-left:23px;
+      margin-left:28px;
     }
   }
   &.ef-list-hover-white{
@@ -392,7 +398,7 @@ a{
   &:hover{
     text-decoration:underline;
     color: $cl-txt-hover;
-    @include opacity(0.8);
+    //@include opacity(0.8);
     @include transition(all 0.3s ease-in-out);
     img{
      @include opacity(0.8);
