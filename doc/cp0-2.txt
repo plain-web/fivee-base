@@ -1,0 +1,226 @@
+<!-- modal///////////////////////////////////////////////////////// -->
+<section class="cp-modal jq-modal" style="display:none;">
+  <!-- modal contents type 'jq-modal-num0' -->
+  <div class="st-body ef-w500 jq-modal-posi jq-modal-num0">
+    <div class="st-inner">
+      <!-- modal-header /////////////////// -->
+      <div class="cp-modal-header">
+        <div class="st-inner">
+          <div class="cp-modal-title">
+            <h6>
+              modal example
+            </h6>
+          </div>
+          <div class="cp-modal-close">
+            <a class="ef-fs20 jq-modal-close" href="javascript:void(0);">
+              <i class="fa fa-times"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- modal-body  //////////////////// -->
+      <div class="cp-modal-body">
+        <div class="st-inner ef-mw500-ovf ef-mh300-ovf">
+          <section class="ef-mgb10">
+            Select column
+          </section>
+          <section>
+            <table class="cp-table-base ef-w100p jq-check">
+              <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col class="ef-bg-green">
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <!-- tr /////////////////////// -->
+                <tr>
+                  <th class="ef-w20">
+                    <input class="jq-check-parent-num0" type="checkbox">
+                  </th>
+                  <th>
+                    <a href="javascript:void(0);">
+                      header
+                    </a>
+                  </th>
+                  <th>
+                    <a href="javascript:void(0);">
+                      header
+                    </a>
+                  </th>
+                  <th>
+                    <a href="javascript:void(0);">
+                      header
+                    </a>
+                  </th>
+                  <th>
+                    <a href="javascript:void(0);">
+                      header
+                      <i class="fa fa-caret-down"></i>
+                    </a>
+                  </th>
+                  <th>
+                    <a href="javascript:void(0);">
+                      header
+                    </a>
+                  </th>
+                  <th class="ef-w20">
+                    <a href="javascript:void(0);">
+                      header
+                    </a>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="cp-td-hover">
+                <!-- tr /////////////////////// -->
+                <tr>
+                  <td>
+                    <input class="jq-check-child-num0" type="checkbox">
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td class="ef-txt-center">
+                    <a class="cp-btn-mini" href="javascript:void(0);">
+                      option
+                    </a>
+                  </td>
+                </tr>
+                <!-- tr /////////////////////// -->
+                <tr>
+                  <td>
+                    <input class="jq-check-child-num0" type="checkbox">
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td class="ef-txt-center">
+                    <a class="cp-btn-mini" href="javascript:void(0);">
+                      option
+                    </a>
+                  </td>
+                </tr>
+                <!-- tr /////////////////////// -->
+                <tr>
+                  <td>
+                    <input class="jq-check-child-num0" type="checkbox">
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td class="ef-txt-center">
+                    <a class="cp-btn-mini" href="javascript:void(0);">
+                      option
+                    </a>
+                  </td>
+                </tr>
+                <!-- tr /////////////////////// -->
+                <tr>
+                  <td>
+                    <input class="jq-check-child-num0" type="checkbox">
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td class="ef-txt-center">
+                    <a class="cp-btn-mini" href="javascript:void(0);">
+                      option
+                    </a>
+                  </td>
+                </tr>
+                <!-- tr /////////////////////// -->
+                <tr>
+                  <td>
+                    <input class="jq-check-child-num0" type="checkbox">
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td>
+                    column
+                  </td>
+                  <td class="ef-txt-center">
+                    <a class="cp-btn-mini" href="javascript:void(0);">
+                      option
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+      <!-- modal-footer ////////////////// -->
+      <div class="cp-modal-footer">
+        <div class="st-inner ef-txt-center">
+          <a class="cp-btn-theme ef-mw100" href="javascript:void(0);">
+            submit
+          </a>
+          <a class="cp-btn ef-mw100 jq-modal-close" href="javascript:void(0);">
+            cancel
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

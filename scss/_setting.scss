@@ -405,14 +405,14 @@ a{
      @include transition(all 0.3s ease-in-out);
     }
   }
-  &.is-link{
+  &.ef-is-link{
     text-decoration:underline;
     &:hover{
       text-decoration:none;
       color: $cl-txt-hover;
     }
   }
-  &.is-nolink{
+  &.ef-is-nolink{
     text-decoration:none;
     color: $cl-txt-base;
     &:hover{

@@ -146,18 +146,18 @@ a:hover img {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-a.is-link {
+a.ef-is-link {
   text-decoration: underline;
 }
-a.is-link:hover {
+a.ef-is-link:hover {
   text-decoration: none;
   color: #29659e;
 }
-a.is-nolink {
+a.ef-is-nolink {
   text-decoration: none;
   color: #333;
 }
-a.is-nolink:hover {
+a.ef-is-nolink:hover {
   text-decoration: none;
   color: #333;
 }

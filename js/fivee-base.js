@@ -590,9 +590,9 @@ $('.jq-html-show').on('click', function(){
   returnClass = 'jq-example-num';
   targetClass = thisClassGet(clickThis, returnClass);
   //filepath
-  var fileUrl = 'doc/' + targetClass.replace(".jq-example-num", "") + '.txt';
+  var fileUrl = 'doc/' + targetClass.replace(".jq-example-num-", "") + '.txt';
   //draw html
-  var drawClass = targetClass.slice(0,18).replace(".jq-example-num", ".jq-example-tag-num");
+  var drawClass = targetClass.slice(0,19).replace(".jq-example-num-", ".jq-example-tag-num-");
   //check array
   var checkValue = $.inArray(targetClass, drawFlg);
   //check last array
