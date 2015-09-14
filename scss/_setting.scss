@@ -55,7 +55,7 @@ $cl-bg-body: #f6f6f6;
 //color
 $cl-white:#fff;
 $cl-red:#cc3300;
-$cl-orange:#B59654;
+$cl-orange:#E6AD2D;
 $cl-blue:#548BB5;
 $cl-green:#689C51;
 $cl-yellow:#F4DD17;
@@ -90,8 +90,8 @@ $cl-txt-gray7:#aaa;
 $cl-txt-base: #333;
 $cl-txt-rev : #fff;
 $cl-txt-link:#448CCF;
-$cl-txt-theme : $cl-theme;
 $cl-txt-hover: darken( $cl-txt-link, 15% );
+$cl-txt-theme : $cl-theme;
 
 //bg color
 $cl-bg-white: $cl-white;
@@ -125,8 +125,31 @@ $cl-bg-focus :#EDF3F7;
 //button color
 $cl-btn-base:#eee;
 $cl-btn-lighten: lighten( $cl-btn-base, 3% );
-$cl-btn-darken: darken( $cl-btn-base, 5% );
-$cl-btn-hover: darken( $cl-btn-base, 5% );
+$cl-btn-darken: darken( $cl-btn-base, 10% );
+$cl-btn-red:$cl-red;
+$cl-btn-red-lighten: lighten( $cl-btn-red, 3% );
+$cl-btn-red-darken: darken( $cl-btn-red, 10% );
+$cl-btn-orange:$cl-orange;
+$cl-btn-orange-lighten: lighten( $cl-btn-orange, 3% );
+$cl-btn-orange-darken: darken( $cl-btn-orange, 10% );
+$cl-btn-blue:$cl-blue;
+$cl-btn-blue-lighten: lighten( $cl-btn-blue, 3% );
+$cl-btn-blue-darken: darken( $cl-btn-blue, 10% );
+$cl-btn-green:$cl-green;
+$cl-btn-green-lighten: lighten( $cl-btn-green, 3% );
+$cl-btn-green-darken: darken( $cl-btn-green, 10% );
+$cl-btn-yellow:$cl-yellow;
+$cl-btn-yellow-lighten: lighten( $cl-btn-yellow, 3% );
+$cl-btn-yellow-darken: darken( $cl-btn-yellow, 10% );
+$cl-btn-black:$cl-black;
+$cl-btn-black-lighten: lighten( $cl-btn-black, 3% );
+$cl-btn-black-darken: darken( $cl-btn-black, 10% );
+$cl-btn-gray:$cl-gray;
+$cl-btn-gray-lighten: lighten( $cl-btn-gray, 3% );
+$cl-btn-gray-darken: darken( $cl-btn-gray, 10% );
+$cl-btn-theme:$cl-theme;
+$cl-btn-theme-lighten: lighten( $cl-btn-theme, 3% );
+$cl-btn-theme-darken: darken( $cl-btn-theme, 10% );
 
 //userinfo color
 $cl-alert: #cc3300;
@@ -307,117 +330,6 @@ body {
   font-family: $ff-base;
 }
 *,*:before, *:after {box-sizing: border-box;}
-dl,dt,dd,ul,li,p,h1, h2, h3, h4, h5, h6{
-  margin:0;
-  padding:0;
-}
-ul{
-  list-style-type: none;
-  &.ef-list-disc{
-    >li{
-      list-style-type:disc;
-      margin-left:1em;
-    }
-  }
-  &.ef-list-decimal{
-    >li{
-      list-style-type:decimal;
-      margin-left:28px;
-    }
-  }
-  &.ef-list-hover-white{
-    li:hover{>a{background:$cl-bg-theme;}}
-  }
-  &.ef-list-hover-red{
-    li:hover{>a{background:$cl-bg-red;}}
-  }
-  &.ef-list-hover-orange{
-    li:hover{>a{background:$cl-bg-orange;}}
-  }
-  &.ef-list-hover-blue{
-    li:hover{>a{background:$cl-bg-blue;}}
-  }
-  &.ef-list-hover-green{
-    li:hover{>a{background:$cl-bg-green;}}
-  }
-  &.ef-list-hover-yellow{
-    li:hover{>a{background:$cl-bg-yellow;}}
-  }
-  &.ef-list-hover-black{
-    li:hover{>a{background:$cl-bg-black;}}
-  }
-  &.ef-list-hover-gray{
-    li:hover{>a{background:$cl-bg-gray;}}
-  }
-  &.ef-list-hover-gray1{
-    li:hover{>a{background:$cl-bg-gray1;}}
-  }
-  &.ef-list-hover-gray2{
-    li:hover{>a{background:$cl-bg-gray2;}}
-  }
-  &.ef-list-hover-gray3{
-    li:hover{>a{background:$cl-bg-gray3;}}
-  }
-  &.ef-list-hover-gray4{
-    li:hover{>a{background:$cl-bg-gray4;}}
-  }
-  &.ef-list-hover-gray5{
-    li:hover{>a{background:$cl-bg-gray5;}}
-  }
-  &.ef-list-hover-gray6{
-    li:hover{>a{background:$cl-bg-gray6;}}
-  }
-  &.ef-list-hover-gray7{
-    li:hover{>a{background:$cl-bg-gray7;}}
-  }
-  &.ef-list-hover-theme{
-    li:hover{>a{background:$cl-bg-theme;}}
-  }
-}
+
 small{font-size: $fs-small;}
 em{font-style:normal;}
-hr{
-  border: 0;
-  height: 1px;
-  padding:0;
-  margin:0;
-  background: $cl-brd-base;
-  &.is-dotted{
-    height:0;
-    background:none;
-    @include brd-bottom(1px,dotted,$cl-brd-base);
-  }
-}
-/* =============================================================
- ▼ anchor
-============================================================== */
-a{
-  text-decoration:none;
-  outline:none;
-  color: $cl-txt-link;
-  &:hover{
-    text-decoration:underline;
-    color: $cl-txt-hover;
-    //@include opacity(0.8);
-    @include transition(all 0.3s ease-in-out);
-    img{
-     @include opacity(0.8);
-     @include transition(all 0.3s ease-in-out);
-    }
-  }
-  &.ef-is-link{
-    text-decoration:underline;
-    &:hover{
-      text-decoration:none;
-      color: $cl-txt-hover;
-    }
-  }
-  &.ef-is-nolink{
-    text-decoration:none;
-    color: $cl-txt-base;
-    &:hover{
-      text-decoration:none;
-      color: $cl-txt-base;
-    }
-  }
-}

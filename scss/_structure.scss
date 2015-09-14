@@ -1,5 +1,5 @@
 @import "compass";
-@import "effect";
+@import "module";
 /*
  * structure.scss
  * include:
@@ -11,6 +11,10 @@
  */
 header{
   .st-body{
+    &.ef-header-fix{
+      @include posi-fix(0,0,auto,0);
+      z-index:1;
+    }
     background:$cl-bg-header;
     .st-inner{
       padding:5px 10px;
@@ -40,7 +44,10 @@ header{
  */
 footer{
   .st-body{
-    @include posi-fix(auto, 0, 0, 0);
+    &.ef-footer-fix{
+      @include posi-fix(auto,0,0,0);
+      z-index:1;
+    }
     background-color:$cl-theme;
     .st-inner{
       padding:3px 20px;

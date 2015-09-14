@@ -1,12 +1,12 @@
 @import "compass";
-@import "structure";
+@import "effect";
 /*
  * components.scss
  * include:
- * "images" "fonts" "forms" "buttons" "navs" "tabs" "modals" "popup"
- * "tooltips" "tables" "messages" "notifications" "breadclumb"
- * "paginations" "titles" "panels" "wall" "carets" "badges" "loading"
- * "collapse" "wizard" "stamps" "toolbar" "menu"
+ * "images" "link" "list" "dl" "fonts" "form" "button"
+ * "breadclumb" "underline"
+ * "paginations" "titles" "panel" "remarks" "carets" "activity"
+ * "step wizard" "tag" "toolbar" "progress bar"
  *
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "images"
@@ -18,12 +18,148 @@ img{
 }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "link"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+a{
+  text-decoration:none;
+  outline:none;
+  color: $cl-txt-link;
+  &:hover{
+    text-decoration:underline;
+    color: $cl-txt-hover;
+    //@include opacity(0.8);
+    @include transition(all 0.3s ease-in-out);
+    img{
+     @include opacity(0.8);
+     @include transition(all 0.3s ease-in-out);
+    }
+  }
+  &.ef-is-link{
+    text-decoration:underline;
+    &:hover{
+      text-decoration:none;
+      color: $cl-txt-hover;
+    }
+  }
+  &.ef-is-nolink{
+    text-decoration:none;
+    color: $cl-txt-base;
+    &:hover{
+      text-decoration:none;
+      color: $cl-txt-base;
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "list"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+ul{
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  &.ef-list-disc{
+    >li{
+      list-style-type:disc;
+      margin-left:1em;
+    }
+  }
+  &.ef-list-decimal{
+    >li{
+      list-style-type:decimal;
+      margin-left:28px;
+    }
+  }
+  &.ef-list-hover-white{
+    li:hover{>a{background:$cl-bg-theme;}}
+  }
+  &.ef-list-hover-red{
+    li:hover{>a{background:$cl-bg-red;}}
+  }
+  &.ef-list-hover-orange{
+    li:hover{>a{background:$cl-bg-orange;}}
+  }
+  &.ef-list-hover-blue{
+    li:hover{>a{background:$cl-bg-blue;}}
+  }
+  &.ef-list-hover-green{
+    li:hover{>a{background:$cl-bg-green;}}
+  }
+  &.ef-list-hover-yellow{
+    li:hover{>a{background:$cl-bg-yellow;}}
+  }
+  &.ef-list-hover-black{
+    li:hover{>a{background:$cl-bg-black;}}
+  }
+  &.ef-list-hover-gray{
+    li:hover{>a{background:$cl-bg-gray;}}
+  }
+  &.ef-list-hover-gray1{
+    li:hover{>a{background:$cl-bg-gray1;}}
+  }
+  &.ef-list-hover-gray2{
+    li:hover{>a{background:$cl-bg-gray2;}}
+  }
+  &.ef-list-hover-gray3{
+    li:hover{>a{background:$cl-bg-gray3;}}
+  }
+  &.ef-list-hover-gray4{
+    li:hover{>a{background:$cl-bg-gray4;}}
+  }
+  &.ef-list-hover-gray5{
+    li:hover{>a{background:$cl-bg-gray5;}}
+  }
+  &.ef-list-hover-gray6{
+    li:hover{>a{background:$cl-bg-gray6;}}
+  }
+  &.ef-list-hover-gray7{
+    li:hover{>a{background:$cl-bg-gray7;}}
+  }
+  &.ef-list-hover-theme{
+    li:hover{>a{background:$cl-bg-theme;}}
+  }
+}
+
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "dl"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+dl,dt,dd{
+  margin:0;
+  padding:0;
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "underline"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+hr{
+  border: 0;
+  height: 1px;
+  padding:0;
+  margin:0;
+  background: $cl-brd-base;
+  &.is-dotted{
+    height:0;
+    background:none;
+    @include brd-bottom(1px,dotted,$cl-brd-base);
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "fonts"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
  * =============================================================
  ▼ heading
 ============================================================== */
+h1, h2, h3, h4, h5, h6{
+  margin:0;
+  padding:0;
+}
 h1{font-size:$fs-h1;}
 h2{font-size:$fs-h2;}
 h3{font-size:$fs-h3;}
@@ -137,7 +273,7 @@ label{
   background:$cl-btn-base; // for oldie
   font-family:$ff-base;
   font-size:$fs-base;
-  @include brd;
+  @include brd(1px,solid,$cl-btn-darken);
   @include border-radius(3px 3px);
   @include gradation($cl-btn-lighten, $cl-btn-base);
   //@include gradation-ie(#ffffffff, #ffeeeeee); // for oldie
@@ -146,16 +282,15 @@ label{
     color:$cl-txt-base;
     i{color:$cl-txt-base;}
     background:$cl-btn-lighten; // for oldie
-    @include brd(1px,solid,$cl-brd-lighten);
+    @include brd(1px,solid,$cl-btn-darken);
     @include gradation($cl-btn-lighten, $cl-btn-lighten);
     //@include gradation-ie(#FFf2f2f2, #FFe1e1e1); // for oldie
   }
   &:active{
     background:$cl-btn-base; // for oldie
-    @include brd;
+    @include brd(1px,solid,$cl-btn-darken);
     @include gradation($cl-btn-base, $cl-btn-base);
   }
-  //for oldie
   &.cp-disabled{
     &:hover{
       background:$cl-btn-base;
@@ -163,33 +298,234 @@ label{
     }
   }
 }
-
+//red
+.cp-btn-red{
+  @extend .cp-btn;
+  color:$cl-txt-rev;
+  i{color:$cl-txt-rev;}
+  background:$cl-btn-red; // for oldie
+  @include brd(1px,solid,$cl-btn-red-darken);
+  @include gradation($cl-btn-red-lighten, $cl-btn-red);
+  &:hover{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    background:$cl-btn-red-lighten; // for oldie
+    @include brd(1px,solid,$cl-btn-red-darken);
+    @include gradation($cl-btn-red-lighten, $cl-btn-red-lighten);
+  }
+  &:active{
+    background:$cl-btn-red; // for oldie
+    @include brd(1px,solid,$cl-btn-red-darken);
+    @include gradation($cl-btn-red, $cl-btn-red);
+  }
+  &.cp-disabled{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    &:hover{
+      background:$cl-btn-red;
+      cursor: default;
+    }
+  }
+}
+//orange
+.cp-btn-orange{
+  @extend .cp-btn;
+  color:$cl-txt-rev;
+  i{color:$cl-txt-rev;}
+  background:$cl-btn-orange; // for oldie
+  @include brd(1px,solid,$cl-btn-orange-darken);
+  @include gradation($cl-btn-orange-lighten, $cl-btn-orange);
+  &:hover{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    background:$cl-btn-orange-lighten; // for oldie
+    @include brd(1px,solid,$cl-btn-orange-darken);
+    @include gradation($cl-btn-orange-lighten, $cl-btn-orange-lighten);
+  }
+  &:active{
+    background:$cl-btn-orange; // for oldie
+    @include brd(1px,solid,$cl-btn-darken);
+    @include gradation($cl-btn-orange, $cl-btn-orange);
+  }
+  &.cp-disabled{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    &:hover{
+      background:$cl-btn-orange;
+      cursor: default;
+    }
+  }
+}
+//blue
+.cp-btn-blue{
+  @extend .cp-btn;
+  color:$cl-txt-rev;
+  i{color:$cl-txt-rev;}
+  background:$cl-btn-blue; // for oldie
+  @include brd(1px,solid,$cl-btn-blue-darken);
+  @include gradation($cl-btn-blue-lighten, $cl-btn-blue);
+  &:hover{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    background:$cl-btn-blue-lighten; // for oldie
+    @include brd(1px,solid,$cl-btn-blue-darken);
+    @include gradation($cl-btn-blue-lighten, $cl-btn-blue-lighten);
+  }
+  &:active{
+    background:$cl-btn-blue; // for oldie
+    @include brd(1px,solid,$cl-btn-blue-darken);
+    @include gradation($cl-btn-blue, $cl-btn-blue);
+  }
+  &.cp-disabled{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    &:hover{
+      background:$cl-btn-blue;
+      cursor: default;
+    }
+  }
+}
+//green
+.cp-btn-green{
+  @extend .cp-btn;
+  color:$cl-txt-rev;
+  i{color:$cl-txt-rev;}
+  background:$cl-btn-green; // for oldie
+  @include brd(1px,solid,$cl-btn-green-darken);
+  @include gradation($cl-btn-green-lighten, $cl-btn-green);
+  &:hover{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    background:$cl-btn-green-lighten; // for oldie
+    @include brd(1px,solid,$cl-btn-green-darken);
+    @include gradation($cl-btn-green-lighten, $cl-btn-green-lighten);
+  }
+  &:active{
+    background:$cl-btn-green; // for oldie
+    @include brd(1px,solid,$cl-btn-green-darken);
+    @include gradation($cl-btn-green, $cl-btn-green);
+  }
+  &.cp-disabled{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    &:hover{
+      background:$cl-btn-green;
+      cursor: default;
+    }
+  }
+}
+//yellow
+.cp-btn-yellow{
+  @extend .cp-btn;
+  color:$cl-txt-base;
+  i{color:$cl-txt-base;}
+  background:$cl-btn-yellow; // for oldie
+  @include brd(1px,solid,$cl-btn-yellow-darken);
+  @include gradation($cl-btn-yellow-lighten, $cl-btn-yellow);
+  &:hover{
+    color:$cl-txt-base;
+    i{color:$cl-txt-base;}
+    background:$cl-btn-yellow-lighten; // for oldie
+    @include brd(1px,solid,$cl-btn-yellow-darken);
+    @include gradation($cl-btn-yellow-lighten, $cl-btn-yellow-lighten);
+  }
+  &:active{
+    background:$cl-btn-yellow; // for oldie
+    @include brd(1px,solid,$cl-btn-yellow-darken);
+    @include gradation($cl-btn-yellow, $cl-btn-yellow);
+  }
+  &.cp-disabled{
+    color:$cl-txt-base;
+    i{color:$cl-txt-base;}
+    &:hover{
+      background:$cl-btn-yellow;
+      cursor: default;
+    }
+  }
+}
+//black
+.cp-btn-black{
+  @extend .cp-btn;
+  color:$cl-txt-rev;
+  i{color:$cl-txt-rev;}
+  background:$cl-btn-black; // for oldie
+  @include brd(1px,solid,$cl-btn-black-darken);
+  @include gradation($cl-btn-black-lighten, $cl-btn-black);
+  &:hover{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    background:$cl-btn-black-lighten; // for oldie
+    @include brd(1px,solid,$cl-btn-black-darken);
+    @include gradation($cl-btn-black-lighten, $cl-btn-black-lighten);
+  }
+  &:active{
+    background:$cl-btn-black; // for oldie
+    @include brd(1px,solid,$cl-btn-black-darken);
+    @include gradation($cl-btn-black, $cl-btn-black);
+  }
+  &.cp-disabled{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    &:hover{
+      background:$cl-btn-black;
+      cursor: default;
+    }
+  }
+}
+//gray
+.cp-btn-gray{
+  @extend .cp-btn;
+  color:$cl-txt-rev;
+  i{color:$cl-txt-rev;}
+  background:$cl-btn-gray; // for oldie
+  @include brd(1px,solid,$cl-btn-gray-darken);
+  @include gradation($cl-btn-gray-lighten, $cl-btn-gray);
+  &:hover{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    background:$cl-btn-gray-lighten; // for oldie
+    @include brd(1px,solid,$cl-btn-gray-darken);
+    @include gradation($cl-btn-gray-lighten, $cl-btn-gray-lighten);
+  }
+  &:active{
+    background:$cl-btn-gray; // for oldie
+    @include brd(1px,solid,$cl-btn-gray-darken);
+    @include gradation($cl-btn-gray, $cl-btn-gray);
+  }
+  &.cp-disabled{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    &:hover{
+      background:$cl-btn-gray;
+      cursor: default;
+    }
+  }
+}
 //theme
 .cp-btn-theme{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
-  background:$cl-theme; // for oldie
-  @include brd(1px,solid,$cl-theme);
-  @include gradation($cl-theme-lighten, $cl-theme);
+  background:$cl-btn-theme; // for oldie
+  @include brd(1px,solid,$cl-btn-theme-darken);
+  @include gradation($cl-btn-theme-lighten, $cl-btn-theme);
   &:hover{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
-    background:$cl-theme-lighten; // for oldie
-    @include brd(1px,solid,$cl-theme-lighten);
-    @include gradation($cl-theme-lighten, $cl-theme-lighten);
+    background:$cl-btn-theme-lighten; // for oldie
+    @include brd(1px,solid,$cl-btn-theme-darken);
+    @include gradation($cl-btn-theme-lighten, $cl-btn-theme-lighten);
   }
   &:active{
-    background:$cl-theme; // for oldie
-    @include brd(1px,solid,$cl-theme);
-    @include gradation($cl-theme, $cl-theme);
+    background:$cl-btn-theme; // for oldie
+    @include brd(1px,solid,$cl-btn-theme-darken);
+    @include gradation($cl-btn-theme, $cl-btn-theme);
   }
-  //for oldie
   &.cp-disabled{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     &:hover{
-      background:$cl-theme;
+      background:$cl-btn-theme;
       cursor: default;
     }
   }
@@ -212,7 +548,6 @@ label{
   font-size:$fs-midium;
   padding:3px;
   line-height:$lh-btn-mini;
-  @include min-width(0);
 }
 //combo
 .cp-btn-combo-left{
@@ -234,721 +569,6 @@ label{
 }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "nav"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-.side-menu{
-  .one-block{
-    @include brd-bottom;
-    .st-inner{
-    }
-    &.menu-children{
-      display:none;
-      @include brd-bottom(0);
-    }
-    &.current{
-      background-color:$cl-theme1;
-    }
-  }
-}
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "tabs"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-.cp-tab{
-  .cp-tab-btn{
-    >.st-inner{
-      ul{
-        padding-top:3px;
-        li{
-          position:relative;
-          @include brd(1px,solid,$cl-brd-base);
-          border-bottom:0;
-          background:$cl-gray;
-          margin-right:5px;
-          @include border-top-radius(3px);
-          a{
-            padding:6px 10px;
-            line-height:$lh-btn;
-            text-align:center;
-            display:block;
-            @include width-overflow-max(250px);
-          }
-          .cp-underbar{
-            @include posi-abs(auto,auto,0,0);
-            z-index:1;
-            width:100%;
-            height:1px;
-            background:$cl-brd-base;
-          }
-          &.current{
-            @include border-top-radius(0);
-            @include brd-top(3px,solid,$cl-theme);
-            margin-top:-2px;
-            a{
-              background:$cl-bg-tab;
-              color:#333;
-              font-weight:bold;
-            }
-            .cp-underbar{display:none;}
-            &:last-child{margin-right:0;}
-          }
-        }
-      }
-    }
-  }
-  //content
-  .cp-tab-content{
-    margin-top:-1px;
-    background:$cl-bg-tab;
-    >.st-inner{
-      overflow-x:auto;
-      padding:20px 15px;
-      @include brd(1px,solid,$cl-brd-base);
-      .jq-tab-switcher{
-        display:none;
-        &.current{display:block;}
-      }
-    }
-  }
-}
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "modals"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- *
- * =============================================================
- ▼ default
-============================================================== */
-.cp-modal{
-  >.st-body{
-    @include posi-fix(100px,auto,auto,50%);
-    @include brd(1px,solid,$cl-brd-base);
-    @include border-radius(5px);
-    display:none;
-    @include min-width(400px);
-    z-index:2;
-    &.is-current{
-      display:block;
-    }
-    >.st-inner{
-      .cp-modal-header{
-        .st-inner{
-          padding:10px;
-          position:relative;
-          background:$cl-bg-modal-header;
-          @include border-top-radius(5px);
-          .cp-modal-title{padding-right:10px;}
-          .cp-modal-close{
-            @include posi-abs(50%,5px,auto,auto);
-            margin-top:-15px;
-          }
-        }
-      }
-      .cp-modal-body{
-        background:$cl-bg-modal-body;
-        >.st-inner{
-          padding:10px 10px 20px;
-        }
-      }
-      .cp-modal-footer{
-        .st-inner{
-          @include brd-top;
-          padding:10px 20px;
-          background:$cl-bg-modal-footer;
-          @include border-bottom-radius(5px);
-        }
-      }
-    }
-  }
-}
-/* =============================================================
- ▼ cartain
-============================================================== */
-.cp-cartain{
-  position:fixed;
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
-  &.is-white{
-    background:$cl-white;
-    @include opacity(0.4);
-  }
-  &.is-black{
-    background:$cl-black;
-    @include opacity(0.5);
-  }
-  &.is-gray{
-    background:$cl-gray;
-    @include opacity(0.12);
-  }
-}
-
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "popup"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-.cp-popup{
-  >.lo-body{
-    @include posi-abs(0,auto,auto,auto);
-    border:1px solid $cl-brd-base;
-    @include border-radius(7px, 5px);
-    @include box-shadow(rgba($cl-brd-base, 0.5) 0 0 5px);
-    //background:$popup-base;
-    display:none;
-    overflow:auto;
-    max-height:300px;
-    max-width: 300px;
-    z-index:2;
-    &.is-current{
-      display:block;
-    }
-    >.lo-inner{
-      padding:12px;
-    }
-  }
-}
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "tooltip"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-.cp-tooltip{
-  .st-body{
-    z-index:1;
-    .st-inner{
-      .cp-tooltip-box{
-        background-color:$cl-bg-tooltip;
-        color:$cl-txt-rev;
-        padding:7px 10px;
-        @include border-radius(3px);
-        @include posi-abs(auto,auto,auto,auto);
-        .st-inner{
-          @include width-overflow-max(500px);
-        }
-      }
-      .cp-balloon{
-        @include posi-abs(auto,auto,auto,auto);
-        .cp-triangle-bottom{
-          margin-top:-6px;
-          border-top: 8px solid $cl-bg-tooltip;
-          border-left: 4px solid transparent;
-          border-right: 4px solid transparent;
-        }
-      }
-    }
-  }
-}
-.cp-tooltip-key{display:none;}
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "tables"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- *
- * =============================================================
- ▼ default table
-============================================================= */
-table.cp-table-base{
-  line-height:$lh-table;
-  @include brd;
-  border-collapse: collapse;
-  border-spacing: 0;
-  background:$cl-white;
-  //hover tr 
-  thead,tbody{
-    &.cp-th-hover{
-      tr:hover{
-        th{
-          background-color:$cl-bg-table-th-hover;
-          &.cp-th-reset{
-            background-color:$cl-bg-table-header;
-          }
-        }
-      }
-    }
-    &.cp-td-hover{
-      tr:hover{
-        td{
-          background-color:$cl-bg-table-td-hover;
-          &.cp-td-reset{
-            background-color:$cl-white;
-          }
-        }
-      }
-    }
-  }
-  tr,colgroup{
-    th{
-      padding:$pd-table;
-      font-size:$fs-base;
-      background:$cl-bg-table-header;
-      @include brd-right(1px,solid,$cl-brd-base);
-      @include brd-bottom(1px,solid,$cl-brd-base);
-      white-space: nowrap;
-      font-weight:bold;
-      a,i{color:$cl-txt-base;}
-    }
-    td{
-      padding:$pd-table;
-      @include brd-right(1px,solid,$cl-brd-base);
-      @include brd-bottom(1px,solid,$cl-brd-base);
-    }
-    th:last-child,
-    td:last-child{border-right-width:none;}
-    tbody:last-child td{border-bottom-width:none;}
-
-    //hover single cloumn
-    &.cp-th-hover{
-      th:hover{
-        background-color:$cl-bg-table-th-hover;
-        &.cp-th-reset{
-          background-color:$cl-bg-table-header;
-        }
-      }
-    }
-    &.cp-td-hover{
-      td:hover{
-        background-color:$cl-bg-table-td-hover;
-        &.cp-td-reset{
-          background-color:$cl-white;
-        }
-      }
-    }
-    &.is-highlight{
-      td{background-color:$cl-bg-table-highlight;}
-      &.cp-td-reset{
-        td{background-color:$cl-white;}
-      }
-    }
-    &.is-select{
-      td{background-color:$cl-bg-table-select;}
-      &.cp-td-reset{
-        td{background-color:$cl-white;}
-      }
-    }
-    // &.is-select{
-    //   td{background-color:$cl-bg-table-select;}
-    //   &.cp-td-reset{
-    //     td{background-color:$cl-white;}
-    //   }
-    // }
-    //vertical
-    .ef-vrt{vertical-align:top;}
-    .ef-vrm{vertical-align:middle;}
-    .ef-vrb{vertical-align:bottom;}
-
-    //background
-    .cp-bg-white{background:$cl-bg-white;}
-    .cp-bg-red{background:$cl-bg-red;}
-    .cp-bg-orange{background: $cl-bg-orange;}
-    .cp-bg-blue{background:$cl-bg-blue;}
-    .cp-bg-green{background:$cl-bg-green;}
-    .cp-bg-yellow{background:$cl-bg-yellow;}
-    .cp-bg-black{background:$cl-bg-black;}
-    .cp-bg-gray{background:$cl-bg-gray;}
-    .cp-bg-gray1{background:$cl-bg-gray1;}
-    .cp-bg-gray2{background:$cl-bg-gray2;}
-    .cp-bg-theme{background:$cl-bg-theme;}
-
-    //border(th,td)
-    .cp-brd0{@include brd(0, solid, $cl-brd-base);}
-    .cp-brd1{@include brd(1px, solid, $cl-brd-base);}
-    .cp-brd2{@include brd(2px, solid, $cl-brd-base);}
-    .cp-brd3{@include brd(3px, solid, $cl-brd-base);}
-    .cp-brd0-top{@include brd-top(0);}
-    .cp-brd1-top{@include brd-top(1px, solid, $cl-brd-base);}
-    .cp-brd2-top{@include brd-top(2px, solid, $cl-brd-base);}
-    .cp-brd3-top{@include brd-top(3px, solid, $cl-brd-base);}
-    .cp-brd0-right{@include brd-right(0);}
-    .cp-brd1-right{@include brd-right(1px, solid, $cl-brd-base);}
-    .cp-brd2-right{@include brd-right(2px, solid, $cl-brd-base);}
-    .cp-brd3-right{@include brd-right(3px, solid, $cl-brd-base);}
-    .cp-brd0-bottom{@include brd-bottom(0, solid, $cl-brd-base);}
-    .cp-brd1-bottom{@include brd-bottom(1px, solid, $cl-brd-base);}
-    .cp-brd2-bottom{@include brd-bottom(2px, solid, $cl-brd-base);}
-    .cp-brd3-bottom{@include brd-bottom(3px, solid, $cl-brd-base);}
-    .cp-brd0-left{@include brd-left(0);}
-    .cp-brd1-left{@include brd-left(1px, solid, $cl-brd-base);}
-    .cp-brd2-left{@include brd-left(2px, solid, $cl-brd-base);}
-    .cp-brd3-left{@include brd-left(3px, solid, $cl-brd-base);}
-    //border(tr > th,td)
-    &.cp-brd0{th,td{@include brd(0);}}
-    &.cp-brd1{th,td{@include brd(1px, solid, $cl-brd-base);}}
-    &.cp-brd2{th,td{@include brd(2px, solid, $cl-brd-base);}}
-    &.cp-brd3{th,td{@include brd(3px, solid, $cl-brd-base);}}
-    &.cp-brd0-top{th,td{@include brd-top(0, $cl-brd-base);}}
-    &.cp-brd1-top{th,td{@include brd-top(1px, solid, $cl-brd-base);}}
-    &.cp-brd2-top{th,td{@include brd-top(2px, solid, $cl-brd-base);}}
-    &.cp-brd3-top{th,td{@include brd-top(3px, solid, $cl-brd-base);}}
-    &.cp-brd0-right{th,td{@include brd-right(0, $cl-brd-base);}}
-    &.cp-brd1-right{th,td{@include brd-right(1px, solid, $cl-brd-base);}}
-    &.cp-brd2-right{th,td{@include brd-right(2px, solid, $cl-brd-base);}}
-    &.cp-brd3-right{th,td{@include brd-right(3px, solid, $cl-brd-base);}}
-    &.cp-brd0-bottom{th,td{@include brd-bottom(0);}}
-    &.cp-brd1-bottom{th,td{@include brd-bottom(1px, solid, $cl-brd-base);}}
-    &.cp-brd2-bottom{th,td{@include brd-bottom(2px, solid, $cl-brd-base);}}
-    &.cp-brd3-bottom{th,td{@include brd-bottom(3px, solid, $cl-brd-base);}}
-    &.cp-brd0-left{th,td{@include brd-left(0);}}
-    &.cp-brd1-left{th,td{@include brd-left(1px, solid, $cl-brd-base);}}
-    &.cp-brd2-left{th,td{@include brd-left(2px, solid, $cl-brd-base);}}
-    &.cp-brd3-left{th,td{@include brd-left(3px, solid, $cl-brd-base);}}
-
-    //border theme(th,td)
-    .cp-brd1-theme{@include brd(1px, solid, $cl-theme);}
-    .cp-brd2-theme{@include brd(2px, solid, $cl-theme);}
-    .cp-brd3-theme{@include brd(3px, solid, $cl-theme);}
-    .cp-brd1-top-theme{@include brd-top(1px, solid, $cl-theme);}
-    .cp-brd2-top-theme{@include brd-top(2px, solid, $cl-theme);}
-    .cp-brd3-top-theme{@include brd-top(3px, solid, $cl-theme);}
-    .cp-brd1-right-theme{@include brd-right(1px, solid, $cl-theme);}
-    .cp-brd2-right-theme{@include brd-right(2px, solid, $cl-theme);}
-    .cp-brd3-right-theme{@include brd-right(3px, solid, $cl-theme);}
-    .cp-brd1-bottom-theme{@include brd-bottom(1px, solid, $cl-theme);}
-    .cp-brd2-bottom-theme{@include brd-bottom(2px, solid, $cl-theme);}
-    .cp-brd3-bottom-theme{@include brd-bottom(3px, solid, $cl-theme);}
-    .cp-brd1-left-theme{@include brd-left(1px, solid, $cl-theme);}
-    .cp-brd2-left-theme{@include brd-left(2px, solid, $cl-theme);}
-    .cp-brd3-left-theme{@include brd-left(3px, solid, $cl-theme);}
-    //border theme(tr > th,td)
-    &.cp-brd1-theme{th,td{@include brd(1px, solid, $cl-theme);}}
-    &.cp-brd2-theme{th,td{@include brd(2px, solid, $cl-theme);}}
-    &.cp-brd3-theme{th,td{@include brd(3px, solid, $cl-theme);}}
-    &.cp-brd1-top-theme{th,td{@include brd-top(1px, solid, $cl-theme);}}
-    &.cp-brd2-top-theme{th,td{@include brd-top(2px, solid, $cl-theme);}}
-    &.cp-brd3-top-theme{th,td{@include brd-top(3px, solid, $cl-theme);}}
-    &.cp-brd1-right-theme{th,td{@include brd-right(1px, solid, $cl-theme);}}
-    &.cp-brd2-right-theme{th,td{@include brd-right(2px, solid, $cl-theme);}}
-    &.cp-brd3-right-theme{th,td{@include brd-right(3px, solid, $cl-theme);}}
-    &.cp-brd1-bottom-theme{th,td{@include brd-bottom(1px, solid, $cl-theme);}}
-    &.cp-brd2-bottom-theme{th,td{@include brd-bottom(2px, solid, $cl-theme);}}
-    &.cp-brd3-bottom-theme{th,td{@include brd-bottom(3px, solid, $cl-theme);}}
-    &.cp-brd1-left-theme{th,td{@include brd-left(1px, solid, $cl-theme);}}
-    &.cp-brd2-left-theme{th,td{@include brd-left(2px, solid, $cl-theme);}}
-    &.cp-brd3-left-theme{th,td{@include brd-left(3px, solid, $cl-theme);}}
-
-    //border red(th,td)
-    .cp-brd1-red{@include brd(1px, solid, $cl-red);}
-    .cp-brd2-red{@include brd(2px, solid, $cl-red);}
-    .cp-brd3-red{@include brd(3px, solid, $cl-red);}
-    .cp-brd1-top-red{@include brd-top(1px, solid, $cl-red);}
-    .cp-brd2-top-red{@include brd-top(2px, solid, $cl-red);}
-    .cp-brd3-top-red{@include brd-top(3px, solid, $cl-red);}
-    .cp-brd1-right-red{@include brd-right(1px, solid, $cl-red);}
-    .cp-brd2-right-red{@include brd-right(2px, solid, $cl-red);}
-    .cp-brd3-right-red{@include brd-right(3px, solid, $cl-red);}
-    .cp-brd1-bottom-red{@include brd-bottom(1px, solid, $cl-red);}
-    .cp-brd2-bottom-red{@include brd-bottom(2px, solid, $cl-red);}
-    .cp-brd3-bottom-red{@include brd-bottom(3px, solid, $cl-red);}
-    .cp-brd1-left-red{@include brd-left(1px, solid, $cl-red);}
-    .cp-brd2-left-red{@include brd-left(2px, solid, $cl-red);}
-    .cp-brd3-left-red{@include brd-left(3px, solid, $cl-red);}
-    //border red(tr > th,td)
-    &.cp-brd1-red{th,td{@include brd(1px, solid, $cl-red);}}
-    &.cp-brd2-red{th,td{@include brd(2px, solid, $cl-red);}}
-    &.cp-brd3-red{th,td{@include brd(3px, solid, $cl-red);}}
-    &.cp-brd1-top-red{th,td{@include brd-top(1px, solid, $cl-red);}}
-    &.cp-brd2-top-red{th,td{@include brd-top(2px, solid, $cl-red);}}
-    &.cp-brd3-top-red{th,td{@include brd-top(3px, solid, $cl-red);}}
-    &.cp-brd1-right-red{th,td{@include brd-right(1px, solid, $cl-red);}}
-    &.cp-brd2-right-red{th,td{@include brd-right(2px, solid, $cl-red);}}
-    &.cp-brd3-right-red{th,td{@include brd-right(3px, solid, $cl-red);}}
-    &.cp-brd1-bottom-red{th,td{@include brd-bottom(1px, solid, $cl-red);}}
-    &.cp-brd2-bottom-red{th,td{@include brd-bottom(2px, solid, $cl-red);}}
-    &.cp-brd3-bottom-red{th,td{@include brd-bottom(3px, solid, $cl-red);}}
-    &.cp-brd1-left-red{th,td{@include brd-left(1px, solid, $cl-red);}}
-    &.cp-brd2-left-red{th,td{@include brd-left(2px, solid, $cl-red);}}
-    &.cp-brd3-left-red{th,td{@include brd-left(3px, solid, $cl-red);}}
-
-    //border dotted(th,td)
-    .cp-brd1-dotted{@include brd(1px, dotted, $cl-brd-base);}
-    .cp-brd2-dotted{@include brd(2px, dotted, $cl-brd-base);}
-    .cp-brd3-dotted{@include brd(3px, dotted, $cl-brd-base);}
-    .cp-brd1-top-dotted{@include brd-top(1px, dotted, $cl-brd-base);}
-    .cp-brd2-top-dotted{@include brd-top(2px, dotted, $cl-brd-base);}
-    .cp-brd3-top-dotted{@include brd-top(3px, dotted, $cl-brd-base);}
-    .cp-brd1-right-dotted{@include brd-right(1px, dotted, $cl-brd-base);}
-    .cp-brd2-right-dotted{@include brd-right(2px, dotted, $cl-brd-base);}
-    .cp-brd3-right-dotted{@include brd-right(3px, dotted, $cl-brd-base);}
-    .cp-brd1-bottom-dotted{@include brd-bottom(1px, dotted, $cl-brd-base);}
-    .cp-brd2-bottom-dotted{@include brd-bottom(2px, dotted, $cl-brd-base);}
-    .cp-brd3-bottom-dotted{@include brd-bottom(3px, dotted, $cl-brd-base);}
-    .cp-brd1-left-dotted{@include brd-left(1px, dotted, $cl-brd-base);}
-    .cp-brd2-left-dotted{@include brd-left(2px, dotted, $cl-brd-base);}
-    .cp-brd3-left-dotted{@include brd-left(3px, dotted, $cl-brd-base);}
-    //border dotted(tr > th,td)
-    &.cp-brd1-dotted{th,td{@include brd(1px, dotted, $cl-brd-base);}}
-    &.cp-brd2-dotted{th,td{@include brd(2px, dotted, $cl-brd-base);}}
-    &.cp-brd3-dotted{th,td{@include brd(3px, dotted, $cl-brd-base);}}
-    &.cp-brd1-top-dotted{th,td{@include brd-top(1px, dotted, $cl-brd-base);}}
-    &.cp-brd2-top-dotted{th,td{@include brd-top(2px, dotted, $cl-brd-base);}}
-    &.cp-brd3-top-dotted{th,td{@include brd-top(3px, dotted, $cl-brd-base);}}
-    &.cp-brd0-right-dotted{th,td{@include brd-right(0, $cl-brd-base);}}
-    &.cp-brd1-right-dotted{th,td{@include brd-right(1px, dotted, $cl-brd-base);}}
-    &.cp-brd2-right-dotted{th,td{@include brd-right(2px, dotted, $cl-brd-base);}}
-    &.cp-brd3-right-dotted{th,td{@include brd-right(3px, dotted, $cl-brd-base);}}
-    &.cp-brd1-bottom-dotted{th,td{@include brd-bottom(1px, dotted, $cl-brd-base);}}
-    &.cp-brd2-bottom-dotted{th,td{@include brd-bottom(2px, dotted, $cl-brd-base);}}
-    &.cp-brd3-bottom-dotted{th,td{@include brd-bottom(3px, dotted, $cl-brd-base);}}
-    &.cp-brd1-left-dotted{th,td{@include brd-left(1px, dotted, $cl-brd-base);}}
-    &.cp-brd2-left-dotted{th,td{@include brd-left(2px, dotted, $cl-brd-base);}}
-    &.cp-brd3-left-dotted{th,td{@include brd-left(3px, dotted, $cl-brd-base);}}
-
-    //boder dotted theme(th,td)
-    .cp-brd1-dotted-theme{@include brd(1px, dotted, $cl-theme);}
-    .cp-brd2-dotted-theme{@include brd(2px, dotted, $cl-theme);}
-    .cp-brd3-dotted-theme{@include brd(3px, dotted, $cl-theme);}
-    .cp-brd1-top-dotted-theme{@include brd-top(1px, dotted, $cl-theme);}
-    .cp-brd2-top-dotted-theme{@include brd-top(2px, dotted, $cl-theme);}
-    .cp-brd3-top-dotted-theme{@include brd-top(3px, dotted, $cl-theme);}
-    .cp-brd1-right-dotted-theme{@include brd-right(1px, dotted, $cl-theme);}
-    .cp-brd2-right-dotted-theme{@include brd-right(2px, dotted, $cl-theme);}
-    .cp-brd3-right-dotted-theme{@include brd-right(3px, dotted, $cl-theme);}
-    .cp-brd1-bottom-dotted-theme{@include brd-bottom(1px, dotted, $cl-theme);}
-    .cp-brd2-bottom-dotted-theme{@include brd-bottom(2px, dotted, $cl-theme);}
-    .cp-brd3-bottom-dotted-theme{@include brd-bottom(3px, dotted, $cl-theme);}
-    .cp-brd1-left-dotted-theme{@include brd-left(1px, dotted, $cl-theme);}
-    .cp-brd2-left-dotted-theme{@include brd-left(2px, dotted, $cl-theme);}
-    .cp-brd3-left-dotted-theme{@include brd-left(3px, dotted, $cl-theme);}
-    //border dotted theme(tr > th,td)
-    &.cp-brd1-dotted-theme{th,td{@include brd(1px, dotted, $cl-theme);}}
-    &.cp-brd2-dotted-theme{th,td{@include brd(2px, dotted, $cl-theme);}}
-    &.cp-brd3-dotted-theme{th,td{@include brd(3px, dotted, $cl-theme);}}
-    &.cp-brd1-top-dotted-theme{th,td{@include brd-top(1px, dotted, $cl-theme);}}
-    &.cp-brd2-top-dotted-theme{th,td{@include brd-top(2px, dotted, $cl-theme);}}
-    &.cp-brd3-top-dotted-theme{th,td{@include brd-top(3px, dotted, $cl-theme);}}
-    &.cp-brd1-right-dotted-theme{th,td{@include brd-right(1px, dotted, $cl-theme);}}
-    &.cp-brd2-right-dotted-theme{th,td{@include brd-right(2px, dotted, $cl-theme);}}
-    &.cp-brd3-right-dotted-theme{th,td{@include brd-right(3px, dotted, $cl-theme);}}
-    &.cp-brd1-bottom-dotted-theme{th,td{@include brd-bottom(1px, dotted, $cl-theme);}}
-    &.cp-brd2-bottom-dotted-theme{th,td{@include brd-bottom(2px, dotted, $cl-theme);}}
-    &.cp-brd3-bottom-dotted-theme{th,td{@include brd-bottom(3px, dotted, $cl-theme);}}
-    &.cp-brd1-left-dotted-theme{th,td{@include brd-left(1px, dotted, $cl-theme);}}
-    &.cp-brd2-left-dotted-theme{th,td{@include brd-left(2px, dotted, $cl-theme);}}
-    &.cp-brd3-left-dotted-theme{th,td{@include brd-left(3px, dotted, $cl-theme);}}
-
-    //border dotted red(th,td)
-    .cp-brd1-dotted-red{@include brd(1px, dotted, $cl-red);}
-    .cp-brd2-dotted-red{@include brd(2px, dotted, $cl-red);}
-    .cp-brd3-dotted-red{@include brd(3px, dotted, $cl-red);}
-    .cp-brd1-top-dotted-red{@include brd-top(1px, dotted, $cl-red);}
-    .cp-brd2-top-dotted-red{@include brd-top(2px, dotted, $cl-red);}
-    .cp-brd3-top-dotted-red{@include brd-top(3px, dotted, $cl-red);}
-    .cp-brd1-right-dotted-red{@include brd-right(1px, dotted, $cl-red);}
-    .cp-brd2-right-dotted-red{@include brd-right(2px, dotted, $cl-red);}
-    .cp-brd3-right-dotted-red{@include brd-right(3px, dotted, $cl-red);}
-    .cp-brd1-bottom-dotted-red{@include brd-bottom(1px, dotted, $cl-red);}
-    .cp-brd2-bottom-dotted-red{@include brd-bottom(2px, dotted, $cl-red);}
-    .cp-brd3-bottom-dotted-red{@include brd-bottom(3px, dotted, $cl-red);}
-    .cp-brd1-left-dotted-red{@include brd-left(1px, dotted, $cl-red);}
-    .cp-brd2-left-dotted-red{@include brd-left(2px, dotted, $cl-red);}
-    .cp-brd3-left-dotted-red{@include brd-left(3px, dotted, $cl-red);}
-    //border dotted red(tr > th,td)
-    &.cp-brd1-dotted-red{th,td{@include brd(1px, dotted, $cl-red);}}
-    &.cp-brd2-dotted-red{th,td{@include brd(2px, dotted, $cl-red);}}
-    &.cp-brd3-dotted-red{th,td{@include brd(3px, dotted, $cl-red);}}
-    &.cp-brd1-top-dotted-red{th,td{@include brd-top(1px, dotted, $cl-red);}}
-    &.cp-brd2-top-dotted-red{th,td{@include brd-top(2px, dotted, $cl-red);}}
-    &.cp-brd3-top-dotted-red{th,td{@include brd-top(3px, dotted, $cl-red);}}
-    &.cp-brd1-right-dotted-red{th,td{@include brd-right(1px, dotted, $cl-red);}}
-    &.cp-brd2-right-dotted-red{th,td{@include brd-right(2px, dotted, $cl-red);}}
-    &.cp-brd3-right-dotted-red{th,td{@include brd-right(3px, dotted, $cl-red);}}
-    &.cp-brd1-bottom-dotted-red{th,td{@include brd-bottom(1px, dotted, $cl-red);}}
-    &.cp-brd2-bottom-dotted-red{th,td{@include brd-bottom(2px, dotted, $cl-red);}}
-    &.cp-brd3-bottom-dotted-red{th,td{@include brd-bottom(3px, dotted, $cl-red);}}
-    &.cp-brd1-left-dotted-red{th,td{@include brd-left(1px, dotted, $cl-red);}}
-    &.cp-brd2-left-dotted-red{th,td{@include brd-left(2px, dotted, $cl-red);}}
-    &.cp-brd3-left-dotted-red{th,td{@include brd-left(3px, dotted, $cl-red);}}
-
-    //ダborder dashed(th,td)
-    .cp-brd1-dashed{@include brd(1px, dashed, $cl-brd-base);}
-    .cp-brd2-dashed{@include brd(2px, dashed, $cl-brd-base);}
-    .cp-brd3-dashed{@include brd(3px, dashed, $cl-brd-base);}
-    .cp-brd1-top-dashed{@include brd-top(1px, dashed, $cl-brd-base);}
-    .cp-brd2-top-dashed{@include brd-top(2px, dashed, $cl-brd-base);}
-    .cp-brd3-top-dashed{@include brd-top(3px, dashed, $cl-brd-base);}
-    .cp-brd1-right-dashed{@include brd-right(1px, dashed, $cl-brd-base);}
-    .cp-brd2-right-dashed{@include brd-right(2px, dashed, $cl-brd-base);}
-    .cp-brd3-right-dashed{@include brd-right(3px, dashed, $cl-brd-base);}
-    .cp-brd1-bottom-dashed{@include brd-bottom(1px, dashed, $cl-brd-base);}
-    .cp-brd2-bottom-dashed{@include brd-bottom(2px, dashed, $cl-brd-base);}
-    .cp-brd3-bottom-dashed{@include brd-bottom(3px, dashed, $cl-brd-base);}
-    .cp-brd1-left-dashed{@include brd-left(1px, dashed, $cl-brd-base);}
-    .cp-brd2-left-dashed{@include brd-left(2px, dashed, $cl-brd-base);}
-    .cp-brd3-left-dashed{@include brd-left(3px, dashed, $cl-brd-base);}
-    //border dashed (tr > th,td)
-    &.cp-brd1-dashed{th,td{@include brd(1px, dashed, $cl-brd-base);}}
-    &.cp-brd2-dashed{th,td{@include brd(2px, dashed, $cl-brd-base);}}
-    &.cp-brd3-dashed{th,td{@include brd(3px, dashed, $cl-brd-base);}}
-    &.cp-brd1-top-dashed{th,td{@include brd-top(1px, dashed, $cl-brd-base);}}
-    &.cp-brd2-top-dashed{th,td{@include brd-top(2px, dashed, $cl-brd-base);}}
-    &.cp-brd3-top-dashed{th,td{@include brd-top(3px, dashed, $cl-brd-base);}}
-    &.cp-brd0-right-dashed{th,td{@include brd-right(0, $cl-brd-base);}}
-    &.cp-brd1-right-dashed{th,td{@include brd-right(1px, dashed, $cl-brd-base);}}
-    &.cp-brd2-right-dashed{th,td{@include brd-right(2px, dashed, $cl-brd-base);}}
-    &.cp-brd3-right-dashed{th,td{@include brd-right(3px, dashed, $cl-brd-base);}}
-    &.cp-brd1-bottom-dashed{th,td{@include brd-bottom(1px, dashed, $cl-brd-base);}}
-    &.cp-brd2-bottom-dashed{th,td{@include brd-bottom(2px, dashed, $cl-brd-base);}}
-    &.cp-brd3-bottom-dashed{th,td{@include brd-bottom(3px, dashed, $cl-brd-base);}}
-    &.cp-brd1-left-dashed{th,td{@include brd-left(1px, dashed, $cl-brd-base);}}
-    &.cp-brd2-left-dashed{th,td{@include brd-left(2px, dashed, $cl-brd-base);}}
-    &.cp-brd3-left-dashed{th,td{@include brd-left(3px, dashed, $cl-brd-base);}}
-
-    //border dashed theme(th,td)
-    .cp-brd1-dashed-theme{@include brd(1px, dashed, $cl-theme);}
-    .cp-brd2-dashed-theme{@include brd(2px, dashed, $cl-theme);}
-    .cp-brd3-dashed-theme{@include brd(3px, dashed, $cl-theme);}
-    .cp-brd1-top-dashed-theme{@include brd-top(1px, dashed, $cl-theme);}
-    .cp-brd2-top-dashed-theme{@include brd-top(2px, dashed, $cl-theme);}
-    .cp-brd3-top-dashed-theme{@include brd-top(3px, dashed, $cl-theme);}
-    .cp-brd1-right-dashed-theme{@include brd-right(1px, dashed, $cl-theme);}
-    .cp-brd2-right-dashed-theme{@include brd-right(2px, dashed, $cl-theme);}
-    .cp-brd3-right-dashed-theme{@include brd-right(3px, dashed, $cl-theme);}
-    .cp-brd1-bottom-dashed-theme{@include brd-bottom(1px, dashed, $cl-theme);}
-    .cp-brd2-bottom-dashed-theme{@include brd-bottom(2px, dashed, $cl-theme);}
-    .cp-brd3-bottom-dashed-theme{@include brd-bottom(3px, dashed, $cl-theme);}
-    .cp-brd1-left-dashed-theme{@include brd-left(1px, dashed, $cl-theme);}
-    .cp-brd2-left-dashed-theme{@include brd-left(2px, dashed, $cl-theme);}
-    .cp-brd3-left-dashed-theme{@include brd-left(3px, dashed, $cl-theme);}
-
-    //border dashed theme(tr > th,td)
-    &.cp-brd1-dashed-theme{th,td{@include brd(1px, dashed, $cl-theme);}}
-    &.cp-brd2-dashed-theme{th,td{@include brd(2px, dashed, $cl-theme);}}
-    &.cp-brd3-dashed-theme{th,td{@include brd(3px, dashed, $cl-theme);}}
-    &.cp-brd1-top-dashed-theme{th,td{@include brd-top(1px, dashed, $cl-theme);}}
-    &.cp-brd2-top-dashed-theme{th,td{@include brd-top(2px, dashed, $cl-theme);}}
-    &.cp-brd3-top-dashed-theme{th,td{@include brd-top(3px, dashed, $cl-theme);}}
-    &.cp-brd1-right-dashed-theme{th,td{@include brd-right(1px, dashed, $cl-theme);}}
-    &.cp-brd2-right-dashed-theme{th,td{@include brd-right(2px, dashed, $cl-theme);}}
-    &.cp-brd3-right-dashed-theme{th,td{@include brd-right(3px, dashed, $cl-theme);}}
-    &.cp-brd1-bottom-dashed-theme{th,td{@include brd-bottom(1px, dashed, $cl-theme);}}
-    &.cp-brd2-bottom-dashed-theme{th,td{@include brd-bottom(2px, dashed, $cl-theme);}}
-    &.cp-brd3-bottom-dashed-theme{th,td{@include brd-bottom(3px, dashed, $cl-theme);}}
-    &.cp-brd1-left-dashed-theme{th,td{@include brd-left(1px, dashed, $cl-theme);}}
-    &.cp-brd2-left-dashed-theme{th,td{@include brd-left(2px, dashed, $cl-theme);}}
-    &.cp-brd3-left-dashed-theme{th,td{@include brd-left(3px, dashed, $cl-theme);}}
-
-    //border dashed red(th,td)
-    .cp-brd1-dashed-red{@include brd(1px, dashed, $cl-red);}
-    .cp-brd2-dashed-red{@include brd(2px, dashed, $cl-red);}
-    .cp-brd3-dashed-red{@include brd(3px, dashed, $cl-red);}
-    .cp-brd1-top-dashed-red{@include brd-top(1px, dashed, $cl-red);}
-    .cp-brd2-top-dashed-red{@include brd-top(2px, dashed, $cl-red);}
-    .cp-brd3-top-dashed-red{@include brd-top(3px, dashed, $cl-red);}
-    .cp-brd1-right-dashed-red{@include brd-right(1px, dashed, $cl-red);}
-    .cp-brd2-right-dashed-red{@include brd-right(2px, dashed, $cl-red);}
-    .cp-brd3-right-dashed-red{@include brd-right(3px, dashed, $cl-red);}
-    .cp-brd1-bottom-dashed-red{@include brd-bottom(1px, dashed, $cl-red);}
-    .cp-brd2-bottom-dashed-red{@include brd-bottom(2px, dashed, $cl-red);}
-    .cp-brd3-bottom-dashed-red{@include brd-bottom(3px, dashed, $cl-red);}
-    .cp-brd1-left-dashed-red{@include brd-left(1px, dashed, $cl-red);}
-    .cp-brd2-left-dashed-red{@include brd-left(2px, dashed, $cl-red);}
-    .cp-brd3-left-dashed-red{@include brd-left(3px, dashed, $cl-red);}
-    //border dashed red(tr > th,td)
-    &.cp-brd1-dashed-red{th,td{@include brd(1px, dashed, $cl-red);}}
-    &.cp-brd2-dashed-red{th,td{@include brd(2px, dashed, $cl-red);}}
-    &.cp-brd3-dashed-red{th,td{@include brd(3px, dashed, $cl-red);}}
-    &.cp-brd1-top-dashed-red{th,td{@include brd-top(1px, dashed, $cl-red);}}
-    &.cp-brd2-top-dashed-red{th,td{@include brd-top(2px, dashed, $cl-red);}}
-    &.cp-brd3-top-dashed-red{th,td{@include brd-top(3px, dashed, $cl-red);}}
-    &.cp-brd1-right-dashed-red{th,td{@include brd-right(1px, dashed, $cl-red);}}
-    &.cp-brd2-right-dashed-red{th,td{@include brd-right(2px, dashed, $cl-red);}}
-    &.cp-brd3-right-dashed-red{th,td{@include brd-right(3px, dashed, $cl-red);}}
-    &.cp-brd1-bottom-dashed-red{th,td{@include brd-bottom(1px, dashed, $cl-red);}}
-    &.cp-brd2-bottom-dashed-red{th,td{@include brd-bottom(2px, dashed, $cl-red);}}
-    &.cp-brd3-bottom-dashed-red{th,td{@include brd-bottom(3px, dashed, $cl-red);}}
-    &.cp-brd1-left-dashed-red{th,td{@include brd-left(1px, dashed, $cl-red);}}
-    &.cp-brd2-left-dashed-red{th,td{@include brd-left(2px, dashed, $cl-red);}}
-    &.cp-brd3-left-dashed-red{th,td{@include brd-left(3px, dashed, $cl-red);}}
-  }
-}
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "messages"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-.cp-messages{
-  .st-inner{
-    &.current{display:block;}
-    display:none;
-    @include brd(1px,solid,$cl-theme);
-    padding:7px 10px;
-    @include border-radius(3px);
-    @include box-shadow(rgba($cl-brd-base, 0.3) 1px 2px 5px);
-    i{font-size:$fs-h5;}
-    &.cp-messages-alert{
-      @include brd(1px,solid,$cl-red);
-      background: $cl-bg-alert;
-      color:$cl-red;
-      i{color:$cl-red;}
-    }
-    &.cp-messages-success{
-      @include brd(1px,solid,$cl-success);
-      background: $cl-bg-success;
-      color:$cl-success;
-      i{color:$cl-success;}
-    }
-    &.cp-messages-info{
-      @include brd(1px,solid,$cl-info);
-      background: $cl-bg-info;
-      color:$cl-info;
-      i{color:$cl-info;}
-    }
-    &.cp-messages-warning{
-      @include brd(1px,solid,$cl-warning);
-      background: $cl-bg-warning;
-      color:$cl-warning;
-      i{color:$cl-warning;}
-    }
-  }
-}
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "notifications"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-.cp-toast{
-  .st-body{
-    @include posi-fix(0,20%,auto,20%);
-    .st-inner{
-      &.current{display:block;}
-      display:none;
-      @include brd(1px,solid,$cl-theme);
-      padding:7px 10px;
-      @include border-radius(3px);
-      @include box-shadow(rgba($cl-brd-base, 0.3) 1px 2px 5px);
-      i{font-size:$fs-h5;}
-      &.cp-toast-alert{
-        @include brd(1px,solid,$cl-red);
-        background: $cl-bg-alert;
-        color:$cl-red;
-        i{color:$cl-red;}
-      }
-      &.cp-toast-success{
-        @include brd(1px,solid,$cl-success);
-        background: $cl-bg-success;
-        color:$cl-success;
-        i{color:$cl-success;}
-      }
-      &.cp-toast-info{
-        @include brd(1px,solid,$cl-info);
-        background: $cl-bg-info;
-        color:$cl-info;
-        i{color:$cl-info;}
-      }
-      &.cp-toast-warning{
-        @include brd(1px,solid,$cl-warning);
-        background: $cl-bg-warning;
-        color:$cl-warning;
-        i{color:$cl-warning;}
-      }
-    }
-  }
-}
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "beadclumb"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
@@ -960,63 +580,6 @@ table.cp-table-base{
     ul{
       li{line-height:20px;}
     }
-  }
-}
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "paginations"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-.cp-pagination{
-  ul.cp-float{
-    li{
-      border:1px solid $cl-brd-base;
-      @include border-radius(3px, 3px);
-      padding:3px 1px;
-    }
-  }
-}
-.cp-paging-btn{
-  .st-body{
-    @include posi-abs(-18px,30px,auto,auto);
-    margin-left:-32px;
-    .st-inner{
-      >ul{
-        >li{
-          @include min-width(0);
-          a{
-            width:36px;
-            height:36px;
-            display:block;
-            @include brd;
-            @include border-radius(18px);
-            @include box-shadow(rgba($cl-brd-base, 0.3) 1px 0 3px);
-            text-align:center;
-            background:$cl-white;
-            line-height:36px;
-            i{font-size:$fs-h4;}
-            &:hover{
-              background:$cl-theme1-lighten;
-            }
-          }
-          &.is-disabled{
-            @include opacity(1);
-            a{
-              background:$cl-gray2;
-              color:#aaa;
-              @include box-shadow(none);
-              i{color:#aaa;}
-            }
-          }
-        }
-      }
-    }
-  }
-}
-.cp-paging-btn-bottom{
-  @extend .cp-paging-btn;
-  .st-body{
-    @include posi-abs(auto,30px,-18px,auto);
   }
 }
 /*
@@ -1072,7 +635,7 @@ table.cp-table-base{
 }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "wall"
+ * "remarks"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .cp-remarks{
@@ -1256,44 +819,7 @@ table.cp-table-base{
     color:$cl-txt-base;
   }
 }
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "loading"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-.cp-loader{
-  .st-body{
-    @include posi-fix(50%,0,0,50%);
-    .st-inner{
-      @include boxset;
-      @include box-shadow-base;
-      width:180px;
-      margin-left:-90px;
-      margin-top:-90px;
-      padding:20px;
-      text-align:center;
-    }
-  }
-}
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "collapse"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-.cp-collapse-horizontal{
-  .st-inner{
-    @include brd-top(1px,dotted,$cl-brd-base);
-    .cp-collapse-switch-box{
-      @include border-bottom-radius(5px);
-      background:$cl-bg-gray2;
-      display:inline-block;
-      @include min-width(50px);
-      &:hover{
-        background:$cl-bg-gray;
-      }
-    }
-  }
-}
+
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "wizard"
@@ -1345,7 +871,7 @@ table.cp-table-base{
 /* =============================================================
  ▼ step
 ============================================================== */
-.components-stepbar{
+.cp-stepbar{
   $stepbar-base:#ddd;
   $stepbar-base-current:#098DB1;
   //width:1000px;
@@ -1357,7 +883,7 @@ table.cp-table-base{
       background:$stepbar-base;
       font-weight:bold;
       font-family: メイリオ, Meiryo;
-      .components-stepbar-keyword{
+      .cp-stepbar-keyword{
         width:122px;
         padding:10px;
         padding-right:0;
@@ -1368,7 +894,7 @@ table.cp-table-base{
         white-space:nowrap;
         &:hover{text-decoration:underline;}
       }
-      .components-triangle{
+      .cp-triangle{
         position:relative;
         width:19px;
         height:34px;
@@ -1377,11 +903,11 @@ table.cp-table-base{
           border-bottom: 17px solid transparent;
           border-left: 17px solid $stepbar-base;
         }
-        .components-triangle-front{
+        .cp-triangle-front{
           @include posi-abs(0,2px,auto,0);
           z-index:1;
         }
-        .components-triangle-bg{
+        .cp-triangle-bg{
           @include posi-abs(0,0,auto,auto);
           .cp-triangle-right{
             border-left: 17px solid #aaa;
@@ -1389,11 +915,11 @@ table.cp-table-base{
         }
       }
       &.is-current{
-        .components-stepbar-keyword{
+        .cp-stepbar-keyword{
           color:#fff;
           background:$stepbar-base-current;
         }
-        .components-triangle-front{
+        .cp-triangle-front{
           @include posi-abs(0,2px,auto,0);
           z-index:1;
           .cp-triangle-right{
@@ -1404,11 +930,11 @@ table.cp-table-base{
       &.is-past{
         @extend .is-current;
         background:$stepbar-base-current;
-        .components-stepbar-keyword{
+        .cp-stepbar-keyword{
           background:$stepbar-base;
           color:#333;
         }
-        .components-triangle-front{
+        .cp-triangle-front{
           .cp-triangle-right{
             border-left: 17px solid $stepbar-base;
           }

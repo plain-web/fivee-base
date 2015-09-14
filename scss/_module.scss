@@ -1,0 +1,828 @@
+@import "compass";
+@import "components";
+/*
+ * components.scss
+ * include:
+ * "nav" "tab" "modals" "popup" "cartain"
+ * "tooltip" "message" "toast" "breadclumb"
+ * "pagination" "loading"
+ * "collapse" "wizard"
+ *
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "nav"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+// .side-menu{
+//   .one-block{
+//     @include brd-bottom;
+//     .st-inner{
+//     }
+//     &.menu-children{
+//       display:none;
+//       @include brd-bottom(0);
+//     }
+//     &.current{
+//       background-color:$cl-theme1;
+//     }
+//   }
+// }
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "tabs"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.md-tab{
+  .md-tab-btn{
+    >.st-inner{
+      ul{
+        padding-top:3px;
+        li{
+          position:relative;
+          @include brd(1px,solid,$cl-brd-base);
+          border-bottom:0;
+          background:$cl-gray;
+          margin-right:5px;
+          @include border-top-radius(3px);
+          a{
+            padding:6px 10px;
+            line-height:$lh-btn;
+            text-align:center;
+            display:block;
+            @include width-overflow-max(250px);
+          }
+          .cp-underbar{
+            @include posi-abs(auto,auto,0,0);
+            z-index:1;
+            width:100%;
+            height:1px;
+            background:$cl-brd-base;
+          }
+          &.current{
+            @include border-top-radius(0);
+            @include brd-top(3px,solid,$cl-theme);
+            margin-top:-2px;
+            a{
+              background:$cl-bg-tab;
+              color:#333;
+              font-weight:bold;
+            }
+            .cp-underbar{display:none;}
+            &:last-child{margin-right:0;}
+          }
+        }
+      }
+    }
+  }
+  //content
+  .md-tab-content{
+    margin-top:-1px;
+    background:$cl-bg-tab;
+    >.st-inner{
+      overflow-x:auto;
+      padding:20px 15px;
+      @include brd(1px,solid,$cl-brd-base);
+      .jq-tab-switcher{
+        display:none;
+        &.current{display:block;}
+      }
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "modal"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ *
+ * =============================================================
+ ▼ default
+============================================================== */
+.md-modal{
+  >.st-body{
+    @include posi-fix(100px,auto,auto,50%);
+    @include brd(1px,solid,$cl-brd-base);
+    @include border-radius(5px);
+    display:none;
+    @include min-width(400px);
+    z-index:2;
+    &.is-current{
+      display:block;
+    }
+    >.st-inner{
+      .md-modal-header{
+        .st-inner{
+          padding:10px;
+          position:relative;
+          background:$cl-bg-modal-header;
+          @include border-top-radius(5px);
+          .md-modal-title{padding-right:10px;}
+          .md-modal-close{
+            @include posi-abs(50%,5px,auto,auto);
+            margin-top:-15px;
+          }
+        }
+      }
+      .md-modal-body{
+        background:$cl-bg-modal-body;
+        >.st-inner{
+          padding:10px 10px 20px;
+        }
+      }
+      .md-modal-footer{
+        .st-inner{
+          @include brd-top;
+          padding:10px 20px;
+          background:$cl-bg-modal-footer;
+          @include border-bottom-radius(5px);
+        }
+      }
+    }
+  }
+}
+/* =============================================================
+ ▼ cartain
+============================================================== */
+.md-cartain{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  &.is-white{
+    background:$cl-white;
+    @include opacity(0.4);
+  }
+  &.is-black{
+    background:$cl-black;
+    @include opacity(0.5);
+  }
+  &.is-gray{
+    background:$cl-gray;
+    @include opacity(0.12);
+  }
+}
+
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "popup"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.md-popup{
+  >.lo-body{
+    @include posi-abs(0,auto,auto,auto);
+    border:1px solid $cl-brd-base;
+    @include border-radius(7px, 5px);
+    @include box-shadow(rgba($cl-brd-base, 0.5) 0 0 5px);
+    //background:$popup-base;
+    display:none;
+    overflow:auto;
+    max-height:300px;
+    max-width: 300px;
+    z-index:2;
+    &.is-current{
+      display:block;
+    }
+    >.lo-inner{
+      padding:12px;
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "tooltip"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.md-tooltip{
+  .st-body{
+    z-index:1;
+    .st-inner{
+      .md-tooltip-box{
+        background-color:$cl-bg-tooltip;
+        color:$cl-txt-rev;
+        padding:7px 10px;
+        @include border-radius(3px);
+        @include posi-abs(auto,auto,auto,auto);
+        .st-inner{
+          @include width-overflow-max(500px);
+        }
+      }
+      .cp-balloon{
+        @include posi-abs(auto,auto,auto,auto);
+        .cp-triangle-bottom{
+          margin-top:-6px;
+          border-top: 8px solid $cl-bg-tooltip;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+        }
+      }
+    }
+  }
+}
+.md-tooltip-key{display:none;}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "table"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ *
+ * =============================================================
+ ▼ default table
+============================================================= */
+table.md-table-base{
+  line-height:$lh-table;
+  @include brd;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background:$cl-white;
+  //hover tr 
+  thead,tbody{
+    &.md-th-hover{
+      tr:hover{
+        th{
+          background-color:$cl-bg-table-th-hover;
+          &.md-th-reset{
+            background-color:$cl-bg-table-header;
+          }
+        }
+      }
+    }
+    &.md-td-hover{
+      tr:hover{
+        td{
+          background-color:$cl-bg-table-td-hover;
+          &.md-td-reset{
+            background-color:$cl-white;
+          }
+        }
+      }
+    }
+  }
+  tr,colgroup{
+    th{
+      padding:$pd-table;
+      font-size:$fs-base;
+      background:$cl-bg-table-header;
+      @include brd-right(1px,solid,$cl-brd-base);
+      @include brd-bottom(1px,solid,$cl-brd-base);
+      white-space: nowrap;
+      font-weight:bold;
+      a,i{color:$cl-txt-base;}
+    }
+    td{
+      padding:$pd-table;
+      @include brd-right(1px,solid,$cl-brd-base);
+      @include brd-bottom(1px,solid,$cl-brd-base);
+    }
+    th:last-child,
+    td:last-child{border-right-width:none;}
+    tbody:last-child td{border-bottom-width:none;}
+
+    //hover single cloumn
+    &.md-th-hover{
+      th:hover{
+        background-color:$cl-bg-table-th-hover;
+        &.md-th-reset{
+          background-color:$cl-bg-table-header;
+        }
+      }
+    }
+    &.md-td-hover{
+      td:hover{
+        background-color:$cl-bg-table-td-hover;
+        &.md-td-reset{
+          background-color:$cl-white;
+        }
+      }
+    }
+    &.is-highlight{
+      td{background-color:$cl-bg-table-highlight;}
+      &.md-td-reset{
+        td{background-color:$cl-white;}
+      }
+    }
+    &.is-select{
+      td{background-color:$cl-bg-table-select;}
+      &.md-td-reset{
+        td{background-color:$cl-white;}
+      }
+    }
+    // &.is-select{
+    //   td{background-color:$cl-bg-table-select;}
+    //   &.md-td-reset{
+    //     td{background-color:$cl-white;}
+    //   }
+    // }
+    //vertical
+    .ef-vrt{vertical-align:top;}
+    .ef-vrm{vertical-align:middle;}
+    .ef-vrb{vertical-align:bottom;}
+
+    //background color
+    .ef-bg-white{background:$cl-bg-white;}
+    .ef-bg-red{background:$cl-bg-red;}
+    .ef-bg-orange{background: $cl-bg-orange;}
+    .ef-bg-blue{background:$cl-bg-blue;}
+    .ef-bg-green{background:$cl-bg-green;}
+    .ef-bg-yellow{background:$cl-bg-yellow;}
+    .ef-bg-black{background:$cl-bg-black;}
+    .ef-bg-gray{background:$cl-bg-gray;}
+    .ef-bg-gray1{background:$cl-bg-gray1;}
+    .ef-bg-gray2{background:$cl-bg-gray2;}
+    .ef-bg-gray3{background:$cl-bg-gray3;}
+    .ef-bg-gray4{background:$cl-bg-gray4;}
+    .ef-bg-gray5{background:$cl-bg-gray5;}
+    .ef-bg-gray6{background:$cl-bg-gray6;}
+    .ef-bg-gray7{background:$cl-bg-gray7;}
+    .ef-bg-theme{background:$cl-bg-theme;}
+
+    //border(th,td)
+    .md-brd0{@include brd(0, solid, $cl-brd-base);}
+    .md-brd1{@include brd(1px, solid, $cl-brd-base);}
+    .md-brd2{@include brd(2px, solid, $cl-brd-base);}
+    .md-brd3{@include brd(3px, solid, $cl-brd-base);}
+    .md-brd0-top{@include brd-top(0);}
+    .md-brd1-top{@include brd-top(1px, solid, $cl-brd-base);}
+    .md-brd2-top{@include brd-top(2px, solid, $cl-brd-base);}
+    .md-brd3-top{@include brd-top(3px, solid, $cl-brd-base);}
+    .md-brd0-right{@include brd-right(0);}
+    .md-brd1-right{@include brd-right(1px, solid, $cl-brd-base);}
+    .md-brd2-right{@include brd-right(2px, solid, $cl-brd-base);}
+    .md-brd3-right{@include brd-right(3px, solid, $cl-brd-base);}
+    .md-brd0-bottom{@include brd-bottom(0, solid, $cl-brd-base);}
+    .md-brd1-bottom{@include brd-bottom(1px, solid, $cl-brd-base);}
+    .md-brd2-bottom{@include brd-bottom(2px, solid, $cl-brd-base);}
+    .md-brd3-bottom{@include brd-bottom(3px, solid, $cl-brd-base);}
+    .md-brd0-left{@include brd-left(0);}
+    .md-brd1-left{@include brd-left(1px, solid, $cl-brd-base);}
+    .md-brd2-left{@include brd-left(2px, solid, $cl-brd-base);}
+    .md-brd3-left{@include brd-left(3px, solid, $cl-brd-base);}
+    //border(tr > th,td)
+    &.md-brd0{th,td{@include brd(0);}}
+    &.md-brd1{th,td{@include brd(1px, solid, $cl-brd-base);}}
+    &.md-brd2{th,td{@include brd(2px, solid, $cl-brd-base);}}
+    &.md-brd3{th,td{@include brd(3px, solid, $cl-brd-base);}}
+    &.md-brd0-top{th,td{@include brd-top(0, $cl-brd-base);}}
+    &.md-brd1-top{th,td{@include brd-top(1px, solid, $cl-brd-base);}}
+    &.md-brd2-top{th,td{@include brd-top(2px, solid, $cl-brd-base);}}
+    &.md-brd3-top{th,td{@include brd-top(3px, solid, $cl-brd-base);}}
+    &.md-brd0-right{th,td{@include brd-right(0, $cl-brd-base);}}
+    &.md-brd1-right{th,td{@include brd-right(1px, solid, $cl-brd-base);}}
+    &.md-brd2-right{th,td{@include brd-right(2px, solid, $cl-brd-base);}}
+    &.md-brd3-right{th,td{@include brd-right(3px, solid, $cl-brd-base);}}
+    &.md-brd0-bottom{th,td{@include brd-bottom(0);}}
+    &.md-brd1-bottom{th,td{@include brd-bottom(1px, solid, $cl-brd-base);}}
+    &.md-brd2-bottom{th,td{@include brd-bottom(2px, solid, $cl-brd-base);}}
+    &.md-brd3-bottom{th,td{@include brd-bottom(3px, solid, $cl-brd-base);}}
+    &.md-brd0-left{th,td{@include brd-left(0);}}
+    &.md-brd1-left{th,td{@include brd-left(1px, solid, $cl-brd-base);}}
+    &.md-brd2-left{th,td{@include brd-left(2px, solid, $cl-brd-base);}}
+    &.md-brd3-left{th,td{@include brd-left(3px, solid, $cl-brd-base);}}
+
+    //border theme(th,td)
+    .md-brd1-theme{@include brd(1px, solid, $cl-theme);}
+    .md-brd2-theme{@include brd(2px, solid, $cl-theme);}
+    .md-brd3-theme{@include brd(3px, solid, $cl-theme);}
+    .md-brd1-top-theme{@include brd-top(1px, solid, $cl-theme);}
+    .md-brd2-top-theme{@include brd-top(2px, solid, $cl-theme);}
+    .md-brd3-top-theme{@include brd-top(3px, solid, $cl-theme);}
+    .md-brd1-right-theme{@include brd-right(1px, solid, $cl-theme);}
+    .md-brd2-right-theme{@include brd-right(2px, solid, $cl-theme);}
+    .md-brd3-right-theme{@include brd-right(3px, solid, $cl-theme);}
+    .md-brd1-bottom-theme{@include brd-bottom(1px, solid, $cl-theme);}
+    .md-brd2-bottom-theme{@include brd-bottom(2px, solid, $cl-theme);}
+    .md-brd3-bottom-theme{@include brd-bottom(3px, solid, $cl-theme);}
+    .md-brd1-left-theme{@include brd-left(1px, solid, $cl-theme);}
+    .md-brd2-left-theme{@include brd-left(2px, solid, $cl-theme);}
+    .md-brd3-left-theme{@include brd-left(3px, solid, $cl-theme);}
+    //border theme(tr > th,td)
+    &.md-brd1-theme{th,td{@include brd(1px, solid, $cl-theme);}}
+    &.md-brd2-theme{th,td{@include brd(2px, solid, $cl-theme);}}
+    &.md-brd3-theme{th,td{@include brd(3px, solid, $cl-theme);}}
+    &.md-brd1-top-theme{th,td{@include brd-top(1px, solid, $cl-theme);}}
+    &.md-brd2-top-theme{th,td{@include brd-top(2px, solid, $cl-theme);}}
+    &.md-brd3-top-theme{th,td{@include brd-top(3px, solid, $cl-theme);}}
+    &.md-brd1-right-theme{th,td{@include brd-right(1px, solid, $cl-theme);}}
+    &.md-brd2-right-theme{th,td{@include brd-right(2px, solid, $cl-theme);}}
+    &.md-brd3-right-theme{th,td{@include brd-right(3px, solid, $cl-theme);}}
+    &.md-brd1-bottom-theme{th,td{@include brd-bottom(1px, solid, $cl-theme);}}
+    &.md-brd2-bottom-theme{th,td{@include brd-bottom(2px, solid, $cl-theme);}}
+    &.md-brd3-bottom-theme{th,td{@include brd-bottom(3px, solid, $cl-theme);}}
+    &.md-brd1-left-theme{th,td{@include brd-left(1px, solid, $cl-theme);}}
+    &.md-brd2-left-theme{th,td{@include brd-left(2px, solid, $cl-theme);}}
+    &.md-brd3-left-theme{th,td{@include brd-left(3px, solid, $cl-theme);}}
+
+    //border red(th,td)
+    .md-brd1-red{@include brd(1px, solid, $cl-red);}
+    .md-brd2-red{@include brd(2px, solid, $cl-red);}
+    .md-brd3-red{@include brd(3px, solid, $cl-red);}
+    .md-brd1-top-red{@include brd-top(1px, solid, $cl-red);}
+    .md-brd2-top-red{@include brd-top(2px, solid, $cl-red);}
+    .md-brd3-top-red{@include brd-top(3px, solid, $cl-red);}
+    .md-brd1-right-red{@include brd-right(1px, solid, $cl-red);}
+    .md-brd2-right-red{@include brd-right(2px, solid, $cl-red);}
+    .md-brd3-right-red{@include brd-right(3px, solid, $cl-red);}
+    .md-brd1-bottom-red{@include brd-bottom(1px, solid, $cl-red);}
+    .md-brd2-bottom-red{@include brd-bottom(2px, solid, $cl-red);}
+    .md-brd3-bottom-red{@include brd-bottom(3px, solid, $cl-red);}
+    .md-brd1-left-red{@include brd-left(1px, solid, $cl-red);}
+    .md-brd2-left-red{@include brd-left(2px, solid, $cl-red);}
+    .md-brd3-left-red{@include brd-left(3px, solid, $cl-red);}
+    //border red(tr > th,td)
+    &.md-brd1-red{th,td{@include brd(1px, solid, $cl-red);}}
+    &.md-brd2-red{th,td{@include brd(2px, solid, $cl-red);}}
+    &.md-brd3-red{th,td{@include brd(3px, solid, $cl-red);}}
+    &.md-brd1-top-red{th,td{@include brd-top(1px, solid, $cl-red);}}
+    &.md-brd2-top-red{th,td{@include brd-top(2px, solid, $cl-red);}}
+    &.md-brd3-top-red{th,td{@include brd-top(3px, solid, $cl-red);}}
+    &.md-brd1-right-red{th,td{@include brd-right(1px, solid, $cl-red);}}
+    &.md-brd2-right-red{th,td{@include brd-right(2px, solid, $cl-red);}}
+    &.md-brd3-right-red{th,td{@include brd-right(3px, solid, $cl-red);}}
+    &.md-brd1-bottom-red{th,td{@include brd-bottom(1px, solid, $cl-red);}}
+    &.md-brd2-bottom-red{th,td{@include brd-bottom(2px, solid, $cl-red);}}
+    &.md-brd3-bottom-red{th,td{@include brd-bottom(3px, solid, $cl-red);}}
+    &.md-brd1-left-red{th,td{@include brd-left(1px, solid, $cl-red);}}
+    &.md-brd2-left-red{th,td{@include brd-left(2px, solid, $cl-red);}}
+    &.md-brd3-left-red{th,td{@include brd-left(3px, solid, $cl-red);}}
+
+    //border dotted(th,td)
+    .md-brd1-dotted{@include brd(1px, dotted, $cl-brd-base);}
+    .md-brd2-dotted{@include brd(2px, dotted, $cl-brd-base);}
+    .md-brd3-dotted{@include brd(3px, dotted, $cl-brd-base);}
+    .md-brd1-top-dotted{@include brd-top(1px, dotted, $cl-brd-base);}
+    .md-brd2-top-dotted{@include brd-top(2px, dotted, $cl-brd-base);}
+    .md-brd3-top-dotted{@include brd-top(3px, dotted, $cl-brd-base);}
+    .md-brd1-right-dotted{@include brd-right(1px, dotted, $cl-brd-base);}
+    .md-brd2-right-dotted{@include brd-right(2px, dotted, $cl-brd-base);}
+    .md-brd3-right-dotted{@include brd-right(3px, dotted, $cl-brd-base);}
+    .md-brd1-bottom-dotted{@include brd-bottom(1px, dotted, $cl-brd-base);}
+    .md-brd2-bottom-dotted{@include brd-bottom(2px, dotted, $cl-brd-base);}
+    .md-brd3-bottom-dotted{@include brd-bottom(3px, dotted, $cl-brd-base);}
+    .md-brd1-left-dotted{@include brd-left(1px, dotted, $cl-brd-base);}
+    .md-brd2-left-dotted{@include brd-left(2px, dotted, $cl-brd-base);}
+    .md-brd3-left-dotted{@include brd-left(3px, dotted, $cl-brd-base);}
+    //border dotted(tr > th,td)
+    &.md-brd1-dotted{th,td{@include brd(1px, dotted, $cl-brd-base);}}
+    &.md-brd2-dotted{th,td{@include brd(2px, dotted, $cl-brd-base);}}
+    &.md-brd3-dotted{th,td{@include brd(3px, dotted, $cl-brd-base);}}
+    &.md-brd1-top-dotted{th,td{@include brd-top(1px, dotted, $cl-brd-base);}}
+    &.md-brd2-top-dotted{th,td{@include brd-top(2px, dotted, $cl-brd-base);}}
+    &.md-brd3-top-dotted{th,td{@include brd-top(3px, dotted, $cl-brd-base);}}
+    &.md-brd0-right-dotted{th,td{@include brd-right(0, $cl-brd-base);}}
+    &.md-brd1-right-dotted{th,td{@include brd-right(1px, dotted, $cl-brd-base);}}
+    &.md-brd2-right-dotted{th,td{@include brd-right(2px, dotted, $cl-brd-base);}}
+    &.md-brd3-right-dotted{th,td{@include brd-right(3px, dotted, $cl-brd-base);}}
+    &.md-brd1-bottom-dotted{th,td{@include brd-bottom(1px, dotted, $cl-brd-base);}}
+    &.md-brd2-bottom-dotted{th,td{@include brd-bottom(2px, dotted, $cl-brd-base);}}
+    &.md-brd3-bottom-dotted{th,td{@include brd-bottom(3px, dotted, $cl-brd-base);}}
+    &.md-brd1-left-dotted{th,td{@include brd-left(1px, dotted, $cl-brd-base);}}
+    &.md-brd2-left-dotted{th,td{@include brd-left(2px, dotted, $cl-brd-base);}}
+    &.md-brd3-left-dotted{th,td{@include brd-left(3px, dotted, $cl-brd-base);}}
+
+    //boder dotted theme(th,td)
+    .md-brd1-dotted-theme{@include brd(1px, dotted, $cl-theme);}
+    .md-brd2-dotted-theme{@include brd(2px, dotted, $cl-theme);}
+    .md-brd3-dotted-theme{@include brd(3px, dotted, $cl-theme);}
+    .md-brd1-top-dotted-theme{@include brd-top(1px, dotted, $cl-theme);}
+    .md-brd2-top-dotted-theme{@include brd-top(2px, dotted, $cl-theme);}
+    .md-brd3-top-dotted-theme{@include brd-top(3px, dotted, $cl-theme);}
+    .md-brd1-right-dotted-theme{@include brd-right(1px, dotted, $cl-theme);}
+    .md-brd2-right-dotted-theme{@include brd-right(2px, dotted, $cl-theme);}
+    .md-brd3-right-dotted-theme{@include brd-right(3px, dotted, $cl-theme);}
+    .md-brd1-bottom-dotted-theme{@include brd-bottom(1px, dotted, $cl-theme);}
+    .md-brd2-bottom-dotted-theme{@include brd-bottom(2px, dotted, $cl-theme);}
+    .md-brd3-bottom-dotted-theme{@include brd-bottom(3px, dotted, $cl-theme);}
+    .md-brd1-left-dotted-theme{@include brd-left(1px, dotted, $cl-theme);}
+    .md-brd2-left-dotted-theme{@include brd-left(2px, dotted, $cl-theme);}
+    .md-brd3-left-dotted-theme{@include brd-left(3px, dotted, $cl-theme);}
+    //border dotted theme(tr > th,td)
+    &.md-brd1-dotted-theme{th,td{@include brd(1px, dotted, $cl-theme);}}
+    &.md-brd2-dotted-theme{th,td{@include brd(2px, dotted, $cl-theme);}}
+    &.md-brd3-dotted-theme{th,td{@include brd(3px, dotted, $cl-theme);}}
+    &.md-brd1-top-dotted-theme{th,td{@include brd-top(1px, dotted, $cl-theme);}}
+    &.md-brd2-top-dotted-theme{th,td{@include brd-top(2px, dotted, $cl-theme);}}
+    &.md-brd3-top-dotted-theme{th,td{@include brd-top(3px, dotted, $cl-theme);}}
+    &.md-brd1-right-dotted-theme{th,td{@include brd-right(1px, dotted, $cl-theme);}}
+    &.md-brd2-right-dotted-theme{th,td{@include brd-right(2px, dotted, $cl-theme);}}
+    &.md-brd3-right-dotted-theme{th,td{@include brd-right(3px, dotted, $cl-theme);}}
+    &.md-brd1-bottom-dotted-theme{th,td{@include brd-bottom(1px, dotted, $cl-theme);}}
+    &.md-brd2-bottom-dotted-theme{th,td{@include brd-bottom(2px, dotted, $cl-theme);}}
+    &.md-brd3-bottom-dotted-theme{th,td{@include brd-bottom(3px, dotted, $cl-theme);}}
+    &.md-brd1-left-dotted-theme{th,td{@include brd-left(1px, dotted, $cl-theme);}}
+    &.md-brd2-left-dotted-theme{th,td{@include brd-left(2px, dotted, $cl-theme);}}
+    &.md-brd3-left-dotted-theme{th,td{@include brd-left(3px, dotted, $cl-theme);}}
+
+    //border dotted red(th,td)
+    .md-brd1-dotted-red{@include brd(1px, dotted, $cl-red);}
+    .md-brd2-dotted-red{@include brd(2px, dotted, $cl-red);}
+    .md-brd3-dotted-red{@include brd(3px, dotted, $cl-red);}
+    .md-brd1-top-dotted-red{@include brd-top(1px, dotted, $cl-red);}
+    .md-brd2-top-dotted-red{@include brd-top(2px, dotted, $cl-red);}
+    .md-brd3-top-dotted-red{@include brd-top(3px, dotted, $cl-red);}
+    .md-brd1-right-dotted-red{@include brd-right(1px, dotted, $cl-red);}
+    .md-brd2-right-dotted-red{@include brd-right(2px, dotted, $cl-red);}
+    .md-brd3-right-dotted-red{@include brd-right(3px, dotted, $cl-red);}
+    .md-brd1-bottom-dotted-red{@include brd-bottom(1px, dotted, $cl-red);}
+    .md-brd2-bottom-dotted-red{@include brd-bottom(2px, dotted, $cl-red);}
+    .md-brd3-bottom-dotted-red{@include brd-bottom(3px, dotted, $cl-red);}
+    .md-brd1-left-dotted-red{@include brd-left(1px, dotted, $cl-red);}
+    .md-brd2-left-dotted-red{@include brd-left(2px, dotted, $cl-red);}
+    .md-brd3-left-dotted-red{@include brd-left(3px, dotted, $cl-red);}
+    //border dotted red(tr > th,td)
+    &.md-brd1-dotted-red{th,td{@include brd(1px, dotted, $cl-red);}}
+    &.md-brd2-dotted-red{th,td{@include brd(2px, dotted, $cl-red);}}
+    &.md-brd3-dotted-red{th,td{@include brd(3px, dotted, $cl-red);}}
+    &.md-brd1-top-dotted-red{th,td{@include brd-top(1px, dotted, $cl-red);}}
+    &.md-brd2-top-dotted-red{th,td{@include brd-top(2px, dotted, $cl-red);}}
+    &.md-brd3-top-dotted-red{th,td{@include brd-top(3px, dotted, $cl-red);}}
+    &.md-brd1-right-dotted-red{th,td{@include brd-right(1px, dotted, $cl-red);}}
+    &.md-brd2-right-dotted-red{th,td{@include brd-right(2px, dotted, $cl-red);}}
+    &.md-brd3-right-dotted-red{th,td{@include brd-right(3px, dotted, $cl-red);}}
+    &.md-brd1-bottom-dotted-red{th,td{@include brd-bottom(1px, dotted, $cl-red);}}
+    &.md-brd2-bottom-dotted-red{th,td{@include brd-bottom(2px, dotted, $cl-red);}}
+    &.md-brd3-bottom-dotted-red{th,td{@include brd-bottom(3px, dotted, $cl-red);}}
+    &.md-brd1-left-dotted-red{th,td{@include brd-left(1px, dotted, $cl-red);}}
+    &.md-brd2-left-dotted-red{th,td{@include brd-left(2px, dotted, $cl-red);}}
+    &.md-brd3-left-dotted-red{th,td{@include brd-left(3px, dotted, $cl-red);}}
+
+    //ダborder dashed(th,td)
+    .md-brd1-dashed{@include brd(1px, dashed, $cl-brd-base);}
+    .md-brd2-dashed{@include brd(2px, dashed, $cl-brd-base);}
+    .md-brd3-dashed{@include brd(3px, dashed, $cl-brd-base);}
+    .md-brd1-top-dashed{@include brd-top(1px, dashed, $cl-brd-base);}
+    .md-brd2-top-dashed{@include brd-top(2px, dashed, $cl-brd-base);}
+    .md-brd3-top-dashed{@include brd-top(3px, dashed, $cl-brd-base);}
+    .md-brd1-right-dashed{@include brd-right(1px, dashed, $cl-brd-base);}
+    .md-brd2-right-dashed{@include brd-right(2px, dashed, $cl-brd-base);}
+    .md-brd3-right-dashed{@include brd-right(3px, dashed, $cl-brd-base);}
+    .md-brd1-bottom-dashed{@include brd-bottom(1px, dashed, $cl-brd-base);}
+    .md-brd2-bottom-dashed{@include brd-bottom(2px, dashed, $cl-brd-base);}
+    .md-brd3-bottom-dashed{@include brd-bottom(3px, dashed, $cl-brd-base);}
+    .md-brd1-left-dashed{@include brd-left(1px, dashed, $cl-brd-base);}
+    .md-brd2-left-dashed{@include brd-left(2px, dashed, $cl-brd-base);}
+    .md-brd3-left-dashed{@include brd-left(3px, dashed, $cl-brd-base);}
+    //border dashed (tr > th,td)
+    &.md-brd1-dashed{th,td{@include brd(1px, dashed, $cl-brd-base);}}
+    &.md-brd2-dashed{th,td{@include brd(2px, dashed, $cl-brd-base);}}
+    &.md-brd3-dashed{th,td{@include brd(3px, dashed, $cl-brd-base);}}
+    &.md-brd1-top-dashed{th,td{@include brd-top(1px, dashed, $cl-brd-base);}}
+    &.md-brd2-top-dashed{th,td{@include brd-top(2px, dashed, $cl-brd-base);}}
+    &.md-brd3-top-dashed{th,td{@include brd-top(3px, dashed, $cl-brd-base);}}
+    &.md-brd0-right-dashed{th,td{@include brd-right(0, $cl-brd-base);}}
+    &.md-brd1-right-dashed{th,td{@include brd-right(1px, dashed, $cl-brd-base);}}
+    &.md-brd2-right-dashed{th,td{@include brd-right(2px, dashed, $cl-brd-base);}}
+    &.md-brd3-right-dashed{th,td{@include brd-right(3px, dashed, $cl-brd-base);}}
+    &.md-brd1-bottom-dashed{th,td{@include brd-bottom(1px, dashed, $cl-brd-base);}}
+    &.md-brd2-bottom-dashed{th,td{@include brd-bottom(2px, dashed, $cl-brd-base);}}
+    &.md-brd3-bottom-dashed{th,td{@include brd-bottom(3px, dashed, $cl-brd-base);}}
+    &.md-brd1-left-dashed{th,td{@include brd-left(1px, dashed, $cl-brd-base);}}
+    &.md-brd2-left-dashed{th,td{@include brd-left(2px, dashed, $cl-brd-base);}}
+    &.md-brd3-left-dashed{th,td{@include brd-left(3px, dashed, $cl-brd-base);}}
+
+    //border dashed theme(th,td)
+    .md-brd1-dashed-theme{@include brd(1px, dashed, $cl-theme);}
+    .md-brd2-dashed-theme{@include brd(2px, dashed, $cl-theme);}
+    .md-brd3-dashed-theme{@include brd(3px, dashed, $cl-theme);}
+    .md-brd1-top-dashed-theme{@include brd-top(1px, dashed, $cl-theme);}
+    .md-brd2-top-dashed-theme{@include brd-top(2px, dashed, $cl-theme);}
+    .md-brd3-top-dashed-theme{@include brd-top(3px, dashed, $cl-theme);}
+    .md-brd1-right-dashed-theme{@include brd-right(1px, dashed, $cl-theme);}
+    .md-brd2-right-dashed-theme{@include brd-right(2px, dashed, $cl-theme);}
+    .md-brd3-right-dashed-theme{@include brd-right(3px, dashed, $cl-theme);}
+    .md-brd1-bottom-dashed-theme{@include brd-bottom(1px, dashed, $cl-theme);}
+    .md-brd2-bottom-dashed-theme{@include brd-bottom(2px, dashed, $cl-theme);}
+    .md-brd3-bottom-dashed-theme{@include brd-bottom(3px, dashed, $cl-theme);}
+    .md-brd1-left-dashed-theme{@include brd-left(1px, dashed, $cl-theme);}
+    .md-brd2-left-dashed-theme{@include brd-left(2px, dashed, $cl-theme);}
+    .md-brd3-left-dashed-theme{@include brd-left(3px, dashed, $cl-theme);}
+
+    //border dashed theme(tr > th,td)
+    &.md-brd1-dashed-theme{th,td{@include brd(1px, dashed, $cl-theme);}}
+    &.md-brd2-dashed-theme{th,td{@include brd(2px, dashed, $cl-theme);}}
+    &.md-brd3-dashed-theme{th,td{@include brd(3px, dashed, $cl-theme);}}
+    &.md-brd1-top-dashed-theme{th,td{@include brd-top(1px, dashed, $cl-theme);}}
+    &.md-brd2-top-dashed-theme{th,td{@include brd-top(2px, dashed, $cl-theme);}}
+    &.md-brd3-top-dashed-theme{th,td{@include brd-top(3px, dashed, $cl-theme);}}
+    &.md-brd1-right-dashed-theme{th,td{@include brd-right(1px, dashed, $cl-theme);}}
+    &.md-brd2-right-dashed-theme{th,td{@include brd-right(2px, dashed, $cl-theme);}}
+    &.md-brd3-right-dashed-theme{th,td{@include brd-right(3px, dashed, $cl-theme);}}
+    &.md-brd1-bottom-dashed-theme{th,td{@include brd-bottom(1px, dashed, $cl-theme);}}
+    &.md-brd2-bottom-dashed-theme{th,td{@include brd-bottom(2px, dashed, $cl-theme);}}
+    &.md-brd3-bottom-dashed-theme{th,td{@include brd-bottom(3px, dashed, $cl-theme);}}
+    &.md-brd1-left-dashed-theme{th,td{@include brd-left(1px, dashed, $cl-theme);}}
+    &.md-brd2-left-dashed-theme{th,td{@include brd-left(2px, dashed, $cl-theme);}}
+    &.md-brd3-left-dashed-theme{th,td{@include brd-left(3px, dashed, $cl-theme);}}
+
+    //border dashed red(th,td)
+    .md-brd1-dashed-red{@include brd(1px, dashed, $cl-red);}
+    .md-brd2-dashed-red{@include brd(2px, dashed, $cl-red);}
+    .md-brd3-dashed-red{@include brd(3px, dashed, $cl-red);}
+    .md-brd1-top-dashed-red{@include brd-top(1px, dashed, $cl-red);}
+    .md-brd2-top-dashed-red{@include brd-top(2px, dashed, $cl-red);}
+    .md-brd3-top-dashed-red{@include brd-top(3px, dashed, $cl-red);}
+    .md-brd1-right-dashed-red{@include brd-right(1px, dashed, $cl-red);}
+    .md-brd2-right-dashed-red{@include brd-right(2px, dashed, $cl-red);}
+    .md-brd3-right-dashed-red{@include brd-right(3px, dashed, $cl-red);}
+    .md-brd1-bottom-dashed-red{@include brd-bottom(1px, dashed, $cl-red);}
+    .md-brd2-bottom-dashed-red{@include brd-bottom(2px, dashed, $cl-red);}
+    .md-brd3-bottom-dashed-red{@include brd-bottom(3px, dashed, $cl-red);}
+    .md-brd1-left-dashed-red{@include brd-left(1px, dashed, $cl-red);}
+    .md-brd2-left-dashed-red{@include brd-left(2px, dashed, $cl-red);}
+    .md-brd3-left-dashed-red{@include brd-left(3px, dashed, $cl-red);}
+    //border dashed red(tr > th,td)
+    &.md-brd1-dashed-red{th,td{@include brd(1px, dashed, $cl-red);}}
+    &.md-brd2-dashed-red{th,td{@include brd(2px, dashed, $cl-red);}}
+    &.md-brd3-dashed-red{th,td{@include brd(3px, dashed, $cl-red);}}
+    &.md-brd1-top-dashed-red{th,td{@include brd-top(1px, dashed, $cl-red);}}
+    &.md-brd2-top-dashed-red{th,td{@include brd-top(2px, dashed, $cl-red);}}
+    &.md-brd3-top-dashed-red{th,td{@include brd-top(3px, dashed, $cl-red);}}
+    &.md-brd1-right-dashed-red{th,td{@include brd-right(1px, dashed, $cl-red);}}
+    &.md-brd2-right-dashed-red{th,td{@include brd-right(2px, dashed, $cl-red);}}
+    &.md-brd3-right-dashed-red{th,td{@include brd-right(3px, dashed, $cl-red);}}
+    &.md-brd1-bottom-dashed-red{th,td{@include brd-bottom(1px, dashed, $cl-red);}}
+    &.md-brd2-bottom-dashed-red{th,td{@include brd-bottom(2px, dashed, $cl-red);}}
+    &.md-brd3-bottom-dashed-red{th,td{@include brd-bottom(3px, dashed, $cl-red);}}
+    &.md-brd1-left-dashed-red{th,td{@include brd-left(1px, dashed, $cl-red);}}
+    &.md-brd2-left-dashed-red{th,td{@include brd-left(2px, dashed, $cl-red);}}
+    &.md-brd3-left-dashed-red{th,td{@include brd-left(3px, dashed, $cl-red);}}
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "message"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.md-message{
+  .st-inner{
+    &.current{display:block;}
+    display:none;
+    @include brd(1px,solid,$cl-theme);
+    padding:7px 10px;
+    @include border-radius(3px);
+    @include box-shadow(rgba($cl-brd-base, 0.3) 1px 2px 5px);
+    i{font-size:$fs-h5;}
+    &.md-message-alert{
+      @include brd(1px,solid,$cl-red);
+      background: $cl-bg-alert;
+      color:$cl-red;
+      i{color:$cl-red;}
+    }
+    &.md-message-success{
+      @include brd(1px,solid,$cl-success);
+      background: $cl-bg-success;
+      color:$cl-success;
+      i{color:$cl-success;}
+    }
+    &.md-message-info{
+      @include brd(1px,solid,$cl-info);
+      background: $cl-bg-info;
+      color:$cl-info;
+      i{color:$cl-info;}
+    }
+    &.md-message-warning{
+      @include brd(1px,solid,$cl-warning);
+      background: $cl-bg-warning;
+      color:$cl-warning;
+      i{color:$cl-warning;}
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "toast"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.md-toast{
+  .st-body{
+    @include posi-fix(0,20%,auto,20%);
+    .st-inner{
+      &.current{display:block;}
+      display:none;
+      @include brd(1px,solid,$cl-theme);
+      padding:7px 10px;
+      @include border-radius(3px);
+      @include box-shadow(rgba($cl-brd-base, 0.3) 1px 2px 5px);
+      i{font-size:$fs-h5;}
+      &.md-toast-alert{
+        @include brd(1px,solid,$cl-red);
+        background: $cl-bg-alert;
+        color:$cl-red;
+        i{color:$cl-red;}
+      }
+      &.md-toast-success{
+        @include brd(1px,solid,$cl-success);
+        background: $cl-bg-success;
+        color:$cl-success;
+        i{color:$cl-success;}
+      }
+      &.md-toast-info{
+        @include brd(1px,solid,$cl-info);
+        background: $cl-bg-info;
+        color:$cl-info;
+        i{color:$cl-info;}
+      }
+      &.md-toast-warning{
+        @include brd(1px,solid,$cl-warning);
+        background: $cl-bg-warning;
+        color:$cl-warning;
+        i{color:$cl-warning;}
+      }
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "paginations"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.md-pagination{
+  ul.cp-float{
+    li{
+      border:1px solid $cl-brd-base;
+      @include border-radius(3px, 3px);
+      padding:3px 1px;
+    }
+  }
+}
+.md-paging-btn{
+  .st-body{
+    @include posi-abs(-18px,30px,auto,auto);
+    margin-left:-32px;
+    .st-inner{
+      >ul{
+        >li{
+          @include min-width(0);
+          a{
+            width:36px;
+            height:36px;
+            display:block;
+            @include brd;
+            @include border-radius(18px);
+            @include box-shadow(rgba($cl-brd-base, 0.3) 1px 0 3px);
+            text-align:center;
+            background:$cl-white;
+            line-height:36px;
+            i{font-size:$fs-h4;}
+            &:hover{
+              background:$cl-theme1-lighten;
+            }
+          }
+          &.is-disabled{
+            @include opacity(1);
+            a{
+              background:$cl-gray2;
+              color:#aaa;
+              @include box-shadow(none);
+              i{color:#aaa;}
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.md-paging-btn-bottom{
+  @extend .md-paging-btn;
+  .st-body{
+    @include posi-abs(auto,30px,-18px,auto);
+  }
+}
+
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "loading"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.md-loader{
+  .st-body{
+    @include posi-fix(50%,0,0,50%);
+    .st-inner{
+      @include boxset;
+      @include box-shadow-base;
+      width:180px;
+      margin-left:-90px;
+      margin-top:-90px;
+      padding:20px;
+      text-align:center;
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "collapse"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.md-collapse-horizontal{
+  .st-inner{
+    @include brd-top(1px,dotted,$cl-brd-base);
+    .md-collapse-switch-box{
+      @include border-bottom-radius(5px);
+      background:$cl-bg-gray2;
+      display:inline-block;
+      @include min-width(50px);
+      &:hover{
+        background:$cl-bg-gray;
+      }
+    }
+  }
+}
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■    "menu"   ■■■■■■■■■■■■■■■■■■■■■■■*/
