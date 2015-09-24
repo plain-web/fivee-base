@@ -197,16 +197,45 @@ a{
  * =============================================================
  ▼ default form
 ============================================================= */
-select,
-input[type="text"],
-input[type="password"]{
-  height:$lh-form;
-  margin:0;
+// select,
+// input[type="text"],
+// input[type="password"]{
+//   height:$lh-form;
+//   margin:0;
+//   padding:0 7px;
+//   line-height:$lh-form;
+//   font-size:100%;
+//   vertical-align:middle;
+//   outline: none;
+//   @include brd;
+//   @include border-radius(3px);
+//   font-family: $ff-base;
+//   &:focus{
+//    @extend .ef-bg-focus;
+//    @extend .ef-brd-focus;
+//   }
+// }
+// input[type="checkbox"],
+// input[type="radio"]{
+//   border:0;
+//   margin:0;
+//   padding:0;
+//   display: block;
+// }
+// select{
+//   padding:0;
+// }
+/* =============================================================
+ ▼ formset
+============================================================= */
+.cp-form{
+  display: block;
+  //margin:0;
   padding:0 7px;
-  line-height:$lh-form;
   font-size:100%;
   vertical-align:middle;
   outline: none;
+  border:0;
   @include brd;
   @include border-radius(3px);
   font-family: $ff-base;
@@ -215,23 +244,53 @@ input[type="password"]{
    @extend .ef-brd-focus;
   }
 }
-input[type="checkbox"],
-input[type="radio"]{
-  border:0;
-  margin:0;
-  padding:0;
-  display: block;
+.cp-input,
+.cp-select,
+.cp-textarea{
+  @extend .cp-form;
+  &.ef-lh{height:$lh-base;}
+  &.ef-lh0{height:0;}
+  &.ef-lh10{height:10px;}
+  &.ef-lh11{height:11px;}
+  &.ef-lh12{height:12px;}
+  &.ef-lh13{height:13px;}
+  &.ef-lh14{height:14px;}
+  &.ef-lh15{height:15px;}
+  &.ef-lh16{height:16px;}
+  &.ef-lh17{height:17px;}
+  &.ef-lh18{height:18px;}
+  &.ef-lh19{height:19px;}
+  &.ef-lh20{height:20px;}
+  &.ef-lh21{height:21px;}
+  &.ef-lh22{height:22px;}
+  &.ef-lh23{height:23px;}
+  &.ef-lh24{height:24px;}
+  &.ef-lh25{height:25px;}
+  &.ef-lh26{height:26px;}
+  &.ef-lh27{height:27px;}
+  &.ef-lh28{height:28px;}
+  &.ef-lh29{height:29px;}
+  &.ef-lh30{height:30px;}
+  &.ef-lh31{height:31px;}
+  &.ef-lh32{height:32px;}
+  &.ef-lh33{height:33px;}
+  &.ef-lh34{height:34px;}
+  &.ef-lh35{height:35px;}
+  &.ef-lh36{height:36px;}
+  &.ef-lh37{height:37px;}
+  &.ef-lh38{height:38px;}
+  &.ef-lh39{height:39px;}
+  &.ef-lh40{height:40px;}
 }
-select{
-  padding:0;
-}
-/* =============================================================
- ▼ formset
-============================================================= */
+.cp-select{padding:0;}
+
 label{
   &.cp-radio,
   &.cp-checkbox{
     position:relative;
+    border:0;
+    margin:0;
+    padding:0;
     display:block;
     padding-left:20px;
     input[type="checkbox"],
@@ -615,13 +674,13 @@ label{
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .cp-panel{
+  display:table;
   >.st-body{
     position:relative;
     >.st-inner{
       @include brd;
       @include border-radius(5px);
       padding:20px;
-      overflow: auto;
     }
   }
 }
