@@ -571,6 +571,26 @@ em {
   line-height: 35px;
 }
 
+.ef-lh36 {
+  line-height: 36px;
+}
+
+.ef-lh37 {
+  line-height: 37px;
+}
+
+.ef-lh38 {
+  line-height: 38px;
+}
+
+.ef-lh39 {
+  line-height: 39px;
+}
+
+.ef-lh40 {
+  line-height: 40px;
+}
+
 /* =============================================================
  ▼ width (%)
 ============================================================== */
@@ -4177,9 +4197,9 @@ ul.ef-float30 > li.ef-right {
   transition: all 0.3s ease-out;
 }
 
-.ef-brd-focus, select:focus,
-input[type="text"]:focus,
-input[type="password"]:focus {
+.ef-brd-focus, .cp-form:focus, .cp-input:focus,
+.cp-select:focus,
+.cp-textarea:focus {
   border-width: 1px;
   border-style: solid;
   border-color: #8691C1;
@@ -4189,9 +4209,9 @@ input[type="password"]:focus {
   transition: all 0.3s ease-out;
 }
 
-.ef-bg-focus, select:focus,
-input[type="text"]:focus,
-input[type="password"]:focus {
+.ef-bg-focus, .cp-form:focus, .cp-input:focus,
+.cp-select:focus,
+.cp-textarea:focus {
   background: #EDF3F7;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -4517,16 +4537,18 @@ a i:hover {
  * =============================================================
  ▼ default form
 ============================================================= */
-select,
-input[type="text"],
-input[type="password"] {
-  height: 30px;
-  margin: 0;
+/* =============================================================
+ ▼ formset
+============================================================= */
+.cp-form, .cp-input,
+.cp-select,
+.cp-textarea {
+  display: block;
   padding: 0 7px;
-  line-height: 30px;
   font-size: 100%;
   vertical-align: middle;
   outline: none;
+  border: 0;
   border-width: 1px;
   border-style: solid;
   border-color: #ccc;
@@ -4536,23 +4558,181 @@ input[type="password"] {
   font-family: Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+.cp-input.ef-lh,
+.cp-select.ef-lh,
+.cp-textarea.ef-lh {
+  height: 1.4;
+}
+.cp-input.ef-lh0,
+.cp-select.ef-lh0,
+.cp-textarea.ef-lh0 {
+  height: 0;
+}
+.cp-input.ef-lh10,
+.cp-select.ef-lh10,
+.cp-textarea.ef-lh10 {
+  height: 10px;
+}
+.cp-input.ef-lh11,
+.cp-select.ef-lh11,
+.cp-textarea.ef-lh11 {
+  height: 11px;
+}
+.cp-input.ef-lh12,
+.cp-select.ef-lh12,
+.cp-textarea.ef-lh12 {
+  height: 12px;
+}
+.cp-input.ef-lh13,
+.cp-select.ef-lh13,
+.cp-textarea.ef-lh13 {
+  height: 13px;
+}
+.cp-input.ef-lh14,
+.cp-select.ef-lh14,
+.cp-textarea.ef-lh14 {
+  height: 14px;
+}
+.cp-input.ef-lh15,
+.cp-select.ef-lh15,
+.cp-textarea.ef-lh15 {
+  height: 15px;
+}
+.cp-input.ef-lh16,
+.cp-select.ef-lh16,
+.cp-textarea.ef-lh16 {
+  height: 16px;
+}
+.cp-input.ef-lh17,
+.cp-select.ef-lh17,
+.cp-textarea.ef-lh17 {
+  height: 17px;
+}
+.cp-input.ef-lh18,
+.cp-select.ef-lh18,
+.cp-textarea.ef-lh18 {
+  height: 18px;
+}
+.cp-input.ef-lh19,
+.cp-select.ef-lh19,
+.cp-textarea.ef-lh19 {
+  height: 19px;
+}
+.cp-input.ef-lh20,
+.cp-select.ef-lh20,
+.cp-textarea.ef-lh20 {
+  height: 20px;
+}
+.cp-input.ef-lh21,
+.cp-select.ef-lh21,
+.cp-textarea.ef-lh21 {
+  height: 21px;
+}
+.cp-input.ef-lh22,
+.cp-select.ef-lh22,
+.cp-textarea.ef-lh22 {
+  height: 22px;
+}
+.cp-input.ef-lh23,
+.cp-select.ef-lh23,
+.cp-textarea.ef-lh23 {
+  height: 23px;
+}
+.cp-input.ef-lh24,
+.cp-select.ef-lh24,
+.cp-textarea.ef-lh24 {
+  height: 24px;
+}
+.cp-input.ef-lh25,
+.cp-select.ef-lh25,
+.cp-textarea.ef-lh25 {
+  height: 25px;
+}
+.cp-input.ef-lh26,
+.cp-select.ef-lh26,
+.cp-textarea.ef-lh26 {
+  height: 26px;
+}
+.cp-input.ef-lh27,
+.cp-select.ef-lh27,
+.cp-textarea.ef-lh27 {
+  height: 27px;
+}
+.cp-input.ef-lh28,
+.cp-select.ef-lh28,
+.cp-textarea.ef-lh28 {
+  height: 28px;
+}
+.cp-input.ef-lh29,
+.cp-select.ef-lh29,
+.cp-textarea.ef-lh29 {
+  height: 29px;
+}
+.cp-input.ef-lh30,
+.cp-select.ef-lh30,
+.cp-textarea.ef-lh30 {
+  height: 30px;
+}
+.cp-input.ef-lh31,
+.cp-select.ef-lh31,
+.cp-textarea.ef-lh31 {
+  height: 31px;
+}
+.cp-input.ef-lh32,
+.cp-select.ef-lh32,
+.cp-textarea.ef-lh32 {
+  height: 32px;
+}
+.cp-input.ef-lh33,
+.cp-select.ef-lh33,
+.cp-textarea.ef-lh33 {
+  height: 33px;
+}
+.cp-input.ef-lh34,
+.cp-select.ef-lh34,
+.cp-textarea.ef-lh34 {
+  height: 34px;
+}
+.cp-input.ef-lh35,
+.cp-select.ef-lh35,
+.cp-textarea.ef-lh35 {
+  height: 35px;
+}
+.cp-input.ef-lh36,
+.cp-select.ef-lh36,
+.cp-textarea.ef-lh36 {
+  height: 36px;
+}
+.cp-input.ef-lh37,
+.cp-select.ef-lh37,
+.cp-textarea.ef-lh37 {
+  height: 37px;
+}
+.cp-input.ef-lh38,
+.cp-select.ef-lh38,
+.cp-textarea.ef-lh38 {
+  height: 38px;
+}
+.cp-input.ef-lh39,
+.cp-select.ef-lh39,
+.cp-textarea.ef-lh39 {
+  height: 39px;
+}
+.cp-input.ef-lh40,
+.cp-select.ef-lh40,
+.cp-textarea.ef-lh40 {
+  height: 40px;
+}
+
+.cp-select {
+  padding: 0;
+}
+
+label.cp-radio, label.cp-checkbox {
+  position: relative;
   border: 0;
   margin: 0;
   padding: 0;
-  display: block;
-}
-
-select {
-  padding: 0;
-}
-
-/* =============================================================
- ▼ formset
-============================================================= */
-label.cp-radio, label.cp-checkbox {
-  position: relative;
   display: block;
   padding-left: 20px;
 }
@@ -4611,7 +4791,7 @@ label.cp-checkbox input[type="radio"] {
   font-size: 13px;
   border-width: 1px;
   border-style: solid;
-  border-color: #d5d5d5;
+  border-color: #d4d4d4;
   -moz-border-radius: 3px 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px 3px;
@@ -4629,7 +4809,7 @@ label.cp-checkbox input[type="radio"] {
   background: #f6f6f6;
   border-width: 1px;
   border-style: solid;
-  border-color: #d5d5d5;
+  border-color: #d4d4d4;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f6f6f6), color-stop(50%, #f6f6f6), color-stop(100%, #f6f6f6));
   background-image: -moz-linear-gradient(#f6f6f6, #f6f6f6, #f6f6f6);
   background-image: -webkit-linear-gradient(#f6f6f6, #f6f6f6, #f6f6f6);
@@ -4642,7 +4822,7 @@ label.cp-checkbox input[type="radio"] {
   background: #eee;
   border-width: 1px;
   border-style: solid;
-  border-color: #d5d5d5;
+  border-color: #d4d4d4;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eee), color-stop(50%, #eee), color-stop(100%, #eee));
   background-image: -moz-linear-gradient(#eee, #eee, #eee);
   background-image: -webkit-linear-gradient(#eee, #eee, #eee);
@@ -4734,7 +4914,7 @@ label.cp-checkbox input[type="radio"] {
   background: #E6AD2D;
   border-width: 1px;
   border-style: solid;
-  border-color: #d5d5d5;
+  border-color: #d4d4d4;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #E6AD2D), color-stop(50%, #E6AD2D), color-stop(100%, #E6AD2D));
   background-image: -moz-linear-gradient(#E6AD2D, #E6AD2D, #E6AD2D);
   background-image: -webkit-linear-gradient(#E6AD2D, #E6AD2D, #E6AD2D);
@@ -5119,6 +5299,9 @@ label.cp-checkbox input[type="radio"] {
  * "panels"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
+.cp-panel, .cp-panel-mini {
+  display: table;
+}
 .cp-panel > .st-body, .cp-panel-mini > .st-body {
   position: relative;
 }
@@ -5130,7 +5313,6 @@ label.cp-checkbox input[type="radio"] {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   padding: 20px;
-  overflow: auto;
 }
 
 .cp-panel-mini > .st-body > .st-inner {

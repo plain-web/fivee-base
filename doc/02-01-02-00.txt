@@ -1,0 +1,8 @@
+<ul class="ef-float ef-lh30">
+  <li>
+    <label class="cp-radio">
+      <input name="test00" type="radio">
+      Fivee-base01
+    </label>
+  </li>
+</ul>
