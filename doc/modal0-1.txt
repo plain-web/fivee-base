@@ -1,3 +1,0 @@
-<a class="jq-modal-open jq-modal-num0" href="javascript:void(0);">
-  modal open
-</a>

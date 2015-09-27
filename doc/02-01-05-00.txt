@@ -1,0 +1,21 @@
+<ul class="ef-float20">
+  <li>
+    <div class="ef-lh30">
+      title
+    </div>
+  </li>
+  <li>
+    <select class="cp-select ef-lh30">
+      <option>
+        keyword
+      </option>
+    </select>
+  </li>
+  <li>
+    <select class="cp-select ef-lh30">
+      <option>
+        keyword
+      </option>
+    </select>
+  </li>
+</ul>
