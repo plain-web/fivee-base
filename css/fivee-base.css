@@ -6286,6 +6286,36 @@ label.cp-checkbox input[type="radio"] {
   margin-left: -20px;
 }
 
+.cp-insert-icon-left, .cp-insert-icon-right {
+  position: relative;
+}
+.cp-insert-icon-left .cp-insert-icon, .cp-insert-icon-right .cp-insert-icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 7px;
+}
+.cp-insert-icon-left .cp-insert-icon i, .cp-insert-icon-right .cp-insert-icon i, .cp-insert-icon-left .cp-insert-icon img, .cp-insert-icon-right .cp-insert-icon img {
+  margin-top: -7px;
+  display: block;
+}
+.cp-insert-icon-left input, .cp-insert-icon-right input, .cp-insert-icon-left textarea, .cp-insert-icon-right textarea {
+  padding-left: 23px;
+}
+
+.cp-insert-icon-right .cp-insert-icon {
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  bottom: auto;
+  left: auto;
+}
+.cp-insert-icon-right input, .cp-insert-icon-right textarea {
+  padding-right: 23px;
+}
+
 /* =============================================================
  ▼ ime mode
 ============================================================= */

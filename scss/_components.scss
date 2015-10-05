@@ -423,6 +423,31 @@ label{
     }
   }
 }
+
+.cp-insert-icon-left{
+  position:relative;
+  .cp-insert-icon{
+    display:block;
+    @include posi-abs(50%,auto,auto,7px);
+    i,img{
+      margin-top:-7px;
+      display:block;
+    }
+  }
+  input,textarea{
+    padding-left:23px;
+  }
+}
+.cp-insert-icon-right{
+  @extend .cp-insert-icon-left;
+  .cp-insert-icon{
+    @include posi-abs(50%,7px,auto,auto);
+  }
+  input,textarea{
+    padding-right:23px;
+  }
+
+}
 /* =============================================================
  ▼ ime mode
 ============================================================= */
