@@ -66,6 +66,7 @@ footer{
       margin-bottom:30px;
       // page-nav ////////////////////////////////////
       >.page-nav{
+        display:block;
         >.st-body{
           width:200px;
           margin:15px;
@@ -99,6 +100,7 @@ footer{
       }
       // page-main ////////////////////////////
       >.page-contents{
+        display:block;
         margin-left:220px;
         >.st-body{
           >.st-inner{

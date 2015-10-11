@@ -231,7 +231,7 @@ a{
 .cp-form{
   display: block;
   //margin:0;
-  padding:0 7px;
+  padding:3px 7px;
   font-size:100%;
   vertical-align:middle;
   outline: none;
@@ -243,6 +243,10 @@ a{
    @extend .ef-bg-focus;
    @extend .ef-brd-focus;
   }
+}
+.cp-input{
+  line-height:$lh-form;
+  height:30px;
 }
 .cp-select,
 .cp-input,
@@ -404,7 +408,7 @@ a{
   &.ef-rdl90p{@include border-left-radius(90%);}
   &.ef-rdl100p{@include border-left-radius(100%);}
 }
-.cp-select{padding:0;}
+//.cp-select{padding:0;}
 
 label{
   &.cp-radio,
@@ -418,35 +422,65 @@ label{
     input[type="checkbox"],
     input[type="radio"]{
       @include posi-abs(50%,auto,auto,auto);
-      margin-top:-6px;
+      height:13px;
+      margin-top:-7px;
       margin-left:-20px;
+      padding:0;
     }
   }
 }
-
-.cp-insert-icon-left{
+//insert icon
+.cp-input-icon-left{
   position:relative;
-  .cp-insert-icon{
+  i,img{
+   @include posi-abs(50%,auto,auto,7px);
+    margin-top:-7px;
     display:block;
-    @include posi-abs(50%,auto,auto,7px);
-    i,img{
-      margin-top:-7px;
-      display:block;
-    }
   }
   input,textarea{
     padding-left:23px;
   }
 }
-.cp-insert-icon-right{
-  @extend .cp-insert-icon-left;
-  .cp-insert-icon{
+.cp-input-icon-right{
+  @extend .cp-input-icon-left;
+  i,img{
     @include posi-abs(50%,7px,auto,auto);
   }
   input,textarea{
+    padding-left:7px;
     padding-right:23px;
   }
-
+}
+//add button
+.cp-input-btn-left{
+  position:relative;
+  display: table;
+  a{
+    display:table-cell;
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+  }
+  input{
+    display:table-cell;
+    border-left:0;
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+  }
+}
+.cp-input-btn-right{
+  position:relative;
+  display: table;
+  a{
+    display:table-cell;
+    border-top-left-radius:0;
+    border-bottom-left-radius:0;
+  }
+  input{
+    display:table-cell;
+    border-right:0;
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+  }
 }
 /* =============================================================
  ▼ ime mode
@@ -483,6 +517,40 @@ label{
   @include border-radius(3px 3px);
   @include gradation($cl-btn-lighten, $cl-btn-base);
   //@include gradation-ie(#ffffffff, #ffeeeeee); // for oldie
+  //line-height
+  &.ef-lh{height:$lh-base;}
+  &.ef-lh0{height:0;}
+  &.ef-lh10{height:10px;}
+  &.ef-lh11{height:11px;}
+  &.ef-lh12{height:12px;}
+  &.ef-lh13{height:13px;}
+  &.ef-lh14{height:14px;}
+  &.ef-lh15{height:15px;}
+  &.ef-lh16{height:16px;}
+  &.ef-lh17{height:17px;}
+  &.ef-lh18{height:18px;}
+  &.ef-lh19{height:19px;}
+  &.ef-lh20{height:20px;}
+  &.ef-lh21{height:21px;}
+  &.ef-lh22{height:22px;}
+  &.ef-lh23{height:23px;}
+  &.ef-lh24{height:24px;}
+  &.ef-lh25{height:25px;}
+  &.ef-lh26{height:26px;}
+  &.ef-lh27{height:27px;}
+  &.ef-lh28{height:28px;}
+  &.ef-lh29{height:29px;}
+  &.ef-lh30{height:30px;}
+  &.ef-lh31{height:31px;}
+  &.ef-lh32{height:32px;}
+  &.ef-lh33{height:33px;}
+  &.ef-lh34{height:34px;}
+  &.ef-lh35{height:35px;}
+  &.ef-lh36{height:36px;}
+  &.ef-lh37{height:37px;}
+  &.ef-lh38{height:38px;}
+  &.ef-lh39{height:39px;}
+  &.ef-lh40{height:40px;}
   &:hover{
     text-decoration:none;
     color:$cl-txt-base;

@@ -5048,7 +5048,7 @@ a i:hover {
 .cp-input,
 .cp-textarea {
   display: block;
-  padding: 0 7px;
+  padding: 3px 7px;
   font-size: 100%;
   vertical-align: middle;
   outline: none;
@@ -5060,6 +5060,11 @@ a i:hover {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   font-family: Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.cp-input {
+  line-height: 30px;
+  height: 30px;
 }
 
 .cp-select.ef-lh,
@@ -6262,10 +6267,6 @@ a i:hover {
   border-bottom-left-radius: 100%;
 }
 
-.cp-select {
-  padding: 0;
-}
-
 label.cp-radio, label.cp-checkbox {
   position: relative;
   border: 0;
@@ -6282,38 +6283,70 @@ label.cp-checkbox input[type="radio"] {
   right: auto;
   bottom: auto;
   left: auto;
-  margin-top: -6px;
+  height: 13px;
+  margin-top: -7px;
   margin-left: -20px;
+  padding: 0;
 }
 
-.cp-insert-icon-left, .cp-insert-icon-right {
+.cp-input-icon-left, .cp-input-icon-right {
   position: relative;
 }
-.cp-insert-icon-left .cp-insert-icon, .cp-insert-icon-right .cp-insert-icon {
-  display: block;
+.cp-input-icon-left i, .cp-input-icon-right i, .cp-input-icon-left img, .cp-input-icon-right img {
   position: absolute;
   top: 50%;
   right: auto;
   bottom: auto;
   left: 7px;
-}
-.cp-insert-icon-left .cp-insert-icon i, .cp-insert-icon-right .cp-insert-icon i, .cp-insert-icon-left .cp-insert-icon img, .cp-insert-icon-right .cp-insert-icon img {
   margin-top: -7px;
   display: block;
 }
-.cp-insert-icon-left input, .cp-insert-icon-right input, .cp-insert-icon-left textarea, .cp-insert-icon-right textarea {
+.cp-input-icon-left input, .cp-input-icon-right input, .cp-input-icon-left textarea, .cp-input-icon-right textarea {
   padding-left: 23px;
 }
 
-.cp-insert-icon-right .cp-insert-icon {
+.cp-input-icon-right i, .cp-input-icon-right img {
   position: absolute;
   top: 50%;
   right: 7px;
   bottom: auto;
   left: auto;
 }
-.cp-insert-icon-right input, .cp-insert-icon-right textarea {
+.cp-input-icon-right input, .cp-input-icon-right textarea {
+  padding-left: 7px;
   padding-right: 23px;
+}
+
+.cp-input-btn-left {
+  position: relative;
+  display: table;
+}
+.cp-input-btn-left a {
+  display: table-cell;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.cp-input-btn-left input {
+  display: table-cell;
+  border-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.cp-input-btn-right {
+  position: relative;
+  display: table;
+}
+.cp-input-btn-right a {
+  display: table-cell;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.cp-input-btn-right input {
+  display: table-cell;
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 /* =============================================================
@@ -6370,6 +6403,105 @@ label.cp-checkbox input[type="radio"] {
 }
 .cp-btn i, .cp-btn-red i, .cp-btn-orange i, .cp-btn-blue i, .cp-btn-green i, .cp-btn-yellow i, .cp-btn-black i, .cp-btn-gray i, .cp-btn-theme i, .cp-btn-fix i, .cp-btn-large i, .cp-btn-mini i {
   color: #333;
+}
+.cp-btn.ef-lh, .ef-lh.cp-btn-red, .ef-lh.cp-btn-orange, .ef-lh.cp-btn-blue, .ef-lh.cp-btn-green, .ef-lh.cp-btn-yellow, .ef-lh.cp-btn-black, .ef-lh.cp-btn-gray, .ef-lh.cp-btn-theme, .ef-lh.cp-btn-fix, .ef-lh.cp-btn-large, .ef-lh.cp-btn-mini {
+  height: 1.4;
+}
+.cp-btn.ef-lh0, .ef-lh0.cp-btn-red, .ef-lh0.cp-btn-orange, .ef-lh0.cp-btn-blue, .ef-lh0.cp-btn-green, .ef-lh0.cp-btn-yellow, .ef-lh0.cp-btn-black, .ef-lh0.cp-btn-gray, .ef-lh0.cp-btn-theme, .ef-lh0.cp-btn-fix, .ef-lh0.cp-btn-large, .ef-lh0.cp-btn-mini {
+  height: 0;
+}
+.cp-btn.ef-lh10, .ef-lh10.cp-btn-red, .ef-lh10.cp-btn-orange, .ef-lh10.cp-btn-blue, .ef-lh10.cp-btn-green, .ef-lh10.cp-btn-yellow, .ef-lh10.cp-btn-black, .ef-lh10.cp-btn-gray, .ef-lh10.cp-btn-theme, .ef-lh10.cp-btn-fix, .ef-lh10.cp-btn-large, .ef-lh10.cp-btn-mini {
+  height: 10px;
+}
+.cp-btn.ef-lh11, .ef-lh11.cp-btn-red, .ef-lh11.cp-btn-orange, .ef-lh11.cp-btn-blue, .ef-lh11.cp-btn-green, .ef-lh11.cp-btn-yellow, .ef-lh11.cp-btn-black, .ef-lh11.cp-btn-gray, .ef-lh11.cp-btn-theme, .ef-lh11.cp-btn-fix, .ef-lh11.cp-btn-large, .ef-lh11.cp-btn-mini {
+  height: 11px;
+}
+.cp-btn.ef-lh12, .ef-lh12.cp-btn-red, .ef-lh12.cp-btn-orange, .ef-lh12.cp-btn-blue, .ef-lh12.cp-btn-green, .ef-lh12.cp-btn-yellow, .ef-lh12.cp-btn-black, .ef-lh12.cp-btn-gray, .ef-lh12.cp-btn-theme, .ef-lh12.cp-btn-fix, .ef-lh12.cp-btn-large, .ef-lh12.cp-btn-mini {
+  height: 12px;
+}
+.cp-btn.ef-lh13, .ef-lh13.cp-btn-red, .ef-lh13.cp-btn-orange, .ef-lh13.cp-btn-blue, .ef-lh13.cp-btn-green, .ef-lh13.cp-btn-yellow, .ef-lh13.cp-btn-black, .ef-lh13.cp-btn-gray, .ef-lh13.cp-btn-theme, .ef-lh13.cp-btn-fix, .ef-lh13.cp-btn-large, .ef-lh13.cp-btn-mini {
+  height: 13px;
+}
+.cp-btn.ef-lh14, .ef-lh14.cp-btn-red, .ef-lh14.cp-btn-orange, .ef-lh14.cp-btn-blue, .ef-lh14.cp-btn-green, .ef-lh14.cp-btn-yellow, .ef-lh14.cp-btn-black, .ef-lh14.cp-btn-gray, .ef-lh14.cp-btn-theme, .ef-lh14.cp-btn-fix, .ef-lh14.cp-btn-large, .ef-lh14.cp-btn-mini {
+  height: 14px;
+}
+.cp-btn.ef-lh15, .ef-lh15.cp-btn-red, .ef-lh15.cp-btn-orange, .ef-lh15.cp-btn-blue, .ef-lh15.cp-btn-green, .ef-lh15.cp-btn-yellow, .ef-lh15.cp-btn-black, .ef-lh15.cp-btn-gray, .ef-lh15.cp-btn-theme, .ef-lh15.cp-btn-fix, .ef-lh15.cp-btn-large, .ef-lh15.cp-btn-mini {
+  height: 15px;
+}
+.cp-btn.ef-lh16, .ef-lh16.cp-btn-red, .ef-lh16.cp-btn-orange, .ef-lh16.cp-btn-blue, .ef-lh16.cp-btn-green, .ef-lh16.cp-btn-yellow, .ef-lh16.cp-btn-black, .ef-lh16.cp-btn-gray, .ef-lh16.cp-btn-theme, .ef-lh16.cp-btn-fix, .ef-lh16.cp-btn-large, .ef-lh16.cp-btn-mini {
+  height: 16px;
+}
+.cp-btn.ef-lh17, .ef-lh17.cp-btn-red, .ef-lh17.cp-btn-orange, .ef-lh17.cp-btn-blue, .ef-lh17.cp-btn-green, .ef-lh17.cp-btn-yellow, .ef-lh17.cp-btn-black, .ef-lh17.cp-btn-gray, .ef-lh17.cp-btn-theme, .ef-lh17.cp-btn-fix, .ef-lh17.cp-btn-large, .ef-lh17.cp-btn-mini {
+  height: 17px;
+}
+.cp-btn.ef-lh18, .ef-lh18.cp-btn-red, .ef-lh18.cp-btn-orange, .ef-lh18.cp-btn-blue, .ef-lh18.cp-btn-green, .ef-lh18.cp-btn-yellow, .ef-lh18.cp-btn-black, .ef-lh18.cp-btn-gray, .ef-lh18.cp-btn-theme, .ef-lh18.cp-btn-fix, .ef-lh18.cp-btn-large, .ef-lh18.cp-btn-mini {
+  height: 18px;
+}
+.cp-btn.ef-lh19, .ef-lh19.cp-btn-red, .ef-lh19.cp-btn-orange, .ef-lh19.cp-btn-blue, .ef-lh19.cp-btn-green, .ef-lh19.cp-btn-yellow, .ef-lh19.cp-btn-black, .ef-lh19.cp-btn-gray, .ef-lh19.cp-btn-theme, .ef-lh19.cp-btn-fix, .ef-lh19.cp-btn-large, .ef-lh19.cp-btn-mini {
+  height: 19px;
+}
+.cp-btn.ef-lh20, .ef-lh20.cp-btn-red, .ef-lh20.cp-btn-orange, .ef-lh20.cp-btn-blue, .ef-lh20.cp-btn-green, .ef-lh20.cp-btn-yellow, .ef-lh20.cp-btn-black, .ef-lh20.cp-btn-gray, .ef-lh20.cp-btn-theme, .ef-lh20.cp-btn-fix, .ef-lh20.cp-btn-large, .ef-lh20.cp-btn-mini {
+  height: 20px;
+}
+.cp-btn.ef-lh21, .ef-lh21.cp-btn-red, .ef-lh21.cp-btn-orange, .ef-lh21.cp-btn-blue, .ef-lh21.cp-btn-green, .ef-lh21.cp-btn-yellow, .ef-lh21.cp-btn-black, .ef-lh21.cp-btn-gray, .ef-lh21.cp-btn-theme, .ef-lh21.cp-btn-fix, .ef-lh21.cp-btn-large, .ef-lh21.cp-btn-mini {
+  height: 21px;
+}
+.cp-btn.ef-lh22, .ef-lh22.cp-btn-red, .ef-lh22.cp-btn-orange, .ef-lh22.cp-btn-blue, .ef-lh22.cp-btn-green, .ef-lh22.cp-btn-yellow, .ef-lh22.cp-btn-black, .ef-lh22.cp-btn-gray, .ef-lh22.cp-btn-theme, .ef-lh22.cp-btn-fix, .ef-lh22.cp-btn-large, .ef-lh22.cp-btn-mini {
+  height: 22px;
+}
+.cp-btn.ef-lh23, .ef-lh23.cp-btn-red, .ef-lh23.cp-btn-orange, .ef-lh23.cp-btn-blue, .ef-lh23.cp-btn-green, .ef-lh23.cp-btn-yellow, .ef-lh23.cp-btn-black, .ef-lh23.cp-btn-gray, .ef-lh23.cp-btn-theme, .ef-lh23.cp-btn-fix, .ef-lh23.cp-btn-large, .ef-lh23.cp-btn-mini {
+  height: 23px;
+}
+.cp-btn.ef-lh24, .ef-lh24.cp-btn-red, .ef-lh24.cp-btn-orange, .ef-lh24.cp-btn-blue, .ef-lh24.cp-btn-green, .ef-lh24.cp-btn-yellow, .ef-lh24.cp-btn-black, .ef-lh24.cp-btn-gray, .ef-lh24.cp-btn-theme, .ef-lh24.cp-btn-fix, .ef-lh24.cp-btn-large, .ef-lh24.cp-btn-mini {
+  height: 24px;
+}
+.cp-btn.ef-lh25, .ef-lh25.cp-btn-red, .ef-lh25.cp-btn-orange, .ef-lh25.cp-btn-blue, .ef-lh25.cp-btn-green, .ef-lh25.cp-btn-yellow, .ef-lh25.cp-btn-black, .ef-lh25.cp-btn-gray, .ef-lh25.cp-btn-theme, .ef-lh25.cp-btn-fix, .ef-lh25.cp-btn-large, .ef-lh25.cp-btn-mini {
+  height: 25px;
+}
+.cp-btn.ef-lh26, .ef-lh26.cp-btn-red, .ef-lh26.cp-btn-orange, .ef-lh26.cp-btn-blue, .ef-lh26.cp-btn-green, .ef-lh26.cp-btn-yellow, .ef-lh26.cp-btn-black, .ef-lh26.cp-btn-gray, .ef-lh26.cp-btn-theme, .ef-lh26.cp-btn-fix, .ef-lh26.cp-btn-large, .ef-lh26.cp-btn-mini {
+  height: 26px;
+}
+.cp-btn.ef-lh27, .ef-lh27.cp-btn-red, .ef-lh27.cp-btn-orange, .ef-lh27.cp-btn-blue, .ef-lh27.cp-btn-green, .ef-lh27.cp-btn-yellow, .ef-lh27.cp-btn-black, .ef-lh27.cp-btn-gray, .ef-lh27.cp-btn-theme, .ef-lh27.cp-btn-fix, .ef-lh27.cp-btn-large, .ef-lh27.cp-btn-mini {
+  height: 27px;
+}
+.cp-btn.ef-lh28, .ef-lh28.cp-btn-red, .ef-lh28.cp-btn-orange, .ef-lh28.cp-btn-blue, .ef-lh28.cp-btn-green, .ef-lh28.cp-btn-yellow, .ef-lh28.cp-btn-black, .ef-lh28.cp-btn-gray, .ef-lh28.cp-btn-theme, .ef-lh28.cp-btn-fix, .ef-lh28.cp-btn-large, .ef-lh28.cp-btn-mini {
+  height: 28px;
+}
+.cp-btn.ef-lh29, .ef-lh29.cp-btn-red, .ef-lh29.cp-btn-orange, .ef-lh29.cp-btn-blue, .ef-lh29.cp-btn-green, .ef-lh29.cp-btn-yellow, .ef-lh29.cp-btn-black, .ef-lh29.cp-btn-gray, .ef-lh29.cp-btn-theme, .ef-lh29.cp-btn-fix, .ef-lh29.cp-btn-large, .ef-lh29.cp-btn-mini {
+  height: 29px;
+}
+.cp-btn.ef-lh30, .ef-lh30.cp-btn-red, .ef-lh30.cp-btn-orange, .ef-lh30.cp-btn-blue, .ef-lh30.cp-btn-green, .ef-lh30.cp-btn-yellow, .ef-lh30.cp-btn-black, .ef-lh30.cp-btn-gray, .ef-lh30.cp-btn-theme, .ef-lh30.cp-btn-fix, .ef-lh30.cp-btn-large, .ef-lh30.cp-btn-mini {
+  height: 30px;
+}
+.cp-btn.ef-lh31, .ef-lh31.cp-btn-red, .ef-lh31.cp-btn-orange, .ef-lh31.cp-btn-blue, .ef-lh31.cp-btn-green, .ef-lh31.cp-btn-yellow, .ef-lh31.cp-btn-black, .ef-lh31.cp-btn-gray, .ef-lh31.cp-btn-theme, .ef-lh31.cp-btn-fix, .ef-lh31.cp-btn-large, .ef-lh31.cp-btn-mini {
+  height: 31px;
+}
+.cp-btn.ef-lh32, .ef-lh32.cp-btn-red, .ef-lh32.cp-btn-orange, .ef-lh32.cp-btn-blue, .ef-lh32.cp-btn-green, .ef-lh32.cp-btn-yellow, .ef-lh32.cp-btn-black, .ef-lh32.cp-btn-gray, .ef-lh32.cp-btn-theme, .ef-lh32.cp-btn-fix, .ef-lh32.cp-btn-large, .ef-lh32.cp-btn-mini {
+  height: 32px;
+}
+.cp-btn.ef-lh33, .ef-lh33.cp-btn-red, .ef-lh33.cp-btn-orange, .ef-lh33.cp-btn-blue, .ef-lh33.cp-btn-green, .ef-lh33.cp-btn-yellow, .ef-lh33.cp-btn-black, .ef-lh33.cp-btn-gray, .ef-lh33.cp-btn-theme, .ef-lh33.cp-btn-fix, .ef-lh33.cp-btn-large, .ef-lh33.cp-btn-mini {
+  height: 33px;
+}
+.cp-btn.ef-lh34, .ef-lh34.cp-btn-red, .ef-lh34.cp-btn-orange, .ef-lh34.cp-btn-blue, .ef-lh34.cp-btn-green, .ef-lh34.cp-btn-yellow, .ef-lh34.cp-btn-black, .ef-lh34.cp-btn-gray, .ef-lh34.cp-btn-theme, .ef-lh34.cp-btn-fix, .ef-lh34.cp-btn-large, .ef-lh34.cp-btn-mini {
+  height: 34px;
+}
+.cp-btn.ef-lh35, .ef-lh35.cp-btn-red, .ef-lh35.cp-btn-orange, .ef-lh35.cp-btn-blue, .ef-lh35.cp-btn-green, .ef-lh35.cp-btn-yellow, .ef-lh35.cp-btn-black, .ef-lh35.cp-btn-gray, .ef-lh35.cp-btn-theme, .ef-lh35.cp-btn-fix, .ef-lh35.cp-btn-large, .ef-lh35.cp-btn-mini {
+  height: 35px;
+}
+.cp-btn.ef-lh36, .ef-lh36.cp-btn-red, .ef-lh36.cp-btn-orange, .ef-lh36.cp-btn-blue, .ef-lh36.cp-btn-green, .ef-lh36.cp-btn-yellow, .ef-lh36.cp-btn-black, .ef-lh36.cp-btn-gray, .ef-lh36.cp-btn-theme, .ef-lh36.cp-btn-fix, .ef-lh36.cp-btn-large, .ef-lh36.cp-btn-mini {
+  height: 36px;
+}
+.cp-btn.ef-lh37, .ef-lh37.cp-btn-red, .ef-lh37.cp-btn-orange, .ef-lh37.cp-btn-blue, .ef-lh37.cp-btn-green, .ef-lh37.cp-btn-yellow, .ef-lh37.cp-btn-black, .ef-lh37.cp-btn-gray, .ef-lh37.cp-btn-theme, .ef-lh37.cp-btn-fix, .ef-lh37.cp-btn-large, .ef-lh37.cp-btn-mini {
+  height: 37px;
+}
+.cp-btn.ef-lh38, .ef-lh38.cp-btn-red, .ef-lh38.cp-btn-orange, .ef-lh38.cp-btn-blue, .ef-lh38.cp-btn-green, .ef-lh38.cp-btn-yellow, .ef-lh38.cp-btn-black, .ef-lh38.cp-btn-gray, .ef-lh38.cp-btn-theme, .ef-lh38.cp-btn-fix, .ef-lh38.cp-btn-large, .ef-lh38.cp-btn-mini {
+  height: 38px;
+}
+.cp-btn.ef-lh39, .ef-lh39.cp-btn-red, .ef-lh39.cp-btn-orange, .ef-lh39.cp-btn-blue, .ef-lh39.cp-btn-green, .ef-lh39.cp-btn-yellow, .ef-lh39.cp-btn-black, .ef-lh39.cp-btn-gray, .ef-lh39.cp-btn-theme, .ef-lh39.cp-btn-fix, .ef-lh39.cp-btn-large, .ef-lh39.cp-btn-mini {
+  height: 39px;
+}
+.cp-btn.ef-lh40, .ef-lh40.cp-btn-red, .ef-lh40.cp-btn-orange, .ef-lh40.cp-btn-blue, .ef-lh40.cp-btn-green, .ef-lh40.cp-btn-yellow, .ef-lh40.cp-btn-black, .ef-lh40.cp-btn-gray, .ef-lh40.cp-btn-theme, .ef-lh40.cp-btn-fix, .ef-lh40.cp-btn-large, .ef-lh40.cp-btn-mini {
+  height: 40px;
 }
 .cp-btn:hover, .cp-btn-red:hover, .cp-btn-orange:hover, .cp-btn-blue:hover, .cp-btn-green:hover, .cp-btn-yellow:hover, .cp-btn-black:hover, .cp-btn-gray:hover, .cp-btn-theme:hover, .cp-btn-fix:hover, .cp-btn-large:hover, .cp-btn-mini:hover {
   text-decoration: none;
@@ -9396,6 +9528,9 @@ footer .st-body .st-inner {
 .page-container > .st-body > .st-inner {
   margin-bottom: 30px;
 }
+.page-container > .st-body > .st-inner > .page-nav {
+  display: block;
+}
 .page-container > .st-body > .st-inner > .page-nav > .st-body {
   width: 200px;
   margin: 15px;
@@ -9427,6 +9562,7 @@ footer .st-body .st-inner {
   background: #f6f6f6;
 }
 .page-container > .st-body > .st-inner > .page-contents {
+  display: block;
   margin-left: 220px;
 }
 .page-container > .st-body > .st-inner > .page-contents > .st-body > .st-inner {

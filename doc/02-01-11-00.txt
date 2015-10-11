@@ -1,0 +1,18 @@
+<ul>
+  <li class="ef-mgb10">
+    <div class="cp-input-btn-left">
+      <a class="cp-btn" href="javascript:void(0);">
+        <i class="fa fa-calendar"></i>
+      </a>
+      <input class="cp-input ef-w120" type="text">
+    </div>
+  </li>
+  <li>
+    <div class="cp-input-btn-right">
+      <input class="cp-input ef-lh35 ef-w220" type="text">
+      <a class="cp-btn-blue ef-lh35" href="javascript:void(0);">
+        search
+      </a>
+    </div>
+  </li>
+</ul>
