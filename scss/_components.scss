@@ -73,52 +73,212 @@ ul{
     }
   }
   &.ef-list-hover-white{
-    li:hover{>a{background:$cl-bg-theme;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-theme;
+        }
+      }
+    }
   }
   &.ef-list-hover-red{
-    li:hover{>a{background:$cl-bg-red;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-red;
+        }
+      }
+    }
   }
   &.ef-list-hover-orange{
-    li:hover{>a{background:$cl-bg-orange;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-orange;
+        }
+      }
+    }
   }
   &.ef-list-hover-blue{
-    li:hover{>a{background:$cl-bg-blue;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-blue;
+        }
+      }
+    }
   }
   &.ef-list-hover-green{
-    li:hover{>a{background:$cl-bg-green;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-green;
+        }
+      }
+    }
   }
   &.ef-list-hover-yellow{
-    li:hover{>a{background:$cl-bg-yellow;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-yellow;
+        }
+      }
+    }
   }
   &.ef-list-hover-black{
-    li:hover{>a{background:$cl-bg-black;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-black;
+        }
+      }
+    }
   }
   &.ef-list-hover-gray{
-    li:hover{>a{background:$cl-bg-gray;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-gray;
+        }
+      }
+    }
   }
   &.ef-list-hover-gray1{
-    li:hover{>a{background:$cl-bg-gray1;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-gray1;
+        }
+      }
+    }
   }
   &.ef-list-hover-gray2{
-    li:hover{>a{background:$cl-bg-gray2;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-gray2;
+        }
+      }
+    }
   }
   &.ef-list-hover-gray3{
-    li:hover{>a{background:$cl-bg-gray3;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-gray3;
+        }
+      }
+    }
   }
   &.ef-list-hover-gray4{
-    li:hover{>a{background:$cl-bg-gray4;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-gray4;
+        }
+      }
+    }
   }
   &.ef-list-hover-gray5{
-    li:hover{>a{background:$cl-bg-gray5;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-gray5;
+        }
+      }
+    }
   }
   &.ef-list-hover-gray6{
-    li:hover{>a{background:$cl-bg-gray6;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-gray6;
+        }
+      }
+    }
   }
   &.ef-list-hover-gray7{
-    li:hover{>a{background:$cl-bg-gray7;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-gray7;
+        }
+      }
+    }
   }
   &.ef-list-hover-theme{
-    li:hover{>a{background:$cl-bg-theme;}}
+    >li{
+      a{
+        padding:5px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-theme;
+        }
+      }
+    }
   }
 }
 
@@ -568,6 +728,35 @@ label{
   &.cp-disabled{
     &:hover{
       background:$cl-btn-base;
+      cursor: default;
+    }
+  }
+}
+//white
+.cp-btn-white{
+  @extend .cp-btn;
+  color:$cl-txt-base;
+  i{color:$cl-txt-base;}
+  background:$cl-btn-white; // for oldie
+  @include brd(1px,solid,$cl-btn-white-darken);
+  @include gradation($cl-btn-white-lighten, $cl-btn-white);
+  &:hover{
+    color:$cl-txt-base;
+    i{color:$cl-txt-base;}
+    background:$cl-btn-white-lighten; // for oldie
+    @include brd(1px,solid,$cl-btn-white-darken);
+    @include gradation($cl-btn-white-lighten, $cl-btn-white-lighten);
+  }
+  &:active{
+    background:$cl-btn-white; // for oldie
+    @include brd(1px,solid,$cl-btn-white-darken);
+    @include gradation($cl-btn-white, $cl-btn-white);
+  }
+  &.cp-disabled{
+    color:$cl-txt-base;
+    i{color:$cl-txt-base;}
+    &:hover{
+      background:$cl-btn-white;
       cursor: default;
     }
   }

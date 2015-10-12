@@ -13,7 +13,7 @@ header{
   .st-body{
     &.ef-header-fix{
       @include posi-fix(0,0,auto,0);
-      z-index:1;
+      z-index:3;
     }
     background:$cl-bg-header;
     .st-inner{
@@ -46,7 +46,7 @@ footer{
   .st-body{
     &.ef-footer-fix{
       @include posi-fix(auto,0,0,0);
-      z-index:1;
+      z-index:3;
     }
     background-color:$cl-theme;
     .st-inner{
@@ -68,8 +68,9 @@ footer{
       >.page-nav{
         display:block;
         >.st-body{
-          width:200px;
-          margin:15px;
+          width:180px;
+          margin:20px;
+          margin-left:15px;
           >.st-inner{
             .md-main-nav{
               padding:10px;
@@ -101,10 +102,11 @@ footer{
       // page-main ////////////////////////////
       >.page-contents{
         display:block;
-        margin-left:220px;
+        margin-left:195px;
         >.st-body{
           >.st-inner{
             padding:20px;
+            padding-right:15px;
           }
         }
       }

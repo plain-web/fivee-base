@@ -46,7 +46,19 @@ $('.jq-ph-box input').each( function(){
   }
 });
 /*========================================================================
-  scroll
+  scrolltop arrow
+======================================================================== */
+$(window).scroll(function() {
+  var scPosi = $(document).scrollTop();
+  var scTop = $('.jq-scrolltop');
+  if(scPosi > 600){
+    scTop.fadeIn(600);
+  }else{
+    scTop.fadeOut(400);
+  }
+});
+/*========================================================================
+  scrolltop
 ======================================================================== */
 $('a[href*=#]:not([href=#])').click(function() {
   if(location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -363,50 +375,49 @@ function toolTipOn(target){
 /*========================================================================
   popup
 ======================================================================== */
-// $('body').on('click', '.jq-popup-open', function(){
-//   var windowWidth = $(window).outerWidth(true);
-//   var popupPosi = $(this).offset();
-//   var topPosi = popupPosi.top + 25;
-//       topPosi = topPosi - 90; //header height
-//   var thisWidth = $(this).width();
-//   var rightPosi = windowWidth - popupPosi.left - thisWidth + 7;
-//   //this
-//   clickThis = $(this);
-//   //return class
-//   returnClass = 'jq-popup-num';
-//   //target class
-//   targetClass = thisClassGet(clickThis, returnClass);
+$('.jq-popup-open').on('click', function(){
+  var windowWidth = $(window).outerWidth(true);
+  var popupPosi = $(this).position();
+  var topPosi = popupPosi.top;
+      topPosi = topPosi + $(this).outerHeight(true); //header height
+  var thisWidth = $(this).outerWidth(true);
+  var rightPosi = windowWidth - popupPosi.left - thisWidth;
+  //this
+  clickThis = $(this);
+  //return class
+  returnClass = 'jq-template';
+  //target class
+  targetClass = thisClassGet(clickThis, returnClass);
 
-//   var clicker = $(this).children('.jq-clickable');
-//   popupMenuOn(topPosi, rightPosi, targetClass, clicker);
-// });
+  popupMenuOn(topPosi, rightPosi, targetClass);
+});
 
-// function popupMenuOn(topPosi, rightPosi, targetClass, clicker){
-//   //show contents
-//   $('.jq-popup-posi').removeClass('is-current');
-//   $('.jq-popup').children(targetClass).addClass('is-current');
+function popupMenuOn(topPosi, rightPosi, targetClass){
+  //show contents
+  $('.jq-popup > .st-body').removeClass('is-current');
+  $('.jq-popup ' + targetClass).addClass('is-current');
 
-//   //position
-//   $('.jq-popup-posi').css({
-//     top:'',
-//     left:'',
-//     right:''
-//   }).css({
-//     top: topPosi,
-//     right: rightPosi
-//   });
-//   //show popup
-//   $('.jq-popup').show(300);
+  //position
+  $('.jq-popup ' + targetClass).css({
+    top:'',
+    left:'',
+    right:''
+  }).css({
+    top: topPosi,
+    right: rightPosi
+  });
+  //show popup
+  $('.jq-popup').show(300);
 
-//   //show cartain
-//   $('.jq-cartain').show();
+  //show cartain
+  $('.jq-cartain').show();
 
-//   //click close button
-//   $('.jq-popup-close, .jq-cartain').on('click', function(){
-//     $('.jq-popup').hide(300);
-//     $('.jq-cartain').hide();
-//   });
-// };
+  //click close button
+  $('.jq-popup-close, .jq-cartain').on('click', function(){
+    $('.jq-popup').hide(300);
+    $('.jq-cartain').hide();
+  });
+};
 /*========================================================================
   modal 
 ======================================================================== */

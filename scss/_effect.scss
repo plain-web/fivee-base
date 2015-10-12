@@ -866,27 +866,27 @@ ul.ef-float0{
 ul.ef-float3{
   @extend ul.ef-float0;
   >li{margin-right:3px;}
-  >li.ef-right{margin-left:3px;}
+  >li.ef-float-right{margin-left:3px;}
 }
 ul.ef-float7{
   @extend ul.ef-float0;
   >li{margin-right:7px;}
-  >li.ef-right{margin-left:7px;}
+  >li.ef-float-right{margin-left:7px;}
 }
 ul.ef-float10{
   @extend ul.ef-float0;
   >li{margin-right:10px;}
-  >li.ef-right{margin-left:10px;}
+  >li.ef-float-right{margin-left:10px;}
 }
 ul.ef-float20{
   @extend ul.ef-float0;
   >li{margin-right:20px;}
-  >li.ef-right{margin-left:20px;}
+  >li.ef-float-right{margin-left:20px;}
 }
 ul.ef-float30{
   @extend ul.ef-float0;
   >li{margin-right:30px;}
-  >li.ef-right{margin-left:30px;}
+  >li.ef-float-right{margin-left:30px;}
 }
 
 /* =============================================================

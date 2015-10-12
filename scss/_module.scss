@@ -1,35 +1,16 @@
 @import "compass";
 @import "components";
 /*
- * components.scss
+ * module.scss
  * include:
- * "nav" "tab" "modals" "popup" "cartain"
- * "tooltip" "message" "toast" "breadclumb"
+ *"tab" "modal" "popup" "cartain"
+ * "tooltip" "message" "toast"
  * "pagination" "loading"
  * "collapse" "wizard"
  *
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "nav"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-// .side-menu{
-//   .one-block{
-//     @include brd-bottom;
-//     .st-inner{
-//     }
-//     &.menu-children{
-//       display:none;
-//       @include brd-bottom(0);
-//     }
-//     &.current{
-//       background-color:$cl-theme1;
-//     }
-//   }
-// }
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "tabs"
+ * "tab"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .md-tab{
@@ -168,22 +149,24 @@
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .md-popup{
-  >.lo-body{
+  >.st-body{
     @include posi-abs(0,auto,auto,auto);
     border:1px solid $cl-brd-base;
     @include border-radius(7px, 5px);
     @include box-shadow(rgba($cl-brd-base, 0.5) 0 0 5px);
-    //background:$popup-base;
+    background:$cl-bg-popup;
     display:none;
-    overflow:auto;
-    max-height:300px;
-    max-width: 300px;
     z-index:2;
     &.is-current{
       display:block;
     }
-    >.lo-inner{
-      padding:12px;
+    >.st-inner{
+      padding:10px 0;
+      .md-popup-body{
+        overflow:auto;
+        max-height:450px;
+        max-width: 300px;
+      }
     }
   }
 }
@@ -730,7 +713,7 @@ table.md-table-base{
 }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "paginations"
+ * "pagination"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .md-pagination{
@@ -820,6 +803,27 @@ table.md-table-base{
       @include min-width(50px);
       &:hover{
         background:$cl-bg-gray;
+      }
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "scrolltop"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.md-scrolltop{
+  .st-body{
+    @include posi-fix(auto,5px,27px,auto);
+    z-index:1;
+    .st-inner{
+      a{
+        @include brd;
+        @include border-radius(5px);
+        padding:4px 7px;
+        background:$cl-bg-white;
+        display: block;
+        @include opacity(0.9);
       }
     }
   }
