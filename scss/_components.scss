@@ -394,7 +394,7 @@ a{
   padding:3px 7px;
   font-size:100%;
   vertical-align:middle;
-  outline: none;
+  outline: 0;
   border:0;
   @include brd;
   @include border-radius(3px);

@@ -27,7 +27,7 @@ body {
   font-size: 13px;
   color: #333;
   line-height: 1.4;
-  font-family: Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Meiryo, メイリオ, Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 *, *:before, *:after {
@@ -40,6 +40,19 @@ small {
 
 em {
   font-style: normal;
+}
+
+pre, code {
+  font-family: Meiryo, メイリオ, Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+input, button {
+  outline: 0;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
 }
 
 /*
@@ -3400,6 +3413,13 @@ a.is-disabled {
 }
 
 /* =============================================================
+ ▼ nowrap
+============================================================== */
+.ef-nowrap {
+  white-space: nowrap;
+}
+
+/* =============================================================
  ▼ float
 ============================================================== */
 .ef-float {
@@ -5110,7 +5130,7 @@ h6 {
  ▼ font-family
 ============================================================= */
 .cp-fontfamily {
-  font-family: Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Meiryo, メイリオ, Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 /* =============================================================
@@ -5147,7 +5167,7 @@ a i:hover {
   padding: 3px 7px;
   font-size: 100%;
   vertical-align: middle;
-  outline: none;
+  outline: 0;
   border: 0;
   border-width: 1px;
   border-style: solid;
@@ -5155,7 +5175,7 @@ a i:hover {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  font-family: Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Meiryo, メイリオ, Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .cp-input {
@@ -6484,7 +6504,7 @@ label.cp-checkbox input[type="radio"] {
   outline: none;
   color: #333;
   background: #eee;
-  font-family: Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Meiryo, メイリオ, Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 13px;
   border-width: 1px;
   border-style: solid;
@@ -7740,7 +7760,7 @@ label.cp-checkbox input[type="radio"] {
   display: block;
 }
 .md-popup > .st-body > .st-inner {
-  padding: 10px 0;
+  padding: 10px;
 }
 .md-popup > .st-body > .st-inner .md-popup-body {
   overflow: auto;

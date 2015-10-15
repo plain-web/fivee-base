@@ -290,22 +290,6 @@ if(hasclass){
 //   }
 // });
 /*========================================================================
-  bookmark
-======================================================================== */
-var bookmartFlg = 0;
-$('.jq-bookmark-on').on('click', function(){
-  bookmartFlg++;
-  if(bookmartFlg === 1){
-    //console.log('one');
-  }
-  if(bookmartFlg === 2){
-    $(this).removeClass('active');
-    bookmartFlg = 0;
-    //console.log('two');
-  }
-});
-
-/*========================================================================
   tooltip
 ======================================================================== */
 var toolTipFlg = 'off';
@@ -373,51 +357,77 @@ function toolTipOn(target){
   $('.jq-tooltip').show(150);
 };
 /*========================================================================
+  bookmark
+======================================================================== */
+var bookmartFlg = 0;
+$('.jq-bookmark-open').on('click', function(){
+  var bookmarkIcon = $(this).children('i');
+  bookmartFlg++;
+  if(bookmartFlg === 1){
+    bookmarkIcon.removeClass('fa-star-o').addClass('fa-star');
+  }
+  if(bookmartFlg === 2){
+    bookmarkIcon.removeClass('fa-star').addClass('fa-star-o');
+
+    var thisSelecter = $(this);
+    returnClass = 'jq-template';
+    popupHandler.popupPosi(thisSelecter, returnClass);
+    
+    bookmartFlg = 0;
+  }
+});
+/*========================================================================
   popup
 ======================================================================== */
 $('.jq-popup-open').on('click', function(){
-  var windowWidth = $(window).outerWidth(true);
-  var popupPosi = $(this).position();
-  var topPosi = popupPosi.top;
-      topPosi = topPosi + $(this).outerHeight(true); //header height
-  var thisWidth = $(this).outerWidth(true);
-  var rightPosi = windowWidth - popupPosi.left - thisWidth;
-  //this
-  clickThis = $(this);
-  //return class
+  var thisSelecter = $(this);
   returnClass = 'jq-template';
-  //target class
-  targetClass = thisClassGet(clickThis, returnClass);
-
-  popupMenuOn(topPosi, rightPosi, targetClass);
+  popupHandler.popupPosi(thisSelecter, returnClass);
 });
+var popupHandler = {
+  popupPosi: function(thisSelecter, returnClass){
+    var windowWidth = $(window).outerWidth(true);
+    var popupPosi = thisSelecter.position();
+    var topPosi = popupPosi.top;
+        topPosi = topPosi + thisSelecter.outerHeight(true); //header height
+    var thisWidth = thisSelecter.outerWidth(true);
+    var rightPosi = windowWidth - popupPosi.left - thisWidth;
+    //this
+    clickThis = thisSelecter;
+    //return class
+    returnClass = returnClass;
+    //target class
+    targetClass = thisClassGet(clickThis, returnClass);
 
-function popupMenuOn(topPosi, rightPosi, targetClass){
-  //show contents
-  $('.jq-popup > .st-body').removeClass('is-current');
-  $('.jq-popup ' + targetClass).addClass('is-current');
+    popupHandler.popupShow(topPosi, rightPosi, targetClass);
+  },
+  popupShow: function(topPosi, rightPosi, targetClass){
+    //show contents
+    $('.jq-popup > .st-body').removeClass('is-current');
+    $('.jq-popup ' + targetClass).addClass('is-current');
 
-  //position
-  $('.jq-popup ' + targetClass).css({
-    top:'',
-    left:'',
-    right:''
-  }).css({
-    top: topPosi,
-    right: rightPosi
-  });
-  //show popup
-  $('.jq-popup').show(300);
+    //position
+    $('.jq-popup ' + targetClass).css({
+      top:'',
+      left:'',
+      right:''
+    }).css({
+      top: topPosi,
+      right: rightPosi
+    });
+    //show popup
+    $('.jq-popup').show(300);
 
-  //show cartain
-  $('.jq-cartain').show();
+    //show cartain
+    $('.jq-cartain').show();
 
-  //click close button
-  $('.jq-popup-close, .jq-cartain').on('click', function(){
-    $('.jq-popup').hide(300);
-    $('.jq-cartain').hide();
-  });
-};
+    //click close button
+    $('.jq-popup-close, .jq-cartain').on('click', function(){
+      $('.jq-popup').hide(300);
+      $('.jq-cartain').hide();
+    });
+  }
+}
 /*========================================================================
   modal 
 ======================================================================== */
