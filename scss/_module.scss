@@ -5,7 +5,7 @@
  * include:
  *"tab" "modal" "popup" "cartain"
  * "tooltip" "message" "toast"
- * "pagination" "loading"
+ * "pagination" "loading" "scrolltop"
  * "collapse" "wizard"
  *
 /*
@@ -91,31 +91,25 @@
     }
     >.st-inner{
       .md-modal-header{
-        .st-inner{
-          padding:10px;
-          position:relative;
-          background:$cl-bg-modal-header;
-          @include border-top-radius(5px);
-          .md-modal-title{padding-right:10px;}
-          .md-modal-close{
-            @include posi-abs(50%,5px,auto,auto);
-            margin-top:-15px;
-          }
+        padding:10px;
+        position:relative;
+        background:$cl-bg-modal-header;
+        @include border-top-radius(5px);
+        .md-modal-title{padding-right:10px;}
+        .md-modal-close{
+          @include posi-abs(50%,5px,auto,auto);
+          margin-top:-15px;
         }
       }
       .md-modal-body{
+        padding:10px 10px 20px;
         background:$cl-bg-modal-body;
-        >.st-inner{
-          padding:10px 10px 20px;
-        }
       }
       .md-modal-footer{
-        .st-inner{
-          @include brd-top;
-          padding:10px 20px;
-          background:$cl-bg-modal-footer;
-          @include border-bottom-radius(5px);
-        }
+        @include brd-top;
+        padding:10px 20px;
+        background:$cl-bg-modal-footer;
+        @include border-bottom-radius(5px);
       }
     }
   }
@@ -162,11 +156,6 @@
     }
     >.st-inner{
       padding:10px;
-      .md-popup-body{
-        overflow:auto;
-        max-height:450px;
-        max-width: 300px;
-      }
     }
   }
 }
@@ -820,7 +809,7 @@ table.md-table-base{
       a{
         @include brd;
         @include border-radius(5px);
-        padding:4px 7px;
+        padding:2px 7px;
         background:$cl-bg-white;
         display: block;
         @include opacity(0.9);

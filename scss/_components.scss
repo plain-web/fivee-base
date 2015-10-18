@@ -75,7 +75,7 @@ ul{
   &.ef-list-hover-white{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -88,7 +88,7 @@ ul{
   &.ef-list-hover-red{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -101,7 +101,7 @@ ul{
   &.ef-list-hover-orange{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -114,7 +114,7 @@ ul{
   &.ef-list-hover-blue{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -127,7 +127,7 @@ ul{
   &.ef-list-hover-green{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -140,7 +140,7 @@ ul{
   &.ef-list-hover-yellow{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -153,7 +153,7 @@ ul{
   &.ef-list-hover-black{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -166,7 +166,7 @@ ul{
   &.ef-list-hover-gray{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -179,7 +179,7 @@ ul{
   &.ef-list-hover-gray1{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -192,7 +192,7 @@ ul{
   &.ef-list-hover-gray2{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -205,7 +205,7 @@ ul{
   &.ef-list-hover-gray3{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -218,7 +218,7 @@ ul{
   &.ef-list-hover-gray4{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -231,7 +231,7 @@ ul{
   &.ef-list-hover-gray5{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -244,7 +244,7 @@ ul{
   &.ef-list-hover-gray6{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -257,7 +257,7 @@ ul{
   &.ef-list-hover-gray7{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -270,7 +270,7 @@ ul{
   &.ef-list-hover-theme{
     >li{
       a{
-        padding:5px 10px;
+        padding:3px 10px;
         color:$cl-txt-base;
         display:block;
         &:hover{
@@ -762,7 +762,10 @@ label{
   }
 }
 //red
-.cp-btn-red{
+.cp-btn-red,
+.cp-btn-red-mini,
+.cp-btn-red-large,
+.cp-btn-red-fix{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
@@ -791,7 +794,10 @@ label{
   }
 }
 //orange
-.cp-btn-orange{
+.cp-btn-orange,
+.cp-btn-orange-mini,
+.cp-btn-orange-large,
+.cp-btn-orange-fix{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
@@ -820,7 +826,10 @@ label{
   }
 }
 //blue
-.cp-btn-blue{
+.cp-btn-blue,
+.cp-btn-blue-mini,
+.cp-btn-blue-large,
+.cp-btn-blue-fix{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
@@ -849,7 +858,10 @@ label{
   }
 }
 //green
-.cp-btn-green{
+.cp-btn-green,
+.cp-btn-green-mini,
+.cp-btn-green-large,
+.cp-btn-green-fix{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
@@ -878,7 +890,10 @@ label{
   }
 }
 //yellow
-.cp-btn-yellow{
+.cp-btn-yellow,
+.cp-btn-yellow-mini,
+.cp-btn-yellow-large,
+.cp-btn-yellow-fix{
   @extend .cp-btn;
   color:$cl-txt-base;
   i{color:$cl-txt-base;}
@@ -906,8 +921,43 @@ label{
     }
   }
 }
+//brown
+.cp-btn-brown,
+.cp-btn-brown-mini,
+.cp-btn-brown-large,
+.cp-btn-brown-fix{
+  @extend .cp-btn;
+  color:$cl-txt-rev;
+  i{color:$cl-txt-rev;}
+  background:$cl-btn-brown; // for oldie
+  @include brd(1px,solid,$cl-btn-brown-darken);
+  @include gradation($cl-btn-brown-lighten, $cl-btn-brown);
+  &:hover{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    background:$cl-btn-brown-lighten; // for oldie
+    @include brd(1px,solid,$cl-btn-brown-darken);
+    @include gradation($cl-btn-brown-lighten, $cl-btn-brown-lighten);
+  }
+  &:active{
+    background:$cl-btn-brown; // for oldie
+    @include brd(1px,solid,$cl-btn-brown-darken);
+    @include gradation($cl-btn-brown, $cl-btn-brown);
+  }
+  &.cp-disabled{
+    color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
+    &:hover{
+      background:$cl-btn-brown;
+      cursor: default;
+    }
+  }
+}
 //black
-.cp-btn-black{
+.cp-btn-black,
+.cp-btn-black-mini,
+.cp-btn-black-large,
+.cp-btn-black-fix{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
@@ -936,7 +986,10 @@ label{
   }
 }
 //gray
-.cp-btn-gray{
+.cp-btn-gray,
+.cp-btn-gray-mini,
+.cp-btn-gray-large,
+.cp-btn-gray-fix{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
@@ -965,7 +1018,10 @@ label{
   }
 }
 //theme
-.cp-btn-theme{
+.cp-btn-theme,
+.cp-btn-theme-mini,
+.cp-btn-theme-large,
+.cp-btn-theme-fix{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
@@ -993,24 +1049,54 @@ label{
     }
   }
 }
-//fixed
-.cp-btn-fix{
+//mini
+.cp-btn-mini,
+.cp-btn-white-mini,
+.cp-btn-red-mini,
+.cp-btn-orange-mini,
+.cp-btn-blue-mini,
+.cp-btn-green-mini,
+.cp-btn-yellow-mini,
+.cp-btn-brown-mini,
+.cp-btn-black-mini,
+.cp-btn-gray-mini,
+.cp-btn-theme-mini{
   @extend .cp-btn;
-  width:100%;
+  font-size:$fs-midium;
+  padding:3px;
+  line-height:$lh-btn-mini;
 }
 //large
-.cp-btn-large{
+.cp-btn-large,
+.cp-btn-white-large,
+.cp-btn-red-large,
+.cp-btn-orange-large,
+.cp-btn-blue-large,
+.cp-btn-green-large,
+.cp-btn-yellow-large,
+.cp-btn-brown-large,
+.cp-btn-black-large,
+.cp-btn-gray-large,
+.cp-btn-theme-large{
   @extend .cp-btn;
   font-size:$fs-h6;
   padding:7px 50px;
   @include min-width(0);
 }
-//mini
-.cp-btn-mini{
+//fixed
+.cp-btn-fix,
+.cp-btn-white-fix,
+.cp-btn-red-fix,
+.cp-btn-orange-fix,
+.cp-btn-blue-fix,
+.cp-btn-green-fix,
+.cp-btn-yellow-fix,
+.cp-btn-brown-fix,
+.cp-btn-black-fix,
+.cp-btn-gray-fix,
+.cp-btn-theme-fix{
   @extend .cp-btn;
-  font-size:$fs-midium;
-  padding:3px;
-  line-height:$lh-btn-mini;
+  width:100%;
 }
 //combo
 .cp-btn-combo-left{
@@ -1151,6 +1237,14 @@ label{
   .st-inner{
     .st-outer{
       @include brd-left(5px,solid,$cl-yellow);
+    }
+  }
+}
+.cp-remarks-brown{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-brown);
     }
   }
 }

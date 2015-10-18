@@ -60,18 +60,35 @@ $(window).scroll(function() {
 /*========================================================================
   scrolltop
 ======================================================================== */
-$('a[href*=#]:not([href=#])').click(function() {
+$('a[href*=#]:not([href=#])').on('click', function(){
   if(location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    var removeHeight =  $('.jq-pageTop-remove');
+      var totalHeight = removeHeight.outerHeight(true);
+    for (var i = 0; i < removeHeight.length; i++) {
+      totalHeight++;
+      console.log(totalHeight)
+    };
+    // $('.jq-pageTop-remove').each(function() {
+    //   var totalHeight = $(this).outerHeight(true);
+    //   totalHeight++;
+    //   console.log(totalHeight)
+    // });
     var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    var scPosition = target.offset();
     if(target.length) {
       $('html,body').animate({
-        scrollTop: target.offset().top + -210
-    }, 1000);
-    return false;
+        scrollTop: scPosition.top - totalHeight
+      }, 1000);
+      return false;
     }
   }
 });
+$('#jq-pageTop').on('click', function(){
+  $('html,body').animate({
+    scrollTop: 0
+  }, 1000);
+})
 /*========================================================================
   load common parts　
 ======================================================================== */
@@ -389,7 +406,7 @@ var popupHandler = {
     var windowWidth = $(window).outerWidth(true);
     var popupPosi = thisSelecter.position();
     var topPosi = popupPosi.top;
-        topPosi = topPosi + thisSelecter.outerHeight(true); //header height
+        topPosi = topPosi + thisSelecter.outerHeight(true);
     var thisWidth = thisSelecter.outerWidth(true);
     var rightPosi = windowWidth - popupPosi.left - thisWidth;
     //this
