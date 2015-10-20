@@ -6609,6 +6609,10 @@ a i:hover {
   border-bottom-left-radius: 100%;
 }
 
+.cp-select[size] {
+  height: auto;
+}
+
 label.cp-radio, label.cp-checkbox {
   position: relative;
   border: 0;

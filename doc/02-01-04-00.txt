@@ -1,5 +1,20 @@
-<select class="cp-select ef-lh30">
-  <option>
-    keyword
-  </option>
-</select>
+<ul class="ef-float20">
+  <li>
+    <label class="cp-radio ef-lh30">
+      <input name="test01" type="radio">
+      Fivee-base01
+    </label>
+  </li>
+  <li>
+    <label class="cp-radio ef-lh30">
+      <input name="test01" type="radio">
+      Fivee-base02
+    </label>
+  </li>
+  <li>
+    <label class="cp-radio ef-lh30">
+      <input name="test01" type="radio">
+      Fivee-base02
+    </label>
+  </li>
+</ul>

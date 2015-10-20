@@ -1,19 +1,19 @@
-<ul class="ef-float20">
+<ul>
   <li>
-    <label class="cp-radio ef-lh30">
-      <input name="test01" type="radio">
+    <label class="cp-radio ef-lh25">
+      <input checked name="test00" type="radio">
       Fivee-base01
     </label>
   </li>
   <li>
-    <label class="cp-radio ef-lh30">
-      <input name="test01" type="radio">
+    <label class="cp-radio ef-lh25">
+      <input name="test00" type="radio">
       Fivee-base02
     </label>
   </li>
   <li>
-    <label class="cp-radio ef-lh30">
-      <input name="test01" type="radio">
+    <label class="cp-radio ef-lh25">
+      <input name="test00" type="radio">
       Fivee-base02
     </label>
   </li>

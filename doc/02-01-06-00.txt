@@ -1,1 +1,33 @@
-<input class="cp-input ef-lh30" type="text">
+<ul class="ef-float20">
+  <li>
+    <div class="ef-lh30">
+      title
+    </div>
+  </li>
+  <li>
+    <select class="cp-select ef-lh30">
+      <option>
+        keyword
+      </option>
+    </select>
+  </li>
+  <li>
+    <select class="cp-select ef-lh30 ef-w120" multiple="5" style="height:auto;">
+      <option value="keyword-01">
+        keyword-01
+      </option>
+      <option value="keyword-02">
+        keyword-02
+      </option>
+      <option value="keyword-03">
+        keyword-03
+      </option>
+      <option value="keyword-04">
+        keyword-04
+      </option>
+      <option value="keyword-05">
+        keyword-05
+      </option>
+    </select>
+  </li>
+</ul>

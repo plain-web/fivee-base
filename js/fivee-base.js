@@ -60,25 +60,32 @@ $(window).scroll(function() {
 /*========================================================================
   scrolltop
 ======================================================================== */
+//check remove contents
+var pageTopRemove =  $('.jq-pageTop-remove');
+if(pageTopRemove){
+  var pageTopRemoveVal = pageTopRemoveHeightSum();
+}else{
+  var pageTopRemoveVal = 0;
+}
+//sum remove contents
+function pageTopRemoveHeightSum(){
+  var pageTopRemoveHeightTotal = 0;
+  var pageTopCounter = 0;
+  pageTopRemove.each(function() {
+    pageTopRemoveHeightTotal += $(this).outerHeight(true);
+    pageTopCounter++;
+  });
+  return pageTopRemoveHeightTotal;
+}
+//scroll handler
 $('a[href*=#]:not([href=#])').on('click', function(){
   if(location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-    var removeHeight =  $('.jq-pageTop-remove');
-      var totalHeight = removeHeight.outerHeight(true);
-    for (var i = 0; i < removeHeight.length; i++) {
-      totalHeight++;
-      console.log(totalHeight)
-    };
-    // $('.jq-pageTop-remove').each(function() {
-    //   var totalHeight = $(this).outerHeight(true);
-    //   totalHeight++;
-    //   console.log(totalHeight)
-    // });
-    var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-    var scPosition = target.offset();
-    if(target.length) {
+    var pageTopTarget = $(this.hash);
+        pageTopTarget = pageTopTarget.length ? pageTopTarget : $('[name=' + this.hash.slice(1) +']');
+    var scPosition = pageTopTarget.offset();
+    if(pageTopTarget.length) {
       $('html,body').animate({
-        scrollTop: scPosition.top - totalHeight
+        scrollTop: scPosition.top - pageTopRemoveVal
       }, 1000);
       return false;
     }

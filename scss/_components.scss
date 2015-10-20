@@ -569,6 +569,7 @@ a{
   &.ef-rdl100p{@include border-left-radius(100%);}
 }
 //.cp-select{padding:0;}
+.cp-select[size]{height:auto;}
 
 label{
   &.cp-radio,
