@@ -440,15 +440,15 @@ var popupHandler = {
       right: rightPosi
     });
     //show popup
-    $('.jq-popup').show(300);
+    $('.jq-popup').show(300,
+      function(){
+        $('main').addClass('jq-popup-close');
+      });
 
-    //show cartain
-    $('.jq-cartain').show();
-
-    //click close button
-    $('.jq-popup-close, .jq-cartain').on('click', function(){
+    //click close popup
+    $('body').on('click', '.jq-popup-close:not(.jq-popup)', function(){
       $('.jq-popup').hide(300);
-      $('.jq-cartain').hide();
+      $(this).removeClass('jq-popup-close');
     });
   }
 }
