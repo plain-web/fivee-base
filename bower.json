@@ -1,0 +1,23 @@
+{
+  "name": "fivee-base",
+  "description": "Fivee-baseはアプリケーションやWebサイトのフロントエンド構築に必要な要素を5つに分類化する事で作業内容を明確にし、大幅に作業工数を削減する事ができるCSSフレームワークです。",
+  "main": "index.js",
+  "authors": [
+    "jazzpoteto"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jazzpoteto/fivee-base",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "font-awesome": "~4.4.0",
+    "html5shiv": "~3.7.3"
+  }
+}
