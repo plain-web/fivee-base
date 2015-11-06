@@ -1,4 +1,3 @@
-@import "compass";
 @import "components";
 /*
  * module.scss
@@ -146,7 +145,7 @@
   >.st-body{
     @include posi-abs(0,auto,auto,auto);
     border:1px solid $cl-brd-base;
-    @include border-radius(7px, 5px);
+    @include border-radius(7px);
     @include box-shadow(rgba($cl-brd-base, 0.5) 0 0 5px);
     background:$cl-bg-popup;
     display:none;
@@ -709,7 +708,7 @@ table.md-table-base{
   ul.cp-float{
     li{
       border:1px solid $cl-brd-base;
-      @include border-radius(3px, 3px);
+      @include border-radius(3px);
       padding:3px 1px;
     }
   }
@@ -767,7 +766,6 @@ table.md-table-base{
   .st-body{
     @include posi-fix(50%,0,0,50%);
     .st-inner{
-      @include boxset;
       @include box-shadow-base;
       width:180px;
       margin-left:-90px;
