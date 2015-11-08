@@ -78,10 +78,20 @@ gulp.task('haml', function() {
     .pipe(browserSync.reload({stream:true}));
 });
 /*========================================================================
+  js
+======================================================================== */
+gulp.task('js', function() {
+  gulp.src(path.js)
+    //.pipe(changed(path.js, { extension: '.js' }))
+    .pipe(plumber())
+    .pipe(gulp.dest(path.js))
+    .pipe(browserSync.reload({stream:true}));
+});
+/*========================================================================
   default (watch)
 ======================================================================== */
 gulp.task('default', ['server'], function() {
   gulp.watch('./*.haml',['haml']);
-  gulp.watch(['js/**/*.js','!js/min/**/*.js'],['js']);
+  gulp.watch(['./js/**/*.js','!js/min/**/*.js'],['js']);
   gulp.watch('./sass/**/*.scss',['sass']);
 });

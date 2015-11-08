@@ -10,6 +10,7 @@
  */
 header{
   .st-body{
+    @include min-width($app-minWidth);
     &.ef-header-fix{
       @include posi-fix(0,0,auto,0);
       z-index:3;
@@ -18,6 +19,7 @@ header{
     .st-inner{
       padding:5px 10px;
       a{
+        display:block;
         color:$cl-txt-rev;
         i{color:$cl-txt-rev;}
       }

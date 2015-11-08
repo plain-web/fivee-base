@@ -4699,7 +4699,7 @@ label.cp-radio, label.cp-checkbox {
   border: 0;
   margin: 0;
   padding: 0;
-  display: block;
+  display: table;
   padding-left: 20px; }
   label.cp-radio input[type="checkbox"],
   label.cp-radio input[type="radio"], label.cp-checkbox input[type="checkbox"],
@@ -7106,9 +7106,9 @@ label.cp-radio, label.cp-checkbox {
     border-width: 1px;
     border-style: solid;
     border-color: #ccc; }
-    .md-tab .md-tab-content > .st-inner .jq-tab-switcher {
+    .md-tab .md-tab-content > .st-inner .js-tab-switcher {
       display: none; }
-      .md-tab .md-tab-content > .st-inner .jq-tab-switcher.current {
+      .md-tab .md-tab-content > .st-inner .js-tab-switcher.current {
         display: block; }
 
 /*
@@ -8704,6 +8704,7 @@ table.md-table-base {
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 header .st-body {
+  min-width: 760px;
   background: #485169; }
   header .st-body.ef-header-fix {
     position: fixed;
@@ -8715,6 +8716,7 @@ header .st-body {
   header .st-body .st-inner {
     padding: 5px 10px; }
     header .st-body .st-inner a {
+      display: block;
       color: #fff; }
       header .st-body .st-inner a i {
         color: #fff; }

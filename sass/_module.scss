@@ -62,7 +62,7 @@
       overflow-x:auto;
       padding:20px 15px;
       @include brd(1px,solid,$cl-brd-base);
-      .jq-tab-switcher{
+      .js-tab-switcher{
         display:none;
         &.current{display:block;}
       }
