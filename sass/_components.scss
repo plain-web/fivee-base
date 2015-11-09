@@ -733,7 +733,10 @@ label{
   }
 }
 //white
-.cp-btn-white{
+.cp-btn-white,
+.cp-btn-mini-white,
+.cp-btn-large-white,
+.cp-btn-fix-white{
   @extend .cp-btn;
   color:$cl-txt-base;
   i{color:$cl-txt-base;}
@@ -763,9 +766,9 @@ label{
 }
 //red
 .cp-btn-red,
-.cp-btn-red-mini,
-.cp-btn-red-large,
-.cp-btn-red-fix{
+.cp-btn-mini-red,
+.cp-btn-large-red,
+.cp-btn-fix-red{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
@@ -795,9 +798,9 @@ label{
 }
 //orange
 .cp-btn-orange,
-.cp-btn-orange-mini,
-.cp-btn-orange-large,
-.cp-btn-orange-fix{
+.cp-btn-mini-orange,
+.cp-btn-large-orange,
+.cp-btn-fix-orange{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
@@ -827,9 +830,9 @@ label{
 }
 //blue
 .cp-btn-blue,
-.cp-btn-blue-mini,
-.cp-btn-blue-large,
-.cp-btn-blue-fix{
+.cp-btn-mini-blue,
+.cp-btn-large-blue,
+.cp-btn-fix-blue{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
@@ -859,9 +862,9 @@ label{
 }
 //green
 .cp-btn-green,
-.cp-btn-green-mini,
-.cp-btn-green-large,
-.cp-btn-green-fix{
+.cp-btn-mini-green,
+.cp-btn-large-green,
+.cp-btn-fix-green{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
@@ -891,9 +894,9 @@ label{
 }
 //yellow
 .cp-btn-yellow,
-.cp-btn-yellow-mini,
-.cp-btn-yellow-large,
-.cp-btn-yellow-fix{
+.cp-btn-mini-yellow,
+.cp-btn-large-yellow,
+.cp-btn-fix-yellow{
   @extend .cp-btn;
   color:$cl-txt-base;
   i{color:$cl-txt-base;}
@@ -923,9 +926,9 @@ label{
 }
 //brown
 .cp-btn-brown,
-.cp-btn-brown-mini,
-.cp-btn-brown-large,
-.cp-btn-brown-fix{
+.cp-btn-mini-brown,
+.cp-btn-large-brown,
+.cp-btn-fix-brown{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
@@ -955,9 +958,9 @@ label{
 }
 //black
 .cp-btn-black,
-.cp-btn-black-mini,
-.cp-btn-black-large,
-.cp-btn-black-fix{
+.cp-btn-mini-black,
+.cp-btn-large-black,
+.cp-btn-fix-black{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
@@ -987,9 +990,9 @@ label{
 }
 //gray
 .cp-btn-gray,
-.cp-btn-gray-mini,
-.cp-btn-gray-large,
-.cp-btn-gray-fix{
+.cp-btn-mini-gray,
+.cp-btn-large-gray,
+.cp-btn-fix-gray{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
@@ -1019,9 +1022,9 @@ label{
 }
 //theme
 .cp-btn-theme,
-.cp-btn-theme-mini,
-.cp-btn-theme-large,
-.cp-btn-theme-fix{
+.cp-btn-mini-theme,
+.cp-btn-large-theme,
+.cp-btn-fix-theme{
   @extend .cp-btn;
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
@@ -1051,16 +1054,16 @@ label{
 }
 //mini
 .cp-btn-mini,
-.cp-btn-white-mini,
-.cp-btn-red-mini,
-.cp-btn-orange-mini,
-.cp-btn-blue-mini,
-.cp-btn-green-mini,
-.cp-btn-yellow-mini,
-.cp-btn-brown-mini,
-.cp-btn-black-mini,
-.cp-btn-gray-mini,
-.cp-btn-theme-mini{
+.cp-btn-mini-white,
+.cp-btn-mini-red,
+.cp-btn-mini-orange,
+.cp-btn-mini-blue,
+.cp-btn-mini-green,
+.cp-btn-mini-yellow,
+.cp-btn-mini-brown,
+.cp-btn-mini-black,
+.cp-btn-mini-gray,
+.cp-btn-mini-theme{
   @extend .cp-btn;
   font-size:$fs-midium;
   padding:3px;
@@ -1068,33 +1071,33 @@ label{
 }
 //large
 .cp-btn-large,
-.cp-btn-white-large,
-.cp-btn-red-large,
-.cp-btn-orange-large,
-.cp-btn-blue-large,
-.cp-btn-green-large,
-.cp-btn-yellow-large,
-.cp-btn-brown-large,
-.cp-btn-black-large,
-.cp-btn-gray-large,
-.cp-btn-theme-large{
+.cp-btn-large-white,
+.cp-btn-large-red,
+.cp-btn-large-orange,
+.cp-btn-large-blue,
+.cp-btn-large-green,
+.cp-btn-large-yellow,
+.cp-btn-large-brown,
+.cp-btn-large-black,
+.cp-btn-large-gray,
+.cp-btn-large-theme{
   @extend .cp-btn;
   font-size:$fs-h6;
   padding:7px 50px;
   @include min-width(0);
 }
 //fixed
-.cp-btn-fix,
-.cp-btn-white-fix,
-.cp-btn-red-fix,
-.cp-btn-orange-fix,
-.cp-btn-blue-fix,
-.cp-btn-green-fix,
-.cp-btn-yellow-fix,
-.cp-btn-brown-fix,
-.cp-btn-black-fix,
-.cp-btn-gray-fix,
-.cp-btn-theme-fix{
+.cp-btn-large,
+.cp-btn-large-white,
+.cp-btn-large-red,
+.cp-btn-large-orange,
+.cp-btn-large-blue,
+.cp-btn-large-green,
+.cp-btn-large-yellow,
+.cp-btn-large-brown,
+.cp-btn-large-black,
+.cp-btn-large-gray,
+.cp-btn-large-theme{
   @extend .cp-btn;
   width:100%;
 }
