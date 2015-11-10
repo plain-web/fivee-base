@@ -1,0 +1,57 @@
+<ul>
+  <li class="ef-mgb10">
+    <a class="cp-btn-fix-white" href="javascript:void(0);">
+      white
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-fix-red" href="javascript:void(0);">
+      red
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-fix-orange" href="javascript:void(0);">
+      orange
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-fix-blue" href="javascript:void(0);">
+      blue
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-fix-green" href="javascript:void(0);">
+      green
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-fix-yellow" href="javascript:void(0);">
+      yellow
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-fix-brown" href="javascript:void(0);">
+      brown
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-fix-black" href="javascript:void(0);">
+      black
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-fix-gray" href="javascript:void(0);">
+      gray
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-fix" href="javascript:void(0);">
+      default
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-fix-theme ef-mw100" href="javascript:void(0);">
+      theme
+    </a>
+  </li>
+</ul>

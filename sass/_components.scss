@@ -679,38 +679,39 @@ label{
   //@include gradation-ie(#ffffffff, #ffeeeeee); // for oldie
   //line-height
   &.ef-lh{height:$lh-base;}
-  &.ef-lh0{height:0;}
-  &.ef-lh10{height:10px;}
-  &.ef-lh11{height:11px;}
-  &.ef-lh12{height:12px;}
-  &.ef-lh13{height:13px;}
-  &.ef-lh14{height:14px;}
-  &.ef-lh15{height:15px;}
-  &.ef-lh16{height:16px;}
-  &.ef-lh17{height:17px;}
-  &.ef-lh18{height:18px;}
-  &.ef-lh19{height:19px;}
-  &.ef-lh20{height:20px;}
-  &.ef-lh21{height:21px;}
-  &.ef-lh22{height:22px;}
-  &.ef-lh23{height:23px;}
-  &.ef-lh24{height:24px;}
-  &.ef-lh25{height:25px;}
-  &.ef-lh26{height:26px;}
-  &.ef-lh27{height:27px;}
-  &.ef-lh28{height:28px;}
-  &.ef-lh29{height:29px;}
-  &.ef-lh30{height:30px;}
-  &.ef-lh31{height:31px;}
-  &.ef-lh32{height:32px;}
-  &.ef-lh33{height:33px;}
-  &.ef-lh34{height:34px;}
-  &.ef-lh35{height:35px;}
-  &.ef-lh36{height:36px;}
-  &.ef-lh37{height:37px;}
-  &.ef-lh38{height:38px;}
-  &.ef-lh39{height:39px;}
-  &.ef-lh40{height:40px;}
+  &.ef-lh3{line-height:3px;}
+  &.ef-lh7{line-height:7px;}
+  &.ef-lh10{line-height:10px;}
+  &.ef-lh11{line-height:11px;}
+  &.ef-lh12{line-height:12px;}
+  &.ef-lh13{line-height:13px;}
+  &.ef-lh14{line-height:14px;}
+  &.ef-lh15{line-height:15px;}
+  &.ef-lh16{line-height:16px;}
+  &.ef-lh17{line-height:17px;}
+  &.ef-lh18{line-height:18px;}
+  &.ef-lh19{line-height:19px;}
+  &.ef-lh20{line-height:20px;}
+  &.ef-lh21{line-height:21px;}
+  &.ef-lh22{line-height:22px;}
+  &.ef-lh23{line-height:23px;}
+  &.ef-lh24{line-height:24px;}
+  &.ef-lh25{line-height:25px;}
+  &.ef-lh26{line-height:26px;}
+  &.ef-lh27{line-height:27px;}
+  &.ef-lh28{line-height:28px;}
+  &.ef-lh29{line-height:29px;}
+  &.ef-lh30{line-height:30px;}
+  &.ef-lh31{line-height:31px;}
+  &.ef-lh32{line-height:32px;}
+  &.ef-lh33{line-height:33px;}
+  &.ef-lh34{line-height:34px;}
+  &.ef-lh35{line-height:35px;}
+  &.ef-lh36{line-height:36px;}
+  &.ef-lh37{line-height:37px;}
+  &.ef-lh38{line-height:38px;}
+  &.ef-lh39{line-height:39px;}
+  &.ef-lh40{line-height:40px;}
   &:hover{
     text-decoration:none;
     color:$cl-txt-base;
@@ -1084,20 +1085,19 @@ label{
   @extend .cp-btn;
   font-size:$fs-h6;
   padding:7px 50px;
-  @include min-width(0);
 }
-//fixed
-.cp-btn-large,
-.cp-btn-large-white,
-.cp-btn-large-red,
-.cp-btn-large-orange,
-.cp-btn-large-blue,
-.cp-btn-large-green,
-.cp-btn-large-yellow,
-.cp-btn-large-brown,
-.cp-btn-large-black,
-.cp-btn-large-gray,
-.cp-btn-large-theme{
+//fix
+.cp-btn-fix,
+.cp-btn-fix-white,
+.cp-btn-fix-red,
+.cp-btn-fix-orange,
+.cp-btn-fix-blue,
+.cp-btn-fix-green,
+.cp-btn-fix-yellow,
+.cp-btn-fix-brown,
+.cp-btn-fix-black,
+.cp-btn-fix-gray,
+.cp-btn-fix-theme{
   @extend .cp-btn;
   width:100%;
 }

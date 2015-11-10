@@ -4817,7 +4817,7 @@ label.cp-radio, label.cp-checkbox {
 .cp-btn-fix-gray, .cp-btn-theme,
 .cp-btn-mini-theme,
 .cp-btn-large-theme,
-.cp-btn-fix-theme, .cp-btn-mini, .cp-btn-large {
+.cp-btn-fix-theme, .cp-btn-mini, .cp-btn-large, .cp-btn-fix {
   text-align: center;
   padding: 4px 12px;
   line-height: 20px;
@@ -4867,7 +4867,7 @@ label.cp-radio, label.cp-checkbox {
   .cp-btn-fix-gray i, .cp-btn-theme i,
   .cp-btn-mini-theme i,
   .cp-btn-large-theme i,
-  .cp-btn-fix-theme i, .cp-btn-mini i, .cp-btn-large i {
+  .cp-btn-fix-theme i, .cp-btn-mini i, .cp-btn-large i, .cp-btn-fix i {
     color: #333; }
   .cp-btn.ef-lh, .ef-lh.cp-btn-white,
   .ef-lh.cp-btn-mini-white,
@@ -4899,40 +4899,72 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh.cp-btn-fix-gray, .ef-lh.cp-btn-theme,
   .ef-lh.cp-btn-mini-theme,
   .ef-lh.cp-btn-large-theme,
-  .ef-lh.cp-btn-fix-theme, .ef-lh.cp-btn-mini, .ef-lh.cp-btn-large {
+  .ef-lh.cp-btn-fix-theme, .ef-lh.cp-btn-mini, .ef-lh.cp-btn-large, .ef-lh.cp-btn-fix {
     height: 1.6; }
-  .cp-btn.ef-lh0, .ef-lh0.cp-btn-white,
-  .ef-lh0.cp-btn-mini-white,
-  .ef-lh0.cp-btn-large-white,
-  .ef-lh0.cp-btn-fix-white, .ef-lh0.cp-btn-red,
-  .ef-lh0.cp-btn-mini-red,
-  .ef-lh0.cp-btn-large-red,
-  .ef-lh0.cp-btn-fix-red, .ef-lh0.cp-btn-orange,
-  .ef-lh0.cp-btn-mini-orange,
-  .ef-lh0.cp-btn-large-orange,
-  .ef-lh0.cp-btn-fix-orange, .ef-lh0.cp-btn-blue,
-  .ef-lh0.cp-btn-mini-blue,
-  .ef-lh0.cp-btn-large-blue,
-  .ef-lh0.cp-btn-fix-blue, .ef-lh0.cp-btn-green,
-  .ef-lh0.cp-btn-mini-green,
-  .ef-lh0.cp-btn-large-green,
-  .ef-lh0.cp-btn-fix-green, .ef-lh0.cp-btn-yellow,
-  .ef-lh0.cp-btn-mini-yellow,
-  .ef-lh0.cp-btn-large-yellow,
-  .ef-lh0.cp-btn-fix-yellow, .ef-lh0.cp-btn-brown,
-  .ef-lh0.cp-btn-mini-brown,
-  .ef-lh0.cp-btn-large-brown,
-  .ef-lh0.cp-btn-fix-brown, .ef-lh0.cp-btn-black,
-  .ef-lh0.cp-btn-mini-black,
-  .ef-lh0.cp-btn-large-black,
-  .ef-lh0.cp-btn-fix-black, .ef-lh0.cp-btn-gray,
-  .ef-lh0.cp-btn-mini-gray,
-  .ef-lh0.cp-btn-large-gray,
-  .ef-lh0.cp-btn-fix-gray, .ef-lh0.cp-btn-theme,
-  .ef-lh0.cp-btn-mini-theme,
-  .ef-lh0.cp-btn-large-theme,
-  .ef-lh0.cp-btn-fix-theme, .ef-lh0.cp-btn-mini, .ef-lh0.cp-btn-large {
-    height: 0; }
+  .cp-btn.ef-lh3, .ef-lh3.cp-btn-white,
+  .ef-lh3.cp-btn-mini-white,
+  .ef-lh3.cp-btn-large-white,
+  .ef-lh3.cp-btn-fix-white, .ef-lh3.cp-btn-red,
+  .ef-lh3.cp-btn-mini-red,
+  .ef-lh3.cp-btn-large-red,
+  .ef-lh3.cp-btn-fix-red, .ef-lh3.cp-btn-orange,
+  .ef-lh3.cp-btn-mini-orange,
+  .ef-lh3.cp-btn-large-orange,
+  .ef-lh3.cp-btn-fix-orange, .ef-lh3.cp-btn-blue,
+  .ef-lh3.cp-btn-mini-blue,
+  .ef-lh3.cp-btn-large-blue,
+  .ef-lh3.cp-btn-fix-blue, .ef-lh3.cp-btn-green,
+  .ef-lh3.cp-btn-mini-green,
+  .ef-lh3.cp-btn-large-green,
+  .ef-lh3.cp-btn-fix-green, .ef-lh3.cp-btn-yellow,
+  .ef-lh3.cp-btn-mini-yellow,
+  .ef-lh3.cp-btn-large-yellow,
+  .ef-lh3.cp-btn-fix-yellow, .ef-lh3.cp-btn-brown,
+  .ef-lh3.cp-btn-mini-brown,
+  .ef-lh3.cp-btn-large-brown,
+  .ef-lh3.cp-btn-fix-brown, .ef-lh3.cp-btn-black,
+  .ef-lh3.cp-btn-mini-black,
+  .ef-lh3.cp-btn-large-black,
+  .ef-lh3.cp-btn-fix-black, .ef-lh3.cp-btn-gray,
+  .ef-lh3.cp-btn-mini-gray,
+  .ef-lh3.cp-btn-large-gray,
+  .ef-lh3.cp-btn-fix-gray, .ef-lh3.cp-btn-theme,
+  .ef-lh3.cp-btn-mini-theme,
+  .ef-lh3.cp-btn-large-theme,
+  .ef-lh3.cp-btn-fix-theme, .ef-lh3.cp-btn-mini, .ef-lh3.cp-btn-large, .ef-lh3.cp-btn-fix {
+    line-height: 3px; }
+  .cp-btn.ef-lh7, .ef-lh7.cp-btn-white,
+  .ef-lh7.cp-btn-mini-white,
+  .ef-lh7.cp-btn-large-white,
+  .ef-lh7.cp-btn-fix-white, .ef-lh7.cp-btn-red,
+  .ef-lh7.cp-btn-mini-red,
+  .ef-lh7.cp-btn-large-red,
+  .ef-lh7.cp-btn-fix-red, .ef-lh7.cp-btn-orange,
+  .ef-lh7.cp-btn-mini-orange,
+  .ef-lh7.cp-btn-large-orange,
+  .ef-lh7.cp-btn-fix-orange, .ef-lh7.cp-btn-blue,
+  .ef-lh7.cp-btn-mini-blue,
+  .ef-lh7.cp-btn-large-blue,
+  .ef-lh7.cp-btn-fix-blue, .ef-lh7.cp-btn-green,
+  .ef-lh7.cp-btn-mini-green,
+  .ef-lh7.cp-btn-large-green,
+  .ef-lh7.cp-btn-fix-green, .ef-lh7.cp-btn-yellow,
+  .ef-lh7.cp-btn-mini-yellow,
+  .ef-lh7.cp-btn-large-yellow,
+  .ef-lh7.cp-btn-fix-yellow, .ef-lh7.cp-btn-brown,
+  .ef-lh7.cp-btn-mini-brown,
+  .ef-lh7.cp-btn-large-brown,
+  .ef-lh7.cp-btn-fix-brown, .ef-lh7.cp-btn-black,
+  .ef-lh7.cp-btn-mini-black,
+  .ef-lh7.cp-btn-large-black,
+  .ef-lh7.cp-btn-fix-black, .ef-lh7.cp-btn-gray,
+  .ef-lh7.cp-btn-mini-gray,
+  .ef-lh7.cp-btn-large-gray,
+  .ef-lh7.cp-btn-fix-gray, .ef-lh7.cp-btn-theme,
+  .ef-lh7.cp-btn-mini-theme,
+  .ef-lh7.cp-btn-large-theme,
+  .ef-lh7.cp-btn-fix-theme, .ef-lh7.cp-btn-mini, .ef-lh7.cp-btn-large, .ef-lh7.cp-btn-fix {
+    line-height: 7px; }
   .cp-btn.ef-lh10, .ef-lh10.cp-btn-white,
   .ef-lh10.cp-btn-mini-white,
   .ef-lh10.cp-btn-large-white,
@@ -4963,8 +4995,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh10.cp-btn-fix-gray, .ef-lh10.cp-btn-theme,
   .ef-lh10.cp-btn-mini-theme,
   .ef-lh10.cp-btn-large-theme,
-  .ef-lh10.cp-btn-fix-theme, .ef-lh10.cp-btn-mini, .ef-lh10.cp-btn-large {
-    height: 10px; }
+  .ef-lh10.cp-btn-fix-theme, .ef-lh10.cp-btn-mini, .ef-lh10.cp-btn-large, .ef-lh10.cp-btn-fix {
+    line-height: 10px; }
   .cp-btn.ef-lh11, .ef-lh11.cp-btn-white,
   .ef-lh11.cp-btn-mini-white,
   .ef-lh11.cp-btn-large-white,
@@ -4995,8 +5027,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh11.cp-btn-fix-gray, .ef-lh11.cp-btn-theme,
   .ef-lh11.cp-btn-mini-theme,
   .ef-lh11.cp-btn-large-theme,
-  .ef-lh11.cp-btn-fix-theme, .ef-lh11.cp-btn-mini, .ef-lh11.cp-btn-large {
-    height: 11px; }
+  .ef-lh11.cp-btn-fix-theme, .ef-lh11.cp-btn-mini, .ef-lh11.cp-btn-large, .ef-lh11.cp-btn-fix {
+    line-height: 11px; }
   .cp-btn.ef-lh12, .ef-lh12.cp-btn-white,
   .ef-lh12.cp-btn-mini-white,
   .ef-lh12.cp-btn-large-white,
@@ -5027,8 +5059,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh12.cp-btn-fix-gray, .ef-lh12.cp-btn-theme,
   .ef-lh12.cp-btn-mini-theme,
   .ef-lh12.cp-btn-large-theme,
-  .ef-lh12.cp-btn-fix-theme, .ef-lh12.cp-btn-mini, .ef-lh12.cp-btn-large {
-    height: 12px; }
+  .ef-lh12.cp-btn-fix-theme, .ef-lh12.cp-btn-mini, .ef-lh12.cp-btn-large, .ef-lh12.cp-btn-fix {
+    line-height: 12px; }
   .cp-btn.ef-lh13, .ef-lh13.cp-btn-white,
   .ef-lh13.cp-btn-mini-white,
   .ef-lh13.cp-btn-large-white,
@@ -5059,8 +5091,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh13.cp-btn-fix-gray, .ef-lh13.cp-btn-theme,
   .ef-lh13.cp-btn-mini-theme,
   .ef-lh13.cp-btn-large-theme,
-  .ef-lh13.cp-btn-fix-theme, .ef-lh13.cp-btn-mini, .ef-lh13.cp-btn-large {
-    height: 13px; }
+  .ef-lh13.cp-btn-fix-theme, .ef-lh13.cp-btn-mini, .ef-lh13.cp-btn-large, .ef-lh13.cp-btn-fix {
+    line-height: 13px; }
   .cp-btn.ef-lh14, .ef-lh14.cp-btn-white,
   .ef-lh14.cp-btn-mini-white,
   .ef-lh14.cp-btn-large-white,
@@ -5091,8 +5123,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh14.cp-btn-fix-gray, .ef-lh14.cp-btn-theme,
   .ef-lh14.cp-btn-mini-theme,
   .ef-lh14.cp-btn-large-theme,
-  .ef-lh14.cp-btn-fix-theme, .ef-lh14.cp-btn-mini, .ef-lh14.cp-btn-large {
-    height: 14px; }
+  .ef-lh14.cp-btn-fix-theme, .ef-lh14.cp-btn-mini, .ef-lh14.cp-btn-large, .ef-lh14.cp-btn-fix {
+    line-height: 14px; }
   .cp-btn.ef-lh15, .ef-lh15.cp-btn-white,
   .ef-lh15.cp-btn-mini-white,
   .ef-lh15.cp-btn-large-white,
@@ -5123,8 +5155,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh15.cp-btn-fix-gray, .ef-lh15.cp-btn-theme,
   .ef-lh15.cp-btn-mini-theme,
   .ef-lh15.cp-btn-large-theme,
-  .ef-lh15.cp-btn-fix-theme, .ef-lh15.cp-btn-mini, .ef-lh15.cp-btn-large {
-    height: 15px; }
+  .ef-lh15.cp-btn-fix-theme, .ef-lh15.cp-btn-mini, .ef-lh15.cp-btn-large, .ef-lh15.cp-btn-fix {
+    line-height: 15px; }
   .cp-btn.ef-lh16, .ef-lh16.cp-btn-white,
   .ef-lh16.cp-btn-mini-white,
   .ef-lh16.cp-btn-large-white,
@@ -5155,8 +5187,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh16.cp-btn-fix-gray, .ef-lh16.cp-btn-theme,
   .ef-lh16.cp-btn-mini-theme,
   .ef-lh16.cp-btn-large-theme,
-  .ef-lh16.cp-btn-fix-theme, .ef-lh16.cp-btn-mini, .ef-lh16.cp-btn-large {
-    height: 16px; }
+  .ef-lh16.cp-btn-fix-theme, .ef-lh16.cp-btn-mini, .ef-lh16.cp-btn-large, .ef-lh16.cp-btn-fix {
+    line-height: 16px; }
   .cp-btn.ef-lh17, .ef-lh17.cp-btn-white,
   .ef-lh17.cp-btn-mini-white,
   .ef-lh17.cp-btn-large-white,
@@ -5187,8 +5219,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh17.cp-btn-fix-gray, .ef-lh17.cp-btn-theme,
   .ef-lh17.cp-btn-mini-theme,
   .ef-lh17.cp-btn-large-theme,
-  .ef-lh17.cp-btn-fix-theme, .ef-lh17.cp-btn-mini, .ef-lh17.cp-btn-large {
-    height: 17px; }
+  .ef-lh17.cp-btn-fix-theme, .ef-lh17.cp-btn-mini, .ef-lh17.cp-btn-large, .ef-lh17.cp-btn-fix {
+    line-height: 17px; }
   .cp-btn.ef-lh18, .ef-lh18.cp-btn-white,
   .ef-lh18.cp-btn-mini-white,
   .ef-lh18.cp-btn-large-white,
@@ -5219,8 +5251,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh18.cp-btn-fix-gray, .ef-lh18.cp-btn-theme,
   .ef-lh18.cp-btn-mini-theme,
   .ef-lh18.cp-btn-large-theme,
-  .ef-lh18.cp-btn-fix-theme, .ef-lh18.cp-btn-mini, .ef-lh18.cp-btn-large {
-    height: 18px; }
+  .ef-lh18.cp-btn-fix-theme, .ef-lh18.cp-btn-mini, .ef-lh18.cp-btn-large, .ef-lh18.cp-btn-fix {
+    line-height: 18px; }
   .cp-btn.ef-lh19, .ef-lh19.cp-btn-white,
   .ef-lh19.cp-btn-mini-white,
   .ef-lh19.cp-btn-large-white,
@@ -5251,8 +5283,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh19.cp-btn-fix-gray, .ef-lh19.cp-btn-theme,
   .ef-lh19.cp-btn-mini-theme,
   .ef-lh19.cp-btn-large-theme,
-  .ef-lh19.cp-btn-fix-theme, .ef-lh19.cp-btn-mini, .ef-lh19.cp-btn-large {
-    height: 19px; }
+  .ef-lh19.cp-btn-fix-theme, .ef-lh19.cp-btn-mini, .ef-lh19.cp-btn-large, .ef-lh19.cp-btn-fix {
+    line-height: 19px; }
   .cp-btn.ef-lh20, .ef-lh20.cp-btn-white,
   .ef-lh20.cp-btn-mini-white,
   .ef-lh20.cp-btn-large-white,
@@ -5283,8 +5315,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh20.cp-btn-fix-gray, .ef-lh20.cp-btn-theme,
   .ef-lh20.cp-btn-mini-theme,
   .ef-lh20.cp-btn-large-theme,
-  .ef-lh20.cp-btn-fix-theme, .ef-lh20.cp-btn-mini, .ef-lh20.cp-btn-large {
-    height: 20px; }
+  .ef-lh20.cp-btn-fix-theme, .ef-lh20.cp-btn-mini, .ef-lh20.cp-btn-large, .ef-lh20.cp-btn-fix {
+    line-height: 20px; }
   .cp-btn.ef-lh21, .ef-lh21.cp-btn-white,
   .ef-lh21.cp-btn-mini-white,
   .ef-lh21.cp-btn-large-white,
@@ -5315,8 +5347,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh21.cp-btn-fix-gray, .ef-lh21.cp-btn-theme,
   .ef-lh21.cp-btn-mini-theme,
   .ef-lh21.cp-btn-large-theme,
-  .ef-lh21.cp-btn-fix-theme, .ef-lh21.cp-btn-mini, .ef-lh21.cp-btn-large {
-    height: 21px; }
+  .ef-lh21.cp-btn-fix-theme, .ef-lh21.cp-btn-mini, .ef-lh21.cp-btn-large, .ef-lh21.cp-btn-fix {
+    line-height: 21px; }
   .cp-btn.ef-lh22, .ef-lh22.cp-btn-white,
   .ef-lh22.cp-btn-mini-white,
   .ef-lh22.cp-btn-large-white,
@@ -5347,8 +5379,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh22.cp-btn-fix-gray, .ef-lh22.cp-btn-theme,
   .ef-lh22.cp-btn-mini-theme,
   .ef-lh22.cp-btn-large-theme,
-  .ef-lh22.cp-btn-fix-theme, .ef-lh22.cp-btn-mini, .ef-lh22.cp-btn-large {
-    height: 22px; }
+  .ef-lh22.cp-btn-fix-theme, .ef-lh22.cp-btn-mini, .ef-lh22.cp-btn-large, .ef-lh22.cp-btn-fix {
+    line-height: 22px; }
   .cp-btn.ef-lh23, .ef-lh23.cp-btn-white,
   .ef-lh23.cp-btn-mini-white,
   .ef-lh23.cp-btn-large-white,
@@ -5379,8 +5411,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh23.cp-btn-fix-gray, .ef-lh23.cp-btn-theme,
   .ef-lh23.cp-btn-mini-theme,
   .ef-lh23.cp-btn-large-theme,
-  .ef-lh23.cp-btn-fix-theme, .ef-lh23.cp-btn-mini, .ef-lh23.cp-btn-large {
-    height: 23px; }
+  .ef-lh23.cp-btn-fix-theme, .ef-lh23.cp-btn-mini, .ef-lh23.cp-btn-large, .ef-lh23.cp-btn-fix {
+    line-height: 23px; }
   .cp-btn.ef-lh24, .ef-lh24.cp-btn-white,
   .ef-lh24.cp-btn-mini-white,
   .ef-lh24.cp-btn-large-white,
@@ -5411,8 +5443,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh24.cp-btn-fix-gray, .ef-lh24.cp-btn-theme,
   .ef-lh24.cp-btn-mini-theme,
   .ef-lh24.cp-btn-large-theme,
-  .ef-lh24.cp-btn-fix-theme, .ef-lh24.cp-btn-mini, .ef-lh24.cp-btn-large {
-    height: 24px; }
+  .ef-lh24.cp-btn-fix-theme, .ef-lh24.cp-btn-mini, .ef-lh24.cp-btn-large, .ef-lh24.cp-btn-fix {
+    line-height: 24px; }
   .cp-btn.ef-lh25, .ef-lh25.cp-btn-white,
   .ef-lh25.cp-btn-mini-white,
   .ef-lh25.cp-btn-large-white,
@@ -5443,8 +5475,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh25.cp-btn-fix-gray, .ef-lh25.cp-btn-theme,
   .ef-lh25.cp-btn-mini-theme,
   .ef-lh25.cp-btn-large-theme,
-  .ef-lh25.cp-btn-fix-theme, .ef-lh25.cp-btn-mini, .ef-lh25.cp-btn-large {
-    height: 25px; }
+  .ef-lh25.cp-btn-fix-theme, .ef-lh25.cp-btn-mini, .ef-lh25.cp-btn-large, .ef-lh25.cp-btn-fix {
+    line-height: 25px; }
   .cp-btn.ef-lh26, .ef-lh26.cp-btn-white,
   .ef-lh26.cp-btn-mini-white,
   .ef-lh26.cp-btn-large-white,
@@ -5475,8 +5507,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh26.cp-btn-fix-gray, .ef-lh26.cp-btn-theme,
   .ef-lh26.cp-btn-mini-theme,
   .ef-lh26.cp-btn-large-theme,
-  .ef-lh26.cp-btn-fix-theme, .ef-lh26.cp-btn-mini, .ef-lh26.cp-btn-large {
-    height: 26px; }
+  .ef-lh26.cp-btn-fix-theme, .ef-lh26.cp-btn-mini, .ef-lh26.cp-btn-large, .ef-lh26.cp-btn-fix {
+    line-height: 26px; }
   .cp-btn.ef-lh27, .ef-lh27.cp-btn-white,
   .ef-lh27.cp-btn-mini-white,
   .ef-lh27.cp-btn-large-white,
@@ -5507,8 +5539,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh27.cp-btn-fix-gray, .ef-lh27.cp-btn-theme,
   .ef-lh27.cp-btn-mini-theme,
   .ef-lh27.cp-btn-large-theme,
-  .ef-lh27.cp-btn-fix-theme, .ef-lh27.cp-btn-mini, .ef-lh27.cp-btn-large {
-    height: 27px; }
+  .ef-lh27.cp-btn-fix-theme, .ef-lh27.cp-btn-mini, .ef-lh27.cp-btn-large, .ef-lh27.cp-btn-fix {
+    line-height: 27px; }
   .cp-btn.ef-lh28, .ef-lh28.cp-btn-white,
   .ef-lh28.cp-btn-mini-white,
   .ef-lh28.cp-btn-large-white,
@@ -5539,8 +5571,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh28.cp-btn-fix-gray, .ef-lh28.cp-btn-theme,
   .ef-lh28.cp-btn-mini-theme,
   .ef-lh28.cp-btn-large-theme,
-  .ef-lh28.cp-btn-fix-theme, .ef-lh28.cp-btn-mini, .ef-lh28.cp-btn-large {
-    height: 28px; }
+  .ef-lh28.cp-btn-fix-theme, .ef-lh28.cp-btn-mini, .ef-lh28.cp-btn-large, .ef-lh28.cp-btn-fix {
+    line-height: 28px; }
   .cp-btn.ef-lh29, .ef-lh29.cp-btn-white,
   .ef-lh29.cp-btn-mini-white,
   .ef-lh29.cp-btn-large-white,
@@ -5571,8 +5603,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh29.cp-btn-fix-gray, .ef-lh29.cp-btn-theme,
   .ef-lh29.cp-btn-mini-theme,
   .ef-lh29.cp-btn-large-theme,
-  .ef-lh29.cp-btn-fix-theme, .ef-lh29.cp-btn-mini, .ef-lh29.cp-btn-large {
-    height: 29px; }
+  .ef-lh29.cp-btn-fix-theme, .ef-lh29.cp-btn-mini, .ef-lh29.cp-btn-large, .ef-lh29.cp-btn-fix {
+    line-height: 29px; }
   .cp-btn.ef-lh30, .ef-lh30.cp-btn-white,
   .ef-lh30.cp-btn-mini-white,
   .ef-lh30.cp-btn-large-white,
@@ -5603,8 +5635,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh30.cp-btn-fix-gray, .ef-lh30.cp-btn-theme,
   .ef-lh30.cp-btn-mini-theme,
   .ef-lh30.cp-btn-large-theme,
-  .ef-lh30.cp-btn-fix-theme, .ef-lh30.cp-btn-mini, .ef-lh30.cp-btn-large {
-    height: 30px; }
+  .ef-lh30.cp-btn-fix-theme, .ef-lh30.cp-btn-mini, .ef-lh30.cp-btn-large, .ef-lh30.cp-btn-fix {
+    line-height: 30px; }
   .cp-btn.ef-lh31, .ef-lh31.cp-btn-white,
   .ef-lh31.cp-btn-mini-white,
   .ef-lh31.cp-btn-large-white,
@@ -5635,8 +5667,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh31.cp-btn-fix-gray, .ef-lh31.cp-btn-theme,
   .ef-lh31.cp-btn-mini-theme,
   .ef-lh31.cp-btn-large-theme,
-  .ef-lh31.cp-btn-fix-theme, .ef-lh31.cp-btn-mini, .ef-lh31.cp-btn-large {
-    height: 31px; }
+  .ef-lh31.cp-btn-fix-theme, .ef-lh31.cp-btn-mini, .ef-lh31.cp-btn-large, .ef-lh31.cp-btn-fix {
+    line-height: 31px; }
   .cp-btn.ef-lh32, .ef-lh32.cp-btn-white,
   .ef-lh32.cp-btn-mini-white,
   .ef-lh32.cp-btn-large-white,
@@ -5667,8 +5699,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh32.cp-btn-fix-gray, .ef-lh32.cp-btn-theme,
   .ef-lh32.cp-btn-mini-theme,
   .ef-lh32.cp-btn-large-theme,
-  .ef-lh32.cp-btn-fix-theme, .ef-lh32.cp-btn-mini, .ef-lh32.cp-btn-large {
-    height: 32px; }
+  .ef-lh32.cp-btn-fix-theme, .ef-lh32.cp-btn-mini, .ef-lh32.cp-btn-large, .ef-lh32.cp-btn-fix {
+    line-height: 32px; }
   .cp-btn.ef-lh33, .ef-lh33.cp-btn-white,
   .ef-lh33.cp-btn-mini-white,
   .ef-lh33.cp-btn-large-white,
@@ -5699,8 +5731,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh33.cp-btn-fix-gray, .ef-lh33.cp-btn-theme,
   .ef-lh33.cp-btn-mini-theme,
   .ef-lh33.cp-btn-large-theme,
-  .ef-lh33.cp-btn-fix-theme, .ef-lh33.cp-btn-mini, .ef-lh33.cp-btn-large {
-    height: 33px; }
+  .ef-lh33.cp-btn-fix-theme, .ef-lh33.cp-btn-mini, .ef-lh33.cp-btn-large, .ef-lh33.cp-btn-fix {
+    line-height: 33px; }
   .cp-btn.ef-lh34, .ef-lh34.cp-btn-white,
   .ef-lh34.cp-btn-mini-white,
   .ef-lh34.cp-btn-large-white,
@@ -5731,8 +5763,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh34.cp-btn-fix-gray, .ef-lh34.cp-btn-theme,
   .ef-lh34.cp-btn-mini-theme,
   .ef-lh34.cp-btn-large-theme,
-  .ef-lh34.cp-btn-fix-theme, .ef-lh34.cp-btn-mini, .ef-lh34.cp-btn-large {
-    height: 34px; }
+  .ef-lh34.cp-btn-fix-theme, .ef-lh34.cp-btn-mini, .ef-lh34.cp-btn-large, .ef-lh34.cp-btn-fix {
+    line-height: 34px; }
   .cp-btn.ef-lh35, .ef-lh35.cp-btn-white,
   .ef-lh35.cp-btn-mini-white,
   .ef-lh35.cp-btn-large-white,
@@ -5763,8 +5795,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh35.cp-btn-fix-gray, .ef-lh35.cp-btn-theme,
   .ef-lh35.cp-btn-mini-theme,
   .ef-lh35.cp-btn-large-theme,
-  .ef-lh35.cp-btn-fix-theme, .ef-lh35.cp-btn-mini, .ef-lh35.cp-btn-large {
-    height: 35px; }
+  .ef-lh35.cp-btn-fix-theme, .ef-lh35.cp-btn-mini, .ef-lh35.cp-btn-large, .ef-lh35.cp-btn-fix {
+    line-height: 35px; }
   .cp-btn.ef-lh36, .ef-lh36.cp-btn-white,
   .ef-lh36.cp-btn-mini-white,
   .ef-lh36.cp-btn-large-white,
@@ -5795,8 +5827,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh36.cp-btn-fix-gray, .ef-lh36.cp-btn-theme,
   .ef-lh36.cp-btn-mini-theme,
   .ef-lh36.cp-btn-large-theme,
-  .ef-lh36.cp-btn-fix-theme, .ef-lh36.cp-btn-mini, .ef-lh36.cp-btn-large {
-    height: 36px; }
+  .ef-lh36.cp-btn-fix-theme, .ef-lh36.cp-btn-mini, .ef-lh36.cp-btn-large, .ef-lh36.cp-btn-fix {
+    line-height: 36px; }
   .cp-btn.ef-lh37, .ef-lh37.cp-btn-white,
   .ef-lh37.cp-btn-mini-white,
   .ef-lh37.cp-btn-large-white,
@@ -5827,8 +5859,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh37.cp-btn-fix-gray, .ef-lh37.cp-btn-theme,
   .ef-lh37.cp-btn-mini-theme,
   .ef-lh37.cp-btn-large-theme,
-  .ef-lh37.cp-btn-fix-theme, .ef-lh37.cp-btn-mini, .ef-lh37.cp-btn-large {
-    height: 37px; }
+  .ef-lh37.cp-btn-fix-theme, .ef-lh37.cp-btn-mini, .ef-lh37.cp-btn-large, .ef-lh37.cp-btn-fix {
+    line-height: 37px; }
   .cp-btn.ef-lh38, .ef-lh38.cp-btn-white,
   .ef-lh38.cp-btn-mini-white,
   .ef-lh38.cp-btn-large-white,
@@ -5859,8 +5891,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh38.cp-btn-fix-gray, .ef-lh38.cp-btn-theme,
   .ef-lh38.cp-btn-mini-theme,
   .ef-lh38.cp-btn-large-theme,
-  .ef-lh38.cp-btn-fix-theme, .ef-lh38.cp-btn-mini, .ef-lh38.cp-btn-large {
-    height: 38px; }
+  .ef-lh38.cp-btn-fix-theme, .ef-lh38.cp-btn-mini, .ef-lh38.cp-btn-large, .ef-lh38.cp-btn-fix {
+    line-height: 38px; }
   .cp-btn.ef-lh39, .ef-lh39.cp-btn-white,
   .ef-lh39.cp-btn-mini-white,
   .ef-lh39.cp-btn-large-white,
@@ -5891,8 +5923,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh39.cp-btn-fix-gray, .ef-lh39.cp-btn-theme,
   .ef-lh39.cp-btn-mini-theme,
   .ef-lh39.cp-btn-large-theme,
-  .ef-lh39.cp-btn-fix-theme, .ef-lh39.cp-btn-mini, .ef-lh39.cp-btn-large {
-    height: 39px; }
+  .ef-lh39.cp-btn-fix-theme, .ef-lh39.cp-btn-mini, .ef-lh39.cp-btn-large, .ef-lh39.cp-btn-fix {
+    line-height: 39px; }
   .cp-btn.ef-lh40, .ef-lh40.cp-btn-white,
   .ef-lh40.cp-btn-mini-white,
   .ef-lh40.cp-btn-large-white,
@@ -5923,8 +5955,8 @@ label.cp-radio, label.cp-checkbox {
   .ef-lh40.cp-btn-fix-gray, .ef-lh40.cp-btn-theme,
   .ef-lh40.cp-btn-mini-theme,
   .ef-lh40.cp-btn-large-theme,
-  .ef-lh40.cp-btn-fix-theme, .ef-lh40.cp-btn-mini, .ef-lh40.cp-btn-large {
-    height: 40px; }
+  .ef-lh40.cp-btn-fix-theme, .ef-lh40.cp-btn-mini, .ef-lh40.cp-btn-large, .ef-lh40.cp-btn-fix {
+    line-height: 40px; }
   .cp-btn:hover, .cp-btn-white:hover,
   .cp-btn-mini-white:hover,
   .cp-btn-large-white:hover,
@@ -5955,7 +5987,7 @@ label.cp-radio, label.cp-checkbox {
   .cp-btn-fix-gray:hover, .cp-btn-theme:hover,
   .cp-btn-mini-theme:hover,
   .cp-btn-large-theme:hover,
-  .cp-btn-fix-theme:hover, .cp-btn-mini:hover, .cp-btn-large:hover {
+  .cp-btn-fix-theme:hover, .cp-btn-mini:hover, .cp-btn-large:hover, .cp-btn-fix:hover {
     text-decoration: none;
     color: #333;
     background: #f6f6f6;
@@ -5994,7 +6026,7 @@ label.cp-radio, label.cp-checkbox {
     .cp-btn-fix-gray:hover i, .cp-btn-theme:hover i,
     .cp-btn-mini-theme:hover i,
     .cp-btn-large-theme:hover i,
-    .cp-btn-fix-theme:hover i, .cp-btn-mini:hover i, .cp-btn-large:hover i {
+    .cp-btn-fix-theme:hover i, .cp-btn-mini:hover i, .cp-btn-large:hover i, .cp-btn-fix:hover i {
       color: #333; }
   .cp-btn:active, .cp-btn-white:active,
   .cp-btn-mini-white:active,
@@ -6026,7 +6058,7 @@ label.cp-radio, label.cp-checkbox {
   .cp-btn-fix-gray:active, .cp-btn-theme:active,
   .cp-btn-mini-theme:active,
   .cp-btn-large-theme:active,
-  .cp-btn-fix-theme:active, .cp-btn-mini:active, .cp-btn-large:active {
+  .cp-btn-fix-theme:active, .cp-btn-mini:active, .cp-btn-large:active, .cp-btn-fix:active {
     background: #eee;
     border-width: 1px;
     border-style: solid;
@@ -6063,7 +6095,7 @@ label.cp-radio, label.cp-checkbox {
   .cp-disabled.cp-btn-fix-gray:hover, .cp-disabled.cp-btn-theme:hover,
   .cp-disabled.cp-btn-mini-theme:hover,
   .cp-disabled.cp-btn-large-theme:hover,
-  .cp-disabled.cp-btn-fix-theme:hover, .cp-disabled.cp-btn-mini:hover, .cp-disabled.cp-btn-large:hover {
+  .cp-disabled.cp-btn-fix-theme:hover, .cp-disabled.cp-btn-mini:hover, .cp-disabled.cp-btn-large:hover, .cp-disabled.cp-btn-fix:hover {
     background: #eee;
     cursor: default; }
 
@@ -6489,8 +6521,8 @@ label.cp-radio, label.cp-checkbox {
   border-width: 1px;
   border-style: solid;
   border-color: black;
-  background-image: -webkit-linear-gradient(#080808, #000, #000);
-  background-image: linear-gradient(#080808, #000, #000); }
+  background-image: -webkit-linear-gradient(#1a1a1a, #000, #000);
+  background-image: linear-gradient(#1a1a1a, #000, #000); }
   .cp-btn-black i,
   .cp-btn-mini-black i,
   .cp-btn-large-black i,
@@ -6501,12 +6533,12 @@ label.cp-radio, label.cp-checkbox {
   .cp-btn-large-black:hover,
   .cp-btn-fix-black:hover {
     color: #fff;
-    background: #080808;
+    background: #1a1a1a;
     border-width: 1px;
     border-style: solid;
     border-color: black;
-    background-image: -webkit-linear-gradient(#080808, #080808, #080808);
-    background-image: linear-gradient(#080808, #080808, #080808); }
+    background-image: -webkit-linear-gradient(#1a1a1a, #1a1a1a, #1a1a1a);
+    background-image: linear-gradient(#1a1a1a, #1a1a1a, #1a1a1a); }
     .cp-btn-black:hover i,
     .cp-btn-mini-black:hover i,
     .cp-btn-large-black:hover i,
@@ -6684,20 +6716,19 @@ label.cp-radio, label.cp-checkbox {
 .cp-btn-large-gray,
 .cp-btn-large-theme {
   font-size: 16px;
-  padding: 7px 50px;
-  min-width: 0; }
+  padding: 7px 50px; }
 
-.cp-btn-large,
-.cp-btn-large-white,
-.cp-btn-large-red,
-.cp-btn-large-orange,
-.cp-btn-large-blue,
-.cp-btn-large-green,
-.cp-btn-large-yellow,
-.cp-btn-large-brown,
-.cp-btn-large-black,
-.cp-btn-large-gray,
-.cp-btn-large-theme {
+.cp-btn-fix,
+.cp-btn-fix-white,
+.cp-btn-fix-red,
+.cp-btn-fix-orange,
+.cp-btn-fix-blue,
+.cp-btn-fix-green,
+.cp-btn-fix-yellow,
+.cp-btn-fix-brown,
+.cp-btn-fix-black,
+.cp-btn-fix-gray,
+.cp-btn-fix-theme {
   width: 100%; }
 
 .cp-btn-combo-left {
