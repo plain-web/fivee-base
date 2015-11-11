@@ -6,6 +6,8 @@ var haml = require('gulp-ruby-haml');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
 var changed  = require('gulp-changed');
+var uglify = require('gulp-uglify');
+var rename = require("gulp-rename");
 //var spritesmith = require('gulp.spritesmith');
 
 /*========================================================================
@@ -82,9 +84,13 @@ gulp.task('haml', function() {
 ======================================================================== */
 gulp.task('js', function() {
   gulp.src(path.js)
-    //.pipe(changed(path.js, { extension: '.js' }))
+    .pipe(changed('./js/min/'))
     .pipe(plumber())
-    .pipe(gulp.dest(path.js))
+    .pipe( uglify())
+    .pipe(rename({
+        suffix: '.min'
+    }))
+    .pipe(gulp.dest('./js/min/'))
     .pipe(browserSync.reload({stream:true}));
 });
 /*========================================================================
