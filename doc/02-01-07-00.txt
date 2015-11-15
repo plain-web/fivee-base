@@ -1,1 +1,1 @@
-<input class="cp-input ef-lh30" type="text">
+<input class="cp-input" type="text">

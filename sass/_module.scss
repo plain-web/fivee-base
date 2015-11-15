@@ -144,6 +144,7 @@
 .md-popup{
   >.st-body{
     @include posi-abs(0,auto,auto,auto);
+    &.ef-posi-fix{@extend .ef-posi-fix;}
     border:1px solid $cl-brd-base;
     @include border-radius(7px);
     @include box-shadow(rgba($cl-brd-base, 0.5) 0 0 5px);

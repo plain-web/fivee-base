@@ -2465,7 +2465,7 @@ a.is-disabled {
 .ef-posi-abs {
   position: absolute; }
 
-.ef-posi-sx {
+.ef-posi-fix, .md-popup > .st-body.ef-posi-fix {
   position: fixed; }
 
 /* =============================================================
@@ -3649,7 +3649,8 @@ a {
       color: #29659e; }
   a.ef-is-nolink {
     text-decoration: none;
-    color: #333; }
+    color: #333;
+    cursor: default; }
     a.ef-is-nolink:hover {
       text-decoration: none;
       color: #333; }

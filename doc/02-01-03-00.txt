@@ -1,18 +1,18 @@
 <ul>
   <li>
-    <label class="cp-radio ef-lh25">
+    <label class="cp-radio">
       <input checked name="test00" type="radio">
       Fivee-base01
     </label>
   </li>
   <li>
-    <label class="cp-radio ef-lh25">
+    <label class="cp-radio">
       <input name="test00" type="radio">
       Fivee-base02
     </label>
   </li>
   <li>
-    <label class="cp-radio ef-lh25">
+    <label class="cp-radio">
       <input name="test00" type="radio">
       Fivee-base02
     </label>

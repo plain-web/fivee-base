@@ -1,18 +1,18 @@
 <ul>
   <li>
-    <label class="cp-checkbox ef-lh25">
+    <label class="cp-checkbox">
       <input checked type="checkbox">
       Fivee-base01
     </label>
   </li>
   <li>
-    <label class="cp-checkbox ef-lh25">
+    <label class="cp-checkbox">
       <input type="checkbox">
       Fivee-base02
     </label>
   </li>
   <li>
-    <label class="cp-checkbox ef-lh25">
+    <label class="cp-checkbox">
       <input type="checkbox">
       Fivee-base02
     </label>

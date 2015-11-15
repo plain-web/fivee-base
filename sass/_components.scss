@@ -44,6 +44,7 @@ a{
   &.ef-is-nolink{
     text-decoration:none;
     color: $cl-txt-base;
+    cursor:default;
     &:hover{
       text-decoration:none;
       color: $cl-txt-base;

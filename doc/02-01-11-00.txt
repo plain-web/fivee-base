@@ -5,7 +5,7 @@
         <i class="fa fa-user"></i>
       </li>
       <li>
-        <input class="cp-input ef-lh30 ef-w100p" type="text">
+        <input class="cp-input ef-w100p" type="text">
       </li>
     </ul>
   </li>
@@ -15,7 +15,7 @@
         <i class="fa fa-user"></i>
       </li>
       <li>
-        <input class="cp-input ef-lh30 ef-w100p" type="text">
+        <input class="cp-input ef-w100p" type="text">
       </li>
     </ul>
   </li>

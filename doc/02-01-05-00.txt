@@ -1,4 +1,4 @@
-<select class="cp-select ef-lh30">
+<select class="cp-select">
   <option>
     keyword
   </option>

@@ -413,7 +413,7 @@ var popupHandler = {
     var windowWidth = $(window).outerWidth(true);
     var popupPosi = thisSelecter.position();
     var topPosi = popupPosi.top;
-        topPosi = topPosi + thisSelecter.outerHeight(true);
+        topPosi = topPosi + thisSelecter.outerHeight(true) + 7 ;
     var thisWidth = thisSelecter.outerWidth(true);
     var rightPosi = windowWidth - popupPosi.left - thisWidth;
     //this

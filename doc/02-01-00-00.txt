@@ -1,4 +1,4 @@
-<label class="cp-checkbox ef-lh30">
+<label class="cp-checkbox">
   <input type="checkbox">
   Fivee-base01
 </label>
