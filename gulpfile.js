@@ -18,7 +18,7 @@ var path = {
   js: './js/*.js',
   sass: './sass/**/*scss',
   css: './css',
-  haml: './*.haml',
+  haml: './**/*.haml',
   html: './'
   //sprite :'./img/sprite/*.png',
   //spriteImg :'./img/',
@@ -52,18 +52,6 @@ gulp.task('server', function() {
 //   spriteData.css
 //     .pipe(gulp.dest(path.spriteScss));
 // });
-/*========================================================================
-  sass
-======================================================================== */
-gulp.task('sass', function() {
-  gulp.src(path.sass)
-    //.pipe(changed(path.css, { extension: '.css' }))
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(autoprefixer())
-    .pipe(gulp.dest(path.css))
-    .pipe(browserSync.reload({stream:true}));
-});
 
 /*========================================================================
   haml
@@ -94,10 +82,35 @@ gulp.task('js', function() {
     .pipe(browserSync.reload({stream:true}));
 });
 /*========================================================================
+  sass
+======================================================================== */
+gulp.task('sass', function() {
+  gulp.src(path.sass)
+    //.pipe(changed(path.css, { extension: '.css' }))
+    .pipe(plumber())
+    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest(path.css))
+    .pipe(browserSync.reload({stream:true}));
+});
+// /*========================================================================
+//   theme-default
+// ======================================================================== */
+// var themeDefault = require('gulp-sass');
+// gulp.task('themeDefault', function() {
+//   gulp.src('./sass/theme-default/*.scss')
+//     .pipe(plumber())
+//     .pipe(sass({outputStyle: 'expanded'}))
+//     .pipe(autoprefixer())
+//     .pipe(gulp.dest('./css/theme-default/'))
+//     .pipe(browserSync.reload({stream:true}));
+// });
+/*========================================================================
   default (watch)
 ======================================================================== */
 gulp.task('default', ['server'], function() {
-  gulp.watch('./*.haml',['haml']);
+  gulp.watch('./**/*.haml',['haml']);
   gulp.watch(['./js/**/*.js','!js/min/**/*.js'],['js']);
   gulp.watch('./sass/**/*.scss',['sass']);
+  //gulp.watch('./sass/_*.scss',['themeDefault']);
 });
