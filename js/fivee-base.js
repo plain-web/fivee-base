@@ -652,7 +652,7 @@ $('.js-html-show').on('click', function(){
   returnClass = 'js-example-num';
   targetClass = thisClassGet(clickThis, returnClass);
   //filepath
-  var fileUrl = 'doc/' + targetClass.replace(".js-example-num", "") + '.txt';
+  var fileUrl = '../doc/' + targetClass.replace(".js-example-num", "") + '.txt';
   //draw html
   var drawClass = targetClass.slice(0,23).replace(".js-example-num", ".js-example-tag-num");
   //check array

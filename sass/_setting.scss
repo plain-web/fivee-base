@@ -1,0 +1,184 @@
+/*
+ * setting.scss
+ * include:
+ * "mixins" "base"
+ */
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+// "mixins"
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+
+@mixin posi-fix($top, $right, $bottom, $left){
+  position:fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin posi-abs($top, $right, $bottom, $left){
+  position:absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin brd($width: 1px, $style: solid, $color: $cl-brd-base){
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+}
+@mixin brd-top($width: 1px, $style: solid, $color: $cl-brd-base){
+  border-top-width: $width;
+  border-top-style: $style;
+  border-top-color: $color;
+}
+@mixin brd-right($width: 1px, $style: solid, $color: $cl-brd-base){
+  border-right-width: $width;
+  border-right-style: $style;
+  border-right-color: $color;
+}
+@mixin brd-bottom($width: 1px, $style: solid, $color: $cl-brd-base){
+  border-bottom-width: $width;
+  border-bottom-style: $style;
+  border-bottom-color: $color;
+}
+@mixin brd-left($width: 1px, $style: solid, $color: $cl-brd-base){
+  border-left-width: $width;
+  border-left-style: $style;
+  border-left-color: $color;
+}
+
+@mixin centering($width: 200px){
+  margin:auto;
+  width: $width;
+}
+
+@mixin gradation($start:#fff, $end:#e3e3e3) {
+  // background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $start), color-stop(50%, $end), color-stop(100%, $end));
+  // background-image: -moz-linear-gradient($start, $end, $end);
+  // background-image: -webkit-linear-gradient($start, $end, $end);
+  background-image: linear-gradient($start, $end, $end);
+}
+@mixin gradation-ie($start:#ffffffff, $end:#FFE3E3E3) {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#{$start}', endColorstr='#{$end}');
+}
+
+@mixin width-overflow($max:900px){
+  width: $max;
+  overflow-x: auto;
+}
+@mixin width-overflow-max($max:900px){
+  max-width: $max;
+  overflow-x: auto;
+}
+@mixin height-overflow($max:900px){
+  height: $max;
+  overflow-y: auto;
+}
+@mixin height-overflow-max($max:900px){
+  max-height: $max;
+  overflow-y: auto;
+}
+
+// @mixin boxset($bg: $cl-gray, $radius: 3px, $width: 1px, $type: solid, $color: $cl-brd-base){
+//   background: $bg;
+//   border: $width $type $color;
+//   @include border-radius($radius);
+// }
+
+@mixin box-shadow-base{
+  @include box-shadow(0 3px 5px rgba($cl-txt-base, .25));
+}
+
+@mixin easeout{
+  @include transition( all 0.3s ease-out);
+}
+@mixin border-radius($radius){
+  border-radius: $radius;
+}
+@mixin border-top-radius($radius){
+  border-top-left-radius:$radius;
+  border-top-right-radius:$radius;
+}
+@mixin border-top-left-radius($radius){
+  border-top-left-radius:$radius;
+}
+@mixin border-right-radius($radius){
+  border-top-right-radius:$radius;
+  border-bottom-right-radius:$radius;
+}
+@mixin border-bottom-radius($radius){
+  border-bottom-left-radius:$radius;
+  border-bottom-right-radius:$radius;
+}
+@mixin border-left-radius($radius){
+  border-top-left-radius:$radius;
+  border-bottom-left-radius:$radius;
+}
+@mixin box-shadow($value...) {
+  box-shadow: $value;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  filter: alpha(opacity=($opacity * 100));
+}
+@mixin min-width($minWidth){
+  min-width: $minWidth;
+}
+@mixin min-height($minHeight){
+  min-height: $minHeight;
+}
+@mixin transition($transition...) {
+  transition:$transition;
+}
+@mixin clearfix {
+  overflow:hidden;
+  *zoom: 1;
+}
+@mixin overflow-fix($max:300px){
+  width:$max;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin overflow-max($max:300px){
+  max-width:$max;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin rotate ($deg) {
+  transform: rotate($deg);
+}
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+// "base"
+// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+/* =============================================================
+ ▼ app base
+============================================================= */
+html,body {
+  margin:0;
+  padding: 0;
+  @include min-width($app-minWidth);
+}
+body {
+  position: relative;
+  background: $cl-bg-body;
+  font-size: $fs-base;
+  color: $cl-txt-base;
+  line-height: $lh-base;
+  font-family: $ff-base;
+}
+*,*:before, *:after {box-sizing: border-box;}
+
+small{font-size: $fs-small;}
+em{font-style:normal;}
+pre,code{font-family: $ff-base;}
+
+input,button{outline: 0;}
+//for firefox
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+}

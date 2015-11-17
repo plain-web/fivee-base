@@ -534,7 +534,7 @@
                                   show html
                           .example-box-html.js-example-tag-num02-03-01(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60theme-default/
+                          %hr.is-dotted.ef-pdt60
                       // example02 //////////////////////////////////
                       %section#js-pageTop2.examle-wrap.ef-mgb20
                         .st-inner
@@ -560,6 +560,33 @@
                                 %a.cp-btn.js-html-show.js-example-num02-03-02-00(href="#{v}")
                                   show html
                           .example-box-html.js-example-tag-num02-03-02(style="display:none;")
+                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
+                          %hr.is-dotted.ef-pdt60
+                      // example03 //////////////////////////////////
+                      %section#js-pageTop3.examle-wrap.ef-mgb20
+                        .st-inner
+                          .example-title.ef-mgb30
+                            %ul.ef-float.ef-lh25
+                              %li
+                                %h5
+                                  link
+                                  %span.ef-fs14
+                                    (disable)
+                          .example-box.ef-mgb40
+                            // example code ///////////////////////////
+                            %a.is-disable(href="#{v}")
+                              Fivee-base
+                          .example-remarks.ef-mgb20
+                            %section.cp-remarks-blue
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  非活性になります。（マウスカーソルもdefaultになります）
+                          .example-btn
+                            %ul.ef-float7
+                              %li
+                                %a.cp-btn.js-html-show.js-example-num02-03-03-00(href="#{v}")
+                                  show html
+                          .example-box-html.js-example-tag-num02-03-03(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
                           %hr.is-dotted.ef-pdt60
     / footer/////////////////////////////////////////////
@@ -634,6 +661,11 @@
                   link
                   %span.ef-fs11
                     (reset)
+              %li
+                %a(href="#js-pageTop3")
+                  link
+                  %span.ef-fs11
+                    (disable)
       .st-body.js-template3
         .st-inner
           .md-popup-header.ef-mgb20

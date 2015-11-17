@@ -8,9 +8,14 @@
  *
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
 /*
+ * variables.scss
+ * include:
+ * "variables"
+ */
+/*
  * setting.scss
  * include:
- * "variables" "mixins" "base"
+ * "mixins" "base"
  */
 /* =============================================================
  ▼ app base
@@ -3172,7 +3177,7 @@ button::-moz-focus-inner {
   display: none;
 }
 
-.is-disabled, a.is-disabled {
+.is-disable, a.is-disable {
   opacity: 0.5;
   filter: alpha(opacity=50);
   pointer-events: none;
@@ -3180,7 +3185,7 @@ button::-moz-focus-inner {
   cursor: default;
 }
 
-a.is-disabled {
+a.is-disable {
   display: inline-block;
 }
 

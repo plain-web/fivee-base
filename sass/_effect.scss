@@ -1,3 +1,4 @@
+@import "setting";
 /*
  * effect.scss
  * include:
@@ -872,14 +873,14 @@
 .is-inline{display:inline}
 .is-inline-block{display:inline-block}
 .is-hidden{display:none;}
-.is-disabled{
+.is-disable{
   @include opacity(0.5);
   pointer-events : none; //ie not work
   color:$cl-black;
   cursor:default;
 }
-a.is-disabled{
-  @extend .is-disabled;
+a.is-disable{
+  @extend .is-disable;
   display:inline-block;
 }
 .is-grayout{
