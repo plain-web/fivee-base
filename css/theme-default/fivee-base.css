@@ -4357,6 +4357,15 @@ label.cp-checkbox input[type="radio"] {
  */
 .md-tooltip .st-body {
   z-index: 1;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+}
+
+.md-tooltip .st-body .st-inner {
+  position: relative;
 }
 
 .md-tooltip .st-body .st-inner .md-tooltip-box {
@@ -4364,27 +4373,19 @@ label.cp-checkbox input[type="radio"] {
   color: #fff;
   padding: 7px 10px;
   border-radius: 3px;
-  position: absolute;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: auto;
-}
-
-.md-tooltip .st-body .st-inner .md-tooltip-box .st-inner {
   max-width: 500px;
   overflow-x: auto;
 }
 
-.md-tooltip .st-body .st-inner .cp-balloon {
+.md-tooltip .st-body .st-inner .md-balloon {
   position: absolute;
   top: auto;
   right: auto;
-  bottom: auto;
-  left: auto;
+  bottom: -8px;
+  left: 5px;
 }
 
-.md-tooltip .st-body .st-inner .cp-balloon .cp-triangle-bottom {
+.md-tooltip .st-body .st-inner .md-balloon .md-triangle-bottom {
   margin-top: -6px;
   border-top: 8px solid #666;
   border-left: 4px solid transparent;

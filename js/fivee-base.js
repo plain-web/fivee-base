@@ -361,12 +361,13 @@ function toolTipOff(toolTipFlg){
     }else{
       return false;
     }
-  }, 1800);
+  }, 1000);
 }
 //show tooltip
 function toolTipOn(target){
+  var headerHeight = 40 + 40;
   var tipPosi = target.offset();
-  var topPosi = tipPosi.top - 37;
+  var topPosi = tipPosi.top - headerHeight;
   var leftPosi = tipPosi.left;
   var keyword = target.find('.js-tooltip-key').text();
   $('.js-tooltip-box').text('').text(keyword);
@@ -374,10 +375,10 @@ function toolTipOn(target){
     top: topPosi,
     left: leftPosi
   });
-  $('.js-balloon').css({
-    top: tipPosi.top - 10,
-    left: tipPosi.left + 4
-  });
+  // $('.js-balloon').css({
+  //   top: tipPosi.top - headerHeight,
+  //   left: tipPosi.left + 4
+  // });
   $('.js-tooltip').show(150);
 };
 /*========================================================================

@@ -167,20 +167,19 @@
 .md-tooltip{
   .st-body{
     z-index:1;
+    @include posi-abs(auto,auto,auto,auto);
     .st-inner{
+      position:relative;
       .md-tooltip-box{
         background-color:$cl-bg-tooltip;
         color:$cl-txt-rev;
         padding:7px 10px;
         @include border-radius(3px);
-        @include posi-abs(auto,auto,auto,auto);
-        .st-inner{
-          @include width-overflow-max(500px);
-        }
+        @include width-overflow-max(500px);
       }
-      .cp-balloon{
-        @include posi-abs(auto,auto,auto,auto);
-        .cp-triangle-bottom{
+      .md-balloon{
+        @include posi-abs(auto,auto,-8px,5px);
+        .md-triangle-bottom{
           margin-top:-6px;
           border-top: 8px solid $cl-bg-tooltip;
           border-left: 4px solid transparent;

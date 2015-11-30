@@ -16,7 +16,7 @@
     %link(href="../css/theme-default/unique-css.css" rel="stylesheet" type="text/css")
     /[if lt IE 9] <link href="../css/old-ie.css" rel="stylesheet">
   - v = 'javascript:void(0);'
-  %body.components-form
+  %body.components-button
     / header//////////////////////////////////////////////
     %header.page-header
       .st-body.ef-header-fix.js-pageTop-remove
@@ -508,7 +508,12 @@
                             の後に
                             %span.ef-cl-red
                               ef-lh30
-                            を付与してください。（数値は任意）
+                            を付与してください。
+                            %span.js-tooltip-hover
+                              .md-tooltip-key.js-tooltip-key
+                                3/7/10～40
+                              %a(href="#{v}")
+                                [数値]
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
                             %ul.ef-float7
@@ -552,7 +557,12 @@
                                   最小幅を変更する事ができます。HTMLソースの
                                   %span.ef-cl-red
                                     ef-mw100
-                                  の数値を変更してください。（数値は任意）
+                                  の数値を変更してください。
+                                  %span.js-tooltip-hover
+                                    .md-tooltip-key.js-tooltip-key
+                                      0/3/7/10～600(10単位)
+                                    %a(href="#{v}")
+                                      [数値]
                           .example-btn
                             %ul.ef-float7
                               %li
@@ -578,7 +588,12 @@
                             の後に
                             %span.ef-cl-red
                               ef-lh30
-                            を付与してください。（数値は任意）
+                            を付与してください。
+                            %span.js-tooltip-hover
+                              .md-tooltip-key.js-tooltip-key
+                                3/7/10～40
+                              %a(href="#{v}")
+                                [数値]
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
                             %ul.ef-float7
@@ -622,7 +637,12 @@
                                   最小幅を変更する事ができます。HTMLソースの
                                   %span.ef-cl-red
                                     ef-mw60
-                                  の数値を変更してください。（数値は任意）
+                                  の数値を変更してください。
+                                  %span.js-tooltip-hover
+                                    .md-tooltip-key.js-tooltip-key
+                                      0/3/7/10～600(10単位)
+                                    %a(href="#{v}")
+                                      [数値]
                           .example-btn
                             %ul.ef-float7
                               %li
@@ -648,7 +668,12 @@
                             の後に
                             %span.ef-cl-red
                               ef-lh30
-                            を付与してください。（数値は任意）
+                            を付与してください。
+                            %span.js-tooltip-hover
+                              .md-tooltip-key.js-tooltip-key
+                                3/7/10～40
+                              %a(href="#{v}")
+                                [数値]
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
                             %ul.ef-float7
@@ -692,7 +717,12 @@
                                   最小幅を変更する事ができます。HTMLソースの
                                   %span.ef-cl-red
                                     ef-mw100
-                                  の数値を変更してください。（数値は任意）
+                                  の数値を変更してください。
+                                  %span.js-tooltip-hover
+                                    .md-tooltip-key.js-tooltip-key
+                                      0/3/7/10～600(10単位)
+                                    %a(href="#{v}")
+                                      [数値]
                           .example-btn
                             %ul.ef-float7
                               %li
@@ -718,7 +748,12 @@
                             の後に
                             %span.ef-cl-red
                               ef-lh30
-                            を付与してください。（数値は任意）
+                            を付与してください。
+                            %span.js-tooltip-hover
+                              .md-tooltip-key.js-tooltip-key
+                                3/7/10～40
+                              %a(href="#{v}")
+                                [数値]
                           .example-box.ef-mgb40
                             // example code //////////////////
                             %ul
@@ -768,6 +803,44 @@
                           .example-box-html.js-example-tag-num02-02-03(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
                           %hr.is-dotted.ef-pdt60
+                      // example04 //////////////////////////////////
+                      %section#js-pageTop4.examle-wrap.ef-mgb20
+                        .st-inner
+                          .example-title.ef-mgb3
+                            %ul.ef-float.ef-lh25
+                              %li
+                                %h5
+                                  button
+                                  %span.ef-fs14
+                                    (icon)
+                          .example-summary.ef-fs12.ef-mgb30
+                            フォントアイコンは変更する事が可能です。
+                          .example-box.ef-mgb40
+                            // example code ///////////////////////////
+                            %ul
+                              %li.ef-mgb10
+                                %a.cp-btn.ef-mw100(href="#{v}")
+                                  %i.fa.fa-pencil
+                                  white
+                              %li.ef-mgb10
+                                %a.cp-btn-mini-red.ef-mw100(href="#{v}")
+                                  %i.fa.fa-pencil
+                                  red
+                              %li.ef-mgb10
+                                %a.cp-btn-large-orange.ef-mw100(href="#{v}")
+                                  %i.fa.fa-pencil
+                                  orange
+                              %li.ef-mgb10
+                                %a.cp-btn-fix-blue.ef-mw100(href="#{v}")
+                                  %i.fa.fa-pencil
+                                  blue
+                          .example-btn
+                            %ul.ef-float7
+                              %li
+                                %a.cp-btn.js-html-show.js-example-num02-02-04-00(href="#{v}")
+                                  show html
+                          .example-box-html.js-example-tag-num02-02-04(style="display:none;")
+                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
     / footer/////////////////////////////////////////////
     %footer.page-footer
       .st-body.ef-footer-fix
@@ -845,6 +918,11 @@
                   button
                   %span.ef-fs11
                     (fix)
+              %li
+                %a(href="#js-pageTop4")
+                  button
+                  %span.ef-fs11
+                    (icon)
       .st-body.js-template3
         .st-inner
           .md-popup-header.ef-mgb20
@@ -1023,10 +1101,9 @@
                 cancel
     /tooltip/////////////////////////////////////////////
     %section.md-tooltip.js-tooltip(style="display:none;")
-      .st-body
+      .st-body.js-tooltip-posi
         .st-inner
-          %section.md-tooltip-box.js-tooltip-posi
-            .st-inner.js-tooltip-box
+          %section.md-tooltip-box.js-tooltip-box
           %section.md-balloon.js-balloon
             .md-triangle-bottom
     /scrolltop///////////////////////////////////////////
