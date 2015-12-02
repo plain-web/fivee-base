@@ -16,7 +16,7 @@
     %link(href="../css/theme-default/unique-css.css" rel="stylesheet" type="text/css")
     /[if lt IE 9] <link href="../css/old-ie.css" rel="stylesheet">
   - v = 'javascript:void(0);'
-  %body.components-link
+  %body.components-list
     / header//////////////////////////////////////////////
     %header.page-header
       .st-body.ef-header-fix.js-pageTop-remove
@@ -128,12 +128,12 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   button
-                          %li.is-current
+                          %li
                             %a(href="../page-components/link.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   link
-                          %li
+                          %li.is-current
                             %a(href="../page-components/list.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
@@ -462,7 +462,7 @@
                     %ul.ef-float.ef-lh30
                       %li
                         %h1
-                          link
+                          list
                       %li.ef-mgl20
                         Overview of this page
                 // breadcrumb//////////////////////////////////////////////
@@ -477,7 +477,7 @@
                           .ef-txt-center
                             %i.fa.fa-angle-right
                         %li
-                          link
+                          list
                     .ef-float-right.ef-w20p
                       %ul.ef-float3.ef-lh30
                         %li.ef-float-right
@@ -496,21 +496,42 @@
                       // example00 //////////////////////////////////
                       %section#js-pageTop0.examle-wrap.ef-mgb20
                         .st-inner
-                          .example-title.ef-mgb30
+                          .example-title.ef-mgb3
                             %ul.ef-float.ef-lh25
                               %li
                                 %h5
-                                  link
+                                  list
+                                  %span.ef-fs14
+                                    (float)
+                          .example-summary.ef-fs12.ef-mgb30
+                            間隔を調整する事ができます。HTMLソースのクラス名
+                            %span.ef-cl-red
+                              ef-float7
+                            の数値を変更してください。
+                            %span.js-tooltip-hover
+                              .md-tooltip-key.js-tooltip-key
+                                3/7/10/20/30
+                              %a(href="#{v}")
+                                [数値]
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
-                            %a(href="#")
-                              Fivee-base
+                            %ul.ef-float7
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
                           .example-btn
                             %ul.ef-float7
                               %li
-                                %a.cp-btn.js-html-show.js-example-num02-03-00-00(href="#{v}")
+                                %a.cp-btn.js-html-show.js-example-num02-04-00-00(href="#{v}")
                                   show html
-                          .example-box-html.js-example-tag-num02-03-00(style="display:none;")
+                          .example-box-html.js-example-tag-num02-04-00(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
                           %hr.is-dotted.ef-pdt60
                       // example01 //////////////////////////////////
@@ -520,19 +541,26 @@
                             %ul.ef-float.ef-lh25
                               %li
                                 %h5
-                                  link
-                                  %span.ef-fs14
-                                    (underline)
+                                  list
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
-                            %a.ef-is-link(href="#")
-                              Fivee-base
+                            %ul
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
                           .example-btn
                             %ul.ef-float7
                               %li
-                                %a.cp-btn.js-html-show.js-example-num02-03-01-00(href="#{v}")
+                                %a.cp-btn.js-html-show.js-example-num02-04-01-00(href="#{v}")
                                   show html
-                          .example-box-html.js-example-tag-num02-03-01(style="display:none;")
+                          .example-box-html.js-example-tag-num02-04-01(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
                           %hr.is-dotted.ef-pdt60
                       // example02 //////////////////////////////////
@@ -542,24 +570,28 @@
                             %ul.ef-float.ef-lh25
                               %li
                                 %h5
-                                  link
+                                  list
                                   %span.ef-fs14
-                                    (reset)
+                                    (disc)
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
-                            %a.ef-is-nolink(href="#{v}")
-                              Fivee-base
-                          .example-remarks.ef-mgb20
-                            %section.cp-remarks-blue
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  リンク状態をリセットする際に使うクラスです。
+                            %ul.ef-list-disc
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
                           .example-btn
                             %ul.ef-float7
                               %li
-                                %a.cp-btn.js-html-show.js-example-num02-03-02-00(href="#{v}")
+                                %a.cp-btn.js-html-show.js-example-num02-04-02-00(href="#{v}")
                                   show html
-                          .example-box-html.js-example-tag-num02-03-02(style="display:none;")
+                          .example-box-html.js-example-tag-num02-04-02(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
                           %hr.is-dotted.ef-pdt60
                       // example03 //////////////////////////////////
@@ -569,24 +601,79 @@
                             %ul.ef-float.ef-lh25
                               %li
                                 %h5
-                                  link
+                                  list
                                   %span.ef-fs14
-                                    (disable)
+                                    (decimal)
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
-                            %a.is-disable(href="#{v}")
-                              Fivee-base
+                            %ul.ef-list-decimal
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
+                              %li
+                                Fivee-base
+                          .example-btn
+                            %ul.ef-float7
+                              %li
+                                %a.cp-btn.js-html-show.js-example-num02-04-03-00(href="#{v}")
+                                  show html
+                          .example-box-html.js-example-tag-num02-04-03(style="display:none;")
+                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
+                          %hr.is-dotted.ef-pdt60
+                      // example04 //////////////////////////////////
+                      %section#js-pageTop4.examle-wrap.ef-mgb20
+                        .st-inner
+                          .example-title.ef-mgb3
+                            %ul.ef-float.ef-lh25
+                              %li
+                                %h5
+                                  list
+                                  %span.ef-fs14
+                                    (hover)
+                          .example-summary.ef-fs12.ef-mgb30
+                            ナビゲーションなどホバー時に背景色をつける事ができます。
+                          .example-box.ef-mgb40
+                            // example code ///////////////////////////
+                            %ul.ef-list-hover-green
+                              %li
+                                %a(href="#")
+                                  Fivee-base
+                              %li
+                                %a(href="#")
+                                  Fivee-base
+                              %li
+                                %a(href="#")
+                                  Fivee-base
+                              %li
+                                %a(href="#")
+                                  Fivee-base
+                              %li
+                                %a(href="#")
+                                  Fivee-base
                           .example-remarks.ef-mgb20
                             %section.cp-remarks-blue
                               .st-inner
                                 .st-outer.ef-lh20
-                                  非活性になります。（マウスカーソルもdefaultになります）
+                                  背景色を変更できます。HTMLソースの
+                                  %span.ef-cl-red
+                                    ef-list-hover-green
+                                  を変更してください。 
+                                  %span.js-tooltip-hover
+                                    .md-tooltip-key.js-tooltip-key
+                                      white/red/orange/blue/green/yellow/brown/black/gray/gray(1～7)/theme
+                                    %a(href="#{v}")
+                                      [カラー]
                           .example-btn
                             %ul.ef-float7
                               %li
-                                %a.cp-btn.js-html-show.js-example-num02-03-03-00(href="#{v}")
+                                %a.cp-btn.js-html-show.js-example-num02-04-04-00(href="#{v}")
                                   show html
-                          .example-box-html.js-example-tag-num02-03-03(style="display:none;")
+                          .example-box-html.js-example-tag-num02-04-04(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
     / footer/////////////////////////////////////////////
     %footer.page-footer
@@ -649,22 +736,27 @@
             %ul.ef-list-hover-gray
               %li
                 %a(href="#js-pageTop0")
-                  link
+                  list
+                  %span.ef-fs11
+                    (float)
               %li
                 %a(href="#js-pageTop1")
-                  link
-                  %span.ef-fs11
-                    (underline)
+                  list
               %li
                 %a(href="#js-pageTop2")
                   link
                   %span.ef-fs11
-                    (reset)
+                    (disc)
               %li
                 %a(href="#js-pageTop3")
                   link
                   %span.ef-fs11
-                    (disable)
+                    (decimal)
+              %li
+                %a(href="#js-pageTop4")
+                  link
+                  %span.ef-fs11
+                    (hover)
       .st-body.js-template3
         .st-inner
           .md-popup-header.ef-mgb20

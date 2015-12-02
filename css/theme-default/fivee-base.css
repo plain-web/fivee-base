@@ -209,6 +209,17 @@ ul.ef-list-hover-yellow > li a:hover {
   background: #FDFFEE;
 }
 
+ul.ef-list-hover-brown > li a {
+  padding: 3px 10px;
+  color: #333;
+  display: block;
+}
+
+ul.ef-list-hover-brown > li a:hover {
+  text-decoration: none;
+  background: #EEE2DD;
+}
+
 ul.ef-list-hover-black > li a {
   padding: 3px 10px;
   color: #333;

@@ -150,6 +150,19 @@ ul{
       }
     }
   }
+  &.ef-list-hover-brown{
+    >li{
+      a{
+        padding:3px 10px;
+        color:$cl-txt-base;
+        display:block;
+        &:hover{
+          text-decoration:none;
+          background:$cl-bg-brown;
+        }
+      }
+    }
+  }
   &.ef-list-hover-black{
     >li{
       a{
