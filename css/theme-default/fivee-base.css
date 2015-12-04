@@ -4366,6 +4366,18 @@ label.cp-checkbox input[type="radio"] {
  * "tooltip"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
+.md-tooltip {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.md-tooltip.is-show {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+
 .md-tooltip .st-body {
   z-index: 1;
   position: absolute;
@@ -4373,13 +4385,14 @@ label.cp-checkbox input[type="radio"] {
   right: auto;
   bottom: auto;
   left: auto;
+  max-width: 350px;
 }
 
 .md-tooltip .st-body .st-inner {
   position: relative;
 }
 
-.md-tooltip .st-body .st-inner .md-tooltip-box {
+.md-tooltip .st-body .st-inner .md-tooltip-wrap {
   background-color: #666;
   color: #fff;
   padding: 7px 10px;

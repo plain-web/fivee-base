@@ -319,6 +319,9 @@ if(hasclass){
 var toolTipFlg = 'off';
 var toolTipHiretsu = [];
 var toolTipTimer = false;
+var tip = $('.js-tooltip');
+var tipWrap = $('.js-tooltip-wrap');
+var tipBody = $('.js-tooltip-posi');
 
 //mouseover
 $( ".js-tooltip-hover" ).on({
@@ -335,7 +338,7 @@ $( ".js-tooltip-hover" ).on({
   }
 });
 //remove mouseover
-$('.js-tooltip').on({
+tip.on({
   'mouseenter': function(){
     toolTipFlg = 'on';
     toolTipOff(toolTipFlg);
@@ -356,30 +359,34 @@ function toolTipOff(toolTipFlg){
     var lastFlg = toolTipHiretsu[toolTipHiretsu.length-1];
     //console.log(lastFlg);
     if( lastFlg === 'off'){
-      $('.js-tooltip').hide(300);
+      tip.hide(300, function(){
+        $(this).removeClass('is-show');
+        tipBody.css({
+          top: 0,
+          left: 0
+        });
+      })
       toolTipHiretsu = [];
     }else{
       return false;
     }
-  }, 1000);
+  }, 500);
 }
 //show tooltip
 function toolTipOn(target){
-  var headerHeight = 40 + 40;
+  var headerHeight = 40;
   var tipPosi = target.offset();
   var topPosi = tipPosi.top - headerHeight;
   var leftPosi = tipPosi.left;
   var keyword = target.find('.js-tooltip-key').text();
-  $('.js-tooltip-box').text('').text(keyword);
-  $('.js-tooltip-posi').css({
-    top: topPosi,
+  tipWrap.text('').text(keyword);
+  tip.show();
+  var tipHeight = tipWrap.outerHeight(true);
+  tipBody.css({
+    top: topPosi - tipHeight - 7,
     left: leftPosi
   });
-  // $('.js-balloon').css({
-  //   top: tipPosi.top - headerHeight,
-  //   left: tipPosi.left + 4
-  // });
-  $('.js-tooltip').show(150);
+  tip.addClass('is-show');
 };
 /*========================================================================
   bookmark

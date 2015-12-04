@@ -165,12 +165,18 @@
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .md-tooltip{
+  @include opacity(0);
+  &.is-show{
+   @include opacity(1);
+   @include transition(all 0.3s ease-in-out);
+  }
   .st-body{
     z-index:1;
     @include posi-abs(auto,auto,auto,auto);
+    max-width:350px;
     .st-inner{
       position:relative;
-      .md-tooltip-box{
+      .md-tooltip-wrap{
         background-color:$cl-bg-tooltip;
         color:$cl-txt-rev;
         padding:7px 10px;
