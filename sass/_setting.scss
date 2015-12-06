@@ -136,6 +136,11 @@
   overflow:hidden;
   *zoom: 1;
 }
+@mixin clearfix-after {
+  content: " ";
+  display: table;
+  clear:both;
+}
 @mixin overflow-fix($max:300px){
   width:$max;
   white-space: nowrap;

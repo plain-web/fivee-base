@@ -1,0 +1,35 @@
+<dl class="cp-thumbnail">
+  <dt class="ef-w50">
+    <img class="ef-pdr7" src="../img/test-01.png">
+  </dt>
+  <dd class="ef-mgl50">
+    <div class="cp-thumbnail-title ef-fs16">
+      Fivee-base
+    </div>
+    <div class="cp-thumbnail-summary ef-mgb20">
+      about Fivee-base
+    </div>
+  </dd>
+  <dt class="ef-w50">
+    <img class="ef-pdr7" src="../img/test-01.png">
+  </dt>
+  <dd class="ef-mgl50">
+    <div class="cp-thumbnail-title ef-fs16">
+      Fivee-base
+    </div>
+    <div class="cp-thumbnail-summary ef-mgb20">
+      about Fivee-base
+    </div>
+  </dd>
+  <dt class="ef-w50">
+    <img class="ef-pdr7" src="../img/test-01.png">
+  </dt>
+  <dd class="ef-mgl50">
+    <div class="cp-thumbnail-title ef-fs16">
+      Fivee-base
+    </div>
+    <div class="cp-thumbnail-summary">
+      about Fivee-base
+    </div>
+  </dd>
+</dl>

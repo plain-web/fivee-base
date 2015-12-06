@@ -44,7 +44,7 @@ a{
   &.ef-is-nolink{
     text-decoration:none;
     color: $cl-txt-base;
-    cursor:default;
+    //cursor:default;
     &:hover{
       text-decoration:none;
       color: $cl-txt-base;
@@ -303,6 +303,27 @@ ul{
 dl,dt,dd{
   margin:0;
   padding:0;
+  line-height:1.4;
+}
+dl{
+  dt{font-weight:bold;}
+}
+dl.cp-thumbnail{
+  >dt{
+    float:left;
+    img{display:block;}
+  }
+  >dd::after{
+    @include clearfix-after
+  }
+  .cp-thumbnail-title{font-weight: bold;}
+}
+a{
+  >dl.cp-thumbnail{
+    .cp-thumbnail-summary{
+      color:$cl-txt-base;
+    }
+  }
 }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -1177,7 +1198,7 @@ label{
 // }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "panels"
+ * "panel"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .cp-panel{
