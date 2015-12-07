@@ -1226,8 +1226,9 @@ label{
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .cp-remarks{
+  display: table;
   .st-inner{
-    background:$cl-bg-remarks;
+    //background:$cl-bg-remarks;
     @include brd;
     @include border-radius(3px);
     padding:7px 10px;
@@ -1355,6 +1356,14 @@ label{
   .st-inner{
     .st-outer{
       @include brd-left(5px,solid,$cl-gray7);
+    }
+  }
+}
+.cp-remarks-theme{
+  @extend .cp-remarks;
+  .st-inner{
+    .st-outer{
+      @include brd-left(5px,solid,$cl-theme);
     }
   }
 }

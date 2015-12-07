@@ -16,7 +16,7 @@
     %link(href="../css/theme-default/unique-css.css" rel="stylesheet" type="text/css")
     /[if lt IE 9] <link href="../css/old-ie.css" rel="stylesheet">
   - v = 'javascript:void(0);'
-  %body.components-list
+  %body.components-remarks
     / header//////////////////////////////////////////////
     %header.page-header
       .st-body.ef-header-fix.js-pageTop-remove
@@ -133,7 +133,7 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   link
-                          %li.is-current
+                          %li
                             %a(href="../page-components/list.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
@@ -148,7 +148,7 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   panel
-                          %li
+                          %li.is-current
                             %a(href="../page-components/remarks.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
@@ -462,9 +462,9 @@
                     %ul.ef-float.ef-lh30
                       %li
                         %h1
-                          list
+                          remarks
                       %li.ef-mgl20
-                        リスト表示からコンテンツの横並びまで幅広くご利用いただけます。
+                        備考欄、補足説明などにご利用ください。
                 // breadcrumb//////////////////////////////////////////////
                 %section.cp-breadcrumb.ef-mgb20
                   .st-inner.ef-float
@@ -477,7 +477,7 @@
                           .ef-txt-center
                             %i.fa.fa-angle-right
                         %li
-                          list
+                          remarks
                     .ef-float-right.ef-w20p
                       %ul.ef-float3.ef-lh30
                         %li.ef-float-right
@@ -500,180 +500,135 @@
                             %ul.ef-float.ef-lh25
                               %li
                                 %h5
-                                  list
-                                  %span.ef-fs14
-                                    (float)
+                                  remarks
                           .example-summary.ef-fs12.ef-mgb30
-                            間隔を調整する事ができます。HTMLソースのクラス名
+                            幅を調整する事ができます。HTMLソースのクラス名
                             %span.ef-cl-red
-                              ef-float7
+                              ef-w300
                             の数値を変更してください。
                             %span.js-tooltip-hover
                               .md-tooltip-key.js-tooltip-key
-                                3/7/10/20/30
+                                0/3/7/10～600（10単位）
                               %a(href="#{v}")
                                 [数値]
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
-                            %ul.ef-float7
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
+                            .cp-remarks.ef-w300.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  white
+                            .cp-remarks-red.ef-w300.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  red
+                            .cp-remarks-orange.ef-w300.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  orange
+                            .cp-remarks-blue.ef-w300.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  blue
+                            .cp-remarks-green.ef-w300.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  green
+                            .cp-remarks-yellow.ef-w300.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  yellow
+                            .cp-remarks-brown.ef-w300.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  brown
+                            .cp-remarks-black.ef-w300.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  black
+                            .cp-remarks-gray.ef-w300.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  gray
+                            .cp-remarks-theme.ef-w300.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  theme
                           .example-btn
                             %ul.ef-float7
                               %li
-                                %a.cp-btn.js-html-show.js-example-num02-04-00-00(href="#{v}")
+                                %a.cp-btn.js-html-show.js-example-num02-07-00-00(href="#{v}")
                                   show html
-                          .example-box-html.js-example-tag-num02-04-00(style="display:none;")
+                          .example-box-html.js-example-tag-num02-07-00(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
                           %hr.is-dotted.ef-pdt60
                       // example01 //////////////////////////////////
                       %section#js-pageTop1.examle-wrap.ef-mgb20
                         .st-inner
-                          .example-title.ef-mgb30
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  list
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %ul
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-04-01-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-04-01(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example02 //////////////////////////////////
-                      %section#js-pageTop2.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb30
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  list
-                                  %span.ef-fs14
-                                    (disc)
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %ul.ef-list-disc
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-04-02-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-04-02(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example03 //////////////////////////////////
-                      %section#js-pageTop3.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb30
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  list
-                                  %span.ef-fs14
-                                    (decimal)
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %ul.ef-list-decimal
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
-                              %li
-                                Fivee-base
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-04-03-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-04-03(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example04 //////////////////////////////////
-                      %section#js-pageTop4.examle-wrap.ef-mgb20
-                        .st-inner
                           .example-title.ef-mgb3
                             %ul.ef-float.ef-lh25
                               %li
                                 %h5
-                                  list
+                                  remarks
                                   %span.ef-fs14
-                                    (hover)
+                                    (fix)
                           .example-summary.ef-fs12.ef-mgb30
-                            ナビゲーションなどホバー時に背景色をつける事ができます。
+                            幅を調整する事ができます。HTMLソースのクラス名
+                            %span.ef-cl-red
+                              ef-w100p
+                            の数値を変更してください。
+                            %span.js-tooltip-hover
+                              .md-tooltip-key.js-tooltip-key
+                                0/3/7/10～100（10単位）
+                              %a(href="#{v}")
+                                [数値]
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
-                            %ul.ef-list-hover-green
-                              %li
-                                %a(href="#")
-                                  Fivee-base
-                              %li
-                                %a(href="#")
-                                  Fivee-base
-                              %li
-                                %a(href="#")
-                                  Fivee-base
-                              %li
-                                %a(href="#")
-                                  Fivee-base
-                              %li
-                                %a(href="#")
-                                  Fivee-base
-                          .example-remarks.ef-mgb20
-                            %section.cp-remarks-blue.ef-w100p
+                            .cp-remarks.ef-w100p.ef-mgb10
                               .st-inner
                                 .st-outer.ef-lh20
-                                  背景色を変更できます。HTMLソースの
-                                  %span.ef-cl-red
-                                    ef-list-hover-green
-                                  を変更してください。 
-                                  %span.js-tooltip-hover
-                                    .md-tooltip-key.js-tooltip-key
-                                      white/red/orange/blue/green/yellow/brown/black/gray/gray(1～7)/theme
-                                    %a(href="#{v}")
-                                      [カラー]
+                                  white
+                            .cp-remarks-red.ef-w100p.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  red
+                            .cp-remarks-orange.ef-w100p.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  orange
+                            .cp-remarks-blue.ef-w100p.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  blue
+                            .cp-remarks-green.ef-w100p.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  green
+                            .cp-remarks-yellow.ef-w100p.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  yellow
+                            .cp-remarks-brown.ef-w100p.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  brown
+                            .cp-remarks-black.ef-w100p.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  black
+                            .cp-remarks-gray.ef-w100p.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  gray
+                            .cp-remarks-theme.ef-w100p.ef-mgb10
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  theme
                           .example-btn
                             %ul.ef-float7
                               %li
-                                %a.cp-btn.js-html-show.js-example-num02-04-04-00(href="#{v}")
+                                %a.cp-btn.js-html-show.js-example-num02-07-01-00(href="#{v}")
                                   show html
-                          .example-box-html.js-example-tag-num02-04-04(style="display:none;")
+                          .example-box-html.js-example-tag-num02-07-01(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
     / footer/////////////////////////////////////////////
     %footer.page-footer
@@ -736,27 +691,12 @@
             %ul.ef-list-hover-gray
               %li
                 %a(href="#js-pageTop0")
-                  list
-                  %span.ef-fs11
-                    (float)
+                  remarks
               %li
                 %a(href="#js-pageTop1")
-                  list
-              %li
-                %a(href="#js-pageTop2")
-                  link
+                  remarks
                   %span.ef-fs11
-                    (disc)
-              %li
-                %a(href="#js-pageTop3")
-                  link
-                  %span.ef-fs11
-                    (decimal)
-              %li
-                %a(href="#js-pageTop4")
-                  link
-                  %span.ef-fs11
-                    (hover)
+                    (fix)
       .st-body.js-template3
         .st-inner
           .md-popup-header.ef-mgb20

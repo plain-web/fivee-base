@@ -1,0 +1,70 @@
+<div class="cp-remarks ef-w300 ef-mgb10">
+  <div class="st-inner">
+    <div class="st-outer ef-lh20">
+      white
+    </div>
+  </div>
+</div>
+<div class="cp-remarks-red ef-w300 ef-mgb10">
+  <div class="st-inner">
+    <div class="st-outer ef-lh20">
+      red
+    </div>
+  </div>
+</div>
+<div class="cp-remarks-orange ef-w300 ef-mgb10">
+  <div class="st-inner">
+    <div class="st-outer ef-lh20">
+      orange
+    </div>
+  </div>
+</div>
+<div class="cp-remarks-blue ef-w300 ef-mgb10">
+  <div class="st-inner">
+    <div class="st-outer ef-lh20">
+      blue
+    </div>
+  </div>
+</div>
+<div class="cp-remarks-green ef-w300 ef-mgb10">
+  <div class="st-inner">
+    <div class="st-outer ef-lh20">
+      green
+    </div>
+  </div>
+</div>
+<div class="cp-remarks-yellow ef-w300 ef-mgb10">
+  <div class="st-inner">
+    <div class="st-outer ef-lh20">
+      yellow
+    </div>
+  </div>
+</div>
+<div class="cp-remarks-brown ef-w300 ef-mgb10">
+  <div class="st-inner">
+    <div class="st-outer ef-lh20">
+      brown
+    </div>
+  </div>
+</div>
+<div class="cp-remarks-black ef-w300 ef-mgb10">
+  <div class="st-inner">
+    <div class="st-outer ef-lh20">
+      black
+    </div>
+  </div>
+</div>
+<div class="cp-remarks-gray ef-w300 ef-mgb10">
+  <div class="st-inner">
+    <div class="st-outer ef-lh20">
+      gray
+    </div>
+  </div>
+</div>
+<div class="cp-remarks-theme ef-w300 ef-mgb10">
+  <div class="st-inner">
+    <div class="st-outer ef-lh20">
+      theme
+    </div>
+  </div>
+</div>

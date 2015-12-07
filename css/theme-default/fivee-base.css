@@ -401,15 +401,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 26px;
-}
-
-h2 {
   font-size: 24px;
 }
 
-h3 {
+h2 {
   font-size: 22px;
+}
+
+h3 {
+  font-size: 21px;
 }
 
 h4 {
@@ -3799,8 +3799,11 @@ label.cp-checkbox input[type="radio"] {
  * "remarks"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
-.cp-remarks .st-inner, .cp-remarks-red .st-inner, .cp-remarks-orange .st-inner, .cp-remarks-blue .st-inner, .cp-remarks-green .st-inner, .cp-remarks-yellow .st-inner, .cp-remarks-brown .st-inner, .cp-remarks-black .st-inner, .cp-remarks-gray .st-inner, .cp-remarks-gray1 .st-inner, .cp-remarks-gray2 .st-inner, .cp-remarks-gray3 .st-inner, .cp-remarks-gray4 .st-inner, .cp-remarks-gray5 .st-inner, .cp-remarks-gray6 .st-inner, .cp-remarks-gray7 .st-inner {
-  background: #fff;
+.cp-remarks, .cp-remarks-red, .cp-remarks-orange, .cp-remarks-blue, .cp-remarks-green, .cp-remarks-yellow, .cp-remarks-brown, .cp-remarks-black, .cp-remarks-gray, .cp-remarks-gray1, .cp-remarks-gray2, .cp-remarks-gray3, .cp-remarks-gray4, .cp-remarks-gray5, .cp-remarks-gray6, .cp-remarks-gray7, .cp-remarks-theme {
+  display: table;
+}
+
+.cp-remarks .st-inner, .cp-remarks-red .st-inner, .cp-remarks-orange .st-inner, .cp-remarks-blue .st-inner, .cp-remarks-green .st-inner, .cp-remarks-yellow .st-inner, .cp-remarks-brown .st-inner, .cp-remarks-black .st-inner, .cp-remarks-gray .st-inner, .cp-remarks-gray1 .st-inner, .cp-remarks-gray2 .st-inner, .cp-remarks-gray3 .st-inner, .cp-remarks-gray4 .st-inner, .cp-remarks-gray5 .st-inner, .cp-remarks-gray6 .st-inner, .cp-remarks-gray7 .st-inner, .cp-remarks-theme .st-inner {
   border-width: 1px;
   border-style: solid;
   border-color: #ccc;
@@ -3808,7 +3811,7 @@ label.cp-checkbox input[type="radio"] {
   padding: 7px 10px;
 }
 
-.cp-remarks .st-inner .st-outer, .cp-remarks-red .st-inner .st-outer, .cp-remarks-orange .st-inner .st-outer, .cp-remarks-blue .st-inner .st-outer, .cp-remarks-green .st-inner .st-outer, .cp-remarks-yellow .st-inner .st-outer, .cp-remarks-brown .st-inner .st-outer, .cp-remarks-black .st-inner .st-outer, .cp-remarks-gray .st-inner .st-outer, .cp-remarks-gray1 .st-inner .st-outer, .cp-remarks-gray2 .st-inner .st-outer, .cp-remarks-gray3 .st-inner .st-outer, .cp-remarks-gray4 .st-inner .st-outer, .cp-remarks-gray5 .st-inner .st-outer, .cp-remarks-gray6 .st-inner .st-outer, .cp-remarks-gray7 .st-inner .st-outer {
+.cp-remarks .st-inner .st-outer, .cp-remarks-red .st-inner .st-outer, .cp-remarks-orange .st-inner .st-outer, .cp-remarks-blue .st-inner .st-outer, .cp-remarks-green .st-inner .st-outer, .cp-remarks-yellow .st-inner .st-outer, .cp-remarks-brown .st-inner .st-outer, .cp-remarks-black .st-inner .st-outer, .cp-remarks-gray .st-inner .st-outer, .cp-remarks-gray1 .st-inner .st-outer, .cp-remarks-gray2 .st-inner .st-outer, .cp-remarks-gray3 .st-inner .st-outer, .cp-remarks-gray4 .st-inner .st-outer, .cp-remarks-gray5 .st-inner .st-outer, .cp-remarks-gray6 .st-inner .st-outer, .cp-remarks-gray7 .st-inner .st-outer, .cp-remarks-theme .st-inner .st-outer {
   border-left-width: 5px;
   border-left-style: solid;
   border-left-color: #fff;
@@ -3904,6 +3907,12 @@ label.cp-checkbox input[type="radio"] {
   border-left-width: 5px;
   border-left-style: solid;
   border-left-color: #eee;
+}
+
+.cp-remarks-theme .st-inner .st-outer {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #485169;
 }
 
 /*
