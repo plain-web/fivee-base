@@ -1426,6 +1426,10 @@ a i:hover {
   border-bottom-left-radius: 100%;
 }
 
+.cp-select {
+  padding: 0 5px;
+}
+
 .cp-select[size] {
   height: auto;
 }
@@ -1436,7 +1440,7 @@ label.cp-radio, label.cp-checkbox {
   margin: 0;
   padding: 0;
   display: table;
-  padding-left: 20px;
+  padding-left: 17px;
 }
 
 label.cp-radio input[type="checkbox"],
@@ -1449,7 +1453,7 @@ label.cp-checkbox input[type="radio"] {
   left: auto;
   height: 13px;
   margin-top: -7px;
-  margin-left: -20px;
+  margin-left: -17px;
   padding: 0;
 }
 
@@ -3753,15 +3757,24 @@ label.cp-checkbox input[type="radio"] {
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .cp-breadcrumb .st-inner {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.cp-breadcrumb-model0 .st-inner {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.cp-breadcrumb-model1 .st-inner {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #ccc;
   background: #eee;
   padding: 5px 10px;
-}
-
-.cp-breadcrumb .st-inner ul li {
-  line-height: 20px;
 }
 
 /*
@@ -4178,7 +4191,7 @@ label.cp-checkbox input[type="radio"] {
  ▼ step circle
 ============================================================== */
 .cp-toolbar .lo-inner {
-  padding: 5px 15px;
+  padding: 7px;
   border-radius: 3px;
 }
 

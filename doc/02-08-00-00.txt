@@ -1,0 +1,41 @@
+<div class="cp-breadcrumb">
+  <div class="st-inner ef-float">
+    <div class="ef-float-left">
+      <ul class="ef-float10 ef-lh24">
+        <li>
+          <a href="#">
+            Components
+          </a>
+        </li>
+        <li>
+          <div class="ef-txt-center">
+            <i class="fa fa-angle-right"></i>
+          </div>
+        </li>
+        <li>
+          <a href="#">
+            Fivee-base
+          </a>
+        </li>
+        <li>
+          <div class="ef-txt-center">
+            <i class="fa fa-angle-right"></i>
+          </div>
+        </li>
+        <li>
+          <a href="#">
+            Fivee-base
+          </a>
+        </li>
+        <li>
+          <div class="ef-txt-center">
+            <i class="fa fa-angle-right"></i>
+          </div>
+        </li>
+        <li>
+          Fivee-base
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

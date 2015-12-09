@@ -16,7 +16,7 @@
     %link(href="../css/theme-default/unique-css.css" rel="stylesheet" type="text/css")
     /[if lt IE 9] <link href="../css/old-ie.css" rel="stylesheet">
   - v = 'javascript:void(0);'
-  %body.components-remarks
+  %body.components-breadcrumb
     / header//////////////////////////////////////////////
     %header.page-header
       .st-body.ef-header-fix.js-pageTop-remove
@@ -148,12 +148,12 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   panel
-                          %li.is-current
+                          %li
                             %a(href="../page-components/remarks.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   remarks
-                          %li
+                          %li.is-current
                             %a(href="../page-components/breadcrumb.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
@@ -472,9 +472,9 @@
                     %ul.ef-float.ef-lh30
                       %li
                         %h1
-                          remarks
+                          breadcrumb
                       %li.ef-mgl20
-                        備考欄、補足説明などにご利用ください。
+                        パンくずについての説明です。
                 // breadcrumb//////////////////////////////////////////////
                 %section.cp-breadcrumb-model1.ef-mgb20
                   .st-inner.ef-float
@@ -487,7 +487,7 @@
                           .ef-txt-center
                             %i.fa.fa-angle-right
                         %li
-                          remarks
+                          breadcrumb
                     .ef-float-right.ef-w20p
                       %ul.ef-float3
                         %li.ef-float-right
@@ -506,69 +506,43 @@
                       // example00 //////////////////////////////////
                       %section#js-pageTop0.examle-wrap.ef-mgb20
                         .st-inner
-                          .example-title.ef-mgb3
+                          .example-title.ef-mgb30
                             %ul.ef-float.ef-lh25
                               %li
                                 %h5
-                                  remarks
-                          .example-summary.ef-fs12.ef-mgb30
-                            幅を調整する事ができます。HTMLソースのクラス名
-                            %span.ef-cl-red
-                              ef-w300
-                            の数値を変更してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                0/3/7/10～600（10単位）
-                              %a(href="#{v}")
-                                [数値]
+                                  breadcrumb
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
-                            .cp-remarks.ef-w300.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  white
-                            .cp-remarks-red.ef-w300.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  red
-                            .cp-remarks-orange.ef-w300.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  orange
-                            .cp-remarks-blue.ef-w300.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  blue
-                            .cp-remarks-green.ef-w300.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  green
-                            .cp-remarks-yellow.ef-w300.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  yellow
-                            .cp-remarks-brown.ef-w300.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  brown
-                            .cp-remarks-black.ef-w300.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  black
-                            .cp-remarks-gray.ef-w300.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  gray
-                            .cp-remarks-theme.ef-w300.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  theme
+                            .cp-breadcrumb
+                              .st-inner.ef-float
+                                .ef-float-left
+                                  %ul.ef-float10.ef-lh24
+                                    %li
+                                      %a(href="#")
+                                        Components
+                                    %li
+                                      .ef-txt-center
+                                        %i.fa.fa-angle-right
+                                    %li
+                                      %a(href="#")
+                                        Fivee-base
+                                    %li
+                                      .ef-txt-center
+                                        %i.fa.fa-angle-right
+                                    %li
+                                      %a(href="#")
+                                        Fivee-base
+                                    %li
+                                      .ef-txt-center
+                                        %i.fa.fa-angle-right
+                                    %li
+                                      Fivee-base
                           .example-btn
                             %ul.ef-float7
                               %li
-                                %a.cp-btn.js-html-show.js-example-num02-07-00-00(href="#{v}")
+                                %a.cp-btn.js-html-show.js-example-num02-08-00-00(href="#{v}")
                                   show html
-                          .example-box-html.js-example-tag-num02-07-00(style="display:none;")
+                          .example-box-html.js-example-tag-num02-08-00(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
                           %hr.is-dotted.ef-pdt60
                       // example01 //////////////////////////////////
@@ -578,67 +552,115 @@
                             %ul.ef-float.ef-lh25
                               %li
                                 %h5
-                                  remarks
+                                  breadclumb
                                   %span.ef-fs14
-                                    (fix)
+                                    (model0)
                           .example-summary.ef-fs12.ef-mgb30
-                            幅を調整する事ができます。HTMLソースのクラス名
+                            背景色を調整する事ができます。HTMLソースのクラス名
                             %span.ef-cl-red
-                              ef-w100p
-                            の数値を変更してください。
+                              st-inner
+                            の後に
+                            %span.ef-cl-red
+                              ef-bg-red
+                            を付与してください。
                             %span.js-tooltip-hover
                               .md-tooltip-key.js-tooltip-key
-                                0/3/7/10～100（10単位）
+                                white/red/orange/blue/green/yellow/brown/black/gray/gray(1～7)/theme
                               %a(href="#{v}")
-                                [数値]
+                                [カラー]
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
-                            .cp-remarks.ef-w100p.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  white
-                            .cp-remarks-red.ef-w100p.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  red
-                            .cp-remarks-orange.ef-w100p.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  orange
-                            .cp-remarks-blue.ef-w100p.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  blue
-                            .cp-remarks-green.ef-w100p.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  green
-                            .cp-remarks-yellow.ef-w100p.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  yellow
-                            .cp-remarks-brown.ef-w100p.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  brown
-                            .cp-remarks-black.ef-w100p.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  black
-                            .cp-remarks-gray.ef-w100p.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  gray
-                            .cp-remarks-theme.ef-w100p.ef-mgb10
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  theme
+                            .cp-breadcrumb-model0
+                              .st-inner.ef-float
+                                .ef-float-left.ef-w70p
+                                  %ul.ef-float10.ef-lh24
+                                    %li
+                                      %a(href="components.html")
+                                        Components
+                                    %li
+                                      .ef-txt-center
+                                        %i.fa.fa-angle-right
+                                    %li
+                                      breadcrumb
+                                .ef-float-right.ef-w30p
+                                  %ul.ef-float3
+                                    %li.ef-float-right
+                                      %a.cp-btn-mini.cp-btn-white.ef-w30(href="#{v}")
+                                        %i.fa.fa-home.ef-fs14
+                                    %li.ef-float-right
+                                      %a.cp-btn-mini.cp-btn-white.ef-w30(href="#{v}")
+                                        %i.fa.fa-link.ef-fs14
+                                    %li.ef-float-right
+                                      %a.cp-btn-mini.cp-btn-white.ef-w30(href="#{v}")
+                                        %i.fa.fa-star-o.ef-fs14
                           .example-btn
                             %ul.ef-float7
                               %li
-                                %a.cp-btn.js-html-show.js-example-num02-07-01-00(href="#{v}")
+                                %a.cp-btn.js-html-show.js-example-num02-08-01-00(href="#{v}")
                                   show html
-                          .example-box-html.js-example-tag-num02-07-01(style="display:none;")
+                          .example-box-html.js-example-tag-num02-08-01(style="display:none;")
+                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
+                          %hr.is-dotted.ef-pdt60
+                      // example02 //////////////////////////////////
+                      %section#js-pageTop2.examle-wrap.ef-mgb20
+                        .st-inner
+                          .example-title.ef-mgb30
+                            %ul.ef-float.ef-lh25
+                              %li
+                                %h5
+                                  breadclumb
+                                  %span.ef-fs14
+                                    (model1)
+                          .example-box.ef-mgb40
+                            // example code ///////////////////////////
+                            .cp-breadcrumb-model1
+                              .st-inner.ef-float
+                                .ef-float-left.ef-w70p
+                                  %ul.ef-float10.ef-lh24
+                                    %li
+                                      %a(href="components.html")
+                                        Components
+                                    %li
+                                      .ef-txt-center
+                                        %i.fa.fa-angle-right
+                                    %li
+                                      breadcrumb
+                                .ef-float-right.ef-w30p
+                                  %ul.ef-float3
+                                    %li.ef-float-right
+                                      %a.cp-btn-mini.cp-btn-white.ef-w30(href="#{v}")
+                                        %i.fa.fa-home.ef-fs14
+                                    %li.ef-float-right
+                                      %a.cp-btn-mini.cp-btn-white.ef-w30(href="#{v}")
+                                        %i.fa.fa-link.ef-fs14
+                                    %li.ef-float-right
+                                      %a.cp-btn-mini.cp-btn-white.ef-w30(href="#{v}")
+                                        %i.fa.fa-star-o.ef-fs14
+                          .example-remarks.ef-mgb20
+                            %section.cp-remarks-blue.ef-w100p
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  カラム落ちする場合はHTMLソースの
+                                  %span.ef-cl-red
+                                    ef-w70p / ef-w30p 
+                                  の数値を変更するか
+                                  %span.ef-cl-red
+                                    cp-breadcrumb-*
+                                  の後に最小幅
+                                  %span.ef-cl-red
+                                    ef-mw600
+                                  を設定してください
+                                  %span.js-tooltip-hover
+                                    .md-tooltip-key.js-tooltip-key
+                                      0/3/7/10～600(10単位)
+                                    %a(href="#{v}")
+                                      [数値]
+                          .example-btn
+                            %ul.ef-float7
+                              %li
+                                %a.cp-btn.js-html-show.js-example-num02-08-02-00(href="#{v}")
+                                  show html
+                          .example-box-html.js-example-tag-num02-08-02(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
     / footer/////////////////////////////////////////////
     %footer.page-footer
@@ -701,12 +723,17 @@
             %ul.ef-list-hover-gray
               %li
                 %a(href="#js-pageTop0")
-                  remarks
+                  breadclumb
               %li
                 %a(href="#js-pageTop1")
-                  remarks
+                  breadclumb
                   %span.ef-fs11
-                    (fix)
+                    (model0)
+              %li
+                %a(href="#js-pageTop2")
+                  breadclumb
+                  %span.ef-fs11
+                    (model1)
       .st-body.js-template3
         .st-inner
           .md-popup-header.ef-mgb20

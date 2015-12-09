@@ -1,0 +1,40 @@
+<div class="cp-breadcrumb-model0">
+  <div class="st-inner ef-float">
+    <div class="ef-float-left ef-w70p">
+      <ul class="ef-float10 ef-lh24">
+        <li>
+          <a href="components.html">
+            Components
+          </a>
+        </li>
+        <li>
+          <div class="ef-txt-center">
+            <i class="fa fa-angle-right"></i>
+          </div>
+        </li>
+        <li>
+          breadcrumb
+        </li>
+      </ul>
+    </div>
+    <div class="ef-float-right ef-w30p">
+      <ul class="ef-float3">
+        <li class="ef-float-right">
+          <a class="cp-btn-mini cp-btn-white ef-w30" href="javascript:void(0);">
+            <i class="fa fa-home ef-fs14"></i>
+          </a>
+        </li>
+        <li class="ef-float-right">
+          <a class="cp-btn-mini cp-btn-white ef-w30" href="javascript:void(0);">
+            <i class="fa fa-link ef-fs14"></i>
+          </a>
+        </li>
+        <li class="ef-float-right">
+          <a class="cp-btn-mini cp-btn-white ef-w30" href="javascript:void(0);">
+            <i class="fa fa-star-o ef-fs14"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
