@@ -1,6 +1,6 @@
-<div class="cp-breadcrumb-model1">
+﻿<div class="cp-breadcrumb-model1">
   <div class="st-inner ef-float">
-    <div class="ef-float-left ef-w70p">
+    <div class="ef-float-left ef-mxw80p">
       <ul class="ef-float10 ef-lh24">
         <li>
           <a href="components.html">
@@ -17,7 +17,7 @@
         </li>
       </ul>
     </div>
-    <div class="ef-float-right ef-w30p">
+    <div class="ef-float-right">
       <ul class="ef-float3">
         <li class="ef-float-right">
           <a class="cp-btn-mini cp-btn-white ef-w30" href="javascript:void(0);">

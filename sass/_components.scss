@@ -45,9 +45,11 @@ a{
     text-decoration:none;
     color: $cl-txt-base;
     //cursor:default;
+    i{color: $cl-txt-base;}
     &:hover{
       text-decoration:none;
       color: $cl-txt-base;
+      i{color: $cl-txt-base;}
     }
   }
 }
@@ -332,14 +334,15 @@ a{
  */
 hr{
   border: 0;
-  height: 1px;
+  height: 0;
   padding:0;
   margin:0;
-  background: $cl-brd-base;
+  @include brd-bottom(1px,solid,$cl-brd-base);
   &.is-dotted{
-    height:0;
-    background:none;
-    @include brd-bottom(1px,dotted,$cl-brd-base);
+    @include brd-bottom(1px,dotted,darken($cl-brd-base, 15%));
+  }
+  &.is-dashed{
+    @include brd-bottom(1px,dashed,darken($cl-brd-base, 15%));
   }
 }
 /*
@@ -761,10 +764,34 @@ label{
     @include brd(1px,solid,$cl-btn-darken);
     @include gradation($cl-btn-base, $cl-btn-base);
   }
-  &.cp-disabled{
+  &.ef-disabled{
     &:hover{
       background:$cl-btn-base;
       cursor: default;
+    }
+  }
+  &.ef-response{
+    background:none;
+    @include brd(1px,solid,transparent);
+    &:hover{
+      text-decoration:none;
+      color:$cl-txt-base;
+      i{color:$cl-txt-base;}
+      background:$cl-btn-lighten; // for oldie
+      @include brd(1px,solid,$cl-btn-darken);
+      @include gradation($cl-btn-lighten, $cl-btn-lighten);
+      //@include gradation-ie(#FFf2f2f2, #FFe1e1e1); // for oldie
+    }
+    &:active{
+      background:$cl-btn-base; // for oldie
+      @include brd(1px,solid,$cl-btn-darken);
+      @include gradation($cl-btn-base, $cl-btn-base);
+    }
+    &.ef-disabled{
+      &:hover{
+        background:$cl-btn-base;
+        cursor: default;
+      }
     }
   }
 }
@@ -1611,9 +1638,12 @@ label{
  ▼ step circle
 ============================================================== */
 .cp-toolbar{
-  .lo-inner{
-    padding:7px;
+  .st-inner{
+    padding:7px 10px;
     @include border-radius(3px);
   }
+}
+.cp-toolbar-model0{
+  @extend .cp-toolbar;
 }
 /*■■■■■■■■■■■■■■■■■■■■■■■■    "menu"   ■■■■■■■■■■■■■■■■■■■■■■■*/

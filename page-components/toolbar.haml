@@ -16,7 +16,7 @@
     %link(href="../css/theme-default/unique-css.css" rel="stylesheet" type="text/css")
     /[if lt IE 9] <link href="../css/old-ie.css" rel="stylesheet">
   - v = 'javascript:void(0);'
-  %body.components-form
+  %body.components-toolbar
     / header//////////////////////////////////////////////
     %header.page-header
       .st-body.ef-header-fix.js-pageTop-remove
@@ -205,7 +205,7 @@
                             %li.ef-float-right.js-nav-caret
                               %i.fa.fa-angle-up
                         %ul.ef-txt-indent1.js-nav-child-num1(style="display:none;")
-                          %li.is-current
+                          %li
                             %a(href="../page-components/form.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
@@ -245,7 +245,7 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   breadcrumb
-                          %li
+                          %li.is-current
                             %a(href="../page-components/toolbar.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
@@ -559,9 +559,9 @@
                     %ul.ef-float.ef-lh30
                       %li
                         %h1
-                          form
+                          toolbar
                       %li.ef-mgl20
-                        フォーム要素についての説明です。
+                        コンテンツの操作を行う為のツールバーです。
                 // breadcrumb//////////////////////////////////////////////
                 %section.cp-breadcrumb-model1.ef-mgb20
                   .st-inner.ef-float
@@ -574,7 +574,7 @@
                           .ef-txt-center
                             %i.fa.fa-angle-right
                         %li
-                          form
+                          toolbar
                     .ef-float-right
                       %ul.ef-float3
                         %li.ef-float-right
@@ -597,692 +597,124 @@
                             %ul.ef-float.ef-lh25
                               %li
                                 %h5
-                                  checkbox
+                                  toolbar
                           .example-summary.ef-fs12.ef-mgb30
-                            高さを調整する事ができます。HTMLソースのクラス名
+                            背景色を調整する事ができます。HTMLソースのクラス名
                             %span.ef-cl-red
-                              cp-checkbox
-                            の後に
-                            %span.ef-cl-red
-                              ef-lh30
-                            を付与してください。
+                              ef-bg-gray
+                            の色に該当する箇所を変更してください。
                             %span.js-tooltip-hover
                               .md-tooltip-key.js-tooltip-key
-                                10～40
+                                white/red/orange/blue/green/yellow/brown/black/gray/gray(1～7)/theme
                               %a(href="#{v}")
-                                [数値]
+                                [カラー]
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
-                            %label.cp-checkbox
-                              %input(type="checkbox")
-                              Fivee-base01
+                            .cp-toolbar
+                              .st-inner.ef-float.ef-bg-gray
+                                .ef-float-left
+                                  %ul.ef-float7
+                                    %li
+                                      %a.cp-btn-mini-white.ef-mw60(href="#{v}")
+                                        操作A
+                                    %li
+                                      %a.cp-btn-mini-white.ef-mw60(href="#{v}")
+                                        操作B
+                                    %li
+                                      %a.cp-btn-mini-white.ef-mw60(href="#{v}")
+                                        操作C
+                                    %li
+                                      %a.ef-lh24(href="#{v}")
+                                        text link
+                                    %li
+                                      %select.cp-select.ef-lh24
+                                        %option
+                                          select
+                                        %option
+                                          select
+                                        %option
+                                          select
+                                        %option
+                                          select
+                                        %option
+                                          select
+                                    %li
+                                      %label.cp-checkbox.ef-lh24(href="#{v}")
+                                        %input(type="checkbox")
+                                          checkbox
                           .example-btn
                             %ul.ef-float7
                               %li
-                                %a.cp-btn.js-html-show.js-example-num02-01-00-00(href="#{v}")
+                                %a.cp-btn.js-html-show.js-example-num02-09-00-00(href="#{v}")
                                   show html
-                          .example-box-html.js-example-tag-num02-01-00(style="display:none;")
+                          .example-box-html.js-example-tag-num02-09-00(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
                           %hr.is-dotted.ef-pdt60
                       // example01 //////////////////////////////////
                       %section#js-pageTop1.examle-wrap.ef-mgb20
                         .st-inner
-                          .example-title.ef-mgb3
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  checkbox
-                                  %span.ef-fs14
-                                    (multiple)
-                          .example-summary.ef-fs12.ef-mgb30
-                            高さを調整する事ができます。HTMLソースのクラス名
-                            %span.ef-cl-red
-                              cp-checkbox
-                            の後に
-                            %span.ef-cl-red
-                              ef-lh30
-                            を付与してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                10～40
-                              %a(href="#{v}")
-                                [数値]
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %ul
-                              %li
-                                %label.cp-checkbox
-                                  %input(type="checkbox" checked)
-                                  Fivee-base01
-                              %li
-                                %label.cp-checkbox
-                                  %input(type="checkbox")
-                                  Fivee-base02
-                              %li
-                                %label.cp-checkbox
-                                  %input(type="checkbox")
-                                  Fivee-base02
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-01-01-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-01-01(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example02 //////////////////////////////////
-                      %section#js-pageTop2.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb3
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  checkbox
-                                  %span.ef-fs14
-                                    (float)
-                          .example-summary.ef-fs12.ef-mgb30
-                            高さを調整する事ができます。HTMLソースのクラス名
-                            %span.ef-cl-red
-                              cp-checkbox
-                            の後に
-                            %span.ef-cl-red
-                              ef-lh30
-                            を付与してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                10～40
-                              %a(href="#{v}")
-                                [数値]
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %ul.ef-float20
-                              %li
-                                %label.cp-checkbox
-                                  %input(type="checkbox")
-                                  Fivee-base01
-                              %li
-                                %label.cp-checkbox
-                                  %input(type="checkbox")
-                                  Fivee-base02
-                              %li
-                                %label.cp-checkbox
-                                  %input(type="checkbox")
-                                  Fivee-base02
-                          .example-remarks.ef-mgb20
-                            %section.cp-remarks-blue.ef-w100p
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  横並びの間隔はHTMLソースの
-                                  %span.ef-cl-red
-                                    ef-float20
-                                  の数値を設定してください。
-                                  %span.js-tooltip-hover
-                                    .md-tooltip-key.js-tooltip-key
-                                      3/7/10/20/30
-                                    %a(href="#{v}")
-                                      [数値]
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-01-02-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-01-02(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example03 //////////////////////////////////
-                      %section#js-pageTop3.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb3
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  radio
-                                  %span.ef-fs14
-                                    (multiple)
-                          .example-summary.ef-fs12.ef-mgb30
-                            高さを調整する事ができます。HTMLソースのクラス名
-                            %span.ef-cl-red
-                              cp-radio
-                            の後に
-                            %span.ef-cl-red
-                              ef-lh30
-                            を付与してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                10～40
-                              %a(href="#{v}")
-                                [数値]
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %ul
-                              %li
-                                %label.cp-radio
-                                  %input(type="radio" name="test00" checked)
-                                  Fivee-base01
-                              %li
-                                %label.cp-radio
-                                  %input(type="radio" name="test00")
-                                  Fivee-base02
-                              %li
-                                %label.cp-radio
-                                  %input(type="radio" name="test00")
-                                  Fivee-base02
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-01-03-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-01-03(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example04 //////////////////////////////////
-                      %section#js-pageTop4.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb3
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  radio
-                                  %span.ef-fs14
-                                    (float)
-                          .example-summary.ef-fs12.ef-mgb30
-                            高さを調整する事ができます。HTMLソースのクラス名
-                            %span.ef-cl-red
-                              cp-radio
-                            の後に
-                            %span.ef-cl-red
-                              ef-lh30
-                            を付与してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                10～40
-                              %a(href="#{v}")
-                                [数値]
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %ul.ef-float20
-                              %li
-                                %label.cp-radio
-                                  %input(type="radio" name="test01")
-                                  Fivee-base01
-                              %li
-                                %label.cp-radio
-                                  %input(type="radio" name="test01")
-                                  Fivee-base02
-                              %li
-                                %label.cp-radio
-                                  %input(type="radio" name="test01")
-                                  Fivee-base02
-                          .example-remarks.ef-mgb20
-                            %section.cp-remarks-blue.ef-w100p
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  横並びの間隔はHTMLソースの
-                                  %span.ef-cl-red
-                                    ef-float20
-                                  の数値を設定してください。
-                                  %span.js-tooltip-hover
-                                    .md-tooltip-key.js-tooltip-key
-                                      3/7/10/20/30
-                                    %a(href="#{v}")
-                                      [数値]
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-01-04-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-01-04(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example05 //////////////////////////////////
-                      %section#js-pageTop5.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb3
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  select
-                          .example-summary.ef-fs12.ef-mgb30
-                            高さを調整する事ができます。HTMLソースのクラス名
-                            %span.ef-cl-red
-                              cp-select
-                            の後に
-                            %span.ef-cl-red
-                              ef-lh30
-                            を付与してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                10～40
-                              %a(href="#{v}")
-                                [数値]
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %select.cp-select
-                              %option
-                                keyword
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-01-05-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-01-05(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example06 //////////////////////////////////
-                      %section#js-pageTop6.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb3
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  select
-                                  %span.ef-fs14
-                                    (float)
-                          .example-summary.ef-fs12.ef-mgb30
-                            高さを調整する事ができます。HTMLソースの
-                            %span.ef-cl-red
-                              ef-lh30
-                            の数値を変更してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                10～40
-                              %a(href="#{v}")
-                                [数値]
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %ul.ef-float20
-                              %li
-                                .ef-lh30
-                                  title
-                              %li
-                                %select.cp-select.ef-lh30
-                                  %option
-                                    keyword
-                              %li
-                                %select.cp-select.ef-lh30.ef-w120(float="5" style="height:auto;")
-                                  %option(value="keyword-01")
-                                    keyword-01
-                                  %option(value="keyword-02")
-                                    keyword-02
-                                  %option(value="keyword-03")
-                                    keyword-03
-                                  %option(value="keyword-04")
-                                    keyword-04
-                                  %option(value="keyword-05")
-                                    keyword-05
-                          .example-remarks.ef-mgb20
-                            %section.cp-remarks-blue.ef-w100p
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  横並びの間隔はHTMLソースの
-                                  %span.ef-cl-red
-                                    ef-float20
-                                  の数値を変更してください。 
-                                  %span.js-tooltip-hover
-                                    .md-tooltip-key.js-tooltip-key
-                                      3/7/10/20/30
-                                    %a(href="#{v}")
-                                      [数値]
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-01-06-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-01-06(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example07 //////////////////////////////////
-                      %section#js-pageTop7.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb3
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  input
-                          .example-summary.ef-fs12.ef-mgb30
-                            高さを調整する事ができます。HTMLソースのクラス名
-                            %span.ef-cl-red
-                              cp-input
-                            の後に
-                            %span.ef-cl-red
-                              ef-lh40
-                            を付与してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                10～40
-                              %a(href="#{v}")
-                                [数値]
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %input.cp-input(type="text")
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-01-07-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-01-07(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example08 //////////////////////////////////
-                      %section#js-pageTop8.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb3
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  input
-                                  %span.ef-fs14
-                                    (float)
-                          .example-summary.ef-fs12.ef-mgb30
-                            高さを調整する事ができます。HTMLソースの
-                            %span.ef-cl-red
-                              ef-lh30
-                            の数値を変更してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                10～40
-                              %a(href="#{v}")
-                                [数値]
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %ul.ef-float20
-                              %li
-                                .ef-lh30
-                                  title
-                              %li
-                                %input.cp-input.ef-lh30.ef-w100(type="text")
-                              %li
-                                %input.cp-input.ef-lh30.ef-w120(type="text")
-                          .example-remarks.ef-mgb20
-                            %section.cp-remarks-blue.ef-w100p
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  横並びの間隔はHTMLソースの
-                                  %span.ef-cl-red
-                                    ef-float20
-                                  の数値を変更してください。 
-                                  %span.js-tooltip-hover
-                                    .md-tooltip-key.js-tooltip-key
-                                      3/7/10/20/30
-                                    %a(href="#{v}")
-                                      [数値]
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-01-08-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-01-08(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example09 //////////////////////////////////
-                      %section#js-pageTop9.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb3
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  input
-                                  %span.ef-fs14
-                                    (radius)
-                          .example-summary.ef-fs12.ef-mgb30
-                            高さを調整する事ができます。HTMLソースのクラス名
-                            %span.ef-cl-red
-                              cp-input
-                            の後に
-                            %span.ef-cl-red
-                              ef-lh30
-                            を付与してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                10～40
-                              %a(href="#{v}")
-                                [数値]
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %input.cp-input.ef-rd10(type="text")
-                          .example-remarks.ef-mgb20
-                            %section.cp-remarks-blue.ef-w100p
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  角丸を調整する事ができます。HTMLソースの
-                                  %span.ef-cl-red
-                                    ef-rd10
-                                  の数値を変更してください。 
-                                  %span.js-tooltip-hover
-                                    .md-tooltip-key.js-tooltip-key
-                                      0～10
-                                    %a(href="#{v}")
-                                      [数値]
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-01-09-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-01-09(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example10 //////////////////////////////////
-                      %section#js-pageTop10.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb3
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  input
-                                  %span.ef-fs14
-                                    (bgcolor)
-                          .example-summary.ef-fs12.ef-mgb30
-                            高さを調整する事ができます。HTMLソースのクラス名
-                            %span.ef-cl-red
-                              cp-input
-                            の後に
-                            %span.ef-cl-red
-                              ef-lh30
-                            を付与してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                10～40
-                              %a(href="#{v}")
-                                [数値]
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %ul.ef-float20
-                              %li
-                                %input.cp-input.ef-w100.ef-bg-red(type="text")
-                              %li
-                                %input.cp-input.ef-w120.ef-bg-green(type="text")
-                          .example-remarks.ef-mgb20
-                            %section.cp-remarks-blue.ef-w100p
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  背景色を調整する事でalertやsuccessといった効果を演出できます。HTMLソースの
-                                  %span.ef-cl-red
-                                    ef-bg-red / ef-bg-green
-                                  を変更してください。 
-                                  %span.js-tooltip-hover
-                                    .md-tooltip-key.js-tooltip-key
-                                      white/red/orange/blue/green/yellow/brown/black/gray/gray(1～7)/theme
-                                    %a(href="#{v}")
-                                      [カラー]
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-01-10-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-01-10(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example11 //////////////////////////////////
-                      %section#js-pageTop11.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb3
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  input
-                                  %span.ef-fs14
-                                    (insert icon)
-                          .example-summary.ef-fs12.ef-mgb30
-                            高さを調整する事ができます。HTMLソースのクラス名
-                            %span.ef-cl-red
-                              cp-input
-                            の後に
-                            %span.ef-cl-red
-                              ef-lh30
-                            を付与してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                10～40
-                              %a(href="#{v}")
-                                [数値]
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %ul
-                              %li.ef-mgb10
-                                %ul.cp-input-icon-left.ef-w120
-                                  %li
-                                    %i.fa.fa-user
-                                  %li
-                                    %input.cp-input.ef-w100p(type="text")
-                              %li
-                                %ul.cp-input-icon-right.ef-w120
-                                  %li
-                                    %i.fa.fa-user
-                                  %li
-                                    %input.cp-input.ef-w100p(type="text")
-                          .example-remarks.ef-mgb20
-                            %section.cp-remarks-blue.ef-w100p
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  アイコンはサイズ16×16であれば画像でも配置できます。HTMLソースの
-                                  %span.ef-cl-red
-                                    i
-                                  タグをimgタグに変更してください。 
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-01-11-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-01-11(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example12 //////////////////////////////////
-                      %section#js-pageTop12.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb3
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  input
-                                  %span.ef-fs14
-                                    (add button)
-                          .example-summary.ef-fs12.ef-mgb30
-                            高さを調整する事ができます。HTMLソースのクラス名
-                            %span.ef-cl-red
-                              cp-input
-                            の後に
-                            %span.ef-cl-red
-                              ef-lh30
-                            を付与してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                10～40
-                              %a(href="#{v}")
-                                [数値]
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %ul
-                              %li.ef-mgb10
-                                .cp-input-btn-left
-                                  %a.cp-btn(href="#{v}")
-                                    %i.fa.fa-calendar
-                                  %input.cp-input.ef-w120(type="text")
-                              %li
-                                .cp-input-btn-right
-                                  %input.cp-input.ef-w220(type="text")
-                                  %a.cp-btn-blue(href="#{v}")
-                                    search
-                          .example-remarks.ef-mgb20
-                            %section.cp-remarks-blue.ef-w100p
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  ボタンの色を変更できます。
-                                  %span.ef-cl-red
-                                    cp-btn-blue
-                                  の色に該当する箇所を変更してください。  
-                                  %span.js-tooltip-hover
-                                    .md-tooltip-key.js-tooltip-key
-                                      white/red/orange/blue/green/yellow/brown/black/theme
-                                    %a(href="#{v}")
-                                      [カラー]
-                                  %br
-                                  フォームの横幅を調整する事ができます。
-                                  %span.ef-cl-red
-                                    ef-w220
-                                  の数値を変更してください。
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-01-12-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-01-12(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example13 //////////////////////////////////
-                      %section#js-pageTop13.examle-wrap.ef-mgb20
-                        .st-inner
                           .example-title.ef-mgb30
                             %ul.ef-float.ef-lh25
                               %li
                                 %h5
-                                  input
+                                  link
                                   %span.ef-fs14
-                                    (file upload)
-                          / .example-summary.ef-mgb30
-                          /   高さを調整する事ができます。HTMLソースの
-                          /   %span.ef-cl-red
-                          /     ef-lh30
-                          /   の数値を変更してください。
+                                    (model0)
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
-                            %input(type="file")
+                            .cp-toolbar-model0
+                              .st-inner.ef-float.ef-brd1.ef-bg-gray
+                                .ef-float-left.ef-mxw80p
+                                  %ul.ef-float0
+                                    %li
+                                      .ef-lh24
+                                        絞込：
+                                    %li
+                                      %select.cp-select.ef-lh24
+                                        %option
+                                          select
+                                        %option
+                                          select
+                                        %option
+                                          select
+                                        %option
+                                          select
+                                        %option
+                                          select
+                                    %li.ef-mgl7
+                                      %a.cp-btn-mini-blue.ef-mw40(href="#{v}")
+                                        検索
+                                .ef-float-right
+                                  %ul.ef-float7
+                                    %li.ef-float-right
+                                      %a.cp-btn-mini.ef-response.ef-mw30(href="#{v}")
+                                        %i.fa.fa-bars
+                          .example-remarks.ef-mgb20
+                            %section.cp-remarks-blue.ef-w100p
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  カラム落ちする場合はHTMLソースの
+                                  %span.ef-cl-red
+                                    ef-mxw80p
+                                  の数値を変更するか
+                                  %span.ef-cl-red
+                                    cp-toolbar
+                                  の後に最小幅
+                                  %span.ef-cl-red
+                                    ef-mw600
+                                  を設定してください
+                                  %span.js-tooltip-hover
+                                    .md-tooltip-key.js-tooltip-key
+                                      0/3/7/10～600(10単位)
+                                    %a(href="#{v}")
+                                      [数値]
                           .example-btn
                             %ul.ef-float7
                               %li
-                                %a.cp-btn.js-html-show.js-example-num02-01-13-00(href="#{v}")
+                                %a.cp-btn.js-html-show.js-example-num02-09-01-00(href="#{v}")
                                   show html
-                          .example-box-html.js-example-tag-num02-01-13(style="display:none;")
+                          .example-box-html.js-example-tag-num02-09-01(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
-                      // example14 //////////////////////////////////
-                      %section#js-pageTop14.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb3
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  textarea
-                          .example-summary.ef-fs12.ef-mgb30
-                            高さを調整する事ができます。HTMLソースの
-                            %span.ef-cl-red
-                              ef-mh150
-                            の数値を変更してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                0/3/7/10～600(10単位)
-                              %a(href="#{v}")
-                                [数値]
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %textarea.cp-textarea.ef-mh150.ef-w100p
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num02-01-14-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num02-01-14(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.is-dotted.ef-pdt60
     / footer/////////////////////////////////////////////
     %footer.page-footer
       .st-body.ef-footer-fix
@@ -1344,71 +776,12 @@
             %ul.ef-list-hover-gray
               %li
                 %a(href="#js-pageTop0")
-                  checkbox
+                  toolbar
               %li
                 %a(href="#js-pageTop1")
-                  checkbox
+                  toolbar
                   %span.ef-fs11
-                    (multiple)
-              %li
-                %a(href="#js-pageTop2")
-                  checkbox
-                  %span.ef-fs11
-                    (float)
-              %li
-                %a(href="#js-pageTop3")
-                  radio
-                  %span.ef-fs11
-                    (multiple)
-              %li
-                %a(href="#js-pageTop4")
-                  radio
-                  %span.ef-fs11
-                    (float)
-              %li
-                %a(href="#js-pageTop5")
-                  select
-              %li
-                %a(href="#js-pageTop6")
-                  select
-                  %span.ef-fs11
-                    (float)
-              %li
-                %a(href="#js-pageTop7")
-                  input
-              %li
-                %a(href="#js-pageTop8")
-                  input
-                  %span.ef-fs11
-                    (float)
-              %li
-                %a(href="#js-pageTop9")
-                  input
-                  %span.ef-fs11
-                    (radius)
-              %li
-                %a(href="#js-pageTop10")
-                  input
-                  %span.ef-fs11
-                    (bgcolor)
-              %li
-                %a(href="#js-pageTop11")
-                  input
-                  %span.ef-fs11
-                    (insert icon)
-              %li
-                %a(href="#js-pageTop12")
-                  input
-                  %span.ef-fs11
-                    (add button)
-              %li
-                %a(href="#js-pageTop13")
-                  input
-                  %span.ef-fs11
-                    (file upload)
-              %li
-                %a(href="#js-pageTop14")
-                  textarea
+                    (modal0)
       .st-body.js-template3
         .st-inner
           .md-popup-header.ef-mgb20

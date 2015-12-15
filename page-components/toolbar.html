@@ -13,7 +13,7 @@
   <link href="../css/theme-default/unique-css.css" rel="stylesheet" type="text/css">
   <!--[if lt IE 9]> <link href="../css/old-ie.css" rel="stylesheet"> <![endif]-->
 </head>
-<body class="components-panel">
+<body class="components-toolbar">
   <!-- header////////////////////////////////////////////// -->
   <header class="page-header">
     <div class="st-body ef-header-fix js-pageTop-remove">
@@ -375,7 +375,7 @@
                             </ul>
                           </a>
                         </li>
-                        <li class="is-current">
+                        <li>
                           <a href="../page-components/panel.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
@@ -402,7 +402,7 @@
                             </ul>
                           </a>
                         </li>
-                        <li>
+                        <li class="is-current">
                           <a href="../page-components/toolbar.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
@@ -963,11 +963,11 @@
                   <ul class="ef-float ef-lh30">
                     <li>
                       <h1>
-                        panel
+                        toolbar
                       </h1>
                     </li>
                     <li class="ef-mgl20">
-                      コンテンツを囲むパネルです。
+                      コンテンツの操作を行う為のツールバーです。
                     </li>
                   </ul>
                 </div>
@@ -988,7 +988,7 @@
                         </div>
                       </li>
                       <li>
-                        panel
+                        toolbar
                       </li>
                     </ul>
                   </div>
@@ -1024,125 +1024,93 @@
                           <ul class="ef-float ef-lh25">
                             <li>
                               <h5>
-                                panel
+                                toolbar
                               </h5>
                             </li>
                           </ul>
                         </div>
                         <div class="example-summary ef-fs12 ef-mgb30">
-                          幅を調整する事ができます。HTMLソースのクラス名
+                          背景色を調整する事ができます。HTMLソースのクラス名
                           <span class="ef-cl-red">
-                            ef-w300
+                            ef-bg-gray
                           </span>
-                          の数値を変更してください。
+                          の色に該当する箇所を変更してください。
                           <span class="js-tooltip-hover">
                             <div class="md-tooltip-key js-tooltip-key">
-                              0/3/7/10～600（10単位）
+                              white/red/orange/blue/green/yellow/brown/black/gray/gray(1～7)/theme
                             </div>
                             <a href="javascript:void(0);">
-                              [数値]
+                              [カラー]
                             </a>
                           </span>
                         </div>
                         <div class="example-box ef-mgb40">
                           <!-- / example code /////////////////////////// -->
-                          <div class="cp-panel ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-white">
-                                white
+                          <div class="cp-toolbar">
+                            <div class="st-inner ef-float ef-bg-gray">
+                              <div class="ef-float-left">
+                                <ul class="ef-float7">
+                                  <li>
+                                    <a class="cp-btn-mini-white ef-mw60" href="javascript:void(0);">
+                                      操作A
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a class="cp-btn-mini-white ef-mw60" href="javascript:void(0);">
+                                      操作B
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a class="cp-btn-mini-white ef-mw60" href="javascript:void(0);">
+                                      操作C
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a class="ef-lh24" href="javascript:void(0);">
+                                      text link
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <select class="cp-select ef-lh24">
+                                      <option>
+                                        select
+                                      </option>
+                                      <option>
+                                        select
+                                      </option>
+                                      <option>
+                                        select
+                                      </option>
+                                      <option>
+                                        select
+                                      </option>
+                                      <option>
+                                        select
+                                      </option>
+                                    </select>
+                                  </li>
+                                  <li>
+                                    <label class="cp-checkbox ef-lh24" href="javascript:void(0);">
+                                      <input type="checkbox">
+                                        checkbox
+                                      </input>
+                                    </label>
+                                  </li>
+                                </ul>
                               </div>
                             </div>
                           </div>
-                          <div class="cp-panel ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-red">
-                                red
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-orange">
-                                orange
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-blue">
-                                blue
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-green">
-                                green
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-yellow">
-                                yellow
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-brown">
-                                brown
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-gray">
-                                gray
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel ef-w300">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-theme">
-                                <div class="ef-cl-white">
-                                  theme
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="example-remarks ef-mgb20">
-                          <section class="cp-remarks-blue ef-w100p">
-                            <div class="st-inner">
-                              <div class="st-outer ef-lh20">
-                                背景色を調整する事ができます。HTMLソースの
-                                <span class="ef-cl-red">
-                                  ef-bg-*
-                                </span>
-                                を変更してください。
-                                <span class="js-tooltip-hover">
-                                  <div class="md-tooltip-key js-tooltip-key">
-                                    white/red/orange/blue/green/yellow/brown/black/gray/gray(1～7)/theme
-                                  </div>
-                                  <a href="javascript:void(0);">
-                                    [カラー]
-                                  </a>
-                                </span>
-                              </div>
-                            </div>
-                          </section>
                         </div>
                         <div class="example-btn">
                           <ul class="ef-float7">
                             <li>
-                              <a class="cp-btn js-html-show js-example-num02-06-00-00" href="javascript:void(0);">
+                              <a class="cp-btn js-html-show js-example-num02-09-00-00" href="javascript:void(0);">
                                 show html
                               </a>
                             </li>
                           </ul>
                         </div>
-                        <div class="example-box-html js-example-tag-num02-06-00" style="display:none;">
+                        <div class="example-box-html js-example-tag-num02-09-00" style="display:none;">
                           <textarea class="cp-textarea ef-w100p ef-h300 ef-mgt10"></textarea>
                         </div>
                         <hr class="is-dotted ef-pdt60">
@@ -1151,97 +1119,63 @@
                     <!-- / example01 ////////////////////////////////// -->
                     <section class="examle-wrap ef-mgb20" id="js-pageTop1">
                       <div class="st-inner">
-                        <div class="example-title ef-mgb3">
+                        <div class="example-title ef-mgb30">
                           <ul class="ef-float ef-lh25">
                             <li>
                               <h5>
-                                panel
+                                link
                                 <span class="ef-fs14">
-                                  (fix)
+                                  (model0)
                                 </span>
                               </h5>
                             </li>
                           </ul>
                         </div>
-                        <div class="example-summary ef-fs12 ef-mgb30">
-                          幅を調整する事ができます。HTMLソースのクラス名
-                          <span class="ef-cl-red">
-                            ef-w100p
-                          </span>
-                          の数値を変更してください。
-                          <span class="js-tooltip-hover">
-                            <div class="md-tooltip-key js-tooltip-key">
-                              0/3/7/10～100（10単位）
-                            </div>
-                            <a href="javascript:void(0);">
-                              [数値]
-                            </a>
-                          </span>
-                        </div>
                         <div class="example-box ef-mgb40">
                           <!-- / example code /////////////////////////// -->
-                          <div class="cp-panel ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-white">
-                                white
+                          <div class="cp-toolbar-model0">
+                            <div class="st-inner ef-float ef-brd1 ef-bg-gray">
+                              <div class="ef-float-left ef-mxw80p">
+                                <ul class="ef-float0">
+                                  <li>
+                                    <div class="ef-lh24">
+                                      絞込：
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <select class="cp-select ef-lh24">
+                                      <option>
+                                        select
+                                      </option>
+                                      <option>
+                                        select
+                                      </option>
+                                      <option>
+                                        select
+                                      </option>
+                                      <option>
+                                        select
+                                      </option>
+                                      <option>
+                                        select
+                                      </option>
+                                    </select>
+                                  </li>
+                                  <li class="ef-mgl7">
+                                    <a class="cp-btn-mini-blue ef-mw40" href="javascript:void(0);">
+                                      検索
+                                    </a>
+                                  </li>
+                                </ul>
                               </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-red">
-                                red
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-orange">
-                                orange
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-blue">
-                                blue
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-green">
-                                green
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-yellow">
-                                yellow
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-brown">
-                                brown
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-gray">
-                                gray
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel ef-w100p">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-theme">
-                                <div class="ef-cl-white">
-                                  theme
-                                </div>
+                              <div class="ef-float-right">
+                                <ul class="ef-float7">
+                                  <li class="ef-float-right">
+                                    <a class="cp-btn-mini ef-response ef-mw30" href="javascript:void(0);">
+                                      <i class="fa fa-bars"></i>
+                                    </a>
+                                  </li>
+                                </ul>
                               </div>
                             </div>
                           </div>
@@ -1250,17 +1184,25 @@
                           <section class="cp-remarks-blue ef-w100p">
                             <div class="st-inner">
                               <div class="st-outer ef-lh20">
-                                背景色を調整する事ができます。HTMLソースの
+                                カラム落ちする場合はHTMLソースの
                                 <span class="ef-cl-red">
-                                  ef-bg-*
+                                  ef-mxw80p
                                 </span>
-                                を変更してください。
+                                の数値を変更するか
+                                <span class="ef-cl-red">
+                                  cp-toolbar
+                                </span>
+                                の後に最小幅
+                                <span class="ef-cl-red">
+                                  ef-mw600
+                                </span>
+                                を設定してください
                                 <span class="js-tooltip-hover">
                                   <div class="md-tooltip-key js-tooltip-key">
-                                    white/red/orange/blue/green/yellow/brown/black/gray/gray(1～7)/theme
+                                    0/3/7/10～600(10単位)
                                   </div>
                                   <a href="javascript:void(0);">
-                                    [カラー]
+                                    [数値]
                                   </a>
                                 </span>
                               </div>
@@ -1270,281 +1212,13 @@
                         <div class="example-btn">
                           <ul class="ef-float7">
                             <li>
-                              <a class="cp-btn js-html-show js-example-num02-06-01-00" href="javascript:void(0);">
+                              <a class="cp-btn js-html-show js-example-num02-09-01-00" href="javascript:void(0);">
                                 show html
                               </a>
                             </li>
                           </ul>
                         </div>
-                        <div class="example-box-html js-example-tag-num02-06-01" style="display:none;">
-                          <textarea class="cp-textarea ef-w100p ef-h300 ef-mgt10"></textarea>
-                        </div>
-                        <hr class="is-dotted ef-pdt60">
-                      </div>
-                    </section>
-                    <!-- / example02 ////////////////////////////////// -->
-                    <section class="examle-wrap ef-mgb20" id="js-pageTop2">
-                      <div class="st-inner">
-                        <div class="example-title ef-mgb3">
-                          <ul class="ef-float ef-lh25">
-                            <li>
-                              <h5>
-                                panel
-                                <span class="ef-fs14">
-                                  (mini)
-                                </span>
-                              </h5>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="example-summary ef-fs12 ef-mgb30">
-                          幅を調整する事ができます。HTMLソースのクラス名
-                          <span class="ef-cl-red">
-                            ef-w300
-                          </span>
-                          の数値を変更してください。
-                          <span class="js-tooltip-hover">
-                            <div class="md-tooltip-key js-tooltip-key">
-                              0/3/7/10～600（10単位）
-                            </div>
-                            <a href="javascript:void(0);">
-                              [数値]
-                            </a>
-                          </span>
-                        </div>
-                        <div class="example-box ef-mgb40">
-                          <!-- / example code /////////////////////////// -->
-                          <div class="cp-panel-mini ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-white">
-                                white
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-red">
-                                red
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-orange">
-                                orange
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-blue">
-                                blue
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-green">
-                                green
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-yellow">
-                                yellow
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-brown">
-                                brown
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w300 ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-gray">
-                                gray
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w300">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-theme">
-                                <div class="ef-cl-white">
-                                  theme
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="example-remarks ef-mgb20">
-                          <section class="cp-remarks-blue ef-w100p">
-                            <div class="st-inner">
-                              <div class="st-outer ef-lh20">
-                                背景色を調整する事ができます。HTMLソースの
-                                <span class="ef-cl-red">
-                                  ef-bg-*
-                                </span>
-                                を変更してください。
-                                <span class="js-tooltip-hover">
-                                  <div class="md-tooltip-key js-tooltip-key">
-                                    white/red/orange/blue/green/yellow/brown/black/gray/gray(1～7)/theme
-                                  </div>
-                                  <a href="javascript:void(0);">
-                                    [カラー]
-                                  </a>
-                                </span>
-                              </div>
-                            </div>
-                          </section>
-                        </div>
-                        <div class="example-btn">
-                          <ul class="ef-float7">
-                            <li>
-                              <a class="cp-btn js-html-show js-example-num02-06-02-00" href="javascript:void(0);">
-                                show html
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="example-box-html js-example-tag-num02-06-02" style="display:none;">
-                          <textarea class="cp-textarea ef-w100p ef-h300 ef-mgt10"></textarea>
-                        </div>
-                        <hr class="is-dotted ef-pdt60">
-                      </div>
-                    </section>
-                    <!-- / example03 ////////////////////////////////// -->
-                    <section class="examle-wrap ef-mgb20" id="js-pageTop3">
-                      <div class="st-inner">
-                        <div class="example-title ef-mgb3">
-                          <ul class="ef-float ef-lh25">
-                            <li>
-                              <h5>
-                                panel
-                                <span class="ef-fs14">
-                                  (fix-mini)
-                                </span>
-                              </h5>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="example-summary ef-fs12 ef-mgb30">
-                          幅を調整する事ができます。HTMLソースのクラス名
-                          <span class="ef-cl-red">
-                            ef-w100p
-                          </span>
-                          の数値を変更してください。
-                          <span class="js-tooltip-hover">
-                            <div class="md-tooltip-key js-tooltip-key">
-                              0/3/7/10～100（10単位）
-                            </div>
-                            <a href="javascript:void(0);">
-                              [数値]
-                            </a>
-                          </span>
-                        </div>
-                        <div class="example-box ef-mgb40">
-                          <!-- / example code /////////////////////////// -->
-                          <div class="cp-panel-mini ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-white">
-                                white
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-red">
-                                red
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-orange">
-                                orange
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-blue">
-                                blue
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-green">
-                                green
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-yellow">
-                                yellow
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-brown">
-                                brown
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w100p ef-mgb10">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-gray">
-                                gray
-                              </div>
-                            </div>
-                          </div>
-                          <div class="cp-panel-mini ef-w100p">
-                            <div class="st-body">
-                              <div class="st-inner ef-bg-theme">
-                                <div class="ef-cl-white">
-                                  theme
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="example-remarks ef-mgb20">
-                          <section class="cp-remarks-blue ef-w100p">
-                            <div class="st-inner">
-                              <div class="st-outer ef-lh20">
-                                背景色を調整する事ができます。HTMLソースの
-                                <span class="ef-cl-red">
-                                  ef-bg-*
-                                </span>
-                                を変更してください。
-                                <span class="js-tooltip-hover">
-                                  <div class="md-tooltip-key js-tooltip-key">
-                                    white/red/orange/blue/green/yellow/brown/black/gray/gray(1～7)/theme
-                                  </div>
-                                  <a href="javascript:void(0);">
-                                    [カラー]
-                                  </a>
-                                </span>
-                              </div>
-                            </div>
-                          </section>
-                        </div>
-                        <div class="example-btn">
-                          <ul class="ef-float7">
-                            <li>
-                              <a class="cp-btn js-html-show js-example-num02-06-03-00" href="javascript:void(0);">
-                                show html
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="example-box-html js-example-tag-num02-06-03" style="display:none;">
+                        <div class="example-box-html js-example-tag-num02-09-01" style="display:none;">
                           <textarea class="cp-textarea ef-w100p ef-h300 ef-mgt10"></textarea>
                         </div>
                       </div>
@@ -1656,30 +1330,14 @@
           <ul class="ef-list-hover-gray">
             <li>
               <a href="#js-pageTop0">
-                panel
+                toolbar
               </a>
             </li>
             <li>
               <a href="#js-pageTop1">
-                panel
+                toolbar
                 <span class="ef-fs11">
-                  (fix)
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#js-pageTop2">
-                panel
-                <span class="ef-fs11">
-                  (mini)
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#js-pageTop3">
-                panel
-                <span class="ef-fs11">
-                  (mini-fix)
+                  (modal0)
                 </span>
               </a>
             </li>

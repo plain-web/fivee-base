@@ -1,4 +1,4 @@
-<ul>
+﻿<ul>
   <li>
     <label class="cp-radio">
       <input checked name="test00" type="radio">

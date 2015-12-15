@@ -5,46 +5,46 @@ $(function (){
 /*========================================================================
 	placeholder
 ======================================================================== */
-var keys;
-var inputKeys;
-var placeholder = {
-  keys: function(self){
-    keys = self.parents('.js-ph-box').children('.js-ph');
-  },
-  inputKeys: function(self){
-    inputKeys = self.val();
-    keys = self.parents('.js-ph-box').children('.js-ph');
-  }
-}
+// var keys;
+// var inputKeys;
+// var placeholder = {
+//   keys: function(self){
+//     keys = self.parents('.js-ph-box').children('.js-ph');
+//   },
+//   inputKeys: function(self){
+//     inputKeys = self.val();
+//     keys = self.parents('.js-ph-box').children('.js-ph');
+//   }
+// }
 
-$('.js-ph input').on({
-  'focus': function(){
-  var self = $(this);
-  placeholder.keys(self);
-  keys.hide();
-  },
-  'blur': function(){
-    var self = $(this);
-    placeholder.inputKeys(self);
-    placeholder.keys(self);
-    if(!inputKeys){
-      keys.show();
-    }else{
-      keys.hide();
-    }
-  }
-});
+// $('.js-ph input').on({
+//   'focus': function(){
+//   var self = $(this);
+//   placeholder.keys(self);
+//   keys.hide();
+//   },
+//   'blur': function(){
+//     var self = $(this);
+//     placeholder.inputKeys(self);
+//     placeholder.keys(self);
+//     if(!inputKeys){
+//       keys.show();
+//     }else{
+//       keys.hide();
+//     }
+//   }
+// });
 
-$('.js-ph-box input').each( function(){
-  var self = $(this);
-  placeholder.inputKeys(self);
-  placeholder.keys(self);
-  if(!inputKeys){
-    keys.show();
-  }else{
-    keys.hide();
-  }
-});
+// $('.js-ph-box input').each( function(){
+//   var self = $(this);
+//   placeholder.inputKeys(self);
+//   placeholder.keys(self);
+//   if(!inputKeys){
+//     keys.show();
+//   }else{
+//     keys.hide();
+//   }
+// });
 /*========================================================================
   scrolltop arrow
 ======================================================================== */
@@ -143,7 +143,6 @@ function thisClassGet(clickThis, returnClass){
     return value.indexOf(returnClass) >= 0;
   });
   targetClass = '.' + thisClass;
-  //console.log(targetClass);
   return targetClass;
 }
 
@@ -351,13 +350,11 @@ tip.on({
 //hide tooltip
 function toolTipOff(toolTipFlg){
   toolTipHiretsu.push(toolTipFlg);
-  //console.log(toolTipHiretsu);
   if( toolTipTimer !== false ) {
     clearTimeout(toolTipTimer);
   }
   toolTipTimer = setTimeout( function(){
     var lastFlg = toolTipHiretsu[toolTipHiretsu.length-1];
-    //console.log(lastFlg);
     if( lastFlg === 'off'){
       tip.hide(300, function(){
         $(this).removeClass('is-show');
@@ -411,10 +408,17 @@ $('.js-bookmark-open').on('click', function(){
 /*========================================================================
   popup
 ======================================================================== */
+var popupFlgCheck = $('body');
+var popupFlgCount = ['off'];
+var popupFlg, lastFlg;
+
 $('.js-popup-open').on('click', function(){
-  var thisSelecter = $(this);
-  returnClass = 'js-template';
-  popupHandler.popupPosi(thisSelecter, returnClass);
+  lastFlg = popupFlgCount[popupFlgCount.length-1];
+  if(lastFlg === 'off'){
+    var thisSelecter = $(this);
+    returnClass = 'js-template';
+    popupHandler.popupPosi(thisSelecter, returnClass);
+  }
 });
 var popupHandler = {
   popupPosi: function(thisSelecter, returnClass){
@@ -449,18 +453,68 @@ var popupHandler = {
       right: rightPosi,
       left: 'auto'
     });
-    //show popup
-    $('.js-popup').show(300,
-      function(){
-        $('main').addClass('js-popup-close');
-      });
-
-    //click close popup
-    $('body').on('click', '.js-popup-close:not(.js-popup)', function(){
-      $('.js-popup').hide(300);
-      $(this).removeClass('js-popup-close');
-    });
+    popupShowHide();
   }
+}
+/*========================================================================
+  popup inset
+======================================================================== */
+$('.js-popup-inset-open').on('click', function(){
+  lastFlg = popupFlgCount[popupFlgCount.length-1];
+  if(lastFlg === 'off'){
+    var thisSelecter = $(this);
+    returnClass = 'js-template';
+    popupInsetHandler.popupPosi(thisSelecter, returnClass);
+  }
+});
+var popupInsetHandler = {
+  popupPosi: function(thisSelecter, returnClass){
+    var popupPosi = thisSelecter.offset();
+    var topPosi = popupPosi.top;
+        topPosi = topPosi + thisSelecter.outerHeight(true);
+    //this
+    clickThis = thisSelecter;
+    //return class
+    returnClass = returnClass;
+    //target class
+    targetClass = thisClassGet(clickThis, returnClass);
+
+    popupInsetHandler.popupShow(topPosi, targetClass);
+  },
+  popupShow: function(topPosi, targetClass){
+    //show contents
+    $('.js-popup > .st-body').removeClass('is-current');
+    $('.js-popup ' + targetClass).addClass('is-current');
+
+    //position
+    $('.js-popup ' + targetClass).css({
+      top:'',
+      left:'',
+      right:''
+    }).css({
+      top: topPosi,
+      bottom: 'auto',
+      right: 10,
+      left: 10
+    });
+    popupShowHide();
+  }
+}
+function popupShowHide(){
+  //show popup
+  $('.js-popup').show(100, function() {
+    popupFlg = 'popupOpen';
+    popupFlgCount.push(popupFlg);
+  });
+  //hide popup
+  $('body').on('click', function(){
+    lastFlg = popupFlgCount[popupFlgCount.length-1];
+    if(lastFlg === 'popupOpen'){
+      $('.js-popup').hide(100);
+      popupFlgCount = ['off'];
+      $(this).off();
+    }
+  });
 }
 /*========================================================================
   modal 
@@ -536,23 +590,27 @@ $('.js-loader-off').on('click', function(){
 /*========================================================================
   collapse
 ======================================================================== */
-$('.js-collapse-switcher').on('click', function(){
-  //get id
-  var id = '.' + $(this).attr('id');
-  $(id).slideToggle();
-
+$('.js-collapse').on('click', function(){
+  //this
+  clickThis = $(this);
+  //return class
+  returnClass = 'js-collapse-';
+  //target class
+  targetClass = thisClassGet(clickThis, returnClass);
+  targetClass = targetClass.replace("js-collapse-", "js-collapse-num");
+  $(targetClass).slideToggle();
   //icon
-  var point = $(this).children();
-  var option = point.attr('class');
+  // var point = $(targetClass).children();
+  // var option = point.attr('class');
 
-  if( option === 'fa fa-caret-down' ){
-    point.removeClass().addClass('fa fa-caret-up')
-  }
-  else if( option === 'fa fa-caret-up' ){
-    point.removeClass().addClass('fa fa-caret-down')
-  }else{
-    return false;
-  }
+  // if( option === 'fa fa-caret-down' ){
+  //   point.removeClass().addClass('fa fa-caret-up')
+  // }
+  // else if( option === 'fa fa-caret-up' ){
+  //   point.removeClass().addClass('fa fa-caret-down')
+  // }else{
+  //   return false;
+  // }
 });
 /*========================================================================
   tab
@@ -638,7 +696,6 @@ $('.js-check input').on('change', function(){
       checkedHandler.trHightLight(targetClass)
     }
   }
-  console.log(hasclass)
 });
 
 //event handler
@@ -647,6 +704,8 @@ var checkedHandler = {
     $('input'+ targetClass).parents('tr').removeClass('is-highlight');
     $('input'+ targetClass + ':checked').parents('tr').addClass('is-highlight');
   }
+
+  
 }
 /*========================================================================
   view html
@@ -670,7 +729,6 @@ $('.js-html-show').on('click', function(){
   //check last array
   var lastDrawClassValue = drawClassFlg[drawClassFlg.length-1];
   
-      console.log(drawClass)
   $.ajax({
     url:fileUrl,
     dataType : 'text',
@@ -698,6 +756,54 @@ $('.js-html-show').on('click', function(){
       }
     }
   });
+});
+/*========================================================================
+  mediaquery aside
+======================================================================== */
+var asideFlg = 0;
+$('.js-aside-open').on('click', function(){
+  asideFlg++;
+  if(asideFlg === 1){
+    $('.js-aside').addClass('transition').delay(500).addClass('is-open');
+    //click body
+    $('main:not(.js-aside)').on('click', function(){
+      $('.js-aside').removeClass('is-open').delay(1000).queue(function() {
+        $(this).removeClass('transition').dequeue();
+      });
+      asideFlg = 0;
+      $(this).off();
+    })
+  }
+  if(asideFlg === 2){
+    $('.js-aside').removeClass('is-open').delay(1000).queue(function() {
+      $(this).removeClass('transition').dequeue();
+    });
+    asideFlg = 0;
+  }
+});
+/*========================================================================
+  mediaquery slide nav
+======================================================================== */
+var slideNavFlg = 0;
+$('.js-slide-nav-open').on('click', function(){
+  slideNavFlg++;
+  if(slideNavFlg === 1){
+    $('.js-slide-nav').addClass('transition').delay(500).addClass('is-open');
+    //click body
+    $('main:not(.js-slide-nav)').on('click', function(){
+      $('.js-slide-nav').removeClass('is-open').delay(1000).queue(function() {
+        $(this).removeClass('transition').dequeue();
+      });
+      slideNavFlg = 0;
+      $(this).off();
+    })
+  }
+  if(slideNavFlg === 2){
+    $('.js-slide-nav').removeClass('is-open').delay(1000).queue(function() {
+      $(this).removeClass('transition').dequeue();
+    });
+    slideNavFlg = 0;
+  }
 });
 ////////////////////////////////////////////////////////////
 });

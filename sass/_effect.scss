@@ -1,4 +1,4 @@
-@import "structure";
+@import "module";
 /*
  * effect.scss
  * include:
@@ -258,9 +258,6 @@
 .ef-w580{width:580px;}
 .ef-w590{width:590px;}
 .ef-w600{width:600px;}
-// .ef-w700{width:700px;}
-// .ef-w800{width:800px;}
-// .ef-w900{width:900px;}
 /* =============================================================
  ▼ min-width (%)
 ============================================================== */
@@ -343,9 +340,88 @@
 .ef-mw580{@include min-width(580px);}
 .ef-mw590{@include min-width(590px);}
 .ef-mw600{@include min-width(600px);}
-// .ef-mw700{@include min-width(700px);}
-// .ef-mw800{@include min-width(800px);}
-// .ef-mw900{@include min-width(900px);}
+/* =============================================================
+ ▼ max-width (%)
+============================================================== */
+.ef-mxw0p{@include max-width(0);}
+.ef-mxw3p{@include max-width(3%);}
+.ef-mxw7p{@include max-width(7%);}
+.ef-mxw10p{@include max-width(10%);}
+.ef-mxw20p{@include max-width(20%);}
+.ef-mxw30p{@include max-width(30%);}
+.ef-mxw40p{@include max-width(40%);}
+.ef-mxw50p{@include max-width(50%);}
+.ef-mxw60p{@include max-width(60%);}
+.ef-mxw70p{@include max-width(70%);}
+.ef-mxw80p{@include max-width(80%);}
+.ef-mxw90p{@include max-width(90%);}
+.ef-mxw100p{@include max-width(100%);}
+/* =============================================================
+ ▼ max-width
+============================================================== */
+.ef-mxw0{@include max-width(0);}
+.ef-mxw3{@include max-width(3px);}
+.ef-mxw7{@include max-width(7px);}
+.ef-mxw10{@include max-width(10px);}
+.ef-mxw20{@include max-width(20px);}
+.ef-mxw30{@include max-width(30px);}
+.ef-mxw40{@include max-width(40px);}
+.ef-mxw50{@include max-width(50px);}
+.ef-mxw60{@include max-width(60px);}
+.ef-mxw70{@include max-width(70px);}
+.ef-mxw80{@include max-width(80px);}
+.ef-mxw90{@include max-width(90px);}
+.ef-mxw100{@include max-width(100px);}
+.ef-mxw110{@include max-width(110px);}
+.ef-mxw120{@include max-width(120px);}
+.ef-mxw130{@include max-width(130px);}
+.ef-mxw140{@include max-width(140px);}
+.ef-mxw150{@include max-width(150px);}
+.ef-mxw160{@include max-width(160px);}
+.ef-mxw170{@include max-width(170px);}
+.ef-mxw180{@include max-width(180px);}
+.ef-mxw190{@include max-width(190px);}
+.ef-mxw200{@include max-width(200px);}
+.ef-mxw210{@include max-width(210px);}
+.ef-mxw220{@include max-width(220px);}
+.ef-mxw230{@include max-width(230px);}
+.ef-mxw240{@include max-width(240px);}
+.ef-mxw250{@include max-width(250px);}
+.ef-mxw260{@include max-width(260px);}
+.ef-mxw270{@include max-width(270px);}
+.ef-mxw280{@include max-width(280px);}
+.ef-mxw290{@include max-width(290px);}
+.ef-mxw300{@include max-width(300px);}
+.ef-mxw310{@include max-width(310px);}
+.ef-mxw320{@include max-width(320px);}
+.ef-mxw330{@include max-width(330px);}
+.ef-mxw340{@include max-width(340px);}
+.ef-mxw350{@include max-width(350px);}
+.ef-mxw360{@include max-width(360px);}
+.ef-mxw370{@include max-width(370px);}
+.ef-mxw380{@include max-width(380px);}
+.ef-mxw390{@include max-width(390px);}
+.ef-mxw400{@include max-width(400px);}
+.ef-mxw410{@include max-width(410px);}
+.ef-mxw420{@include max-width(420px);}
+.ef-mxw430{@include max-width(430px);}
+.ef-mxw440{@include max-width(440px);}
+.ef-mxw450{@include max-width(450px);}
+.ef-mxw460{@include max-width(460px);}
+.ef-mxw470{@include max-width(470px);}
+.ef-mxw480{@include max-width(480px);}
+.ef-mxw490{@include max-width(490px);}
+.ef-mxw500{@include max-width(500px);}
+.ef-mxw510{@include max-width(510px);}
+.ef-mxw520{@include max-width(520px);}
+.ef-mxw530{@include max-width(530px);}
+.ef-mxw540{@include max-width(540px);}
+.ef-mxw550{@include max-width(550px);}
+.ef-mxw560{@include max-width(560px);}
+.ef-mxw570{@include max-width(570px);}
+.ef-mxw580{@include max-width(580px);}
+.ef-mxw590{@include max-width(590px);}
+.ef-mxw600{@include max-width(600px);}
 /* =============================================================
  ▼ height (px)
 ============================================================== */
@@ -412,9 +488,6 @@
 .ef-h580{height:580px;}
 .ef-h590{height:590px;}
 .ef-h600{height:600px;}
-// .ef-h700{height:700px;}
-// .ef-h800{height:800px;}
-// .ef-h900{height:900px;}
 /* =============================================================
  ▼ min-height
 ============================================================== */
@@ -481,9 +554,72 @@
 .ef-mh580{@include min-height(580px);}
 .ef-mh590{@include min-height(590px);}
 .ef-mh600{@include min-height(600px);}
-// .ef-mh700{@include min-height(700px);}
-// .ef-mh800{@include min-height(800px);}
-// .ef-mh900{@include min-height(900px);}
+/* =============================================================
+ ▼ max-height
+============================================================== */
+.ef-mxh0{@include max-height(0);}
+.ef-mxh3{@include max-height(3px);}
+.ef-mxh7{@include max-height(7px);}
+.ef-mxh10{@include max-height(10px);}
+.ef-mxh20{@include max-height(20px);}
+.ef-mxh30{@include max-height(30px);}
+.ef-mxh40{@include max-height(40px);}
+.ef-mxh50{@include max-height(50px);}
+.ef-mxh60{@include max-height(60px);}
+.ef-mxh70{@include max-height(70px);}
+.ef-mxh80{@include max-height(80px);}
+.ef-mxh90{@include max-height(90px);}
+.ef-mxh100{@include max-height(100px);}
+.ef-mxh110{@include max-height(110px);}
+.ef-mxh120{@include max-height(120px);}
+.ef-mxh130{@include max-height(130px);}
+.ef-mxh140{@include max-height(140px);}
+.ef-mxh150{@include max-height(150px);}
+.ef-mxh160{@include max-height(160px);}
+.ef-mxh170{@include max-height(170px);}
+.ef-mxh180{@include max-height(180px);}
+.ef-mxh190{@include max-height(190px);}
+.ef-mxh200{@include max-height(200px);}
+.ef-mxh210{@include max-height(210px);}
+.ef-mxh220{@include max-height(220px);}
+.ef-mxh230{@include max-height(230px);}
+.ef-mxh240{@include max-height(240px);}
+.ef-mxh250{@include max-height(250px);}
+.ef-mxh260{@include max-height(260px);}
+.ef-mxh270{@include max-height(270px);}
+.ef-mxh280{@include max-height(280px);}
+.ef-mxh290{@include max-height(290px);}
+.ef-mxh300{@include max-height(300px);}
+.ef-mxh310{@include max-height(310px);}
+.ef-mxh320{@include max-height(320px);}
+.ef-mxh330{@include max-height(330px);}
+.ef-mxh340{@include max-height(340px);}
+.ef-mxh350{@include max-height(350px);}
+.ef-mxh360{@include max-height(360px);}
+.ef-mxh370{@include max-height(370px);}
+.ef-mxh380{@include max-height(380px);}
+.ef-mxh390{@include max-height(390px);}
+.ef-mxh400{@include max-height(400px);}
+.ef-mxh410{@include max-height(410px);}
+.ef-mxh420{@include max-height(420px);}
+.ef-mxh430{@include max-height(430px);}
+.ef-mxh440{@include max-height(440px);}
+.ef-mxh450{@include max-height(450px);}
+.ef-mxh460{@include max-height(460px);}
+.ef-mxh470{@include max-height(470px);}
+.ef-mxh480{@include max-height(480px);}
+.ef-mxh490{@include max-height(490px);}
+.ef-mxh500{@include max-height(500px);}
+.ef-mxh510{@include max-height(510px);}
+.ef-mxh520{@include max-height(520px);}
+.ef-mxh530{@include max-height(530px);}
+.ef-mxh540{@include max-height(540px);}
+.ef-mxh550{@include max-height(550px);}
+.ef-mxh560{@include max-height(560px);}
+.ef-mxh570{@include max-height(570px);}
+.ef-mxh580{@include max-height(580px);}
+.ef-mxh590{@include max-height(590px);}
+.ef-mxh600{@include max-height(600px);}
 /* =============================================================
  ▼ ellipsis
 ============================================================== */
@@ -941,6 +1077,192 @@
 .ef-mgl-290{margin-left:-290px;}
 .ef-mgl-300{margin-left:-300px;}
 /* =============================================================
+ ▼ border
+============================================================== */
+//default
+.ef-brd1{@include brd(1px, solid, $cl-brd-base);}
+.ef-brd2{@include brd(2px, solid, $cl-brd-base);}
+.ef-brd3{@include brd(3px, solid, $cl-brd-base);}
+.ef-brd1-top{@include brd-top(1px, solid, $cl-brd-base);}
+.ef-brd2-top{@include brd-top(2px, solid, $cl-brd-base);}
+.ef-brd3-top{@include brd-top(3px, solid, $cl-brd-base);}
+.ef-brd1-right{@include brd-right(1px, solid, $cl-brd-base);}
+.ef-brd2-right{@include brd-right(2px, solid, $cl-brd-base);}
+.ef-brd3-right{@include brd-right(3px, solid, $cl-brd-base);}
+.ef-brd1-bottom{@include brd-bottom(1px, solid, $cl-brd-base);}
+.ef-brd2-bottom{@include brd-bottom(2px, solid, $cl-brd-base);}
+.ef-brd3-bottom{@include brd-bottom(3px, solid, $cl-brd-base);}
+.ef-brd1-left{@include brd-left(1px, solid, $cl-brd-base);}
+.ef-brd2-left{@include brd-left(2px, solid, $cl-brd-base);}
+.ef-brd3-left{@include brd-left(3px, solid, $cl-brd-base);}
+//white
+.ef-brd1-white{@include brd(1px, solid, $cl-white);}
+.ef-brd2-white{@include brd(2px, solid, $cl-white);}
+.ef-brd3-white{@include brd(3px, solid, $cl-white);}
+.ef-brd1-top-white{@include brd-top(1px, solid, $cl-white);}
+.ef-brd2-top-white{@include brd-top(2px, solid, $cl-white);}
+.ef-brd3-top-white{@include brd-top(3px, solid, $cl-white);}
+.ef-brd1-right-white{@include brd-right(1px, solid, $cl-white);}
+.ef-brd2-right-white{@include brd-right(2px, solid, $cl-white);}
+.ef-brd3-right-white{@include brd-right(3px, solid, $cl-white);}
+.ef-brd1-bottom-white{@include brd-bottom(1px, solid, $cl-white);}
+.ef-brd2-bottom-white{@include brd-bottom(2px, solid, $cl-white);}
+.ef-brd3-bottom-white{@include brd-bottom(3px, solid, $cl-white);}
+.ef-brd1-left-white{@include brd-left(1px, solid, $cl-white);}
+.ef-brd2-left-white{@include brd-left(2px, solid, $cl-white);}
+.ef-brd3-left-white{@include brd-left(3px, solid, $cl-white);}
+//red
+.ef-brd1-red{@include brd(1px, solid, darken($cl-bg-red,7%));}
+.ef-brd2-red{@include brd(2px, solid, darken($cl-bg-red,7%));}
+.ef-brd3-red{@include brd(3px, solid, darken($cl-bg-red,7%));}
+.ef-brd1-top-red{@include brd-top(1px, solid, darken($cl-bg-red,7%));}
+.ef-brd2-top-red{@include brd-top(2px, solid, darken($cl-bg-red,7%));}
+.ef-brd3-top-red{@include brd-top(3px, solid, darken($cl-bg-red,7%));}
+.ef-brd1-right-red{@include brd-right(1px, solid, darken($cl-bg-red,7%));}
+.ef-brd2-right-red{@include brd-right(2px, solid, darken($cl-bg-red,7%));}
+.ef-brd3-right-red{@include brd-right(3px, solid, darken($cl-bg-red,7%));}
+.ef-brd1-bottom-red{@include brd-bottom(1px, solid, darken($cl-bg-red,7%));}
+.ef-brd2-bottom-red{@include brd-bottom(2px, solid, darken($cl-bg-red,7%));}
+.ef-brd3-bottom-red{@include brd-bottom(3px, solid, darken($cl-bg-red,7%));}
+.ef-brd1-left-red{@include brd-left(1px, solid, darken($cl-bg-red,7%));}
+.ef-brd2-left-red{@include brd-left(2px, solid, darken($cl-bg-red,7%));}
+.ef-brd3-left-red{@include brd-left(3px, solid, darken($cl-bg-red,7%));}
+//orange
+.ef-brd1-orange{@include brd(1px, solid, darken($cl-bg-orange,7%));}
+.ef-brd2-orange{@include brd(2px, solid, darken($cl-bg-orange,7%));}
+.ef-brd3-orange{@include brd(3px, solid, darken($cl-bg-orange,7%));}
+.ef-brd1-top-orange{@include brd-top(1px, solid, darken($cl-bg-orange,7%));}
+.ef-brd2-top-orange{@include brd-top(2px, solid, darken($cl-bg-orange,7%));}
+.ef-brd3-top-orange{@include brd-top(3px, solid, darken($cl-bg-orange,7%));}
+.ef-brd1-right-orange{@include brd-right(1px, solid, darken($cl-bg-orange,7%));}
+.ef-brd2-right-orange{@include brd-right(2px, solid, darken($cl-bg-orange,7%));}
+.ef-brd3-right-orange{@include brd-right(3px, solid, darken($cl-bg-orange,7%));}
+.ef-brd1-bottom-orange{@include brd-bottom(1px, solid, darken($cl-bg-orange,7%));}
+.ef-brd2-bottom-orange{@include brd-bottom(2px, solid, darken($cl-bg-orange,7%));}
+.ef-brd3-bottom-orange{@include brd-bottom(3px, solid, darken($cl-bg-orange,7%));}
+.ef-brd1-left-orange{@include brd-left(1px, solid, darken($cl-bg-orange,7%));}
+.ef-brd2-left-orange{@include brd-left(2px, solid, darken($cl-bg-orange,7%));}
+.ef-brd3-left-orange{@include brd-left(3px, solid, darken($cl-bg-orange,7%));}
+//blue
+.ef-brd1-blue{@include brd(1px, solid, darken($cl-bg-blue,7%));}
+.ef-brd2-blue{@include brd(2px, solid, darken($cl-bg-blue,7%));}
+.ef-brd3-blue{@include brd(3px, solid, darken($cl-bg-blue,7%));}
+.ef-brd1-top-blue{@include brd-top(1px, solid, darken($cl-bg-blue,7%));}
+.ef-brd2-top-blue{@include brd-top(2px, solid, darken($cl-bg-blue,7%));}
+.ef-brd3-top-blue{@include brd-top(3px, solid, darken($cl-bg-blue,7%));}
+.ef-brd1-right-blue{@include brd-right(1px, solid, darken($cl-bg-blue,7%));}
+.ef-brd2-right-blue{@include brd-right(2px, solid, darken($cl-bg-blue,7%));}
+.ef-brd3-right-blue{@include brd-right(3px, solid, darken($cl-bg-blue,7%));}
+.ef-brd1-bottom-blue{@include brd-bottom(1px, solid, darken($cl-bg-blue,7%));}
+.ef-brd2-bottom-blue{@include brd-bottom(2px, solid, darken($cl-bg-blue,7%));}
+.ef-brd3-bottom-blue{@include brd-bottom(3px, solid, darken($cl-bg-blue,7%));}
+.ef-brd1-left-blue{@include brd-left(1px, solid, darken($cl-bg-blue,7%));}
+.ef-brd2-left-blue{@include brd-left(2px, solid, darken($cl-bg-blue,7%));}
+.ef-brd3-left-blue{@include brd-left(3px, solid, darken($cl-bg-blue,7%));}
+//green
+.ef-brd1-green{@include brd(1px, solid, darken($cl-bg-green,7%));}
+.ef-brd2-green{@include brd(2px, solid, darken($cl-bg-green,7%));}
+.ef-brd3-green{@include brd(3px, solid, darken($cl-bg-green,7%));}
+.ef-brd1-top-green{@include brd-top(1px, solid, darken($cl-bg-green,7%));}
+.ef-brd2-top-green{@include brd-top(2px, solid, darken($cl-bg-green,7%));}
+.ef-brd3-top-green{@include brd-top(3px, solid, darken($cl-bg-green,7%));}
+.ef-brd1-right-green{@include brd-right(1px, solid, darken($cl-bg-green,7%));}
+.ef-brd2-right-green{@include brd-right(2px, solid, darken($cl-bg-green,7%));}
+.ef-brd3-right-green{@include brd-right(3px, solid, darken($cl-bg-green,7%));}
+.ef-brd1-bottom-green{@include brd-bottom(1px, solid, darken($cl-bg-green,7%));}
+.ef-brd2-bottom-green{@include brd-bottom(2px, solid, darken($cl-bg-green,7%));}
+.ef-brd3-bottom-green{@include brd-bottom(3px, solid, darken($cl-bg-green,7%));}
+.ef-brd1-left-green{@include brd-left(1px, solid, darken($cl-bg-green,7%));}
+.ef-brd2-left-green{@include brd-left(2px, solid, darken($cl-bg-green,7%));}
+.ef-brd3-left-green{@include brd-left(3px, solid, darken($cl-bg-green,7%));}
+//yellow
+.ef-brd1-yellow{@include brd(1px, solid, darken($cl-bg-yellow,7%));}
+.ef-brd2-yellow{@include brd(2px, solid, darken($cl-bg-yellow,7%));}
+.ef-brd3-yellow{@include brd(3px, solid, darken($cl-bg-yellow,7%));}
+.ef-brd1-top-yellow{@include brd-top(1px, solid, darken($cl-bg-yellow,7%));}
+.ef-brd2-top-yellow{@include brd-top(2px, solid, darken($cl-bg-yellow,7%));}
+.ef-brd3-top-yellow{@include brd-top(3px, solid, darken($cl-bg-yellow,7%));}
+.ef-brd1-right-yellow{@include brd-right(1px, solid, darken($cl-bg-yellow,7%));}
+.ef-brd2-right-yellow{@include brd-right(2px, solid, darken($cl-bg-yellow,7%));}
+.ef-brd3-right-yellow{@include brd-right(3px, solid, darken($cl-bg-yellow,7%));}
+.ef-brd1-bottom-yellow{@include brd-bottom(1px, solid, darken($cl-bg-yellow,7%));}
+.ef-brd2-bottom-yellow{@include brd-bottom(2px, solid, darken($cl-bg-yellow,7%));}
+.ef-brd3-bottom-yellow{@include brd-bottom(3px, solid, darken($cl-bg-yellow,7%));}
+.ef-brd1-left-yellow{@include brd-left(1px, solid, darken($cl-bg-yellow,7%));}
+.ef-brd2-left-yellow{@include brd-left(2px, solid, darken($cl-bg-yellow,7%));}
+.ef-brd3-left-yellow{@include brd-left(3px, solid, darken($cl-bg-yellow,7%));}
+//brown
+.ef-brd1-brown{@include brd(1px, solid, darken($cl-bg-brown,7%));}
+.ef-brd2-brown{@include brd(2px, solid, darken($cl-bg-brown,7%));}
+.ef-brd3-brown{@include brd(3px, solid, darken($cl-bg-brown,7%));}
+.ef-brd1-top-brown{@include brd-top(1px, solid, darken($cl-bg-brown,7%));}
+.ef-brd2-top-brown{@include brd-top(2px, solid, darken($cl-bg-brown,7%));}
+.ef-brd3-top-brown{@include brd-top(3px, solid, darken($cl-bg-brown,7%));}
+.ef-brd1-right-brown{@include brd-right(1px, solid, darken($cl-bg-brown,7%));}
+.ef-brd2-right-brown{@include brd-right(2px, solid, darken($cl-bg-brown,7%));}
+.ef-brd3-right-brown{@include brd-right(3px, solid, darken($cl-bg-brown,7%));}
+.ef-brd1-bottom-brown{@include brd-bottom(1px, solid, darken($cl-bg-brown,7%));}
+.ef-brd2-bottom-brown{@include brd-bottom(2px, solid, darken($cl-bg-brown,7%));}
+.ef-brd3-bottom-brown{@include brd-bottom(3px, solid, darken($cl-bg-brown,7%));}
+.ef-brd1-left-brown{@include brd-left(1px, solid, darken($cl-bg-brown,7%));}
+.ef-brd2-left-brown{@include brd-left(2px, solid, darken($cl-bg-brown,7%));}
+.ef-brd3-left-brown{@include brd-left(3px, solid, darken($cl-bg-brown,7%));}
+//black
+.ef-brd1-black{@include brd(1px, solid, darken($cl-bg-black,7%));}
+.ef-brd2-black{@include brd(2px, solid, darken($cl-bg-black,7%));}
+.ef-brd3-black{@include brd(3px, solid, darken($cl-bg-black,7%));}
+.ef-brd1-top-black{@include brd-top(1px, solid, darken($cl-bg-black,7%));}
+.ef-brd2-top-black{@include brd-top(2px, solid, darken($cl-bg-black,7%));}
+.ef-brd3-top-black{@include brd-top(3px, solid, darken($cl-bg-black,7%));}
+.ef-brd1-right-black{@include brd-right(1px, solid, darken($cl-bg-black,7%));}
+.ef-brd2-right-black{@include brd-right(2px, solid, darken($cl-bg-black,7%));}
+.ef-brd3-right-black{@include brd-right(3px, solid, darken($cl-bg-black,7%));}
+.ef-brd1-bottom-black{@include brd-bottom(1px, solid, darken($cl-bg-black,7%));}
+.ef-brd2-bottom-black{@include brd-bottom(2px, solid, darken($cl-bg-black,7%));}
+.ef-brd3-bottom-black{@include brd-bottom(3px, solid, darken($cl-bg-black,7%));}
+.ef-brd1-left-black{@include brd-left(1px, solid, darken($cl-bg-black,7%));}
+.ef-brd2-left-black{@include brd-left(2px, solid, darken($cl-bg-black,7%));}
+.ef-brd3-left-black{@include brd-left(3px, solid, darken($cl-bg-orange,7%));}
+//gray
+.ef-brd1-gray{@include brd(1px, solid, darken($cl-bg-gray,7%));}
+.ef-brd2-gray{@include brd(2px, solid, darken($cl-bg-gray,7%));}
+.ef-brd3-gray{@include brd(3px, solid, darken($cl-bg-gray,7%));}
+.ef-brd1-top-gray{@include brd-top(1px, solid, darken($cl-bg-gray,7%));}
+.ef-brd2-top-gray{@include brd-top(2px, solid, darken($cl-bg-gray,7%));}
+.ef-brd3-top-gray{@include brd-top(3px, solid, darken($cl-bg-gray,7%));}
+.ef-brd1-right-gray{@include brd-right(1px, solid, darken($cl-bg-gray,7%));}
+.ef-brd2-right-gray{@include brd-right(2px, solid, darken($cl-bg-gray,7%));}
+.ef-brd3-right-gray{@include brd-right(3px, solid, darken($cl-bg-gray,7%));}
+.ef-brd1-bottom-gray{@include brd-bottom(1px, solid, darken($cl-bg-gray,7%));}
+.ef-brd2-bottom-gray{@include brd-bottom(2px, solid, darken($cl-bg-gray,7%));}
+.ef-brd3-bottom-gray{@include brd-bottom(3px, solid, darken($cl-bg-gray,7%));}
+.ef-brd1-left-gray{@include brd-left(1px, solid, darken($cl-bg-gray,7%));}
+.ef-brd2-left-gray{@include brd-left(2px, solid, darken($cl-bg-gray,7%));}
+.ef-brd3-left-gray{@include brd-left(3px, solid, darken($cl-bg-gray,7%));}
+//theme
+.ef-brd1-theme{@include brd(1px, solid, darken($cl-bg-theme,7%));}
+.ef-brd2-theme{@include brd(2px, solid, darken($cl-bg-theme,7%));}
+.ef-brd3-theme{@include brd(3px, solid, darken($cl-bg-theme,7%));}
+.ef-brd1-top-theme{@include brd-top(1px, solid, darken($cl-bg-theme,7%));}
+.ef-brd2-top-theme{@include brd-top(2px, solid, darken($cl-bg-theme,7%));}
+.ef-brd3-top-theme{@include brd-top(3px, solid, darken($cl-bg-theme,7%));}
+.ef-brd1-right-theme{@include brd-right(1px, solid, darken($cl-bg-theme,7%));}
+.ef-brd2-right-theme{@include brd-right(2px, solid, darken($cl-bg-theme,7%));}
+.ef-brd3-right-theme{@include brd-right(3px, solid, darken($cl-bg-theme,7%));}
+.ef-brd1-bottom-theme{@include brd-bottom(1px, solid, darken($cl-bg-theme,7%));}
+.ef-brd2-bottom-theme{@include brd-bottom(2px, solid, darken($cl-bg-theme,7%));}
+.ef-brd3-bottom-theme{@include brd-bottom(3px, solid, darken($cl-bg-theme,7%));}
+.ef-brd1-left-theme{@include brd-left(1px, solid, darken($cl-bg-theme,7%));}
+.ef-brd2-left-theme{@include brd-left(2px, solid, darken($cl-bg-theme,7%));}
+.ef-brd3-left-theme{@include brd-left(3px, solid, darken($cl-bg-theme,7%));}
+
+//clear border
+.ef-brd-clear{border:none;}
+.ef-brd-top-clear{border-top:none;}
+.ef-brd-right-clear{border-right:none;}
+.ef-brd-bottom-clear{border-bottom:none;}
+.ef-brd-left-clear{border-left:none;}
+/* =============================================================
  ▼ radius
 ============================================================== */
 .ef-rd0{@include border-radius(0);}
@@ -1157,7 +1479,7 @@ ul.ef-float0{
   padding:0;
   >li{
     float:left;
-    margin-right:7px;
+    margin-right:0;
   }
   >li.ef-float-right{
     float:right;
@@ -1208,66 +1530,66 @@ dl.ef-float{
  ▼ overflow
 ============================================================== */
 // max-width
-.ef-mw10-ovf{@include width-overflow-max(10px);}
-.ef-mw20-ovf{@include width-overflow-max(20px);}
-.ef-mw30-ovf{@include width-overflow-max(30px);}
-.ef-mw40-ovf{@include width-overflow-max(40px);}
-.ef-mw50-ovf{@include width-overflow-max(50px);}
-.ef-mw60-ovf{@include width-overflow-max(60px);}
-.ef-mw70-ovf{@include width-overflow-max(70px);}
-.ef-mw80-ovf{@include width-overflow-max(80px);}
-.ef-mw90-ovf{@include width-overflow-max(90px);}
-.ef-mw100-ovf{@include width-overflow-max(100px);}
-.ef-mw110-ovf{@include width-overflow-max(110px);}
-.ef-mw120-ovf{@include width-overflow-max(120px);}
-.ef-mw130-ovf{@include width-overflow-max(130px);}
-.ef-mw140-ovf{@include width-overflow-max(140px);}
-.ef-mw150-ovf{@include width-overflow-max(150px);}
-.ef-mw160-ovf{@include width-overflow-max(160px);}
-.ef-mw170-ovf{@include width-overflow-max(170px);}
-.ef-mw180-ovf{@include width-overflow-max(180px);}
-.ef-mw190-ovf{@include width-overflow-max(190px);}
-.ef-mw200-ovf{@include width-overflow-max(200px);}
-.ef-mw210-ovf{@include width-overflow-max(210px);}
-.ef-mw220-ovf{@include width-overflow-max(220px);}
-.ef-mw230-ovf{@include width-overflow-max(230px);}
-.ef-mw240-ovf{@include width-overflow-max(240px);}
-.ef-mw250-ovf{@include width-overflow-max(250px);}
-.ef-mw260-ovf{@include width-overflow-max(260px);}
-.ef-mw270-ovf{@include width-overflow-max(270px);}
-.ef-mw280-ovf{@include width-overflow-max(280px);}
-.ef-mw290-ovf{@include width-overflow-max(290px);}
-.ef-mw300-ovf{@include width-overflow-max(300px);}
-.ef-mw310-ovf{@include width-overflow-max(310px);}
-.ef-mw320-ovf{@include width-overflow-max(320px);}
-.ef-mw330-ovf{@include width-overflow-max(330px);}
-.ef-mw340-ovf{@include width-overflow-max(340px);}
-.ef-mw350-ovf{@include width-overflow-max(350px);}
-.ef-mw360-ovf{@include width-overflow-max(360px);}
-.ef-mw370-ovf{@include width-overflow-max(370px);}
-.ef-mw380-ovf{@include width-overflow-max(380px);}
-.ef-mw390-ovf{@include width-overflow-max(390px);}
-.ef-mw400-ovf{@include width-overflow-max(400px);}
-.ef-mw410-ovf{@include width-overflow-max(410px);}
-.ef-mw420-ovf{@include width-overflow-max(420px);}
-.ef-mw430-ovf{@include width-overflow-max(430px);}
-.ef-mw440-ovf{@include width-overflow-max(440px);}
-.ef-mw450-ovf{@include width-overflow-max(450px);}
-.ef-mw460-ovf{@include width-overflow-max(460px);}
-.ef-mw470-ovf{@include width-overflow-max(470px);}
-.ef-mw480-ovf{@include width-overflow-max(480px);}
-.ef-mw490-ovf{@include width-overflow-max(490px);}
-.ef-mw500-ovf{@include width-overflow-max(500px);}
-.ef-mw510-ovf{@include width-overflow-max(510px);}
-.ef-mw520-ovf{@include width-overflow-max(520px);}
-.ef-mw530-ovf{@include width-overflow-max(530px);}
-.ef-mw540-ovf{@include width-overflow-max(540px);}
-.ef-mw550-ovf{@include width-overflow-max(550px);}
-.ef-mw560-ovf{@include width-overflow-max(560px);}
-.ef-mw570-ovf{@include width-overflow-max(570px);}
-.ef-mw580-ovf{@include width-overflow-max(580px);}
-.ef-mw590-ovf{@include width-overflow-max(590px);}
-.ef-mw600-ovf{@include width-overflow-max(600px);}
+.ef-mxw10-ovf{@include width-overflow-max(10px);}
+.ef-mxw20-ovf{@include width-overflow-max(20px);}
+.ef-mxw30-ovf{@include width-overflow-max(30px);}
+.ef-mxw40-ovf{@include width-overflow-max(40px);}
+.ef-mxw50-ovf{@include width-overflow-max(50px);}
+.ef-mxw60-ovf{@include width-overflow-max(60px);}
+.ef-mxw70-ovf{@include width-overflow-max(70px);}
+.ef-mxw80-ovf{@include width-overflow-max(80px);}
+.ef-mxw90-ovf{@include width-overflow-max(90px);}
+.ef-mxw100-ovf{@include width-overflow-max(100px);}
+.ef-mxw110-ovf{@include width-overflow-max(110px);}
+.ef-mxw120-ovf{@include width-overflow-max(120px);}
+.ef-mxw130-ovf{@include width-overflow-max(130px);}
+.ef-mxw140-ovf{@include width-overflow-max(140px);}
+.ef-mxw150-ovf{@include width-overflow-max(150px);}
+.ef-mxw160-ovf{@include width-overflow-max(160px);}
+.ef-mxw170-ovf{@include width-overflow-max(170px);}
+.ef-mxw180-ovf{@include width-overflow-max(180px);}
+.ef-mxw190-ovf{@include width-overflow-max(190px);}
+.ef-mxw200-ovf{@include width-overflow-max(200px);}
+.ef-mxw210-ovf{@include width-overflow-max(210px);}
+.ef-mxw220-ovf{@include width-overflow-max(220px);}
+.ef-mxw230-ovf{@include width-overflow-max(230px);}
+.ef-mxw240-ovf{@include width-overflow-max(240px);}
+.ef-mxw250-ovf{@include width-overflow-max(250px);}
+.ef-mxw260-ovf{@include width-overflow-max(260px);}
+.ef-mxw270-ovf{@include width-overflow-max(270px);}
+.ef-mxw280-ovf{@include width-overflow-max(280px);}
+.ef-mxw290-ovf{@include width-overflow-max(290px);}
+.ef-mxw300-ovf{@include width-overflow-max(300px);}
+.ef-mxw310-ovf{@include width-overflow-max(310px);}
+.ef-mxw320-ovf{@include width-overflow-max(320px);}
+.ef-mxw330-ovf{@include width-overflow-max(330px);}
+.ef-mxw340-ovf{@include width-overflow-max(340px);}
+.ef-mxw350-ovf{@include width-overflow-max(350px);}
+.ef-mxw360-ovf{@include width-overflow-max(360px);}
+.ef-mxw370-ovf{@include width-overflow-max(370px);}
+.ef-mxw380-ovf{@include width-overflow-max(380px);}
+.ef-mxw390-ovf{@include width-overflow-max(390px);}
+.ef-mxw400-ovf{@include width-overflow-max(400px);}
+.ef-mxw410-ovf{@include width-overflow-max(410px);}
+.ef-mxw420-ovf{@include width-overflow-max(420px);}
+.ef-mxw430-ovf{@include width-overflow-max(430px);}
+.ef-mxw440-ovf{@include width-overflow-max(440px);}
+.ef-mxw450-ovf{@include width-overflow-max(450px);}
+.ef-mxw460-ovf{@include width-overflow-max(460px);}
+.ef-mxw470-ovf{@include width-overflow-max(470px);}
+.ef-mxw480-ovf{@include width-overflow-max(480px);}
+.ef-mxw490-ovf{@include width-overflow-max(490px);}
+.ef-mxw500-ovf{@include width-overflow-max(500px);}
+.ef-mxw510-ovf{@include width-overflow-max(510px);}
+.ef-mxw520-ovf{@include width-overflow-max(520px);}
+.ef-mxw530-ovf{@include width-overflow-max(530px);}
+.ef-mxw540-ovf{@include width-overflow-max(540px);}
+.ef-mxw550-ovf{@include width-overflow-max(550px);}
+.ef-mxw560-ovf{@include width-overflow-max(560px);}
+.ef-mxw570-ovf{@include width-overflow-max(570px);}
+.ef-mxw580-ovf{@include width-overflow-max(580px);}
+.ef-mxw590-ovf{@include width-overflow-max(590px);}
+.ef-mxw600-ovf{@include width-overflow-max(600px);}
 
 // width
 .ef-w10-ovf{@include width-overflow(10px);}
@@ -1332,66 +1654,66 @@ dl.ef-float{
 .ef-w600-ovf{@include width-overflow(600px);}
 
 // max-height
-.ef-mh10-ovf{@include height-overflow-max(10px);}
-.ef-mh20-ovf{@include height-overflow-max(20px);}
-.ef-mh30-ovf{@include height-overflow-max(30px);}
-.ef-mh40-ovf{@include height-overflow-max(40px);}
-.ef-mh50-ovf{@include height-overflow-max(50px);}
-.ef-mh60-ovf{@include height-overflow-max(60px);}
-.ef-mh70-ovf{@include height-overflow-max(70px);}
-.ef-mh80-ovf{@include height-overflow-max(80px);}
-.ef-mh90-ovf{@include height-overflow-max(90px);}
-.ef-mh100-ovf{@include height-overflow-max(100px);}
-.ef-mh110-ovf{@include height-overflow-max(110px);}
-.ef-mh120-ovf{@include height-overflow-max(120px);}
-.ef-mh130-ovf{@include height-overflow-max(130px);}
-.ef-mh140-ovf{@include height-overflow-max(140px);}
-.ef-mh150-ovf{@include height-overflow-max(150px);}
-.ef-mh160-ovf{@include height-overflow-max(160px);}
-.ef-mh170-ovf{@include height-overflow-max(170px);}
-.ef-mh180-ovf{@include height-overflow-max(180px);}
-.ef-mh190-ovf{@include height-overflow-max(190px);}
-.ef-mh200-ovf{@include height-overflow-max(200px);}
-.ef-mh210-ovf{@include height-overflow-max(210px);}
-.ef-mh220-ovf{@include height-overflow-max(220px);}
-.ef-mh230-ovf{@include height-overflow-max(230px);}
-.ef-mh240-ovf{@include height-overflow-max(240px);}
-.ef-mh250-ovf{@include height-overflow-max(250px);}
-.ef-mh260-ovf{@include height-overflow-max(260px);}
-.ef-mh270-ovf{@include height-overflow-max(270px);}
-.ef-mh280-ovf{@include height-overflow-max(280px);}
-.ef-mh290-ovf{@include height-overflow-max(290px);}
-.ef-mh300-ovf{@include height-overflow-max(300px);}
-.ef-mh310-ovf{@include height-overflow-max(310px);}
-.ef-mh320-ovf{@include height-overflow-max(320px);}
-.ef-mh330-ovf{@include height-overflow-max(330px);}
-.ef-mh340-ovf{@include height-overflow-max(340px);}
-.ef-mh350-ovf{@include height-overflow-max(350px);}
-.ef-mh360-ovf{@include height-overflow-max(360px);}
-.ef-mh370-ovf{@include height-overflow-max(370px);}
-.ef-mh380-ovf{@include height-overflow-max(380px);}
-.ef-mh390-ovf{@include height-overflow-max(390px);}
-.ef-mh400-ovf{@include height-overflow-max(400px);}
-.ef-mh410-ovf{@include height-overflow-max(410px);}
-.ef-mh420-ovf{@include height-overflow-max(420px);}
-.ef-mh430-ovf{@include height-overflow-max(430px);}
-.ef-mh440-ovf{@include height-overflow-max(440px);}
-.ef-mh450-ovf{@include height-overflow-max(450px);}
-.ef-mh460-ovf{@include height-overflow-max(460px);}
-.ef-mh470-ovf{@include height-overflow-max(470px);}
-.ef-mh480-ovf{@include height-overflow-max(480px);}
-.ef-mh490-ovf{@include height-overflow-max(490px);}
-.ef-mh500-ovf{@include height-overflow-max(500px);}
-.ef-mh510-ovf{@include height-overflow-max(510px);}
-.ef-mh520-ovf{@include height-overflow-max(520px);}
-.ef-mh530-ovf{@include height-overflow-max(530px);}
-.ef-mh540-ovf{@include height-overflow-max(540px);}
-.ef-mh550-ovf{@include height-overflow-max(550px);}
-.ef-mh560-ovf{@include height-overflow-max(560px);}
-.ef-mh570-ovf{@include height-overflow-max(570px);}
-.ef-mh580-ovf{@include height-overflow-max(580px);}
-.ef-mh590-ovf{@include height-overflow-max(590px);}
-.ef-mh600-ovf{@include height-overflow-max(600px);}
+.ef-mxh10-ovf{@include height-overflow-max(10px);}
+.ef-mxh20-ovf{@include height-overflow-max(20px);}
+.ef-mxh30-ovf{@include height-overflow-max(30px);}
+.ef-mxh40-ovf{@include height-overflow-max(40px);}
+.ef-mxh50-ovf{@include height-overflow-max(50px);}
+.ef-mxh60-ovf{@include height-overflow-max(60px);}
+.ef-mxh70-ovf{@include height-overflow-max(70px);}
+.ef-mxh80-ovf{@include height-overflow-max(80px);}
+.ef-mxh90-ovf{@include height-overflow-max(90px);}
+.ef-mxh100-ovf{@include height-overflow-max(100px);}
+.ef-mxh110-ovf{@include height-overflow-max(110px);}
+.ef-mxh120-ovf{@include height-overflow-max(120px);}
+.ef-mxh130-ovf{@include height-overflow-max(130px);}
+.ef-mxh140-ovf{@include height-overflow-max(140px);}
+.ef-mxh150-ovf{@include height-overflow-max(150px);}
+.ef-mxh160-ovf{@include height-overflow-max(160px);}
+.ef-mxh170-ovf{@include height-overflow-max(170px);}
+.ef-mxh180-ovf{@include height-overflow-max(180px);}
+.ef-mxh190-ovf{@include height-overflow-max(190px);}
+.ef-mxh200-ovf{@include height-overflow-max(200px);}
+.ef-mxh210-ovf{@include height-overflow-max(210px);}
+.ef-mxh220-ovf{@include height-overflow-max(220px);}
+.ef-mxh230-ovf{@include height-overflow-max(230px);}
+.ef-mxh240-ovf{@include height-overflow-max(240px);}
+.ef-mxh250-ovf{@include height-overflow-max(250px);}
+.ef-mxh260-ovf{@include height-overflow-max(260px);}
+.ef-mxh270-ovf{@include height-overflow-max(270px);}
+.ef-mxh280-ovf{@include height-overflow-max(280px);}
+.ef-mxh290-ovf{@include height-overflow-max(290px);}
+.ef-mxh300-ovf{@include height-overflow-max(300px);}
+.ef-mxh310-ovf{@include height-overflow-max(310px);}
+.ef-mxh320-ovf{@include height-overflow-max(320px);}
+.ef-mxh330-ovf{@include height-overflow-max(330px);}
+.ef-mxh340-ovf{@include height-overflow-max(340px);}
+.ef-mxh350-ovf{@include height-overflow-max(350px);}
+.ef-mxh360-ovf{@include height-overflow-max(360px);}
+.ef-mxh370-ovf{@include height-overflow-max(370px);}
+.ef-mxh380-ovf{@include height-overflow-max(380px);}
+.ef-mxh390-ovf{@include height-overflow-max(390px);}
+.ef-mxh400-ovf{@include height-overflow-max(400px);}
+.ef-mxh410-ovf{@include height-overflow-max(410px);}
+.ef-mxh420-ovf{@include height-overflow-max(420px);}
+.ef-mxh430-ovf{@include height-overflow-max(430px);}
+.ef-mxh440-ovf{@include height-overflow-max(440px);}
+.ef-mxh450-ovf{@include height-overflow-max(450px);}
+.ef-mxh460-ovf{@include height-overflow-max(460px);}
+.ef-mxh470-ovf{@include height-overflow-max(470px);}
+.ef-mxh480-ovf{@include height-overflow-max(480px);}
+.ef-mxh490-ovf{@include height-overflow-max(490px);}
+.ef-mxh500-ovf{@include height-overflow-max(500px);}
+.ef-mxh510-ovf{@include height-overflow-max(510px);}
+.ef-mxh520-ovf{@include height-overflow-max(520px);}
+.ef-mxh530-ovf{@include height-overflow-max(530px);}
+.ef-mxh540-ovf{@include height-overflow-max(540px);}
+.ef-mxh550-ovf{@include height-overflow-max(550px);}
+.ef-mxh560-ovf{@include height-overflow-max(560px);}
+.ef-mxh570-ovf{@include height-overflow-max(570px);}
+.ef-mxh580-ovf{@include height-overflow-max(580px);}
+.ef-mxh590-ovf{@include height-overflow-max(590px);}
+.ef-mxh600-ovf{@include height-overflow-max(600px);}
 
 // height
 .ef-h10-ovf{@include height-overflow(10px);}

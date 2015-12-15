@@ -1,4 +1,4 @@
-@import "module";
+@import "effect";
 /*
  * structure.scss
  * include:
@@ -11,30 +11,92 @@
 header{
   .st-body{
     @include min-width($app-minWidth);
+    background:$cl-bg-header;
     &.ef-header-fix{
       @include posi-fix(0,0,auto,0);
       z-index:3;
     }
-    background:$cl-bg-header;
     .st-inner{
-      padding:5px 10px;
+      padding:0 10px;
       a{
         display:block;
         color:$cl-txt-rev;
         i{color:$cl-txt-rev;}
+        &:hover{
+          color:darken($cl-txt-rev, 10%);
+          i{color:darken($cl-txt-rev, 10%);}
+        }
       }
       //left////////////////////////////////////////
       .ef-float-left{
-        a{
+        >a{
+          padding-top:5px;
+          padding-bottom:5px;
           .wrap-logo{
             .logo{
+              width:25px;
+              line-height:25px;
+              font-size:18px;
+              text-align: center;
+              @include border-radius(50%);
+              margin-top: 2px;
               background:$cl-white;
               i{color:$cl-bg-header;}
             }
           }
         }
       }
-      //left////////////////////////////////////////
+      //right////////////////////////////////////////
+      .ef-float-right{
+        >ul{
+          >li{
+            >a{
+              padding-top:5px;
+              padding-bottom:5px;
+              i{
+                display:block;
+                line-height:30px;
+              }
+            }
+            .prof{
+              display: block;
+              width:25px;
+              margin-top: 3px;
+              @include border-radius(2px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.slide-nav{
+  .st-body{}
+  .st-inner{
+    padding:10px 0;
+    @include brd-bottom;
+    background:$cl-bg-nav;
+    i,a{color:$cl-txt-base;}
+    ul{
+      display:block;
+      li{
+        a{
+          padding:0 10px;
+          display:block;
+          font-size: 15px;
+          .cp-badge{color:$cl-white;}
+          &:hover{
+            background:$cl-bg-nav-hover;
+          }
+        }
+      }
+    }
+    .nav-category{
+      font-size:11px;
+      color:$cl-gray3;
+      margin-top:-5px;
+      margin-bottom:-10px;
+      padding:0 10px;
     }
   }
 }
@@ -63,11 +125,11 @@ footer{
  */
 .page-container{
   >.st-body{
+    margin:40px 0 20px;
     >.st-inner{
       margin-bottom:30px;
       // page-nav ////////////////////////////////////
       >.page-nav{
-        display:block;
         >.st-body{
           width:180px;
           margin:20px;

@@ -90,9 +90,40 @@
 @mixin box-shadow-base{
   @include box-shadow(0 3px 5px rgba($cl-txt-base, .25));
 }
-
 @mixin easeout{
   @include transition( all 0.3s ease-out);
+}
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  } 
+  @keyframes #{$name} {
+    @content;
+  }
+}
+@mixin animation($name) {
+  -webkit-animation: $name;
+  -moz-animation: $name;
+  animation: $name;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+@mixin transition($transition) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
 }
 @mixin border-radius($radius){
   border-radius: $radius;
@@ -126,8 +157,14 @@
 @mixin min-width($minWidth){
   min-width: $minWidth;
 }
+@mixin max-width($maxWidth){
+  max-width: $maxWidth;
+}
 @mixin min-height($minHeight){
   min-height: $minHeight;
+}
+@mixin max-height($maxHeight){
+  max-height: $maxHeight;
 }
 @mixin transition($transition...) {
   transition:$transition;

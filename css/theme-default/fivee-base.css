@@ -23,7 +23,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  min-width: 760px;
+  min-width: auto;
 }
 
 body {
@@ -116,8 +116,16 @@ a.ef-is-nolink {
   color: #333;
 }
 
+a.ef-is-nolink i {
+  color: #333;
+}
+
 a.ef-is-nolink:hover {
   text-decoration: none;
+  color: #333;
+}
+
+a.ef-is-nolink:hover i {
   color: #333;
 }
 
@@ -238,7 +246,7 @@ ul.ef-list-hover-gray > li a {
 
 ul.ef-list-hover-gray > li a:hover {
   text-decoration: none;
-  background: #f5f5f5;
+  background: #f6f6f6;
 }
 
 ul.ef-list-hover-gray1 > li a {
@@ -373,18 +381,24 @@ a > dl.cp-thumbnail .cp-thumbnail-summary {
  */
 hr {
   border: 0;
-  height: 1px;
+  height: 0;
   padding: 0;
   margin: 0;
-  background: #ccc;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ccc;
 }
 
 hr.is-dotted {
-  height: 0;
-  background: none;
   border-bottom-width: 1px;
   border-bottom-style: dotted;
-  border-bottom-color: #ccc;
+  border-bottom-color: #a6a6a6;
+}
+
+hr.is-dashed {
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: #a6a6a6;
 }
 
 /*
@@ -2907,37 +2921,223 @@ label.cp-checkbox input[type="radio"] {
   background-image: linear-gradient(#eee, #eee, #eee);
 }
 
-.cp-btn.cp-disabled:hover, .cp-disabled.cp-btn-white:hover,
-.cp-disabled.cp-btn-mini-white:hover,
-.cp-disabled.cp-btn-large-white:hover,
-.cp-disabled.cp-btn-fix-white:hover, .cp-disabled.cp-btn-red:hover,
-.cp-disabled.cp-btn-mini-red:hover,
-.cp-disabled.cp-btn-large-red:hover,
-.cp-disabled.cp-btn-fix-red:hover, .cp-disabled.cp-btn-orange:hover,
-.cp-disabled.cp-btn-mini-orange:hover,
-.cp-disabled.cp-btn-large-orange:hover,
-.cp-disabled.cp-btn-fix-orange:hover, .cp-disabled.cp-btn-blue:hover,
-.cp-disabled.cp-btn-mini-blue:hover,
-.cp-disabled.cp-btn-large-blue:hover,
-.cp-disabled.cp-btn-fix-blue:hover, .cp-disabled.cp-btn-green:hover,
-.cp-disabled.cp-btn-mini-green:hover,
-.cp-disabled.cp-btn-large-green:hover,
-.cp-disabled.cp-btn-fix-green:hover, .cp-disabled.cp-btn-yellow:hover,
-.cp-disabled.cp-btn-mini-yellow:hover,
-.cp-disabled.cp-btn-large-yellow:hover,
-.cp-disabled.cp-btn-fix-yellow:hover, .cp-disabled.cp-btn-brown:hover,
-.cp-disabled.cp-btn-mini-brown:hover,
-.cp-disabled.cp-btn-large-brown:hover,
-.cp-disabled.cp-btn-fix-brown:hover, .cp-disabled.cp-btn-black:hover,
-.cp-disabled.cp-btn-mini-black:hover,
-.cp-disabled.cp-btn-large-black:hover,
-.cp-disabled.cp-btn-fix-black:hover, .cp-disabled.cp-btn-gray:hover,
-.cp-disabled.cp-btn-mini-gray:hover,
-.cp-disabled.cp-btn-large-gray:hover,
-.cp-disabled.cp-btn-fix-gray:hover, .cp-disabled.cp-btn-theme:hover,
-.cp-disabled.cp-btn-mini-theme:hover,
-.cp-disabled.cp-btn-large-theme:hover,
-.cp-disabled.cp-btn-fix-theme:hover, .cp-disabled.cp-btn-mini:hover, .cp-disabled.cp-btn-large:hover, .cp-disabled.cp-btn-fix:hover {
+.cp-btn.ef-disabled:hover, .ef-disabled.cp-btn-white:hover,
+.ef-disabled.cp-btn-mini-white:hover,
+.ef-disabled.cp-btn-large-white:hover,
+.ef-disabled.cp-btn-fix-white:hover, .ef-disabled.cp-btn-red:hover,
+.ef-disabled.cp-btn-mini-red:hover,
+.ef-disabled.cp-btn-large-red:hover,
+.ef-disabled.cp-btn-fix-red:hover, .ef-disabled.cp-btn-orange:hover,
+.ef-disabled.cp-btn-mini-orange:hover,
+.ef-disabled.cp-btn-large-orange:hover,
+.ef-disabled.cp-btn-fix-orange:hover, .ef-disabled.cp-btn-blue:hover,
+.ef-disabled.cp-btn-mini-blue:hover,
+.ef-disabled.cp-btn-large-blue:hover,
+.ef-disabled.cp-btn-fix-blue:hover, .ef-disabled.cp-btn-green:hover,
+.ef-disabled.cp-btn-mini-green:hover,
+.ef-disabled.cp-btn-large-green:hover,
+.ef-disabled.cp-btn-fix-green:hover, .ef-disabled.cp-btn-yellow:hover,
+.ef-disabled.cp-btn-mini-yellow:hover,
+.ef-disabled.cp-btn-large-yellow:hover,
+.ef-disabled.cp-btn-fix-yellow:hover, .ef-disabled.cp-btn-brown:hover,
+.ef-disabled.cp-btn-mini-brown:hover,
+.ef-disabled.cp-btn-large-brown:hover,
+.ef-disabled.cp-btn-fix-brown:hover, .ef-disabled.cp-btn-black:hover,
+.ef-disabled.cp-btn-mini-black:hover,
+.ef-disabled.cp-btn-large-black:hover,
+.ef-disabled.cp-btn-fix-black:hover, .ef-disabled.cp-btn-gray:hover,
+.ef-disabled.cp-btn-mini-gray:hover,
+.ef-disabled.cp-btn-large-gray:hover,
+.ef-disabled.cp-btn-fix-gray:hover, .ef-disabled.cp-btn-theme:hover,
+.ef-disabled.cp-btn-mini-theme:hover,
+.ef-disabled.cp-btn-large-theme:hover,
+.ef-disabled.cp-btn-fix-theme:hover, .ef-disabled.cp-btn-mini:hover, .ef-disabled.cp-btn-large:hover, .ef-disabled.cp-btn-fix:hover {
+  background: #eee;
+  cursor: default;
+}
+
+.cp-btn.ef-response, .ef-response.cp-btn-white,
+.ef-response.cp-btn-mini-white,
+.ef-response.cp-btn-large-white,
+.ef-response.cp-btn-fix-white, .ef-response.cp-btn-red,
+.ef-response.cp-btn-mini-red,
+.ef-response.cp-btn-large-red,
+.ef-response.cp-btn-fix-red, .ef-response.cp-btn-orange,
+.ef-response.cp-btn-mini-orange,
+.ef-response.cp-btn-large-orange,
+.ef-response.cp-btn-fix-orange, .ef-response.cp-btn-blue,
+.ef-response.cp-btn-mini-blue,
+.ef-response.cp-btn-large-blue,
+.ef-response.cp-btn-fix-blue, .ef-response.cp-btn-green,
+.ef-response.cp-btn-mini-green,
+.ef-response.cp-btn-large-green,
+.ef-response.cp-btn-fix-green, .ef-response.cp-btn-yellow,
+.ef-response.cp-btn-mini-yellow,
+.ef-response.cp-btn-large-yellow,
+.ef-response.cp-btn-fix-yellow, .ef-response.cp-btn-brown,
+.ef-response.cp-btn-mini-brown,
+.ef-response.cp-btn-large-brown,
+.ef-response.cp-btn-fix-brown, .ef-response.cp-btn-black,
+.ef-response.cp-btn-mini-black,
+.ef-response.cp-btn-large-black,
+.ef-response.cp-btn-fix-black, .ef-response.cp-btn-gray,
+.ef-response.cp-btn-mini-gray,
+.ef-response.cp-btn-large-gray,
+.ef-response.cp-btn-fix-gray, .ef-response.cp-btn-theme,
+.ef-response.cp-btn-mini-theme,
+.ef-response.cp-btn-large-theme,
+.ef-response.cp-btn-fix-theme, .ef-response.cp-btn-mini, .ef-response.cp-btn-large, .ef-response.cp-btn-fix {
+  background: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.cp-btn.ef-response:hover, .ef-response.cp-btn-white:hover,
+.ef-response.cp-btn-mini-white:hover,
+.ef-response.cp-btn-large-white:hover,
+.ef-response.cp-btn-fix-white:hover, .ef-response.cp-btn-red:hover,
+.ef-response.cp-btn-mini-red:hover,
+.ef-response.cp-btn-large-red:hover,
+.ef-response.cp-btn-fix-red:hover, .ef-response.cp-btn-orange:hover,
+.ef-response.cp-btn-mini-orange:hover,
+.ef-response.cp-btn-large-orange:hover,
+.ef-response.cp-btn-fix-orange:hover, .ef-response.cp-btn-blue:hover,
+.ef-response.cp-btn-mini-blue:hover,
+.ef-response.cp-btn-large-blue:hover,
+.ef-response.cp-btn-fix-blue:hover, .ef-response.cp-btn-green:hover,
+.ef-response.cp-btn-mini-green:hover,
+.ef-response.cp-btn-large-green:hover,
+.ef-response.cp-btn-fix-green:hover, .ef-response.cp-btn-yellow:hover,
+.ef-response.cp-btn-mini-yellow:hover,
+.ef-response.cp-btn-large-yellow:hover,
+.ef-response.cp-btn-fix-yellow:hover, .ef-response.cp-btn-brown:hover,
+.ef-response.cp-btn-mini-brown:hover,
+.ef-response.cp-btn-large-brown:hover,
+.ef-response.cp-btn-fix-brown:hover, .ef-response.cp-btn-black:hover,
+.ef-response.cp-btn-mini-black:hover,
+.ef-response.cp-btn-large-black:hover,
+.ef-response.cp-btn-fix-black:hover, .ef-response.cp-btn-gray:hover,
+.ef-response.cp-btn-mini-gray:hover,
+.ef-response.cp-btn-large-gray:hover,
+.ef-response.cp-btn-fix-gray:hover, .ef-response.cp-btn-theme:hover,
+.ef-response.cp-btn-mini-theme:hover,
+.ef-response.cp-btn-large-theme:hover,
+.ef-response.cp-btn-fix-theme:hover, .ef-response.cp-btn-mini:hover, .ef-response.cp-btn-large:hover, .ef-response.cp-btn-fix:hover {
+  text-decoration: none;
+  color: #333;
+  background: #f6f6f6;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d4d4d4;
+  background-image: -webkit-linear-gradient(#f6f6f6, #f6f6f6, #f6f6f6);
+  background-image: linear-gradient(#f6f6f6, #f6f6f6, #f6f6f6);
+}
+
+.cp-btn.ef-response:hover i, .ef-response.cp-btn-white:hover i,
+.ef-response.cp-btn-mini-white:hover i,
+.ef-response.cp-btn-large-white:hover i,
+.ef-response.cp-btn-fix-white:hover i, .ef-response.cp-btn-red:hover i,
+.ef-response.cp-btn-mini-red:hover i,
+.ef-response.cp-btn-large-red:hover i,
+.ef-response.cp-btn-fix-red:hover i, .ef-response.cp-btn-orange:hover i,
+.ef-response.cp-btn-mini-orange:hover i,
+.ef-response.cp-btn-large-orange:hover i,
+.ef-response.cp-btn-fix-orange:hover i, .ef-response.cp-btn-blue:hover i,
+.ef-response.cp-btn-mini-blue:hover i,
+.ef-response.cp-btn-large-blue:hover i,
+.ef-response.cp-btn-fix-blue:hover i, .ef-response.cp-btn-green:hover i,
+.ef-response.cp-btn-mini-green:hover i,
+.ef-response.cp-btn-large-green:hover i,
+.ef-response.cp-btn-fix-green:hover i, .ef-response.cp-btn-yellow:hover i,
+.ef-response.cp-btn-mini-yellow:hover i,
+.ef-response.cp-btn-large-yellow:hover i,
+.ef-response.cp-btn-fix-yellow:hover i, .ef-response.cp-btn-brown:hover i,
+.ef-response.cp-btn-mini-brown:hover i,
+.ef-response.cp-btn-large-brown:hover i,
+.ef-response.cp-btn-fix-brown:hover i, .ef-response.cp-btn-black:hover i,
+.ef-response.cp-btn-mini-black:hover i,
+.ef-response.cp-btn-large-black:hover i,
+.ef-response.cp-btn-fix-black:hover i, .ef-response.cp-btn-gray:hover i,
+.ef-response.cp-btn-mini-gray:hover i,
+.ef-response.cp-btn-large-gray:hover i,
+.ef-response.cp-btn-fix-gray:hover i, .ef-response.cp-btn-theme:hover i,
+.ef-response.cp-btn-mini-theme:hover i,
+.ef-response.cp-btn-large-theme:hover i,
+.ef-response.cp-btn-fix-theme:hover i, .ef-response.cp-btn-mini:hover i, .ef-response.cp-btn-large:hover i, .ef-response.cp-btn-fix:hover i {
+  color: #333;
+}
+
+.cp-btn.ef-response:active, .ef-response.cp-btn-white:active,
+.ef-response.cp-btn-mini-white:active,
+.ef-response.cp-btn-large-white:active,
+.ef-response.cp-btn-fix-white:active, .ef-response.cp-btn-red:active,
+.ef-response.cp-btn-mini-red:active,
+.ef-response.cp-btn-large-red:active,
+.ef-response.cp-btn-fix-red:active, .ef-response.cp-btn-orange:active,
+.ef-response.cp-btn-mini-orange:active,
+.ef-response.cp-btn-large-orange:active,
+.ef-response.cp-btn-fix-orange:active, .ef-response.cp-btn-blue:active,
+.ef-response.cp-btn-mini-blue:active,
+.ef-response.cp-btn-large-blue:active,
+.ef-response.cp-btn-fix-blue:active, .ef-response.cp-btn-green:active,
+.ef-response.cp-btn-mini-green:active,
+.ef-response.cp-btn-large-green:active,
+.ef-response.cp-btn-fix-green:active, .ef-response.cp-btn-yellow:active,
+.ef-response.cp-btn-mini-yellow:active,
+.ef-response.cp-btn-large-yellow:active,
+.ef-response.cp-btn-fix-yellow:active, .ef-response.cp-btn-brown:active,
+.ef-response.cp-btn-mini-brown:active,
+.ef-response.cp-btn-large-brown:active,
+.ef-response.cp-btn-fix-brown:active, .ef-response.cp-btn-black:active,
+.ef-response.cp-btn-mini-black:active,
+.ef-response.cp-btn-large-black:active,
+.ef-response.cp-btn-fix-black:active, .ef-response.cp-btn-gray:active,
+.ef-response.cp-btn-mini-gray:active,
+.ef-response.cp-btn-large-gray:active,
+.ef-response.cp-btn-fix-gray:active, .ef-response.cp-btn-theme:active,
+.ef-response.cp-btn-mini-theme:active,
+.ef-response.cp-btn-large-theme:active,
+.ef-response.cp-btn-fix-theme:active, .ef-response.cp-btn-mini:active, .ef-response.cp-btn-large:active, .ef-response.cp-btn-fix:active {
+  background: #eee;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d4d4d4;
+  background-image: -webkit-linear-gradient(#eee, #eee, #eee);
+  background-image: linear-gradient(#eee, #eee, #eee);
+}
+
+.cp-btn.ef-response.ef-disabled:hover, .ef-response.ef-disabled.cp-btn-white:hover,
+.ef-response.ef-disabled.cp-btn-mini-white:hover,
+.ef-response.ef-disabled.cp-btn-large-white:hover,
+.ef-response.ef-disabled.cp-btn-fix-white:hover, .ef-response.ef-disabled.cp-btn-red:hover,
+.ef-response.ef-disabled.cp-btn-mini-red:hover,
+.ef-response.ef-disabled.cp-btn-large-red:hover,
+.ef-response.ef-disabled.cp-btn-fix-red:hover, .ef-response.ef-disabled.cp-btn-orange:hover,
+.ef-response.ef-disabled.cp-btn-mini-orange:hover,
+.ef-response.ef-disabled.cp-btn-large-orange:hover,
+.ef-response.ef-disabled.cp-btn-fix-orange:hover, .ef-response.ef-disabled.cp-btn-blue:hover,
+.ef-response.ef-disabled.cp-btn-mini-blue:hover,
+.ef-response.ef-disabled.cp-btn-large-blue:hover,
+.ef-response.ef-disabled.cp-btn-fix-blue:hover, .ef-response.ef-disabled.cp-btn-green:hover,
+.ef-response.ef-disabled.cp-btn-mini-green:hover,
+.ef-response.ef-disabled.cp-btn-large-green:hover,
+.ef-response.ef-disabled.cp-btn-fix-green:hover, .ef-response.ef-disabled.cp-btn-yellow:hover,
+.ef-response.ef-disabled.cp-btn-mini-yellow:hover,
+.ef-response.ef-disabled.cp-btn-large-yellow:hover,
+.ef-response.ef-disabled.cp-btn-fix-yellow:hover, .ef-response.ef-disabled.cp-btn-brown:hover,
+.ef-response.ef-disabled.cp-btn-mini-brown:hover,
+.ef-response.ef-disabled.cp-btn-large-brown:hover,
+.ef-response.ef-disabled.cp-btn-fix-brown:hover, .ef-response.ef-disabled.cp-btn-black:hover,
+.ef-response.ef-disabled.cp-btn-mini-black:hover,
+.ef-response.ef-disabled.cp-btn-large-black:hover,
+.ef-response.ef-disabled.cp-btn-fix-black:hover, .ef-response.ef-disabled.cp-btn-gray:hover,
+.ef-response.ef-disabled.cp-btn-mini-gray:hover,
+.ef-response.ef-disabled.cp-btn-large-gray:hover,
+.ef-response.ef-disabled.cp-btn-fix-gray:hover, .ef-response.ef-disabled.cp-btn-theme:hover,
+.ef-response.ef-disabled.cp-btn-mini-theme:hover,
+.ef-response.ef-disabled.cp-btn-large-theme:hover,
+.ef-response.ef-disabled.cp-btn-fix-theme:hover, .ef-response.ef-disabled.cp-btn-mini:hover, .ef-response.ef-disabled.cp-btn-large:hover, .ef-response.ef-disabled.cp-btn-fix:hover {
   background: #eee;
   cursor: default;
 }
@@ -4190,8 +4390,8 @@ label.cp-checkbox input[type="radio"] {
  * =============================================================
  ▼ step circle
 ============================================================== */
-.cp-toolbar .lo-inner {
-  padding: 7px;
+.cp-toolbar .st-inner, .cp-toolbar-model0 .st-inner {
+  padding: 7px 10px;
   border-radius: 3px;
 }
 
@@ -4487,7 +4687,7 @@ table.md-table-base {
 }
 
 table.md-table-base thead.md-th-hover tr:hover th, table.md-table-base tbody.md-th-hover tr:hover th {
-  background-color: #f5f5f5;
+  background-color: #f6f6f6;
 }
 
 table.md-table-base thead.md-th-hover tr:hover th.md-th-reset, table.md-table-base tbody.md-th-hover tr:hover th.md-th-reset {
@@ -4495,7 +4695,7 @@ table.md-table-base thead.md-th-hover tr:hover th.md-th-reset, table.md-table-ba
 }
 
 table.md-table-base thead.md-td-hover tr:hover td, table.md-table-base tbody.md-td-hover tr:hover td {
-  background-color: #f5f5f5;
+  background-color: #f6f6f6;
 }
 
 table.md-table-base thead.md-td-hover tr:hover td.md-td-reset, table.md-table-base tbody.md-td-hover tr:hover td.md-td-reset {
@@ -4541,7 +4741,7 @@ table.md-table-base tr tbody:last-child td, table.md-table-base colgroup tbody:l
 }
 
 table.md-table-base tr.md-th-hover th:hover, table.md-table-base colgroup.md-th-hover th:hover {
-  background-color: #f5f5f5;
+  background-color: #f6f6f6;
 }
 
 table.md-table-base tr.md-th-hover th:hover.md-th-reset, table.md-table-base colgroup.md-th-hover th:hover.md-th-reset {
@@ -4549,7 +4749,7 @@ table.md-table-base tr.md-th-hover th:hover.md-th-reset, table.md-table-base col
 }
 
 table.md-table-base tr.md-td-hover td:hover, table.md-table-base colgroup.md-td-hover td:hover {
-  background-color: #f5f5f5;
+  background-color: #f6f6f6;
 }
 
 table.md-table-base tr.md-td-hover td:hover.md-td-reset, table.md-table-base colgroup.md-td-hover td:hover.md-td-reset {
@@ -4557,7 +4757,7 @@ table.md-table-base tr.md-td-hover td:hover.md-td-reset, table.md-table-base col
 }
 
 table.md-table-base tr.is-highlight td, table.md-table-base colgroup.is-highlight td {
-  background-color: #f5f5f5;
+  background-color: #f6f6f6;
 }
 
 table.md-table-base tr.is-highlight.md-td-reset td, table.md-table-base colgroup.is-highlight.md-td-reset td {
@@ -4613,7 +4813,7 @@ table.md-table-base tr .ef-bg-black, table.md-table-base colgroup .ef-bg-black {
 }
 
 table.md-table-base tr .ef-bg-gray, table.md-table-base colgroup .ef-bg-gray {
-  background: #f5f5f5;
+  background: #f6f6f6;
 }
 
 table.md-table-base tr .ef-bg-gray1, table.md-table-base colgroup .ef-bg-gray1 {
@@ -4648,1693 +4848,1363 @@ table.md-table-base tr .ef-bg-theme, table.md-table-base colgroup .ef-bg-theme {
   background: #485169;
 }
 
-table.md-table-base tr .md-brd0, table.md-table-base colgroup .md-brd0 {
-  border-width: 0;
-  border-style: solid;
-  border-color: #ccc;
-}
-
-table.md-table-base tr .md-brd1, table.md-table-base colgroup .md-brd1 {
+table.md-table-base tr.ef-brd1 th, table.md-table-base tr.ef-brd1 td, table.md-table-base colgroup.ef-brd1 th, table.md-table-base colgroup.ef-brd1 td {
   border-width: 1px;
   border-style: solid;
   border-color: #ccc;
 }
 
-table.md-table-base tr .md-brd2, table.md-table-base colgroup .md-brd2 {
+table.md-table-base tr.ef-brd2 th, table.md-table-base tr.ef-brd2 td, table.md-table-base colgroup.ef-brd2 th, table.md-table-base colgroup.ef-brd2 td {
   border-width: 2px;
   border-style: solid;
   border-color: #ccc;
 }
 
-table.md-table-base tr .md-brd3, table.md-table-base colgroup .md-brd3 {
+table.md-table-base tr.ef-brd3 th, table.md-table-base tr.ef-brd3 td, table.md-table-base colgroup.ef-brd3 th, table.md-table-base colgroup.ef-brd3 td {
   border-width: 3px;
   border-style: solid;
   border-color: #ccc;
 }
 
-table.md-table-base tr .md-brd0-top, table.md-table-base colgroup .md-brd0-top {
-  border-top-width: 0;
-  border-top-style: solid;
-  border-top-color: #ccc;
-}
-
-table.md-table-base tr .md-brd1-top, table.md-table-base colgroup .md-brd1-top {
+table.md-table-base tr.ef-brd1-top th, table.md-table-base tr.ef-brd1-top td, table.md-table-base colgroup.ef-brd1-top th, table.md-table-base colgroup.ef-brd1-top td {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #ccc;
 }
 
-table.md-table-base tr .md-brd2-top, table.md-table-base colgroup .md-brd2-top {
+table.md-table-base tr.ef-brd2-top th, table.md-table-base tr.ef-brd2-top td, table.md-table-base colgroup.ef-brd2-top th, table.md-table-base colgroup.ef-brd2-top td {
   border-top-width: 2px;
   border-top-style: solid;
   border-top-color: #ccc;
 }
 
-table.md-table-base tr .md-brd3-top, table.md-table-base colgroup .md-brd3-top {
+table.md-table-base tr.ef-brd3-top th, table.md-table-base tr.ef-brd3-top td, table.md-table-base colgroup.ef-brd3-top th, table.md-table-base colgroup.ef-brd3-top td {
   border-top-width: 3px;
   border-top-style: solid;
   border-top-color: #ccc;
 }
 
-table.md-table-base tr .md-brd0-right, table.md-table-base colgroup .md-brd0-right {
-  border-right-width: 0;
-  border-right-style: solid;
-  border-right-color: #ccc;
-}
-
-table.md-table-base tr .md-brd1-right, table.md-table-base colgroup .md-brd1-right {
+table.md-table-base tr.ef-brd1-right th, table.md-table-base tr.ef-brd1-right td, table.md-table-base colgroup.ef-brd1-right th, table.md-table-base colgroup.ef-brd1-right td {
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr .md-brd2-right, table.md-table-base colgroup .md-brd2-right {
+table.md-table-base tr.ef-brd2-right th, table.md-table-base tr.ef-brd2-right td, table.md-table-base colgroup.ef-brd2-right th, table.md-table-base colgroup.ef-brd2-right td {
   border-right-width: 2px;
   border-right-style: solid;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr .md-brd3-right, table.md-table-base colgroup .md-brd3-right {
+table.md-table-base tr.ef-brd3-right th, table.md-table-base tr.ef-brd3-right td, table.md-table-base colgroup.ef-brd3-right th, table.md-table-base colgroup.ef-brd3-right td {
   border-right-width: 3px;
   border-right-style: solid;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr .md-brd0-bottom, table.md-table-base colgroup .md-brd0-bottom {
-  border-bottom-width: 0;
-  border-bottom-style: solid;
-  border-bottom-color: #ccc;
-}
-
-table.md-table-base tr .md-brd1-bottom, table.md-table-base colgroup .md-brd1-bottom {
+table.md-table-base tr.ef-brd1-bottom th, table.md-table-base tr.ef-brd1-bottom td, table.md-table-base colgroup.ef-brd1-bottom th, table.md-table-base colgroup.ef-brd1-bottom td {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #ccc;
 }
 
-table.md-table-base tr .md-brd2-bottom, table.md-table-base colgroup .md-brd2-bottom {
+table.md-table-base tr.ef-brd2-bottom th, table.md-table-base tr.ef-brd2-bottom td, table.md-table-base colgroup.ef-brd2-bottom th, table.md-table-base colgroup.ef-brd2-bottom td {
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: #ccc;
 }
 
-table.md-table-base tr .md-brd3-bottom, table.md-table-base colgroup .md-brd3-bottom {
+table.md-table-base tr.ef-brd3-bottom th, table.md-table-base tr.ef-brd3-bottom td, table.md-table-base colgroup.ef-brd3-bottom th, table.md-table-base colgroup.ef-brd3-bottom td {
   border-bottom-width: 3px;
   border-bottom-style: solid;
   border-bottom-color: #ccc;
 }
 
-table.md-table-base tr .md-brd0-left, table.md-table-base colgroup .md-brd0-left {
-  border-left-width: 0;
-  border-left-style: solid;
-  border-left-color: #ccc;
-}
-
-table.md-table-base tr .md-brd1-left, table.md-table-base colgroup .md-brd1-left {
+table.md-table-base tr.ef-brd1-left th, table.md-table-base tr.ef-brd1-left td, table.md-table-base colgroup.ef-brd1-left th, table.md-table-base colgroup.ef-brd1-left td {
   border-left-width: 1px;
   border-left-style: solid;
   border-left-color: #ccc;
 }
 
-table.md-table-base tr .md-brd2-left, table.md-table-base colgroup .md-brd2-left {
+table.md-table-base tr.ef-brd2-left th, table.md-table-base tr.ef-brd2-left td, table.md-table-base colgroup.ef-brd2-left th, table.md-table-base colgroup.ef-brd2-left td {
   border-left-width: 2px;
   border-left-style: solid;
   border-left-color: #ccc;
 }
 
-table.md-table-base tr .md-brd3-left, table.md-table-base colgroup .md-brd3-left {
+table.md-table-base tr.ef-brd3-left th, table.md-table-base tr.ef-brd3-left td, table.md-table-base colgroup.ef-brd3-left th, table.md-table-base colgroup.ef-brd3-left td {
   border-left-width: 3px;
   border-left-style: solid;
   border-left-color: #ccc;
 }
 
-table.md-table-base tr.md-brd0 th, table.md-table-base tr.md-brd0 td, table.md-table-base colgroup.md-brd0 th, table.md-table-base colgroup.md-brd0 td {
-  border-width: 0;
-  border-style: solid;
-  border-color: #ccc;
-}
-
-table.md-table-base tr.md-brd1 th, table.md-table-base tr.md-brd1 td, table.md-table-base colgroup.md-brd1 th, table.md-table-base colgroup.md-brd1 td {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #ccc;
-}
-
-table.md-table-base tr.md-brd2 th, table.md-table-base tr.md-brd2 td, table.md-table-base colgroup.md-brd2 th, table.md-table-base colgroup.md-brd2 td {
-  border-width: 2px;
-  border-style: solid;
-  border-color: #ccc;
-}
-
-table.md-table-base tr.md-brd3 th, table.md-table-base tr.md-brd3 td, table.md-table-base colgroup.md-brd3 th, table.md-table-base colgroup.md-brd3 td {
-  border-width: 3px;
-  border-style: solid;
-  border-color: #ccc;
-}
-
-table.md-table-base tr.md-brd0-top th, table.md-table-base tr.md-brd0-top td, table.md-table-base colgroup.md-brd0-top th, table.md-table-base colgroup.md-brd0-top td {
-  border-top-width: 0;
-  border-top-style: #ccc;
-  border-top-color: #ccc;
-}
-
-table.md-table-base tr.md-brd1-top th, table.md-table-base tr.md-brd1-top td, table.md-table-base colgroup.md-brd1-top th, table.md-table-base colgroup.md-brd1-top td {
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: #ccc;
-}
-
-table.md-table-base tr.md-brd2-top th, table.md-table-base tr.md-brd2-top td, table.md-table-base colgroup.md-brd2-top th, table.md-table-base colgroup.md-brd2-top td {
-  border-top-width: 2px;
-  border-top-style: solid;
-  border-top-color: #ccc;
-}
-
-table.md-table-base tr.md-brd3-top th, table.md-table-base tr.md-brd3-top td, table.md-table-base colgroup.md-brd3-top th, table.md-table-base colgroup.md-brd3-top td {
-  border-top-width: 3px;
-  border-top-style: solid;
-  border-top-color: #ccc;
-}
-
-table.md-table-base tr.md-brd0-right th, table.md-table-base tr.md-brd0-right td, table.md-table-base colgroup.md-brd0-right th, table.md-table-base colgroup.md-brd0-right td {
-  border-right-width: 0;
-  border-right-style: #ccc;
-  border-right-color: #ccc;
-}
-
-table.md-table-base tr.md-brd1-right th, table.md-table-base tr.md-brd1-right td, table.md-table-base colgroup.md-brd1-right th, table.md-table-base colgroup.md-brd1-right td {
-  border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: #ccc;
-}
-
-table.md-table-base tr.md-brd2-right th, table.md-table-base tr.md-brd2-right td, table.md-table-base colgroup.md-brd2-right th, table.md-table-base colgroup.md-brd2-right td {
-  border-right-width: 2px;
-  border-right-style: solid;
-  border-right-color: #ccc;
-}
-
-table.md-table-base tr.md-brd3-right th, table.md-table-base tr.md-brd3-right td, table.md-table-base colgroup.md-brd3-right th, table.md-table-base colgroup.md-brd3-right td {
-  border-right-width: 3px;
-  border-right-style: solid;
-  border-right-color: #ccc;
-}
-
-table.md-table-base tr.md-brd0-bottom th, table.md-table-base tr.md-brd0-bottom td, table.md-table-base colgroup.md-brd0-bottom th, table.md-table-base colgroup.md-brd0-bottom td {
-  border-bottom-width: 0;
-  border-bottom-style: solid;
-  border-bottom-color: #ccc;
-}
-
-table.md-table-base tr.md-brd1-bottom th, table.md-table-base tr.md-brd1-bottom td, table.md-table-base colgroup.md-brd1-bottom th, table.md-table-base colgroup.md-brd1-bottom td {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #ccc;
-}
-
-table.md-table-base tr.md-brd2-bottom th, table.md-table-base tr.md-brd2-bottom td, table.md-table-base colgroup.md-brd2-bottom th, table.md-table-base colgroup.md-brd2-bottom td {
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #ccc;
-}
-
-table.md-table-base tr.md-brd3-bottom th, table.md-table-base tr.md-brd3-bottom td, table.md-table-base colgroup.md-brd3-bottom th, table.md-table-base colgroup.md-brd3-bottom td {
-  border-bottom-width: 3px;
-  border-bottom-style: solid;
-  border-bottom-color: #ccc;
-}
-
-table.md-table-base tr.md-brd0-left th, table.md-table-base tr.md-brd0-left td, table.md-table-base colgroup.md-brd0-left th, table.md-table-base colgroup.md-brd0-left td {
-  border-left-width: 0;
-  border-left-style: solid;
-  border-left-color: #ccc;
-}
-
-table.md-table-base tr.md-brd1-left th, table.md-table-base tr.md-brd1-left td, table.md-table-base colgroup.md-brd1-left th, table.md-table-base colgroup.md-brd1-left td {
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: #ccc;
-}
-
-table.md-table-base tr.md-brd2-left th, table.md-table-base tr.md-brd2-left td, table.md-table-base colgroup.md-brd2-left th, table.md-table-base colgroup.md-brd2-left td {
-  border-left-width: 2px;
-  border-left-style: solid;
-  border-left-color: #ccc;
-}
-
-table.md-table-base tr.md-brd3-left th, table.md-table-base tr.md-brd3-left td, table.md-table-base colgroup.md-brd3-left th, table.md-table-base colgroup.md-brd3-left td {
-  border-left-width: 3px;
-  border-left-style: solid;
-  border-left-color: #ccc;
-}
-
-table.md-table-base tr .md-brd1-theme, table.md-table-base colgroup .md-brd1-theme {
+table.md-table-base tr.ef-brd1-theme th, table.md-table-base tr.ef-brd1-theme td, table.md-table-base colgroup.ef-brd1-theme th, table.md-table-base colgroup.ef-brd1-theme td {
   border-width: 1px;
   border-style: solid;
   border-color: #485169;
 }
 
-table.md-table-base tr .md-brd2-theme, table.md-table-base colgroup .md-brd2-theme {
+table.md-table-base tr.ef-brd2-theme th, table.md-table-base tr.ef-brd2-theme td, table.md-table-base colgroup.ef-brd2-theme th, table.md-table-base colgroup.ef-brd2-theme td {
   border-width: 2px;
   border-style: solid;
   border-color: #485169;
 }
 
-table.md-table-base tr .md-brd3-theme, table.md-table-base colgroup .md-brd3-theme {
+table.md-table-base tr.ef-brd3-theme th, table.md-table-base tr.ef-brd3-theme td, table.md-table-base colgroup.ef-brd3-theme th, table.md-table-base colgroup.ef-brd3-theme td {
   border-width: 3px;
   border-style: solid;
   border-color: #485169;
 }
 
-table.md-table-base tr .md-brd1-top-theme, table.md-table-base colgroup .md-brd1-top-theme {
+table.md-table-base tr.ef-brd1-top-theme th, table.md-table-base tr.ef-brd1-top-theme td, table.md-table-base colgroup.ef-brd1-top-theme th, table.md-table-base colgroup.ef-brd1-top-theme td {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #485169;
 }
 
-table.md-table-base tr .md-brd2-top-theme, table.md-table-base colgroup .md-brd2-top-theme {
+table.md-table-base tr.ef-brd2-top-theme th, table.md-table-base tr.ef-brd2-top-theme td, table.md-table-base colgroup.ef-brd2-top-theme th, table.md-table-base colgroup.ef-brd2-top-theme td {
   border-top-width: 2px;
   border-top-style: solid;
   border-top-color: #485169;
 }
 
-table.md-table-base tr .md-brd3-top-theme, table.md-table-base colgroup .md-brd3-top-theme {
+table.md-table-base tr.ef-brd3-top-theme th, table.md-table-base tr.ef-brd3-top-theme td, table.md-table-base colgroup.ef-brd3-top-theme th, table.md-table-base colgroup.ef-brd3-top-theme td {
   border-top-width: 3px;
   border-top-style: solid;
   border-top-color: #485169;
 }
 
-table.md-table-base tr .md-brd1-right-theme, table.md-table-base colgroup .md-brd1-right-theme {
+table.md-table-base tr.ef-brd1-right-theme th, table.md-table-base tr.ef-brd1-right-theme td, table.md-table-base colgroup.ef-brd1-right-theme th, table.md-table-base colgroup.ef-brd1-right-theme td {
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #485169;
 }
 
-table.md-table-base tr .md-brd2-right-theme, table.md-table-base colgroup .md-brd2-right-theme {
+table.md-table-base tr.ef-brd2-right-theme th, table.md-table-base tr.ef-brd2-right-theme td, table.md-table-base colgroup.ef-brd2-right-theme th, table.md-table-base colgroup.ef-brd2-right-theme td {
   border-right-width: 2px;
   border-right-style: solid;
   border-right-color: #485169;
 }
 
-table.md-table-base tr .md-brd3-right-theme, table.md-table-base colgroup .md-brd3-right-theme {
+table.md-table-base tr.ef-brd3-right-theme th, table.md-table-base tr.ef-brd3-right-theme td, table.md-table-base colgroup.ef-brd3-right-theme th, table.md-table-base colgroup.ef-brd3-right-theme td {
   border-right-width: 3px;
   border-right-style: solid;
   border-right-color: #485169;
 }
 
-table.md-table-base tr .md-brd1-bottom-theme, table.md-table-base colgroup .md-brd1-bottom-theme {
+table.md-table-base tr.ef-brd1-bottom-theme th, table.md-table-base tr.ef-brd1-bottom-theme td, table.md-table-base colgroup.ef-brd1-bottom-theme th, table.md-table-base colgroup.ef-brd1-bottom-theme td {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #485169;
 }
 
-table.md-table-base tr .md-brd2-bottom-theme, table.md-table-base colgroup .md-brd2-bottom-theme {
+table.md-table-base tr.ef-brd2-bottom-theme th, table.md-table-base tr.ef-brd2-bottom-theme td, table.md-table-base colgroup.ef-brd2-bottom-theme th, table.md-table-base colgroup.ef-brd2-bottom-theme td {
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: #485169;
 }
 
-table.md-table-base tr .md-brd3-bottom-theme, table.md-table-base colgroup .md-brd3-bottom-theme {
+table.md-table-base tr.ef-brd3-bottom-theme th, table.md-table-base tr.ef-brd3-bottom-theme td, table.md-table-base colgroup.ef-brd3-bottom-theme th, table.md-table-base colgroup.ef-brd3-bottom-theme td {
   border-bottom-width: 3px;
   border-bottom-style: solid;
   border-bottom-color: #485169;
 }
 
-table.md-table-base tr .md-brd1-left-theme, table.md-table-base colgroup .md-brd1-left-theme {
+table.md-table-base tr.ef-brd1-left-theme th, table.md-table-base tr.ef-brd1-left-theme td, table.md-table-base colgroup.ef-brd1-left-theme th, table.md-table-base colgroup.ef-brd1-left-theme td {
   border-left-width: 1px;
   border-left-style: solid;
   border-left-color: #485169;
 }
 
-table.md-table-base tr .md-brd2-left-theme, table.md-table-base colgroup .md-brd2-left-theme {
+table.md-table-base tr.ef-brd2-left-theme th, table.md-table-base tr.ef-brd2-left-theme td, table.md-table-base colgroup.ef-brd2-left-theme th, table.md-table-base colgroup.ef-brd2-left-theme td {
   border-left-width: 2px;
   border-left-style: solid;
   border-left-color: #485169;
 }
 
-table.md-table-base tr .md-brd3-left-theme, table.md-table-base colgroup .md-brd3-left-theme {
+table.md-table-base tr.ef-brd3-left-theme th, table.md-table-base tr.ef-brd3-left-theme td, table.md-table-base colgroup.ef-brd3-left-theme th, table.md-table-base colgroup.ef-brd3-left-theme td {
   border-left-width: 3px;
   border-left-style: solid;
   border-left-color: #485169;
 }
 
-table.md-table-base tr.md-brd1-theme th, table.md-table-base tr.md-brd1-theme td, table.md-table-base colgroup.md-brd1-theme th, table.md-table-base colgroup.md-brd1-theme td {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #485169;
-}
-
-table.md-table-base tr.md-brd2-theme th, table.md-table-base tr.md-brd2-theme td, table.md-table-base colgroup.md-brd2-theme th, table.md-table-base colgroup.md-brd2-theme td {
-  border-width: 2px;
-  border-style: solid;
-  border-color: #485169;
-}
-
-table.md-table-base tr.md-brd3-theme th, table.md-table-base tr.md-brd3-theme td, table.md-table-base colgroup.md-brd3-theme th, table.md-table-base colgroup.md-brd3-theme td {
-  border-width: 3px;
-  border-style: solid;
-  border-color: #485169;
-}
-
-table.md-table-base tr.md-brd1-top-theme th, table.md-table-base tr.md-brd1-top-theme td, table.md-table-base colgroup.md-brd1-top-theme th, table.md-table-base colgroup.md-brd1-top-theme td {
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: #485169;
-}
-
-table.md-table-base tr.md-brd2-top-theme th, table.md-table-base tr.md-brd2-top-theme td, table.md-table-base colgroup.md-brd2-top-theme th, table.md-table-base colgroup.md-brd2-top-theme td {
-  border-top-width: 2px;
-  border-top-style: solid;
-  border-top-color: #485169;
-}
-
-table.md-table-base tr.md-brd3-top-theme th, table.md-table-base tr.md-brd3-top-theme td, table.md-table-base colgroup.md-brd3-top-theme th, table.md-table-base colgroup.md-brd3-top-theme td {
-  border-top-width: 3px;
-  border-top-style: solid;
-  border-top-color: #485169;
-}
-
-table.md-table-base tr.md-brd1-right-theme th, table.md-table-base tr.md-brd1-right-theme td, table.md-table-base colgroup.md-brd1-right-theme th, table.md-table-base colgroup.md-brd1-right-theme td {
-  border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: #485169;
-}
-
-table.md-table-base tr.md-brd2-right-theme th, table.md-table-base tr.md-brd2-right-theme td, table.md-table-base colgroup.md-brd2-right-theme th, table.md-table-base colgroup.md-brd2-right-theme td {
-  border-right-width: 2px;
-  border-right-style: solid;
-  border-right-color: #485169;
-}
-
-table.md-table-base tr.md-brd3-right-theme th, table.md-table-base tr.md-brd3-right-theme td, table.md-table-base colgroup.md-brd3-right-theme th, table.md-table-base colgroup.md-brd3-right-theme td {
-  border-right-width: 3px;
-  border-right-style: solid;
-  border-right-color: #485169;
-}
-
-table.md-table-base tr.md-brd1-bottom-theme th, table.md-table-base tr.md-brd1-bottom-theme td, table.md-table-base colgroup.md-brd1-bottom-theme th, table.md-table-base colgroup.md-brd1-bottom-theme td {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #485169;
-}
-
-table.md-table-base tr.md-brd2-bottom-theme th, table.md-table-base tr.md-brd2-bottom-theme td, table.md-table-base colgroup.md-brd2-bottom-theme th, table.md-table-base colgroup.md-brd2-bottom-theme td {
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #485169;
-}
-
-table.md-table-base tr.md-brd3-bottom-theme th, table.md-table-base tr.md-brd3-bottom-theme td, table.md-table-base colgroup.md-brd3-bottom-theme th, table.md-table-base colgroup.md-brd3-bottom-theme td {
-  border-bottom-width: 3px;
-  border-bottom-style: solid;
-  border-bottom-color: #485169;
-}
-
-table.md-table-base tr.md-brd1-left-theme th, table.md-table-base tr.md-brd1-left-theme td, table.md-table-base colgroup.md-brd1-left-theme th, table.md-table-base colgroup.md-brd1-left-theme td {
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: #485169;
-}
-
-table.md-table-base tr.md-brd2-left-theme th, table.md-table-base tr.md-brd2-left-theme td, table.md-table-base colgroup.md-brd2-left-theme th, table.md-table-base colgroup.md-brd2-left-theme td {
-  border-left-width: 2px;
-  border-left-style: solid;
-  border-left-color: #485169;
-}
-
-table.md-table-base tr.md-brd3-left-theme th, table.md-table-base tr.md-brd3-left-theme td, table.md-table-base colgroup.md-brd3-left-theme th, table.md-table-base colgroup.md-brd3-left-theme td {
-  border-left-width: 3px;
-  border-left-style: solid;
-  border-left-color: #485169;
-}
-
-table.md-table-base tr .md-brd1-red, table.md-table-base colgroup .md-brd1-red {
+table.md-table-base tr.ef-brd1-red th, table.md-table-base tr.ef-brd1-red td, table.md-table-base colgroup.ef-brd1-red th, table.md-table-base colgroup.ef-brd1-red td {
   border-width: 1px;
   border-style: solid;
   border-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd2-red, table.md-table-base colgroup .md-brd2-red {
+table.md-table-base tr.ef-brd2-red th, table.md-table-base tr.ef-brd2-red td, table.md-table-base colgroup.ef-brd2-red th, table.md-table-base colgroup.ef-brd2-red td {
   border-width: 2px;
   border-style: solid;
   border-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd3-red, table.md-table-base colgroup .md-brd3-red {
+table.md-table-base tr.ef-brd3-red th, table.md-table-base tr.ef-brd3-red td, table.md-table-base colgroup.ef-brd3-red th, table.md-table-base colgroup.ef-brd3-red td {
   border-width: 3px;
   border-style: solid;
   border-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd1-top-red, table.md-table-base colgroup .md-brd1-top-red {
+table.md-table-base tr.ef-brd1-top-red th, table.md-table-base tr.ef-brd1-top-red td, table.md-table-base colgroup.ef-brd1-top-red th, table.md-table-base colgroup.ef-brd1-top-red td {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd2-top-red, table.md-table-base colgroup .md-brd2-top-red {
+table.md-table-base tr.ef-brd2-top-red th, table.md-table-base tr.ef-brd2-top-red td, table.md-table-base colgroup.ef-brd2-top-red th, table.md-table-base colgroup.ef-brd2-top-red td {
   border-top-width: 2px;
   border-top-style: solid;
   border-top-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd3-top-red, table.md-table-base colgroup .md-brd3-top-red {
+table.md-table-base tr.ef-brd3-top-red th, table.md-table-base tr.ef-brd3-top-red td, table.md-table-base colgroup.ef-brd3-top-red th, table.md-table-base colgroup.ef-brd3-top-red td {
   border-top-width: 3px;
   border-top-style: solid;
   border-top-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd1-right-red, table.md-table-base colgroup .md-brd1-right-red {
+table.md-table-base tr.ef-brd1-right-red th, table.md-table-base tr.ef-brd1-right-red td, table.md-table-base colgroup.ef-brd1-right-red th, table.md-table-base colgroup.ef-brd1-right-red td {
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd2-right-red, table.md-table-base colgroup .md-brd2-right-red {
+table.md-table-base tr.ef-brd2-right-red th, table.md-table-base tr.ef-brd2-right-red td, table.md-table-base colgroup.ef-brd2-right-red th, table.md-table-base colgroup.ef-brd2-right-red td {
   border-right-width: 2px;
   border-right-style: solid;
   border-right-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd3-right-red, table.md-table-base colgroup .md-brd3-right-red {
+table.md-table-base tr.ef-brd3-right-red th, table.md-table-base tr.ef-brd3-right-red td, table.md-table-base colgroup.ef-brd3-right-red th, table.md-table-base colgroup.ef-brd3-right-red td {
   border-right-width: 3px;
   border-right-style: solid;
   border-right-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd1-bottom-red, table.md-table-base colgroup .md-brd1-bottom-red {
+table.md-table-base tr.ef-brd1-bottom-red th, table.md-table-base tr.ef-brd1-bottom-red td, table.md-table-base colgroup.ef-brd1-bottom-red th, table.md-table-base colgroup.ef-brd1-bottom-red td {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd2-bottom-red, table.md-table-base colgroup .md-brd2-bottom-red {
+table.md-table-base tr.ef-brd2-bottom-red th, table.md-table-base tr.ef-brd2-bottom-red td, table.md-table-base colgroup.ef-brd2-bottom-red th, table.md-table-base colgroup.ef-brd2-bottom-red td {
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd3-bottom-red, table.md-table-base colgroup .md-brd3-bottom-red {
+table.md-table-base tr.ef-brd3-bottom-red th, table.md-table-base tr.ef-brd3-bottom-red td, table.md-table-base colgroup.ef-brd3-bottom-red th, table.md-table-base colgroup.ef-brd3-bottom-red td {
   border-bottom-width: 3px;
   border-bottom-style: solid;
   border-bottom-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd1-left-red, table.md-table-base colgroup .md-brd1-left-red {
+table.md-table-base tr.ef-brd1-left-red th, table.md-table-base tr.ef-brd1-left-red td, table.md-table-base colgroup.ef-brd1-left-red th, table.md-table-base colgroup.ef-brd1-left-red td {
   border-left-width: 1px;
   border-left-style: solid;
   border-left-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd2-left-red, table.md-table-base colgroup .md-brd2-left-red {
+table.md-table-base tr.ef-brd2-left-red th, table.md-table-base tr.ef-brd2-left-red td, table.md-table-base colgroup.ef-brd2-left-red th, table.md-table-base colgroup.ef-brd2-left-red td {
   border-left-width: 2px;
   border-left-style: solid;
   border-left-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd3-left-red, table.md-table-base colgroup .md-brd3-left-red {
+table.md-table-base tr.ef-brd3-left-red th, table.md-table-base tr.ef-brd3-left-red td, table.md-table-base colgroup.ef-brd3-left-red th, table.md-table-base colgroup.ef-brd3-left-red td {
   border-left-width: 3px;
   border-left-style: solid;
   border-left-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd1-red th, table.md-table-base tr.md-brd1-red td, table.md-table-base colgroup.md-brd1-red th, table.md-table-base colgroup.md-brd1-red td {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #cc3300;
-}
-
-table.md-table-base tr.md-brd2-red th, table.md-table-base tr.md-brd2-red td, table.md-table-base colgroup.md-brd2-red th, table.md-table-base colgroup.md-brd2-red td {
-  border-width: 2px;
-  border-style: solid;
-  border-color: #cc3300;
-}
-
-table.md-table-base tr.md-brd3-red th, table.md-table-base tr.md-brd3-red td, table.md-table-base colgroup.md-brd3-red th, table.md-table-base colgroup.md-brd3-red td {
-  border-width: 3px;
-  border-style: solid;
-  border-color: #cc3300;
-}
-
-table.md-table-base tr.md-brd1-top-red th, table.md-table-base tr.md-brd1-top-red td, table.md-table-base colgroup.md-brd1-top-red th, table.md-table-base colgroup.md-brd1-top-red td {
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: #cc3300;
-}
-
-table.md-table-base tr.md-brd2-top-red th, table.md-table-base tr.md-brd2-top-red td, table.md-table-base colgroup.md-brd2-top-red th, table.md-table-base colgroup.md-brd2-top-red td {
-  border-top-width: 2px;
-  border-top-style: solid;
-  border-top-color: #cc3300;
-}
-
-table.md-table-base tr.md-brd3-top-red th, table.md-table-base tr.md-brd3-top-red td, table.md-table-base colgroup.md-brd3-top-red th, table.md-table-base colgroup.md-brd3-top-red td {
-  border-top-width: 3px;
-  border-top-style: solid;
-  border-top-color: #cc3300;
-}
-
-table.md-table-base tr.md-brd1-right-red th, table.md-table-base tr.md-brd1-right-red td, table.md-table-base colgroup.md-brd1-right-red th, table.md-table-base colgroup.md-brd1-right-red td {
-  border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: #cc3300;
-}
-
-table.md-table-base tr.md-brd2-right-red th, table.md-table-base tr.md-brd2-right-red td, table.md-table-base colgroup.md-brd2-right-red th, table.md-table-base colgroup.md-brd2-right-red td {
-  border-right-width: 2px;
-  border-right-style: solid;
-  border-right-color: #cc3300;
-}
-
-table.md-table-base tr.md-brd3-right-red th, table.md-table-base tr.md-brd3-right-red td, table.md-table-base colgroup.md-brd3-right-red th, table.md-table-base colgroup.md-brd3-right-red td {
-  border-right-width: 3px;
-  border-right-style: solid;
-  border-right-color: #cc3300;
-}
-
-table.md-table-base tr.md-brd1-bottom-red th, table.md-table-base tr.md-brd1-bottom-red td, table.md-table-base colgroup.md-brd1-bottom-red th, table.md-table-base colgroup.md-brd1-bottom-red td {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #cc3300;
-}
-
-table.md-table-base tr.md-brd2-bottom-red th, table.md-table-base tr.md-brd2-bottom-red td, table.md-table-base colgroup.md-brd2-bottom-red th, table.md-table-base colgroup.md-brd2-bottom-red td {
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #cc3300;
-}
-
-table.md-table-base tr.md-brd3-bottom-red th, table.md-table-base tr.md-brd3-bottom-red td, table.md-table-base colgroup.md-brd3-bottom-red th, table.md-table-base colgroup.md-brd3-bottom-red td {
-  border-bottom-width: 3px;
-  border-bottom-style: solid;
-  border-bottom-color: #cc3300;
-}
-
-table.md-table-base tr.md-brd1-left-red th, table.md-table-base tr.md-brd1-left-red td, table.md-table-base colgroup.md-brd1-left-red th, table.md-table-base colgroup.md-brd1-left-red td {
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: #cc3300;
-}
-
-table.md-table-base tr.md-brd2-left-red th, table.md-table-base tr.md-brd2-left-red td, table.md-table-base colgroup.md-brd2-left-red th, table.md-table-base colgroup.md-brd2-left-red td {
-  border-left-width: 2px;
-  border-left-style: solid;
-  border-left-color: #cc3300;
-}
-
-table.md-table-base tr.md-brd3-left-red th, table.md-table-base tr.md-brd3-left-red td, table.md-table-base colgroup.md-brd3-left-red th, table.md-table-base colgroup.md-brd3-left-red td {
-  border-left-width: 3px;
-  border-left-style: solid;
-  border-left-color: #cc3300;
-}
-
-table.md-table-base tr .md-brd1-dotted, table.md-table-base colgroup .md-brd1-dotted {
+table.md-table-base tr .ef-brd1-dotted, table.md-table-base colgroup .ef-brd1-dotted {
   border-width: 1px;
   border-style: dotted;
   border-color: #ccc;
 }
 
-table.md-table-base tr .md-brd2-dotted, table.md-table-base colgroup .md-brd2-dotted {
+table.md-table-base tr .ef-brd2-dotted, table.md-table-base colgroup .ef-brd2-dotted {
   border-width: 2px;
   border-style: dotted;
   border-color: #ccc;
 }
 
-table.md-table-base tr .md-brd3-dotted, table.md-table-base colgroup .md-brd3-dotted {
+table.md-table-base tr .ef-brd3-dotted, table.md-table-base colgroup .ef-brd3-dotted {
   border-width: 3px;
   border-style: dotted;
   border-color: #ccc;
 }
 
-table.md-table-base tr .md-brd1-top-dotted, table.md-table-base colgroup .md-brd1-top-dotted {
+table.md-table-base tr .ef-brd1-top-dotted, table.md-table-base colgroup .ef-brd1-top-dotted {
   border-top-width: 1px;
   border-top-style: dotted;
   border-top-color: #ccc;
 }
 
-table.md-table-base tr .md-brd2-top-dotted, table.md-table-base colgroup .md-brd2-top-dotted {
+table.md-table-base tr .ef-brd2-top-dotted, table.md-table-base colgroup .ef-brd2-top-dotted {
   border-top-width: 2px;
   border-top-style: dotted;
   border-top-color: #ccc;
 }
 
-table.md-table-base tr .md-brd3-top-dotted, table.md-table-base colgroup .md-brd3-top-dotted {
+table.md-table-base tr .ef-brd3-top-dotted, table.md-table-base colgroup .ef-brd3-top-dotted {
   border-top-width: 3px;
   border-top-style: dotted;
   border-top-color: #ccc;
 }
 
-table.md-table-base tr .md-brd1-right-dotted, table.md-table-base colgroup .md-brd1-right-dotted {
+table.md-table-base tr .ef-brd1-right-dotted, table.md-table-base colgroup .ef-brd1-right-dotted {
   border-right-width: 1px;
   border-right-style: dotted;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr .md-brd2-right-dotted, table.md-table-base colgroup .md-brd2-right-dotted {
+table.md-table-base tr .ef-brd2-right-dotted, table.md-table-base colgroup .ef-brd2-right-dotted {
   border-right-width: 2px;
   border-right-style: dotted;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr .md-brd3-right-dotted, table.md-table-base colgroup .md-brd3-right-dotted {
+table.md-table-base tr .ef-brd3-right-dotted, table.md-table-base colgroup .ef-brd3-right-dotted {
   border-right-width: 3px;
   border-right-style: dotted;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr .md-brd1-bottom-dotted, table.md-table-base colgroup .md-brd1-bottom-dotted {
+table.md-table-base tr .ef-brd1-bottom-dotted, table.md-table-base colgroup .ef-brd1-bottom-dotted {
   border-bottom-width: 1px;
   border-bottom-style: dotted;
   border-bottom-color: #ccc;
 }
 
-table.md-table-base tr .md-brd2-bottom-dotted, table.md-table-base colgroup .md-brd2-bottom-dotted {
+table.md-table-base tr .ef-brd2-bottom-dotted, table.md-table-base colgroup .ef-brd2-bottom-dotted {
   border-bottom-width: 2px;
   border-bottom-style: dotted;
   border-bottom-color: #ccc;
 }
 
-table.md-table-base tr .md-brd3-bottom-dotted, table.md-table-base colgroup .md-brd3-bottom-dotted {
+table.md-table-base tr .ef-brd3-bottom-dotted, table.md-table-base colgroup .ef-brd3-bottom-dotted {
   border-bottom-width: 3px;
   border-bottom-style: dotted;
   border-bottom-color: #ccc;
 }
 
-table.md-table-base tr .md-brd1-left-dotted, table.md-table-base colgroup .md-brd1-left-dotted {
+table.md-table-base tr .ef-brd1-left-dotted, table.md-table-base colgroup .ef-brd1-left-dotted {
   border-left-width: 1px;
   border-left-style: dotted;
   border-left-color: #ccc;
 }
 
-table.md-table-base tr .md-brd2-left-dotted, table.md-table-base colgroup .md-brd2-left-dotted {
+table.md-table-base tr .ef-brd2-left-dotted, table.md-table-base colgroup .ef-brd2-left-dotted {
   border-left-width: 2px;
   border-left-style: dotted;
   border-left-color: #ccc;
 }
 
-table.md-table-base tr .md-brd3-left-dotted, table.md-table-base colgroup .md-brd3-left-dotted {
+table.md-table-base tr .ef-brd3-left-dotted, table.md-table-base colgroup .ef-brd3-left-dotted {
   border-left-width: 3px;
   border-left-style: dotted;
   border-left-color: #ccc;
 }
 
-table.md-table-base tr.md-brd1-dotted th, table.md-table-base tr.md-brd1-dotted td, table.md-table-base colgroup.md-brd1-dotted th, table.md-table-base colgroup.md-brd1-dotted td {
+table.md-table-base tr.ef-brd1-dotted th, table.md-table-base tr.ef-brd1-dotted td, table.md-table-base colgroup.ef-brd1-dotted th, table.md-table-base colgroup.ef-brd1-dotted td {
   border-width: 1px;
   border-style: dotted;
   border-color: #ccc;
 }
 
-table.md-table-base tr.md-brd2-dotted th, table.md-table-base tr.md-brd2-dotted td, table.md-table-base colgroup.md-brd2-dotted th, table.md-table-base colgroup.md-brd2-dotted td {
+table.md-table-base tr.ef-brd2-dotted th, table.md-table-base tr.ef-brd2-dotted td, table.md-table-base colgroup.ef-brd2-dotted th, table.md-table-base colgroup.ef-brd2-dotted td {
   border-width: 2px;
   border-style: dotted;
   border-color: #ccc;
 }
 
-table.md-table-base tr.md-brd3-dotted th, table.md-table-base tr.md-brd3-dotted td, table.md-table-base colgroup.md-brd3-dotted th, table.md-table-base colgroup.md-brd3-dotted td {
+table.md-table-base tr.ef-brd3-dotted th, table.md-table-base tr.ef-brd3-dotted td, table.md-table-base colgroup.ef-brd3-dotted th, table.md-table-base colgroup.ef-brd3-dotted td {
   border-width: 3px;
   border-style: dotted;
   border-color: #ccc;
 }
 
-table.md-table-base tr.md-brd1-top-dotted th, table.md-table-base tr.md-brd1-top-dotted td, table.md-table-base colgroup.md-brd1-top-dotted th, table.md-table-base colgroup.md-brd1-top-dotted td {
+table.md-table-base tr.ef-brd1-top-dotted th, table.md-table-base tr.ef-brd1-top-dotted td, table.md-table-base colgroup.ef-brd1-top-dotted th, table.md-table-base colgroup.ef-brd1-top-dotted td {
   border-top-width: 1px;
   border-top-style: dotted;
   border-top-color: #ccc;
 }
 
-table.md-table-base tr.md-brd2-top-dotted th, table.md-table-base tr.md-brd2-top-dotted td, table.md-table-base colgroup.md-brd2-top-dotted th, table.md-table-base colgroup.md-brd2-top-dotted td {
+table.md-table-base tr.ef-brd2-top-dotted th, table.md-table-base tr.ef-brd2-top-dotted td, table.md-table-base colgroup.ef-brd2-top-dotted th, table.md-table-base colgroup.ef-brd2-top-dotted td {
   border-top-width: 2px;
   border-top-style: dotted;
   border-top-color: #ccc;
 }
 
-table.md-table-base tr.md-brd3-top-dotted th, table.md-table-base tr.md-brd3-top-dotted td, table.md-table-base colgroup.md-brd3-top-dotted th, table.md-table-base colgroup.md-brd3-top-dotted td {
+table.md-table-base tr.ef-brd3-top-dotted th, table.md-table-base tr.ef-brd3-top-dotted td, table.md-table-base colgroup.ef-brd3-top-dotted th, table.md-table-base colgroup.ef-brd3-top-dotted td {
   border-top-width: 3px;
   border-top-style: dotted;
   border-top-color: #ccc;
 }
 
-table.md-table-base tr.md-brd0-right-dotted th, table.md-table-base tr.md-brd0-right-dotted td, table.md-table-base colgroup.md-brd0-right-dotted th, table.md-table-base colgroup.md-brd0-right-dotted td {
+table.md-table-base tr.ef-brd0-right-dotted th, table.md-table-base tr.ef-brd0-right-dotted td, table.md-table-base colgroup.ef-brd0-right-dotted th, table.md-table-base colgroup.ef-brd0-right-dotted td {
   border-right-width: 0;
   border-right-style: #ccc;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr.md-brd1-right-dotted th, table.md-table-base tr.md-brd1-right-dotted td, table.md-table-base colgroup.md-brd1-right-dotted th, table.md-table-base colgroup.md-brd1-right-dotted td {
+table.md-table-base tr.ef-brd1-right-dotted th, table.md-table-base tr.ef-brd1-right-dotted td, table.md-table-base colgroup.ef-brd1-right-dotted th, table.md-table-base colgroup.ef-brd1-right-dotted td {
   border-right-width: 1px;
   border-right-style: dotted;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr.md-brd2-right-dotted th, table.md-table-base tr.md-brd2-right-dotted td, table.md-table-base colgroup.md-brd2-right-dotted th, table.md-table-base colgroup.md-brd2-right-dotted td {
+table.md-table-base tr.ef-brd2-right-dotted th, table.md-table-base tr.ef-brd2-right-dotted td, table.md-table-base colgroup.ef-brd2-right-dotted th, table.md-table-base colgroup.ef-brd2-right-dotted td {
   border-right-width: 2px;
   border-right-style: dotted;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr.md-brd3-right-dotted th, table.md-table-base tr.md-brd3-right-dotted td, table.md-table-base colgroup.md-brd3-right-dotted th, table.md-table-base colgroup.md-brd3-right-dotted td {
+table.md-table-base tr.ef-brd3-right-dotted th, table.md-table-base tr.ef-brd3-right-dotted td, table.md-table-base colgroup.ef-brd3-right-dotted th, table.md-table-base colgroup.ef-brd3-right-dotted td {
   border-right-width: 3px;
   border-right-style: dotted;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr.md-brd1-bottom-dotted th, table.md-table-base tr.md-brd1-bottom-dotted td, table.md-table-base colgroup.md-brd1-bottom-dotted th, table.md-table-base colgroup.md-brd1-bottom-dotted td {
+table.md-table-base tr.ef-brd1-bottom-dotted th, table.md-table-base tr.ef-brd1-bottom-dotted td, table.md-table-base colgroup.ef-brd1-bottom-dotted th, table.md-table-base colgroup.ef-brd1-bottom-dotted td {
   border-bottom-width: 1px;
   border-bottom-style: dotted;
   border-bottom-color: #ccc;
 }
 
-table.md-table-base tr.md-brd2-bottom-dotted th, table.md-table-base tr.md-brd2-bottom-dotted td, table.md-table-base colgroup.md-brd2-bottom-dotted th, table.md-table-base colgroup.md-brd2-bottom-dotted td {
+table.md-table-base tr.ef-brd2-bottom-dotted th, table.md-table-base tr.ef-brd2-bottom-dotted td, table.md-table-base colgroup.ef-brd2-bottom-dotted th, table.md-table-base colgroup.ef-brd2-bottom-dotted td {
   border-bottom-width: 2px;
   border-bottom-style: dotted;
   border-bottom-color: #ccc;
 }
 
-table.md-table-base tr.md-brd3-bottom-dotted th, table.md-table-base tr.md-brd3-bottom-dotted td, table.md-table-base colgroup.md-brd3-bottom-dotted th, table.md-table-base colgroup.md-brd3-bottom-dotted td {
+table.md-table-base tr.ef-brd3-bottom-dotted th, table.md-table-base tr.ef-brd3-bottom-dotted td, table.md-table-base colgroup.ef-brd3-bottom-dotted th, table.md-table-base colgroup.ef-brd3-bottom-dotted td {
   border-bottom-width: 3px;
   border-bottom-style: dotted;
   border-bottom-color: #ccc;
 }
 
-table.md-table-base tr.md-brd1-left-dotted th, table.md-table-base tr.md-brd1-left-dotted td, table.md-table-base colgroup.md-brd1-left-dotted th, table.md-table-base colgroup.md-brd1-left-dotted td {
+table.md-table-base tr.ef-brd1-left-dotted th, table.md-table-base tr.ef-brd1-left-dotted td, table.md-table-base colgroup.ef-brd1-left-dotted th, table.md-table-base colgroup.ef-brd1-left-dotted td {
   border-left-width: 1px;
   border-left-style: dotted;
   border-left-color: #ccc;
 }
 
-table.md-table-base tr.md-brd2-left-dotted th, table.md-table-base tr.md-brd2-left-dotted td, table.md-table-base colgroup.md-brd2-left-dotted th, table.md-table-base colgroup.md-brd2-left-dotted td {
+table.md-table-base tr.ef-brd2-left-dotted th, table.md-table-base tr.ef-brd2-left-dotted td, table.md-table-base colgroup.ef-brd2-left-dotted th, table.md-table-base colgroup.ef-brd2-left-dotted td {
   border-left-width: 2px;
   border-left-style: dotted;
   border-left-color: #ccc;
 }
 
-table.md-table-base tr.md-brd3-left-dotted th, table.md-table-base tr.md-brd3-left-dotted td, table.md-table-base colgroup.md-brd3-left-dotted th, table.md-table-base colgroup.md-brd3-left-dotted td {
+table.md-table-base tr.ef-brd3-left-dotted th, table.md-table-base tr.ef-brd3-left-dotted td, table.md-table-base colgroup.ef-brd3-left-dotted th, table.md-table-base colgroup.ef-brd3-left-dotted td {
   border-left-width: 3px;
   border-left-style: dotted;
   border-left-color: #ccc;
 }
 
-table.md-table-base tr .md-brd1-dotted-theme, table.md-table-base colgroup .md-brd1-dotted-theme {
+table.md-table-base tr .ef-brd1-dotted-theme, table.md-table-base colgroup .ef-brd1-dotted-theme {
   border-width: 1px;
   border-style: dotted;
   border-color: #485169;
 }
 
-table.md-table-base tr .md-brd2-dotted-theme, table.md-table-base colgroup .md-brd2-dotted-theme {
+table.md-table-base tr .ef-brd2-dotted-theme, table.md-table-base colgroup .ef-brd2-dotted-theme {
   border-width: 2px;
   border-style: dotted;
   border-color: #485169;
 }
 
-table.md-table-base tr .md-brd3-dotted-theme, table.md-table-base colgroup .md-brd3-dotted-theme {
+table.md-table-base tr .ef-brd3-dotted-theme, table.md-table-base colgroup .ef-brd3-dotted-theme {
   border-width: 3px;
   border-style: dotted;
   border-color: #485169;
 }
 
-table.md-table-base tr .md-brd1-top-dotted-theme, table.md-table-base colgroup .md-brd1-top-dotted-theme {
+table.md-table-base tr .ef-brd1-top-dotted-theme, table.md-table-base colgroup .ef-brd1-top-dotted-theme {
   border-top-width: 1px;
   border-top-style: dotted;
   border-top-color: #485169;
 }
 
-table.md-table-base tr .md-brd2-top-dotted-theme, table.md-table-base colgroup .md-brd2-top-dotted-theme {
+table.md-table-base tr .ef-brd2-top-dotted-theme, table.md-table-base colgroup .ef-brd2-top-dotted-theme {
   border-top-width: 2px;
   border-top-style: dotted;
   border-top-color: #485169;
 }
 
-table.md-table-base tr .md-brd3-top-dotted-theme, table.md-table-base colgroup .md-brd3-top-dotted-theme {
+table.md-table-base tr .ef-brd3-top-dotted-theme, table.md-table-base colgroup .ef-brd3-top-dotted-theme {
   border-top-width: 3px;
   border-top-style: dotted;
   border-top-color: #485169;
 }
 
-table.md-table-base tr .md-brd1-right-dotted-theme, table.md-table-base colgroup .md-brd1-right-dotted-theme {
+table.md-table-base tr .ef-brd1-right-dotted-theme, table.md-table-base colgroup .ef-brd1-right-dotted-theme {
   border-right-width: 1px;
   border-right-style: dotted;
   border-right-color: #485169;
 }
 
-table.md-table-base tr .md-brd2-right-dotted-theme, table.md-table-base colgroup .md-brd2-right-dotted-theme {
+table.md-table-base tr .ef-brd2-right-dotted-theme, table.md-table-base colgroup .ef-brd2-right-dotted-theme {
   border-right-width: 2px;
   border-right-style: dotted;
   border-right-color: #485169;
 }
 
-table.md-table-base tr .md-brd3-right-dotted-theme, table.md-table-base colgroup .md-brd3-right-dotted-theme {
+table.md-table-base tr .ef-brd3-right-dotted-theme, table.md-table-base colgroup .ef-brd3-right-dotted-theme {
   border-right-width: 3px;
   border-right-style: dotted;
   border-right-color: #485169;
 }
 
-table.md-table-base tr .md-brd1-bottom-dotted-theme, table.md-table-base colgroup .md-brd1-bottom-dotted-theme {
+table.md-table-base tr .ef-brd1-bottom-dotted-theme, table.md-table-base colgroup .ef-brd1-bottom-dotted-theme {
   border-bottom-width: 1px;
   border-bottom-style: dotted;
   border-bottom-color: #485169;
 }
 
-table.md-table-base tr .md-brd2-bottom-dotted-theme, table.md-table-base colgroup .md-brd2-bottom-dotted-theme {
+table.md-table-base tr .ef-brd2-bottom-dotted-theme, table.md-table-base colgroup .ef-brd2-bottom-dotted-theme {
   border-bottom-width: 2px;
   border-bottom-style: dotted;
   border-bottom-color: #485169;
 }
 
-table.md-table-base tr .md-brd3-bottom-dotted-theme, table.md-table-base colgroup .md-brd3-bottom-dotted-theme {
+table.md-table-base tr .ef-brd3-bottom-dotted-theme, table.md-table-base colgroup .ef-brd3-bottom-dotted-theme {
   border-bottom-width: 3px;
   border-bottom-style: dotted;
   border-bottom-color: #485169;
 }
 
-table.md-table-base tr .md-brd1-left-dotted-theme, table.md-table-base colgroup .md-brd1-left-dotted-theme {
+table.md-table-base tr .ef-brd1-left-dotted-theme, table.md-table-base colgroup .ef-brd1-left-dotted-theme {
   border-left-width: 1px;
   border-left-style: dotted;
   border-left-color: #485169;
 }
 
-table.md-table-base tr .md-brd2-left-dotted-theme, table.md-table-base colgroup .md-brd2-left-dotted-theme {
+table.md-table-base tr .ef-brd2-left-dotted-theme, table.md-table-base colgroup .ef-brd2-left-dotted-theme {
   border-left-width: 2px;
   border-left-style: dotted;
   border-left-color: #485169;
 }
 
-table.md-table-base tr .md-brd3-left-dotted-theme, table.md-table-base colgroup .md-brd3-left-dotted-theme {
+table.md-table-base tr .ef-brd3-left-dotted-theme, table.md-table-base colgroup .ef-brd3-left-dotted-theme {
   border-left-width: 3px;
   border-left-style: dotted;
   border-left-color: #485169;
 }
 
-table.md-table-base tr.md-brd1-dotted-theme th, table.md-table-base tr.md-brd1-dotted-theme td, table.md-table-base colgroup.md-brd1-dotted-theme th, table.md-table-base colgroup.md-brd1-dotted-theme td {
+table.md-table-base tr.ef-brd1-dotted-theme th, table.md-table-base tr.ef-brd1-dotted-theme td, table.md-table-base colgroup.ef-brd1-dotted-theme th, table.md-table-base colgroup.ef-brd1-dotted-theme td {
   border-width: 1px;
   border-style: dotted;
   border-color: #485169;
 }
 
-table.md-table-base tr.md-brd2-dotted-theme th, table.md-table-base tr.md-brd2-dotted-theme td, table.md-table-base colgroup.md-brd2-dotted-theme th, table.md-table-base colgroup.md-brd2-dotted-theme td {
+table.md-table-base tr.ef-brd2-dotted-theme th, table.md-table-base tr.ef-brd2-dotted-theme td, table.md-table-base colgroup.ef-brd2-dotted-theme th, table.md-table-base colgroup.ef-brd2-dotted-theme td {
   border-width: 2px;
   border-style: dotted;
   border-color: #485169;
 }
 
-table.md-table-base tr.md-brd3-dotted-theme th, table.md-table-base tr.md-brd3-dotted-theme td, table.md-table-base colgroup.md-brd3-dotted-theme th, table.md-table-base colgroup.md-brd3-dotted-theme td {
+table.md-table-base tr.ef-brd3-dotted-theme th, table.md-table-base tr.ef-brd3-dotted-theme td, table.md-table-base colgroup.ef-brd3-dotted-theme th, table.md-table-base colgroup.ef-brd3-dotted-theme td {
   border-width: 3px;
   border-style: dotted;
   border-color: #485169;
 }
 
-table.md-table-base tr.md-brd1-top-dotted-theme th, table.md-table-base tr.md-brd1-top-dotted-theme td, table.md-table-base colgroup.md-brd1-top-dotted-theme th, table.md-table-base colgroup.md-brd1-top-dotted-theme td {
+table.md-table-base tr.ef-brd1-top-dotted-theme th, table.md-table-base tr.ef-brd1-top-dotted-theme td, table.md-table-base colgroup.ef-brd1-top-dotted-theme th, table.md-table-base colgroup.ef-brd1-top-dotted-theme td {
   border-top-width: 1px;
   border-top-style: dotted;
   border-top-color: #485169;
 }
 
-table.md-table-base tr.md-brd2-top-dotted-theme th, table.md-table-base tr.md-brd2-top-dotted-theme td, table.md-table-base colgroup.md-brd2-top-dotted-theme th, table.md-table-base colgroup.md-brd2-top-dotted-theme td {
+table.md-table-base tr.ef-brd2-top-dotted-theme th, table.md-table-base tr.ef-brd2-top-dotted-theme td, table.md-table-base colgroup.ef-brd2-top-dotted-theme th, table.md-table-base colgroup.ef-brd2-top-dotted-theme td {
   border-top-width: 2px;
   border-top-style: dotted;
   border-top-color: #485169;
 }
 
-table.md-table-base tr.md-brd3-top-dotted-theme th, table.md-table-base tr.md-brd3-top-dotted-theme td, table.md-table-base colgroup.md-brd3-top-dotted-theme th, table.md-table-base colgroup.md-brd3-top-dotted-theme td {
+table.md-table-base tr.ef-brd3-top-dotted-theme th, table.md-table-base tr.ef-brd3-top-dotted-theme td, table.md-table-base colgroup.ef-brd3-top-dotted-theme th, table.md-table-base colgroup.ef-brd3-top-dotted-theme td {
   border-top-width: 3px;
   border-top-style: dotted;
   border-top-color: #485169;
 }
 
-table.md-table-base tr.md-brd1-right-dotted-theme th, table.md-table-base tr.md-brd1-right-dotted-theme td, table.md-table-base colgroup.md-brd1-right-dotted-theme th, table.md-table-base colgroup.md-brd1-right-dotted-theme td {
+table.md-table-base tr.ef-brd1-right-dotted-theme th, table.md-table-base tr.ef-brd1-right-dotted-theme td, table.md-table-base colgroup.ef-brd1-right-dotted-theme th, table.md-table-base colgroup.ef-brd1-right-dotted-theme td {
   border-right-width: 1px;
   border-right-style: dotted;
   border-right-color: #485169;
 }
 
-table.md-table-base tr.md-brd2-right-dotted-theme th, table.md-table-base tr.md-brd2-right-dotted-theme td, table.md-table-base colgroup.md-brd2-right-dotted-theme th, table.md-table-base colgroup.md-brd2-right-dotted-theme td {
+table.md-table-base tr.ef-brd2-right-dotted-theme th, table.md-table-base tr.ef-brd2-right-dotted-theme td, table.md-table-base colgroup.ef-brd2-right-dotted-theme th, table.md-table-base colgroup.ef-brd2-right-dotted-theme td {
   border-right-width: 2px;
   border-right-style: dotted;
   border-right-color: #485169;
 }
 
-table.md-table-base tr.md-brd3-right-dotted-theme th, table.md-table-base tr.md-brd3-right-dotted-theme td, table.md-table-base colgroup.md-brd3-right-dotted-theme th, table.md-table-base colgroup.md-brd3-right-dotted-theme td {
+table.md-table-base tr.ef-brd3-right-dotted-theme th, table.md-table-base tr.ef-brd3-right-dotted-theme td, table.md-table-base colgroup.ef-brd3-right-dotted-theme th, table.md-table-base colgroup.ef-brd3-right-dotted-theme td {
   border-right-width: 3px;
   border-right-style: dotted;
   border-right-color: #485169;
 }
 
-table.md-table-base tr.md-brd1-bottom-dotted-theme th, table.md-table-base tr.md-brd1-bottom-dotted-theme td, table.md-table-base colgroup.md-brd1-bottom-dotted-theme th, table.md-table-base colgroup.md-brd1-bottom-dotted-theme td {
+table.md-table-base tr.ef-brd1-bottom-dotted-theme th, table.md-table-base tr.ef-brd1-bottom-dotted-theme td, table.md-table-base colgroup.ef-brd1-bottom-dotted-theme th, table.md-table-base colgroup.ef-brd1-bottom-dotted-theme td {
   border-bottom-width: 1px;
   border-bottom-style: dotted;
   border-bottom-color: #485169;
 }
 
-table.md-table-base tr.md-brd2-bottom-dotted-theme th, table.md-table-base tr.md-brd2-bottom-dotted-theme td, table.md-table-base colgroup.md-brd2-bottom-dotted-theme th, table.md-table-base colgroup.md-brd2-bottom-dotted-theme td {
+table.md-table-base tr.ef-brd2-bottom-dotted-theme th, table.md-table-base tr.ef-brd2-bottom-dotted-theme td, table.md-table-base colgroup.ef-brd2-bottom-dotted-theme th, table.md-table-base colgroup.ef-brd2-bottom-dotted-theme td {
   border-bottom-width: 2px;
   border-bottom-style: dotted;
   border-bottom-color: #485169;
 }
 
-table.md-table-base tr.md-brd3-bottom-dotted-theme th, table.md-table-base tr.md-brd3-bottom-dotted-theme td, table.md-table-base colgroup.md-brd3-bottom-dotted-theme th, table.md-table-base colgroup.md-brd3-bottom-dotted-theme td {
+table.md-table-base tr.ef-brd3-bottom-dotted-theme th, table.md-table-base tr.ef-brd3-bottom-dotted-theme td, table.md-table-base colgroup.ef-brd3-bottom-dotted-theme th, table.md-table-base colgroup.ef-brd3-bottom-dotted-theme td {
   border-bottom-width: 3px;
   border-bottom-style: dotted;
   border-bottom-color: #485169;
 }
 
-table.md-table-base tr.md-brd1-left-dotted-theme th, table.md-table-base tr.md-brd1-left-dotted-theme td, table.md-table-base colgroup.md-brd1-left-dotted-theme th, table.md-table-base colgroup.md-brd1-left-dotted-theme td {
+table.md-table-base tr.ef-brd1-left-dotted-theme th, table.md-table-base tr.ef-brd1-left-dotted-theme td, table.md-table-base colgroup.ef-brd1-left-dotted-theme th, table.md-table-base colgroup.ef-brd1-left-dotted-theme td {
   border-left-width: 1px;
   border-left-style: dotted;
   border-left-color: #485169;
 }
 
-table.md-table-base tr.md-brd2-left-dotted-theme th, table.md-table-base tr.md-brd2-left-dotted-theme td, table.md-table-base colgroup.md-brd2-left-dotted-theme th, table.md-table-base colgroup.md-brd2-left-dotted-theme td {
+table.md-table-base tr.ef-brd2-left-dotted-theme th, table.md-table-base tr.ef-brd2-left-dotted-theme td, table.md-table-base colgroup.ef-brd2-left-dotted-theme th, table.md-table-base colgroup.ef-brd2-left-dotted-theme td {
   border-left-width: 2px;
   border-left-style: dotted;
   border-left-color: #485169;
 }
 
-table.md-table-base tr.md-brd3-left-dotted-theme th, table.md-table-base tr.md-brd3-left-dotted-theme td, table.md-table-base colgroup.md-brd3-left-dotted-theme th, table.md-table-base colgroup.md-brd3-left-dotted-theme td {
+table.md-table-base tr.ef-brd3-left-dotted-theme th, table.md-table-base tr.ef-brd3-left-dotted-theme td, table.md-table-base colgroup.ef-brd3-left-dotted-theme th, table.md-table-base colgroup.ef-brd3-left-dotted-theme td {
   border-left-width: 3px;
   border-left-style: dotted;
   border-left-color: #485169;
 }
 
-table.md-table-base tr .md-brd1-dotted-red, table.md-table-base colgroup .md-brd1-dotted-red {
+table.md-table-base tr .ef-brd1-dotted-red, table.md-table-base colgroup .ef-brd1-dotted-red {
   border-width: 1px;
   border-style: dotted;
   border-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd2-dotted-red, table.md-table-base colgroup .md-brd2-dotted-red {
+table.md-table-base tr .ef-brd2-dotted-red, table.md-table-base colgroup .ef-brd2-dotted-red {
   border-width: 2px;
   border-style: dotted;
   border-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd3-dotted-red, table.md-table-base colgroup .md-brd3-dotted-red {
+table.md-table-base tr .ef-brd3-dotted-red, table.md-table-base colgroup .ef-brd3-dotted-red {
   border-width: 3px;
   border-style: dotted;
   border-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd1-top-dotted-red, table.md-table-base colgroup .md-brd1-top-dotted-red {
+table.md-table-base tr .ef-brd1-top-dotted-red, table.md-table-base colgroup .ef-brd1-top-dotted-red {
   border-top-width: 1px;
   border-top-style: dotted;
   border-top-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd2-top-dotted-red, table.md-table-base colgroup .md-brd2-top-dotted-red {
+table.md-table-base tr .ef-brd2-top-dotted-red, table.md-table-base colgroup .ef-brd2-top-dotted-red {
   border-top-width: 2px;
   border-top-style: dotted;
   border-top-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd3-top-dotted-red, table.md-table-base colgroup .md-brd3-top-dotted-red {
+table.md-table-base tr .ef-brd3-top-dotted-red, table.md-table-base colgroup .ef-brd3-top-dotted-red {
   border-top-width: 3px;
   border-top-style: dotted;
   border-top-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd1-right-dotted-red, table.md-table-base colgroup .md-brd1-right-dotted-red {
+table.md-table-base tr .ef-brd1-right-dotted-red, table.md-table-base colgroup .ef-brd1-right-dotted-red {
   border-right-width: 1px;
   border-right-style: dotted;
   border-right-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd2-right-dotted-red, table.md-table-base colgroup .md-brd2-right-dotted-red {
+table.md-table-base tr .ef-brd2-right-dotted-red, table.md-table-base colgroup .ef-brd2-right-dotted-red {
   border-right-width: 2px;
   border-right-style: dotted;
   border-right-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd3-right-dotted-red, table.md-table-base colgroup .md-brd3-right-dotted-red {
+table.md-table-base tr .ef-brd3-right-dotted-red, table.md-table-base colgroup .ef-brd3-right-dotted-red {
   border-right-width: 3px;
   border-right-style: dotted;
   border-right-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd1-bottom-dotted-red, table.md-table-base colgroup .md-brd1-bottom-dotted-red {
+table.md-table-base tr .ef-brd1-bottom-dotted-red, table.md-table-base colgroup .ef-brd1-bottom-dotted-red {
   border-bottom-width: 1px;
   border-bottom-style: dotted;
   border-bottom-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd2-bottom-dotted-red, table.md-table-base colgroup .md-brd2-bottom-dotted-red {
+table.md-table-base tr .ef-brd2-bottom-dotted-red, table.md-table-base colgroup .ef-brd2-bottom-dotted-red {
   border-bottom-width: 2px;
   border-bottom-style: dotted;
   border-bottom-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd3-bottom-dotted-red, table.md-table-base colgroup .md-brd3-bottom-dotted-red {
+table.md-table-base tr .ef-brd3-bottom-dotted-red, table.md-table-base colgroup .ef-brd3-bottom-dotted-red {
   border-bottom-width: 3px;
   border-bottom-style: dotted;
   border-bottom-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd1-left-dotted-red, table.md-table-base colgroup .md-brd1-left-dotted-red {
+table.md-table-base tr .ef-brd1-left-dotted-red, table.md-table-base colgroup .ef-brd1-left-dotted-red {
   border-left-width: 1px;
   border-left-style: dotted;
   border-left-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd2-left-dotted-red, table.md-table-base colgroup .md-brd2-left-dotted-red {
+table.md-table-base tr .ef-brd2-left-dotted-red, table.md-table-base colgroup .ef-brd2-left-dotted-red {
   border-left-width: 2px;
   border-left-style: dotted;
   border-left-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd3-left-dotted-red, table.md-table-base colgroup .md-brd3-left-dotted-red {
+table.md-table-base tr .ef-brd3-left-dotted-red, table.md-table-base colgroup .ef-brd3-left-dotted-red {
   border-left-width: 3px;
   border-left-style: dotted;
   border-left-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd1-dotted-red th, table.md-table-base tr.md-brd1-dotted-red td, table.md-table-base colgroup.md-brd1-dotted-red th, table.md-table-base colgroup.md-brd1-dotted-red td {
+table.md-table-base tr.ef-brd1-dotted-red th, table.md-table-base tr.ef-brd1-dotted-red td, table.md-table-base colgroup.ef-brd1-dotted-red th, table.md-table-base colgroup.ef-brd1-dotted-red td {
   border-width: 1px;
   border-style: dotted;
   border-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd2-dotted-red th, table.md-table-base tr.md-brd2-dotted-red td, table.md-table-base colgroup.md-brd2-dotted-red th, table.md-table-base colgroup.md-brd2-dotted-red td {
+table.md-table-base tr.ef-brd2-dotted-red th, table.md-table-base tr.ef-brd2-dotted-red td, table.md-table-base colgroup.ef-brd2-dotted-red th, table.md-table-base colgroup.ef-brd2-dotted-red td {
   border-width: 2px;
   border-style: dotted;
   border-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd3-dotted-red th, table.md-table-base tr.md-brd3-dotted-red td, table.md-table-base colgroup.md-brd3-dotted-red th, table.md-table-base colgroup.md-brd3-dotted-red td {
+table.md-table-base tr.ef-brd3-dotted-red th, table.md-table-base tr.ef-brd3-dotted-red td, table.md-table-base colgroup.ef-brd3-dotted-red th, table.md-table-base colgroup.ef-brd3-dotted-red td {
   border-width: 3px;
   border-style: dotted;
   border-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd1-top-dotted-red th, table.md-table-base tr.md-brd1-top-dotted-red td, table.md-table-base colgroup.md-brd1-top-dotted-red th, table.md-table-base colgroup.md-brd1-top-dotted-red td {
+table.md-table-base tr.ef-brd1-top-dotted-red th, table.md-table-base tr.ef-brd1-top-dotted-red td, table.md-table-base colgroup.ef-brd1-top-dotted-red th, table.md-table-base colgroup.ef-brd1-top-dotted-red td {
   border-top-width: 1px;
   border-top-style: dotted;
   border-top-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd2-top-dotted-red th, table.md-table-base tr.md-brd2-top-dotted-red td, table.md-table-base colgroup.md-brd2-top-dotted-red th, table.md-table-base colgroup.md-brd2-top-dotted-red td {
+table.md-table-base tr.ef-brd2-top-dotted-red th, table.md-table-base tr.ef-brd2-top-dotted-red td, table.md-table-base colgroup.ef-brd2-top-dotted-red th, table.md-table-base colgroup.ef-brd2-top-dotted-red td {
   border-top-width: 2px;
   border-top-style: dotted;
   border-top-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd3-top-dotted-red th, table.md-table-base tr.md-brd3-top-dotted-red td, table.md-table-base colgroup.md-brd3-top-dotted-red th, table.md-table-base colgroup.md-brd3-top-dotted-red td {
+table.md-table-base tr.ef-brd3-top-dotted-red th, table.md-table-base tr.ef-brd3-top-dotted-red td, table.md-table-base colgroup.ef-brd3-top-dotted-red th, table.md-table-base colgroup.ef-brd3-top-dotted-red td {
   border-top-width: 3px;
   border-top-style: dotted;
   border-top-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd1-right-dotted-red th, table.md-table-base tr.md-brd1-right-dotted-red td, table.md-table-base colgroup.md-brd1-right-dotted-red th, table.md-table-base colgroup.md-brd1-right-dotted-red td {
+table.md-table-base tr.ef-brd1-right-dotted-red th, table.md-table-base tr.ef-brd1-right-dotted-red td, table.md-table-base colgroup.ef-brd1-right-dotted-red th, table.md-table-base colgroup.ef-brd1-right-dotted-red td {
   border-right-width: 1px;
   border-right-style: dotted;
   border-right-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd2-right-dotted-red th, table.md-table-base tr.md-brd2-right-dotted-red td, table.md-table-base colgroup.md-brd2-right-dotted-red th, table.md-table-base colgroup.md-brd2-right-dotted-red td {
+table.md-table-base tr.ef-brd2-right-dotted-red th, table.md-table-base tr.ef-brd2-right-dotted-red td, table.md-table-base colgroup.ef-brd2-right-dotted-red th, table.md-table-base colgroup.ef-brd2-right-dotted-red td {
   border-right-width: 2px;
   border-right-style: dotted;
   border-right-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd3-right-dotted-red th, table.md-table-base tr.md-brd3-right-dotted-red td, table.md-table-base colgroup.md-brd3-right-dotted-red th, table.md-table-base colgroup.md-brd3-right-dotted-red td {
+table.md-table-base tr.ef-brd3-right-dotted-red th, table.md-table-base tr.ef-brd3-right-dotted-red td, table.md-table-base colgroup.ef-brd3-right-dotted-red th, table.md-table-base colgroup.ef-brd3-right-dotted-red td {
   border-right-width: 3px;
   border-right-style: dotted;
   border-right-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd1-bottom-dotted-red th, table.md-table-base tr.md-brd1-bottom-dotted-red td, table.md-table-base colgroup.md-brd1-bottom-dotted-red th, table.md-table-base colgroup.md-brd1-bottom-dotted-red td {
+table.md-table-base tr.ef-brd1-bottom-dotted-red th, table.md-table-base tr.ef-brd1-bottom-dotted-red td, table.md-table-base colgroup.ef-brd1-bottom-dotted-red th, table.md-table-base colgroup.ef-brd1-bottom-dotted-red td {
   border-bottom-width: 1px;
   border-bottom-style: dotted;
   border-bottom-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd2-bottom-dotted-red th, table.md-table-base tr.md-brd2-bottom-dotted-red td, table.md-table-base colgroup.md-brd2-bottom-dotted-red th, table.md-table-base colgroup.md-brd2-bottom-dotted-red td {
+table.md-table-base tr.ef-brd2-bottom-dotted-red th, table.md-table-base tr.ef-brd2-bottom-dotted-red td, table.md-table-base colgroup.ef-brd2-bottom-dotted-red th, table.md-table-base colgroup.ef-brd2-bottom-dotted-red td {
   border-bottom-width: 2px;
   border-bottom-style: dotted;
   border-bottom-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd3-bottom-dotted-red th, table.md-table-base tr.md-brd3-bottom-dotted-red td, table.md-table-base colgroup.md-brd3-bottom-dotted-red th, table.md-table-base colgroup.md-brd3-bottom-dotted-red td {
+table.md-table-base tr.ef-brd3-bottom-dotted-red th, table.md-table-base tr.ef-brd3-bottom-dotted-red td, table.md-table-base colgroup.ef-brd3-bottom-dotted-red th, table.md-table-base colgroup.ef-brd3-bottom-dotted-red td {
   border-bottom-width: 3px;
   border-bottom-style: dotted;
   border-bottom-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd1-left-dotted-red th, table.md-table-base tr.md-brd1-left-dotted-red td, table.md-table-base colgroup.md-brd1-left-dotted-red th, table.md-table-base colgroup.md-brd1-left-dotted-red td {
+table.md-table-base tr.ef-brd1-left-dotted-red th, table.md-table-base tr.ef-brd1-left-dotted-red td, table.md-table-base colgroup.ef-brd1-left-dotted-red th, table.md-table-base colgroup.ef-brd1-left-dotted-red td {
   border-left-width: 1px;
   border-left-style: dotted;
   border-left-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd2-left-dotted-red th, table.md-table-base tr.md-brd2-left-dotted-red td, table.md-table-base colgroup.md-brd2-left-dotted-red th, table.md-table-base colgroup.md-brd2-left-dotted-red td {
+table.md-table-base tr.ef-brd2-left-dotted-red th, table.md-table-base tr.ef-brd2-left-dotted-red td, table.md-table-base colgroup.ef-brd2-left-dotted-red th, table.md-table-base colgroup.ef-brd2-left-dotted-red td {
   border-left-width: 2px;
   border-left-style: dotted;
   border-left-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd3-left-dotted-red th, table.md-table-base tr.md-brd3-left-dotted-red td, table.md-table-base colgroup.md-brd3-left-dotted-red th, table.md-table-base colgroup.md-brd3-left-dotted-red td {
+table.md-table-base tr.ef-brd3-left-dotted-red th, table.md-table-base tr.ef-brd3-left-dotted-red td, table.md-table-base colgroup.ef-brd3-left-dotted-red th, table.md-table-base colgroup.ef-brd3-left-dotted-red td {
   border-left-width: 3px;
   border-left-style: dotted;
   border-left-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd1-dashed, table.md-table-base colgroup .md-brd1-dashed {
+table.md-table-base tr .ef-brd1-dashed, table.md-table-base colgroup .ef-brd1-dashed {
   border-width: 1px;
   border-style: dashed;
   border-color: #ccc;
 }
 
-table.md-table-base tr .md-brd2-dashed, table.md-table-base colgroup .md-brd2-dashed {
+table.md-table-base tr .ef-brd2-dashed, table.md-table-base colgroup .ef-brd2-dashed {
   border-width: 2px;
   border-style: dashed;
   border-color: #ccc;
 }
 
-table.md-table-base tr .md-brd3-dashed, table.md-table-base colgroup .md-brd3-dashed {
+table.md-table-base tr .ef-brd3-dashed, table.md-table-base colgroup .ef-brd3-dashed {
   border-width: 3px;
   border-style: dashed;
   border-color: #ccc;
 }
 
-table.md-table-base tr .md-brd1-top-dashed, table.md-table-base colgroup .md-brd1-top-dashed {
+table.md-table-base tr .ef-brd1-top-dashed, table.md-table-base colgroup .ef-brd1-top-dashed {
   border-top-width: 1px;
   border-top-style: dashed;
   border-top-color: #ccc;
 }
 
-table.md-table-base tr .md-brd2-top-dashed, table.md-table-base colgroup .md-brd2-top-dashed {
+table.md-table-base tr .ef-brd2-top-dashed, table.md-table-base colgroup .ef-brd2-top-dashed {
   border-top-width: 2px;
   border-top-style: dashed;
   border-top-color: #ccc;
 }
 
-table.md-table-base tr .md-brd3-top-dashed, table.md-table-base colgroup .md-brd3-top-dashed {
+table.md-table-base tr .ef-brd3-top-dashed, table.md-table-base colgroup .ef-brd3-top-dashed {
   border-top-width: 3px;
   border-top-style: dashed;
   border-top-color: #ccc;
 }
 
-table.md-table-base tr .md-brd1-right-dashed, table.md-table-base colgroup .md-brd1-right-dashed {
+table.md-table-base tr .ef-brd1-right-dashed, table.md-table-base colgroup .ef-brd1-right-dashed {
   border-right-width: 1px;
   border-right-style: dashed;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr .md-brd2-right-dashed, table.md-table-base colgroup .md-brd2-right-dashed {
+table.md-table-base tr .ef-brd2-right-dashed, table.md-table-base colgroup .ef-brd2-right-dashed {
   border-right-width: 2px;
   border-right-style: dashed;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr .md-brd3-right-dashed, table.md-table-base colgroup .md-brd3-right-dashed {
+table.md-table-base tr .ef-brd3-right-dashed, table.md-table-base colgroup .ef-brd3-right-dashed {
   border-right-width: 3px;
   border-right-style: dashed;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr .md-brd1-bottom-dashed, table.md-table-base colgroup .md-brd1-bottom-dashed {
+table.md-table-base tr .ef-brd1-bottom-dashed, table.md-table-base colgroup .ef-brd1-bottom-dashed {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   border-bottom-color: #ccc;
 }
 
-table.md-table-base tr .md-brd2-bottom-dashed, table.md-table-base colgroup .md-brd2-bottom-dashed {
+table.md-table-base tr .ef-brd2-bottom-dashed, table.md-table-base colgroup .ef-brd2-bottom-dashed {
   border-bottom-width: 2px;
   border-bottom-style: dashed;
   border-bottom-color: #ccc;
 }
 
-table.md-table-base tr .md-brd3-bottom-dashed, table.md-table-base colgroup .md-brd3-bottom-dashed {
+table.md-table-base tr .ef-brd3-bottom-dashed, table.md-table-base colgroup .ef-brd3-bottom-dashed {
   border-bottom-width: 3px;
   border-bottom-style: dashed;
   border-bottom-color: #ccc;
 }
 
-table.md-table-base tr .md-brd1-left-dashed, table.md-table-base colgroup .md-brd1-left-dashed {
+table.md-table-base tr .ef-brd1-left-dashed, table.md-table-base colgroup .ef-brd1-left-dashed {
   border-left-width: 1px;
   border-left-style: dashed;
   border-left-color: #ccc;
 }
 
-table.md-table-base tr .md-brd2-left-dashed, table.md-table-base colgroup .md-brd2-left-dashed {
+table.md-table-base tr .ef-brd2-left-dashed, table.md-table-base colgroup .ef-brd2-left-dashed {
   border-left-width: 2px;
   border-left-style: dashed;
   border-left-color: #ccc;
 }
 
-table.md-table-base tr .md-brd3-left-dashed, table.md-table-base colgroup .md-brd3-left-dashed {
+table.md-table-base tr .ef-brd3-left-dashed, table.md-table-base colgroup .ef-brd3-left-dashed {
   border-left-width: 3px;
   border-left-style: dashed;
   border-left-color: #ccc;
 }
 
-table.md-table-base tr.md-brd1-dashed th, table.md-table-base tr.md-brd1-dashed td, table.md-table-base colgroup.md-brd1-dashed th, table.md-table-base colgroup.md-brd1-dashed td {
+table.md-table-base tr.ef-brd1-dashed th, table.md-table-base tr.ef-brd1-dashed td, table.md-table-base colgroup.ef-brd1-dashed th, table.md-table-base colgroup.ef-brd1-dashed td {
   border-width: 1px;
   border-style: dashed;
   border-color: #ccc;
 }
 
-table.md-table-base tr.md-brd2-dashed th, table.md-table-base tr.md-brd2-dashed td, table.md-table-base colgroup.md-brd2-dashed th, table.md-table-base colgroup.md-brd2-dashed td {
+table.md-table-base tr.ef-brd2-dashed th, table.md-table-base tr.ef-brd2-dashed td, table.md-table-base colgroup.ef-brd2-dashed th, table.md-table-base colgroup.ef-brd2-dashed td {
   border-width: 2px;
   border-style: dashed;
   border-color: #ccc;
 }
 
-table.md-table-base tr.md-brd3-dashed th, table.md-table-base tr.md-brd3-dashed td, table.md-table-base colgroup.md-brd3-dashed th, table.md-table-base colgroup.md-brd3-dashed td {
+table.md-table-base tr.ef-brd3-dashed th, table.md-table-base tr.ef-brd3-dashed td, table.md-table-base colgroup.ef-brd3-dashed th, table.md-table-base colgroup.ef-brd3-dashed td {
   border-width: 3px;
   border-style: dashed;
   border-color: #ccc;
 }
 
-table.md-table-base tr.md-brd1-top-dashed th, table.md-table-base tr.md-brd1-top-dashed td, table.md-table-base colgroup.md-brd1-top-dashed th, table.md-table-base colgroup.md-brd1-top-dashed td {
+table.md-table-base tr.ef-brd1-top-dashed th, table.md-table-base tr.ef-brd1-top-dashed td, table.md-table-base colgroup.ef-brd1-top-dashed th, table.md-table-base colgroup.ef-brd1-top-dashed td {
   border-top-width: 1px;
   border-top-style: dashed;
   border-top-color: #ccc;
 }
 
-table.md-table-base tr.md-brd2-top-dashed th, table.md-table-base tr.md-brd2-top-dashed td, table.md-table-base colgroup.md-brd2-top-dashed th, table.md-table-base colgroup.md-brd2-top-dashed td {
+table.md-table-base tr.ef-brd2-top-dashed th, table.md-table-base tr.ef-brd2-top-dashed td, table.md-table-base colgroup.ef-brd2-top-dashed th, table.md-table-base colgroup.ef-brd2-top-dashed td {
   border-top-width: 2px;
   border-top-style: dashed;
   border-top-color: #ccc;
 }
 
-table.md-table-base tr.md-brd3-top-dashed th, table.md-table-base tr.md-brd3-top-dashed td, table.md-table-base colgroup.md-brd3-top-dashed th, table.md-table-base colgroup.md-brd3-top-dashed td {
+table.md-table-base tr.ef-brd3-top-dashed th, table.md-table-base tr.ef-brd3-top-dashed td, table.md-table-base colgroup.ef-brd3-top-dashed th, table.md-table-base colgroup.ef-brd3-top-dashed td {
   border-top-width: 3px;
   border-top-style: dashed;
   border-top-color: #ccc;
 }
 
-table.md-table-base tr.md-brd0-right-dashed th, table.md-table-base tr.md-brd0-right-dashed td, table.md-table-base colgroup.md-brd0-right-dashed th, table.md-table-base colgroup.md-brd0-right-dashed td {
+table.md-table-base tr.ef-brd0-right-dashed th, table.md-table-base tr.ef-brd0-right-dashed td, table.md-table-base colgroup.ef-brd0-right-dashed th, table.md-table-base colgroup.ef-brd0-right-dashed td {
   border-right-width: 0;
   border-right-style: #ccc;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr.md-brd1-right-dashed th, table.md-table-base tr.md-brd1-right-dashed td, table.md-table-base colgroup.md-brd1-right-dashed th, table.md-table-base colgroup.md-brd1-right-dashed td {
+table.md-table-base tr.ef-brd1-right-dashed th, table.md-table-base tr.ef-brd1-right-dashed td, table.md-table-base colgroup.ef-brd1-right-dashed th, table.md-table-base colgroup.ef-brd1-right-dashed td {
   border-right-width: 1px;
   border-right-style: dashed;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr.md-brd2-right-dashed th, table.md-table-base tr.md-brd2-right-dashed td, table.md-table-base colgroup.md-brd2-right-dashed th, table.md-table-base colgroup.md-brd2-right-dashed td {
+table.md-table-base tr.ef-brd2-right-dashed th, table.md-table-base tr.ef-brd2-right-dashed td, table.md-table-base colgroup.ef-brd2-right-dashed th, table.md-table-base colgroup.ef-brd2-right-dashed td {
   border-right-width: 2px;
   border-right-style: dashed;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr.md-brd3-right-dashed th, table.md-table-base tr.md-brd3-right-dashed td, table.md-table-base colgroup.md-brd3-right-dashed th, table.md-table-base colgroup.md-brd3-right-dashed td {
+table.md-table-base tr.ef-brd3-right-dashed th, table.md-table-base tr.ef-brd3-right-dashed td, table.md-table-base colgroup.ef-brd3-right-dashed th, table.md-table-base colgroup.ef-brd3-right-dashed td {
   border-right-width: 3px;
   border-right-style: dashed;
   border-right-color: #ccc;
 }
 
-table.md-table-base tr.md-brd1-bottom-dashed th, table.md-table-base tr.md-brd1-bottom-dashed td, table.md-table-base colgroup.md-brd1-bottom-dashed th, table.md-table-base colgroup.md-brd1-bottom-dashed td {
+table.md-table-base tr.ef-brd1-bottom-dashed th, table.md-table-base tr.ef-brd1-bottom-dashed td, table.md-table-base colgroup.ef-brd1-bottom-dashed th, table.md-table-base colgroup.ef-brd1-bottom-dashed td {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   border-bottom-color: #ccc;
 }
 
-table.md-table-base tr.md-brd2-bottom-dashed th, table.md-table-base tr.md-brd2-bottom-dashed td, table.md-table-base colgroup.md-brd2-bottom-dashed th, table.md-table-base colgroup.md-brd2-bottom-dashed td {
+table.md-table-base tr.ef-brd2-bottom-dashed th, table.md-table-base tr.ef-brd2-bottom-dashed td, table.md-table-base colgroup.ef-brd2-bottom-dashed th, table.md-table-base colgroup.ef-brd2-bottom-dashed td {
   border-bottom-width: 2px;
   border-bottom-style: dashed;
   border-bottom-color: #ccc;
 }
 
-table.md-table-base tr.md-brd3-bottom-dashed th, table.md-table-base tr.md-brd3-bottom-dashed td, table.md-table-base colgroup.md-brd3-bottom-dashed th, table.md-table-base colgroup.md-brd3-bottom-dashed td {
+table.md-table-base tr.ef-brd3-bottom-dashed th, table.md-table-base tr.ef-brd3-bottom-dashed td, table.md-table-base colgroup.ef-brd3-bottom-dashed th, table.md-table-base colgroup.ef-brd3-bottom-dashed td {
   border-bottom-width: 3px;
   border-bottom-style: dashed;
   border-bottom-color: #ccc;
 }
 
-table.md-table-base tr.md-brd1-left-dashed th, table.md-table-base tr.md-brd1-left-dashed td, table.md-table-base colgroup.md-brd1-left-dashed th, table.md-table-base colgroup.md-brd1-left-dashed td {
+table.md-table-base tr.ef-brd1-left-dashed th, table.md-table-base tr.ef-brd1-left-dashed td, table.md-table-base colgroup.ef-brd1-left-dashed th, table.md-table-base colgroup.ef-brd1-left-dashed td {
   border-left-width: 1px;
   border-left-style: dashed;
   border-left-color: #ccc;
 }
 
-table.md-table-base tr.md-brd2-left-dashed th, table.md-table-base tr.md-brd2-left-dashed td, table.md-table-base colgroup.md-brd2-left-dashed th, table.md-table-base colgroup.md-brd2-left-dashed td {
+table.md-table-base tr.ef-brd2-left-dashed th, table.md-table-base tr.ef-brd2-left-dashed td, table.md-table-base colgroup.ef-brd2-left-dashed th, table.md-table-base colgroup.ef-brd2-left-dashed td {
   border-left-width: 2px;
   border-left-style: dashed;
   border-left-color: #ccc;
 }
 
-table.md-table-base tr.md-brd3-left-dashed th, table.md-table-base tr.md-brd3-left-dashed td, table.md-table-base colgroup.md-brd3-left-dashed th, table.md-table-base colgroup.md-brd3-left-dashed td {
+table.md-table-base tr.ef-brd3-left-dashed th, table.md-table-base tr.ef-brd3-left-dashed td, table.md-table-base colgroup.ef-brd3-left-dashed th, table.md-table-base colgroup.ef-brd3-left-dashed td {
   border-left-width: 3px;
   border-left-style: dashed;
   border-left-color: #ccc;
 }
 
-table.md-table-base tr .md-brd1-dashed-theme, table.md-table-base colgroup .md-brd1-dashed-theme {
+table.md-table-base tr .ef-brd1-dashed-theme, table.md-table-base colgroup .ef-brd1-dashed-theme {
   border-width: 1px;
   border-style: dashed;
   border-color: #485169;
 }
 
-table.md-table-base tr .md-brd2-dashed-theme, table.md-table-base colgroup .md-brd2-dashed-theme {
+table.md-table-base tr .ef-brd2-dashed-theme, table.md-table-base colgroup .ef-brd2-dashed-theme {
   border-width: 2px;
   border-style: dashed;
   border-color: #485169;
 }
 
-table.md-table-base tr .md-brd3-dashed-theme, table.md-table-base colgroup .md-brd3-dashed-theme {
+table.md-table-base tr .ef-brd3-dashed-theme, table.md-table-base colgroup .ef-brd3-dashed-theme {
   border-width: 3px;
   border-style: dashed;
   border-color: #485169;
 }
 
-table.md-table-base tr .md-brd1-top-dashed-theme, table.md-table-base colgroup .md-brd1-top-dashed-theme {
+table.md-table-base tr .ef-brd1-top-dashed-theme, table.md-table-base colgroup .ef-brd1-top-dashed-theme {
   border-top-width: 1px;
   border-top-style: dashed;
   border-top-color: #485169;
 }
 
-table.md-table-base tr .md-brd2-top-dashed-theme, table.md-table-base colgroup .md-brd2-top-dashed-theme {
+table.md-table-base tr .ef-brd2-top-dashed-theme, table.md-table-base colgroup .ef-brd2-top-dashed-theme {
   border-top-width: 2px;
   border-top-style: dashed;
   border-top-color: #485169;
 }
 
-table.md-table-base tr .md-brd3-top-dashed-theme, table.md-table-base colgroup .md-brd3-top-dashed-theme {
+table.md-table-base tr .ef-brd3-top-dashed-theme, table.md-table-base colgroup .ef-brd3-top-dashed-theme {
   border-top-width: 3px;
   border-top-style: dashed;
   border-top-color: #485169;
 }
 
-table.md-table-base tr .md-brd1-right-dashed-theme, table.md-table-base colgroup .md-brd1-right-dashed-theme {
+table.md-table-base tr .ef-brd1-right-dashed-theme, table.md-table-base colgroup .ef-brd1-right-dashed-theme {
   border-right-width: 1px;
   border-right-style: dashed;
   border-right-color: #485169;
 }
 
-table.md-table-base tr .md-brd2-right-dashed-theme, table.md-table-base colgroup .md-brd2-right-dashed-theme {
+table.md-table-base tr .ef-brd2-right-dashed-theme, table.md-table-base colgroup .ef-brd2-right-dashed-theme {
   border-right-width: 2px;
   border-right-style: dashed;
   border-right-color: #485169;
 }
 
-table.md-table-base tr .md-brd3-right-dashed-theme, table.md-table-base colgroup .md-brd3-right-dashed-theme {
+table.md-table-base tr .ef-brd3-right-dashed-theme, table.md-table-base colgroup .ef-brd3-right-dashed-theme {
   border-right-width: 3px;
   border-right-style: dashed;
   border-right-color: #485169;
 }
 
-table.md-table-base tr .md-brd1-bottom-dashed-theme, table.md-table-base colgroup .md-brd1-bottom-dashed-theme {
+table.md-table-base tr .ef-brd1-bottom-dashed-theme, table.md-table-base colgroup .ef-brd1-bottom-dashed-theme {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   border-bottom-color: #485169;
 }
 
-table.md-table-base tr .md-brd2-bottom-dashed-theme, table.md-table-base colgroup .md-brd2-bottom-dashed-theme {
+table.md-table-base tr .ef-brd2-bottom-dashed-theme, table.md-table-base colgroup .ef-brd2-bottom-dashed-theme {
   border-bottom-width: 2px;
   border-bottom-style: dashed;
   border-bottom-color: #485169;
 }
 
-table.md-table-base tr .md-brd3-bottom-dashed-theme, table.md-table-base colgroup .md-brd3-bottom-dashed-theme {
+table.md-table-base tr .ef-brd3-bottom-dashed-theme, table.md-table-base colgroup .ef-brd3-bottom-dashed-theme {
   border-bottom-width: 3px;
   border-bottom-style: dashed;
   border-bottom-color: #485169;
 }
 
-table.md-table-base tr .md-brd1-left-dashed-theme, table.md-table-base colgroup .md-brd1-left-dashed-theme {
+table.md-table-base tr .ef-brd1-left-dashed-theme, table.md-table-base colgroup .ef-brd1-left-dashed-theme {
   border-left-width: 1px;
   border-left-style: dashed;
   border-left-color: #485169;
 }
 
-table.md-table-base tr .md-brd2-left-dashed-theme, table.md-table-base colgroup .md-brd2-left-dashed-theme {
+table.md-table-base tr .ef-brd2-left-dashed-theme, table.md-table-base colgroup .ef-brd2-left-dashed-theme {
   border-left-width: 2px;
   border-left-style: dashed;
   border-left-color: #485169;
 }
 
-table.md-table-base tr .md-brd3-left-dashed-theme, table.md-table-base colgroup .md-brd3-left-dashed-theme {
+table.md-table-base tr .ef-brd3-left-dashed-theme, table.md-table-base colgroup .ef-brd3-left-dashed-theme {
   border-left-width: 3px;
   border-left-style: dashed;
   border-left-color: #485169;
 }
 
-table.md-table-base tr.md-brd1-dashed-theme th, table.md-table-base tr.md-brd1-dashed-theme td, table.md-table-base colgroup.md-brd1-dashed-theme th, table.md-table-base colgroup.md-brd1-dashed-theme td {
+table.md-table-base tr.ef-brd1-dashed-theme th, table.md-table-base tr.ef-brd1-dashed-theme td, table.md-table-base colgroup.ef-brd1-dashed-theme th, table.md-table-base colgroup.ef-brd1-dashed-theme td {
   border-width: 1px;
   border-style: dashed;
   border-color: #485169;
 }
 
-table.md-table-base tr.md-brd2-dashed-theme th, table.md-table-base tr.md-brd2-dashed-theme td, table.md-table-base colgroup.md-brd2-dashed-theme th, table.md-table-base colgroup.md-brd2-dashed-theme td {
+table.md-table-base tr.ef-brd2-dashed-theme th, table.md-table-base tr.ef-brd2-dashed-theme td, table.md-table-base colgroup.ef-brd2-dashed-theme th, table.md-table-base colgroup.ef-brd2-dashed-theme td {
   border-width: 2px;
   border-style: dashed;
   border-color: #485169;
 }
 
-table.md-table-base tr.md-brd3-dashed-theme th, table.md-table-base tr.md-brd3-dashed-theme td, table.md-table-base colgroup.md-brd3-dashed-theme th, table.md-table-base colgroup.md-brd3-dashed-theme td {
+table.md-table-base tr.ef-brd3-dashed-theme th, table.md-table-base tr.ef-brd3-dashed-theme td, table.md-table-base colgroup.ef-brd3-dashed-theme th, table.md-table-base colgroup.ef-brd3-dashed-theme td {
   border-width: 3px;
   border-style: dashed;
   border-color: #485169;
 }
 
-table.md-table-base tr.md-brd1-top-dashed-theme th, table.md-table-base tr.md-brd1-top-dashed-theme td, table.md-table-base colgroup.md-brd1-top-dashed-theme th, table.md-table-base colgroup.md-brd1-top-dashed-theme td {
+table.md-table-base tr.ef-brd1-top-dashed-theme th, table.md-table-base tr.ef-brd1-top-dashed-theme td, table.md-table-base colgroup.ef-brd1-top-dashed-theme th, table.md-table-base colgroup.ef-brd1-top-dashed-theme td {
   border-top-width: 1px;
   border-top-style: dashed;
   border-top-color: #485169;
 }
 
-table.md-table-base tr.md-brd2-top-dashed-theme th, table.md-table-base tr.md-brd2-top-dashed-theme td, table.md-table-base colgroup.md-brd2-top-dashed-theme th, table.md-table-base colgroup.md-brd2-top-dashed-theme td {
+table.md-table-base tr.ef-brd2-top-dashed-theme th, table.md-table-base tr.ef-brd2-top-dashed-theme td, table.md-table-base colgroup.ef-brd2-top-dashed-theme th, table.md-table-base colgroup.ef-brd2-top-dashed-theme td {
   border-top-width: 2px;
   border-top-style: dashed;
   border-top-color: #485169;
 }
 
-table.md-table-base tr.md-brd3-top-dashed-theme th, table.md-table-base tr.md-brd3-top-dashed-theme td, table.md-table-base colgroup.md-brd3-top-dashed-theme th, table.md-table-base colgroup.md-brd3-top-dashed-theme td {
+table.md-table-base tr.ef-brd3-top-dashed-theme th, table.md-table-base tr.ef-brd3-top-dashed-theme td, table.md-table-base colgroup.ef-brd3-top-dashed-theme th, table.md-table-base colgroup.ef-brd3-top-dashed-theme td {
   border-top-width: 3px;
   border-top-style: dashed;
   border-top-color: #485169;
 }
 
-table.md-table-base tr.md-brd1-right-dashed-theme th, table.md-table-base tr.md-brd1-right-dashed-theme td, table.md-table-base colgroup.md-brd1-right-dashed-theme th, table.md-table-base colgroup.md-brd1-right-dashed-theme td {
+table.md-table-base tr.ef-brd1-right-dashed-theme th, table.md-table-base tr.ef-brd1-right-dashed-theme td, table.md-table-base colgroup.ef-brd1-right-dashed-theme th, table.md-table-base colgroup.ef-brd1-right-dashed-theme td {
   border-right-width: 1px;
   border-right-style: dashed;
   border-right-color: #485169;
 }
 
-table.md-table-base tr.md-brd2-right-dashed-theme th, table.md-table-base tr.md-brd2-right-dashed-theme td, table.md-table-base colgroup.md-brd2-right-dashed-theme th, table.md-table-base colgroup.md-brd2-right-dashed-theme td {
+table.md-table-base tr.ef-brd2-right-dashed-theme th, table.md-table-base tr.ef-brd2-right-dashed-theme td, table.md-table-base colgroup.ef-brd2-right-dashed-theme th, table.md-table-base colgroup.ef-brd2-right-dashed-theme td {
   border-right-width: 2px;
   border-right-style: dashed;
   border-right-color: #485169;
 }
 
-table.md-table-base tr.md-brd3-right-dashed-theme th, table.md-table-base tr.md-brd3-right-dashed-theme td, table.md-table-base colgroup.md-brd3-right-dashed-theme th, table.md-table-base colgroup.md-brd3-right-dashed-theme td {
+table.md-table-base tr.ef-brd3-right-dashed-theme th, table.md-table-base tr.ef-brd3-right-dashed-theme td, table.md-table-base colgroup.ef-brd3-right-dashed-theme th, table.md-table-base colgroup.ef-brd3-right-dashed-theme td {
   border-right-width: 3px;
   border-right-style: dashed;
   border-right-color: #485169;
 }
 
-table.md-table-base tr.md-brd1-bottom-dashed-theme th, table.md-table-base tr.md-brd1-bottom-dashed-theme td, table.md-table-base colgroup.md-brd1-bottom-dashed-theme th, table.md-table-base colgroup.md-brd1-bottom-dashed-theme td {
+table.md-table-base tr.ef-brd1-bottom-dashed-theme th, table.md-table-base tr.ef-brd1-bottom-dashed-theme td, table.md-table-base colgroup.ef-brd1-bottom-dashed-theme th, table.md-table-base colgroup.ef-brd1-bottom-dashed-theme td {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   border-bottom-color: #485169;
 }
 
-table.md-table-base tr.md-brd2-bottom-dashed-theme th, table.md-table-base tr.md-brd2-bottom-dashed-theme td, table.md-table-base colgroup.md-brd2-bottom-dashed-theme th, table.md-table-base colgroup.md-brd2-bottom-dashed-theme td {
+table.md-table-base tr.ef-brd2-bottom-dashed-theme th, table.md-table-base tr.ef-brd2-bottom-dashed-theme td, table.md-table-base colgroup.ef-brd2-bottom-dashed-theme th, table.md-table-base colgroup.ef-brd2-bottom-dashed-theme td {
   border-bottom-width: 2px;
   border-bottom-style: dashed;
   border-bottom-color: #485169;
 }
 
-table.md-table-base tr.md-brd3-bottom-dashed-theme th, table.md-table-base tr.md-brd3-bottom-dashed-theme td, table.md-table-base colgroup.md-brd3-bottom-dashed-theme th, table.md-table-base colgroup.md-brd3-bottom-dashed-theme td {
+table.md-table-base tr.ef-brd3-bottom-dashed-theme th, table.md-table-base tr.ef-brd3-bottom-dashed-theme td, table.md-table-base colgroup.ef-brd3-bottom-dashed-theme th, table.md-table-base colgroup.ef-brd3-bottom-dashed-theme td {
   border-bottom-width: 3px;
   border-bottom-style: dashed;
   border-bottom-color: #485169;
 }
 
-table.md-table-base tr.md-brd1-left-dashed-theme th, table.md-table-base tr.md-brd1-left-dashed-theme td, table.md-table-base colgroup.md-brd1-left-dashed-theme th, table.md-table-base colgroup.md-brd1-left-dashed-theme td {
+table.md-table-base tr.ef-brd1-left-dashed-theme th, table.md-table-base tr.ef-brd1-left-dashed-theme td, table.md-table-base colgroup.ef-brd1-left-dashed-theme th, table.md-table-base colgroup.ef-brd1-left-dashed-theme td {
   border-left-width: 1px;
   border-left-style: dashed;
   border-left-color: #485169;
 }
 
-table.md-table-base tr.md-brd2-left-dashed-theme th, table.md-table-base tr.md-brd2-left-dashed-theme td, table.md-table-base colgroup.md-brd2-left-dashed-theme th, table.md-table-base colgroup.md-brd2-left-dashed-theme td {
+table.md-table-base tr.ef-brd2-left-dashed-theme th, table.md-table-base tr.ef-brd2-left-dashed-theme td, table.md-table-base colgroup.ef-brd2-left-dashed-theme th, table.md-table-base colgroup.ef-brd2-left-dashed-theme td {
   border-left-width: 2px;
   border-left-style: dashed;
   border-left-color: #485169;
 }
 
-table.md-table-base tr.md-brd3-left-dashed-theme th, table.md-table-base tr.md-brd3-left-dashed-theme td, table.md-table-base colgroup.md-brd3-left-dashed-theme th, table.md-table-base colgroup.md-brd3-left-dashed-theme td {
+table.md-table-base tr.ef-brd3-left-dashed-theme th, table.md-table-base tr.ef-brd3-left-dashed-theme td, table.md-table-base colgroup.ef-brd3-left-dashed-theme th, table.md-table-base colgroup.ef-brd3-left-dashed-theme td {
   border-left-width: 3px;
   border-left-style: dashed;
   border-left-color: #485169;
 }
 
-table.md-table-base tr .md-brd1-dashed-red, table.md-table-base colgroup .md-brd1-dashed-red {
+table.md-table-base tr .ef-brd1-dashed-red, table.md-table-base colgroup .ef-brd1-dashed-red {
   border-width: 1px;
   border-style: dashed;
   border-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd2-dashed-red, table.md-table-base colgroup .md-brd2-dashed-red {
+table.md-table-base tr .ef-brd2-dashed-red, table.md-table-base colgroup .ef-brd2-dashed-red {
   border-width: 2px;
   border-style: dashed;
   border-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd3-dashed-red, table.md-table-base colgroup .md-brd3-dashed-red {
+table.md-table-base tr .ef-brd3-dashed-red, table.md-table-base colgroup .ef-brd3-dashed-red {
   border-width: 3px;
   border-style: dashed;
   border-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd1-top-dashed-red, table.md-table-base colgroup .md-brd1-top-dashed-red {
+table.md-table-base tr .ef-brd1-top-dashed-red, table.md-table-base colgroup .ef-brd1-top-dashed-red {
   border-top-width: 1px;
   border-top-style: dashed;
   border-top-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd2-top-dashed-red, table.md-table-base colgroup .md-brd2-top-dashed-red {
+table.md-table-base tr .ef-brd2-top-dashed-red, table.md-table-base colgroup .ef-brd2-top-dashed-red {
   border-top-width: 2px;
   border-top-style: dashed;
   border-top-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd3-top-dashed-red, table.md-table-base colgroup .md-brd3-top-dashed-red {
+table.md-table-base tr .ef-brd3-top-dashed-red, table.md-table-base colgroup .ef-brd3-top-dashed-red {
   border-top-width: 3px;
   border-top-style: dashed;
   border-top-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd1-right-dashed-red, table.md-table-base colgroup .md-brd1-right-dashed-red {
+table.md-table-base tr .ef-brd1-right-dashed-red, table.md-table-base colgroup .ef-brd1-right-dashed-red {
   border-right-width: 1px;
   border-right-style: dashed;
   border-right-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd2-right-dashed-red, table.md-table-base colgroup .md-brd2-right-dashed-red {
+table.md-table-base tr .ef-brd2-right-dashed-red, table.md-table-base colgroup .ef-brd2-right-dashed-red {
   border-right-width: 2px;
   border-right-style: dashed;
   border-right-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd3-right-dashed-red, table.md-table-base colgroup .md-brd3-right-dashed-red {
+table.md-table-base tr .ef-brd3-right-dashed-red, table.md-table-base colgroup .ef-brd3-right-dashed-red {
   border-right-width: 3px;
   border-right-style: dashed;
   border-right-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd1-bottom-dashed-red, table.md-table-base colgroup .md-brd1-bottom-dashed-red {
+table.md-table-base tr .ef-brd1-bottom-dashed-red, table.md-table-base colgroup .ef-brd1-bottom-dashed-red {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   border-bottom-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd2-bottom-dashed-red, table.md-table-base colgroup .md-brd2-bottom-dashed-red {
+table.md-table-base tr .ef-brd2-bottom-dashed-red, table.md-table-base colgroup .ef-brd2-bottom-dashed-red {
   border-bottom-width: 2px;
   border-bottom-style: dashed;
   border-bottom-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd3-bottom-dashed-red, table.md-table-base colgroup .md-brd3-bottom-dashed-red {
+table.md-table-base tr .ef-brd3-bottom-dashed-red, table.md-table-base colgroup .ef-brd3-bottom-dashed-red {
   border-bottom-width: 3px;
   border-bottom-style: dashed;
   border-bottom-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd1-left-dashed-red, table.md-table-base colgroup .md-brd1-left-dashed-red {
+table.md-table-base tr .ef-brd1-left-dashed-red, table.md-table-base colgroup .ef-brd1-left-dashed-red {
   border-left-width: 1px;
   border-left-style: dashed;
   border-left-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd2-left-dashed-red, table.md-table-base colgroup .md-brd2-left-dashed-red {
+table.md-table-base tr .ef-brd2-left-dashed-red, table.md-table-base colgroup .ef-brd2-left-dashed-red {
   border-left-width: 2px;
   border-left-style: dashed;
   border-left-color: #cc3300;
 }
 
-table.md-table-base tr .md-brd3-left-dashed-red, table.md-table-base colgroup .md-brd3-left-dashed-red {
+table.md-table-base tr .ef-brd3-left-dashed-red, table.md-table-base colgroup .ef-brd3-left-dashed-red {
   border-left-width: 3px;
   border-left-style: dashed;
   border-left-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd1-dashed-red th, table.md-table-base tr.md-brd1-dashed-red td, table.md-table-base colgroup.md-brd1-dashed-red th, table.md-table-base colgroup.md-brd1-dashed-red td {
+table.md-table-base tr.ef-brd1-dashed-red th, table.md-table-base tr.ef-brd1-dashed-red td, table.md-table-base colgroup.ef-brd1-dashed-red th, table.md-table-base colgroup.ef-brd1-dashed-red td {
   border-width: 1px;
   border-style: dashed;
   border-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd2-dashed-red th, table.md-table-base tr.md-brd2-dashed-red td, table.md-table-base colgroup.md-brd2-dashed-red th, table.md-table-base colgroup.md-brd2-dashed-red td {
+table.md-table-base tr.ef-brd2-dashed-red th, table.md-table-base tr.ef-brd2-dashed-red td, table.md-table-base colgroup.ef-brd2-dashed-red th, table.md-table-base colgroup.ef-brd2-dashed-red td {
   border-width: 2px;
   border-style: dashed;
   border-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd3-dashed-red th, table.md-table-base tr.md-brd3-dashed-red td, table.md-table-base colgroup.md-brd3-dashed-red th, table.md-table-base colgroup.md-brd3-dashed-red td {
+table.md-table-base tr.ef-brd3-dashed-red th, table.md-table-base tr.ef-brd3-dashed-red td, table.md-table-base colgroup.ef-brd3-dashed-red th, table.md-table-base colgroup.ef-brd3-dashed-red td {
   border-width: 3px;
   border-style: dashed;
   border-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd1-top-dashed-red th, table.md-table-base tr.md-brd1-top-dashed-red td, table.md-table-base colgroup.md-brd1-top-dashed-red th, table.md-table-base colgroup.md-brd1-top-dashed-red td {
+table.md-table-base tr.ef-brd1-top-dashed-red th, table.md-table-base tr.ef-brd1-top-dashed-red td, table.md-table-base colgroup.ef-brd1-top-dashed-red th, table.md-table-base colgroup.ef-brd1-top-dashed-red td {
   border-top-width: 1px;
   border-top-style: dashed;
   border-top-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd2-top-dashed-red th, table.md-table-base tr.md-brd2-top-dashed-red td, table.md-table-base colgroup.md-brd2-top-dashed-red th, table.md-table-base colgroup.md-brd2-top-dashed-red td {
+table.md-table-base tr.ef-brd2-top-dashed-red th, table.md-table-base tr.ef-brd2-top-dashed-red td, table.md-table-base colgroup.ef-brd2-top-dashed-red th, table.md-table-base colgroup.ef-brd2-top-dashed-red td {
   border-top-width: 2px;
   border-top-style: dashed;
   border-top-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd3-top-dashed-red th, table.md-table-base tr.md-brd3-top-dashed-red td, table.md-table-base colgroup.md-brd3-top-dashed-red th, table.md-table-base colgroup.md-brd3-top-dashed-red td {
+table.md-table-base tr.ef-brd3-top-dashed-red th, table.md-table-base tr.ef-brd3-top-dashed-red td, table.md-table-base colgroup.ef-brd3-top-dashed-red th, table.md-table-base colgroup.ef-brd3-top-dashed-red td {
   border-top-width: 3px;
   border-top-style: dashed;
   border-top-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd1-right-dashed-red th, table.md-table-base tr.md-brd1-right-dashed-red td, table.md-table-base colgroup.md-brd1-right-dashed-red th, table.md-table-base colgroup.md-brd1-right-dashed-red td {
+table.md-table-base tr.ef-brd1-right-dashed-red th, table.md-table-base tr.ef-brd1-right-dashed-red td, table.md-table-base colgroup.ef-brd1-right-dashed-red th, table.md-table-base colgroup.ef-brd1-right-dashed-red td {
   border-right-width: 1px;
   border-right-style: dashed;
   border-right-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd2-right-dashed-red th, table.md-table-base tr.md-brd2-right-dashed-red td, table.md-table-base colgroup.md-brd2-right-dashed-red th, table.md-table-base colgroup.md-brd2-right-dashed-red td {
+table.md-table-base tr.ef-brd2-right-dashed-red th, table.md-table-base tr.ef-brd2-right-dashed-red td, table.md-table-base colgroup.ef-brd2-right-dashed-red th, table.md-table-base colgroup.ef-brd2-right-dashed-red td {
   border-right-width: 2px;
   border-right-style: dashed;
   border-right-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd3-right-dashed-red th, table.md-table-base tr.md-brd3-right-dashed-red td, table.md-table-base colgroup.md-brd3-right-dashed-red th, table.md-table-base colgroup.md-brd3-right-dashed-red td {
+table.md-table-base tr.ef-brd3-right-dashed-red th, table.md-table-base tr.ef-brd3-right-dashed-red td, table.md-table-base colgroup.ef-brd3-right-dashed-red th, table.md-table-base colgroup.ef-brd3-right-dashed-red td {
   border-right-width: 3px;
   border-right-style: dashed;
   border-right-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd1-bottom-dashed-red th, table.md-table-base tr.md-brd1-bottom-dashed-red td, table.md-table-base colgroup.md-brd1-bottom-dashed-red th, table.md-table-base colgroup.md-brd1-bottom-dashed-red td {
+table.md-table-base tr.ef-brd1-bottom-dashed-red th, table.md-table-base tr.ef-brd1-bottom-dashed-red td, table.md-table-base colgroup.ef-brd1-bottom-dashed-red th, table.md-table-base colgroup.ef-brd1-bottom-dashed-red td {
   border-bottom-width: 1px;
   border-bottom-style: dashed;
   border-bottom-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd2-bottom-dashed-red th, table.md-table-base tr.md-brd2-bottom-dashed-red td, table.md-table-base colgroup.md-brd2-bottom-dashed-red th, table.md-table-base colgroup.md-brd2-bottom-dashed-red td {
+table.md-table-base tr.ef-brd2-bottom-dashed-red th, table.md-table-base tr.ef-brd2-bottom-dashed-red td, table.md-table-base colgroup.ef-brd2-bottom-dashed-red th, table.md-table-base colgroup.ef-brd2-bottom-dashed-red td {
   border-bottom-width: 2px;
   border-bottom-style: dashed;
   border-bottom-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd3-bottom-dashed-red th, table.md-table-base tr.md-brd3-bottom-dashed-red td, table.md-table-base colgroup.md-brd3-bottom-dashed-red th, table.md-table-base colgroup.md-brd3-bottom-dashed-red td {
+table.md-table-base tr.ef-brd3-bottom-dashed-red th, table.md-table-base tr.ef-brd3-bottom-dashed-red td, table.md-table-base colgroup.ef-brd3-bottom-dashed-red th, table.md-table-base colgroup.ef-brd3-bottom-dashed-red td {
   border-bottom-width: 3px;
   border-bottom-style: dashed;
   border-bottom-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd1-left-dashed-red th, table.md-table-base tr.md-brd1-left-dashed-red td, table.md-table-base colgroup.md-brd1-left-dashed-red th, table.md-table-base colgroup.md-brd1-left-dashed-red td {
+table.md-table-base tr.ef-brd1-left-dashed-red th, table.md-table-base tr.ef-brd1-left-dashed-red td, table.md-table-base colgroup.ef-brd1-left-dashed-red th, table.md-table-base colgroup.ef-brd1-left-dashed-red td {
   border-left-width: 1px;
   border-left-style: dashed;
   border-left-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd2-left-dashed-red th, table.md-table-base tr.md-brd2-left-dashed-red td, table.md-table-base colgroup.md-brd2-left-dashed-red th, table.md-table-base colgroup.md-brd2-left-dashed-red td {
+table.md-table-base tr.ef-brd2-left-dashed-red th, table.md-table-base tr.ef-brd2-left-dashed-red td, table.md-table-base colgroup.ef-brd2-left-dashed-red th, table.md-table-base colgroup.ef-brd2-left-dashed-red td {
   border-left-width: 2px;
   border-left-style: dashed;
   border-left-color: #cc3300;
 }
 
-table.md-table-base tr.md-brd3-left-dashed-red th, table.md-table-base tr.md-brd3-left-dashed-red td, table.md-table-base colgroup.md-brd3-left-dashed-red th, table.md-table-base colgroup.md-brd3-left-dashed-red td {
+table.md-table-base tr.ef-brd3-left-dashed-red th, table.md-table-base tr.ef-brd3-left-dashed-red td, table.md-table-base colgroup.ef-brd3-left-dashed-red th, table.md-table-base colgroup.ef-brd3-left-dashed-red td {
   border-left-width: 3px;
   border-left-style: dashed;
   border-left-color: #cc3300;
@@ -6601,7 +6471,7 @@ table.md-table-base tr.md-brd3-left-dashed-red th, table.md-table-base tr.md-brd
 }
 
 .md-collapse-horizontal .st-inner .md-collapse-switch-box:hover {
-  background: #f5f5f5;
+  background: #f6f6f6;
 }
 
 /*
@@ -6631,132 +6501,6 @@ table.md-table-base tr.md-brd3-left-dashed-red th, table.md-table-base tr.md-brd
 }
 
 /*■■■■■■■■■■■■■■■■■■■■■■■■    "menu"   ■■■■■■■■■■■■■■■■■■■■■■■*/
-/*
- * structure.scss
- * include:
- * "header" "footer" "container"
- *
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "header"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-header .st-body {
-  min-width: 760px;
-  background: #485169;
-}
-
-header .st-body.ef-header-fix {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: auto;
-  left: 0;
-  z-index: 3;
-}
-
-header .st-body .st-inner {
-  padding: 5px 10px;
-}
-
-header .st-body .st-inner a {
-  display: block;
-  color: #fff;
-}
-
-header .st-body .st-inner a i {
-  color: #fff;
-}
-
-header .st-body .st-inner .ef-float-left a .wrap-logo .logo {
-  background: #fff;
-}
-
-header .st-body .st-inner .ef-float-left a .wrap-logo .logo i {
-  color: #485169;
-}
-
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "footer"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-footer .st-body {
-  background-color: #485169;
-}
-
-footer .st-body.ef-footer-fix {
-  position: fixed;
-  top: auto;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-}
-
-footer .st-body .st-inner {
-  padding: 3px 20px;
-  color: #fff;
-}
-
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "container"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-.page-container > .st-body > .st-inner {
-  margin-bottom: 30px;
-}
-
-.page-container > .st-body > .st-inner > .page-nav {
-  display: block;
-}
-
-.page-container > .st-body > .st-inner > .page-nav > .st-body {
-  width: 180px;
-  margin: 20px;
-  margin-left: 15px;
-}
-
-.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav {
-  padding: 10px;
-  border-radius: 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #ccc;
-  background: #fff;
-}
-
-.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav i, .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav a {
-  color: #333;
-}
-
-.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav ul {
-  display: block;
-}
-
-.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav ul li a {
-  padding: 0 10px;
-  display: block;
-}
-
-.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav ul li a:hover {
-  background: #e9e9e9;
-}
-
-.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav ul li.is-current > a, .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav .cp-stepbar ul li.is-past > a, .cp-stepbar .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav ul li.is-past > a {
-  background: #f6f6f6;
-}
-
-.page-container > .st-body > .st-inner > .page-contents {
-  display: block;
-  margin-left: 195px;
-}
-
-.page-container > .st-body > .st-inner > .page-contents > .st-body > .st-inner {
-  padding: 20px;
-  padding-right: 15px;
-}
-
 /*
  * effect.scss
  * include:
@@ -6971,7 +6715,7 @@ footer .st-body .st-inner {
 }
 
 .ef-bg-gray {
-  background: #f5f5f5;
+  background: #f6f6f6;
 }
 
 .ef-bg-gray1 {
@@ -7949,6 +7693,316 @@ footer .st-body .st-inner {
 }
 
 /* =============================================================
+ ▼ max-width (%)
+============================================================== */
+.ef-mxw0p {
+  max-width: 0;
+}
+
+.ef-mxw3p {
+  max-width: 3%;
+}
+
+.ef-mxw7p {
+  max-width: 7%;
+}
+
+.ef-mxw10p {
+  max-width: 10%;
+}
+
+.ef-mxw20p {
+  max-width: 20%;
+}
+
+.ef-mxw30p {
+  max-width: 30%;
+}
+
+.ef-mxw40p {
+  max-width: 40%;
+}
+
+.ef-mxw50p {
+  max-width: 50%;
+}
+
+.ef-mxw60p {
+  max-width: 60%;
+}
+
+.ef-mxw70p {
+  max-width: 70%;
+}
+
+.ef-mxw80p {
+  max-width: 80%;
+}
+
+.ef-mxw90p {
+  max-width: 90%;
+}
+
+.ef-mxw100p {
+  max-width: 100%;
+}
+
+/* =============================================================
+ ▼ max-width
+============================================================== */
+.ef-mxw0 {
+  max-width: 0;
+}
+
+.ef-mxw3 {
+  max-width: 3px;
+}
+
+.ef-mxw7 {
+  max-width: 7px;
+}
+
+.ef-mxw10 {
+  max-width: 10px;
+}
+
+.ef-mxw20 {
+  max-width: 20px;
+}
+
+.ef-mxw30 {
+  max-width: 30px;
+}
+
+.ef-mxw40 {
+  max-width: 40px;
+}
+
+.ef-mxw50 {
+  max-width: 50px;
+}
+
+.ef-mxw60 {
+  max-width: 60px;
+}
+
+.ef-mxw70 {
+  max-width: 70px;
+}
+
+.ef-mxw80 {
+  max-width: 80px;
+}
+
+.ef-mxw90 {
+  max-width: 90px;
+}
+
+.ef-mxw100 {
+  max-width: 100px;
+}
+
+.ef-mxw110 {
+  max-width: 110px;
+}
+
+.ef-mxw120 {
+  max-width: 120px;
+}
+
+.ef-mxw130 {
+  max-width: 130px;
+}
+
+.ef-mxw140 {
+  max-width: 140px;
+}
+
+.ef-mxw150 {
+  max-width: 150px;
+}
+
+.ef-mxw160 {
+  max-width: 160px;
+}
+
+.ef-mxw170 {
+  max-width: 170px;
+}
+
+.ef-mxw180 {
+  max-width: 180px;
+}
+
+.ef-mxw190 {
+  max-width: 190px;
+}
+
+.ef-mxw200 {
+  max-width: 200px;
+}
+
+.ef-mxw210 {
+  max-width: 210px;
+}
+
+.ef-mxw220 {
+  max-width: 220px;
+}
+
+.ef-mxw230 {
+  max-width: 230px;
+}
+
+.ef-mxw240 {
+  max-width: 240px;
+}
+
+.ef-mxw250 {
+  max-width: 250px;
+}
+
+.ef-mxw260 {
+  max-width: 260px;
+}
+
+.ef-mxw270 {
+  max-width: 270px;
+}
+
+.ef-mxw280 {
+  max-width: 280px;
+}
+
+.ef-mxw290 {
+  max-width: 290px;
+}
+
+.ef-mxw300 {
+  max-width: 300px;
+}
+
+.ef-mxw310 {
+  max-width: 310px;
+}
+
+.ef-mxw320 {
+  max-width: 320px;
+}
+
+.ef-mxw330 {
+  max-width: 330px;
+}
+
+.ef-mxw340 {
+  max-width: 340px;
+}
+
+.ef-mxw350 {
+  max-width: 350px;
+}
+
+.ef-mxw360 {
+  max-width: 360px;
+}
+
+.ef-mxw370 {
+  max-width: 370px;
+}
+
+.ef-mxw380 {
+  max-width: 380px;
+}
+
+.ef-mxw390 {
+  max-width: 390px;
+}
+
+.ef-mxw400 {
+  max-width: 400px;
+}
+
+.ef-mxw410 {
+  max-width: 410px;
+}
+
+.ef-mxw420 {
+  max-width: 420px;
+}
+
+.ef-mxw430 {
+  max-width: 430px;
+}
+
+.ef-mxw440 {
+  max-width: 440px;
+}
+
+.ef-mxw450 {
+  max-width: 450px;
+}
+
+.ef-mxw460 {
+  max-width: 460px;
+}
+
+.ef-mxw470 {
+  max-width: 470px;
+}
+
+.ef-mxw480 {
+  max-width: 480px;
+}
+
+.ef-mxw490 {
+  max-width: 490px;
+}
+
+.ef-mxw500 {
+  max-width: 500px;
+}
+
+.ef-mxw510 {
+  max-width: 510px;
+}
+
+.ef-mxw520 {
+  max-width: 520px;
+}
+
+.ef-mxw530 {
+  max-width: 530px;
+}
+
+.ef-mxw540 {
+  max-width: 540px;
+}
+
+.ef-mxw550 {
+  max-width: 550px;
+}
+
+.ef-mxw560 {
+  max-width: 560px;
+}
+
+.ef-mxw570 {
+  max-width: 570px;
+}
+
+.ef-mxw580 {
+  max-width: 580px;
+}
+
+.ef-mxw590 {
+  max-width: 590px;
+}
+
+.ef-mxw600 {
+  max-width: 600px;
+}
+
+/* =============================================================
  ▼ height (px)
 ============================================================== */
 .ef-h0 {
@@ -8456,6 +8510,261 @@ footer .st-body .st-inner {
 
 .ef-mh600 {
   min-height: 600px;
+}
+
+/* =============================================================
+ ▼ max-height
+============================================================== */
+.ef-mxh0 {
+  max-height: 0;
+}
+
+.ef-mxh3 {
+  max-height: 3px;
+}
+
+.ef-mxh7 {
+  max-height: 7px;
+}
+
+.ef-mxh10 {
+  max-height: 10px;
+}
+
+.ef-mxh20 {
+  max-height: 20px;
+}
+
+.ef-mxh30 {
+  max-height: 30px;
+}
+
+.ef-mxh40 {
+  max-height: 40px;
+}
+
+.ef-mxh50 {
+  max-height: 50px;
+}
+
+.ef-mxh60 {
+  max-height: 60px;
+}
+
+.ef-mxh70 {
+  max-height: 70px;
+}
+
+.ef-mxh80 {
+  max-height: 80px;
+}
+
+.ef-mxh90 {
+  max-height: 90px;
+}
+
+.ef-mxh100 {
+  max-height: 100px;
+}
+
+.ef-mxh110 {
+  max-height: 110px;
+}
+
+.ef-mxh120 {
+  max-height: 120px;
+}
+
+.ef-mxh130 {
+  max-height: 130px;
+}
+
+.ef-mxh140 {
+  max-height: 140px;
+}
+
+.ef-mxh150 {
+  max-height: 150px;
+}
+
+.ef-mxh160 {
+  max-height: 160px;
+}
+
+.ef-mxh170 {
+  max-height: 170px;
+}
+
+.ef-mxh180 {
+  max-height: 180px;
+}
+
+.ef-mxh190 {
+  max-height: 190px;
+}
+
+.ef-mxh200 {
+  max-height: 200px;
+}
+
+.ef-mxh210 {
+  max-height: 210px;
+}
+
+.ef-mxh220 {
+  max-height: 220px;
+}
+
+.ef-mxh230 {
+  max-height: 230px;
+}
+
+.ef-mxh240 {
+  max-height: 240px;
+}
+
+.ef-mxh250 {
+  max-height: 250px;
+}
+
+.ef-mxh260 {
+  max-height: 260px;
+}
+
+.ef-mxh270 {
+  max-height: 270px;
+}
+
+.ef-mxh280 {
+  max-height: 280px;
+}
+
+.ef-mxh290 {
+  max-height: 290px;
+}
+
+.ef-mxh300 {
+  max-height: 300px;
+}
+
+.ef-mxh310 {
+  max-height: 310px;
+}
+
+.ef-mxh320 {
+  max-height: 320px;
+}
+
+.ef-mxh330 {
+  max-height: 330px;
+}
+
+.ef-mxh340 {
+  max-height: 340px;
+}
+
+.ef-mxh350 {
+  max-height: 350px;
+}
+
+.ef-mxh360 {
+  max-height: 360px;
+}
+
+.ef-mxh370 {
+  max-height: 370px;
+}
+
+.ef-mxh380 {
+  max-height: 380px;
+}
+
+.ef-mxh390 {
+  max-height: 390px;
+}
+
+.ef-mxh400 {
+  max-height: 400px;
+}
+
+.ef-mxh410 {
+  max-height: 410px;
+}
+
+.ef-mxh420 {
+  max-height: 420px;
+}
+
+.ef-mxh430 {
+  max-height: 430px;
+}
+
+.ef-mxh440 {
+  max-height: 440px;
+}
+
+.ef-mxh450 {
+  max-height: 450px;
+}
+
+.ef-mxh460 {
+  max-height: 460px;
+}
+
+.ef-mxh470 {
+  max-height: 470px;
+}
+
+.ef-mxh480 {
+  max-height: 480px;
+}
+
+.ef-mxh490 {
+  max-height: 490px;
+}
+
+.ef-mxh500 {
+  max-height: 500px;
+}
+
+.ef-mxh510 {
+  max-height: 510px;
+}
+
+.ef-mxh520 {
+  max-height: 520px;
+}
+
+.ef-mxh530 {
+  max-height: 530px;
+}
+
+.ef-mxh540 {
+  max-height: 540px;
+}
+
+.ef-mxh550 {
+  max-height: 550px;
+}
+
+.ef-mxh560 {
+  max-height: 560px;
+}
+
+.ef-mxh570 {
+  max-height: 570px;
+}
+
+.ef-mxh580 {
+  max-height: 580px;
+}
+
+.ef-mxh590 {
+  max-height: 590px;
+}
+
+.ef-mxh600 {
+  max-height: 600px;
 }
 
 /* =============================================================
@@ -10136,6 +10445,1019 @@ footer .st-body .st-inner {
 }
 
 /* =============================================================
+ ▼ border
+============================================================== */
+.ef-brd1 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+}
+
+.ef-brd2 {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ccc;
+}
+
+.ef-brd3 {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #ccc;
+}
+
+.ef-brd1-top {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #ccc;
+}
+
+.ef-brd2-top {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #ccc;
+}
+
+.ef-brd3-top {
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: #ccc;
+}
+
+.ef-brd1-right {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #ccc;
+}
+
+.ef-brd2-right {
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: #ccc;
+}
+
+.ef-brd3-right {
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: #ccc;
+}
+
+.ef-brd1-bottom {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ccc;
+}
+
+.ef-brd2-bottom {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #ccc;
+}
+
+.ef-brd3-bottom {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #ccc;
+}
+
+.ef-brd1-left {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #ccc;
+}
+
+.ef-brd2-left {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #ccc;
+}
+
+.ef-brd3-left {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: #ccc;
+}
+
+.ef-brd1-white {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+}
+
+.ef-brd2-white {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+}
+
+.ef-brd3-white {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #fff;
+}
+
+.ef-brd1-top-white {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #fff;
+}
+
+.ef-brd2-top-white {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #fff;
+}
+
+.ef-brd3-top-white {
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: #fff;
+}
+
+.ef-brd1-right-white {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #fff;
+}
+
+.ef-brd2-right-white {
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: #fff;
+}
+
+.ef-brd3-right-white {
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: #fff;
+}
+
+.ef-brd1-bottom-white {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #fff;
+}
+
+.ef-brd2-bottom-white {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #fff;
+}
+
+.ef-brd3-bottom-white {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #fff;
+}
+
+.ef-brd1-left-white {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #fff;
+}
+
+.ef-brd2-left-white {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #fff;
+}
+
+.ef-brd3-left-white {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: #fff;
+}
+
+.ef-brd1-red {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffcada;
+}
+
+.ef-brd2-red {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ffcada;
+}
+
+.ef-brd3-red {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #ffcada;
+}
+
+.ef-brd1-top-red {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #ffcada;
+}
+
+.ef-brd2-top-red {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #ffcada;
+}
+
+.ef-brd3-top-red {
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: #ffcada;
+}
+
+.ef-brd1-right-red {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #ffcada;
+}
+
+.ef-brd2-right-red {
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: #ffcada;
+}
+
+.ef-brd3-right-red {
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: #ffcada;
+}
+
+.ef-brd1-bottom-red {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ffcada;
+}
+
+.ef-brd2-bottom-red {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #ffcada;
+}
+
+.ef-brd3-bottom-red {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #ffcada;
+}
+
+.ef-brd1-left-red {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #ffcada;
+}
+
+.ef-brd2-left-red {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #ffcada;
+}
+
+.ef-brd3-left-red {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: #ffcada;
+}
+
+.ef-brd1-orange {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffeaba;
+}
+
+.ef-brd2-orange {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ffeaba;
+}
+
+.ef-brd3-orange {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #ffeaba;
+}
+
+.ef-brd1-top-orange {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #ffeaba;
+}
+
+.ef-brd2-top-orange {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #ffeaba;
+}
+
+.ef-brd3-top-orange {
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: #ffeaba;
+}
+
+.ef-brd1-right-orange {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #ffeaba;
+}
+
+.ef-brd2-right-orange {
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: #ffeaba;
+}
+
+.ef-brd3-right-orange {
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: #ffeaba;
+}
+
+.ef-brd1-bottom-orange {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ffeaba;
+}
+
+.ef-brd2-bottom-orange {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #ffeaba;
+}
+
+.ef-brd3-bottom-orange {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #ffeaba;
+}
+
+.ef-brd1-left-orange {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #ffeaba;
+}
+
+.ef-brd2-left-orange {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #ffeaba;
+}
+
+.ef-brd3-left-orange {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: #ffeaba;
+}
+
+.ef-brd1-blue {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #caecff;
+}
+
+.ef-brd2-blue {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #caecff;
+}
+
+.ef-brd3-blue {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #caecff;
+}
+
+.ef-brd1-top-blue {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #caecff;
+}
+
+.ef-brd2-top-blue {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #caecff;
+}
+
+.ef-brd3-top-blue {
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: #caecff;
+}
+
+.ef-brd1-right-blue {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #caecff;
+}
+
+.ef-brd2-right-blue {
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: #caecff;
+}
+
+.ef-brd3-right-blue {
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: #caecff;
+}
+
+.ef-brd1-bottom-blue {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #caecff;
+}
+
+.ef-brd2-bottom-blue {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #caecff;
+}
+
+.ef-brd3-bottom-blue {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #caecff;
+}
+
+.ef-brd1-left-blue {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #caecff;
+}
+
+.ef-brd2-left-blue {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #caecff;
+}
+
+.ef-brd3-left-blue {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: #caecff;
+}
+
+.ef-brd1-green {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cdffca;
+}
+
+.ef-brd2-green {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #cdffca;
+}
+
+.ef-brd3-green {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #cdffca;
+}
+
+.ef-brd1-top-green {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #cdffca;
+}
+
+.ef-brd2-top-green {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #cdffca;
+}
+
+.ef-brd3-top-green {
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: #cdffca;
+}
+
+.ef-brd1-right-green {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #cdffca;
+}
+
+.ef-brd2-right-green {
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: #cdffca;
+}
+
+.ef-brd3-right-green {
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: #cdffca;
+}
+
+.ef-brd1-bottom-green {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #cdffca;
+}
+
+.ef-brd2-bottom-green {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #cdffca;
+}
+
+.ef-brd3-bottom-green {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #cdffca;
+}
+
+.ef-brd1-left-green {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #cdffca;
+}
+
+.ef-brd2-left-green {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #cdffca;
+}
+
+.ef-brd3-left-green {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: #cdffca;
+}
+
+.ef-brd1-yellow {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #f9ffca;
+}
+
+.ef-brd2-yellow {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #f9ffca;
+}
+
+.ef-brd3-yellow {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #f9ffca;
+}
+
+.ef-brd1-top-yellow {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #f9ffca;
+}
+
+.ef-brd2-top-yellow {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #f9ffca;
+}
+
+.ef-brd3-top-yellow {
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: #f9ffca;
+}
+
+.ef-brd1-right-yellow {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #f9ffca;
+}
+
+.ef-brd2-right-yellow {
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: #f9ffca;
+}
+
+.ef-brd3-right-yellow {
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: #f9ffca;
+}
+
+.ef-brd1-bottom-yellow {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #f9ffca;
+}
+
+.ef-brd2-bottom-yellow {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #f9ffca;
+}
+
+.ef-brd3-bottom-yellow {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #f9ffca;
+}
+
+.ef-brd1-left-yellow {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #f9ffca;
+}
+
+.ef-brd2-left-yellow {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #f9ffca;
+}
+
+.ef-brd3-left-yellow {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: #f9ffca;
+}
+
+.ef-brd1-brown {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e2cec5;
+}
+
+.ef-brd2-brown {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #e2cec5;
+}
+
+.ef-brd3-brown {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #e2cec5;
+}
+
+.ef-brd1-top-brown {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #e2cec5;
+}
+
+.ef-brd2-top-brown {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #e2cec5;
+}
+
+.ef-brd3-top-brown {
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: #e2cec5;
+}
+
+.ef-brd1-right-brown {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #e2cec5;
+}
+
+.ef-brd2-right-brown {
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: #e2cec5;
+}
+
+.ef-brd3-right-brown {
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: #e2cec5;
+}
+
+.ef-brd1-bottom-brown {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #e2cec5;
+}
+
+.ef-brd2-bottom-brown {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #e2cec5;
+}
+
+.ef-brd3-bottom-brown {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #e2cec5;
+}
+
+.ef-brd1-left-brown {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #e2cec5;
+}
+
+.ef-brd2-left-brown {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #e2cec5;
+}
+
+.ef-brd3-left-brown {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: #e2cec5;
+}
+
+.ef-brd1-black {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+.ef-brd2-black {
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+.ef-brd3-black {
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+}
+
+.ef-brd1-top-black {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: black;
+}
+
+.ef-brd2-top-black {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: black;
+}
+
+.ef-brd3-top-black {
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: black;
+}
+
+.ef-brd1-right-black {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: black;
+}
+
+.ef-brd2-right-black {
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: black;
+}
+
+.ef-brd3-right-black {
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: black;
+}
+
+.ef-brd1-bottom-black {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}
+
+.ef-brd2-bottom-black {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}
+
+.ef-brd3-bottom-black {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}
+
+.ef-brd1-left-black {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: black;
+}
+
+.ef-brd2-left-black {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: black;
+}
+
+.ef-brd3-left-black {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: #ffeaba;
+}
+
+.ef-brd1-gray {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e4e4e4;
+}
+
+.ef-brd2-gray {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #e4e4e4;
+}
+
+.ef-brd3-gray {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #e4e4e4;
+}
+
+.ef-brd1-top-gray {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #e4e4e4;
+}
+
+.ef-brd2-top-gray {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #e4e4e4;
+}
+
+.ef-brd3-top-gray {
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: #e4e4e4;
+}
+
+.ef-brd1-right-gray {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #e4e4e4;
+}
+
+.ef-brd2-right-gray {
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: #e4e4e4;
+}
+
+.ef-brd3-right-gray {
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: #e4e4e4;
+}
+
+.ef-brd1-bottom-gray {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #e4e4e4;
+}
+
+.ef-brd2-bottom-gray {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #e4e4e4;
+}
+
+.ef-brd3-bottom-gray {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #e4e4e4;
+}
+
+.ef-brd1-left-gray {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #e4e4e4;
+}
+
+.ef-brd2-left-gray {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #e4e4e4;
+}
+
+.ef-brd3-left-gray {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: #e4e4e4;
+}
+
+.ef-brd1-theme {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #394154;
+}
+
+.ef-brd2-theme {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #394154;
+}
+
+.ef-brd3-theme {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #394154;
+}
+
+.ef-brd1-top-theme {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #394154;
+}
+
+.ef-brd2-top-theme {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #394154;
+}
+
+.ef-brd3-top-theme {
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: #394154;
+}
+
+.ef-brd1-right-theme {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #394154;
+}
+
+.ef-brd2-right-theme {
+  border-right-width: 2px;
+  border-right-style: solid;
+  border-right-color: #394154;
+}
+
+.ef-brd3-right-theme {
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: #394154;
+}
+
+.ef-brd1-bottom-theme {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #394154;
+}
+
+.ef-brd2-bottom-theme {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #394154;
+}
+
+.ef-brd3-bottom-theme {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: #394154;
+}
+
+.ef-brd1-left-theme {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #394154;
+}
+
+.ef-brd2-left-theme {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #394154;
+}
+
+.ef-brd3-left-theme {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: #394154;
+}
+
+.ef-brd-clear {
+  border: none;
+}
+
+.ef-brd-top-clear {
+  border-top: none;
+}
+
+.ef-brd-right-clear {
+  border-right: none;
+}
+
+.ef-brd-bottom-clear {
+  border-bottom: none;
+}
+
+.ef-brd-left-clear {
+  border-left: none;
+}
+
+/* =============================================================
  ▼ radius
 ============================================================== */
 .ef-rd0 {
@@ -10884,7 +12206,7 @@ ul.ef-float0, ul.ef-float3, ul.ef-float7, ul.ef-float10, ul.ef-float20, ul.ef-fl
 
 ul.ef-float0 > li, ul.ef-float3 > li, ul.ef-float7 > li, ul.ef-float10 > li, ul.ef-float20 > li, ul.ef-float30 > li {
   float: left;
-  margin-right: 7px;
+  margin-right: 0;
 }
 
 ul.ef-float0 > li.ef-float-right, ul.ef-float3 > li.ef-float-right, ul.ef-float7 > li.ef-float-right, ul.ef-float10 > li.ef-float-right, ul.ef-float20 > li.ef-float-right, ul.ef-float30 > li.ef-float-right {
@@ -10954,302 +12276,302 @@ dl.ef-float > dd::after {
 /* =============================================================
  ▼ overflow
 ============================================================== */
-.ef-mw10-ovf {
+.ef-mxw10-ovf {
   max-width: 10px;
   overflow-x: auto;
 }
 
-.ef-mw20-ovf {
+.ef-mxw20-ovf {
   max-width: 20px;
   overflow-x: auto;
 }
 
-.ef-mw30-ovf {
+.ef-mxw30-ovf {
   max-width: 30px;
   overflow-x: auto;
 }
 
-.ef-mw40-ovf {
+.ef-mxw40-ovf {
   max-width: 40px;
   overflow-x: auto;
 }
 
-.ef-mw50-ovf {
+.ef-mxw50-ovf {
   max-width: 50px;
   overflow-x: auto;
 }
 
-.ef-mw60-ovf {
+.ef-mxw60-ovf {
   max-width: 60px;
   overflow-x: auto;
 }
 
-.ef-mw70-ovf {
+.ef-mxw70-ovf {
   max-width: 70px;
   overflow-x: auto;
 }
 
-.ef-mw80-ovf {
+.ef-mxw80-ovf {
   max-width: 80px;
   overflow-x: auto;
 }
 
-.ef-mw90-ovf {
+.ef-mxw90-ovf {
   max-width: 90px;
   overflow-x: auto;
 }
 
-.ef-mw100-ovf {
+.ef-mxw100-ovf {
   max-width: 100px;
   overflow-x: auto;
 }
 
-.ef-mw110-ovf {
+.ef-mxw110-ovf {
   max-width: 110px;
   overflow-x: auto;
 }
 
-.ef-mw120-ovf {
+.ef-mxw120-ovf {
   max-width: 120px;
   overflow-x: auto;
 }
 
-.ef-mw130-ovf {
+.ef-mxw130-ovf {
   max-width: 130px;
   overflow-x: auto;
 }
 
-.ef-mw140-ovf {
+.ef-mxw140-ovf {
   max-width: 140px;
   overflow-x: auto;
 }
 
-.ef-mw150-ovf {
+.ef-mxw150-ovf {
   max-width: 150px;
   overflow-x: auto;
 }
 
-.ef-mw160-ovf {
+.ef-mxw160-ovf {
   max-width: 160px;
   overflow-x: auto;
 }
 
-.ef-mw170-ovf {
+.ef-mxw170-ovf {
   max-width: 170px;
   overflow-x: auto;
 }
 
-.ef-mw180-ovf {
+.ef-mxw180-ovf {
   max-width: 180px;
   overflow-x: auto;
 }
 
-.ef-mw190-ovf {
+.ef-mxw190-ovf {
   max-width: 190px;
   overflow-x: auto;
 }
 
-.ef-mw200-ovf {
+.ef-mxw200-ovf {
   max-width: 200px;
   overflow-x: auto;
 }
 
-.ef-mw210-ovf {
+.ef-mxw210-ovf {
   max-width: 210px;
   overflow-x: auto;
 }
 
-.ef-mw220-ovf {
+.ef-mxw220-ovf {
   max-width: 220px;
   overflow-x: auto;
 }
 
-.ef-mw230-ovf {
+.ef-mxw230-ovf {
   max-width: 230px;
   overflow-x: auto;
 }
 
-.ef-mw240-ovf {
+.ef-mxw240-ovf {
   max-width: 240px;
   overflow-x: auto;
 }
 
-.ef-mw250-ovf {
+.ef-mxw250-ovf {
   max-width: 250px;
   overflow-x: auto;
 }
 
-.ef-mw260-ovf {
+.ef-mxw260-ovf {
   max-width: 260px;
   overflow-x: auto;
 }
 
-.ef-mw270-ovf {
+.ef-mxw270-ovf {
   max-width: 270px;
   overflow-x: auto;
 }
 
-.ef-mw280-ovf {
+.ef-mxw280-ovf {
   max-width: 280px;
   overflow-x: auto;
 }
 
-.ef-mw290-ovf {
+.ef-mxw290-ovf {
   max-width: 290px;
   overflow-x: auto;
 }
 
-.ef-mw300-ovf {
+.ef-mxw300-ovf {
   max-width: 300px;
   overflow-x: auto;
 }
 
-.ef-mw310-ovf {
+.ef-mxw310-ovf {
   max-width: 310px;
   overflow-x: auto;
 }
 
-.ef-mw320-ovf {
+.ef-mxw320-ovf {
   max-width: 320px;
   overflow-x: auto;
 }
 
-.ef-mw330-ovf {
+.ef-mxw330-ovf {
   max-width: 330px;
   overflow-x: auto;
 }
 
-.ef-mw340-ovf {
+.ef-mxw340-ovf {
   max-width: 340px;
   overflow-x: auto;
 }
 
-.ef-mw350-ovf {
+.ef-mxw350-ovf {
   max-width: 350px;
   overflow-x: auto;
 }
 
-.ef-mw360-ovf {
+.ef-mxw360-ovf {
   max-width: 360px;
   overflow-x: auto;
 }
 
-.ef-mw370-ovf {
+.ef-mxw370-ovf {
   max-width: 370px;
   overflow-x: auto;
 }
 
-.ef-mw380-ovf {
+.ef-mxw380-ovf {
   max-width: 380px;
   overflow-x: auto;
 }
 
-.ef-mw390-ovf {
+.ef-mxw390-ovf {
   max-width: 390px;
   overflow-x: auto;
 }
 
-.ef-mw400-ovf {
+.ef-mxw400-ovf {
   max-width: 400px;
   overflow-x: auto;
 }
 
-.ef-mw410-ovf {
+.ef-mxw410-ovf {
   max-width: 410px;
   overflow-x: auto;
 }
 
-.ef-mw420-ovf {
+.ef-mxw420-ovf {
   max-width: 420px;
   overflow-x: auto;
 }
 
-.ef-mw430-ovf {
+.ef-mxw430-ovf {
   max-width: 430px;
   overflow-x: auto;
 }
 
-.ef-mw440-ovf {
+.ef-mxw440-ovf {
   max-width: 440px;
   overflow-x: auto;
 }
 
-.ef-mw450-ovf {
+.ef-mxw450-ovf {
   max-width: 450px;
   overflow-x: auto;
 }
 
-.ef-mw460-ovf {
+.ef-mxw460-ovf {
   max-width: 460px;
   overflow-x: auto;
 }
 
-.ef-mw470-ovf {
+.ef-mxw470-ovf {
   max-width: 470px;
   overflow-x: auto;
 }
 
-.ef-mw480-ovf {
+.ef-mxw480-ovf {
   max-width: 480px;
   overflow-x: auto;
 }
 
-.ef-mw490-ovf {
+.ef-mxw490-ovf {
   max-width: 490px;
   overflow-x: auto;
 }
 
-.ef-mw500-ovf {
+.ef-mxw500-ovf {
   max-width: 500px;
   overflow-x: auto;
 }
 
-.ef-mw510-ovf {
+.ef-mxw510-ovf {
   max-width: 510px;
   overflow-x: auto;
 }
 
-.ef-mw520-ovf {
+.ef-mxw520-ovf {
   max-width: 520px;
   overflow-x: auto;
 }
 
-.ef-mw530-ovf {
+.ef-mxw530-ovf {
   max-width: 530px;
   overflow-x: auto;
 }
 
-.ef-mw540-ovf {
+.ef-mxw540-ovf {
   max-width: 540px;
   overflow-x: auto;
 }
 
-.ef-mw550-ovf {
+.ef-mxw550-ovf {
   max-width: 550px;
   overflow-x: auto;
 }
 
-.ef-mw560-ovf {
+.ef-mxw560-ovf {
   max-width: 560px;
   overflow-x: auto;
 }
 
-.ef-mw570-ovf {
+.ef-mxw570-ovf {
   max-width: 570px;
   overflow-x: auto;
 }
 
-.ef-mw580-ovf {
+.ef-mxw580-ovf {
   max-width: 580px;
   overflow-x: auto;
 }
 
-.ef-mw590-ovf {
+.ef-mxw590-ovf {
   max-width: 590px;
   overflow-x: auto;
 }
 
-.ef-mw600-ovf {
+.ef-mxw600-ovf {
   max-width: 600px;
   overflow-x: auto;
 }
@@ -11554,302 +12876,302 @@ dl.ef-float > dd::after {
   overflow-x: auto;
 }
 
-.ef-mh10-ovf {
+.ef-mxh10-ovf {
   max-height: 10px;
   overflow-y: auto;
 }
 
-.ef-mh20-ovf {
+.ef-mxh20-ovf {
   max-height: 20px;
   overflow-y: auto;
 }
 
-.ef-mh30-ovf {
+.ef-mxh30-ovf {
   max-height: 30px;
   overflow-y: auto;
 }
 
-.ef-mh40-ovf {
+.ef-mxh40-ovf {
   max-height: 40px;
   overflow-y: auto;
 }
 
-.ef-mh50-ovf {
+.ef-mxh50-ovf {
   max-height: 50px;
   overflow-y: auto;
 }
 
-.ef-mh60-ovf {
+.ef-mxh60-ovf {
   max-height: 60px;
   overflow-y: auto;
 }
 
-.ef-mh70-ovf {
+.ef-mxh70-ovf {
   max-height: 70px;
   overflow-y: auto;
 }
 
-.ef-mh80-ovf {
+.ef-mxh80-ovf {
   max-height: 80px;
   overflow-y: auto;
 }
 
-.ef-mh90-ovf {
+.ef-mxh90-ovf {
   max-height: 90px;
   overflow-y: auto;
 }
 
-.ef-mh100-ovf {
+.ef-mxh100-ovf {
   max-height: 100px;
   overflow-y: auto;
 }
 
-.ef-mh110-ovf {
+.ef-mxh110-ovf {
   max-height: 110px;
   overflow-y: auto;
 }
 
-.ef-mh120-ovf {
+.ef-mxh120-ovf {
   max-height: 120px;
   overflow-y: auto;
 }
 
-.ef-mh130-ovf {
+.ef-mxh130-ovf {
   max-height: 130px;
   overflow-y: auto;
 }
 
-.ef-mh140-ovf {
+.ef-mxh140-ovf {
   max-height: 140px;
   overflow-y: auto;
 }
 
-.ef-mh150-ovf {
+.ef-mxh150-ovf {
   max-height: 150px;
   overflow-y: auto;
 }
 
-.ef-mh160-ovf {
+.ef-mxh160-ovf {
   max-height: 160px;
   overflow-y: auto;
 }
 
-.ef-mh170-ovf {
+.ef-mxh170-ovf {
   max-height: 170px;
   overflow-y: auto;
 }
 
-.ef-mh180-ovf {
+.ef-mxh180-ovf {
   max-height: 180px;
   overflow-y: auto;
 }
 
-.ef-mh190-ovf {
+.ef-mxh190-ovf {
   max-height: 190px;
   overflow-y: auto;
 }
 
-.ef-mh200-ovf {
+.ef-mxh200-ovf {
   max-height: 200px;
   overflow-y: auto;
 }
 
-.ef-mh210-ovf {
+.ef-mxh210-ovf {
   max-height: 210px;
   overflow-y: auto;
 }
 
-.ef-mh220-ovf {
+.ef-mxh220-ovf {
   max-height: 220px;
   overflow-y: auto;
 }
 
-.ef-mh230-ovf {
+.ef-mxh230-ovf {
   max-height: 230px;
   overflow-y: auto;
 }
 
-.ef-mh240-ovf {
+.ef-mxh240-ovf {
   max-height: 240px;
   overflow-y: auto;
 }
 
-.ef-mh250-ovf {
+.ef-mxh250-ovf {
   max-height: 250px;
   overflow-y: auto;
 }
 
-.ef-mh260-ovf {
+.ef-mxh260-ovf {
   max-height: 260px;
   overflow-y: auto;
 }
 
-.ef-mh270-ovf {
+.ef-mxh270-ovf {
   max-height: 270px;
   overflow-y: auto;
 }
 
-.ef-mh280-ovf {
+.ef-mxh280-ovf {
   max-height: 280px;
   overflow-y: auto;
 }
 
-.ef-mh290-ovf {
+.ef-mxh290-ovf {
   max-height: 290px;
   overflow-y: auto;
 }
 
-.ef-mh300-ovf {
+.ef-mxh300-ovf {
   max-height: 300px;
   overflow-y: auto;
 }
 
-.ef-mh310-ovf {
+.ef-mxh310-ovf {
   max-height: 310px;
   overflow-y: auto;
 }
 
-.ef-mh320-ovf {
+.ef-mxh320-ovf {
   max-height: 320px;
   overflow-y: auto;
 }
 
-.ef-mh330-ovf {
+.ef-mxh330-ovf {
   max-height: 330px;
   overflow-y: auto;
 }
 
-.ef-mh340-ovf {
+.ef-mxh340-ovf {
   max-height: 340px;
   overflow-y: auto;
 }
 
-.ef-mh350-ovf {
+.ef-mxh350-ovf {
   max-height: 350px;
   overflow-y: auto;
 }
 
-.ef-mh360-ovf {
+.ef-mxh360-ovf {
   max-height: 360px;
   overflow-y: auto;
 }
 
-.ef-mh370-ovf {
+.ef-mxh370-ovf {
   max-height: 370px;
   overflow-y: auto;
 }
 
-.ef-mh380-ovf {
+.ef-mxh380-ovf {
   max-height: 380px;
   overflow-y: auto;
 }
 
-.ef-mh390-ovf {
+.ef-mxh390-ovf {
   max-height: 390px;
   overflow-y: auto;
 }
 
-.ef-mh400-ovf {
+.ef-mxh400-ovf {
   max-height: 400px;
   overflow-y: auto;
 }
 
-.ef-mh410-ovf {
+.ef-mxh410-ovf {
   max-height: 410px;
   overflow-y: auto;
 }
 
-.ef-mh420-ovf {
+.ef-mxh420-ovf {
   max-height: 420px;
   overflow-y: auto;
 }
 
-.ef-mh430-ovf {
+.ef-mxh430-ovf {
   max-height: 430px;
   overflow-y: auto;
 }
 
-.ef-mh440-ovf {
+.ef-mxh440-ovf {
   max-height: 440px;
   overflow-y: auto;
 }
 
-.ef-mh450-ovf {
+.ef-mxh450-ovf {
   max-height: 450px;
   overflow-y: auto;
 }
 
-.ef-mh460-ovf {
+.ef-mxh460-ovf {
   max-height: 460px;
   overflow-y: auto;
 }
 
-.ef-mh470-ovf {
+.ef-mxh470-ovf {
   max-height: 470px;
   overflow-y: auto;
 }
 
-.ef-mh480-ovf {
+.ef-mxh480-ovf {
   max-height: 480px;
   overflow-y: auto;
 }
 
-.ef-mh490-ovf {
+.ef-mxh490-ovf {
   max-height: 490px;
   overflow-y: auto;
 }
 
-.ef-mh500-ovf {
+.ef-mxh500-ovf {
   max-height: 500px;
   overflow-y: auto;
 }
 
-.ef-mh510-ovf {
+.ef-mxh510-ovf {
   max-height: 510px;
   overflow-y: auto;
 }
 
-.ef-mh520-ovf {
+.ef-mxh520-ovf {
   max-height: 520px;
   overflow-y: auto;
 }
 
-.ef-mh530-ovf {
+.ef-mxh530-ovf {
   max-height: 530px;
   overflow-y: auto;
 }
 
-.ef-mh540-ovf {
+.ef-mxh540-ovf {
   max-height: 540px;
   overflow-y: auto;
 }
 
-.ef-mh550-ovf {
+.ef-mxh550-ovf {
   max-height: 550px;
   overflow-y: auto;
 }
 
-.ef-mh560-ovf {
+.ef-mxh560-ovf {
   max-height: 560px;
   overflow-y: auto;
 }
 
-.ef-mh570-ovf {
+.ef-mxh570-ovf {
   max-height: 570px;
   overflow-y: auto;
 }
 
-.ef-mh580-ovf {
+.ef-mxh580-ovf {
   max-height: 580px;
   overflow-y: auto;
 }
 
-.ef-mh590-ovf {
+.ef-mxh590-ovf {
   max-height: 590px;
   overflow-y: auto;
 }
 
-.ef-mh600-ovf {
+.ef-mxh600-ovf {
   max-height: 600px;
   overflow-y: auto;
 }
@@ -12264,4 +13586,326 @@ dl.ef-float > dd::after {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+/*
+ * structure.scss
+ * include:
+ * "header" "footer" "container"
+ *
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "header"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+header .st-body {
+  min-width: auto;
+  background: #485169;
+}
+
+header .st-body.ef-header-fix {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  z-index: 3;
+}
+
+header .st-body .st-inner {
+  padding: 0 10px;
+}
+
+header .st-body .st-inner a {
+  display: block;
+  color: #fff;
+}
+
+header .st-body .st-inner a i {
+  color: #fff;
+}
+
+header .st-body .st-inner a:hover {
+  color: #e6e6e6;
+}
+
+header .st-body .st-inner a:hover i {
+  color: #e6e6e6;
+}
+
+header .st-body .st-inner .ef-float-left > a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+header .st-body .st-inner .ef-float-left > a .wrap-logo .logo {
+  width: 25px;
+  line-height: 25px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 50%;
+  margin-top: 2px;
+  background: #fff;
+}
+
+header .st-body .st-inner .ef-float-left > a .wrap-logo .logo i {
+  color: #485169;
+}
+
+header .st-body .st-inner .ef-float-right > ul > li > a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+header .st-body .st-inner .ef-float-right > ul > li > a i {
+  display: block;
+  line-height: 30px;
+}
+
+header .st-body .st-inner .ef-float-right > ul > li .prof {
+  display: block;
+  width: 25px;
+  margin-top: 3px;
+  border-radius: 2px;
+}
+
+.slide-nav .st-inner {
+  padding: 10px 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ccc;
+  background: #fff;
+}
+
+.slide-nav .st-inner i, .slide-nav .st-inner a {
+  color: #333;
+}
+
+.slide-nav .st-inner ul {
+  display: block;
+}
+
+.slide-nav .st-inner ul li a {
+  padding: 0 10px;
+  display: block;
+  font-size: 15px;
+}
+
+.slide-nav .st-inner ul li a .cp-badge {
+  color: #fff;
+}
+
+.slide-nav .st-inner ul li a:hover {
+  background: #e9e9e9;
+}
+
+.slide-nav .st-inner .nav-category {
+  font-size: 11px;
+  color: #aaa;
+  margin-top: -5px;
+  margin-bottom: -10px;
+  padding: 0 10px;
+}
+
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "footer"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+footer .st-body {
+  background-color: #485169;
+}
+
+footer .st-body.ef-footer-fix {
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
+footer .st-body .st-inner {
+  padding: 3px 20px;
+  color: #fff;
+}
+
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "container"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.page-container > .st-body {
+  margin: 40px 0 20px;
+}
+
+.page-container > .st-body > .st-inner {
+  margin-bottom: 30px;
+}
+
+.page-container > .st-body > .st-inner > .page-nav > .st-body {
+  width: 180px;
+  margin: 20px;
+  margin-left: 15px;
+}
+
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav {
+  padding: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+  background: #fff;
+}
+
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav i, .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav a {
+  color: #333;
+}
+
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav ul {
+  display: block;
+}
+
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav ul li a {
+  padding: 0 10px;
+  display: block;
+}
+
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav ul li a:hover {
+  background: #e9e9e9;
+}
+
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav ul li.is-current > a, .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav .cp-stepbar ul li.is-past > a, .cp-stepbar .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav ul li.is-past > a {
+  background: #f6f6f6;
+}
+
+.page-container > .st-body > .st-inner > .page-contents {
+  display: block;
+  margin-left: 195px;
+}
+
+.page-container > .st-body > .st-inner > .page-contents > .st-body > .st-inner {
+  padding: 20px;
+  padding-right: 15px;
+}
+
+/*
+ * media.scss
+ * include:
+ * "mediaquery" 
+ *
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * " mediaquery"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ *
+ * =============================================================
+ ▼ common
+ ============================================================== */
+.rs-bp1-hide,
+.rs-bp2-hide,
+.rs-bp3-show,
+.rs-bp2-only-hide {
+  display: block;
+}
+
+.rs-bp1-show,
+.rs-bp2-show,
+.rs-bp3-hide,
+.rs-bp2-only-show {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .rs-bp2-hide,
+  .rs-bp3-show {
+    display: none;
+  }
+  .rs-bp2-show,
+  .rs-bp3-hide {
+    display: block;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .rs-bp2-only-hide {
+    display: none;
+  }
+  .rs-bp2-only-show {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .rs-bp1-hide {
+    display: none;
+  }
+  .rs-bp1-show {
+    display: block;
+  }
+}
+
+/* =============================================================
+ ▼ pages
+============================================================== */
+@media (max-width: 768px) {
+  .page-container > .st-body > .st-inner > .page-nav {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: -10px;
+    left: 0;
+    z-index: 1;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #ccc;
+    background: #fff;
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    width: 80%;
+  }
+  .page-container > .st-body > .st-inner > .page-nav.transition {
+    -webkit-transition: -webkit-transform 0.5s ease;
+            transition: transform 0.5s ease;
+  }
+  .page-container > .st-body > .st-inner > .page-nav.is-open {
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    box-shadow: rgba(204, 204, 204, 0.9) 0 0 60px;
+  }
+  .page-container > .st-body > .st-inner > .page-nav > .st-body {
+    width: 100%;
+    margin: 0;
+  }
+  .page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav {
+    border: 0;
+    border-radius: 0;
+  }
+  .page-container > .st-body > .st-inner > .page-contents {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    z-index: 1;
+    -ms-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  .slide-nav.transition {
+    -webkit-transition: -webkit-transform 0.5s ease;
+            transition: transform 0.5s ease;
+  }
+  .slide-nav.is-open {
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    box-shadow: rgba(204, 204, 204, 0.9) 0 0 60px;
+  }
 }

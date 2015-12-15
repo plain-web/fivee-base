@@ -21,16 +21,21 @@
     %header.page-header
       .st-body.ef-header-fix.js-pageTop-remove
         .st-inner.ef-float
-          .ef-float-left
-            %a(href="index.html")
-              %ul.ef-float7.wrap-logo
+          .ef-float-left.ef-mgl-10.ef-mgr10.rs-bp2-show
+            %a.ef-w30.js-aside-open(href="#{v}")
+              %ul.ef-float7
                 %li
-                  .logo.ef-w30.ef-rd50p.ef-txt-center
-                    %i.fa.fa-puzzle-piece.ef-fs20.ef-lh30
+                  %i.fa.fa-bars.ef-fs18.ef-lh30
+          .ef-float-left
+            %a(href="../index.html")
+              %ul.ef-float3.wrap-logo
+                %li
+                  .logo
+                    %i.fa.fa-puzzle-piece
                 %li
                   %strong.ef-fs20.ef-lh30
                     Fivee-base
-          .ef-float-right
+          .ef-float-right.rs-bp3-show
             %ul.ef-float20.ef-lh30
               %li
                 %a(href="#{v}")
@@ -48,7 +53,36 @@
                     %li
                       %i.fa.fa-envelope
                     %li
-                      message
+                      Message
+                    %li.md-activity
+                      %span.cp-badge
+                        2
+                    %li
+                      %i.fa.fa-caret-down
+              %li
+                %a.js-popup-open.js-template0(href="#{v}")
+                  %ul.ef-float3
+                    %li
+                      %img.prof(src="../img/myprof.png")
+                    %li
+                      Your name
+                    %li
+                      %i.fa.fa-caret-down
+          .ef-float-right.rs-bp2-only-show
+            %ul.ef-float20.ef-lh30
+              %li
+                %a(href="#{v}")
+                  %ul.ef-float3
+                    %li
+                      %i.fa.fa-info-circle.ef-fs18
+                    %li.md-activity
+                      %span.cp-badge
+                        53
+              %li
+                %a.js-popup-open.js-template1(href="#{v}")
+                  %ul.ef-float3
+                    %li
+                      %i.fa.fa-envelope.ef-fs18
                     %li
                       %i.fa.fa-caret-down
                     %li.md-activity
@@ -58,17 +92,70 @@
                 %a.js-popup-open.js-template0(href="#{v}")
                   %ul.ef-float3
                     %li
-                      %img.is-block.ef-w30.ef-rd3(src="../img/myprof.png")
-                    %li
-                      Your name
+                      %img.prof(src="../img/myprof.png")
                     %li
                       %i.fa.fa-caret-down
+          .ef-float-right.rs-bp1-show
+            %ul.ef-float20.ef-lh30
+              %li
+                %a.js-slide-nav-open(href="#{v}")
+                  %ul.ef-float3
+                    %li
+                      %img.prof(src="../img/myprof.png")
+                    %li
+                      %i.fa.fa-caret-down
+    / slide-nav//////////////////////////////////////////////
+    %section.slide-nav.rs-bp1-show.js-slide-nav
+      .st-body
+        .st-inner
+          %ul.ef-lh40
+            %li
+              %a(href="#{v}")
+                %ul.ef-float3
+                  %li
+                    Update
+                  %li.md-activity
+                    %span.cp-badge
+                      53
+            %li
+              %a.js-popup-inset-open.js-template1(href="#{v}")
+                %ul.ef-float3
+                  %li
+                    Message
+                  %li.md-activity
+                    %span.cp-badge
+                      2
+                  %li.js-nav-caret
+                    %i.fa.fa-caret-down
+            %li
+              %a.js-collapse.js-collapse-0(href="#{v}")
+                %ul.ef-float3
+                  %li
+                    Your name
+                  %li.js-nav-caret
+                    %i.fa.fa-caret-down
+              %ul.ef-txt-indent1.js-collapse-num0(style="display:none;")
+                %li
+                  %a(href="#{v}")
+                    %ul.ef-float3
+                      %li.ef-mgl3
+                        Project
+                %li
+                  %a(href="#{v}")
+                    %ul.ef-float3
+                      %li.ef-mgl3
+                        My account
+                %li
+                  %a(href="#{v}")
+                    %ul.ef-float3
+                      %li.ef-mgl3
+                        ログアウト
     / page-container//////////////////////////////////////////////
     %section.page-container
-      .st-body.ef-mgt40.ef-mgb20
+      .st-body
         .st-inner.ef-float
           // page-nav//////////////////////////////////////////////
-          %aside.page-nav.ef-float-left
+          %aside.page-nav.ef-float-left.js-aside
             .st-body
               .st-inner
                 // side-menu//////////////////////////////////////////////
@@ -478,7 +565,7 @@
                 // breadcrumb//////////////////////////////////////////////
                 %section.cp-breadcrumb-model1.ef-mgb20
                   .st-inner.ef-float
-                    .ef-float-left.ef-w80p
+                    .ef-float-left.ef-mxw80p
                       %ul.ef-float10.ef-lh24
                         %li
                           %a(href="components.html")
@@ -488,7 +575,7 @@
                             %i.fa.fa-angle-right
                         %li
                           remarks
-                    .ef-float-right.ef-w20p
+                    .ef-float-right
                       %ul.ef-float3
                         %li.ef-float-right
                           %a.cp-btn-mini.cp-btn-white.ef-w30(href="index.html")
@@ -899,7 +986,10 @@
     /cartain////////////////////////////////////////////
     %section.md-cartain.js-cartain(style="display:none;")
     / script////////////////////////////////////////////
-    %script(src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript")
+    <!--[if gt IE 8]><!-->
+    %script(src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript")<>
+    <!--<![endif]-->
+    /[if lt IE 9] <script src="../bower_components/jquery-legacy/dist/jquery.min.js" type="text/javascript"></script>
     %script(src="../js/min/fivee-base.min.js" type="text/javascript")
     / :javascript
     /   $(function(){
