@@ -110,7 +110,7 @@ gulp.task('sass', function() {
 ======================================================================== */
 gulp.task('default', ['server'], function() {
   gulp.watch('./**/*.haml',['haml']);
-  gulp.watch(['./js/**/*.js','!js/min/**/*.js'],['js']);
+  gulp.watch(['./js/**/*.js','!./js/min/**/*.js'],['js']);
   gulp.watch('./sass/**/*.scss',['sass']);
   //gulp.watch('./sass/_*.scss',['themeDefault']);
 });

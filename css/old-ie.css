@@ -15,7 +15,7 @@ html, body {
   min-width: 980px;
 }
 
-header .st-inner,
-footer .st-inner {
+.page-header .st-inner,
+.page-footer .st-inner {
   min-width: 980px;
 }

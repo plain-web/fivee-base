@@ -193,34 +193,3 @@
 @mixin rotate ($deg) {
   transform: rotate($deg);
 }
-// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-// "base"
-// ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-/* =============================================================
- ▼ app base
-============================================================= */
-html,body {
-  margin:0;
-  padding: 0;
-  @include min-width($app-minWidth);
-}
-body {
-  position: relative;
-  background: $cl-bg-body;
-  font-size: $fs-base;
-  color: $cl-txt-base;
-  line-height: $lh-base;
-  font-family: $ff-base;
-}
-*,*:before, *:after {box-sizing: border-box;}
-
-small{font-size: $fs-small;}
-em{font-style:normal;}
-pre,code{font-family: $ff-base;}
-
-input,button{outline: 0;}
-//for firefox
-input::-moz-focus-inner,
-button::-moz-focus-inner {
-  border: 0;
-}

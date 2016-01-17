@@ -1,4 +1,4 @@
-@import "setting";
+@import "base";
 /*
  * components.scss
  * include:
@@ -296,7 +296,10 @@ ul{
     }
   }
 }
-
+ol{
+  margin-top:0;
+  margin-bottom:0;
+}
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "dl"
@@ -305,7 +308,7 @@ ul{
 dl,dt,dd{
   margin:0;
   padding:0;
-  line-height:1.4;
+  line-height:1.8;
 }
 dl{
   dt{font-weight:bold;}
@@ -388,40 +391,9 @@ a{
 
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "forms"
+ * "form"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
- * =============================================================
- ▼ default form
-============================================================= */
-// select,
-// input[type="text"],
-// input[type="password"]{
-//   height:$lh-form;
-//   margin:0;
-//   padding:0 7px;
-//   line-height:$lh-form;
-//   font-size:100%;
-//   vertical-align:middle;
-//   outline: none;
-//   @include brd;
-//   @include border-radius(3px);
-//   font-family: $ff-base;
-//   &:focus{
-//    @extend .ef-bg-focus;
-//    @extend .ef-brd-focus;
-//   }
-// }
-// input[type="checkbox"],
-// input[type="radio"]{
-//   border:0;
-//   margin:0;
-//   padding:0;
-//   display: block;
-// }
-// select{
-//   padding:0;
-// }
 /* =============================================================
  ▼ formset
 ============================================================= */
@@ -818,7 +790,7 @@ label{
     @include brd(1px,solid,$cl-btn-white-darken);
     @include gradation($cl-btn-white, $cl-btn-white);
   }
-  &.cp-disabled{
+  &.is-disable{
     color:$cl-txt-base;
     i{color:$cl-txt-base;}
     &:hover{
@@ -850,7 +822,7 @@ label{
     @include brd(1px,solid,$cl-btn-red-darken);
     @include gradation($cl-btn-red, $cl-btn-red);
   }
-  &.cp-disabled{
+  &.is-disable{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     &:hover{
@@ -882,7 +854,7 @@ label{
     @include brd(1px,solid,$cl-btn-darken);
     @include gradation($cl-btn-orange, $cl-btn-orange);
   }
-  &.cp-disabled{
+  &.is-disable{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     &:hover{
@@ -914,7 +886,7 @@ label{
     @include brd(1px,solid,$cl-btn-blue-darken);
     @include gradation($cl-btn-blue, $cl-btn-blue);
   }
-  &.cp-disabled{
+  &.is-disable{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     &:hover{
@@ -946,7 +918,7 @@ label{
     @include brd(1px,solid,$cl-btn-green-darken);
     @include gradation($cl-btn-green, $cl-btn-green);
   }
-  &.cp-disabled{
+  &.is-disable{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     &:hover{
@@ -978,7 +950,7 @@ label{
     @include brd(1px,solid,$cl-btn-yellow-darken);
     @include gradation($cl-btn-yellow, $cl-btn-yellow);
   }
-  &.cp-disabled{
+  &.is-disable{
     color:$cl-txt-base;
     i{color:$cl-txt-base;}
     &:hover{
@@ -1010,7 +982,7 @@ label{
     @include brd(1px,solid,$cl-btn-brown-darken);
     @include gradation($cl-btn-brown, $cl-btn-brown);
   }
-  &.cp-disabled{
+  &.is-disable{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     &:hover{
@@ -1042,7 +1014,7 @@ label{
     @include brd(1px,solid,$cl-btn-black-darken);
     @include gradation($cl-btn-black, $cl-btn-black);
   }
-  &.cp-disabled{
+  &.is-disable{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     &:hover{
@@ -1074,7 +1046,7 @@ label{
     @include brd(1px,solid,$cl-btn-gray-darken);
     @include gradation($cl-btn-gray, $cl-btn-gray);
   }
-  &.cp-disabled{
+  &.is-disable{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     &:hover{
@@ -1106,7 +1078,7 @@ label{
     @include brd(1px,solid,$cl-btn-theme-darken);
     @include gradation($cl-btn-theme, $cl-btn-theme);
   }
-  &.cp-disabled{
+  &.is-disable{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     &:hover{
@@ -1128,7 +1100,7 @@ label{
 .cp-btn-mini-gray,
 .cp-btn-mini-theme{
   @extend .cp-btn;
-  font-size:$fs-midium;
+  font-size:$fs-small;
   padding:3px;
   line-height:$lh-btn-mini;
 }
@@ -1589,45 +1561,90 @@ label{
  * "stamps"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
+ //not click
 .cp-stamp{
-  @include border-radius(3px);
-  padding:0 3px;
+  //@include border-radius(3px);
+  padding:5px 7px;
   display:inline-block;
   text-align:center;
-  font-size:$fs-small;
-  height:15px;
   min-width:15px;
-  line-height:15px;
+  color:$cl-txt-rev;
+  font-size:12px;
+  line-height:20px;
+  &:hover{
+    color:$cl-txt-rev;
+    text-decoration: none;
+  }
 }
 .cp-stamp-gray{
   @extend .cp-stamp;
   background:$cl-stamp-gray;
-  color:$cl-txt-rev;
 }
 .cp-stamp-red{
   @extend .cp-stamp;
   background:$cl-stamp-red;
-  color:$cl-txt-rev;
 }
 .cp-stamp-green{
   @extend .cp-stamp;
-  background:$cl-stamp-green;
-  color:$cl-txt-rev;
+  background:darken($cl-stamp-green, 10%);
 }
 .cp-stamp-orange{
   @extend .cp-stamp;
   background:$cl-stamp-orange;
-  color:$cl-txt-rev;
 }
 .cp-stamp-blue{
   @extend .cp-stamp;
   background:$cl-stamp-blue;
-  color:$cl-txt-rev;
 }
 .cp-stamp-yellow{
   @extend .cp-stamp;
-  background:$cl-stamp-yellow;
-  color:$cl-txt-rev;
+  background:darken($cl-stamp-yellow, 10%);
+}
+.cp-stamp-brown{
+  @extend .cp-stamp;
+  background:darken($cl-stamp-brown, 10%);
+}
+.cp-stamp-mini-gray{
+  @extend .cp-stamp-gray;
+  font-size:11px;
+  line-height:11px;
+  padding:4px 7px;
+}
+.cp-stamp-mini-red{
+  @extend .cp-stamp-red;
+  font-size:11px;
+  line-height:11px;
+  padding:4px 7px;
+}
+.cp-stamp-mini-green{
+  @extend .cp-stamp-green;
+  font-size:11px;
+  line-height:11px;
+  padding:4px 7px;
+}
+.cp-stamp-mini-orange{
+  @extend .cp-stamp-orange;
+  font-size:11px;
+  line-height:11px;
+  padding:4px 7px;
+}
+.cp-stamp-mini-blue{
+  @extend .cp-stamp-blue;
+  font-size:11px;
+  line-height:11px;
+  padding:4px 7px;
+}
+.cp-stamp-mini-yellow{
+  @extend .cp-stamp-yellow;
+  font-size:11px;
+  line-height:11px;
+  padding:4px 7px;
+}
+.cp-stamp-mini-brown{
+  @extend .cp-stamp-brown;
+  font-size:11px;
+  line-height:11px;
+  padding:4px 7px;
 }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■

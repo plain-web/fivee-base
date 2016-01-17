@@ -1,4 +1,5 @@
-@import "effect";
+@import "variables";
+@import "../setting";
 /*
  * structure.scss
  * include:
@@ -8,7 +9,7 @@
  * "header"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
-header{
+.page-header{
   .st-body{
     @include min-width($app-minWidth);
     background:$cl-bg-header;
@@ -71,7 +72,6 @@ header{
   }
 }
 .slide-nav{
-  .st-body{}
   .st-inner{
     padding:10px 0;
     @include brd-bottom;
@@ -105,7 +105,7 @@ header{
  * "footer"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
-footer{
+.page-footer{
   .st-body{
     &.ef-footer-fix{
       @include posi-fix(auto,0,0,0);
@@ -174,5 +174,65 @@ footer{
         }
       }
     }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "responsive"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+/* =============================================================
+ ▼ pages
+============================================================== */
+@media (max-width: 768px) {
+  .page-container{
+    >.st-body{
+      >.st-inner{
+        // page-nav ////////////////////////////////////
+        >.page-nav{
+          @include posi-abs(0,auto,-10px,0);
+          z-index:1;
+          @include brd-right;
+          background:$cl-bg-white;
+          @include transform(translateX(-100%));
+          width:80%;
+          &.transition{
+            @include transition(transform 0.5s ease);
+          }
+          &.is-open{
+            @include transform(translateX(0));
+            @include box-shadow(rgba($cl-brd-base, 0.9) 0 0 60px);
+           }
+          >.st-body{
+            width:100%;
+            margin:0;
+            >.st-inner{
+              .md-main-nav{
+                border:0;
+                @include border-radius(0);
+              }
+            }
+          }
+        }
+        // page-main ////////////////////////////
+        >.page-contents{
+          margin-left:0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .slide-nav{
+    @include posi-abs(0,0,auto,0);
+    z-index:1;
+    @include transform(translateY(-100%));
+    &.transition{
+      @include transition(transform 0.5s ease);
+    }
+    &.is-open{
+      @include transform(translateY(0));
+      @include box-shadow(rgba($cl-brd-base, 0.9) 0 0 60px);
+     }
   }
 }

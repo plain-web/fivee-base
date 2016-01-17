@@ -398,9 +398,9 @@ $('.js-bookmark-open').on('click', function(){
   if(bookmartFlg === 2){
     bookmarkIcon.removeClass('fa-star').addClass('fa-star-o');
 
-    var thisSelecter = $(this);
+    var thisSelector = $(this);
     returnClass = 'js-template';
-    popupHandler.popupPosi(thisSelecter, returnClass);
+    popupHandler.popupPosi(thisSelector, returnClass);
     
     bookmartFlg = 0;
   }
@@ -415,21 +415,21 @@ var popupFlg, lastFlg;
 $('.js-popup-open').on('click', function(){
   lastFlg = popupFlgCount[popupFlgCount.length-1];
   if(lastFlg === 'off'){
-    var thisSelecter = $(this);
+    var thisSelector = $(this);
     returnClass = 'js-template';
-    popupHandler.popupPosi(thisSelecter, returnClass);
+    popupHandler.popupPosi(thisSelector, returnClass);
   }
 });
 var popupHandler = {
-  popupPosi: function(thisSelecter, returnClass){
+  popupPosi: function(thisSelector, returnClass){
     var windowWidth = $(window).outerWidth(true);
-    var popupPosi = thisSelecter.position();
+    var popupPosi = thisSelector.position();
     var topPosi = popupPosi.top;
-        topPosi = topPosi + thisSelecter.outerHeight(true) + 7 ;
-    var thisWidth = thisSelecter.outerWidth(true);
+        topPosi = topPosi + thisSelector.outerHeight(true) + 7 ;
+    var thisWidth = thisSelector.outerWidth(true);
     var rightPosi = windowWidth - popupPosi.left - thisWidth;
     //this
-    clickThis = thisSelecter;
+    clickThis = thisSelector;
     //return class
     returnClass = returnClass;
     //target class
@@ -462,18 +462,18 @@ var popupHandler = {
 $('.js-popup-inset-open').on('click', function(){
   lastFlg = popupFlgCount[popupFlgCount.length-1];
   if(lastFlg === 'off'){
-    var thisSelecter = $(this);
+    var thisSelector = $(this);
     returnClass = 'js-template';
-    popupInsetHandler.popupPosi(thisSelecter, returnClass);
+    popupInsetHandler.popupPosi(thisSelector, returnClass);
   }
 });
 var popupInsetHandler = {
-  popupPosi: function(thisSelecter, returnClass){
-    var popupPosi = thisSelecter.offset();
+  popupPosi: function(thisSelector, returnClass){
+    var popupPosi = thisSelector.offset();
     var topPosi = popupPosi.top;
-        topPosi = topPosi + thisSelecter.outerHeight(true);
+        topPosi = topPosi + thisSelector.outerHeight(true);
     //this
-    clickThis = thisSelecter;
+    clickThis = thisSelector;
     //return class
     returnClass = returnClass;
     //target class
@@ -756,6 +756,40 @@ $('.js-html-show').on('click', function(){
       }
     }
   });
+});
+/*========================================================================
+  block-selector
+======================================================================== */
+//20160117,本jsの他のselectorと同じく'-num'をつける改修を入れる
+$('.js-navblock a').on('click', function(){
+  //parents class
+  var navClass = $(this).parents('.js-navblock');
+  clickThis = navClass;
+  returnClass = 'js-navblock-select';
+  var targetSection = thisClassGet(clickThis, returnClass);
+  targetSection = targetSection.replace('select', 'target');
+
+  //parent click class
+  var parentClass = $(this).parent('li');
+
+  //background-color
+  navClass.find('li').removeClass('is-current');
+  parentClass.addClass('is-current');
+
+  //presence class
+  var hasclass = parentClass.attr('class');
+  if(hasclass){
+    var matchKey = hasclass.match('parent');
+    if(matchKey){
+      clickThis = parentClass;
+      returnClass = 'js-navblock-parent';
+      targetClass = thisClassGet(clickThis, returnClass);
+      targetClass = targetClass.replace('parent', 'child');
+      //toggle targetClass
+      $(targetSection).find('ul:eq(0)').children('li').hide();
+      $(targetSection).find(targetClass).fadeToggle();
+    }
+  }
 });
 /*========================================================================
   mediaquery aside

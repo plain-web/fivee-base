@@ -5,7 +5,7 @@
  *"tab" "modal" "popup" "cartain"
  * "tooltip" "message" "toast"
  * "pagination" "loading" "scrolltop"
- * "collapse" "wizard"
+ * "collapse" "navblock" "wizard"
  *
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -240,7 +240,7 @@ table.md-table-base{
       background:$cl-bg-table-header;
       @include brd-right(1px,solid,$cl-brd-base);
       @include brd-bottom(1px,solid,$cl-brd-base);
-      white-space: nowrap;
+      //white-space: nowrap;
       font-weight:bold;
       a,i{color:$cl-txt-base;}
     }
@@ -569,37 +569,47 @@ table.md-table-base{
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .md-message{
-  .st-inner{
-    &.current{display:block;}
+  >.st-body{
+    &.is-current{display:block;}
     display:none;
-    @include brd(1px,solid,$cl-theme);
-    padding:7px 10px;
-    @include border-radius(3px);
-    @include box-shadow(rgba($cl-brd-base, 0.3) 1px 2px 5px);
-    i{font-size:$fs-h5;}
+    >.st-inner{
+      @include brd(1px,solid,$cl-theme);
+      padding:10px 15px;
+      @include border-radius(3px);
+      @include box-shadow(rgba($cl-brd-base, 0.3) 1px 2px 5px);
+      i{font-size:$fs-h5;}
+    }
     &.md-message-alert{
-      @include brd(1px,solid,$cl-red);
-      background: $cl-bg-alert;
-      color:$cl-red;
-      i{color:$cl-red;}
+      >.st-inner{
+        @include brd(1px,solid,$cl-red);
+        background: $cl-bg-alert;
+        color:$cl-red;
+        i{color:$cl-red;}
+      }
     }
     &.md-message-success{
-      @include brd(1px,solid,$cl-success);
-      background: $cl-bg-success;
-      color:$cl-success;
-      i{color:$cl-success;}
+      >.st-inner{
+        @include brd(1px,solid,$cl-success);
+        background: $cl-bg-success;
+        color:$cl-success;
+        i{color:$cl-success;}
+      }
     }
     &.md-message-info{
-      @include brd(1px,solid,$cl-info);
-      background: $cl-bg-info;
-      color:$cl-info;
-      i{color:$cl-info;}
+      >.st-inner{
+        @include brd(1px,solid,$cl-info);
+        background: $cl-bg-info;
+        color:$cl-info;
+        i{color:$cl-info;}
+      }
     }
     &.md-message-warning{
-      @include brd(1px,solid,$cl-warning);
-      background: $cl-bg-warning;
-      color:$cl-warning;
-      i{color:$cl-warning;}
+      >.st-inner{
+        @include brd(1px,solid,$cl-warning);
+        background: $cl-bg-warning;
+        color:$cl-warning;
+        i{color:$cl-warning;}
+      }
     }
   }
 }
@@ -743,6 +753,42 @@ table.md-table-base{
 }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "navblock"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.md-navblock{
+  >.st-inner{
+    >ul{
+      >li{
+        >a{
+          padding:5px 7px;
+          display: block;
+          text-align: center;
+          background:$cl-bg-gray;
+          color:$cl-txt-base;
+          i{color:$cl-txt-base;}
+          &:hover{
+            text-decoration: none;
+            background:darken($cl-bg-gray, 10%);
+          }
+        }
+        &.is-current{
+          >a{
+            background:$cl-bg-theme;
+            color:$cl-txt-rev;
+            i{color:$cl-txt-rev;}
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+  &.column2{>.st-inner{>ul{>li{width:50%;}}}}
+  &.column3{>.st-inner{>ul{>li{width:33.33%;}}}}
+  &.column4{>.st-inner{>ul{>li{width:25%;}}}}
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "scrolltop"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
@@ -754,10 +800,11 @@ table.md-table-base{
       a{
         @include brd;
         @include border-radius(5px);
-        padding:2px 7px;
+        padding:2px 10px;
         background:$cl-bg-white;
         display: block;
         @include opacity(0.9);
+        text-align:center;
       }
     }
   }
