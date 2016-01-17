@@ -1,6 +1,9 @@
 # fivee-base(**現在、作成中**です)
 Fivee-baseはアプリケーションやWebサイトのフロントエンド構築に必要な要素を5つに分類化する事で作業内容を明確にし、大幅に作業工数を削減する事ができるCSSフレームワークです。
 
+### docサイト
+<http://plain-web.com/fivee-base/apps/page-components/button.html>
+
 
 ### 特徴
 * 多人数での大規模開発に対応したCSSフレームワーク。
