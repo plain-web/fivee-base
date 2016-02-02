@@ -1,0 +1,5 @@
+﻿<div class="ef-mxw250-ovf">
+  <div class="is-nowrap">
+    max-width:200px;overflow-x:auto;max-width:200px;overflow-x:auto;max-width:200px;overflow-x:auto;
+  </div>
+</div>

@@ -199,6 +199,11 @@
   background: #f6f6f6;
 }
 
+.page-container > .st-body > .st-inner > .page-nav > .st-body > .st-inner .md-main-nav > .st-inner > ul > li > ul {
+  max-height: 300px;
+  overflow: auto;
+}
+
 .page-container > .st-body > .st-inner > .page-contents {
   display: block;
   margin-left: 195px;

@@ -1,0 +1,134 @@
+﻿<ul>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        white
+      </li>
+      <li>
+        <span class="cp-badge-white">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        red
+      </li>
+      <li>
+        <span class="cp-badge-red">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        orange
+      </li>
+      <li>
+        <span class="cp-badge-orange">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        blue
+      </li>
+      <li>
+        <span class="cp-badge-blue">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        green
+      </li>
+      <li>
+        <span class="cp-badge-green">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        yellow
+      </li>
+      <li>
+        <span class="cp-badge-yellow">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        brown
+      </li>
+      <li>
+        <span class="cp-badge-brown">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        black
+      </li>
+      <li>
+        <span class="cp-badge-black">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        gray
+      </li>
+      <li>
+        <span class="cp-badge-gray">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        default
+      </li>
+      <li>
+        <span class="cp-badge">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        theme
+      </li>
+      <li>
+        <span class="cp-badge-theme">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+</ul>

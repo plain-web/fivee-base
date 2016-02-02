@@ -1,0 +1,30 @@
+﻿<ul>
+  <li class="ef-bg-red ef-mgb10 is-table">
+    <div class="ef-mgt50">
+      <div class="ef-bg-theme ef-cl-white ef-txt-center ef-w100">
+        margin-top
+      </div>
+    </div>
+  </li>
+  <li class="ef-bg-red ef-mgb10 is-table">
+    <div class="ef-mgr50">
+      <div class="ef-bg-theme ef-cl-white ef-txt-center ef-w100">
+        margin-right
+      </div>
+    </div>
+  </li>
+  <li class="ef-bg-red ef-mgb10 is-table">
+    <div class="ef-mgb50">
+      <div class="ef-bg-theme ef-cl-white ef-txt-center ef-w100">
+        margin-bottom
+      </div>
+    </div>
+  </li>
+  <li class="ef-bg-red ef-mgb10 is-table">
+    <div class="ef-mgl50">
+      <div class="ef-bg-theme ef-cl-white ef-txt-center ef-w100">
+        margin-left
+      </div>
+    </div>
+  </li>
+</ul>

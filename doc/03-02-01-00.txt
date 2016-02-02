@@ -1,0 +1,5 @@
+﻿<div class="ef-box-center ef-w100">
+  <div class="ef-bg-theme ef-cl-white ef-txt-center">
+    box-center
+  </div>
+</div>

@@ -1,0 +1,25 @@
+﻿<span class="ef-rd5 ef-bg-theme ef-pd10 ef-mgr20">
+  <span class="ef-cl-white">
+    all
+  </span>
+</span>
+<span class="ef-rdt5 ef-bg-theme ef-pd10 ef-mgr20">
+  <span class="ef-cl-white">
+    top
+  </span>
+</span>
+<span class="ef-rdr5 ef-bg-theme ef-pd10 ef-mgr20">
+  <span class="ef-cl-white">
+    right
+  </span>
+</span>
+<span class="ef-rdb5 ef-bg-theme ef-pd10 ef-mgr20">
+  <span class="ef-cl-white">
+    bottom
+  </span>
+</span>
+<span class="ef-rdl5 ef-bg-theme ef-pd10 ef-mgr20">
+  <span class="ef-cl-white">
+    left
+  </span>
+</span>

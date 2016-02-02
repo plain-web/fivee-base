@@ -1,0 +1,5 @@
+﻿<div class="ef-mxw50p">
+  <div class="ef-bg-theme ef-txt-center ef-cl-white ef-pd10">
+    max-width:50%;
+  </div>
+</div>

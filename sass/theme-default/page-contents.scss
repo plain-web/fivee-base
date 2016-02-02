@@ -159,6 +159,18 @@
                 }
               }
             }
+            .md-main-nav{
+              >.st-inner{
+                >ul{
+                  >li{
+                    >ul{
+                      max-height:300px;
+                      overflow: auto;
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }

@@ -1,0 +1,18 @@
+﻿<div class="ef-float rs-bp3-float">
+  <div class="ef-float-left ef-bg-gray">
+    <div class="st-inner">
+      float-left
+    </div>
+  </div>
+  <div class="ef-float-left ef-bg-gray">
+    <div class="st-inner ef-pdl10">
+      float-left
+    </div>
+  </div>
+  <div class="ef-float-right ef-bg-gray">
+    <div class="st-inner">
+      float-right
+    </div>
+  </div>
+</div>
+</div>

@@ -7,6 +7,8 @@
   <!--<![endif]-->
   %head
     %meta(charset="utf-8")
+    %meta(name="description" content="CSSフレームワークはFivee-baseが便利です。豊富なパーツでアプリケーションやWebサイトを簡単に作る事ができます。")
+    %meta(name="keywords" content="css,フレームワーク,開発,html")
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
     %meta(content="widtlih=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport")
     %title Fivee Base
@@ -44,8 +46,8 @@
                       %i.fa.fa-info-circle
                     %li
                       Update
-                    %li.md-activity
-                      %span.cp-badge
+                    %li
+                      %span.cp-badge-red
                         53
               %li
                 %a.js-popup-open.js-template1(href="#{v}")
@@ -54,8 +56,8 @@
                       %i.fa.fa-envelope
                     %li
                       Message
-                    %li.md-activity
-                      %span.cp-badge
+                    %li
+                      %span.cp-badge-red
                         2
                     %li
                       %i.fa.fa-caret-down
@@ -75,8 +77,8 @@
                   %ul.ef-float3
                     %li
                       %i.fa.fa-info-circle.ef-fs18
-                    %li.md-activity
-                      %span.cp-badge
+                    %li
+                      %span.cp-badge-red
                         53
               %li
                 %a.js-popup-open.js-template1(href="#{v}")
@@ -85,8 +87,8 @@
                       %i.fa.fa-envelope.ef-fs18
                     %li
                       %i.fa.fa-caret-down
-                    %li.md-activity
-                      %span.cp-badge
+                    %li
+                      %span.cp-badge-red
                         2
               %li
                 %a.js-popup-open.js-template0(href="#{v}")
@@ -114,16 +116,16 @@
                 %ul.ef-float3
                   %li
                     Update
-                  %li.md-activity
-                    %span.cp-badge
+                  %li
+                    %span.cp-badge-red
                       53
             %li
               %a.js-popup-inset-open.js-template1(href="#{v}")
                 %ul.ef-float3
                   %li
                     Message
-                  %li.md-activity
-                    %span.cp-badge
+                  %li
+                    %span.cp-badge-red
                       2
                   %li.js-nav-caret
                     %i.fa.fa-caret-down
@@ -170,7 +172,7 @@
                             %li
                               Dashboard
                       %li
-                        .ef-fs11.ef-cl-gray6
+                        .ef-fs11.ef-txt-gray6
                           Structure
                       %li.js-nav-parent-num0
                         %a(href="#{v}")
@@ -193,7 +195,7 @@
                                 %li.ef-mgl3
                                   inner
                       %li
-                        .ef-fs11.ef-cl-gray6
+                        .ef-fs11.ef-txt-gray6
                           Components
                       %li.js-nav-parent-num1
                         %a(href="#{v}")
@@ -256,32 +258,37 @@
                                 %li.ef-mgl3
                                   underline
                           %li
-                            %a(href="../page-components/images.html")
+                            %a(href="../page-components/image.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
-                                  images
+                                  image
                           %li
                             %a(href="../page-components/tag.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   tag
                           %li
-                            %a(href="../page-components/activity.html")
+                            %a(href="../page-components/badge.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
-                                  activity
+                                  badge
                           %li
                             %a(href="../page-components/progress-bar.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
-                                  progress bar
+                                  progress-bar
                           %li
                             %a(href="../page-components/step-wizard.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
-                                  step wizard
+                                  step-wizard
+                          %li
+                            %a(href="../page-components/title.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  title
                       %li
-                        .ef-fs11.ef-cl-gray6
+                        .ef-fs11.ef-txt-gray6
                           Effect
                       %li.js-nav-parent-num2
                         %a(href="#{v}")
@@ -329,10 +336,10 @@
                                 %li.ef-mgl3
                                   line-height
                           %li
-                            %a(href="../page-effect/font.html")
+                            %a(href="../page-effect/font-size.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
-                                  font
+                                  font-size
                           %li
                             %a(href="../page-effect/text.html")
                               %ul.ef-float3
@@ -362,49 +369,34 @@
                             %a(href="../page-effect/font-color.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
-                                  font color
+                                  font-color
                           %li
-                            %a(href="../page-effect/background-color.html")
+                            %a(href="../page-effect/bg-color.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
-                                  background color
+                                  bg-color
                           %li
                             %a(href="../page-effect/opacity.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   opacity
                           %li
-                            %a(href="../page-effect/box-round.html")
-                              %ul.ef-float3
-                                %li.ef-mgl3
-                                  box round
-                          %li
                             %a(href="../page-effect/overflow.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   overflow
                           %li
-                            %a(href="../page-effect/box-center.html")
-                              %ul.ef-float3
-                                %li.ef-mgl3
-                                  box-center
-                          %li
                             %a(href="../page-effect/text-ellipsis.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
-                                  text ellipsis
+                                  text-ellipsis
                           %li
                             %a(href="../page-effect/rotate.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   rotate
-                          %li
-                            %a(href="../page-effect/easing.html")
-                              %ul.ef-float3
-                                %li.ef-mgl3
-                                  easing
                       %li
-                        .ef-fs11.ef-cl-gray6
+                        .ef-fs11.ef-txt-gray6
                           Module
                       %li.js-nav-parent-num3
                         %a(href="#{v}")
@@ -507,10 +499,10 @@
                                 %li.ef-mgl3
                                   scrolltop
                       %li
-                        .ef-fs11.ef-cl-gray6
+                        .ef-fs11.ef-txt-gray6
                           State
                       %li.js-nav-parent-num4
-                        %a(href="#[v]")
+                        %a(href="#{v}")
                           %ul.ef-float3
                             %li
                               %i.fa.fa-quote-left
@@ -644,10 +636,10 @@
                                     (model0)
                           .example-summary.ef-fs12.ef-mgb30
                             背景色を調整する事ができます。HTMLソースのクラス名
-                            %span.ef-cl-red
+                            %span.ef-txt-red
                               st-inner
                             の後に
-                            %span.ef-cl-red
+                            %span.ef-txt-red
                               ef-bg-red
                             を付与してください。
                             %span.js-tooltip-hover
@@ -728,13 +720,13 @@
                               .st-inner
                                 .st-outer.ef-lh20
                                   カラム落ちする場合はHTMLソースの
-                                  %span.ef-cl-red
+                                  %span.ef-txt-red
                                     ef-mxw80p
                                   の数値を変更するか
-                                  %span.ef-cl-red
+                                  %span.ef-txt-red
                                     cp-breadcrumb-*
                                   の後に最小幅
-                                  %span.ef-cl-red
+                                  %span.ef-txt-red
                                     ef-mw600
                                   を設定してください
                                   %span.js-tooltip-hover

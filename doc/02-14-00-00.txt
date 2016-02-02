@@ -1,0 +1,70 @@
+﻿<section class="cp-progress-bar-gray ef-w250 ef-mgb20">
+  <div class="lo-body ef-bg-gray1">
+    <div class="lo-inner ef-lh15" style="width:16%;">
+      &nbsp;
+    </div>
+  </div>
+</section>
+<section class="cp-progress-bar-red ef-w250 ef-mgb20">
+  <div class="lo-body ef-bg-gray1">
+    <div class="lo-inner ef-lh15" style="width:24%;">
+      &nbsp;
+    </div>
+  </div>
+</section>
+<section class="cp-progress-bar-orange ef-w250 ef-mgb20">
+  <div class="lo-body ef-bg-gray1">
+    <div class="lo-inner ef-lh15" style="width:32%;">
+      &nbsp;
+    </div>
+  </div>
+</section>
+<section class="cp-progress-bar-blue ef-w250 ef-mgb20">
+  <div class="lo-body ef-bg-gray1">
+    <div class="lo-inner ef-lh15" style="width:40%;">
+      &nbsp;
+    </div>
+  </div>
+</section>
+<section class="cp-progress-bar-green ef-w250 ef-mgb20">
+  <div class="lo-body ef-bg-gray1">
+    <div class="lo-inner ef-lh15" style="width:48%;">
+      &nbsp;
+    </div>
+  </div>
+</section>
+<section class="cp-progress-bar-black ef-w250 ef-mgb20">
+  <div class="lo-body ef-bg-gray1">
+    <div class="lo-inner ef-lh15" style="width:56%;">
+      &nbsp;
+    </div>
+  </div>
+</section>
+<section class="cp-progress-bar-yellow ef-w250 ef-mgb20">
+  <div class="lo-body ef-bg-gray1">
+    <div class="lo-inner ef-lh15" style="width:64%;">
+      &nbsp;
+    </div>
+  </div>
+</section>
+<section class="cp-progress-bar-brown ef-w250 ef-mgb20">
+  <div class="lo-body ef-bg-gray1">
+    <div class="lo-inner ef-lh15" style="width:72%;">
+      &nbsp;
+    </div>
+  </div>
+</section>
+<section class="cp-progress-bar-theme ef-w250 ef-mgb20">
+  <div class="lo-body ef-bg-gray1">
+    <div class="lo-inner ef-lh15" style="width:80%;">
+      &nbsp;
+    </div>
+  </div>
+</section>
+<section class="cp-progress-bar-white ef-w250">
+  <div class="lo-body ef-bg-gray3">
+    <div class="lo-inner ef-lh15" style="width:8%;">
+      &nbsp;
+    </div>
+  </div>
+</section>

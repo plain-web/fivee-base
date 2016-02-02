@@ -35,7 +35,8 @@
 	  }
 	}
 	ul.rs-bp3-ul-float{
-	  >li{
+	  >li,
+	  >li.ef-float-right{
 	  	float:none;
 	  	margin-left:0;
 	  	margin-right:0;
@@ -71,7 +72,8 @@
 	  }
 	}
 	ul.rs-bp2-ul-float{
-	  >li{
+	  >li,
+	  >li.ef-float-right{
 	  	float:none;
 	  	margin-left:0;
 	  	margin-right:0;

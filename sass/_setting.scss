@@ -81,12 +81,6 @@
   overflow-y: auto;
 }
 
-// @mixin boxset($bg: $cl-gray, $radius: 3px, $width: 1px, $type: solid, $color: $cl-brd-base){
-//   background: $bg;
-//   border: $width $type $color;
-//   @include border-radius($radius);
-// }
-
 @mixin box-shadow-base{
   @include box-shadow(0 3px 5px rgba($cl-txt-base, .25));
 }
@@ -177,18 +171,6 @@
   content: " ";
   display: table;
   clear:both;
-}
-@mixin overflow-fix($max:300px){
-  width:$max;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-@mixin overflow-max($max:300px){
-  max-width:$max;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 @mixin rotate ($deg) {
   transform: rotate($deg);

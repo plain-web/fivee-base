@@ -15,23 +15,23 @@
 /* =============================================================
  ▼ color
 ============================================================== */
-.ef-cl-white{color:$cl-white;}
-.ef-cl-red{color:$cl-red;}
-.ef-cl-orange{color:$cl-orange;}
-.ef-cl-blue{color:$cl-blue;}
-.ef-cl-green{color:$cl-green;}
-.ef-cl-yellow{color:$cl-yellow;}
-.ef-cl-brown{color:$cl-black;}
-.ef-cl-black{color:$cl-black;}
-.ef-cl-gray{color:$cl-gray;}
-.ef-cl-gray1{color:$cl-gray1;}
-.ef-cl-gray2{color:$cl-gray2;}
-.ef-cl-gray3{color:$cl-gray3;}
-.ef-cl-gray4{color:$cl-gray4;}
-.ef-cl-gray5{color:$cl-gray5;}
-.ef-cl-gray6{color:$cl-gray6;}
-.ef-cl-gray7{color:$cl-gray7;}
-.ef-cl-theme{color:$cl-theme;}
+.ef-cl-white{background:$cl-white;}
+.ef-cl-red{background:$cl-red;}
+.ef-cl-orange{background:$cl-orange;}
+.ef-cl-blue{background:$cl-blue;}
+.ef-cl-green{background:$cl-green;}
+.ef-cl-yellow{background:$cl-yellow;}
+.ef-cl-brown{background:$cl-black;}
+.ef-cl-black{background:$cl-black;}
+.ef-cl-gray{background:$cl-gray;}
+.ef-cl-gray1{background:$cl-gray1;}
+.ef-cl-gray2{background:$cl-gray2;}
+.ef-cl-gray3{background:$cl-gray3;}
+.ef-cl-gray4{background:$cl-gray4;}
+.ef-cl-gray5{background:$cl-gray5;}
+.ef-cl-gray6{background:$cl-gray6;}
+.ef-cl-gray7{background:$cl-gray7;}
+.ef-cl-theme{background:$cl-theme;}
 /* =============================================================
  ▼ text color
 ============================================================== */
@@ -53,7 +53,6 @@
 .ef-txt-gray7{color:$cl-txt-gray7;}
 .ef-txt-base{color:$cl-txt-base;}
 .ef-txt-rev{color:$cl-txt-rev;}
-.ef-txt-link{color:$cl-txt-link;}
 .ef-txt-theme{color:$cl-txt-theme;}
 .ef-txt-link{color:$cl-txt-link;}
 .ef-txt-hover{color:$cl-txt-hover;}
@@ -89,10 +88,10 @@
   text-overflow: ellipsis;
 }
 //nowrap
-.ef-txt-nowrap{white-space:nowrap;}
+.is-nowrap{white-space:nowrap;}
 //bold
-.ef-txt-bold{font-weight:bold;}
-.ef-txt-nobold{font-weight:normal;}
+.is-bold{font-weight:bold;}
+.is-nobold{font-weight:normal;}
 
 // align
 .ef-txt-left{text-align:left;}
@@ -106,7 +105,6 @@
 }
 
 // indent
-.ef-txt-indent0{padding-left:0;}
 .ef-txt-indent1{padding-left:1em;}
 .ef-txt-indent2{padding-left:2em;}
 .ef-txt-indent3{padding-left:3em;}
@@ -117,10 +115,9 @@
 .ef-txt-indent8{padding-left:8em;}
 .ef-txt-indent9{padding-left:9em;}
 .ef-txt-indent10{padding-left:10em;}
+.ef-txt-indent0{padding-left:0;}
 
 // size
-.ef-fs{font-size:$fs-base;}
-.ef-fs0{font-size:0;}
 .ef-fs10{font-size:10px;}
 .ef-fs11{font-size:11px;}
 .ef-fs12{font-size:12px;}
@@ -147,10 +144,14 @@
 .ef-fs33{font-size:33px;}
 .ef-fs34{font-size:34px;}
 .ef-fs35{font-size:35px;}
+.ef-fs36{font-size:36px;}
+.ef-fs37{font-size:37px;}
+.ef-fs38{font-size:38px;}
+.ef-fs39{font-size:39px;}
+.ef-fs40{font-size:40px;}
+.ef-fs0{font-size:0;}
 
 /*line-height*/
-.ef-lh{line-height:$lh-base;}
-.ef-lh0{line-height:0;}
 .ef-lh10{line-height:10px;}
 .ef-lh11{line-height:11px;}
 .ef-lh12{line-height:12px;}
@@ -182,10 +183,10 @@
 .ef-lh38{line-height:38px;}
 .ef-lh39{line-height:39px;}
 .ef-lh40{line-height:40px;}
+.ef-lh0{line-height:0;}
 /* =============================================================
  ▼ width (%)
 ============================================================== */
-.ef-w0p{width:0;}
 .ef-w3p{width:3%;}
 .ef-w7p{width:7%;}
 .ef-w10p{width:10%;}
@@ -201,8 +202,6 @@
 /* =============================================================
  ▼ width (px)
 ============================================================== */
-.ef-wauto{width:auto;}
-.ef-w0{width:0;}
 .ef-w3{width:3px;}
 .ef-w7{width:7px;}
 .ef-w10{width:10px;}
@@ -268,7 +267,6 @@
 /* =============================================================
  ▼ min-width (%)
 ============================================================== */
-.ef-mw0p{@include min-width(0);}
 .ef-mw3p{@include min-width(3%);}
 .ef-mw7p{@include min-width(7%);}
 .ef-mw10p{@include min-width(10%);}
@@ -284,7 +282,6 @@
 /* =============================================================
  ▼ min-width
 ============================================================== */
-.ef-mw0{@include min-width(0);}
 .ef-mw3{@include min-width(3px);}
 .ef-mw7{@include min-width(7px);}
 .ef-mw10{@include min-width(10px);}
@@ -350,7 +347,6 @@
 /* =============================================================
  ▼ max-width (%)
 ============================================================== */
-.ef-mxw0p{@include max-width(0);}
 .ef-mxw3p{@include max-width(3%);}
 .ef-mxw7p{@include max-width(7%);}
 .ef-mxw10p{@include max-width(10%);}
@@ -366,7 +362,6 @@
 /* =============================================================
  ▼ max-width
 ============================================================== */
-.ef-mxw0{@include max-width(0);}
 .ef-mxw3{@include max-width(3px);}
 .ef-mxw7{@include max-width(7px);}
 .ef-mxw10{@include max-width(10px);}
@@ -430,9 +425,15 @@
 .ef-mxw590{@include max-width(590px);}
 .ef-mxw600{@include max-width(600px);}
 /* =============================================================
+ ▼ reset width
+============================================================== */
+.ef-mw0{@include min-width(0);}
+.ef-mxw0{@include max-width(0);}
+.ef-w0{width:0;}
+.ef-wauto{width:auto;}
+/* =============================================================
  ▼ height (px)
 ============================================================== */
-.ef-h0{height:0;}
 .ef-h3{height:3px;}
 .ef-h7{height:7px;}
 .ef-h10{height:10px;}
@@ -498,7 +499,6 @@
 /* =============================================================
  ▼ min-height
 ============================================================== */
-.ef-mh0{@include min-height(0);}
 .ef-mh3{@include min-height(3px);}
 .ef-mh7{@include min-height(7px);}
 .ef-mh10{@include min-height(10px);}
@@ -564,7 +564,6 @@
 /* =============================================================
  ▼ max-height
 ============================================================== */
-.ef-mxh0{@include max-height(0);}
 .ef-mxh3{@include max-height(3px);}
 .ef-mxh7{@include max-height(7px);}
 .ef-mxh10{@include max-height(10px);}
@@ -628,41 +627,21 @@
 .ef-mxh590{@include max-height(590px);}
 .ef-mxh600{@include max-height(600px);}
 /* =============================================================
+ ▼ reset height
+============================================================== */
+.ef-mh0{@include min-height(0);}
+.ef-mxh0{@include max-height(0);}
+.ef-h0{height:0;}
+.ef-hauto{height:auto;}
+/* =============================================================
  ▼ ellipsis
 ============================================================== */
 // .ef-ellipsis{
 // 	@include ellipsis;
 // }
 /* =============================================================
- ▼ padding
-============================================================== */
-.ef-pd0{padding:0;}
-.ef-pd3{padding:3px;}
-.ef-pd7{padding:7px;}
-.ef-pd10{padding:10px;}
-.ef-pd20{padding:20px;}
-.ef-pd30{padding:30px;}
-.ef-pd40{padding:40px;}
-.ef-pd50{padding:50px;}
-.ef-pd60{padding:60px;}
-.ef-pd70{padding:70px;}
-.ef-pd80{padding:80px;}
-.ef-pd90{padding:90px;}
-.ef-pd100{padding:100px;}
-.ef-pd110{padding:110px;}
-.ef-pd120{padding:120px;}
-.ef-pd130{padding:130px;}
-.ef-pd140{padding:140px;}
-.ef-pd150{padding:150px;}
-.ef-pd160{padding:160px;}
-.ef-pd170{padding:170px;}
-.ef-pd180{padding:180px;}
-.ef-pd190{padding:190px;}
-.ef-pd200{padding:200px;}
-/* =============================================================
  ▼ padding-top
 ============================================================== */
-.ef-pdt0{padding-top:0;}
 .ef-pdt3{padding-top:3px;}
 .ef-pdt7{padding-top:7px;}
 .ef-pdt10{padding-top:10px;}
@@ -685,10 +664,19 @@
 .ef-pdt180{padding-top:180px;}
 .ef-pdt190{padding-top:190px;}
 .ef-pdt200{padding-top:200px;}
+.ef-pdt210{padding-top:210px;}
+.ef-pdt220{padding-top:220px;}
+.ef-pdt230{padding-top:230px;}
+.ef-pdt240{padding-top:240px;}
+.ef-pdt250{padding-top:250px;}
+.ef-pdt260{padding-top:260px;}
+.ef-pdt270{padding-top:270px;}
+.ef-pdt280{padding-top:280px;}
+.ef-pdt290{padding-top:290px;}
+.ef-pdt300{padding-top:300px;}
 /* =============================================================
  ▼ padding-right
 ============================================================== */
-.ef-pdr0{padding-right:0;}
 .ef-pdr3{padding-right:3px;}
 .ef-pdr7{padding-right:7px;}
 .ef-pdr10{padding-right:10px;}
@@ -711,10 +699,19 @@
 .ef-pdr180{padding-right:180px;}
 .ef-pdr190{padding-right:190px;}
 .ef-pdr200{padding-right:200px;}
+.ef-pdr210{padding-right:210px;}
+.ef-pdr220{padding-right:220px;}
+.ef-pdr230{padding-right:230px;}
+.ef-pdr240{padding-right:240px;}
+.ef-pdr250{padding-right:250px;}
+.ef-pdr260{padding-right:260px;}
+.ef-pdr270{padding-right:270px;}
+.ef-pdr280{padding-right:280px;}
+.ef-pdr290{padding-right:290px;}
+.ef-pdr300{padding-right:300px;}
 /* =============================================================
  ▼ padding-bottom
 ============================================================== */
-.ef-pdb0{padding-bottom:0;}
 .ef-pdb3{padding-bottom:3px;}
 .ef-pdb7{padding-bottom:7px;}
 .ef-pdb10{padding-bottom:10px;}
@@ -737,6 +734,16 @@
 .ef-pdb180{padding-bottom:180px;}
 .ef-pdb190{padding-bottom:190px;}
 .ef-pdb200{padding-bottom:200px;}
+.ef-pdb210{padding-bottom:210px;}
+.ef-pdb220{padding-bottom:220px;}
+.ef-pdb230{padding-bottom:230px;}
+.ef-pdb240{padding-bottom:240px;}
+.ef-pdb250{padding-bottom:250px;}
+.ef-pdb260{padding-bottom:260px;}
+.ef-pdb270{padding-bottom:270px;}
+.ef-pdb280{padding-bottom:280px;}
+.ef-pdb290{padding-bottom:290px;}
+.ef-pdb300{padding-bottom:300px;}
 /* =============================================================
  ▼ padding-left
 ============================================================== */
@@ -763,46 +770,182 @@
 .ef-pdl180{padding-left:180px;}
 .ef-pdl190{padding-left:190px;}
 .ef-pdl200{padding-left:200px;}
+.ef-pdl210{padding-left:210px;}
+.ef-pdl220{padding-left:220px;}
+.ef-pdl230{padding-left:230px;}
+.ef-pdl240{padding-left:240px;}
+.ef-pdl250{padding-left:250px;}
+.ef-pdl260{padding-left:260px;}
+.ef-pdl270{padding-left:270px;}
+.ef-pdl280{padding-left:280px;}
+.ef-pdl290{padding-left:290px;}
+.ef-pdl300{padding-left:300px;}
 /* =============================================================
- ▼ margin
+ ▼ padding
 ============================================================== */
-.ef-mg0{margin:0;}
-.ef-mg3{margin:3px;}
-.ef-mg7{margin:7px;}
-.ef-mg10{margin:10px;}
-.ef-mg20{margin:20px;}
-.ef-mg30{margin:30px;}
-.ef-mg40{margin:40px;}
-.ef-mg50{margin:50px;}
-.ef-mg60{margin:60px;}
-.ef-mg70{margin:70px;}
-.ef-mg80{margin:80px;}
-.ef-mg90{margin:90px;}
-.ef-mg100{margin:100px;}
-.ef-mg110{margin:110px;}
-.ef-mg120{margin:120px;}
-.ef-mg130{margin:130px;}
-.ef-mg140{margin:140px;}
-.ef-mg150{margin:150px;}
-.ef-mg160{margin:160px;}
-.ef-mg170{margin:170px;}
-.ef-mg180{margin:180px;}
-.ef-mg190{margin:190px;}
-.ef-mg200{margin:200px;}
-.ef-mg210{margin:210px;}
-.ef-mg220{margin:220px;}
-.ef-mg230{margin:230px;}
-.ef-mg240{margin:240px;}
-.ef-mg250{margin:250px;}
-.ef-mg260{margin:260px;}
-.ef-mg270{margin:270px;}
-.ef-mg280{margin:280px;}
-.ef-mg290{margin:290px;}
-.ef-mg300{margin:300px;}
+.ef-pd3{padding:3px;}
+.ef-pd7{padding:7px;}
+.ef-pd10{padding:10px;}
+.ef-pd20{padding:20px;}
+.ef-pd30{padding:30px;}
+.ef-pd40{padding:40px;}
+.ef-pd50{padding:50px;}
+.ef-pd60{padding:60px;}
+.ef-pd70{padding:70px;}
+.ef-pd80{padding:80px;}
+.ef-pd90{padding:90px;}
+.ef-pd100{padding:100px;}
+.ef-pd110{padding:110px;}
+.ef-pd120{padding:120px;}
+.ef-pd130{padding:130px;}
+.ef-pd140{padding:140px;}
+.ef-pd150{padding:150px;}
+.ef-pd160{padding:160px;}
+.ef-pd170{padding:170px;}
+.ef-pd180{padding:180px;}
+.ef-pd190{padding:190px;}
+.ef-pd200{padding:200px;}
+.ef-pd210{padding:210px;}
+.ef-pd220{padding:220px;}
+.ef-pd230{padding:230px;}
+.ef-pd240{padding:240px;}
+.ef-pd250{padding:250px;}
+.ef-pd260{padding:260px;}
+.ef-pd270{padding:270px;}
+.ef-pd280{padding:280px;}
+.ef-pd290{padding:290px;}
+.ef-pd300{padding:300px;}
+/* =============================================================
+ ▼ reset padding
+============================================================== */
+.ef-pdt0{padding-top:0;}
+.ef-pdr0{padding-right:0;}
+.ef-pdb0{padding-bottom:0;}
+.ef-pdl0{padding-left:0;}
+.ef-pd0{padding:0;}
+/* =============================================================
+ ▼ margin-top %
+============================================================== */
+.ef-mgt3p{margin-top:3%;}
+.ef-mgt7p{margin-top:7%;}
+.ef-mgt10p{margin-top:10%;}
+.ef-mgt20p{margin-top:20%;}
+.ef-mgt30p{margin-top:30%;}
+.ef-mgt40p{margin-top:40%;}
+.ef-mgt50p{margin-top:50%;}
+.ef-mgt60p{margin-top:60%;}
+.ef-mgt70p{margin-top:70%;}
+.ef-mgt80p{margin-top:80%;}
+.ef-mgt90p{margin-top:90%;}
+.ef-mgt100p{margin-top:100%;}
+/* =============================================================
+ ▼ margin-right %
+============================================================== */
+.ef-mgr3p{margin-right:3%;}
+.ef-mgr7p{margin-right:7%;}
+.ef-mgr10p{margin-right:10%;}
+.ef-mgr20p{margin-right:20%;}
+.ef-mgr30p{margin-right:30%;}
+.ef-mgr40p{margin-right:40%;}
+.ef-mgr50p{margin-right:50%;}
+.ef-mgr60p{margin-right:60%;}
+.ef-mgr70p{margin-right:70%;}
+.ef-mgr80p{margin-right:80%;}
+.ef-mgr90p{margin-right:90%;}
+.ef-mgr100p{margin-right:100%;}
+/* =============================================================
+ ▼ margin-bottom %
+============================================================== */
+.ef-mgb3p{margin-bottom:3%;}
+.ef-mgb7p{margin-bottom:7%;}
+.ef-mgb10p{margin-bottom:10%;}
+.ef-mgb20p{margin-bottom:20%;}
+.ef-mgb30p{margin-bottom:30%;}
+.ef-mgb40p{margin-bottom:40%;}
+.ef-mgb50p{margin-bottom:50%;}
+.ef-mgb60p{margin-bottom:60%;}
+.ef-mgb70p{margin-bottom:70%;}
+.ef-mgb80p{margin-bottom:80%;}
+.ef-mgb90p{margin-bottom:90%;}
+.ef-mgb100p{margin-bottom:100%;}
+/* =============================================================
+ ▼ margin-left %
+============================================================== */
+.ef-mgl3p{margin-left:3%;}
+.ef-mgl7p{margin-left:7%;}
+.ef-mgl10p{margin-left:10%;}
+.ef-mgl20p{margin-left:20%;}
+.ef-mgl30p{margin-left:30%;}
+.ef-mgl40p{margin-left:40%;}
+.ef-mgl50p{margin-left:50%;}
+.ef-mgl60p{margin-left:60%;}
+.ef-mgl70p{margin-left:70%;}
+.ef-mgl80p{margin-left:80%;}
+.ef-mgl90p{margin-left:90%;}
+.ef-mgl100p{margin-left:100%;}
+/* =============================================================
+ ▼ margin-top % (negative)
+============================================================== */
+.ef-mgt-3p{margin-top:-3%;}
+.ef-mgt-7p{margin-top:-7%;}
+.ef-mgt-10p{margin-top:-10%;}
+.ef-mgt-20p{margin-top:-20%;}
+.ef-mgt-30p{margin-top:-30%;}
+.ef-mgt-40p{margin-top:-40%;}
+.ef-mgt-50p{margin-top:-50%;}
+.ef-mgt-60p{margin-top:-60%;}
+.ef-mgt-70p{margin-top:-70%;}
+.ef-mgt-80p{margin-top:-80%;}
+.ef-mgt-90p{margin-top:-90%;}
+.ef-mgt-100p{margin-top:-100%;}
+/* =============================================================
+ ▼ margin-right % (negative)
+============================================================== */
+.ef-mgr-3p{margin-right:-3%;}
+.ef-mgr-7p{margin-right:-7%;}
+.ef-mgr-10p{margin-right:-10%;}
+.ef-mgr-20p{margin-right:-20%;}
+.ef-mgr-30p{margin-right:-30%;}
+.ef-mgr-40p{margin-right:-40%;}
+.ef-mgr-50p{margin-right:-50%;}
+.ef-mgr-60p{margin-right:-60%;}
+.ef-mgr-70p{margin-right:-70%;}
+.ef-mgr-80p{margin-right:-80%;}
+.ef-mgr-90p{margin-right:-90%;}
+.ef-mgr-100p{margin-right:-100%;}
+/* =============================================================
+ ▼ margin-bottom % (negative)
+============================================================== */
+.ef-mgb-3p{margin-bottom:-3%;}
+.ef-mgb-7p{margin-bottom:-7%;}
+.ef-mgb-10p{margin-bottom:-10%;}
+.ef-mgb-20p{margin-bottom:-20%;}
+.ef-mgb-30p{margin-bottom:-30%;}
+.ef-mgb-40p{margin-bottom:-40%;}
+.ef-mgb-50p{margin-bottom:-50%;}
+.ef-mgb-60p{margin-bottom:-60%;}
+.ef-mgb-70p{margin-bottom:-70%;}
+.ef-mgb-80p{margin-bottom:-80%;}
+.ef-mgb-90p{margin-bottom:-90%;}
+.ef-mgb-100p{margin-bottom:-100%;}
+/* =============================================================
+ ▼ margin-left % (negative)
+============================================================== */
+.ef-mgl-3p{margin-left:-3%;}
+.ef-mgl-7p{margin-left:-7%;}
+.ef-mgl-10p{margin-left:-10%;}
+.ef-mgl-20p{margin-left:-20%;}
+.ef-mgl-30p{margin-left:-30%;}
+.ef-mgl-40p{margin-left:-40%;}
+.ef-mgl-50p{margin-left:-50%;}
+.ef-mgl-60p{margin-left:-60%;}
+.ef-mgl-70p{margin-left:-70%;}
+.ef-mgl-80p{margin-left:-80%;}
+.ef-mgl-90p{margin-left:-90%;}
+.ef-mgl-100p{margin-left:-100%;}
 /* =============================================================
  ▼ margin-top
 ============================================================== */
-.ef-mgt0{margin-top:0;}
 .ef-mgt3{margin-top:3px;}
 .ef-mgt7{margin-top:7px;}
 .ef-mgt10{margin-top:10px;}
@@ -873,7 +1016,6 @@
 /* =============================================================
  ▼ margin-right
 ============================================================== */
-.ef-mgr0{margin-right:0;}
 .ef-mgr3{margin-right:3px;}
 .ef-mgr7{margin-right:7px;}
 .ef-mgr10{margin-right:10px;}
@@ -1015,7 +1157,6 @@
 /* =============================================================
  ▼ margin-left
 ============================================================== */
-.ef-mgl0{margin-left:0;}
 .ef-mgl3{margin-left:3px;}
 .ef-mgl7{margin-left:7px;}
 .ef-mgl10{margin-left:10px;}
@@ -1084,69 +1225,48 @@
 .ef-mgl-290{margin-left:-290px;}
 .ef-mgl-300{margin-left:-300px;}
 /* =============================================================
- ▼ margin-top %
+ ▼ margin
 ============================================================== */
-.ef-mgt0p{margin-top:0;}
-.ef-mgt3p{margin-top:3%;}
-.ef-mgt7p{margin-top:7%;}
-.ef-mgt10p{margin-top:10%;}
-.ef-mgt20p{margin-top:20%;}
-.ef-mgt30p{margin-top:30%;}
-.ef-mgt40p{margin-top:40%;}
-.ef-mgt50p{margin-top:50%;}
-.ef-mgt60p{margin-top:60%;}
-.ef-mgt70p{margin-top:70%;}
-.ef-mgt80p{margin-top:80%;}
-.ef-mgt90p{margin-top:90%;}
-.ef-mgt100p{margin-top:100%;}
+.ef-mg3{margin:3px;}
+.ef-mg7{margin:7px;}
+.ef-mg10{margin:10px;}
+.ef-mg20{margin:20px;}
+.ef-mg30{margin:30px;}
+.ef-mg40{margin:40px;}
+.ef-mg50{margin:50px;}
+.ef-mg60{margin:60px;}
+.ef-mg70{margin:70px;}
+.ef-mg80{margin:80px;}
+.ef-mg90{margin:90px;}
+.ef-mg100{margin:100px;}
+.ef-mg110{margin:110px;}
+.ef-mg120{margin:120px;}
+.ef-mg130{margin:130px;}
+.ef-mg140{margin:140px;}
+.ef-mg150{margin:150px;}
+.ef-mg160{margin:160px;}
+.ef-mg170{margin:170px;}
+.ef-mg180{margin:180px;}
+.ef-mg190{margin:190px;}
+.ef-mg200{margin:200px;}
+.ef-mg210{margin:210px;}
+.ef-mg220{margin:220px;}
+.ef-mg230{margin:230px;}
+.ef-mg240{margin:240px;}
+.ef-mg250{margin:250px;}
+.ef-mg260{margin:260px;}
+.ef-mg270{margin:270px;}
+.ef-mg280{margin:280px;}
+.ef-mg290{margin:290px;}
+.ef-mg300{margin:300px;}
 /* =============================================================
- ▼ margin-right %
+ ▼ reset margin
 ============================================================== */
-.ef-mgr0p{margin-right:0;}
-.ef-mgr3p{margin-right:3%;}
-.ef-mgr7p{margin-right:7%;}
-.ef-mgr10p{margin-right:10%;}
-.ef-mgr20p{margin-right:20%;}
-.ef-mgr30p{margin-right:30%;}
-.ef-mgr40p{margin-right:40%;}
-.ef-mgr50p{margin-right:50%;}
-.ef-mgr60p{margin-right:60%;}
-.ef-mgr70p{margin-right:70%;}
-.ef-mgr80p{margin-right:80%;}
-.ef-mgr90p{margin-right:90%;}
-.ef-mgr100p{margin-right:100%;}
-/* =============================================================
- ▼ margin-bottom %
-============================================================== */
-.ef-mgb0p{margin-bottom:0;}
-.ef-mgb3p{margin-bottom:3%;}
-.ef-mgb7p{margin-bottom:7%;}
-.ef-mgb10p{margin-bottom:10%;}
-.ef-mgb20p{margin-bottom:20%;}
-.ef-mgb30p{margin-bottom:30%;}
-.ef-mgb40p{margin-bottom:40%;}
-.ef-mgb50p{margin-bottom:50%;}
-.ef-mgb60p{margin-bottom:60%;}
-.ef-mgb70p{margin-bottom:70%;}
-.ef-mgb80p{margin-bottom:80%;}
-.ef-mgb90p{margin-bottom:90%;}
-.ef-mgb100p{margin-bottom:100%;}
-/* =============================================================
- ▼ margin-left %
-============================================================== */
-.ef-mgl0p{margin-left:0;}
-.ef-mgl3p{margin-left:3%;}
-.ef-mgl7p{margin-left:7%;}
-.ef-mgl10p{margin-left:10%;}
-.ef-mgl20p{margin-left:20%;}
-.ef-mgl30p{margin-left:30%;}
-.ef-mgl40p{margin-left:40%;}
-.ef-mgl50p{margin-left:50%;}
-.ef-mgl60p{margin-left:60%;}
-.ef-mgl70p{margin-left:70%;}
-.ef-mgl80p{margin-left:80%;}
-.ef-mgl90p{margin-left:90%;}
-.ef-mgl100p{margin-left:100%;}
+.ef-mgt0{margin-top:0;}
+.ef-mgr0{margin-right:0;}
+.ef-mgb0{margin-bottom:0;}
+.ef-mgl0{margin-left:0;}
+.ef-mg0{margin:0;}
 /* =============================================================
  ▼ border
 ============================================================== */
@@ -1154,294 +1274,294 @@
 .ef-brd1{@include brd(1px, solid, $cl-brd-base);}
 .ef-brd2{@include brd(2px, solid, $cl-brd-base);}
 .ef-brd3{@include brd(3px, solid, $cl-brd-base);}
-.ef-brd1-top{@include brd-top(1px, solid, $cl-brd-base);}
-.ef-brd2-top{@include brd-top(2px, solid, $cl-brd-base);}
-.ef-brd3-top{@include brd-top(3px, solid, $cl-brd-base);}
-.ef-brd1-right{@include brd-right(1px, solid, $cl-brd-base);}
-.ef-brd2-right{@include brd-right(2px, solid, $cl-brd-base);}
-.ef-brd3-right{@include brd-right(3px, solid, $cl-brd-base);}
-.ef-brd1-bottom{@include brd-bottom(1px, solid, $cl-brd-base);}
-.ef-brd2-bottom{@include brd-bottom(2px, solid, $cl-brd-base);}
-.ef-brd3-bottom{@include brd-bottom(3px, solid, $cl-brd-base);}
-.ef-brd1-left{@include brd-left(1px, solid, $cl-brd-base);}
-.ef-brd2-left{@include brd-left(2px, solid, $cl-brd-base);}
-.ef-brd3-left{@include brd-left(3px, solid, $cl-brd-base);}
+.ef-brdt1{@include brd-top(1px, solid, $cl-brd-base);}
+.ef-brdt2{@include brd-top(2px, solid, $cl-brd-base);}
+.ef-brdt3{@include brd-top(3px, solid, $cl-brd-base);}
+.ef-brdr1{@include brd-right(1px, solid, $cl-brd-base);}
+.ef-brdr2{@include brd-right(2px, solid, $cl-brd-base);}
+.ef-brdr3{@include brd-right(3px, solid, $cl-brd-base);}
+.ef-brdb1{@include brd-bottom(1px, solid, $cl-brd-base);}
+.ef-brdb2{@include brd-bottom(2px, solid, $cl-brd-base);}
+.ef-brdb3{@include brd-bottom(3px, solid, $cl-brd-base);}
+.ef-brdl1{@include brd-left(1px, solid, $cl-brd-base);}
+.ef-brdl2{@include brd-left(2px, solid, $cl-brd-base);}
+.ef-brdl3{@include brd-left(3px, solid, $cl-brd-base);}
 //white
 .ef-brd1-white{@include brd(1px, solid, $cl-white);}
 .ef-brd2-white{@include brd(2px, solid, $cl-white);}
 .ef-brd3-white{@include brd(3px, solid, $cl-white);}
-.ef-brd1-top-white{@include brd-top(1px, solid, $cl-white);}
-.ef-brd2-top-white{@include brd-top(2px, solid, $cl-white);}
-.ef-brd3-top-white{@include brd-top(3px, solid, $cl-white);}
-.ef-brd1-right-white{@include brd-right(1px, solid, $cl-white);}
-.ef-brd2-right-white{@include brd-right(2px, solid, $cl-white);}
-.ef-brd3-right-white{@include brd-right(3px, solid, $cl-white);}
-.ef-brd1-bottom-white{@include brd-bottom(1px, solid, $cl-white);}
-.ef-brd2-bottom-white{@include brd-bottom(2px, solid, $cl-white);}
-.ef-brd3-bottom-white{@include brd-bottom(3px, solid, $cl-white);}
-.ef-brd1-left-white{@include brd-left(1px, solid, $cl-white);}
-.ef-brd2-left-white{@include brd-left(2px, solid, $cl-white);}
-.ef-brd3-left-white{@include brd-left(3px, solid, $cl-white);}
+.ef-brdt1-white{@include brd-top(1px, solid, $cl-white);}
+.ef-brdt2-white{@include brd-top(2px, solid, $cl-white);}
+.ef-brdt3-white{@include brd-top(3px, solid, $cl-white);}
+.ef-brdr1-white{@include brd-right(1px, solid, $cl-white);}
+.ef-brdr2-white{@include brd-right(2px, solid, $cl-white);}
+.ef-brdr3-white{@include brd-right(3px, solid, $cl-white);}
+.ef-brdb1-white{@include brd-bottom(1px, solid, $cl-white);}
+.ef-brdb2-white{@include brd-bottom(2px, solid, $cl-white);}
+.ef-brdb3-white{@include brd-bottom(3px, solid, $cl-white);}
+.ef-brdl1-white{@include brd-left(1px, solid, $cl-white);}
+.ef-brdl2-white{@include brd-left(2px, solid, $cl-white);}
+.ef-brdl3-white{@include brd-left(3px, solid, $cl-white);}
 //red
 .ef-brd1-red{@include brd(1px, solid, darken($cl-bg-red,7%));}
 .ef-brd2-red{@include brd(2px, solid, darken($cl-bg-red,7%));}
 .ef-brd3-red{@include brd(3px, solid, darken($cl-bg-red,7%));}
-.ef-brd1-top-red{@include brd-top(1px, solid, darken($cl-bg-red,7%));}
-.ef-brd2-top-red{@include brd-top(2px, solid, darken($cl-bg-red,7%));}
-.ef-brd3-top-red{@include brd-top(3px, solid, darken($cl-bg-red,7%));}
-.ef-brd1-right-red{@include brd-right(1px, solid, darken($cl-bg-red,7%));}
-.ef-brd2-right-red{@include brd-right(2px, solid, darken($cl-bg-red,7%));}
-.ef-brd3-right-red{@include brd-right(3px, solid, darken($cl-bg-red,7%));}
-.ef-brd1-bottom-red{@include brd-bottom(1px, solid, darken($cl-bg-red,7%));}
-.ef-brd2-bottom-red{@include brd-bottom(2px, solid, darken($cl-bg-red,7%));}
-.ef-brd3-bottom-red{@include brd-bottom(3px, solid, darken($cl-bg-red,7%));}
-.ef-brd1-left-red{@include brd-left(1px, solid, darken($cl-bg-red,7%));}
-.ef-brd2-left-red{@include brd-left(2px, solid, darken($cl-bg-red,7%));}
-.ef-brd3-left-red{@include brd-left(3px, solid, darken($cl-bg-red,7%));}
+.ef-brdt1-red{@include brd-top(1px, solid, darken($cl-bg-red,7%));}
+.ef-brdt2-red{@include brd-top(2px, solid, darken($cl-bg-red,7%));}
+.ef-brdt3-red{@include brd-top(3px, solid, darken($cl-bg-red,7%));}
+.ef-brdr1-red{@include brd-right(1px, solid, darken($cl-bg-red,7%));}
+.ef-brdr2-red{@include brd-right(2px, solid, darken($cl-bg-red,7%));}
+.ef-brdr3-red{@include brd-right(3px, solid, darken($cl-bg-red,7%));}
+.ef-brdb1-red{@include brd-bottom(1px, solid, darken($cl-bg-red,7%));}
+.ef-brdb2-red{@include brd-bottom(2px, solid, darken($cl-bg-red,7%));}
+.ef-brdb3-red{@include brd-bottom(3px, solid, darken($cl-bg-red,7%));}
+.ef-brdl1-red{@include brd-left(1px, solid, darken($cl-bg-red,7%));}
+.ef-brdl2-red{@include brd-left(2px, solid, darken($cl-bg-red,7%));}
+.ef-brdl3-red{@include brd-left(3px, solid, darken($cl-bg-red,7%));}
 //orange
 .ef-brd1-orange{@include brd(1px, solid, darken($cl-bg-orange,7%));}
 .ef-brd2-orange{@include brd(2px, solid, darken($cl-bg-orange,7%));}
 .ef-brd3-orange{@include brd(3px, solid, darken($cl-bg-orange,7%));}
-.ef-brd1-top-orange{@include brd-top(1px, solid, darken($cl-bg-orange,7%));}
-.ef-brd2-top-orange{@include brd-top(2px, solid, darken($cl-bg-orange,7%));}
-.ef-brd3-top-orange{@include brd-top(3px, solid, darken($cl-bg-orange,7%));}
-.ef-brd1-right-orange{@include brd-right(1px, solid, darken($cl-bg-orange,7%));}
-.ef-brd2-right-orange{@include brd-right(2px, solid, darken($cl-bg-orange,7%));}
-.ef-brd3-right-orange{@include brd-right(3px, solid, darken($cl-bg-orange,7%));}
-.ef-brd1-bottom-orange{@include brd-bottom(1px, solid, darken($cl-bg-orange,7%));}
-.ef-brd2-bottom-orange{@include brd-bottom(2px, solid, darken($cl-bg-orange,7%));}
-.ef-brd3-bottom-orange{@include brd-bottom(3px, solid, darken($cl-bg-orange,7%));}
-.ef-brd1-left-orange{@include brd-left(1px, solid, darken($cl-bg-orange,7%));}
-.ef-brd2-left-orange{@include brd-left(2px, solid, darken($cl-bg-orange,7%));}
-.ef-brd3-left-orange{@include brd-left(3px, solid, darken($cl-bg-orange,7%));}
+.ef-brdt1-orange{@include brd-top(1px, solid, darken($cl-bg-orange,7%));}
+.ef-brdt2-orange{@include brd-top(2px, solid, darken($cl-bg-orange,7%));}
+.ef-brdt3-orange{@include brd-top(3px, solid, darken($cl-bg-orange,7%));}
+.ef-brdr1-orange{@include brd-right(1px, solid, darken($cl-bg-orange,7%));}
+.ef-brdr2-orange{@include brd-right(2px, solid, darken($cl-bg-orange,7%));}
+.ef-brdr3-orange{@include brd-right(3px, solid, darken($cl-bg-orange,7%));}
+.ef-brdb1-orange{@include brd-bottom(1px, solid, darken($cl-bg-orange,7%));}
+.ef-brdb2-orange{@include brd-bottom(2px, solid, darken($cl-bg-orange,7%));}
+.ef-brdb3-orange{@include brd-bottom(3px, solid, darken($cl-bg-orange,7%));}
+.ef-brdl1-orange{@include brd-left(1px, solid, darken($cl-bg-orange,7%));}
+.ef-brdl2-orange{@include brd-left(2px, solid, darken($cl-bg-orange,7%));}
+.ef-brdl3-orange{@include brd-left(3px, solid, darken($cl-bg-orange,7%));}
 //blue
 .ef-brd1-blue{@include brd(1px, solid, darken($cl-bg-blue,7%));}
 .ef-brd2-blue{@include brd(2px, solid, darken($cl-bg-blue,7%));}
 .ef-brd3-blue{@include brd(3px, solid, darken($cl-bg-blue,7%));}
-.ef-brd1-top-blue{@include brd-top(1px, solid, darken($cl-bg-blue,7%));}
-.ef-brd2-top-blue{@include brd-top(2px, solid, darken($cl-bg-blue,7%));}
-.ef-brd3-top-blue{@include brd-top(3px, solid, darken($cl-bg-blue,7%));}
-.ef-brd1-right-blue{@include brd-right(1px, solid, darken($cl-bg-blue,7%));}
-.ef-brd2-right-blue{@include brd-right(2px, solid, darken($cl-bg-blue,7%));}
-.ef-brd3-right-blue{@include brd-right(3px, solid, darken($cl-bg-blue,7%));}
-.ef-brd1-bottom-blue{@include brd-bottom(1px, solid, darken($cl-bg-blue,7%));}
-.ef-brd2-bottom-blue{@include brd-bottom(2px, solid, darken($cl-bg-blue,7%));}
-.ef-brd3-bottom-blue{@include brd-bottom(3px, solid, darken($cl-bg-blue,7%));}
-.ef-brd1-left-blue{@include brd-left(1px, solid, darken($cl-bg-blue,7%));}
-.ef-brd2-left-blue{@include brd-left(2px, solid, darken($cl-bg-blue,7%));}
-.ef-brd3-left-blue{@include brd-left(3px, solid, darken($cl-bg-blue,7%));}
+.ef-brdt1-blue{@include brd-top(1px, solid, darken($cl-bg-blue,7%));}
+.ef-brdt2-blue{@include brd-top(2px, solid, darken($cl-bg-blue,7%));}
+.ef-brdt3-blue{@include brd-top(3px, solid, darken($cl-bg-blue,7%));}
+.ef-brdr1-blue{@include brd-right(1px, solid, darken($cl-bg-blue,7%));}
+.ef-brdr2-blue{@include brd-right(2px, solid, darken($cl-bg-blue,7%));}
+.ef-brdr3-blue{@include brd-right(3px, solid, darken($cl-bg-blue,7%));}
+.ef-brdb1-blue{@include brd-bottom(1px, solid, darken($cl-bg-blue,7%));}
+.ef-brdb2-blue{@include brd-bottom(2px, solid, darken($cl-bg-blue,7%));}
+.ef-brdb3-blue{@include brd-bottom(3px, solid, darken($cl-bg-blue,7%));}
+.ef-brdl1-blue{@include brd-left(1px, solid, darken($cl-bg-blue,7%));}
+.ef-brdl2-blue{@include brd-left(2px, solid, darken($cl-bg-blue,7%));}
+.ef-brdl3-blue{@include brd-left(3px, solid, darken($cl-bg-blue,7%));}
 //green
 .ef-brd1-green{@include brd(1px, solid, darken($cl-bg-green,7%));}
 .ef-brd2-green{@include brd(2px, solid, darken($cl-bg-green,7%));}
 .ef-brd3-green{@include brd(3px, solid, darken($cl-bg-green,7%));}
-.ef-brd1-top-green{@include brd-top(1px, solid, darken($cl-bg-green,7%));}
-.ef-brd2-top-green{@include brd-top(2px, solid, darken($cl-bg-green,7%));}
-.ef-brd3-top-green{@include brd-top(3px, solid, darken($cl-bg-green,7%));}
-.ef-brd1-right-green{@include brd-right(1px, solid, darken($cl-bg-green,7%));}
-.ef-brd2-right-green{@include brd-right(2px, solid, darken($cl-bg-green,7%));}
-.ef-brd3-right-green{@include brd-right(3px, solid, darken($cl-bg-green,7%));}
-.ef-brd1-bottom-green{@include brd-bottom(1px, solid, darken($cl-bg-green,7%));}
-.ef-brd2-bottom-green{@include brd-bottom(2px, solid, darken($cl-bg-green,7%));}
-.ef-brd3-bottom-green{@include brd-bottom(3px, solid, darken($cl-bg-green,7%));}
-.ef-brd1-left-green{@include brd-left(1px, solid, darken($cl-bg-green,7%));}
-.ef-brd2-left-green{@include brd-left(2px, solid, darken($cl-bg-green,7%));}
-.ef-brd3-left-green{@include brd-left(3px, solid, darken($cl-bg-green,7%));}
+.ef-brdt1-green{@include brd-top(1px, solid, darken($cl-bg-green,7%));}
+.ef-brdt2-green{@include brd-top(2px, solid, darken($cl-bg-green,7%));}
+.ef-brdt3-green{@include brd-top(3px, solid, darken($cl-bg-green,7%));}
+.ef-brdr1-green{@include brd-right(1px, solid, darken($cl-bg-green,7%));}
+.ef-brdr2-green{@include brd-right(2px, solid, darken($cl-bg-green,7%));}
+.ef-brdr3-green{@include brd-right(3px, solid, darken($cl-bg-green,7%));}
+.ef-brdb1-green{@include brd-bottom(1px, solid, darken($cl-bg-green,7%));}
+.ef-brdb2-green{@include brd-bottom(2px, solid, darken($cl-bg-green,7%));}
+.ef-brdb3-green{@include brd-bottom(3px, solid, darken($cl-bg-green,7%));}
+.ef-brdl1-green{@include brd-left(1px, solid, darken($cl-bg-green,7%));}
+.ef-brdl2-green{@include brd-left(2px, solid, darken($cl-bg-green,7%));}
+.ef-brdl3-green{@include brd-left(3px, solid, darken($cl-bg-green,7%));}
 //yellow
 .ef-brd1-yellow{@include brd(1px, solid, darken($cl-bg-yellow,7%));}
 .ef-brd2-yellow{@include brd(2px, solid, darken($cl-bg-yellow,7%));}
 .ef-brd3-yellow{@include brd(3px, solid, darken($cl-bg-yellow,7%));}
-.ef-brd1-top-yellow{@include brd-top(1px, solid, darken($cl-bg-yellow,7%));}
-.ef-brd2-top-yellow{@include brd-top(2px, solid, darken($cl-bg-yellow,7%));}
-.ef-brd3-top-yellow{@include brd-top(3px, solid, darken($cl-bg-yellow,7%));}
-.ef-brd1-right-yellow{@include brd-right(1px, solid, darken($cl-bg-yellow,7%));}
-.ef-brd2-right-yellow{@include brd-right(2px, solid, darken($cl-bg-yellow,7%));}
-.ef-brd3-right-yellow{@include brd-right(3px, solid, darken($cl-bg-yellow,7%));}
-.ef-brd1-bottom-yellow{@include brd-bottom(1px, solid, darken($cl-bg-yellow,7%));}
-.ef-brd2-bottom-yellow{@include brd-bottom(2px, solid, darken($cl-bg-yellow,7%));}
-.ef-brd3-bottom-yellow{@include brd-bottom(3px, solid, darken($cl-bg-yellow,7%));}
-.ef-brd1-left-yellow{@include brd-left(1px, solid, darken($cl-bg-yellow,7%));}
-.ef-brd2-left-yellow{@include brd-left(2px, solid, darken($cl-bg-yellow,7%));}
-.ef-brd3-left-yellow{@include brd-left(3px, solid, darken($cl-bg-yellow,7%));}
+.ef-brdt1-yellow{@include brd-top(1px, solid, darken($cl-bg-yellow,7%));}
+.ef-brdt2-yellow{@include brd-top(2px, solid, darken($cl-bg-yellow,7%));}
+.ef-brdt3-yellow{@include brd-top(3px, solid, darken($cl-bg-yellow,7%));}
+.ef-brdr1-yellow{@include brd-right(1px, solid, darken($cl-bg-yellow,7%));}
+.ef-brdr2-yellow{@include brd-right(2px, solid, darken($cl-bg-yellow,7%));}
+.ef-brdr3-yellow{@include brd-right(3px, solid, darken($cl-bg-yellow,7%));}
+.ef-brdb1-yellow{@include brd-bottom(1px, solid, darken($cl-bg-yellow,7%));}
+.ef-brdb2-yellow{@include brd-bottom(2px, solid, darken($cl-bg-yellow,7%));}
+.ef-brdb3-yellow{@include brd-bottom(3px, solid, darken($cl-bg-yellow,7%));}
+.ef-brdl1-yellow{@include brd-left(1px, solid, darken($cl-bg-yellow,7%));}
+.ef-brdl2-yellow{@include brd-left(2px, solid, darken($cl-bg-yellow,7%));}
+.ef-brdl3-yellow{@include brd-left(3px, solid, darken($cl-bg-yellow,7%));}
 //brown
 .ef-brd1-brown{@include brd(1px, solid, darken($cl-bg-brown,7%));}
 .ef-brd2-brown{@include brd(2px, solid, darken($cl-bg-brown,7%));}
 .ef-brd3-brown{@include brd(3px, solid, darken($cl-bg-brown,7%));}
-.ef-brd1-top-brown{@include brd-top(1px, solid, darken($cl-bg-brown,7%));}
-.ef-brd2-top-brown{@include brd-top(2px, solid, darken($cl-bg-brown,7%));}
-.ef-brd3-top-brown{@include brd-top(3px, solid, darken($cl-bg-brown,7%));}
-.ef-brd1-right-brown{@include brd-right(1px, solid, darken($cl-bg-brown,7%));}
-.ef-brd2-right-brown{@include brd-right(2px, solid, darken($cl-bg-brown,7%));}
-.ef-brd3-right-brown{@include brd-right(3px, solid, darken($cl-bg-brown,7%));}
-.ef-brd1-bottom-brown{@include brd-bottom(1px, solid, darken($cl-bg-brown,7%));}
-.ef-brd2-bottom-brown{@include brd-bottom(2px, solid, darken($cl-bg-brown,7%));}
-.ef-brd3-bottom-brown{@include brd-bottom(3px, solid, darken($cl-bg-brown,7%));}
-.ef-brd1-left-brown{@include brd-left(1px, solid, darken($cl-bg-brown,7%));}
-.ef-brd2-left-brown{@include brd-left(2px, solid, darken($cl-bg-brown,7%));}
-.ef-brd3-left-brown{@include brd-left(3px, solid, darken($cl-bg-brown,7%));}
+.ef-brdt1-brown{@include brd-top(1px, solid, darken($cl-bg-brown,7%));}
+.ef-brdt2-brown{@include brd-top(2px, solid, darken($cl-bg-brown,7%));}
+.ef-brdt3-brown{@include brd-top(3px, solid, darken($cl-bg-brown,7%));}
+.ef-brdr1-brown{@include brd-right(1px, solid, darken($cl-bg-brown,7%));}
+.ef-brdr2-brown{@include brd-right(2px, solid, darken($cl-bg-brown,7%));}
+.ef-brdr3-brown{@include brd-right(3px, solid, darken($cl-bg-brown,7%));}
+.ef-brdb1-brown{@include brd-bottom(1px, solid, darken($cl-bg-brown,7%));}
+.ef-brdb2-brown{@include brd-bottom(2px, solid, darken($cl-bg-brown,7%));}
+.ef-brdb3-brown{@include brd-bottom(3px, solid, darken($cl-bg-brown,7%));}
+.ef-brdl1-brown{@include brd-left(1px, solid, darken($cl-bg-brown,7%));}
+.ef-brdl2-brown{@include brd-left(2px, solid, darken($cl-bg-brown,7%));}
+.ef-brdl3-brown{@include brd-left(3px, solid, darken($cl-bg-brown,7%));}
 //black
 .ef-brd1-black{@include brd(1px, solid, darken($cl-bg-black,7%));}
 .ef-brd2-black{@include brd(2px, solid, darken($cl-bg-black,7%));}
 .ef-brd3-black{@include brd(3px, solid, darken($cl-bg-black,7%));}
-.ef-brd1-top-black{@include brd-top(1px, solid, darken($cl-bg-black,7%));}
-.ef-brd2-top-black{@include brd-top(2px, solid, darken($cl-bg-black,7%));}
-.ef-brd3-top-black{@include brd-top(3px, solid, darken($cl-bg-black,7%));}
-.ef-brd1-right-black{@include brd-right(1px, solid, darken($cl-bg-black,7%));}
-.ef-brd2-right-black{@include brd-right(2px, solid, darken($cl-bg-black,7%));}
-.ef-brd3-right-black{@include brd-right(3px, solid, darken($cl-bg-black,7%));}
-.ef-brd1-bottom-black{@include brd-bottom(1px, solid, darken($cl-bg-black,7%));}
-.ef-brd2-bottom-black{@include brd-bottom(2px, solid, darken($cl-bg-black,7%));}
-.ef-brd3-bottom-black{@include brd-bottom(3px, solid, darken($cl-bg-black,7%));}
-.ef-brd1-left-black{@include brd-left(1px, solid, darken($cl-bg-black,7%));}
-.ef-brd2-left-black{@include brd-left(2px, solid, darken($cl-bg-black,7%));}
-.ef-brd3-left-black{@include brd-left(3px, solid, darken($cl-bg-orange,7%));}
+.ef-brdt1-black{@include brd-top(1px, solid, darken($cl-bg-black,7%));}
+.ef-brdt2-black{@include brd-top(2px, solid, darken($cl-bg-black,7%));}
+.ef-brdt3-black{@include brd-top(3px, solid, darken($cl-bg-black,7%));}
+.ef-brdr1-black{@include brd-right(1px, solid, darken($cl-bg-black,7%));}
+.ef-brdr2-black{@include brd-right(2px, solid, darken($cl-bg-black,7%));}
+.ef-brdr3-black{@include brd-right(3px, solid, darken($cl-bg-black,7%));}
+.ef-brdb1-black{@include brd-bottom(1px, solid, darken($cl-bg-black,7%));}
+.ef-brdb2-black{@include brd-bottom(2px, solid, darken($cl-bg-black,7%));}
+.ef-brdb3-black{@include brd-bottom(3px, solid, darken($cl-bg-black,7%));}
+.ef-brdl1-black{@include brd-left(1px, solid, darken($cl-bg-black,7%));}
+.ef-brdl2-black{@include brd-left(2px, solid, darken($cl-bg-black,7%));}
+.ef-brdl3-black{@include brd-left(3px, solid, darken($cl-bg-orange,7%));}
 //gray
 .ef-brd1-gray{@include brd(1px, solid, darken($cl-bg-gray,7%));}
 .ef-brd2-gray{@include brd(2px, solid, darken($cl-bg-gray,7%));}
 .ef-brd3-gray{@include brd(3px, solid, darken($cl-bg-gray,7%));}
-.ef-brd1-top-gray{@include brd-top(1px, solid, darken($cl-bg-gray,7%));}
-.ef-brd2-top-gray{@include brd-top(2px, solid, darken($cl-bg-gray,7%));}
-.ef-brd3-top-gray{@include brd-top(3px, solid, darken($cl-bg-gray,7%));}
-.ef-brd1-right-gray{@include brd-right(1px, solid, darken($cl-bg-gray,7%));}
-.ef-brd2-right-gray{@include brd-right(2px, solid, darken($cl-bg-gray,7%));}
-.ef-brd3-right-gray{@include brd-right(3px, solid, darken($cl-bg-gray,7%));}
-.ef-brd1-bottom-gray{@include brd-bottom(1px, solid, darken($cl-bg-gray,7%));}
-.ef-brd2-bottom-gray{@include brd-bottom(2px, solid, darken($cl-bg-gray,7%));}
-.ef-brd3-bottom-gray{@include brd-bottom(3px, solid, darken($cl-bg-gray,7%));}
-.ef-brd1-left-gray{@include brd-left(1px, solid, darken($cl-bg-gray,7%));}
-.ef-brd2-left-gray{@include brd-left(2px, solid, darken($cl-bg-gray,7%));}
-.ef-brd3-left-gray{@include brd-left(3px, solid, darken($cl-bg-gray,7%));}
+.ef-brdt1-gray{@include brd-top(1px, solid, darken($cl-bg-gray,7%));}
+.ef-brdt2-gray{@include brd-top(2px, solid, darken($cl-bg-gray,7%));}
+.ef-brdt3-gray{@include brd-top(3px, solid, darken($cl-bg-gray,7%));}
+.ef-brdr1-gray{@include brd-right(1px, solid, darken($cl-bg-gray,7%));}
+.ef-brdr2-gray{@include brd-right(2px, solid, darken($cl-bg-gray,7%));}
+.ef-brdr3-gray{@include brd-right(3px, solid, darken($cl-bg-gray,7%));}
+.ef-brdb1-gray{@include brd-bottom(1px, solid, darken($cl-bg-gray,7%));}
+.ef-brdb2-gray{@include brd-bottom(2px, solid, darken($cl-bg-gray,7%));}
+.ef-brdb3-gray{@include brd-bottom(3px, solid, darken($cl-bg-gray,7%));}
+.ef-brdl1-gray{@include brd-left(1px, solid, darken($cl-bg-gray,7%));}
+.ef-brdl2-gray{@include brd-left(2px, solid, darken($cl-bg-gray,7%));}
+.ef-brdl3-gray{@include brd-left(3px, solid, darken($cl-bg-gray,7%));}
 //theme
 .ef-brd1-theme{@include brd(1px, solid, darken($cl-bg-theme,7%));}
 .ef-brd2-theme{@include brd(2px, solid, darken($cl-bg-theme,7%));}
 .ef-brd3-theme{@include brd(3px, solid, darken($cl-bg-theme,7%));}
-.ef-brd1-top-theme{@include brd-top(1px, solid, darken($cl-bg-theme,7%));}
-.ef-brd2-top-theme{@include brd-top(2px, solid, darken($cl-bg-theme,7%));}
-.ef-brd3-top-theme{@include brd-top(3px, solid, darken($cl-bg-theme,7%));}
-.ef-brd1-right-theme{@include brd-right(1px, solid, darken($cl-bg-theme,7%));}
-.ef-brd2-right-theme{@include brd-right(2px, solid, darken($cl-bg-theme,7%));}
-.ef-brd3-right-theme{@include brd-right(3px, solid, darken($cl-bg-theme,7%));}
-.ef-brd1-bottom-theme{@include brd-bottom(1px, solid, darken($cl-bg-theme,7%));}
-.ef-brd2-bottom-theme{@include brd-bottom(2px, solid, darken($cl-bg-theme,7%));}
-.ef-brd3-bottom-theme{@include brd-bottom(3px, solid, darken($cl-bg-theme,7%));}
-.ef-brd1-left-theme{@include brd-left(1px, solid, darken($cl-bg-theme,7%));}
-.ef-brd2-left-theme{@include brd-left(2px, solid, darken($cl-bg-theme,7%));}
-.ef-brd3-left-theme{@include brd-left(3px, solid, darken($cl-bg-theme,7%));}
+.ef-brdt1-theme{@include brd-top(1px, solid, darken($cl-bg-theme,7%));}
+.ef-brdt2-theme{@include brd-top(2px, solid, darken($cl-bg-theme,7%));}
+.ef-brdt3-theme{@include brd-top(3px, solid, darken($cl-bg-theme,7%));}
+.ef-brdr1-theme{@include brd-right(1px, solid, darken($cl-bg-theme,7%));}
+.ef-brdr2-theme{@include brd-right(2px, solid, darken($cl-bg-theme,7%));}
+.ef-brdr3-theme{@include brd-right(3px, solid, darken($cl-bg-theme,7%));}
+.ef-brdb1-theme{@include brd-bottom(1px, solid, darken($cl-bg-theme,7%));}
+.ef-brdb2-theme{@include brd-bottom(2px, solid, darken($cl-bg-theme,7%));}
+.ef-brdb3-theme{@include brd-bottom(3px, solid, darken($cl-bg-theme,7%));}
+.ef-brdl1-theme{@include brd-left(1px, solid, darken($cl-bg-theme,7%));}
+.ef-brdl2-theme{@include brd-left(2px, solid, darken($cl-bg-theme,7%));}
+.ef-brdl3-theme{@include brd-left(3px, solid, darken($cl-bg-theme,7%));}
 
 //clear border
-.ef-brd-clear{border:none;}
-.ef-brd-top-clear{border-top:none;}
-.ef-brd-right-clear{border-right:none;}
-.ef-brd-bottom-clear{border-bottom:none;}
-.ef-brd-left-clear{border-left:none;}
+.ef-brd0{border:none;}
+.ef-brdt0{border-top:none;}
+.ef-brdr0{border-right:none;}
+.ef-brdb0{border-bottom:none;}
+.ef-brdl0{border-left:none;}
 /* =============================================================
  ▼ radius
 ============================================================== */
-.ef-brdr0{@include border-radius(0);}
-.ef-brdr1{@include border-radius(1px);}
-.ef-brdr2{@include border-radius(2px);}
-.ef-brdr3{@include border-radius(3px);}
-.ef-brdr4{@include border-radius(4px);}
-.ef-brdr5{@include border-radius(5px);}
-.ef-brdr6{@include border-radius(6px);}
-.ef-brdr7{@include border-radius(7px);}
-.ef-brdr8{@include border-radius(8px);}
-.ef-brdr9{@include border-radius(9px);}
-.ef-brdr10{@include border-radius(10px);}
+.ef-rd1{@include border-radius(1px);}
+.ef-rd2{@include border-radius(2px);}
+.ef-rd3{@include border-radius(3px);}
+.ef-rd4{@include border-radius(4px);}
+.ef-rd5{@include border-radius(5px);}
+.ef-rd6{@include border-radius(6px);}
+.ef-rd7{@include border-radius(7px);}
+.ef-rd8{@include border-radius(8px);}
+.ef-rd9{@include border-radius(9px);}
+.ef-rd10{@include border-radius(10px);}
 //top
-.ef-brdr0-top{@include border-top-radius(0);}
-.ef-brdr1-top{@include border-top-radius(1px);}
-.ef-brdr2-top{@include border-top-radius(2px);}
-.ef-brdr3-top{@include border-top-radius(3px);}
-.ef-brdr4-top{@include border-top-radius(4px);}
-.ef-brdr5-top{@include border-top-radius(5px);}
-.ef-brdr6-top{@include border-top-radius(6px);}
-.ef-brdr7-top{@include border-top-radius(7px);}
-.ef-brdr8-top{@include border-top-radius(8px);}
-.ef-brdr9-top{@include border-top-radius(9px);}
-.ef-brdr10-top{@include border-top-radius(10px);}
+.ef-rdt1{@include border-top-radius(1px);}
+.ef-rdt2{@include border-top-radius(2px);}
+.ef-rdt3{@include border-top-radius(3px);}
+.ef-rdt4{@include border-top-radius(4px);}
+.ef-rdt5{@include border-top-radius(5px);}
+.ef-rdt6{@include border-top-radius(6px);}
+.ef-rdt7{@include border-top-radius(7px);}
+.ef-rdt8{@include border-top-radius(8px);}
+.ef-rdt9{@include border-top-radius(9px);}
+.ef-rdt10{@include border-top-radius(10px);}
 //right
-.ef-brdr0-right{@include border-right-radius(0);}
-.ef-brdr1-right{@include border-right-radius(1px);}
-.ef-brdr2-right{@include border-right-radius(2px);}
-.ef-brdr3-right{@include border-right-radius(3px);}
-.ef-brdr4-right{@include border-right-radius(4px);}
-.ef-brdr5-right{@include border-right-radius(5px);}
-.ef-brdr6-right{@include border-right-radius(6px);}
-.ef-brdr7-right{@include border-right-radius(7px);}
-.ef-brdr8-right{@include border-right-radius(8px);}
-.ef-brdr9-right{@include border-right-radius(9px);}
-.ef-brdr10-right{@include border-right-radius(10px);}
+.ef-rdr1{@include border-right-radius(1px);}
+.ef-rdr2{@include border-right-radius(2px);}
+.ef-rdr3{@include border-right-radius(3px);}
+.ef-rdr4{@include border-right-radius(4px);}
+.ef-rdr5{@include border-right-radius(5px);}
+.ef-rdr6{@include border-right-radius(6px);}
+.ef-rdr7{@include border-right-radius(7px);}
+.ef-rdr8{@include border-right-radius(8px);}
+.ef-rdr9{@include border-right-radius(9px);}
+.ef-rdr10{@include border-right-radius(10px);}
 //bottom
-.ef-brdr0-bottom{@include border-bottom-radius(0);}
-.ef-brdr1-bottom{@include border-bottom-radius(1px);}
-.ef-brdr2-bottom{@include border-bottom-radius(2px);}
-.ef-brdr3-bottom{@include border-bottom-radius(3px);}
-.ef-brdr4-bottom{@include border-bottom-radius(4px);}
-.ef-brdr5-bottom{@include border-bottom-radius(5px);}
-.ef-brdr6-bottom{@include border-bottom-radius(6px);}
-.ef-brdr7-bottom{@include border-bottom-radius(7px);}
-.ef-brdr8-bottom{@include border-bottom-radius(8px);}
-.ef-brdr9-bottom{@include border-bottom-radius(9px);}
-.ef-brdr10-bottom{@include border-bottom-radius(10px);}
+.ef-rdb1{@include border-bottom-radius(1px);}
+.ef-rdb2{@include border-bottom-radius(2px);}
+.ef-rdb3{@include border-bottom-radius(3px);}
+.ef-rdb4{@include border-bottom-radius(4px);}
+.ef-rdb5{@include border-bottom-radius(5px);}
+.ef-rdb6{@include border-bottom-radius(6px);}
+.ef-rdb7{@include border-bottom-radius(7px);}
+.ef-rdb8{@include border-bottom-radius(8px);}
+.ef-rdb9{@include border-bottom-radius(9px);}
+.ef-rdb10{@include border-bottom-radius(10px);}
 //left
-.ef-brdr0-left{@include border-left-radius(0);}
-.ef-brdr1-left{@include border-left-radius(1px);}
-.ef-brdr2-left{@include border-left-radius(2px);}
-.ef-brdr3-left{@include border-left-radius(3px);}
-.ef-brdr4-left{@include border-left-radius(4px);}
-.ef-brdr5-left{@include border-left-radius(5px);}
-.ef-brdr6-left{@include border-left-radius(6px);}
-.ef-brdr7-left{@include border-left-radius(7px);}
-.ef-brdr8-left{@include border-left-radius(8px);}
-.ef-brdr9-left{@include border-left-radius(9px);}
-.ef-brdr10-left{@include border-left-radius(10px);}
+.ef-rdl1{@include border-left-radius(1px);}
+.ef-rdl2{@include border-left-radius(2px);}
+.ef-rdl3{@include border-left-radius(3px);}
+.ef-rdl4{@include border-left-radius(4px);}
+.ef-rdl5{@include border-left-radius(5px);}
+.ef-rdl6{@include border-left-radius(6px);}
+.ef-rdl7{@include border-left-radius(7px);}
+.ef-rdl8{@include border-left-radius(8px);}
+.ef-rdl9{@include border-left-radius(9px);}
+.ef-rdl10{@include border-left-radius(10px);}
 /* =============================================================
  ▼ radius (%)
 ============================================================== */
-.ef-brdr3p{@include border-radius(3%);}
-.ef-brdr10p{@include border-radius(10%);}
-.ef-brdr20p{@include border-radius(20%);}
-.ef-brdr30p{@include border-radius(30%);}
-.ef-brdr40p{@include border-radius(40%);}
-.ef-brdr50p{@include border-radius(50%);}
-.ef-brdr60p{@include border-radius(60%);}
-.ef-brdr70p{@include border-radius(70%);}
-.ef-brdr80p{@include border-radius(80%);}
-.ef-brdr90p{@include border-radius(90%);}
-.ef-brdr100p{@include border-radius(100%);}
+.ef-rd3p{@include border-radius(3%);}
+.ef-rd10p{@include border-radius(10%);}
+.ef-rd20p{@include border-radius(20%);}
+.ef-rd30p{@include border-radius(30%);}
+.ef-rd40p{@include border-radius(40%);}
+.ef-rd50p{@include border-radius(50%);}
+.ef-rd60p{@include border-radius(60%);}
+.ef-rd70p{@include border-radius(70%);}
+.ef-rd80p{@include border-radius(80%);}
+.ef-rd90p{@include border-radius(90%);}
+.ef-rd100p{@include border-radius(100%);}
 //top
-.ef-brdr3p-top{@include border-top-radius(3%);}
-.ef-brdr10p-top{@include border-top-radius(10%);}
-.ef-brdr20p-top{@include border-top-radius(20%);}
-.ef-brdr30p-top{@include border-top-radius(30%);}
-.ef-brdr40p-top{@include border-top-radius(40%);}
-.ef-brdr50p-top{@include border-top-radius(50%);}
+.ef-rdt3p{@include border-top-radius(3%);}
+.ef-rdt10p{@include border-top-radius(10%);}
+.ef-rdt20p{@include border-top-radius(20%);}
+.ef-rdt30p{@include border-top-radius(30%);}
+.ef-rdt40p{@include border-top-radius(40%);}
+.ef-rdt50p{@include border-top-radius(50%);}
 //right
-.ef-brdr3p-right{@include border-right-radius(3%);}
-.ef-brdr10p-right{@include border-right-radius(10%);}
-.ef-brdr20p-right{@include border-right-radius(20%);}
-.ef-brdr30p-right{@include border-right-radius(30%);}
-.ef-brdr40p-right{@include border-right-radius(40%);}
-.ef-brdr50p-right{@include border-right-radius(50%);}
+.ef-rdr3p{@include border-right-radius(3%);}
+.ef-rdr10p{@include border-right-radius(10%);}
+.ef-rdr20p{@include border-right-radius(20%);}
+.ef-rdr30p{@include border-right-radius(30%);}
+.ef-rdr40p{@include border-right-radius(40%);}
+.ef-rdr50p{@include border-right-radius(50%);}
 //bottom
-.ef-brdr3p-bottom{@include border-bottom-radius(3%);}
-.ef-brdr10p-bottom{@include border-bottom-radius(10%);}
-.ef-brdr20p-bottom{@include border-bottom-radius(20%);}
-.ef-brdr30p-bottom{@include border-bottom-radius(30%);}
-.ef-brdr40p-bottom{@include border-bottom-radius(40%);}
-.ef-brdr50p-bottom{@include border-bottom-radius(50%);}
+.ef-rdb3p{@include border-bottom-radius(3%);}
+.ef-rdb10p{@include border-bottom-radius(10%);}
+.ef-rdb20p{@include border-bottom-radius(20%);}
+.ef-rdb30p{@include border-bottom-radius(30%);}
+.ef-rdb40p{@include border-bottom-radius(40%);}
+.ef-rdb50p{@include border-bottom-radius(50%);}
 //left
-.ef-brdr3p-left{@include border-left-radius(3%);}
-.ef-brdr10p-left{@include border-left-radius(10%);}
-.ef-brdr20p-left{@include border-left-radius(20%);}
-.ef-brdr30p-left{@include border-left-radius(30%);}
-.ef-brdr40p-left{@include border-left-radius(40%);}
-.ef-brdr50p-left{@include border-left-radius(50%);}
+.ef-rdl3p{@include border-left-radius(3%);}
+.ef-rdl10p{@include border-left-radius(10%);}
+.ef-rdl20p{@include border-left-radius(20%);}
+.ef-rdl30p{@include border-left-radius(30%);}
+.ef-rdl40p{@include border-left-radius(40%);}
+.ef-rdl50p{@include border-left-radius(50%);}
 
+// reset radius
+.ef-rdt0{@include border-top-radius(0);}
+.ef-rdr0{@include border-right-radius(0);}
+.ef-rdb0{@include border-bottom-radius(0);}
+.ef-rdl0{@include border-left-radius(0);}
+.ef-rd0{@include border-radius(0);}
 /* =============================================================
  ▼ opacity
 ============================================================== */
-.ef-op0{@include opacity(0);}
 .ef-op01{@include opacity(0.1);}
 .ef-op02{@include opacity(0.2);}
 .ef-op03{@include opacity(0.3);}
@@ -1452,6 +1572,7 @@
 .ef-op08{@include opacity(0.8);}
 .ef-op09{@include opacity(0.9);}
 .ef-op10{@include opacity(1.0);}
+.ef-op0{@include opacity(0);}
 /* =============================================================
  ▼ box-shadow
 ============================================================== */
@@ -1835,6 +1956,9 @@ dl.ef-float{
 .ef-h590-ovf{@include height-overflow(590px);}
 .ef-h600-ovf{@include height-overflow(600px);}
 
+// scroll
+.ef-w0-ovf{overflow-x:scroll;}
+.ef-h0-ovf{overflow-y:scroll;}
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "animation"
@@ -1861,7 +1985,6 @@ dl.ef-float{
 /* =============================================================
  ▼ rotate
 ============================================================= */
-.ef-rotate0{@include rotate(0deg);}
 .ef-rotate15{@include rotate(15deg);}
 .ef-rotate30{@include rotate(30deg);}
 .ef-rotate45{@include rotate(45deg);}
@@ -1874,3 +1997,4 @@ dl.ef-float{
 .ef-rotate150{@include rotate(150deg);}
 .ef-rotate165{@include rotate(165deg);}
 .ef-rotate180{@include rotate(180deg);}
+.ef-rotate0{@include rotate(0deg);}

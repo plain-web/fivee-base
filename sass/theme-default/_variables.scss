@@ -35,7 +35,6 @@ $lh-form:30px;
 $lh-table:$lh-base;
 $lh-btn:20px;
 $lh-btn-mini:16px;
-$lh-badge:16px;
 $lh-txt:$lh-base;
 
 // theme color
@@ -216,14 +215,38 @@ $cl-bg-tooltip:#666;
 $cl-bg-remarks: #fff;
 $cl-bg-remarks-supplement:#FEFDDA;
 
-//badge size
-$cl-bg-badge:$cl-red;
+//badge
+$cl-badge-white:$cl-white;
+$cl-badge-gray:$cl-gray;
+$cl-badge-red:$cl-red;
+$cl-badge-green:$cl-green;
+$cl-badge-orange:$cl-orange;
+$cl-badge-blue:$cl-blue;
+$cl-badge-yellow:$cl-yellow;
+$cl-badge-black:$cl-black;
+$cl-badge-brown:$cl-brown;
+$cl-badge-theme:$cl-theme;
 
-//stamp
-$cl-stamp-gray:$cl-gray;
-$cl-stamp-red:$cl-red;
-$cl-stamp-green:$cl-green;
-$cl-stamp-orange:$cl-orange;
-$cl-stamp-blue:$cl-blue;
-$cl-stamp-yellow:$cl-yellow;
-$cl-stamp-brown:$cl-brown;
+//tag
+$cl-tag-white:$cl-white;
+$cl-tag-gray:$cl-gray;
+$cl-tag-red:$cl-red;
+$cl-tag-green:$cl-green;
+$cl-tag-orange:$cl-orange;
+$cl-tag-blue:$cl-blue;
+$cl-tag-yellow:$cl-yellow;
+$cl-tag-black:$cl-black;
+$cl-tag-brown:$cl-brown;
+$cl-tag-theme:$cl-theme;
+
+//progress-bar
+$cl-progress-bar-white:$cl-white;
+$cl-progress-bar-gray:$cl-gray;
+$cl-progress-bar-red:$cl-red;
+$cl-progress-bar-green:$cl-green;
+$cl-progress-bar-orange:$cl-orange;
+$cl-progress-bar-blue:$cl-blue;
+$cl-progress-bar-yellow:$cl-yellow;
+$cl-progress-bar-black:$cl-black;
+$cl-progress-bar-brown:$cl-brown;
+$cl-progress-bar-theme:$cl-theme;

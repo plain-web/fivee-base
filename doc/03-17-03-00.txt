@@ -1,0 +1,23 @@
+﻿<div class="ef-mxh150-ovf">
+  <div class="is-nowrap">
+    max-height:200px;
+    <br>
+    overflow-y:auto;
+    <br>
+    max-height:200px;
+    <br>
+    overflow-y:auto;
+    <br>
+    max-height:200px;
+    <br>
+    overflow-y:auto;
+    <br>
+    max-height:200px;
+    <br>
+    overflow-y:auto;
+    <br>
+    max-height:200px;
+    <br>
+    overflow-y:auto;
+  </div>
+</div>

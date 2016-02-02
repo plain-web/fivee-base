@@ -1,0 +1,5 @@
+﻿<div class="ef-w200-ovf">
+  <div class="is-nowrap">
+    width:200px;overflow-x:auto;width:200px;overflow-x:auto;width:200px;overflow-x:auto;
+  </div>
+</div>

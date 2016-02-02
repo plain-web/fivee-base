@@ -1,0 +1,9 @@
+﻿<div class="ef-txt-left">
+  left
+</div>
+<div class="ef-txt-center">
+  center
+</div>
+<div class="ef-txt-right">
+  right
+</div>

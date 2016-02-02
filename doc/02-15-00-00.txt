@@ -1,0 +1,36 @@
+﻿<div class="cp-stepbar">
+  <ul class="ef-w100p">
+    <li>
+      <div class="cp-stepbar-key">
+        1.test
+      </div>
+    </li>
+    <li class="is-past">
+      <div class="cp-stepbar-arrow-bg"></div>
+      <div class="cp-stepbar-arrow"></div>
+    </li>
+    <li class="is-current">
+      <div class="cp-stepbar-key">
+        2.test
+      </div>
+    </li>
+    <li class="is-current">
+      <div class="cp-stepbar-arrow-bg"></div>
+      <div class="cp-stepbar-arrow"></div>
+    </li>
+    <li>
+      <div class="cp-stepbar-key">
+        3.test
+      </div>
+    </li>
+    <li>
+      <div class="cp-stepbar-arrow-bg"></div>
+      <div class="cp-stepbar-arrow"></div>
+    </li>
+    <li>
+      <div class="cp-stepbar-key">
+        4.test
+      </div>
+    </li>
+  </ul>
+</div>
