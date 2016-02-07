@@ -1,0 +1,134 @@
+﻿<!-- / folder//////////////////////////////////// -->
+<nav class="md-nav-main">
+  <div class="st-inner">
+    <ul class="ef-lh28 js-nav-main">
+      <li>
+        <div class="ef-fs11 ef-txt-gray6">
+          Category
+        </div>
+      </li>
+      <li class="js-nav-main-parent0">
+        <a href="javascript:void(0);">
+          <ul class="ef-float3">
+            <li class="js-ic-folder-arrow">
+              <i class="fa fa-caret-right"></i>
+            </li>
+            <li class="js-ic-folder ef-mgl-7">
+              <i class="fa fa-folder"></i>
+            </li>
+            <li>
+              Category1
+            </li>
+          </ul>
+        </a>
+        <ul class="ef-txt-indent1 js-nav-main-child0" style="display:none;">
+          <li>
+            <a href="#">
+              <ul class="ef-float3">
+                <li class="ef-mgl3">
+                  Menu1
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <ul class="ef-float3">
+                <li class="ef-mgl3">
+                  Menu2
+                </li>
+              </ul>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="js-nav-main-parent1">
+        <a href="javascript:void(0);">
+          <ul class="ef-float3">
+            <li class="js-ic-folder-arrow">
+              <i class="fa fa-caret-right"></i>
+            </li>
+            <li class="js-ic-folder ef-mgl-7">
+              <i class="fa fa-folder"></i>
+            </li>
+            <li>
+              Category2
+            </li>
+          </ul>
+        </a>
+        <ul class="ef-txt-indent1 js-nav-main-child1" style="display:none;">
+          <li class="js-nav-main-parent2">
+            <a href="javascript:void(0);">
+              <ul class="ef-float3">
+                <li class="js-ic-folder-arrow">
+                  <i class="fa fa-caret-right"></i>
+                </li>
+                <li class="js-ic-folder ef-mgl-7">
+                  <i class="fa fa-folder"></i>
+                </li>
+                <li>
+                  Category2-1
+                </li>
+              </ul>
+            </a>
+            <ul class="ef-txt-indent1 js-nav-main-child2" style="display:none;">
+              <li class="is-current">
+                <a href="#">
+                  <ul class="ef-float3">
+                    <li class="ef-mgl3">
+                      Menu1
+                    </li>
+                  </ul>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <ul class="ef-float3">
+                    <li class="ef-mgl3">
+                      Menu2
+                    </li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="js-nav-main-parent3">
+        <a href="javascript:void(0);">
+          <ul class="ef-float3">
+            <li class="js-ic-folder-arrow">
+              <i class="fa fa-caret-right"></i>
+            </li>
+            <li class="js-ic-folder ef-mgl-7">
+              <i class="fa fa-folder"></i>
+            </li>
+            <li>
+              Category3
+            </li>
+          </ul>
+        </a>
+        <ul class="ef-txt-indent1 js-nav-main-child3" style="display:none;">
+          <li>
+            <a href="#">
+              <ul class="ef-float3">
+                <li class="ef-mgl3">
+                  Menu1
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <ul class="ef-float3">
+                <li class="ef-mgl3">
+                  Menu2
+                </li>
+              </ul>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

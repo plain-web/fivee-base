@@ -1,0 +1,81 @@
+﻿<!-- / table/////////////////////////// -->
+<table class="md-table-base ef-w100p">
+  <colgroup>
+    <col>
+    <col class="ef-bg-green">
+    <col>
+    <col>
+  </colgroup>
+  <thead>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <th>
+        <a href="javascript:void(0);">
+          align
+        </a>
+      </th>
+      <th>
+        <a href="javascript:void(0);">
+          colgroup
+        </a>
+      </th>
+      <th class="ef-w10">
+        <a href="javascript:void(0);">
+          width
+        </a>
+      </th>
+      <th>
+        <a href="javascript:void(0);">
+          bg color
+        </a>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <td class="ef-txt-left">
+        text left
+      </td>
+      <td>
+        colgroup bg
+      </td>
+      <td>
+        width
+      </td>
+      <td class="ef-bg-blue">
+        blue
+      </td>
+    </tr>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <td class="ef-txt-center">
+        text center
+      </td>
+      <td>
+        colgroup bg
+      </td>
+      <td>
+        width
+      </td>
+      <td class="ef-bg-red">
+        red
+      </td>
+    </tr>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <td class="ef-txt-right">
+        text right
+      </td>
+      <td>
+        colgroup bg
+      </td>
+      <td>
+        width
+      </td>
+      <td class="ef-bg-gray">
+        gray
+      </td>
+    </tr>
+  </tbody>
+</table>

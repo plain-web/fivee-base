@@ -1,5 +1,5 @@
-﻿<div class="ef-mh100 ef-bg-theme">
-  <div class="ef-txt-center ef-cl-white ef-pd10">
+﻿<div class="ef-mh100 ef-cl-theme">
+  <div class="ef-txt-center ef-txt-white ef-pd10">
     min-height:100px;
   </div>
 </div>

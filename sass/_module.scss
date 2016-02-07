@@ -4,71 +4,108 @@
  * include:
  *"tab" "modal" "popup" "cartain"
  * "tooltip" "message" "toast"
- * "pagination" "loading" "scrolltop"
- * "collapse" "navblock" "wizard"
+ * "pagination" "loader" "scrolltop"
+ * "collapse" "nav" "wizard"
  *
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "tab"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-.md-tab{
-  .md-tab-btn{
-    >.st-inner{
-      ul{
-        padding-top:3px;
-        li{
-          position:relative;
-          @include brd(1px,solid,$cl-brd-base);
-          border-bottom:0;
-          background:$cl-gray;
-          margin-right:5px;
-          @include border-top-radius(3px);
-          a{
-            padding:6px 10px;
-            line-height:$lh-btn;
-            text-align:center;
-            display:block;
-            @include width-overflow-max(250px);
-          }
-          .cp-underbar{
-            @include posi-abs(auto,auto,0,0);
-            z-index:1;
-            width:100%;
-            height:1px;
-            background:$cl-brd-base;
-          }
-          &.current{
-            @include border-top-radius(0);
-            @include brd-top(3px,solid,$cl-theme);
-            margin-top:-2px;
-            a{
-              background:$cl-bg-tab;
-              color:#333;
-              font-weight:bold;
-            }
-            .cp-underbar{display:none;}
-            &:last-child{margin-right:0;}
-          }
+ * =============================================================
+ ▼ tab
+============================================================== */
+.md-tab-btn{
+  >.st-inner{
+    position:relative;
+    ul{
+      padding-top:3px;
+      li{
+        position:relative;
+        @include brd(1px,solid,$cl-brd-base);
+        border-bottom:0;
+        background:$cl-bg-tab;
+        @include border-top-radius(3px);
+        a{
+          line-height:16px;
+          padding:10px;
+          text-align:center;
+          display:block;
+          text-decoration: none;
+          i{color:$cl-txt-link;}
+          &:hover{background:$cl-bg-tab-current;}
         }
+        .md-tab-underbar{
+          @include posi-abs(auto,auto,0,0);
+          z-index:1;
+          width:100%;
+          height:1px;
+          background:$cl-brd-base;
+        }
+        &.is-current{
+          @include brd-top(3px,solid,$cl-tab-current);
+          margin-top:2px;
+          a{
+            background:$cl-bg-tab-current;
+            color:#333;
+            i{color:$cl-tab-current;}
+          }
+          .md-tab-underbar{display:none;}
+          &:last-child{margin-right:0;}
+        }
+        &.md-notab{a:hover{background:$cl-bg-tab;}}
+        &:last-child{margin-right:0;}
       }
     }
+    .md-tab-btn-center{
+      overflow:hidden;
+      height:40px;
+      position:relative;
+      margin:0;
+      ul{@include posi-abs(0,0,auto,0);}
+    }
   }
-  //content
-  .md-tab-content{
-    margin-top:-1px;
-    background:$cl-bg-tab;
+}
+.md-tab-content{
+  display:table;
+  min-width:100%;
+  margin-top:-1px;
+  background:$cl-bg-tab-current;
+  @include brd(1px,solid,$cl-brd-base);
+  >.st-inner{
+    padding:20px 15px;
+    >ul > li{
+      display:none;
+      &.is-current{display:block;}
+    }
+  }
+}
+/* =============================================================
+ ▼ tabscroll
+============================================================== */
+.md-tab-scroll{
+  .md-tab-btn{
     >.st-inner{
-      overflow-x:auto;
-      padding:20px 15px;
-      @include brd(1px,solid,$cl-brd-base);
-      .js-tab-switcher{
-        display:none;
-        &.current{display:block;}
+      .md-tab-btn-left,
+      .md-tab-btn-right{
+        z-index:1;
+        ul{li{margin-bottom:-1px;}}
+        .is-disable{a{cursor: not-allowed;}}
+      }
+      .md-tab-btn-left{
+        @include posi-abs(0,auto,auto,0);
+        padding-right: 3px;
+      }
+      .md-tab-btn-right{
+        @include posi-abs(0,0,auto,auto);
+        padding-left: 3px;
+      }
+      .md-tab-btn-center{
+        margin:0 38px;
       }
     }
   }
 }
+/*========================================================================
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "modal"
@@ -83,7 +120,7 @@
     @include brd(1px,solid,$cl-brd-base);
     @include border-radius(5px);
     display:none;
-    @include min-width(400px);
+    @include min-width(150px);
     z-index:2;
     &.is-current{
       display:block;
@@ -101,7 +138,6 @@
         }
       }
       .md-modal-body{
-        padding:10px 10px 20px;
         background:$cl-bg-modal-body;
       }
       .md-modal-footer{
@@ -112,28 +148,19 @@
       }
     }
   }
+  >.st-body.md-image-viewer{
+    >.st-inner{
+      .md-modal-header{
+        background:$cl-bg-image-viewer-header;
+      }
+    }
+  }
 }
 /* =============================================================
  ▼ cartain
 ============================================================== */
 .md-cartain{
-  position:fixed;
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
-  &.is-white{
-    background:$cl-white;
-    @include opacity(0.4);
-  }
-  &.is-black{
-    background:$cl-black;
-    @include opacity(0.5);
-  }
-  &.is-gray{
-    background:$cl-gray;
-    @include opacity(0.12);
-  }
+  @include posi-fix(0,0,0,0);
 }
 
 /*
@@ -173,7 +200,6 @@
   .st-body{
     z-index:1;
     @include posi-abs(auto,auto,auto,auto);
-    max-width:350px;
     .st-inner{
       position:relative;
       .md-tooltip-wrap{
@@ -181,7 +207,7 @@
         color:$cl-txt-rev;
         padding:7px 10px;
         @include border-radius(3px);
-        @include width-overflow-max(500px);
+        word-wrap: break-word;
       }
       .md-balloon{
         @include posi-abs(auto,auto,-8px,5px);
@@ -212,24 +238,20 @@ table.md-table-base{
   background:$cl-white;
   //hover tr 
   thead,tbody{
-    &.md-th-hover{
+    &.is-hover{
       tr:hover{
         th{
           background-color:$cl-bg-table-th-hover;
-          &.md-th-reset{
-            background-color:$cl-bg-table-header;
-          }
+          &.is-reset{ background-color:$cl-bg-table-th;}
         }
-      }
-    }
-    &.md-td-hover{
-      tr:hover{
         td{
           background-color:$cl-bg-table-td-hover;
-          &.md-td-reset{
-            background-color:$cl-white;
-          }
+          &.is-reset{ background-color:$cl-bg-table-td;}
         }
+      }
+      tr.is-reset:hover{
+        th{background-color:$cl-bg-table-th;}
+        td{background-color:$cl-bg-table-td;}
       }
     }
   }
@@ -237,7 +259,7 @@ table.md-table-base{
     th{
       padding:$pd-table;
       font-size:$fs-base;
-      background:$cl-bg-table-header;
+      background:$cl-bg-table-th;
       @include brd-right(1px,solid,$cl-brd-base);
       @include brd-bottom(1px,solid,$cl-brd-base);
       //white-space: nowrap;
@@ -254,44 +276,31 @@ table.md-table-base{
     tbody:last-child td{border-bottom-width:none;}
 
     //hover single cloumn
-    &.md-th-hover{
+    &.is-hover{
       th:hover{
         background-color:$cl-bg-table-th-hover;
-        &.md-th-reset{
-          background-color:$cl-bg-table-header;
-        }
+        &.is-reset{ background-color:$cl-bg-table-th;}
       }
-    }
-    &.md-td-hover{
       td:hover{
         background-color:$cl-bg-table-td-hover;
-        &.md-td-reset{
-          background-color:$cl-white;
-        }
+        &.is-reset{ background-color:$cl-bg-table-td;}
       }
     }
     &.is-highlight{
-      td{background-color:$cl-bg-table-highlight;}
-      &.md-td-reset{
-        td{background-color:$cl-white;}
-      }
+      th,td{background-color:$cl-bg-table-highlight;}
+      th{&.is-reset{background-color:$cl-bg-table-th;}}
+      td{&.is-reset{background-color:$cl-bg-table-td;}}
     }
     &.is-select{
-      td{background-color:$cl-bg-table-select;}
-      &.md-td-reset{
-        td{background-color:$cl-white;}
-      }
+      th,td{background-color:$cl-bg-table-select;}
+      th{&.is-reset{background-color:$cl-bg-table-th;}}
+      td{&.is-reset{background-color:$cl-bg-table-td;}}
     }
-    // &.is-select{
-    //   td{background-color:$cl-bg-table-select;}
-    //   &.md-td-reset{
-    //     td{background-color:$cl-white;}
-    //   }
-    // }
+
     //vertical
-    .ef-vrt{vertical-align:top;}
-    .ef-vrm{vertical-align:middle;}
-    .ef-vrb{vertical-align:bottom;}
+    .ef-vat{vertical-align:top;}
+    .ef-vam{vertical-align:middle;}
+    .ef-vab{vertical-align:bottom;}
 
     //background color
     .ef-bg-white{background:$cl-bg-white;}
@@ -300,6 +309,7 @@ table.md-table-base{
     .ef-bg-blue{background:$cl-bg-blue;}
     .ef-bg-green{background:$cl-bg-green;}
     .ef-bg-yellow{background:$cl-bg-yellow;}
+    .ef-bg-brown{background:$cl-bg-brown;}
     .ef-bg-black{background:$cl-bg-black;}
     .ef-bg-gray{background:$cl-bg-gray;}
     .ef-bg-gray1{background:$cl-bg-gray1;}
@@ -310,257 +320,117 @@ table.md-table-base{
     .ef-bg-gray6{background:$cl-bg-gray6;}
     .ef-bg-gray7{background:$cl-bg-gray7;}
     .ef-bg-theme{background:$cl-bg-theme;}
+    //focus
+    .is-focus{background:$cl-bg-green;}
+
+    //border(th,td)
+    .ef-brd1{@include brd(1px, solid, $cl-brd-base);}
+    .ef-brd2{@include brd(2px, solid, $cl-brd-base);}
+    .ef-brd3{@include brd(3px, solid, $cl-brd-base);}
+    .ef-brdt1{@include brd-top(1px, solid, $cl-brd-base);}
+    .ef-brdt2{@include brd-top(2px, solid, $cl-brd-base);}
+    .ef-brdt3{@include brd-top(3px, solid, $cl-brd-base);}
+    .ef-brdr1{@include brd-right(1px, solid, $cl-brd-base);}
+    .ef-brdr2{@include brd-right(2px, solid, $cl-brd-base);}
+    .ef-brdr3{@include brd-right(3px, solid, $cl-brd-base);}
+    .ef-brdb1{@include brd-bottom(1px, solid, $cl-brd-base);}
+    .ef-brdb2{@include brd-bottom(2px, solid, $cl-brd-base);}
+    .ef-brdb3{@include brd-bottom(3px, solid, $cl-brd-base);}
+    .ef-brdl1{@include brd-left(1px, solid, $cl-brd-base);}
+    .ef-brdl2{@include brd-left(2px, solid, $cl-brd-base);}
+    .ef-brdl3{@include brd-left(3px, solid, $cl-brd-base);}
+    //border theme(th,td)
+    .ef-brd1-theme{@include brd(1px, solid, $cl-theme);}
+    .ef-brd2-theme{@include brd(2px, solid, $cl-theme);}
+    .ef-brd3-theme{@include brd(3px, solid, $cl-theme);}
+    .ef-brdt1-theme{@include brd-top(1px, solid, $cl-theme);}
+    .ef-brdt2-theme{@include brd-top(2px, solid, $cl-theme);}
+    .ef-brdt3-theme{@include brd-top(3px, solid, $cl-theme);}
+    .ef-brdr1-theme{@include brd-right(1px, solid, $cl-theme);}
+    .ef-brdr2-theme{@include brd-right(2px, solid, $cl-theme);}
+    .ef-brdr3-theme{@include brd-right(3px, solid, $cl-theme);}
+    .ef-brdb1-theme{@include brd-bottom(1px, solid, $cl-theme);}
+    .ef-brdb2-theme{@include brd-bottom(2px, solid, $cl-theme);}
+    .ef-brdb3-theme{@include brd-bottom(3px, solid, $cl-theme);}
+    .ef-brdl1-theme{@include brd-left(1px, solid, $cl-theme);}
+    .ef-brdl2-theme{@include brd-left(2px, solid, $cl-theme);}
+    .ef-brdl3-theme{@include brd-left(3px, solid, $cl-theme);}
+    //border red(th,td)
+    .ef-brd1-red{@include brd(1px, solid, $cl-red);}
+    .ef-brd2-red{@include brd(2px, solid, $cl-red);}
+    .ef-brd3-red{@include brd(3px, solid, $cl-red);}
+    .ef-brdt1-red{@include brd-top(1px, solid, $cl-red);}
+    .ef-brdt2-red{@include brd-top(2px, solid, $cl-red);}
+    .ef-brdt3-red{@include brd-top(3px, solid, $cl-red);}
+    .ef-brdr1-red{@include brd-right(1px, solid, $cl-red);}
+    .ef-brdr2-red{@include brd-right(2px, solid, $cl-red);}
+    .ef-brdr3-red{@include brd-right(3px, solid, $cl-red);}
+    .ef-brdb1-red{@include brd-bottom(1px, solid, $cl-red);}
+    .ef-brdb2-red{@include brd-bottom(2px, solid, $cl-red);}
+    .ef-brdb3-red{@include brd-bottom(3px, solid, $cl-red);}
+    .ef-brdl1-red{@include brd-left(1px, solid, $cl-red);}
+    .ef-brdl2-red{@include brd-left(2px, solid, $cl-red);}
+    .ef-brdl3-red{@include brd-left(3px, solid, $cl-red);}
     
     //border(tr > th,td)
     &.ef-brd1{th,td{@include brd(1px, solid, $cl-brd-base);}}
     &.ef-brd2{th,td{@include brd(2px, solid, $cl-brd-base);}}
     &.ef-brd3{th,td{@include brd(3px, solid, $cl-brd-base);}}
-    &.ef-brd1-top{th,td{@include brd-top(1px, solid, $cl-brd-base);}}
-    &.ef-brd2-top{th,td{@include brd-top(2px, solid, $cl-brd-base);}}
-    &.ef-brd3-top{th,td{@include brd-top(3px, solid, $cl-brd-base);}}
-    &.ef-brd1-right{th,td{@include brd-right(1px, solid, $cl-brd-base);}}
-    &.ef-brd2-right{th,td{@include brd-right(2px, solid, $cl-brd-base);}}
-    &.ef-brd3-right{th,td{@include brd-right(3px, solid, $cl-brd-base);}}
-    &.ef-brd1-bottom{th,td{@include brd-bottom(1px, solid, $cl-brd-base);}}
-    &.ef-brd2-bottom{th,td{@include brd-bottom(2px, solid, $cl-brd-base);}}
-    &.ef-brd3-bottom{th,td{@include brd-bottom(3px, solid, $cl-brd-base);}}
-    &.ef-brd1-left{th,td{@include brd-left(1px, solid, $cl-brd-base);}}
-    &.ef-brd2-left{th,td{@include brd-left(2px, solid, $cl-brd-base);}}
-    &.ef-brd3-left{th,td{@include brd-left(3px, solid, $cl-brd-base);}}
-
+    &.ef-brdt1{th,td{@include brd-top(1px, solid, $cl-brd-base);}}
+    &.ef-brdt2{th,td{@include brd-top(2px, solid, $cl-brd-base);}}
+    &.ef-brdt3{th,td{@include brd-top(3px, solid, $cl-brd-base);}}
+    &.ef-brdr1{th,td{@include brd-right(1px, solid, $cl-brd-base);}}
+    &.ef-brdr2{th,td{@include brd-right(2px, solid, $cl-brd-base);}}
+    &.ef-brdr3{th,td{@include brd-right(3px, solid, $cl-brd-base);}}
+    &.ef-brdb1{th,td{@include brd-bottom(1px, solid, $cl-brd-base);}}
+    &.ef-brdb2{th,td{@include brd-bottom(2px, solid, $cl-brd-base);}}
+    &.ef-brdb3{th,td{@include brd-bottom(3px, solid, $cl-brd-base);}}
+    &.ef-brdl1{th,td{@include brd-left(1px, solid, $cl-brd-base);}}
+    &.ef-brdl2{th,td{@include brd-left(2px, solid, $cl-brd-base);}}
+    &.ef-brdl3{th,td{@include brd-left(3px, solid, $cl-brd-base);}}
     //border theme(tr > th,td)
     &.ef-brd1-theme{th,td{@include brd(1px, solid, $cl-theme);}}
     &.ef-brd2-theme{th,td{@include brd(2px, solid, $cl-theme);}}
     &.ef-brd3-theme{th,td{@include brd(3px, solid, $cl-theme);}}
-    &.ef-brd1-top-theme{th,td{@include brd-top(1px, solid, $cl-theme);}}
-    &.ef-brd2-top-theme{th,td{@include brd-top(2px, solid, $cl-theme);}}
-    &.ef-brd3-top-theme{th,td{@include brd-top(3px, solid, $cl-theme);}}
-    &.ef-brd1-right-theme{th,td{@include brd-right(1px, solid, $cl-theme);}}
-    &.ef-brd2-right-theme{th,td{@include brd-right(2px, solid, $cl-theme);}}
-    &.ef-brd3-right-theme{th,td{@include brd-right(3px, solid, $cl-theme);}}
-    &.ef-brd1-bottom-theme{th,td{@include brd-bottom(1px, solid, $cl-theme);}}
-    &.ef-brd2-bottom-theme{th,td{@include brd-bottom(2px, solid, $cl-theme);}}
-    &.ef-brd3-bottom-theme{th,td{@include brd-bottom(3px, solid, $cl-theme);}}
-    &.ef-brd1-left-theme{th,td{@include brd-left(1px, solid, $cl-theme);}}
-    &.ef-brd2-left-theme{th,td{@include brd-left(2px, solid, $cl-theme);}}
-    &.ef-brd3-left-theme{th,td{@include brd-left(3px, solid, $cl-theme);}}
+    &.ef-brdt1-theme{th,td{@include brd-top(1px, solid, $cl-theme);}}
+    &.ef-brdt2-theme{th,td{@include brd-top(2px, solid, $cl-theme);}}
+    &.ef-brdt3-theme{th,td{@include brd-top(3px, solid, $cl-theme);}}
+    &.ef-brdr1-theme{th,td{@include brd-right(1px, solid, $cl-theme);}}
+    &.ef-brdr2-theme{th,td{@include brd-right(2px, solid, $cl-theme);}}
+    &.ef-brdr3-theme{th,td{@include brd-right(3px, solid, $cl-theme);}}
+    &.ef-brdb1-theme{th,td{@include brd-bottom(1px, solid, $cl-theme);}}
+    &.ef-brdb2-theme{th,td{@include brd-bottom(2px, solid, $cl-theme);}}
+    &.ef-brdb3-theme{th,td{@include brd-bottom(3px, solid, $cl-theme);}}
+    &.ef-brdl1-theme{th,td{@include brd-left(1px, solid, $cl-theme);}}
+    &.ef-brdl2-theme{th,td{@include brd-left(2px, solid, $cl-theme);}}
+    &.ef-brdl3-theme{th,td{@include brd-left(3px, solid, $cl-theme);}}
     //border red(tr > th,td)
     &.ef-brd1-red{th,td{@include brd(1px, solid, $cl-red);}}
     &.ef-brd2-red{th,td{@include brd(2px, solid, $cl-red);}}
     &.ef-brd3-red{th,td{@include brd(3px, solid, $cl-red);}}
-    &.ef-brd1-top-red{th,td{@include brd-top(1px, solid, $cl-red);}}
-    &.ef-brd2-top-red{th,td{@include brd-top(2px, solid, $cl-red);}}
-    &.ef-brd3-top-red{th,td{@include brd-top(3px, solid, $cl-red);}}
-    &.ef-brd1-right-red{th,td{@include brd-right(1px, solid, $cl-red);}}
-    &.ef-brd2-right-red{th,td{@include brd-right(2px, solid, $cl-red);}}
-    &.ef-brd3-right-red{th,td{@include brd-right(3px, solid, $cl-red);}}
-    &.ef-brd1-bottom-red{th,td{@include brd-bottom(1px, solid, $cl-red);}}
-    &.ef-brd2-bottom-red{th,td{@include brd-bottom(2px, solid, $cl-red);}}
-    &.ef-brd3-bottom-red{th,td{@include brd-bottom(3px, solid, $cl-red);}}
-    &.ef-brd1-left-red{th,td{@include brd-left(1px, solid, $cl-red);}}
-    &.ef-brd2-left-red{th,td{@include brd-left(2px, solid, $cl-red);}}
-    &.ef-brd3-left-red{th,td{@include brd-left(3px, solid, $cl-red);}}
-
-    //border dotted(th,td)
-    .ef-brd1-dotted{@include brd(1px, dotted, $cl-brd-base);}
-    .ef-brd2-dotted{@include brd(2px, dotted, $cl-brd-base);}
-    .ef-brd3-dotted{@include brd(3px, dotted, $cl-brd-base);}
-    .ef-brd1-top-dotted{@include brd-top(1px, dotted, $cl-brd-base);}
-    .ef-brd2-top-dotted{@include brd-top(2px, dotted, $cl-brd-base);}
-    .ef-brd3-top-dotted{@include brd-top(3px, dotted, $cl-brd-base);}
-    .ef-brd1-right-dotted{@include brd-right(1px, dotted, $cl-brd-base);}
-    .ef-brd2-right-dotted{@include brd-right(2px, dotted, $cl-brd-base);}
-    .ef-brd3-right-dotted{@include brd-right(3px, dotted, $cl-brd-base);}
-    .ef-brd1-bottom-dotted{@include brd-bottom(1px, dotted, $cl-brd-base);}
-    .ef-brd2-bottom-dotted{@include brd-bottom(2px, dotted, $cl-brd-base);}
-    .ef-brd3-bottom-dotted{@include brd-bottom(3px, dotted, $cl-brd-base);}
-    .ef-brd1-left-dotted{@include brd-left(1px, dotted, $cl-brd-base);}
-    .ef-brd2-left-dotted{@include brd-left(2px, dotted, $cl-brd-base);}
-    .ef-brd3-left-dotted{@include brd-left(3px, dotted, $cl-brd-base);}
-    //border dotted(tr > th,td)
-    &.ef-brd1-dotted{th,td{@include brd(1px, dotted, $cl-brd-base);}}
-    &.ef-brd2-dotted{th,td{@include brd(2px, dotted, $cl-brd-base);}}
-    &.ef-brd3-dotted{th,td{@include brd(3px, dotted, $cl-brd-base);}}
-    &.ef-brd1-top-dotted{th,td{@include brd-top(1px, dotted, $cl-brd-base);}}
-    &.ef-brd2-top-dotted{th,td{@include brd-top(2px, dotted, $cl-brd-base);}}
-    &.ef-brd3-top-dotted{th,td{@include brd-top(3px, dotted, $cl-brd-base);}}
-    &.ef-brd0-right-dotted{th,td{@include brd-right(0, $cl-brd-base);}}
-    &.ef-brd1-right-dotted{th,td{@include brd-right(1px, dotted, $cl-brd-base);}}
-    &.ef-brd2-right-dotted{th,td{@include brd-right(2px, dotted, $cl-brd-base);}}
-    &.ef-brd3-right-dotted{th,td{@include brd-right(3px, dotted, $cl-brd-base);}}
-    &.ef-brd1-bottom-dotted{th,td{@include brd-bottom(1px, dotted, $cl-brd-base);}}
-    &.ef-brd2-bottom-dotted{th,td{@include brd-bottom(2px, dotted, $cl-brd-base);}}
-    &.ef-brd3-bottom-dotted{th,td{@include brd-bottom(3px, dotted, $cl-brd-base);}}
-    &.ef-brd1-left-dotted{th,td{@include brd-left(1px, dotted, $cl-brd-base);}}
-    &.ef-brd2-left-dotted{th,td{@include brd-left(2px, dotted, $cl-brd-base);}}
-    &.ef-brd3-left-dotted{th,td{@include brd-left(3px, dotted, $cl-brd-base);}}
-
-    //boder dotted theme(th,td)
-    .ef-brd1-dotted-theme{@include brd(1px, dotted, $cl-theme);}
-    .ef-brd2-dotted-theme{@include brd(2px, dotted, $cl-theme);}
-    .ef-brd3-dotted-theme{@include brd(3px, dotted, $cl-theme);}
-    .ef-brd1-top-dotted-theme{@include brd-top(1px, dotted, $cl-theme);}
-    .ef-brd2-top-dotted-theme{@include brd-top(2px, dotted, $cl-theme);}
-    .ef-brd3-top-dotted-theme{@include brd-top(3px, dotted, $cl-theme);}
-    .ef-brd1-right-dotted-theme{@include brd-right(1px, dotted, $cl-theme);}
-    .ef-brd2-right-dotted-theme{@include brd-right(2px, dotted, $cl-theme);}
-    .ef-brd3-right-dotted-theme{@include brd-right(3px, dotted, $cl-theme);}
-    .ef-brd1-bottom-dotted-theme{@include brd-bottom(1px, dotted, $cl-theme);}
-    .ef-brd2-bottom-dotted-theme{@include brd-bottom(2px, dotted, $cl-theme);}
-    .ef-brd3-bottom-dotted-theme{@include brd-bottom(3px, dotted, $cl-theme);}
-    .ef-brd1-left-dotted-theme{@include brd-left(1px, dotted, $cl-theme);}
-    .ef-brd2-left-dotted-theme{@include brd-left(2px, dotted, $cl-theme);}
-    .ef-brd3-left-dotted-theme{@include brd-left(3px, dotted, $cl-theme);}
-    //border dotted theme(tr > th,td)
-    &.ef-brd1-dotted-theme{th,td{@include brd(1px, dotted, $cl-theme);}}
-    &.ef-brd2-dotted-theme{th,td{@include brd(2px, dotted, $cl-theme);}}
-    &.ef-brd3-dotted-theme{th,td{@include brd(3px, dotted, $cl-theme);}}
-    &.ef-brd1-top-dotted-theme{th,td{@include brd-top(1px, dotted, $cl-theme);}}
-    &.ef-brd2-top-dotted-theme{th,td{@include brd-top(2px, dotted, $cl-theme);}}
-    &.ef-brd3-top-dotted-theme{th,td{@include brd-top(3px, dotted, $cl-theme);}}
-    &.ef-brd1-right-dotted-theme{th,td{@include brd-right(1px, dotted, $cl-theme);}}
-    &.ef-brd2-right-dotted-theme{th,td{@include brd-right(2px, dotted, $cl-theme);}}
-    &.ef-brd3-right-dotted-theme{th,td{@include brd-right(3px, dotted, $cl-theme);}}
-    &.ef-brd1-bottom-dotted-theme{th,td{@include brd-bottom(1px, dotted, $cl-theme);}}
-    &.ef-brd2-bottom-dotted-theme{th,td{@include brd-bottom(2px, dotted, $cl-theme);}}
-    &.ef-brd3-bottom-dotted-theme{th,td{@include brd-bottom(3px, dotted, $cl-theme);}}
-    &.ef-brd1-left-dotted-theme{th,td{@include brd-left(1px, dotted, $cl-theme);}}
-    &.ef-brd2-left-dotted-theme{th,td{@include brd-left(2px, dotted, $cl-theme);}}
-    &.ef-brd3-left-dotted-theme{th,td{@include brd-left(3px, dotted, $cl-theme);}}
-
-    //border dotted red(th,td)
-    .ef-brd1-dotted-red{@include brd(1px, dotted, $cl-red);}
-    .ef-brd2-dotted-red{@include brd(2px, dotted, $cl-red);}
-    .ef-brd3-dotted-red{@include brd(3px, dotted, $cl-red);}
-    .ef-brd1-top-dotted-red{@include brd-top(1px, dotted, $cl-red);}
-    .ef-brd2-top-dotted-red{@include brd-top(2px, dotted, $cl-red);}
-    .ef-brd3-top-dotted-red{@include brd-top(3px, dotted, $cl-red);}
-    .ef-brd1-right-dotted-red{@include brd-right(1px, dotted, $cl-red);}
-    .ef-brd2-right-dotted-red{@include brd-right(2px, dotted, $cl-red);}
-    .ef-brd3-right-dotted-red{@include brd-right(3px, dotted, $cl-red);}
-    .ef-brd1-bottom-dotted-red{@include brd-bottom(1px, dotted, $cl-red);}
-    .ef-brd2-bottom-dotted-red{@include brd-bottom(2px, dotted, $cl-red);}
-    .ef-brd3-bottom-dotted-red{@include brd-bottom(3px, dotted, $cl-red);}
-    .ef-brd1-left-dotted-red{@include brd-left(1px, dotted, $cl-red);}
-    .ef-brd2-left-dotted-red{@include brd-left(2px, dotted, $cl-red);}
-    .ef-brd3-left-dotted-red{@include brd-left(3px, dotted, $cl-red);}
-    //border dotted red(tr > th,td)
-    &.ef-brd1-dotted-red{th,td{@include brd(1px, dotted, $cl-red);}}
-    &.ef-brd2-dotted-red{th,td{@include brd(2px, dotted, $cl-red);}}
-    &.ef-brd3-dotted-red{th,td{@include brd(3px, dotted, $cl-red);}}
-    &.ef-brd1-top-dotted-red{th,td{@include brd-top(1px, dotted, $cl-red);}}
-    &.ef-brd2-top-dotted-red{th,td{@include brd-top(2px, dotted, $cl-red);}}
-    &.ef-brd3-top-dotted-red{th,td{@include brd-top(3px, dotted, $cl-red);}}
-    &.ef-brd1-right-dotted-red{th,td{@include brd-right(1px, dotted, $cl-red);}}
-    &.ef-brd2-right-dotted-red{th,td{@include brd-right(2px, dotted, $cl-red);}}
-    &.ef-brd3-right-dotted-red{th,td{@include brd-right(3px, dotted, $cl-red);}}
-    &.ef-brd1-bottom-dotted-red{th,td{@include brd-bottom(1px, dotted, $cl-red);}}
-    &.ef-brd2-bottom-dotted-red{th,td{@include brd-bottom(2px, dotted, $cl-red);}}
-    &.ef-brd3-bottom-dotted-red{th,td{@include brd-bottom(3px, dotted, $cl-red);}}
-    &.ef-brd1-left-dotted-red{th,td{@include brd-left(1px, dotted, $cl-red);}}
-    &.ef-brd2-left-dotted-red{th,td{@include brd-left(2px, dotted, $cl-red);}}
-    &.ef-brd3-left-dotted-red{th,td{@include brd-left(3px, dotted, $cl-red);}}
-
-    //ダborder dashed(th,td)
-    .ef-brd1-dashed{@include brd(1px, dashed, $cl-brd-base);}
-    .ef-brd2-dashed{@include brd(2px, dashed, $cl-brd-base);}
-    .ef-brd3-dashed{@include brd(3px, dashed, $cl-brd-base);}
-    .ef-brd1-top-dashed{@include brd-top(1px, dashed, $cl-brd-base);}
-    .ef-brd2-top-dashed{@include brd-top(2px, dashed, $cl-brd-base);}
-    .ef-brd3-top-dashed{@include brd-top(3px, dashed, $cl-brd-base);}
-    .ef-brd1-right-dashed{@include brd-right(1px, dashed, $cl-brd-base);}
-    .ef-brd2-right-dashed{@include brd-right(2px, dashed, $cl-brd-base);}
-    .ef-brd3-right-dashed{@include brd-right(3px, dashed, $cl-brd-base);}
-    .ef-brd1-bottom-dashed{@include brd-bottom(1px, dashed, $cl-brd-base);}
-    .ef-brd2-bottom-dashed{@include brd-bottom(2px, dashed, $cl-brd-base);}
-    .ef-brd3-bottom-dashed{@include brd-bottom(3px, dashed, $cl-brd-base);}
-    .ef-brd1-left-dashed{@include brd-left(1px, dashed, $cl-brd-base);}
-    .ef-brd2-left-dashed{@include brd-left(2px, dashed, $cl-brd-base);}
-    .ef-brd3-left-dashed{@include brd-left(3px, dashed, $cl-brd-base);}
-    //border dashed (tr > th,td)
-    &.ef-brd1-dashed{th,td{@include brd(1px, dashed, $cl-brd-base);}}
-    &.ef-brd2-dashed{th,td{@include brd(2px, dashed, $cl-brd-base);}}
-    &.ef-brd3-dashed{th,td{@include brd(3px, dashed, $cl-brd-base);}}
-    &.ef-brd1-top-dashed{th,td{@include brd-top(1px, dashed, $cl-brd-base);}}
-    &.ef-brd2-top-dashed{th,td{@include brd-top(2px, dashed, $cl-brd-base);}}
-    &.ef-brd3-top-dashed{th,td{@include brd-top(3px, dashed, $cl-brd-base);}}
-    &.ef-brd0-right-dashed{th,td{@include brd-right(0, $cl-brd-base);}}
-    &.ef-brd1-right-dashed{th,td{@include brd-right(1px, dashed, $cl-brd-base);}}
-    &.ef-brd2-right-dashed{th,td{@include brd-right(2px, dashed, $cl-brd-base);}}
-    &.ef-brd3-right-dashed{th,td{@include brd-right(3px, dashed, $cl-brd-base);}}
-    &.ef-brd1-bottom-dashed{th,td{@include brd-bottom(1px, dashed, $cl-brd-base);}}
-    &.ef-brd2-bottom-dashed{th,td{@include brd-bottom(2px, dashed, $cl-brd-base);}}
-    &.ef-brd3-bottom-dashed{th,td{@include brd-bottom(3px, dashed, $cl-brd-base);}}
-    &.ef-brd1-left-dashed{th,td{@include brd-left(1px, dashed, $cl-brd-base);}}
-    &.ef-brd2-left-dashed{th,td{@include brd-left(2px, dashed, $cl-brd-base);}}
-    &.ef-brd3-left-dashed{th,td{@include brd-left(3px, dashed, $cl-brd-base);}}
-
-    //border dashed theme(th,td)
-    .ef-brd1-dashed-theme{@include brd(1px, dashed, $cl-theme);}
-    .ef-brd2-dashed-theme{@include brd(2px, dashed, $cl-theme);}
-    .ef-brd3-dashed-theme{@include brd(3px, dashed, $cl-theme);}
-    .ef-brd1-top-dashed-theme{@include brd-top(1px, dashed, $cl-theme);}
-    .ef-brd2-top-dashed-theme{@include brd-top(2px, dashed, $cl-theme);}
-    .ef-brd3-top-dashed-theme{@include brd-top(3px, dashed, $cl-theme);}
-    .ef-brd1-right-dashed-theme{@include brd-right(1px, dashed, $cl-theme);}
-    .ef-brd2-right-dashed-theme{@include brd-right(2px, dashed, $cl-theme);}
-    .ef-brd3-right-dashed-theme{@include brd-right(3px, dashed, $cl-theme);}
-    .ef-brd1-bottom-dashed-theme{@include brd-bottom(1px, dashed, $cl-theme);}
-    .ef-brd2-bottom-dashed-theme{@include brd-bottom(2px, dashed, $cl-theme);}
-    .ef-brd3-bottom-dashed-theme{@include brd-bottom(3px, dashed, $cl-theme);}
-    .ef-brd1-left-dashed-theme{@include brd-left(1px, dashed, $cl-theme);}
-    .ef-brd2-left-dashed-theme{@include brd-left(2px, dashed, $cl-theme);}
-    .ef-brd3-left-dashed-theme{@include brd-left(3px, dashed, $cl-theme);}
-
-    //border dashed theme(tr > th,td)
-    &.ef-brd1-dashed-theme{th,td{@include brd(1px, dashed, $cl-theme);}}
-    &.ef-brd2-dashed-theme{th,td{@include brd(2px, dashed, $cl-theme);}}
-    &.ef-brd3-dashed-theme{th,td{@include brd(3px, dashed, $cl-theme);}}
-    &.ef-brd1-top-dashed-theme{th,td{@include brd-top(1px, dashed, $cl-theme);}}
-    &.ef-brd2-top-dashed-theme{th,td{@include brd-top(2px, dashed, $cl-theme);}}
-    &.ef-brd3-top-dashed-theme{th,td{@include brd-top(3px, dashed, $cl-theme);}}
-    &.ef-brd1-right-dashed-theme{th,td{@include brd-right(1px, dashed, $cl-theme);}}
-    &.ef-brd2-right-dashed-theme{th,td{@include brd-right(2px, dashed, $cl-theme);}}
-    &.ef-brd3-right-dashed-theme{th,td{@include brd-right(3px, dashed, $cl-theme);}}
-    &.ef-brd1-bottom-dashed-theme{th,td{@include brd-bottom(1px, dashed, $cl-theme);}}
-    &.ef-brd2-bottom-dashed-theme{th,td{@include brd-bottom(2px, dashed, $cl-theme);}}
-    &.ef-brd3-bottom-dashed-theme{th,td{@include brd-bottom(3px, dashed, $cl-theme);}}
-    &.ef-brd1-left-dashed-theme{th,td{@include brd-left(1px, dashed, $cl-theme);}}
-    &.ef-brd2-left-dashed-theme{th,td{@include brd-left(2px, dashed, $cl-theme);}}
-    &.ef-brd3-left-dashed-theme{th,td{@include brd-left(3px, dashed, $cl-theme);}}
-
-    //border dashed red(th,td)
-    .ef-brd1-dashed-red{@include brd(1px, dashed, $cl-red);}
-    .ef-brd2-dashed-red{@include brd(2px, dashed, $cl-red);}
-    .ef-brd3-dashed-red{@include brd(3px, dashed, $cl-red);}
-    .ef-brd1-top-dashed-red{@include brd-top(1px, dashed, $cl-red);}
-    .ef-brd2-top-dashed-red{@include brd-top(2px, dashed, $cl-red);}
-    .ef-brd3-top-dashed-red{@include brd-top(3px, dashed, $cl-red);}
-    .ef-brd1-right-dashed-red{@include brd-right(1px, dashed, $cl-red);}
-    .ef-brd2-right-dashed-red{@include brd-right(2px, dashed, $cl-red);}
-    .ef-brd3-right-dashed-red{@include brd-right(3px, dashed, $cl-red);}
-    .ef-brd1-bottom-dashed-red{@include brd-bottom(1px, dashed, $cl-red);}
-    .ef-brd2-bottom-dashed-red{@include brd-bottom(2px, dashed, $cl-red);}
-    .ef-brd3-bottom-dashed-red{@include brd-bottom(3px, dashed, $cl-red);}
-    .ef-brd1-left-dashed-red{@include brd-left(1px, dashed, $cl-red);}
-    .ef-brd2-left-dashed-red{@include brd-left(2px, dashed, $cl-red);}
-    .ef-brd3-left-dashed-red{@include brd-left(3px, dashed, $cl-red);}
-    //border dashed red(tr > th,td)
-    &.ef-brd1-dashed-red{th,td{@include brd(1px, dashed, $cl-red);}}
-    &.ef-brd2-dashed-red{th,td{@include brd(2px, dashed, $cl-red);}}
-    &.ef-brd3-dashed-red{th,td{@include brd(3px, dashed, $cl-red);}}
-    &.ef-brd1-top-dashed-red{th,td{@include brd-top(1px, dashed, $cl-red);}}
-    &.ef-brd2-top-dashed-red{th,td{@include brd-top(2px, dashed, $cl-red);}}
-    &.ef-brd3-top-dashed-red{th,td{@include brd-top(3px, dashed, $cl-red);}}
-    &.ef-brd1-right-dashed-red{th,td{@include brd-right(1px, dashed, $cl-red);}}
-    &.ef-brd2-right-dashed-red{th,td{@include brd-right(2px, dashed, $cl-red);}}
-    &.ef-brd3-right-dashed-red{th,td{@include brd-right(3px, dashed, $cl-red);}}
-    &.ef-brd1-bottom-dashed-red{th,td{@include brd-bottom(1px, dashed, $cl-red);}}
-    &.ef-brd2-bottom-dashed-red{th,td{@include brd-bottom(2px, dashed, $cl-red);}}
-    &.ef-brd3-bottom-dashed-red{th,td{@include brd-bottom(3px, dashed, $cl-red);}}
-    &.ef-brd1-left-dashed-red{th,td{@include brd-left(1px, dashed, $cl-red);}}
-    &.ef-brd2-left-dashed-red{th,td{@include brd-left(2px, dashed, $cl-red);}}
-    &.ef-brd3-left-dashed-red{th,td{@include brd-left(3px, dashed, $cl-red);}}
+    &.ef-brdt1-red{th,td{@include brd-top(1px, solid, $cl-red);}}
+    &.ef-brdt2-red{th,td{@include brd-top(2px, solid, $cl-red);}}
+    &.ef-brdt3-red{th,td{@include brd-top(3px, solid, $cl-red);}}
+    &.ef-brdr1-red{th,td{@include brd-right(1px, solid, $cl-red);}}
+    &.ef-brdr2-red{th,td{@include brd-right(2px, solid, $cl-red);}}
+    &.ef-brdr3-red{th,td{@include brd-right(3px, solid, $cl-red);}}
+    &.ef-brdb1-red{th,td{@include brd-bottom(1px, solid, $cl-red);}}
+    &.ef-brdb2-red{th,td{@include brd-bottom(2px, solid, $cl-red);}}
+    &.ef-brdb3-red{th,td{@include brd-bottom(3px, solid, $cl-red);}}
+    &.ef-brdl1-red{th,td{@include brd-left(1px, solid, $cl-red);}}
+    &.ef-brdl2-red{th,td{@include brd-left(2px, solid, $cl-red);}}
+    &.ef-brdl3-red{th,td{@include brd-left(3px, solid, $cl-red);}}
+    //clear border
+    .ef-brd0{border:none;}
+    .ef-brdt0{border-top:none;}
+    .ef-brdr0{border-right:none;}
+    .ef-brdb0{border-bottom:none;}
+    .ef-brdl0{border-left:none;}
+    &.ef-brd0{th,td{border:none;}}
+    &.ef-brdt0{th,td{border-top:none;}}
+    &.ef-brdr0{th,td{border-right:none;}}
+    &.ef-brdb0{th,td{border-bottom:none;}}
+    &.ef-brdl0{th,td{border-left:none;}}
   }
 }
 /*
@@ -570,15 +440,19 @@ table.md-table-base{
  */
 .md-message{
   >.st-body{
-    &.is-current{display:block;}
+    position:relative;
     display:none;
-    >.st-inner{
-      @include brd(1px,solid,$cl-theme);
-      padding:10px 15px;
+    .st-inner{
+      padding:10px 20px 10px 15px;
       @include border-radius(3px);
       @include box-shadow(rgba($cl-brd-base, 0.3) 1px 2px 5px);
       i{font-size:$fs-h5;}
     }
+    .md-message-close{
+      &:hover{@include opacity(0.8);}
+      @include posi-abs(6px,3px,auto,auto);
+    }
+    &.is-open{display:block;}
     &.md-message-alert{
       >.st-inner{
         @include brd(1px,solid,$cl-red);
@@ -619,35 +493,47 @@ table.md-table-base{
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .md-toast{
-  .st-body{
-    @include posi-fix(0,20%,auto,20%);
+  @include posi-fix(0,auto,auto,50%);
+  >.st-body{
+    position:relative;
+    display:none;
     .st-inner{
-      &.current{display:block;}
-      display:none;
-      @include brd(1px,solid,$cl-theme);
-      padding:7px 10px;
+      padding:10px 20px 10px 15px;
       @include border-radius(3px);
       @include box-shadow(rgba($cl-brd-base, 0.3) 1px 2px 5px);
       i{font-size:$fs-h5;}
-      &.md-toast-alert{
+    }
+    .md-toast-close{
+      &:hover{@include opacity(0.8);}
+      @include posi-abs(6px,3px,auto,auto);
+    }
+    &.is-open{display:block;}
+    &.md-toast-alert{
+      >.st-inner{
         @include brd(1px,solid,$cl-red);
         background: $cl-bg-alert;
         color:$cl-red;
         i{color:$cl-red;}
       }
-      &.md-toast-success{
+    }
+    &.md-toast-success{
+      >.st-inner{
         @include brd(1px,solid,$cl-success);
         background: $cl-bg-success;
         color:$cl-success;
         i{color:$cl-success;}
       }
-      &.md-toast-info{
+    }
+    &.md-toast-info{
+      >.st-inner{
         @include brd(1px,solid,$cl-info);
         background: $cl-bg-info;
         color:$cl-info;
         i{color:$cl-info;}
       }
-      &.md-toast-warning{
+    }
+    &.md-toast-warning{
+      >.st-inner{
         @include brd(1px,solid,$cl-warning);
         background: $cl-bg-warning;
         color:$cl-warning;
@@ -662,68 +548,234 @@ table.md-table-base{
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .md-pagination{
-  ul.cp-float{
-    li{
-      border:1px solid $cl-brd-base;
-      @include border-radius(3px);
-      padding:3px 1px;
+  >ul{
+    >li{
+      >a{
+        text-align:center;
+        padding:4px 10px;
+        line-height:$lh-btn;
+        display: inline-block;
+        white-space: nowrap;
+        vertical-align: middle;
+        text-decoration:none;
+        outline:none;
+        color:$cl-txt-link;
+        background:$cl-bg-white;
+        i{color:$cl-txt-link;}
+        @include brd(1px,solid,$cl-brd-base);
+        @include border-radius(3px);
+       }
     }
-  }
-}
-.md-paging-btn{
-  .st-body{
-    @include posi-abs(-18px,30px,auto,auto);
-    margin-left:-32px;
-    .st-inner{
-      >ul{
-        >li{
-          @include min-width(0);
-          a{
-            width:36px;
-            height:36px;
-            display:block;
-            @include brd;
-            @include border-radius(18px);
-            @include box-shadow(rgba($cl-brd-base, 0.3) 1px 0 3px);
-            text-align:center;
-            background:$cl-white;
-            line-height:36px;
-            i{font-size:$fs-h4;}
-            &:hover{
-              background:$cl-theme1-lighten;
-            }
-          }
-          &.is-disabled{
-            @include opacity(1);
-            a{
-              background:$cl-gray2;
-              color:#aaa;
-              @include box-shadow(none);
-              i{color:#aaa;}
-            }
-          }
-        }
+    >li.is-current{
+      >a{cursor:default;}
+    }
+    >li.is-disable{
+      >a{
+        cursor:default;
+        color:$cl-txt-base;
+        i{color:$cl-txt-base;}
+      }
+      >a:hover{
+        cursor: not-allowed;
+        background:$cl-bg-white;
       }
     }
   }
 }
-.md-paging-btn-bottom{
-  @extend .md-paging-btn;
-  .st-body{
-    @include posi-abs(auto,30px,-18px,auto);
+.md-pagination-white{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-gray;
+    @include brd(1px,solid,$cl-gray);
   }
+  >ul>li>a:hover{background:$cl-bg-gray;}
+}
+.md-pagination-red{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-red;
+    @include brd(1px,solid,$cl-red);
+  }
+  >ul>li>a:hover{background:$cl-bg-red;}
+}
+.md-pagination-orange{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-orange;
+    @include brd(1px,solid,$cl-orange);
+  }
+  >ul>li>a:hover{background:$cl-bg-orange;}
+}
+.md-pagination-blue{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-blue;
+    @include brd(1px,solid,$cl-blue);
+  }
+  >ul>li>a:hover{background:$cl-bg-blue;}
+}
+.md-pagination-green{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-green;
+    @include brd(1px,solid,$cl-green);
+  }
+  >ul>li>a:hover{background:$cl-bg-green;}
+}
+.md-pagination-yellow{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-yellow;
+    @include brd(1px,solid,$cl-yellow);
+  }
+  >ul>li>a:hover{background:$cl-bg-yellow;}
+}
+.md-pagination-brown{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-brown;
+    @include brd(1px,solid,$cl-brown);
+  }
+  >ul>li>a:hover{background:$cl-bg-brown;}
+}
+.md-pagination-black{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-black;
+    @include brd(1px,solid,$cl-black);
+  }
+  >ul>li>a:hover{background:$cl-bg-black;}
+}
+.md-pagination-gray{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-gray;
+    @include brd(1px,solid,$cl-gray);
+  }
+  >ul>li>a:hover{background:$cl-bg-gray;}
+}
+.md-pagination-gray1{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-gray1;
+    @include brd(1px,solid,$cl-gray1);
+  }
+  >ul>li>a:hover{background:$cl-bg-gray1;}
+}
+.md-pagination-gray1{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-gray1;
+    @include brd(1px,solid,$cl-gray1);
+  }
+  >ul>li>a:hover{background:$cl-bg-gray1;}
+}
+.md-pagination-gray2{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-gray2;
+    @include brd(1px,solid,$cl-gray2);
+  }
+  >ul>li>a:hover{background:$cl-bg-gray2;}
+}
+.md-pagination-gray3{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-gray3;
+    @include brd(1px,solid,$cl-gray3);
+  }
+  >ul>li>a:hover{background:$cl-bg-gray3;}
+}
+.md-pagination-gray4{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-gray4;
+    @include brd(1px,solid,$cl-gray4);
+  }
+  >ul>li>a:hover{background:$cl-bg-gray4;}
+}
+.md-pagination-gray5{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-gray5;
+    @include brd(1px,solid,$cl-gray5);
+  }
+  >ul>li>a:hover{background:$cl-bg-gray5;}
+}
+.md-pagination-gray6{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-gray6;
+    @include brd(1px,solid,$cl-gray6);
+  }
+  >ul>li>a:hover{background:$cl-bg-gray6;}
+}
+.md-pagination-gray7{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-gray7;
+    @include brd(1px,solid,$cl-gray7);
+  }
+  >ul>li>a:hover{background:$cl-bg-gray7;}
+}
+.md-pagination-theme{
+  @extend .md-pagination;
+  >ul>li.is-current>a:hover,
+  >ul>li.is-current>a{
+    color:$cl-txt-white;
+    background:$cl-theme;
+    @include brd(1px,solid,$cl-theme);
+  }
+  >ul>li>a:hover{background:$cl-bg-theme;}
 }
 
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "loading"
+ * "loader"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .md-loader{
   .st-body{
     @include posi-fix(50%,0,0,50%);
+    z-index:1;
     .st-inner{
       @include box-shadow-base;
+      @include border-radius(5px);
+      background:#fff;
       width:180px;
       margin-left:-90px;
       margin-top:-90px;
@@ -732,31 +784,112 @@ table.md-table-base{
     }
   }
 }
+.md-loader-abs{
+  .st-body{
+    @include posi-abs(0,auto,auto,0);
+    z-index:1;
+  }
+}
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "collapse"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
-.md-collapse-horizontal{
-  .st-inner{
-    @include brd-top(1px,dotted,$cl-brd-base);
-    .md-collapse-switch-box{
-      @include border-bottom-radius(5px);
-      background:$cl-bg-gray2;
-      display:inline-block;
-      @include min-width(50px);
-      &:hover{
-        background:$cl-bg-gray;
+// .md-collapse-horizontal{
+//   .st-inner{
+//     @include brd-top(1px,dotted,$cl-brd-base);
+//     .md-collapse-switch-box{
+//       @include border-bottom-radius(5px);
+//       background:$cl-bg-gray2;
+//       display:inline-block;
+//       @include min-width(50px);
+//       &:hover{
+//         background:$cl-bg-gray;
+//       }
+//     }
+//   }
+// }
+
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "nav"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ *
+ * =============================================================
+ ▼ nav-main
+============================================================== */
+ .md-nav-main{
+  padding:10px;
+  @include border-radius(5px);
+  @include brd;
+  background:$cl-bg-nav;
+  i,a{color:$cl-txt-base;}
+  ul{
+    display:block;
+    li{
+      a{
+        padding:0 10px;
+        display:block;
+        &:hover{
+          background:$cl-bg-nav-hover;
+        }
+      }
+      &.is-current{
+        >a{
+          background:$cl-bg-nav-current;
+        }
       }
     }
   }
 }
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "navblock"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-.md-navblock{
+.md-nav-main{
+  >.st-inner{
+    >ul{
+      >li{
+        >ul{
+          max-height:300px;
+          overflow: auto;
+        }
+      }
+    }
+  }
+}
+/* =============================================================
+ ▼ nav-slide
+============================================================== */
+.md-nav-slide{
+  .st-inner{
+    padding:10px 0;
+    @include brd-bottom;
+    background:$cl-bg-nav;
+    i,a{color:$cl-txt-base;}
+    ul{
+      display:block;
+      li{
+        a{
+          padding:0 10px;
+          display:block;
+          font-size: 15px;
+          .cp-badge{color:$cl-white;}
+          &:hover{
+            background:$cl-bg-nav-hover;
+          }
+        }
+      }
+    }
+    .nav-category{
+      font-size:11px;
+      color:$cl-gray3;
+      margin-top:-5px;
+      margin-bottom:-10px;
+      padding:0 10px;
+    }
+  }
+}
+/* =============================================================
+ ▼ nav-block
+============================================================== */
+.md-nav-block{
   >.st-inner{
     >ul{
       >li{
@@ -774,7 +907,7 @@ table.md-table-base{
         }
         &.is-current{
           >a{
-            background:$cl-bg-theme;
+            background:$cl-theme;
             color:$cl-txt-rev;
             i{color:$cl-txt-rev;}
             cursor: default;
@@ -783,9 +916,25 @@ table.md-table-base{
       }
     }
   }
-  &.column2{>.st-inner{>ul{>li{width:50%;}}}}
-  &.column3{>.st-inner{>ul{>li{width:33.33%;}}}}
-  &.column4{>.st-inner{>ul{>li{width:25%;}}}}
+  &.is-col2{>.st-inner{>ul{>li{width:50%;}}}}
+  &.is-col3{>.st-inner{>ul{>li{width:33.33%;}}}}
+  &.is-col4{>.st-inner{>ul{>li{width:25%;}}}}
+  &.is-col5{>.st-inner{>ul{>li{width:20%;}}}}
+  &.is-col6{>.st-inner{>ul{>li{width:16.66%;}}}}
+  &.is-col7{>.st-inner{>ul{>li{width:14.28%;}}}}
+  &.is-col8{>.st-inner{>ul{>li{width:12.5%;}}}}
+  &.is-col9{>.st-inner{>ul{>li{width:11.11%;}}}}
+  &.is-col10{>.st-inner{>ul{>li{width:25%;}}}}
+}
+/* =============================================================
+ ▼ aside
+============================================================== */
+.md-aside-main{
+  >.st-body{
+    width:180px;
+    margin:20px;
+    margin-left:15px;
+  }
 }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■

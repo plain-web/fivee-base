@@ -7,7 +7,7 @@
   <!--<![endif]-->
   %head
     %meta(charset="utf-8")
-    %meta(name="description" content="CSSフレームワークはFivee-baseが便利です。豊富なパーツでアプリケーションやWebサイトを簡単に作る事ができます。")
+    %meta(name="description" content="CSSフレームワークはFivee-baseが便利です。豊富な機能とパーツでアプリケーションやWebサイトを簡単に作る事ができます。")
     %meta(name="keywords" content="css,フレームワーク,開発,html")
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
     %meta(content="widtlih=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport")
@@ -24,7 +24,7 @@
       .st-body.ef-header-fix.js-pageTop-remove
         .st-inner.ef-float
           .ef-float-left.ef-mgl-10.ef-mgr7.rs-bp2-show
-            %a.ef-w30.js-aside-open(href="#{v}")
+            %a.ef-w30.js-aside-main-open(href="#{v}")
               %ul.ef-float7
                 %li
                   %i.fa.fa-bars.ef-fs18.ef-lh30
@@ -50,7 +50,7 @@
                       %span.cp-badge-red
                         53
               %li
-                %a.js-popup-open.js-template1(href="#{v}")
+                %a.js-popup-open.js-tpl1(href="#{v}")
                   %ul.ef-float3
                     %li
                       %i.fa.fa-envelope
@@ -62,7 +62,7 @@
                     %li
                       %i.fa.fa-caret-down
               %li
-                %a.js-popup-open.js-template0(href="#{v}")
+                %a.js-popup-open.js-tpl0(href="#{v}")
                   %ul.ef-float3
                     %li
                       %img.prof(src="../img/myprof.png")
@@ -81,7 +81,7 @@
                       %span.cp-badge-red
                         53
               %li
-                %a.js-popup-open.js-template1(href="#{v}")
+                %a.js-popup-open.js-tpl1(href="#{v}")
                   %ul.ef-float3
                     %li
                       %i.fa.fa-envelope.ef-fs18
@@ -91,7 +91,7 @@
                       %span.cp-badge-red
                         2
               %li
-                %a.js-popup-open.js-template0(href="#{v}")
+                %a.js-popup-open.js-tpl0(href="#{v}")
                   %ul.ef-float3
                     %li
                       %img.prof(src="../img/myprof.png")
@@ -100,14 +100,14 @@
           .ef-float-right.rs-bp1-show
             %ul.ef-float20.ef-lh30
               %li
-                %a.js-slide-nav-open(href="#{v}")
+                %a.js-nav-slide-open(href="#{v}")
                   %ul.ef-float3
                     %li
                       %img.prof(src="../img/myprof.png")
                     %li
                       %i.fa.fa-caret-down
     / slide-nav//////////////////////////////////////////////
-    %section.slide-nav.rs-bp1-show.js-slide-nav
+    %section.md-nav-slide.rs-bp1-show.js-nav-slide
       .st-body
         .st-inner
           %ul.ef-lh40
@@ -120,21 +120,21 @@
                     %span.cp-badge-red
                       53
             %li
-              %a.js-popup-inset-open.js-template1(href="#{v}")
+              %a.js-popup-inset-open.js-tpl1(href="#{v}")
                 %ul.ef-float3
                   %li
                     Message
                   %li
                     %span.cp-badge-red
                       2
-                  %li.js-nav-caret
+                  %li.js-ic-arrow
                     %i.fa.fa-caret-down
             %li
               %a.js-collapse.js-collapse-0(href="#{v}")
                 %ul.ef-float3
                   %li
                     Your name
-                  %li.js-nav-caret
+                  %li.js-ic-arrow
                     %i.fa.fa-caret-down
               %ul.ef-txt-indent1.js-collapse-num0(style="display:none;")
                 %li
@@ -157,13 +157,13 @@
       .st-body
         .st-inner.ef-float
           // page-nav//////////////////////////////////////////////
-          %aside.page-nav.ef-float-left.js-aside
+          %aside.page-nav.md-aside-main.ef-float-left.js-aside-main
             .st-body
               .st-inner
                 // side-menu//////////////////////////////////////////////
-                %nav.md-main-nav
+                %nav.md-nav-main
                   .st-inner
-                    %ul.ef-lh28.js-nav
+                    %ul.ef-lh28.js-nav-main
                       %li
                         %a(href="index.html")
                           %ul.ef-float3
@@ -174,16 +174,16 @@
                       %li
                         .ef-fs11.ef-txt-gray6
                           Structure
-                      %li.js-nav-parent-num0
+                      %li.js-nav-main-parent0
                         %a(href="#{v}")
                           %ul.ef-float3
                             %li
                               %i.fa.fa-columns
                             %li
                               Structure
-                            %li.ef-float-right.js-nav-caret
+                            %li.ef-float-right.js-ic-arrow
                               %i.fa.fa-angle-down
-                        %ul.ef-txt-indent1.js-nav-child-num0(style="display:none;")
+                        %ul.ef-txt-indent1.js-nav-main-child0(style="display:none;")
                           %li
                             %a(href="../page-structure/layout.html")
                               %ul.ef-float3
@@ -197,16 +197,16 @@
                       %li
                         .ef-fs11.ef-txt-gray6
                           Components
-                      %li.js-nav-parent-num1
+                      %li.js-nav-main-parent1
                         %a(href="#{v}")
                           %ul.ef-float3
                             %li
                               %i.fa.fa-cubes
                             %li
                               Components
-                            %li.ef-float-right.js-nav-caret
+                            %li.ef-float-right.js-ic-arrow
                               %i.fa.fa-angle-up
-                        %ul.ef-txt-indent1.js-nav-child-num1(style="display:none;")
+                        %ul.ef-txt-indent1.js-nav-main-child1(style="display:none;")
                           %li
                             %a(href="../page-components/form.html")
                               %ul.ef-float3
@@ -290,16 +290,16 @@
                       %li
                         .ef-fs11.ef-txt-gray6
                           Effect
-                      %li.js-nav-parent-num2
+                      %li.js-nav-main-parent2
                         %a(href="#{v}")
                           %ul.ef-float3
                             %li
                               %i.fa.fa-code
                             %li
                               Effect Class
-                            %li.ef-float-right.js-nav-caret
+                            %li.ef-float-right.js-ic-arrow
                               %i.fa.fa-angle-down
-                        %ul.ef-txt-indent1.js-nav-child-num2(style="display:none")
+                        %ul.ef-txt-indent1.js-nav-main-child2(style="display:none")
                           %li.is-current
                             %a(href="../page-effect/float.html")
                               %ul.ef-float3
@@ -395,19 +395,24 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   rotate
+                          %li
+                            %a(href="../page-effect/shadow.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  shadow
                       %li
                         .ef-fs11.ef-txt-gray6
                           Module
-                      %li.js-nav-parent-num3
+                      %li.js-nav-main-parent3
                         %a(href="#{v}")
                           %ul.ef-float3
                             %li
                               %i.fa.fa-puzzle-piece
                             %li
                               Module
-                            %li.ef-float-right.js-nav-caret
+                            %li.ef-float-right.js-ic-arrow
                               %i.fa.fa-angle-up
-                        %ul.ef-txt-indent1.js-nav-child-num3(style="display:none")
+                        %ul.ef-txt-indent1.js-nav-main-child3(style="display:none")
                           %li
                             %a(href="../page-module/modal.html")
                               %ul.ef-float3
@@ -464,11 +469,6 @@
                                 %li.ef-mgl3
                                   collapse
                           %li
-                            %a(href="../page-module/all-check.html")
-                              %ul.ef-float3
-                                %li.ef-mgl3
-                                  all check
-                          %li
                             %a(href="../page-module/loader.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
@@ -477,7 +477,7 @@
                             %a(href="../page-module/image-viewer.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
-                                  image viewer
+                                  image-viewer
                           %li
                             %a(href="../page-module/folder.html")
                               %ul.ef-float3
@@ -489,28 +489,23 @@
                                 %li.ef-mgl3
                                   equalizer
                           %li
-                            %a(href="../page-module/placeholder.html")
+                            %a(href="../page-module/scroll-top.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
-                                  placeholder
-                          %li
-                            %a(href="../page-module/scrolltop.html")
-                              %ul.ef-float3
-                                %li.ef-mgl3
-                                  scrolltop
+                                  scroll-top
                       %li
                         .ef-fs11.ef-txt-gray6
                           State
-                      %li.js-nav-parent-num4
+                      %li.js-nav-main-parent4
                         %a(href="#{v}")
                           %ul.ef-float3
                             %li
                               %i.fa.fa-quote-left
                             %li
                               State Class
-                            %li.ef-float-right.js-nav-caret
+                            %li.ef-float-right.js-ic-arrow
                               %i.fa.fa-angle-down
-                        %ul.ef-txt-indent1.js-nav-child-num4(style="display:none")
+                        %ul.ef-txt-indent1.js-nav-main-child4(style="display:none")
                           %li
                             %a(href="../page-state/state-form.html")
                               %ul.ef-float3
@@ -573,10 +568,10 @@
                           %a.cp-btn-mini.cp-btn-white.ef-w30(href="index.html")
                             %i.fa.fa-home.ef-fs14
                         %li.ef-float-right
-                          %a.cp-btn-mini.cp-btn-white.ef-w30.js-popup-open.js-template2(href="#{v}")
+                          %a.cp-btn-mini.cp-btn-white.ef-w30.js-popup-open.js-tpl2(href="#{v}")
                             %i.fa.fa-link.ef-fs14
                         %li.ef-float-right
-                          %a.cp-btn-mini.cp-btn-white.ef-w30.js-bookmark-open.js-template3(href="#{v}")
+                          %a.cp-btn-mini.cp-btn-white.ef-w30.js-bookmark-open.js-tpl3(href="#{v}")
                             %i.fa.fa-star-o.ef-fs14
                 // panel//////////////////////////////////////////////
                 %section.cp-panel.ef-w100p
@@ -738,7 +733,8 @@
           Copyright © 2014 Jazzpoteto all rights reserved.
     /popup/////////////////////////////////////////////
     %section.md-popup.js-popup(style="display:none;")
-      .st-body.ef-posi-fix.js-template0
+      /popup contents type 'js-tpl0'
+      .st-body.ef-posi-fix.js-tpl0
         .st-inner
           .md-popup-body
             %ul.ef-list-hover-gray
@@ -751,7 +747,8 @@
               %li
                 %a(href="#{v}")
                   ログアウト
-      .st-body.ef-posi-fix.js-template1
+      /popup contents type 'js-tpl1'
+      .st-body.ef-posi-fix.js-tpl1
         .st-inner
           .md-popup-body.ef-mw250-ovf.ef-mh400-ovf
             %ul.ef-list-hover-gray
@@ -786,7 +783,8 @@
                       jazzpoteto
                     %dd.ef-txt-ellipsis
                       システム予約は15：00にセットされました。
-      .st-body.js-template2
+      /popup contents type 'js-tpl2'
+      .st-body.ef-mgt-40.js-tpl2
         .st-inner
           .md-popup-body
             %ul.ef-list-hover-gray
@@ -806,7 +804,8 @@
                   float-box
                   %span.ef-fs11
                     (media query)
-      .st-body.js-template3
+      /popup contents type 'js-tpl3'
+      .st-body.ef-mgt-40.js-tpl3
         .st-inner
           .md-popup-header.ef-mgb20
             %ul.ef-float
@@ -837,154 +836,9 @@
                 登録
               %a.cp-btn-mini.ef-w80.js-popup-close(href="#{v}")
                 キャンセル
-    /modal///////////////////////////////////////////////
-    %section.md-modal.js-modal(style="display:none;")
-      /modal contents type 'jq-modal-num0'
-      .st-body.ef-w500.js-modal-posi.js-modal-num0
-        .st-inner
-          /modal-header ///////////////////
-          .md-modal-header
-            .st-inner
-              .md-modal-title
-                %h6
-                  modal example
-              .md-modal-close
-                %a.ef-fs20.js-modal-close(href="#{v}")
-                  %i.fa.fa-times
-          /modal-body  ////////////////////
-          .md-modal-body.ef-mw500-ovf.ef-mh300-ovf
-            %section.ef-mgb10
-              Select column
-            %section
-              %table.md-table-base.ef-w100p.js-check
-                %colgroup
-                  %col
-                  %col
-                  %col
-                  %col
-                  %col.ef-bg-green
-                  %col
-                  %col
-                %thead
-                  /tr ///////////////////////
-                  %tr
-                    %th.ef-w20
-                      %input.js-check-parent-num0(type="checkbox")
-                    %th
-                      %a(href="#{v}")
-                        header
-                    %th
-                      %a(href="#{v}")
-                        header
-                    %th
-                      %a(href="#{v}")
-                        header
-                    %th
-                      %a(href="#{v}")
-                        header
-                        %i.fa.fa-caret-down
-                    %th
-                      %a(href="#{v}")
-                        header
-                    %th.ef-w20
-                      %a(href="#{v}")
-                        header
-                %tbody.md-td-hover
-                  /tr ///////////////////////
-                  %tr
-                    %td
-                      %input.js-check-child-num0(type="checkbox")
-                    %td
-                      column
-                    %td
-                      column
-                    %td
-                      column
-                    %td
-                      column
-                    %td
-                      column
-                    %td.ef-txt-center
-                      %a.cp-btn-mini(href="#{v}")
-                        option
-                  /tr ///////////////////////
-                  %tr
-                    %td
-                      %input.js-check-child-num0(type="checkbox")
-                    %td
-                      column
-                    %td
-                      column
-                    %td
-                      column
-                    %td
-                      column
-                    %td
-                      column
-                    %td.ef-txt-center
-                      %a.cp-btn-mini(href="#{v}")
-                        option
-                  /tr ///////////////////////
-                  %tr
-                    %td
-                      %input.js-check-child-num0(type="checkbox")
-                    %td
-                      column
-                    %td
-                      column
-                    %td
-                      column
-                    %td
-                      column
-                    %td
-                      column
-                    %td.ef-txt-center
-                      %a.cp-btn-mini(href="#{v}")
-                        option
-                  /tr ///////////////////////
-                  %tr
-                    %td
-                      %input.js-check-child-num0(type="checkbox")
-                    %td
-                      column
-                    %td
-                      column
-                    %td
-                      column
-                    %td
-                      column
-                    %td
-                      column
-                    %td.ef-txt-center
-                      %a.cp-btn-mini(href="#{v}")
-                        option
-                  /tr ///////////////////////
-                  %tr
-                    %td
-                      %input.js-check-child-num0(type="checkbox")
-                    %td
-                      column
-                    %td
-                      column
-                    %td
-                      column
-                    %td
-                      column
-                    %td
-                      column
-                    %td.ef-txt-center
-                      %a.cp-btn-mini(href="#{v}")
-                        option
-          /modal-footer //////////////////
-          .md-modal-footer
-            .ef-txt-center.ef-txt-nowrap
-              %a.cp-btn-theme.ef-mw100(href="#{v}")
-                submit
-              %a.cp-btn.ef-mw100.js-modal-close(href="#{v}")
-                cancel
     /tooltip/////////////////////////////////////////////
     %section.md-tooltip.js-tooltip(style="display:none;")
-      .st-body.js-tooltip-posi
+      .st-body.ef-mgt-40.ef-mxw170
         .st-inner
           %section.md-tooltip-wrap.js-tooltip-wrap
           %section.md-balloon.js-balloon
@@ -995,8 +849,6 @@
         .st-inner
           %a#js-pageTop.ef-fs16(href="#{v}")
             %i.fa.fa-arrow-up
-    /cartain////////////////////////////////////////////
-    %section.md-cartain.js-cartain(style="display:none;")
     / script////////////////////////////////////////////
     <!--[if gt IE 8]><!-->
     %script(src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript")<>

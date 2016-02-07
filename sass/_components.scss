@@ -580,6 +580,7 @@ a{
 .cp-select{padding:0 5px;}
 .cp-select[size]{height:auto;}
 
+input[type="checkbox"]{margin:6px 0;}
 label{
   &.cp-radio,
   &.cp-checkbox{
@@ -739,7 +740,7 @@ label{
   &.ef-disabled{
     &:hover{
       background:$cl-btn-base;
-      cursor: default;
+      cursor: not-allowed;
     }
   }
   &.ef-response{
@@ -763,6 +764,7 @@ label{
       &:hover{
         background:$cl-btn-base;
         cursor: default;
+        cursor: not-allowed;
       }
     }
   }
@@ -795,7 +797,7 @@ label{
     i{color:$cl-txt-base;}
     &:hover{
       background:$cl-btn-white;
-      cursor: default;
+      cursor: not-allowed;
     }
   }
 }
@@ -827,7 +829,7 @@ label{
     i{color:$cl-txt-rev;}
     &:hover{
       background:$cl-btn-red;
-      cursor: default;
+      cursor: not-allowed;
     }
   }
 }
@@ -859,7 +861,7 @@ label{
     i{color:$cl-txt-rev;}
     &:hover{
       background:$cl-btn-orange;
-      cursor: default;
+      cursor: not-allowed;
     }
   }
 }
@@ -891,7 +893,7 @@ label{
     i{color:$cl-txt-rev;}
     &:hover{
       background:$cl-btn-blue;
-      cursor: default;
+      cursor: not-allowed;
     }
   }
 }
@@ -923,7 +925,7 @@ label{
     i{color:$cl-txt-rev;}
     &:hover{
       background:$cl-btn-green;
-      cursor: default;
+      cursor: not-allowed;
     }
   }
 }
@@ -955,7 +957,7 @@ label{
     i{color:$cl-txt-base;}
     &:hover{
       background:$cl-btn-yellow;
-      cursor: default;
+      cursor: not-allowed;
     }
   }
 }
@@ -987,7 +989,7 @@ label{
     i{color:$cl-txt-rev;}
     &:hover{
       background:$cl-btn-brown;
-      cursor: default;
+      cursor: not-allowed;
     }
   }
 }
@@ -1019,7 +1021,7 @@ label{
     i{color:$cl-txt-rev;}
     &:hover{
       background:$cl-btn-black;
-      cursor: default;
+      cursor: not-allowed;
     }
   }
 }
@@ -1051,7 +1053,7 @@ label{
     i{color:$cl-txt-rev;}
     &:hover{
       background:$cl-btn-gray;
-      cursor: default;
+      cursor: not-allowed;
     }
   }
 }
@@ -1081,9 +1083,10 @@ label{
   &.is-disable{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
+    cursor: not-allowed;
     &:hover{
       background:$cl-btn-theme;
-      cursor: default;
+      cursor: not-allowed;
     }
   }
 }
@@ -1412,6 +1415,19 @@ label{
     color:$cl-txt-base;
   }
 }
+a.cp-badge{
+  &:hover{
+    color:$cl-txt-rev;
+    @include opacity(0.8);
+    text-decoration: none;
+  }
+}
+a.cp-badge-white,
+a.cp-badge-yellow{
+  &:hover{
+    color:$cl-txt-base;
+  }
+}
 .cp-badge-white{
   @extend .cp-badge;
   color:$cl-txt-base;
@@ -1439,6 +1455,7 @@ label{
 }
 .cp-badge-yellow{
   @extend .cp-badge;
+  color:$cl-txt-base;
   background:darken($cl-badge-yellow, 10%);
 }
 .cp-badge-black{
@@ -1580,7 +1597,8 @@ a.cp-tag{
     text-decoration: none;
   }
 }
-a.cp-tag-white{
+a.cp-tag-white,
+a.cp-tag-yellow{
   &:hover{
     color:$cl-txt-base;
   }
@@ -1612,6 +1630,7 @@ a.cp-tag-white{
 }
 .cp-tag-yellow{
   @extend .cp-tag;
+  color:$cl-txt-base;
   background:darken($cl-tag-yellow, 10%);
 }
 .cp-tag-black{

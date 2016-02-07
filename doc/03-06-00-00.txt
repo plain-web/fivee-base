@@ -1,5 +1,5 @@
-﻿<div class="ef-h200 ef-bg-theme">
-  <div class="ef-txt-center ef-cl-white ef-pd10">
+﻿<div class="ef-h200 ef-cl-theme">
+  <div class="ef-txt-center ef-txt-white ef-pd10">
     height:200px;
   </div>
 </div>

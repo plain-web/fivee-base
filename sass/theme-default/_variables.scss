@@ -56,7 +56,7 @@ $cl-red:#cc3300;
 $cl-orange:#E6AD2D;
 $cl-blue:#548BB5;
 $cl-green:#689C51;
-$cl-yellow:#F4DD17;
+$cl-yellow:#fcff85;
 $cl-brown:#73402B;
 $cl-black:#000;
 $cl-gray:#666;
@@ -110,7 +110,7 @@ $cl-bg-gray4:#ccc;
 $cl-bg-gray5:#bbb;
 $cl-bg-gray6:#aaa;
 $cl-bg-gray7:#999;
-$cl-bg-theme: $cl-theme;
+$cl-bg-theme:#EEF0F5;
 
 //border color
 $cl-brd-base:#ccc;
@@ -142,8 +142,8 @@ $cl-btn-blue-darken: darken( $cl-btn-blue, 10% );
 $cl-btn-green:$cl-green;
 $cl-btn-green-lighten: lighten( $cl-btn-green, 7% );
 $cl-btn-green-darken: darken( $cl-btn-green, 10% );
-$cl-btn-yellow:$cl-yellow;
-$cl-btn-yellow-lighten: lighten( $cl-btn-yellow, 7% );
+$cl-btn-yellow:#F9FF1F;
+$cl-btn-yellow-lighten: lighten( $cl-btn-yellow, 20% );
 $cl-btn-yellow-darken: darken( $cl-btn-yellow, 10% );
 $cl-btn-brown:$cl-brown;
 $cl-btn-brown-lighten: lighten( $cl-btn-brown, 7% );
@@ -165,10 +165,10 @@ $cl-info: #4F8AB4;
 $cl-warning: #857F6A;
 
 //userinfo background color
-$cl-bg-alert: lighten( $cl-alert, 5% );
-$cl-bg-success: lighten( $cl-success, 5% );
-$cl-bg-info: lighten( $cl-info, 5% );
-$cl-bg-warning: lighten( $cl-warning, 5% );
+$cl-bg-alert: $cl-bg-red;
+$cl-bg-success: $cl-bg-green;
+$cl-bg-info: $cl-bg-blue;
+$cl-bg-warning: $cl-bg-orange;
 
 //delete color
 $cl-delete: $cl-red;
@@ -183,8 +183,9 @@ $cl-bg-nav-current: #f6f6f6;
 $cl-bg-nav-hover:  darken( $cl-bg-nav-current, 5% );
 
 //tab
-$cl-bg-tab: $cl-theme;
-$cl-bg-tab-current: $cl-theme;
+$cl-tab-current: $cl-theme;
+$cl-bg-tab: $cl-bg-gray;
+$cl-bg-tab-current: $cl-bg-white;
 
 //toorbar
 $cl-bg-toolbar: $cl-gray;
@@ -193,17 +194,20 @@ $cl-bg-toolbar: $cl-gray;
 $cl-bg-footer: $cl-theme;
 
 //table
-$cl-bg-table-header : #e5e5e5;
+$cl-bg-table-th : #e5e5e5;
+$cl-bg-table-td : #fff;
 $cl-bg-table-th-hover : $cl-bg-gray;
 $cl-bg-table-td-hover : $cl-bg-gray;
-$cl-bg-table-highlight : $cl-bg-gray;
-$cl-bg-table-select : $cl-gray2;
+$cl-bg-table-highlight : $cl-yellow;
+$cl-bg-table-select : $cl-bg-theme;
 $pd-table:5px;
 
 //modal
 $cl-bg-modal-header: #CAD5D9;
 $cl-bg-modal-body: #fff;
 $cl-bg-modal-footer: #f6f6f6;
+//image-viewer
+$cl-bg-image-viewer-header: #fff;
 
 //popup
 $cl-bg-popup:#fff;

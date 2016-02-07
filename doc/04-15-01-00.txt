@@ -1,0 +1,16 @@
+﻿<ul class="ef-float10" id="js-eql">
+  <li class="ef-mgb10">
+    <div class="ef-h100 ef-w200 ef-cl-blue js-eql-height">
+      <div class="ef-txt-center ef-txt-white">
+        元の高さwidth:100px;
+      </div>
+    </div>
+  </li>
+  <li class="ef-mgb10">
+    <div class="ef-h250 ef-w200 ef-cl-blue js-eql-height">
+      <div class="ef-txt-center ef-txt-white">
+        元の高さwidth:200px;
+      </div>
+    </div>
+  </li>
+</ul>

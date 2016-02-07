@@ -1601,7 +1601,7 @@
 .is-disable{
   @include opacity(0.5);
   color:$cl-black;
-  cursor:default;
+  cursor: not-allowed;
 	&:hover{
 		@include opacity(0.5);
 		background:none;

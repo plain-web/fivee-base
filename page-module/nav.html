@@ -4,22 +4,24 @@
 <!--[if gt IE 9]><!--><html lang="ja"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta content="CSSフレームワークはFivee-baseが便利です。豊富な機能とパーツでアプリケーションやWebサイトを簡単に作る事ができます。" name="description">
+  <meta content="css,フレームワーク,開発,html" name="keywords">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="widtlih=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
   <title>Fivee Base</title>
   <!--[if lt IE 9]> <script src="../bower_components/html5shiv/dist/html5shiv.min.js"></script> <![endif]-->
   <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="../css/theme-default/fivee-base.css" rel="stylesheet" type="text/css">
-  <link href="../css/theme-default/unique-css.css" rel="stylesheet" type="text/css">
+  <link href="../css/theme-default/page-contents.css" rel="stylesheet" type="text/css">
   <!--[if lt IE 9]> <link href="../css/old-ie.css" rel="stylesheet"> <![endif]-->
 </head>
-<body class="components-button">
+<body class="module-nav">
   <!-- header////////////////////////////////////////////// -->
   <header class="page-header">
     <div class="st-body ef-header-fix js-pageTop-remove">
       <div class="st-inner ef-float">
-        <div class="ef-float-left ef-mgl-10 ef-mgr10 rs-is-hide">
-          <a class="js-offscreen-open" href="javascript:void(0);">
+        <div class="ef-float-left ef-mgl-10 ef-mgr7 rs-bp2-show">
+          <a class="ef-w30 js-aside-main-open" href="javascript:void(0);">
             <ul class="ef-float7">
               <li>
                 <i class="fa fa-bars ef-fs18 ef-lh30"></i>
@@ -43,7 +45,7 @@
             </ul>
           </a>
         </div>
-        <div class="ef-float-right rs-is-block">
+        <div class="ef-float-right rs-bp3-show">
           <ul class="ef-float20 ef-lh30">
             <li>
               <a href="javascript:void(0);">
@@ -54,8 +56,8 @@
                   <li>
                     Update
                   </li>
-                  <li class="md-activity">
-                    <span class="cp-badge">
+                  <li>
+                    <span class="cp-badge-red">
                       53
                     </span>
                   </li>
@@ -63,27 +65,27 @@
               </a>
             </li>
             <li>
-              <a class="js-popup-open js-template1" href="javascript:void(0);">
+              <a class="js-popup-open js-tpl1" href="javascript:void(0);">
                 <ul class="ef-float3">
                   <li>
                     <i class="fa fa-envelope"></i>
                   </li>
                   <li>
-                    message
+                    Message
+                  </li>
+                  <li>
+                    <span class="cp-badge-red">
+                      2
+                    </span>
                   </li>
                   <li>
                     <i class="fa fa-caret-down"></i>
-                  </li>
-                  <li class="md-activity">
-                    <span class="cp-badge">
-                      2
-                    </span>
                   </li>
                 </ul>
               </a>
             </li>
             <li>
-              <a class="js-popup-open js-template0" href="javascript:void(0);">
+              <a class="js-popup-open js-tpl0" href="javascript:void(0);">
                 <ul class="ef-float3">
                   <li>
                     <img class="prof" src="../img/myprof.png">
@@ -99,7 +101,7 @@
             </li>
           </ul>
         </div>
-        <div class="ef-float-right rs-is-hide">
+        <div class="ef-float-right rs-bp2-only-show">
           <ul class="ef-float20 ef-lh30">
             <li>
               <a href="javascript:void(0);">
@@ -107,8 +109,8 @@
                   <li>
                     <i class="fa fa-info-circle ef-fs18"></i>
                   </li>
-                  <li class="md-activity">
-                    <span class="cp-badge">
+                  <li>
+                    <span class="cp-badge-red">
                       53
                     </span>
                   </li>
@@ -116,13 +118,16 @@
               </a>
             </li>
             <li>
-              <a class="js-popup-open js-template1" href="javascript:void(0);">
+              <a class="js-popup-open js-tpl1" href="javascript:void(0);">
                 <ul class="ef-float3">
                   <li>
                     <i class="fa fa-envelope ef-fs18"></i>
                   </li>
-                  <li class="md-activity">
-                    <span class="cp-badge">
+                  <li>
+                    <i class="fa fa-caret-down"></i>
+                  </li>
+                  <li>
+                    <span class="cp-badge-red">
                       2
                     </span>
                   </li>
@@ -130,10 +135,29 @@
               </a>
             </li>
             <li>
-              <a class="js-popup-open js-template0" href="javascript:void(0);">
+              <a class="js-popup-open js-tpl0" href="javascript:void(0);">
                 <ul class="ef-float3">
                   <li>
                     <img class="prof" src="../img/myprof.png">
+                  </li>
+                  <li>
+                    <i class="fa fa-caret-down"></i>
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="ef-float-right rs-bp1-show">
+          <ul class="ef-float20 ef-lh30">
+            <li>
+              <a class="js-nav-slide-open" href="javascript:void(0);">
+                <ul class="ef-float3">
+                  <li>
+                    <img class="prof" src="../img/myprof.png">
+                  </li>
+                  <li>
+                    <i class="fa fa-caret-down"></i>
                   </li>
                 </ul>
               </a>
@@ -143,18 +167,99 @@
       </div>
     </div>
   </header>
+  <!-- slide-nav////////////////////////////////////////////// -->
+  <section class="md-nav-slide rs-bp1-show js-nav-slide">
+    <div class="st-body">
+      <div class="st-inner">
+        <ul class="ef-lh40">
+          <li>
+            <a href="javascript:void(0);">
+              <ul class="ef-float3">
+                <li>
+                  Update
+                </li>
+                <li>
+                  <span class="cp-badge-red">
+                    53
+                  </span>
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a class="js-popup-inset-open js-tpl1" href="javascript:void(0);">
+              <ul class="ef-float3">
+                <li>
+                  Message
+                </li>
+                <li>
+                  <span class="cp-badge-red">
+                    2
+                  </span>
+                </li>
+                <li class="js-ic-arrow">
+                  <i class="fa fa-caret-down"></i>
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a class="js-collapse js-collapse-0" href="javascript:void(0);">
+              <ul class="ef-float3">
+                <li>
+                  Your name
+                </li>
+                <li class="js-ic-arrow">
+                  <i class="fa fa-caret-down"></i>
+                </li>
+              </ul>
+            </a>
+            <ul class="ef-txt-indent1 js-collapse-num0" style="display:none;">
+              <li>
+                <a href="javascript:void(0);">
+                  <ul class="ef-float3">
+                    <li class="ef-mgl3">
+                      Project
+                    </li>
+                  </ul>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <ul class="ef-float3">
+                    <li class="ef-mgl3">
+                      My account
+                    </li>
+                  </ul>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  <ul class="ef-float3">
+                    <li class="ef-mgl3">
+                      ログアウト
+                    </li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <!-- page-container////////////////////////////////////////////// -->
   <section class="page-container">
     <div class="st-body">
       <div class="st-inner ef-float">
         <!-- / page-nav////////////////////////////////////////////// -->
-        <aside class="page-nav ef-float-left js-offscreen">
+        <aside class="page-nav md-aside-main ef-float-left js-aside-main">
           <div class="st-body">
             <div class="st-inner">
               <!-- / side-menu////////////////////////////////////////////// -->
-              <nav class="md-main-nav">
+              <nav class="md-nav-main">
                 <div class="st-inner">
-                  <ul class="ef-lh28 js-nav">
+                  <ul class="ef-lh28 js-nav-main">
                     <li>
                       <a href="index.html">
                         <ul class="ef-float3">
@@ -168,11 +273,11 @@
                       </a>
                     </li>
                     <li>
-                      <div class="ef-fs11 ef-cl-gray6">
+                      <div class="ef-fs11 ef-txt-gray6">
                         Structure
                       </div>
                     </li>
-                    <li class="js-nav-parent-num0">
+                    <li class="js-nav-main-parent0">
                       <a href="javascript:void(0);">
                         <ul class="ef-float3">
                           <li>
@@ -181,12 +286,12 @@
                           <li>
                             Structure
                           </li>
-                          <li class="ef-float-right js-nav-caret">
+                          <li class="ef-float-right js-ic-arrow">
                             <i class="fa fa-angle-down"></i>
                           </li>
                         </ul>
                       </a>
-                      <ul class="ef-txt-indent1 js-nav-child-num0" style="display:none;">
+                      <ul class="ef-txt-indent1 js-nav-main-child0" style="display:none;">
                         <li>
                           <a href="../page-structure/layout.html">
                             <ul class="ef-float3">
@@ -208,11 +313,11 @@
                       </ul>
                     </li>
                     <li>
-                      <div class="ef-fs11 ef-cl-gray6">
+                      <div class="ef-fs11 ef-txt-gray6">
                         Components
                       </div>
                     </li>
-                    <li class="js-nav-parent-num1">
+                    <li class="js-nav-main-parent1">
                       <a href="javascript:void(0);">
                         <ul class="ef-float3">
                           <li>
@@ -221,12 +326,12 @@
                           <li>
                             Components
                           </li>
-                          <li class="ef-float-right js-nav-caret">
+                          <li class="ef-float-right js-ic-arrow">
                             <i class="fa fa-angle-up"></i>
                           </li>
                         </ul>
                       </a>
-                      <ul class="ef-txt-indent1 js-nav-child-num1" style="display:none;">
+                      <ul class="ef-txt-indent1 js-nav-main-child1" style="display:none;">
                         <li>
                           <a href="../page-components/form.html">
                             <ul class="ef-float3">
@@ -236,7 +341,7 @@
                             </ul>
                           </a>
                         </li>
-                        <li class="is-current">
+                        <li>
                           <a href="../page-components/button.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
@@ -318,10 +423,10 @@
                           </a>
                         </li>
                         <li>
-                          <a href="../page-components/images.html">
+                          <a href="../page-components/image.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
-                                images
+                                image
                               </li>
                             </ul>
                           </a>
@@ -336,10 +441,10 @@
                           </a>
                         </li>
                         <li>
-                          <a href="../page-components/activity.html">
+                          <a href="../page-components/badge.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
-                                activity
+                                badge
                               </li>
                             </ul>
                           </a>
@@ -348,7 +453,7 @@
                           <a href="../page-components/progress-bar.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
-                                progress bar
+                                progress-bar
                               </li>
                             </ul>
                           </a>
@@ -357,7 +462,16 @@
                           <a href="../page-components/step-wizard.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
-                                step wizard
+                                step-wizard
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="../page-components/title.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                title
                               </li>
                             </ul>
                           </a>
@@ -365,11 +479,11 @@
                       </ul>
                     </li>
                     <li>
-                      <div class="ef-fs11 ef-cl-gray6">
+                      <div class="ef-fs11 ef-txt-gray6">
                         Effect
                       </div>
                     </li>
-                    <li class="js-nav-parent-num2">
+                    <li class="js-nav-main-parent2">
                       <a href="javascript:void(0);">
                         <ul class="ef-float3">
                           <li>
@@ -378,12 +492,12 @@
                           <li>
                             Effect Class
                           </li>
-                          <li class="ef-float-right js-nav-caret">
+                          <li class="ef-float-right js-ic-arrow">
                             <i class="fa fa-angle-down"></i>
                           </li>
                         </ul>
                       </a>
-                      <ul class="ef-txt-indent1 js-nav-child-num2" style="display:none">
+                      <ul class="ef-txt-indent1 js-nav-main-child2" style="display:none">
                         <li>
                           <a href="../page-effect/float.html">
                             <ul class="ef-float3">
@@ -448,10 +562,10 @@
                           </a>
                         </li>
                         <li>
-                          <a href="../page-effect/font.html">
+                          <a href="../page-effect/font-size.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
-                                font
+                                font-size
                               </li>
                             </ul>
                           </a>
@@ -505,16 +619,16 @@
                           <a href="../page-effect/font-color.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
-                                font color
+                                font-color
                               </li>
                             </ul>
                           </a>
                         </li>
                         <li>
-                          <a href="../page-effect/background-color.html">
+                          <a href="../page-effect/bg-color.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
-                                background color
+                                bg-color
                               </li>
                             </ul>
                           </a>
@@ -529,15 +643,6 @@
                           </a>
                         </li>
                         <li>
-                          <a href="../page-effect/box-round.html">
-                            <ul class="ef-float3">
-                              <li class="ef-mgl3">
-                                box round
-                              </li>
-                            </ul>
-                          </a>
-                        </li>
-                        <li>
                           <a href="../page-effect/overflow.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
@@ -547,19 +652,10 @@
                           </a>
                         </li>
                         <li>
-                          <a href="../page-effect/box-center.html">
-                            <ul class="ef-float3">
-                              <li class="ef-mgl3">
-                                box-center
-                              </li>
-                            </ul>
-                          </a>
-                        </li>
-                        <li>
                           <a href="../page-effect/text-ellipsis.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
-                                text ellipsis
+                                text-ellipsis
                               </li>
                             </ul>
                           </a>
@@ -573,23 +669,14 @@
                             </ul>
                           </a>
                         </li>
-                        <li>
-                          <a href="../page-effect/easing.html">
-                            <ul class="ef-float3">
-                              <li class="ef-mgl3">
-                                easing
-                              </li>
-                            </ul>
-                          </a>
-                        </li>
                       </ul>
                     </li>
                     <li>
-                      <div class="ef-fs11 ef-cl-gray6">
+                      <div class="ef-fs11 ef-txt-gray6">
                         Module
                       </div>
                     </li>
-                    <li class="js-nav-parent-num3">
+                    <li class="js-nav-main-parent3">
                       <a href="javascript:void(0);">
                         <ul class="ef-float3">
                           <li>
@@ -598,12 +685,12 @@
                           <li>
                             Module
                           </li>
-                          <li class="ef-float-right js-nav-caret">
+                          <li class="ef-float-right js-ic-arrow">
                             <i class="fa fa-angle-up"></i>
                           </li>
                         </ul>
                       </a>
-                      <ul class="ef-txt-indent1 js-nav-child-num3" style="display:none">
+                      <ul class="ef-txt-indent1 js-nav-main-child3" style="display:none">
                         <li>
                           <a href="../page-module/modal.html">
                             <ul class="ef-float3">
@@ -640,7 +727,7 @@
                             </ul>
                           </a>
                         </li>
-                        <li>
+                        <li class="is-current">
                           <a href="../page-module/nav.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
@@ -704,15 +791,6 @@
                           </a>
                         </li>
                         <li>
-                          <a href="../page-module/all-check.html">
-                            <ul class="ef-float3">
-                              <li class="ef-mgl3">
-                                all check
-                              </li>
-                            </ul>
-                          </a>
-                        </li>
-                        <li>
                           <a href="../page-module/loader.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
@@ -725,7 +803,7 @@
                           <a href="../page-module/image-viewer.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
-                                image viewer
+                                image-viewer
                               </li>
                             </ul>
                           </a>
@@ -749,19 +827,10 @@
                           </a>
                         </li>
                         <li>
-                          <a href="../page-module/placeholder.html">
+                          <a href="../page-module/scroll-top.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
-                                placeholder
-                              </li>
-                            </ul>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="../page-module/scrolltop.html">
-                            <ul class="ef-float3">
-                              <li class="ef-mgl3">
-                                scrolltop
+                                scroll-top
                               </li>
                             </ul>
                           </a>
@@ -769,12 +838,12 @@
                       </ul>
                     </li>
                     <li>
-                      <div class="ef-fs11 ef-cl-gray6">
+                      <div class="ef-fs11 ef-txt-gray6">
                         State
                       </div>
                     </li>
-                    <li class="js-nav-parent-num4">
-                      <a href="#[v]">
+                    <li class="js-nav-main-parent4">
+                      <a href="javascript:void(0);">
                         <ul class="ef-float3">
                           <li>
                             <i class="fa fa-quote-left"></i>
@@ -782,12 +851,12 @@
                           <li>
                             State Class
                           </li>
-                          <li class="ef-float-right js-nav-caret">
+                          <li class="ef-float-right js-ic-arrow">
                             <i class="fa fa-angle-down"></i>
                           </li>
                         </ul>
                       </a>
-                      <ul class="ef-txt-indent1 js-nav-child-num4" style="display:none">
+                      <ul class="ef-txt-indent1 js-nav-main-child4" style="display:none">
                         <li>
                           <a href="../page-state/state-form.html">
                             <ul class="ef-float3">
@@ -857,14 +926,14 @@
               <!-- / page title////////////////////////////////////////////// -->
               <section class="cp-page-title ef-mgb10">
                 <div class="st-inner">
-                  <ul class="ef-float ef-lh30">
+                  <ul class="ef-float20 ef-lh30">
                     <li>
                       <h1>
-                        button
+                        nav
                       </h1>
                     </li>
-                    <li class="ef-mgl20">
-                      様々なボタンをご利用いただけます。
+                    <li>
+                      ナビゲーションに関する説明です。
                     </li>
                   </ul>
                 </div>
@@ -875,8 +944,8 @@
                   <div class="ef-float-left ef-mxw80p">
                     <ul class="ef-float10 ef-lh24">
                       <li>
-                        <a href="components.html">
-                          Components
+                        <a href="module.html">
+                          module
                         </a>
                       </li>
                       <li>
@@ -885,7 +954,7 @@
                         </div>
                       </li>
                       <li>
-                        button
+                        nav
                       </li>
                     </ul>
                   </div>
@@ -897,12 +966,12 @@
                         </a>
                       </li>
                       <li class="ef-float-right">
-                        <a class="cp-btn-mini cp-btn-white ef-w30 js-popup-open js-template2" href="javascript:void(0);">
+                        <a class="cp-btn-mini cp-btn-white ef-w30 js-popup-open js-tpl2" href="javascript:void(0);">
                           <i class="fa fa-link ef-fs14"></i>
                         </a>
                       </li>
                       <li class="ef-float-right">
-                        <a class="cp-btn-mini cp-btn-white ef-w30 js-bookmark-open js-template3" href="javascript:void(0);">
+                        <a class="cp-btn-mini cp-btn-white ef-w30 js-bookmark-open js-tpl3" href="javascript:void(0);">
                           <i class="fa fa-star-o ef-fs14"></i>
                         </a>
                       </li>
@@ -921,107 +990,314 @@
                           <ul class="ef-float ef-lh25">
                             <li>
                               <h5>
-                                button
+                                nav
                               </h5>
                             </li>
                           </ul>
                         </div>
                         <div class="example-summary ef-fs12 ef-mgb30">
-                          高さを調整する事ができます。HTMLソースのクラス名
-                          <span class="ef-cl-red">
-                            cp-btn-*
-                          </span>
-                          の後に
-                          <span class="ef-cl-red">
-                            ef-lh30
-                          </span>
-                          を付与してください。
-                          <span class="js-tooltip-hover">
-                            <div class="md-tooltip-key js-tooltip-key">
-                              3/7/10～40
-                            </div>
-                            <a href="javascript:void(0);">
-                              [数値]
-                            </a>
-                          </span>
+                          グローバルナビゲーションにご利用ください。
                         </div>
                         <div class="example-box ef-mgb40">
                           <!-- / example code /////////////////////////// -->
-                          <ul class="ef-float7">
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-white ef-mw100" href="javascript:void(0);">
-                                white
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-red ef-mw100" href="javascript:void(0);">
-                                red
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-orange ef-mw100" href="javascript:void(0);">
-                                orange
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-blue ef-mw100" href="javascript:void(0);">
-                                blue
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-green ef-mw100" href="javascript:void(0);">
-                                green
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-yellow ef-mw100" href="javascript:void(0);">
-                                yellow
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-brown ef-mw100" href="javascript:void(0);">
-                                brown
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-black ef-mw100" href="javascript:void(0);">
-                                black
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-gray ef-mw100" href="javascript:void(0);">
-                                gray
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn ef-mw100" href="javascript:void(0);">
-                                default
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-theme ef-mw100" href="javascript:void(0);">
-                                theme
-                              </a>
-                            </li>
-                          </ul>
+<!-- / nav//////////////////////////////////// -->
+<nav class="md-nav-main">
+  <div class="st-inner">
+    <ul class="ef-lh28 js-nav-main">
+      <li>
+        <a href="#">
+          <ul class="ef-float3">
+            <li>
+              <i class="fa fa-home"></i>
+            </li>
+            <li>
+              Home
+            </li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <div class="ef-fs11 ef-txt-gray6">
+          Category
+        </div>
+      </li>
+      <li class="js-nav-main-parent0">
+        <a href="javascript:void(0);">
+          <ul class="ef-float3">
+            <li>
+              <i class="fa fa-columns"></i>
+            </li>
+            <li>
+              Category1
+            </li>
+            <li class="ef-float-right js-ic-arrow">
+              <i class="fa fa-angle-down"></i>
+            </li>
+          </ul>
+        </a>
+        <ul class="ef-txt-indent1 js-nav-main-child0" style="display:none;">
+          <li>
+            <a href="#">
+              <ul class="ef-float3">
+                <li class="ef-mgl3">
+                  Menu1
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <ul class="ef-float3">
+                <li class="ef-mgl3">
+                  Menu2
+                </li>
+              </ul>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="js-nav-main-parent1">
+        <a href="javascript:void(0);">
+          <ul class="ef-float3">
+            <li>
+              <i class="fa fa-columns"></i>
+            </li>
+            <li>
+              Category2
+            </li>
+            <li class="ef-float-right js-ic-arrow">
+              <i class="fa fa-angle-down"></i>
+            </li>
+          </ul>
+        </a>
+        <ul class="ef-txt-indent1 js-nav-main-child1" style="display:none;">
+          <li class="js-nav-main-parent2">
+            <a href="javascript:void(0);">
+              <ul class="ef-float3">
+                <li>
+                  <i class="fa fa-columns"></i>
+                </li>
+                <li>
+                  Category2-1
+                </li>
+                <li class="ef-float-right js-ic-arrow">
+                  <i class="fa fa-angle-down"></i>
+                </li>
+              </ul>
+            </a>
+            <ul class="ef-txt-indent1 js-nav-main-child2" style="display:none;">
+              <li>
+                <a href="#">
+                  <ul class="ef-float3">
+                    <li class="ef-mgl3">
+                      Menu1
+                    </li>
+                  </ul>
+                </a>
+              </li>
+              <li class="is-current">
+                <a href="#">
+                  <ul class="ef-float3">
+                    <li class="ef-mgl3">
+                      Menu2
+                    </li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="js-nav-main-parent3">
+        <a href="javascript:void(0);">
+          <ul class="ef-float3">
+            <li>
+              <i class="fa fa-columns"></i>
+            </li>
+            <li>
+              Category3
+            </li>
+            <li class="ef-float-right js-ic-arrow">
+              <i class="fa fa-angle-down"></i>
+            </li>
+          </ul>
+        </a>
+        <ul class="ef-txt-indent1 js-nav-main-child3" style="display:none;">
+          <li>
+            <a href="#">
+              <ul class="ef-float3">
+                <li class="ef-mgl3">
+                  Menu1
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <ul class="ef-float3">
+                <li class="ef-mgl3">
+                  Menu2
+                </li>
+              </ul>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- / nav//////////////////////////////////// -->
+<nav class="md-nav-main">
+  <div class="st-inner">
+    <ul class="ef-lh28 js-nav-main">
+      <li>
+        <a href="#">
+          <ul class="ef-float3">
+            <li>
+              <i class="fa fa-home"></i>
+            </li>
+            <li>
+              Home
+            </li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <div class="ef-fs11 ef-txt-gray6">
+          Category
+        </div>
+      </li>
+      <li class="js-nav-main-parent0">
+        <a href="javascript:void(0);">
+          <ul class="ef-float3">
+            <li>
+              <i class="fa fa-columns"></i>
+            </li>
+            <li>
+              Category1
+            </li>
+            <li class="ef-float-right js-ic-arrow">
+              <i class="fa fa-angle-down"></i>
+            </li>
+          </ul>
+        </a>
+        <ul class="ef-txt-indent1 js-nav-main-child0" style="display:none;">
+          <li>
+            <a href="#">
+              <ul class="ef-float3">
+                <li class="ef-mgl3">
+                  Menu1
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <ul class="ef-float3">
+                <li class="ef-mgl3">
+                  Menu2
+                </li>
+              </ul>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="js-nav-main-parent1">
+        <a href="javascript:void(0);">
+          <ul class="ef-float3">
+            <li>
+              <i class="fa fa-columns"></i>
+            </li>
+            <li>
+              Category2
+            </li>
+            <li class="ef-float-right js-ic-arrow">
+              <i class="fa fa-angle-down"></i>
+            </li>
+          </ul>
+        </a>
+        <ul class="ef-txt-indent1 js-nav-main-child1" style="display:none;">
+          <li class="js-nav-main-parent2">
+            <a href="javascript:void(0);">
+              <ul class="ef-float3">
+                <li>
+                  <i class="fa fa-columns"></i>
+                </li>
+                <li>
+                  Category2-1
+                </li>
+                <li class="ef-float-right js-ic-arrow">
+                  <i class="fa fa-angle-down"></i>
+                </li>
+              </ul>
+            </a>
+            <ul class="ef-txt-indent1 js-nav-main-child2" style="display:none;">
+              <li>
+                <a href="#">
+                  <ul class="ef-float3">
+                    <li class="ef-mgl3">
+                      Menu1
+                    </li>
+                  </ul>
+                </a>
+              </li>
+              <li class="is-current">
+                <a href="#">
+                  <ul class="ef-float3">
+                    <li class="ef-mgl3">
+                      Menu2
+                    </li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="js-nav-main-parent3">
+        <a href="javascript:void(0);">
+          <ul class="ef-float3">
+            <li>
+              <i class="fa fa-columns"></i>
+            </li>
+            <li>
+              Category3
+            </li>
+            <li class="ef-float-right js-ic-arrow">
+              <i class="fa fa-angle-down"></i>
+            </li>
+          </ul>
+        </a>
+        <ul class="ef-txt-indent1 js-nav-main-child3" style="display:none;">
+          <li>
+            <a href="#">
+              <ul class="ef-float3">
+                <li class="ef-mgl3">
+                  Menu1
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <ul class="ef-float3">
+                <li class="ef-mgl3">
+                  Menu2
+                </li>
+              </ul>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
                         </div>
                         <div class="example-remarks ef-mgb20">
                           <section class="cp-remarks-blue ef-w100p">
                             <div class="st-inner">
                               <div class="st-outer ef-lh20">
-                                最小幅を変更する事ができます。HTMLソースの
-                                <span class="ef-cl-red">
-                                  ef-mw100
-                                </span>
-                                の数値を変更してください。
-                                <span class="js-tooltip-hover">
-                                  <div class="md-tooltip-key js-tooltip-key">
-                                    0/3/7/10～600(10単位)
-                                  </div>
-                                  <a href="javascript:void(0);">
-                                    [数値]
-                                  </a>
-                                </span>
+                                nav-mainはページ内にそのまま複数配置する事ができます。
                               </div>
                             </div>
                           </section>
@@ -1029,13 +1305,13 @@
                         <div class="example-btn">
                           <ul class="ef-float7">
                             <li>
-                              <a class="cp-btn js-html-show js-example-num02-02-00-00" href="javascript:void(0);">
+                              <a class="cp-btn js-html-show js-example-num04-05-00-00" href="javascript:void(0);">
                                 show html
                               </a>
                             </li>
                           </ul>
                         </div>
-                        <div class="example-box-html js-example-tag-num02-02-00" style="display:none;">
+                        <div class="example-box-html js-example-tag-num04-05-00" style="display:none;">
                           <textarea class="cp-textarea ef-w100p ef-h300 ef-mgt10"></textarea>
                         </div>
                         <hr class="is-dotted ef-pdt60">
@@ -1048,105 +1324,93 @@
                           <ul class="ef-float ef-lh25">
                             <li>
                               <h5>
-                                button
-                                <span class="ef-fs14">
-                                  (mini)
-                                </span>
+                                nav-block
                               </h5>
                             </li>
                           </ul>
                         </div>
                         <div class="example-summary ef-fs12 ef-mgb30">
-                          高さを調整する事ができます。HTMLソースのクラス名
-                          <span class="ef-cl-red">
-                            cp-btn-*
-                          </span>
-                          の後に
-                          <span class="ef-cl-red">
-                            ef-lh30
-                          </span>
-                          を付与してください。
-                          <span class="js-tooltip-hover">
-                            <div class="md-tooltip-key js-tooltip-key">
-                              3/7/10～40
-                            </div>
-                            <a href="javascript:void(0);">
-                              [数値]
-                            </a>
-                          </span>
+                          ページ内にあるコンテンツのナビゲーションにご利用ください。
                         </div>
                         <div class="example-box ef-mgb40">
                           <!-- / example code /////////////////////////// -->
-                          <ul class="ef-float7">
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-mini-white ef-mw60" href="javascript:void(0);">
-                                white
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-mini-red ef-mw60" href="javascript:void(0);">
-                                red
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-mini-orange ef-mw60" href="javascript:void(0);">
-                                orange
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-mini-blue ef-mw60" href="javascript:void(0);">
-                                blue
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-mini-green ef-mw60" href="javascript:void(0);">
-                                green
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-mini-yellow ef-mw60" href="javascript:void(0);">
-                                yellow
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-mini-brown ef-mw60" href="javascript:void(0);">
-                                brown
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-mini-black ef-mw60" href="javascript:void(0);">
-                                black
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-mini-gray ef-mw60" href="javascript:void(0);">
-                                gray
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-mini ef-mw60" href="javascript:void(0);">
-                                default
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-mini-theme ef-mw60" href="javascript:void(0);">
-                                theme
-                              </a>
-                            </li>
-                          </ul>
+                          <!-- nav block trigger//////////////////////// -->
+                          <nav class="md-nav-block js-nav-block js-nav-block-select0 is-col4 ef-mgb30">
+                            <div class="st-inner">
+                              <ul class="ef-float">
+                                <li class="js-nav-block-parent0 is-current">
+                                  <a class="ef-txt-bold ef-mgb7" href="javascript:void(0);">
+                                    ナビゲーション
+                                  </a>
+                                </li>
+                                <li class="js-nav-block-parent1">
+                                  <a class="ef-txt-bold ef-mgb7" href="javascript:void(0);">
+                                    ナビゲーション1
+                                  </a>
+                                </li>
+                                <li class="js-nav-block-parent2">
+                                  <a class="ef-txt-bold ef-mgb7" href="javascript:void(0);">
+                                    ナビゲーション2
+                                  </a>
+                                </li>
+                                <li class="js-nav-block-parent3">
+                                  <a class="ef-txt-bold ef-mgb7" href="javascript:void(0);">
+                                    ナビゲーション3
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </nav>
+                          <!-- nav block body//////////////////////// -->
+                          <section class="js-nav-block-content0 ef-mgb50">
+                            <div class="st-inner">
+                              <ul>
+                                <li class="js-nav-block-child0">
+                                  <section>
+                                    ナビゲーションのコンテンツはここ
+                                  </section>
+                                </li>
+                                <li class="js-nav-block-child1" style="display:none;">
+                                  <section>
+                                    ナビゲーション1のコンテンツはここ
+                                  </section>
+                                </li>
+                                <li class="js-nav-block-child2" style="display:none;">
+                                  <section>
+                                    ナビゲーション2のコンテンツはここ
+                                  </section>
+                                </li>
+                                <li class="js-nav-block-child3" style="display:none;">
+                                  <section>
+                                    ナビゲーション3のコンテンツはここ
+                                  </section>
+                                </li>
+                              </ul>
+                            </div>
+                          </section>
                         </div>
                         <div class="example-remarks ef-mgb20">
                           <section class="cp-remarks-blue ef-w100p">
                             <div class="st-inner">
                               <div class="st-outer ef-lh20">
-                                最小幅を変更する事ができます。HTMLソースの
-                                <span class="ef-cl-red">
-                                  ef-mw60
+                                nav-blockはページ内に複数配置する事ができます。htmlソースのクラス名
+                                <span class="ef-txt-red">
+                                  js-nav-block-select0
                                 </span>
-                                の数値を変更してください。
+                                がナビゲーションのボタン、
+                                <span class="ef-txt-red">
+                                  js-nav-block-content0
+                                </span>
+                                が内容に該当します。これらの数値を合わせる事で1セットになります。複数配置する場合はこれらの数値を変更する事により設置する事ができます。
+                                <br>
+                                ナビゲーションのボタンは、htmlソースのクラス名
+                                <span class="ef-txt-red">
+                                  is-col4
+                                </span>
+                                の数値を変更する事で、ボタン数に合わせて均等に表示されます。
                                 <span class="js-tooltip-hover">
                                   <div class="md-tooltip-key js-tooltip-key">
-                                    0/3/7/10～600(10単位)
+                                    2～10
                                   </div>
                                   <a href="javascript:void(0);">
                                     [数値]
@@ -1159,13 +1423,18 @@
                         <div class="example-btn">
                           <ul class="ef-float7">
                             <li>
-                              <a class="cp-btn js-html-show js-example-num02-02-01-00" href="javascript:void(0);">
-                                show html
+                              <a class="cp-btn js-html-show js-example-num04-05-01-01" href="javascript:void(0);">
+                                show body
+                              </a>
+                            </li>
+                            <li>
+                              <a class="cp-btn js-html-show js-example-num04-05-01-02" href="javascript:void(0);">
+                                show trigger
                               </a>
                             </li>
                           </ul>
                         </div>
-                        <div class="example-box-html js-example-tag-num02-02-01" style="display:none;">
+                        <div class="example-box-html js-example-tag-num04-05-01" style="display:none;">
                           <textarea class="cp-textarea ef-w100p ef-h300 ef-mgt10"></textarea>
                         </div>
                         <hr class="is-dotted ef-pdt60">
@@ -1178,396 +1447,32 @@
                           <ul class="ef-float ef-lh25">
                             <li>
                               <h5>
-                                button
-                                <span class="ef-fs14">
-                                  (large)
-                                </span>
+                                aside
                               </h5>
                             </li>
                           </ul>
                         </div>
                         <div class="example-summary ef-fs12 ef-mgb30">
-                          高さを調整する事ができます。HTMLソースのクラス名
-                          <span class="ef-cl-red">
-                            cp-btn-large-*
-                          </span>
-                          の後に
-                          <span class="ef-cl-red">
-                            ef-lh30
-                          </span>
-                          を付与してください。
-                          <span class="js-tooltip-hover">
-                            <div class="md-tooltip-key js-tooltip-key">
-                              3/7/10～40
-                            </div>
-                            <a href="javascript:void(0);">
-                              [数値]
-                            </a>
-                          </span>
+                          本ページの左グローバルメニューを囲っています。asideはレスポンシブ対応されており、一定幅から非表示になります。非表示になるとトリガーを押下する事によりスライド表示されます。
                         </div>
                         <div class="example-box ef-mgb40">
                           <!-- / example code /////////////////////////// -->
-                          <ul class="ef-float7">
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-large-white ef-mw100" href="javascript:void(0);">
-                                white
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-large-red ef-mw100" href="javascript:void(0);">
-                                red
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-large-orange ef-mw100" href="javascript:void(0);">
-                                orange
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-large-blue ef-mw100" href="javascript:void(0);">
-                                blue
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-large-green ef-mw100" href="javascript:void(0);">
-                                green
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-large-yellow ef-mw100" href="javascript:void(0);">
-                                yellow
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-large-brown ef-mw100" href="javascript:void(0);">
-                                brown
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-large-black ef-mw100" href="javascript:void(0);">
-                                black
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-large-gray ef-mw100" href="javascript:void(0);">
-                                gray
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-large ef-mw100" href="javascript:void(0);">
-                                default
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-large-theme ef-mw100" href="javascript:void(0);">
-                                theme
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="example-remarks ef-mgb20">
-                          <section class="cp-remarks-blue ef-w100p">
-                            <div class="st-inner">
-                              <div class="st-outer ef-lh20">
-                                最小幅を変更する事ができます。HTMLソースの
-                                <span class="ef-cl-red">
-                                  ef-mw100
-                                </span>
-                                の数値を変更してください。
-                                <span class="js-tooltip-hover">
-                                  <div class="md-tooltip-key js-tooltip-key">
-                                    0/3/7/10～600(10単位)
-                                  </div>
-                                  <a href="javascript:void(0);">
-                                    [数値]
-                                  </a>
-                                </span>
-                              </div>
-                            </div>
-                          </section>
                         </div>
                         <div class="example-btn">
                           <ul class="ef-float7">
                             <li>
-                              <a class="cp-btn js-html-show js-example-num02-02-02-00" href="javascript:void(0);">
-                                show html
+                              <a class="cp-btn js-html-show js-example-num04-05-02-01" href="javascript:void(0);">
+                                show aside
                               </a>
                             </li>
-                          </ul>
-                        </div>
-                        <div class="example-box-html js-example-tag-num02-02-02" style="display:none;">
-                          <textarea class="cp-textarea ef-w100p ef-h300 ef-mgt10"></textarea>
-                        </div>
-                        <hr class="is-dotted ef-pdt60">
-                      </div>
-                    </section>
-                    <!-- / example03 ////////////////////////////////// -->
-                    <section class="examle-wrap ef-mgb20" id="js-pageTop3">
-                      <div class="st-inner">
-                        <div class="example-title ef-mgb3">
-                          <ul class="ef-float ef-lh25">
                             <li>
-                              <h5>
-                                button
-                                <span class="ef-fs14">
-                                  (fix)
-                                </span>
-                              </h5>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="example-summary ef-fs12 ef-mgb30">
-                          高さを調整する事ができます。HTMLソースのクラス名
-                          <span class="ef-cl-red">
-                            cp-btn-fix-*
-                          </span>
-                          の後に
-                          <span class="ef-cl-red">
-                            ef-lh30
-                          </span>
-                          を付与してください。
-                          <span class="js-tooltip-hover">
-                            <div class="md-tooltip-key js-tooltip-key">
-                              3/7/10～40
-                            </div>
-                            <a href="javascript:void(0);">
-                              [数値]
-                            </a>
-                          </span>
-                        </div>
-                        <div class="example-box ef-mgb40">
-                          <!-- / example code ////////////////// -->
-                          <ul>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-fix-white" href="javascript:void(0);">
-                                white
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-fix-red" href="javascript:void(0);">
-                                red
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-fix-orange" href="javascript:void(0);">
-                                orange
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-fix-blue" href="javascript:void(0);">
-                                blue
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-fix-green" href="javascript:void(0);">
-                                green
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-fix-yellow" href="javascript:void(0);">
-                                yellow
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-fix-brown" href="javascript:void(0);">
-                                brown
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-fix-black" href="javascript:void(0);">
-                                black
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-fix-gray" href="javascript:void(0);">
-                                gray
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-fix" href="javascript:void(0);">
-                                default
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-fix-theme ef-mw100" href="javascript:void(0);">
-                                theme
+                              <a class="cp-btn js-html-show js-example-num04-05-02-02" href="javascript:void(0);">
+                                show trigger
                               </a>
                             </li>
                           </ul>
                         </div>
-                        <div class="example-remarks ef-mgb20">
-                          <section class="cp-remarks-blue ef-w100p">
-                            <div class="st-inner">
-                              <div class="st-outer ef-lh20">
-                                幅は親要素の幅に追従します。
-                              </div>
-                            </div>
-                          </section>
-                        </div>
-                        <div class="example-btn">
-                          <ul class="ef-float7">
-                            <li>
-                              <a class="cp-btn js-html-show js-example-num02-02-03-00" href="javascript:void(0);">
-                                show html
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="example-box-html js-example-tag-num02-02-03" style="display:none;">
-                          <textarea class="cp-textarea ef-w100p ef-h300 ef-mgt10"></textarea>
-                        </div>
-                        <hr class="is-dotted ef-pdt60">
-                      </div>
-                    </section>
-                    <!-- / example04 ////////////////////////////////// -->
-                    <section class="examle-wrap ef-mgb20" id="js-pageTop4">
-                      <div class="st-inner">
-                        <div class="example-title ef-mgb30">
-                          <ul class="ef-float ef-lh25">
-                            <li>
-                              <h5>
-                                button
-                                <span class="ef-fs14">
-                                  (icon)
-                                </span>
-                              </h5>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="example-box ef-mgb40">
-                          <!-- / example code /////////////////////////// -->
-                          <ul>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn ef-mw100" href="javascript:void(0);">
-                                <i class="fa fa-pencil"></i>
-                                white
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-mini-red ef-mw100" href="javascript:void(0);">
-                                <i class="fa fa-pencil"></i>
-                                red
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-large-orange ef-mw100" href="javascript:void(0);">
-                                <i class="fa fa-pencil"></i>
-                                orange
-                              </a>
-                            </li>
-                            <li class="ef-mgb10">
-                              <a class="cp-btn-fix-blue ef-mw100" href="javascript:void(0);">
-                                <i class="fa fa-pencil"></i>
-                                blue
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="example-btn">
-                          <ul class="ef-float7">
-                            <li>
-                              <a class="cp-btn js-html-show js-example-num02-02-04-00" href="javascript:void(0);">
-                                show html
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="example-box-html js-example-tag-num02-02-04" style="display:none;">
-                          <textarea class="cp-textarea ef-w100p ef-h300 ef-mgt10"></textarea>
-                        </div>
-                        <hr class="is-dotted ef-pdt60">
-                      </div>
-                    </section>
-                    <!-- / example05 ////////////////////////////////// -->
-                    <section class="examle-wrap ef-mgb20" id="js-pageTop5">
-                      <div class="st-inner">
-                        <div class="example-title ef-mgb3">
-                          <ul class="ef-float ef-lh25">
-                            <li>
-                              <h5>
-                                button
-                                <span class="ef-fs14">
-                                  (response)
-                                </span>
-                              </h5>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="example-summary ef-fs12 ef-mgb30">
-                          マウスホバーで反応するボタンです。
-                        </div>
-                        <div class="example-box ef-mgb40">
-                          <!-- / example code /////////////////////////// -->
-                          <ul class="ef-float7">
-                            <li>
-                              <a class="cp-btn ef-response ef-mw40" href="javascript:void(0);">
-                                <i class="fa fa-bars"></i>
-                              </a>
-                              <a class="cp-btn ef-response ef-mw40" href="javascript:void(0);">
-                                <i class="fa fa-user"></i>
-                              </a>
-                              <a class="cp-btn ef-response ef-mw40" href="javascript:void(0);">
-                                <i class="fa fa-times"></i>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="example-btn">
-                          <ul class="ef-float7">
-                            <li>
-                              <a class="cp-btn js-html-show js-example-num02-02-05-00" href="javascript:void(0);">
-                                show html
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="example-box-html js-example-tag-num02-02-05" style="display:none;">
-                          <textarea class="cp-textarea ef-w100p ef-h300 ef-mgt10"></textarea>
-                        </div>
-                        <hr class="is-dotted ef-pdt60">
-                      </div>
-                    </section>
-                    <!-- / example06 ////////////////////////////////// -->
-                    <section class="examle-wrap ef-mgb20" id="js-pageTop6">
-                      <div class="st-inner">
-                        <div class="example-title ef-mgb3">
-                          <ul class="ef-float ef-lh25">
-                            <li>
-                              <h5>
-                                button
-                                <span class="ef-fs14">
-                                  (input)
-                                </span>
-                              </h5>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="example-summary ef-fs12 ef-mgb30">
-                          form要素のボタンもデザインを変更できます。
-                        </div>
-                        <div class="example-box ef-mgb40">
-                          <!-- / example code /////////////////////////// -->
-                          <input class="cp-btn-white ef-mw100" type="button" value="white">
-                        </div>
-                        <div class="example-remarks ef-mgb20">
-                          <section class="cp-remarks-blue ef-w100p">
-                            <div class="st-inner">
-                              <div class="st-outer ef-lh20">
-                                form要素のボタンはアイコンをつける事ができません。
-                              </div>
-                            </div>
-                          </section>
-                        </div>
-                        <div class="example-btn">
-                          <ul class="ef-float7">
-                            <li>
-                              <a class="cp-btn js-html-show js-example-num02-02-06-00" href="javascript:void(0);">
-                                show html
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="example-box-html js-example-tag-num02-02-06" style="display:none;">
+                        <div class="example-box-html js-example-tag-num04-05-02" style="display:none;">
                           <textarea class="cp-textarea ef-w100p ef-h300 ef-mgt10"></textarea>
                         </div>
                       </div>
@@ -1591,7 +1496,8 @@
   </footer>
   <!-- popup///////////////////////////////////////////// -->
   <section class="md-popup js-popup" style="display:none;">
-    <div class="st-body ef-posi-fix js-template0">
+    <!-- popup contents type 'js-tpl0' -->
+    <div class="st-body ef-posi-fix js-tpl0">
       <div class="st-inner">
         <div class="md-popup-body">
           <ul class="ef-list-hover-gray">
@@ -1614,7 +1520,8 @@
         </div>
       </div>
     </div>
-    <div class="st-body ef-posi-fix js-template1">
+    <!-- popup contents type 'js-tpl1' -->
+    <div class="st-body ef-posi-fix js-tpl1">
       <div class="st-inner">
         <div class="md-popup-body ef-mw250-ovf ef-mh400-ovf">
           <ul class="ef-list-hover-gray">
@@ -1673,68 +1580,32 @@
         </div>
       </div>
     </div>
-    <div class="st-body js-template2">
+    <!-- popup contents type 'js-tpl2' -->
+    <div class="st-body ef-mgt-40 js-tpl2">
       <div class="st-inner">
         <div class="md-popup-body">
           <ul class="ef-list-hover-gray">
             <li>
               <a href="#js-pageTop0">
-                button
+                nav
               </a>
             </li>
             <li>
               <a href="#js-pageTop1">
-                button
-                <span class="ef-fs11">
-                  (mini)
-                </span>
+                nav-block
               </a>
             </li>
             <li>
               <a href="#js-pageTop2">
-                button
-                <span class="ef-fs11">
-                  (large)
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#js-pageTop3">
-                button
-                <span class="ef-fs11">
-                  (fix)
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#js-pageTop4">
-                button
-                <span class="ef-fs11">
-                  (icon)
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#js-pageTop5">
-                button
-                <span class="ef-fs11">
-                  (response)
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#js-pageTop6">
-                button
-                <span class="ef-fs11">
-                  (input)
-                </span>
+                aside
               </a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="st-body js-template3">
+    <!-- popup contents type 'js-tpl3' -->
+    <div class="st-body ef-mgt-40 js-tpl3">
       <div class="st-inner">
         <div class="md-popup-header ef-mgb20">
           <ul class="ef-float">
@@ -1788,233 +1659,9 @@
       </div>
     </div>
   </section>
-  <!-- modal/////////////////////////////////////////////// -->
-  <section class="md-modal js-modal" style="display:none;">
-    <!-- modal contents type 'jq-modal-num0' -->
-    <div class="st-body ef-w500 js-modal-posi js-modal-num0">
-      <div class="st-inner">
-        <!-- modal-header /////////////////// -->
-        <div class="md-modal-header">
-          <div class="st-inner">
-            <div class="md-modal-title">
-              <h6>
-                modal example
-              </h6>
-            </div>
-            <div class="md-modal-close">
-              <a class="ef-fs20 js-modal-close" href="javascript:void(0);">
-                <i class="fa fa-times"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- modal-body  //////////////////// -->
-        <div class="md-modal-body ef-mw500-ovf ef-mh300-ovf">
-          <section class="ef-mgb10">
-            Select column
-          </section>
-          <section>
-            <table class="md-table-base ef-w100p js-check">
-              <colgroup>
-                <col>
-                <col>
-                <col>
-                <col>
-                <col class="ef-bg-green">
-                <col>
-                <col>
-              </colgroup>
-              <thead>
-                <!-- tr /////////////////////// -->
-                <tr>
-                  <th class="ef-w20">
-                    <input class="js-check-parent-num0" type="checkbox">
-                  </th>
-                  <th>
-                    <a href="javascript:void(0);">
-                      header
-                    </a>
-                  </th>
-                  <th>
-                    <a href="javascript:void(0);">
-                      header
-                    </a>
-                  </th>
-                  <th>
-                    <a href="javascript:void(0);">
-                      header
-                    </a>
-                  </th>
-                  <th>
-                    <a href="javascript:void(0);">
-                      header
-                      <i class="fa fa-caret-down"></i>
-                    </a>
-                  </th>
-                  <th>
-                    <a href="javascript:void(0);">
-                      header
-                    </a>
-                  </th>
-                  <th class="ef-w20">
-                    <a href="javascript:void(0);">
-                      header
-                    </a>
-                  </th>
-                </tr>
-              </thead>
-              <tbody class="md-td-hover">
-                <!-- tr /////////////////////// -->
-                <tr>
-                  <td>
-                    <input class="js-check-child-num0" type="checkbox">
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td class="ef-txt-center">
-                    <a class="cp-btn-mini" href="javascript:void(0);">
-                      option
-                    </a>
-                  </td>
-                </tr>
-                <!-- tr /////////////////////// -->
-                <tr>
-                  <td>
-                    <input class="js-check-child-num0" type="checkbox">
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td class="ef-txt-center">
-                    <a class="cp-btn-mini" href="javascript:void(0);">
-                      option
-                    </a>
-                  </td>
-                </tr>
-                <!-- tr /////////////////////// -->
-                <tr>
-                  <td>
-                    <input class="js-check-child-num0" type="checkbox">
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td class="ef-txt-center">
-                    <a class="cp-btn-mini" href="javascript:void(0);">
-                      option
-                    </a>
-                  </td>
-                </tr>
-                <!-- tr /////////////////////// -->
-                <tr>
-                  <td>
-                    <input class="js-check-child-num0" type="checkbox">
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td class="ef-txt-center">
-                    <a class="cp-btn-mini" href="javascript:void(0);">
-                      option
-                    </a>
-                  </td>
-                </tr>
-                <!-- tr /////////////////////// -->
-                <tr>
-                  <td>
-                    <input class="js-check-child-num0" type="checkbox">
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td>
-                    column
-                  </td>
-                  <td class="ef-txt-center">
-                    <a class="cp-btn-mini" href="javascript:void(0);">
-                      option
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-        </div>
-        <!-- modal-footer ////////////////// -->
-        <div class="md-modal-footer">
-          <div class="ef-txt-center ef-txt-nowrap">
-            <a class="cp-btn-theme ef-mw100" href="javascript:void(0);">
-              submit
-            </a>
-            <a class="cp-btn ef-mw100 js-modal-close" href="javascript:void(0);">
-              cancel
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <!-- tooltip///////////////////////////////////////////// -->
   <section class="md-tooltip js-tooltip" style="display:none;">
-    <div class="st-body js-tooltip-posi">
+    <div class="st-body ef-mgt-40 ef-mxw170">
       <div class="st-inner">
         <section class="md-tooltip-wrap js-tooltip-wrap"></section>
         <section class="md-balloon js-balloon">
@@ -2033,10 +1680,9 @@
       </div>
     </div>
   </section>
-  <!-- cartain//////////////////////////////////////////// -->
-  <section class="md-cartain js-cartain" style="display:none;"></section>
   <!-- script//////////////////////////////////////////// -->
-  <script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+  <!--[if gt IE 8]><!--><script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script><!--<![endif]-->
+  <!--[if lt IE 9]> <script src="../bower_components/jquery-legacy/dist/jquery.min.js" type="text/javascript"></script> <![endif]-->
   <script src="../js/min/fivee-base.min.js" type="text/javascript"></script>
   <!-- :javascript -->
   <!-- $(function(){ -->

@@ -1,0 +1,6 @@
+﻿<a class="cp-btn-blue js-modal-open js-tpl0" href="javascript:void(0);">
+  モーダル
+</a>
+<a class="cp-btn-green js-modal-open js-tpl1" href="javascript:void(0);">
+  モーダル1
+</a>

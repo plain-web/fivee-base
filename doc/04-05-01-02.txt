@@ -1,0 +1,27 @@
+﻿<!-- nav block trigger//////////////////////// -->
+<nav class="md-nav-block js-nav-block js-nav-block-select0 is-col4 ef-mgb30">
+  <div class="st-inner">
+    <ul class="ef-float">
+      <li class="js-nav-block-parent0 is-current">
+        <a class="ef-txt-bold ef-mgb7" href="javascript:void(0);">
+          ナビゲーション
+        </a>
+      </li>
+      <li class="js-nav-block-parent1">
+        <a class="ef-txt-bold ef-mgb7" href="javascript:void(0);">
+          ナビゲーション1
+        </a>
+      </li>
+      <li class="js-nav-block-parent2">
+        <a class="ef-txt-bold ef-mgb7" href="javascript:void(0);">
+          ナビゲーション2
+        </a>
+      </li>
+      <li class="js-nav-block-parent3">
+        <a class="ef-txt-bold ef-mgb7" href="javascript:void(0);">
+          ナビゲーション3
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

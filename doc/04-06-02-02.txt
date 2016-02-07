@@ -1,0 +1,27 @@
+﻿<!-- / table/////////////////////////// -->
+<table class="md-table-base ef-w100p">
+  <thead>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <th colspan="3">
+        <a href="javascript:void(0);">
+          vertical
+        </a>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <td class="ef-h100 ef-vat">
+        top
+      </td>
+      <td class="ef-h100 ef-vam">
+        middle
+      </td>
+      <td class="ef-h100 ef-vab">
+        bottom
+      </td>
+    </tr>
+  </tbody>
+</table>

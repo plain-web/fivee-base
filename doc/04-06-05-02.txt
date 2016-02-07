@@ -1,0 +1,34 @@
+﻿<section class="ef-mgb20">
+  <ul class="ef-float20 ef-list-decimal ef-lh30 js-col">
+    <li>
+      <a href="javascript:void(0);">
+        col
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void(0);">
+        col
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void(0);">
+        col
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void(0);">
+        col
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void(0);">
+        col
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void(0);">
+        col
+      </a>
+    </li>
+  </ul>
+</section>

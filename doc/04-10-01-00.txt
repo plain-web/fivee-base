@@ -1,0 +1,185 @@
+﻿<!-- / tab /////////////////////////// -->
+<section class="md-tab-scroll js-tab-scroll ef-mgb20">
+  <div class="st-body md-tab-btn">
+    <div class="st-inner">
+      <!-- / arrow /////////////////////////// -->
+      <div class="md-tab-btn-left">
+        <ul class="js-tab-arrow-left is-disable">
+          <li class="md-notab">
+            <a href="javascript:void(0);">
+              <i class="fa fa-caret-left"></i>
+            </a>
+            <div class="md-tab-underbar"></div>
+          </li>
+        </ul>
+      </div>
+      <!-- / tab /////////////////////////// -->
+      <div class="md-tab-btn-center">
+        <ul class="ef-float3 js-tab-scroll-select">
+          <li class="is-current">
+            <a class="ef-mxw150-ovf ef-txt-ellipsis" href="javascript:void(0);">
+              tab0
+            </a>
+            <div class="md-tab-underbar"></div>
+          </li>
+          <li>
+            <a class="ef-mxw150-ovf ef-txt-ellipsis" href="javascript:void(0);">
+              tab1
+            </a>
+            <div class="md-tab-underbar"></div>
+          </li>
+          <li>
+            <a class="ef-mxw150-ovf ef-txt-ellipsis" href="javascript:void(0);">
+              tab2
+            </a>
+            <div class="md-tab-underbar"></div>
+          </li>
+          <li>
+            <a class="ef-mxw150-ovf ef-txt-ellipsis" href="javascript:void(0);">
+              tab3
+            </a>
+            <div class="md-tab-underbar"></div>
+          </li>
+          <li>
+            <a class="ef-mxw150-ovf ef-txt-ellipsis" href="javascript:void(0);">
+              tab4
+            </a>
+            <div class="md-tab-underbar"></div>
+          </li>
+          <li>
+            <a class="ef-mxw150-ovf ef-txt-ellipsis" href="javascript:void(0);">
+              tab5
+            </a>
+            <div class="md-tab-underbar"></div>
+          </li>
+          <li>
+            <a class="ef-mxw150-ovf ef-txt-ellipsis" href="javascript:void(0);">
+              tab6
+            </a>
+            <div class="md-tab-underbar"></div>
+          </li>
+          <li>
+            <a class="ef-mxw150-ovf ef-txt-ellipsis" href="javascript:void(0);">
+              tab7
+            </a>
+            <div class="md-tab-underbar"></div>
+          </li>
+        </ul>
+      </div>
+      <!-- / arrow /////////////////////////// -->
+      <div class="md-tab-btn-right">
+        <ul class="js-tab-arrow-right is-disable">
+          <li class="md-notab">
+            <a href="javascript:void(0);">
+              <i class="fa fa-caret-right"></i>
+            </a>
+            <div class="md-tab-underbar"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- tab content//////////////////////////////////////// -->
+  <div class="st-body md-tab-content">
+    <div class="st-inner">
+      <ul class="js-tab-scroll-content">
+        <!-- /● tab content /////////////////////////// -->
+        <li class="is-current">
+          <section>
+            <div class="st-inner">
+              <strong>
+                tab0
+              </strong>
+              <br>
+              タブの内容はここ
+            </div>
+          </section>
+        </li>
+        <!-- /● tab content /////////////////////////// -->
+        <li>
+          <section>
+            <div class="st-inner">
+              <strong>
+                tab1
+              </strong>
+              <br>
+              タブの内容はここ
+            </div>
+          </section>
+        </li>
+        <!-- /● tab content /////////////////////////// -->
+        <li>
+          <section>
+            <div class="st-inner">
+              <strong>
+                tab2
+              </strong>
+              <br>
+              タブの内容はここ
+            </div>
+          </section>
+        </li>
+        <!-- /● tab content /////////////////////////// -->
+        <li>
+          <section>
+            <div class="st-inner">
+              <strong>
+                tab3
+              </strong>
+              <br>
+              タブの内容はここ
+            </div>
+          </section>
+        </li>
+        <!-- /● tab content /////////////////////////// -->
+        <li>
+          <section>
+            <div class="st-inner">
+              <strong>
+                tab4
+              </strong>
+              <br>
+              タブの内容はここ
+            </div>
+          </section>
+        </li>
+        <!-- /● tab content /////////////////////////// -->
+        <li>
+          <section>
+            <div class="st-inner">
+              <strong>
+                tab5
+              </strong>
+              <br>
+              タブの内容はここ
+            </div>
+          </section>
+        </li>
+        <!-- /● tab content /////////////////////////// -->
+        <li>
+          <section>
+            <div class="st-inner">
+              <strong>
+                tab6
+              </strong>
+              <br>
+              タブの内容はここ
+            </div>
+          </section>
+        </li>
+        <!-- /● tab content /////////////////////////// -->
+        <li>
+          <section>
+            <div class="st-inner">
+              <strong>
+                tab7
+              </strong>
+              <br>
+              タブの内容はここ
+            </div>
+          </section>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

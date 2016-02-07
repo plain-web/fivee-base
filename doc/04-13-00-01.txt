@@ -1,0 +1,39 @@
+﻿<!-- modal/////////////////////////////////////////////// -->
+<section class="md-modal js-modal" style="display:none;">
+  <!-- modal contents type 'js-tpl0' -->
+  <div class="st-body md-image-viewer ef-w500 js-tpl0">
+    <div class="st-inner">
+      <!-- modal-header /////////////////// -->
+      <div class="md-modal-header">
+        <div class="st-inner">
+          <div class="md-modal-title">
+            <h6>
+              viewer example
+            </h6>
+          </div>
+          <div class="md-modal-close">
+            <a class="ef-fs20 js-modal-close" href="javascript:void(0);">
+              <i class="fa fa-times"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- modal-body  //////////////////// -->
+      <div class="md-modal-body ef-mh250 ef-pd20 ef-mxh350-ovf">
+        <section class="ef-txt-center">
+          <img class="ef-wauto" src="../img/test-01.png">
+        </section>
+      </div>
+      <!-- modal-footer ////////////////// -->
+      <div class="md-modal-footer">
+        <div class="ef-txt-center">
+          <a class="cp-btn ef-mw100 js-modal-close" href="javascript:void(0);">
+            close
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- cartain//////////////////////////////////////////// -->
+<section class="md-cartain js-cartain ef-bg-black ef-op05" style="display:none;"></section>

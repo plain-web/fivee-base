@@ -1,0 +1,60 @@
+﻿<!-- / table/////////////////////////// -->
+<table class="md-table-base ef-w100p ef-mgb20">
+  <thead class="is-hover">
+    <!-- tr /////////////////////// -->
+    <tr>
+      <th colspan="4">
+        <a href="javascript:void(0);">
+          hover
+        </a>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="is-hover">
+    <!-- tr /////////////////////// -->
+    <tr>
+      <td>
+        hover
+      </td>
+      <td>
+        hover
+      </td>
+      <td>
+        hover
+      </td>
+      <td>
+        hover
+      </td>
+    </tr>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <td>
+        hover
+      </td>
+      <td class="is-reset">
+        hover
+      </td>
+      <td>
+        hover
+      </td>
+      <td>
+        hover
+      </td>
+    </tr>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <td>
+        hover
+      </td>
+      <td>
+        hover
+      </td>
+      <td>
+        hover
+      </td>
+      <td>
+        hover
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,22 @@
+﻿<ul class="ef-float10">
+  <li>
+    <a class="cp-btn js-toast-open js-tpl0" href="javascript:void(0);">
+      alert
+    </a>
+  </li>
+  <li>
+    <a class="cp-btn js-toast-open js-tpl1" href="javascript:void(0);">
+      success
+    </a>
+  </li>
+  <li>
+    <a class="cp-btn js-toast-open js-tpl2" href="javascript:void(0);">
+      info
+    </a>
+  </li>
+  <li>
+    <a class="cp-btn js-toast-open js-tpl3" href="javascript:void(0);">
+      warning
+    </a>
+  </li>
+</ul>

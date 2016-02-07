@@ -1,25 +1,25 @@
-﻿<span class="ef-rd5 ef-bg-theme ef-pd10 ef-mgr20">
-  <span class="ef-cl-white">
+﻿<span class="ef-rd5 ef-cl-theme ef-pd10 ef-mgr20">
+  <span class="ef-txt-white">
     all
   </span>
 </span>
-<span class="ef-rdt5 ef-bg-theme ef-pd10 ef-mgr20">
-  <span class="ef-cl-white">
+<span class="ef-rdt5 ef-cl-theme ef-pd10 ef-mgr20">
+  <span class="ef-txt-white">
     top
   </span>
 </span>
-<span class="ef-rdr5 ef-bg-theme ef-pd10 ef-mgr20">
-  <span class="ef-cl-white">
+<span class="ef-rdr5 ef-cl-theme ef-pd10 ef-mgr20">
+  <span class="ef-txt-white">
     right
   </span>
 </span>
-<span class="ef-rdb5 ef-bg-theme ef-pd10 ef-mgr20">
-  <span class="ef-cl-white">
+<span class="ef-rdb5 ef-cl-theme ef-pd10 ef-mgr20">
+  <span class="ef-txt-white">
     bottom
   </span>
 </span>
-<span class="ef-rdl5 ef-bg-theme ef-pd10 ef-mgr20">
-  <span class="ef-cl-white">
+<span class="ef-rdl5 ef-cl-theme ef-pd10 ef-mgr20">
+  <span class="ef-txt-white">
     left
   </span>
 </span>

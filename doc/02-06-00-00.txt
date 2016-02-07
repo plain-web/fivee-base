@@ -57,9 +57,7 @@
 <div class="cp-panel ef-w300">
   <div class="st-body">
     <div class="st-inner ef-bg-theme">
-      <div class="ef-cl-white">
-        theme
-      </div>
+      theme
     </div>
   </div>
 </div>

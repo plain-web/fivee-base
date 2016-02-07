@@ -1,0 +1,23 @@
+﻿<ul id="js-eql">
+  <li class="ef-mgb10">
+    <div class="ef-w100 ef-cl-blue js-eql-width">
+      <div class="ef-txt-center ef-txt-white">
+        元の幅width:100px;
+      </div>
+    </div>
+  </li>
+  <li class="ef-mgb10">
+    <div class="ef-w120 ef-cl-blue js-eql-width">
+      <div class="ef-txt-center ef-txt-white">
+        元の幅width:150px;
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="ef-w200 ef-cl-blue js-eql-width">
+      <div class="ef-txt-center ef-txt-white">
+        元の幅width:200px;
+      </div>
+    </div>
+  </li>
+</ul>

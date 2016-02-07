@@ -1,0 +1,6 @@
+﻿<a class="cp-btn-blue js-loader-on" href="javascript:void(0);">
+  ローダーを開く
+</a>
+<a class="cp-btn-brown js-loader-off" href="javascript:void(0);">
+  ローダーを閉じる
+</a>
