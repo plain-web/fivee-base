@@ -1,0 +1,10 @@
+﻿<section class="ef-mgb10">
+  <div class="is-bold">
+    ボールドにする
+  </div>
+</section>
+<section class="ef-mgb10">
+  <strong class="is-nobold">
+    ボールドにしない
+  </strong>
+</section>

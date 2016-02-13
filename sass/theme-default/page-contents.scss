@@ -13,7 +13,7 @@
   .st-body{
     @include min-width($app-minWidth);
     background:$cl-bg-header;
-    &.ef-header-fix{
+    &.ef-posi-fix{
       @include posi-fix(0,0,auto,0);
       z-index:3;
     }
@@ -78,7 +78,7 @@
  */
 .page-footer{
   .st-body{
-    &.ef-footer-fix{
+    &.ef-posi-fix{
       @include posi-fix(auto,0,0,0);
       z-index:3;
     }
@@ -96,7 +96,7 @@
  */
 .page-container{
   >.st-body{
-    margin:40px 0 20px;
+    margin:$page-header-height 0 $page-footer-height;
     >.st-inner{
       margin-bottom:30px;
       // page-main ////////////////////////////
@@ -121,7 +121,7 @@
 /* =============================================================
  ▼ pages
 ============================================================== */
-@media (max-width: 768px) {
+@media (max-width: $breakpoint2-3) {
   .page-container{
     >.st-body{
       >.st-inner{

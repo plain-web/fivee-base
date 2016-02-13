@@ -1,5 +1,90 @@
-﻿<!-- / aside////////////////////////////////////////////// -->
-<aside class="md-aside-main js-aside-main">
+﻿<!-- slide-nav////////////////////////////////////////////// -->
+<section class="md-nav-slide rs1-show js-nav-slide">
   <div class="st-body">
     <div class="st-inner">
-      内容はここ
+      <ul class="ef-lh40">
+        <li>
+          <a href="https://twitter.com/plain_web" target="_blank">
+            <ul class="ef-float3">
+              <li>
+                質問・感想
+              </li>
+            </ul>
+          </a>
+        </li>
+        <li>
+          <a href="../index.html">
+            <ul class="ef-float3">
+              <li>
+                導入方法
+              </li>
+              <li>
+                <span class="cp-badge-red">
+                  53
+                </span>
+              </li>
+            </ul>
+          </a>
+        </li>
+        <li>
+          <a class="js-popup-inset-open js-tpl1" href="javascript:void(0);">
+            <ul class="ef-float3">
+              <li>
+                Message
+              </li>
+              <li>
+                <span class="cp-badge-red">
+                  2
+                </span>
+              </li>
+              <li class="js-ic-arrow">
+                <i class="fa fa-caret-down"></i>
+              </li>
+            </ul>
+          </a>
+        </li>
+        <li>
+          <a class="js-popup-inset-open js-tpl0" href="javascript:void(0);">
+            <ul class="ef-float3">
+              <li>
+                Your name
+              </li>
+              <li class="js-ic-arrow">
+                <i class="fa fa-caret-down"></i>
+              </li>
+            </ul>
+          </a>
+          <ul class="ef-txt-indent1 js-collapse-num0" style="display:none;">
+            <li>
+              <a href="javascript:void(0);">
+                <ul class="ef-float3">
+                  <li class="ef-mgl3">
+                    Project
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <ul class="ef-float3">
+                  <li class="ef-mgl3">
+                    My account
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <ul class="ef-float3">
+                  <li class="ef-mgl3">
+                    ログアウト
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

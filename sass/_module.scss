@@ -171,10 +171,8 @@
 .md-popup{
   >.st-body{
     @include posi-abs(0,auto,auto,auto);
-    &.ef-posi-fix{@extend .ef-posi-fix;}
     border:1px solid $cl-brd-base;
     @include border-radius(7px);
-    @include box-shadow(rgba($cl-brd-base, 0.5) 0 0 5px);
     background:$cl-bg-popup;
     display:none;
     z-index:2;
@@ -445,7 +443,6 @@ table.md-table-base{
     .st-inner{
       padding:10px 20px 10px 15px;
       @include border-radius(3px);
-      @include box-shadow(rgba($cl-brd-base, 0.3) 1px 2px 5px);
       i{font-size:$fs-h5;}
     }
     .md-message-close{
@@ -500,7 +497,6 @@ table.md-table-base{
     .st-inner{
       padding:10px 20px 10px 15px;
       @include border-radius(3px);
-      @include box-shadow(rgba($cl-brd-base, 0.3) 1px 2px 5px);
       i{font-size:$fs-h5;}
     }
     .md-toast-close{
@@ -773,7 +769,6 @@ table.md-table-base{
     @include posi-fix(50%,0,0,50%);
     z-index:1;
     .st-inner{
-      @include box-shadow-base;
       @include border-radius(5px);
       background:#fff;
       width:180px;

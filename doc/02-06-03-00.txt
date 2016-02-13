@@ -1,62 +1,62 @@
-﻿<div class="cp-panel-mini ef-w100p ef-mgb10">
+﻿<div class="cp-panel-mini-white ef-w100p ef-mgb10">
   <div class="st-body">
-    <div class="st-inner ef-bg-white">
+    <div class="st-inner">
       white
     </div>
   </div>
 </div>
-<div class="cp-panel-mini ef-w100p ef-mgb10">
+<div class="cp-panel-mini-red ef-w100p ef-mgb10">
   <div class="st-body">
-    <div class="st-inner ef-bg-red">
+    <div class="st-inner">
       red
     </div>
   </div>
 </div>
-<div class="cp-panel-mini ef-w100p ef-mgb10">
+<div class="cp-panel-mini-orange ef-w100p ef-mgb10">
   <div class="st-body">
-    <div class="st-inner ef-bg-orange">
+    <div class="st-inner">
       orange
     </div>
   </div>
 </div>
-<div class="cp-panel-mini ef-w100p ef-mgb10">
+<div class="cp-panel-mini-blue ef-w100p ef-mgb10">
   <div class="st-body">
-    <div class="st-inner ef-bg-blue">
+    <div class="st-inner">
       blue
     </div>
   </div>
 </div>
-<div class="cp-panel-mini ef-w100p ef-mgb10">
+<div class="cp-panel-mini-green ef-w100p ef-mgb10">
   <div class="st-body">
-    <div class="st-inner ef-bg-green">
+    <div class="st-inner">
       green
     </div>
   </div>
 </div>
-<div class="cp-panel-mini ef-w100p ef-mgb10">
+<div class="cp-panel-mini-yellow ef-w100p ef-mgb10">
   <div class="st-body">
-    <div class="st-inner ef-bg-yellow">
+    <div class="st-inner">
       yellow
     </div>
   </div>
 </div>
-<div class="cp-panel-mini ef-w100p ef-mgb10">
+<div class="cp-panel-mini-brown ef-w100p ef-mgb10">
   <div class="st-body">
-    <div class="st-inner ef-bg-brown">
+    <div class="st-inner">
       brown
     </div>
   </div>
 </div>
-<div class="cp-panel-mini ef-w100p ef-mgb10">
+<div class="cp-panel-mini-gray ef-w100p ef-mgb10">
   <div class="st-body">
-    <div class="st-inner ef-bg-gray">
+    <div class="st-inner">
       gray
     </div>
   </div>
 </div>
-<div class="cp-panel-mini ef-w100p">
+<div class="cp-panel-mini-theme ef-w100p">
   <div class="st-body">
-    <div class="st-inner ef-bg-theme">
+    <div class="st-inner">
       theme
     </div>
   </div>

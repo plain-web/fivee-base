@@ -1,0 +1,47 @@
+﻿<ul class="ef-float10">
+  <li class="ef-pd10">
+    <div class="ef-pd10 ef-sdwb01">
+      shadow01
+    </div>
+  </li>
+  <li class="ef-pd10">
+    <div class="ef-pd10 ef-sdwb02">
+      shadow02
+    </div>
+  </li>
+  <li class="ef-pd10">
+    <div class="ef-pd10 ef-sdwb03">
+      shadow03
+    </div>
+  </li>
+  <li class="ef-pd10">
+    <div class="ef-pd10 ef-sdwb04">
+      shadow04
+    </div>
+  </li>
+  <li class="ef-pd10">
+    <div class="ef-pd10 ef-sdwb05">
+      shadow05
+    </div>
+  </li>
+  <li class="ef-pd10">
+    <div class="ef-pd10 ef-sdwb06">
+      shadow06
+    </div>
+  </li>
+  <li class="ef-pd10">
+    <div class="ef-pd10 ef-sdwb07">
+      shadow07
+    </div>
+  </li>
+  <li class="ef-pd10">
+    <div class="ef-pd10 ef-sdwb08">
+      shadow08
+    </div>
+  </li>
+  <li class="ef-pd10">
+    <div class="ef-pd10 ef-sdwb09">
+      shadow09
+    </div>
+  </li>
+</ul>

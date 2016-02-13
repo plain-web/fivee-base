@@ -2,7 +2,7 @@
 <section class="md-message js-message">
   <!-- message contents type 'js-tpl0' -->
   <div class="st-body md-message-alert ef-mgt20 js-tpl0">
-    <div class="st-inner">
+    <div class="st-inner ef-sdw01">
       <div class="md-message-close">
         <a class="js-message-close" href="javascript:void(0);">
           <i class="fa fa-times"></i>
@@ -19,7 +19,7 @@
   </div>
   <!-- message contents type 'js-tpl1' -->
   <div class="st-body md-message-success ef-mgt20 js-tpl1">
-    <div class="st-inner">
+    <div class="st-inner ef-sdw01">
       <div class="md-message-close">
         <a class="js-message-close" href="javascript:void(0);">
           <i class="fa fa-times"></i>
@@ -36,7 +36,7 @@
   </div>
   <!-- message contents type 'js-tpl2' -->
   <div class="st-body md-message-info ef-mgt20 js-tpl2">
-    <div class="st-inner">
+    <div class="st-inner ef-sdw01">
       <div class="md-message-close">
         <a class="js-message-close" href="javascript:void(0);">
           <i class="fa fa-times"></i>
@@ -53,7 +53,7 @@
   </div>
   <!-- message contents type 'js-tpl3' -->
   <div class="st-body md-message-warning ef-mgt20 js-tpl3">
-    <div class="st-inner">
+    <div class="st-inner ef-sdw01">
       <div class="md-message-close">
         <a class="js-message-close" href="javascript:void(0);">
           <i class="fa fa-times"></i>

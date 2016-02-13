@@ -23,7 +23,7 @@
   background: #485169;
 }
 
-.page-header .st-body.ef-header-fix {
+.page-header .st-body.ef-posi-fix {
   position: fixed;
   top: 0;
   right: 0;
@@ -98,7 +98,7 @@
   background-color: #485169;
 }
 
-.page-footer .st-body.ef-footer-fix {
+.page-footer .st-body.ef-posi-fix {
   position: fixed;
   top: auto;
   right: 0;

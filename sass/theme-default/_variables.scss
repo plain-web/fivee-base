@@ -13,6 +13,14 @@ $app-minHeight: auto;
 $app-maxWidth: auto;
 $app-maxHeight: auto;
 
+//page parts height
+$page-header-height:40px;
+$page-footer-height:20px;
+
+//breakpoint border
+$breakpoint1-2: 480px; //| 1←|→2　| 3 |
+$breakpoint2-3: 768px; //| 1 |　2←|→3 |
+
 //app font family
 $ff-base: Meiryo,メイリオ,Arial,Verdana,"Helvetica Neue",Helvetica,sans-serif;
 
@@ -25,7 +33,7 @@ $fs-h6:16px;
 $fs-h5:18px;
 $fs-h4:20px;
 $fs-h3:21px;
-$fs-h2:22px;
+$fs-h2:18px;
 $fs-h1:24px;
 
 //line height
@@ -122,6 +130,9 @@ $cl-brd-darken: darken( $cl-brd-base, 5% );
 //focus color
 $cl-brd-focus :#8691C1;
 $cl-bg-focus :#EDF3F7;
+
+//shadow color
+$cl-shadow-base: $cl-txt-base;
 
 //button color
 $cl-btn-base:#eee;

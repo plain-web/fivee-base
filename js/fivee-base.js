@@ -68,7 +68,7 @@ $(window).scroll(function() {
 ======================================================================== */
 //check remove contents
 var pageTopRemove =  $('.js-pageTop-remove');
-if(pageTopRemove){
+if(pageTopRemove.length){
   pageTopRemoveVal = pageTopRemoveHeightSum();
 }else{
   pageTopRemoveVal = 0;
@@ -485,18 +485,38 @@ var popupHandler = {
     //show contents
     $('.js-popup > .st-body').removeClass('is-current');
     $('.js-popup ' + targetClass).addClass('is-current');
+    var posiType = $('.js-popup ' + targetClass).hasClass('js-posi-fix');
 
-    //position
-    $('.js-popup ' + targetClass).css({
-      top:'',
-      left:'',
-      right:''
-    }).css({
-      top: topPosi,
-      bottom: 'auto',
-      right: rightPosi,
-      left: 'auto'
-    });
+    if(posiType){
+      topPosi = topPosi - $(window).scrollTop();
+      rightPosi = rightPosi + $(window).scrollLeft();
+      //position
+      $('.js-popup ' + targetClass).css({
+        position:'',
+        top:'',
+        left:'',
+        right:''
+      }).css({
+        position:'fixed',
+        top: topPosi,
+        bottom: 'auto',
+        right: rightPosi,
+        left: 'auto'
+      });
+    }else{
+      //position
+      $('.js-popup ' + targetClass).css({
+        position:'',
+        top:'',
+        left:'',
+        right:''
+      }).css({
+        top: topPosi,
+        bottom: 'auto',
+        right: rightPosi,
+        left: 'auto'
+      });
+    }
     popupShowHide();
   }
 }
@@ -529,18 +549,38 @@ var popupInsetHandler = {
     //show contents
     $('.js-popup > .st-body').removeClass('is-current');
     $('.js-popup ' + targetClass).addClass('is-current');
+    var posiType = $('.js-popup ' + targetClass).hasClass('js-posi-fix');
 
-    //position
-    $('.js-popup ' + targetClass).css({
-      top:'',
-      left:'',
-      right:''
-    }).css({
-      top: topPosi,
-      bottom: 'auto',
-      right: 10,
-      left: 10
-    });
+    if(posiType){
+      topPosi = topPosi - $(window).scrollTop();
+      //position
+      $('.js-popup ' + targetClass).css({
+        position:'',
+        top:'',
+        left:'',
+        right:''
+      }).css({
+        position:'fixed',
+        top: topPosi,
+        bottom: 'auto',
+        right: 10,
+        left: 10
+      });
+    }else{
+      //position
+      $('.js-popup ' + targetClass).css({
+        position:'',
+        top:'',
+        left:'',
+        right:''
+      }).css({
+        position:'fixed',
+        top: topPosi,
+        bottom: 'auto',
+        right: 10,
+        left: 10
+      });
+    }
     popupShowHide();
   }
 }
@@ -551,7 +591,7 @@ function popupShowHide(){
     popupFlgCount.push(popupFlg);
   });
   //hide popup
-  $('body').on('click', function(){
+  popupFlgCheck.on('click', function(){
     lastFlg = popupFlgCount[popupFlgCount.length-1];
     if(lastFlg === 'popupOpen'){
       $('.js-popup').hide(100);
@@ -1065,7 +1105,7 @@ $('.js-aside-main-open').on('click', function(){
   if(asideFlg === 1){
     $('.js-aside-main').addClass('is-transition').delay(500).addClass('is-open');
     //click body
-    $('main:not(.js-aside-main)').on('click', function(){
+    $('.js-page-contents:not(.js-aside-main)').on('click', function(){
       $('.js-aside-main').removeClass('is-open').delay(1000).queue(function() {
         $(this).removeClass('is-transition').dequeue();
       });
@@ -1089,7 +1129,7 @@ $('.js-nav-slide-open').on('click', function(){
   if(slideNavFlg === 1){
     $('.js-nav-slide').addClass('is-transition').delay(500).addClass('is-open');
     //click body
-    $('main:not(.js-nav-slide)').on('click', function(){
+    $('.js-page-contents:not(.js-nav-slide)').on('click', function(){
       $('.js-nav-slide').removeClass('is-open').delay(1000).queue(function() {
         $(this).removeClass('is-transition').dequeue();
       });

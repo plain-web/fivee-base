@@ -1,4 +1,4 @@
-﻿<div class="cp-remarks ef-w100p ef-mgb10">
+﻿<div class="cp-remarks-white ef-w100p ef-mgb10">
   <div class="st-inner">
     <div class="st-outer ef-lh20">
       white

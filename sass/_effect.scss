@@ -9,10 +9,6 @@
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
  * =============================================================
- ▼ cursor
- ============================================================== */
-.ef-cursor-move{cursor: url(face.cur), move;}  //move
-/* =============================================================
  ▼ color
 ============================================================== */
 .ef-cl-white{background:$cl-white;}
@@ -35,27 +31,69 @@
 /* =============================================================
  ▼ text color
 ============================================================== */
-.ef-txt-white{color:$cl-txt-white;}
-.ef-txt-red{color:$cl-txt-red;}
-.ef-txt-orange{color:$cl-txt-orange;}
-.ef-txt-blue{color:$cl-txt-blue;}
-.ef-txt-green{color:$cl-txt-green;}
-.ef-txt-yellow{color:$cl-txt-yellow;}
-.ef-txt-brown{color:$cl-txt-brown;}
-.ef-txt-black{color:$cl-txt-black;}
-.ef-txt-gray{color:$cl-txt-gray;}
-.ef-txt-gray1{color:$cl-txt-gray1;}
-.ef-txt-gray2{color:$cl-txt-gray2;}
-.ef-txt-gray3{color:$cl-txt-gray3;}
-.ef-txt-gray4{color:$cl-txt-gray4;}
-.ef-txt-gray5{color:$cl-txt-gray5;}
-.ef-txt-gray6{color:$cl-txt-gray6;}
-.ef-txt-gray7{color:$cl-txt-gray7;}
-.ef-txt-base{color:$cl-txt-base;}
-.ef-txt-rev{color:$cl-txt-rev;}
-.ef-txt-theme{color:$cl-txt-theme;}
-.ef-txt-link{color:$cl-txt-link;}
-.ef-txt-hover{color:$cl-txt-hover;}
+.ef-txt-white,
+a.ef-txt-white{color:$cl-txt-white;}
+.ef-txt-white{a{color:$cl-txt-white;}}
+.ef-txt-red,
+a.ef-txt-red{color:$cl-txt-red;}
+.ef-txt-red{a{color:$cl-txt-red;}}
+.ef-txt-orange,
+a.ef-txt-orange{color:$cl-txt-orange;}
+.ef-txt-orange{a{color:$cl-txt-orange;}}
+.ef-txt-blue,
+a.ef-txt-blue{color:$cl-txt-blue;}
+.ef-txt-blue{a{color:$cl-txt-blue;}}
+.ef-txt-green,
+a.ef-txt-green{color:$cl-txt-green;}
+.ef-txt-green{a{color:$cl-txt-green;}}
+.ef-txt-yellow,
+a.ef-txt-yellow{color:$cl-txt-yellow;}
+.ef-txt-yellow{a{color:$cl-txt-yellow;}}
+.ef-txt-brown,
+a.ef-txt-brown{color:$cl-txt-brown;}
+.ef-txt-brown{a{color:$cl-txt-brown;}}
+.ef-txt-black,
+a.ef-txt-black{color:$cl-txt-black;}
+.ef-txt-black{a{color:$cl-txt-black;}}
+.ef-txt-gray,
+a.ef-txt-gray{color:$cl-txt-gray;}
+.ef-txt-gray{a{color:$cl-txt-gray;}}
+.ef-txt-gray1,
+a.ef-txt-gray1{color:$cl-txt-gray1;}
+.ef-txt-gray1{a{color:$cl-txt-gray1;}}
+.ef-txt-gray2,
+a.ef-txt-gray2{color:$cl-txt-gray2;}
+.ef-txt-gray2{a{color:$cl-txt-gray2;}}
+.ef-txt-gray3,
+a.ef-txt-gray3{color:$cl-txt-gray3;}
+.ef-txt-gray3{a{color:$cl-txt-gray3;}}
+.ef-txt-gray4,
+a.ef-txt-gray4{color:$cl-txt-gray4;}
+.ef-txt-gray4{a{color:$cl-txt-gray4;}}
+.ef-txt-gray5,
+a.ef-txt-gray5{color:$cl-txt-gray5;}
+.ef-txt-gray5{a{color:$cl-txt-gray5;}}
+.ef-txt-gray6,
+a.ef-txt-gray6{color:$cl-txt-gray6;}
+.ef-txt-gray6{a{color:$cl-txt-gray6;}}
+.ef-txt-gray7,
+a.ef-txt-gray7{color:$cl-txt-gray7;}
+.ef-txt-gray7{a{color:$cl-txt-gray7;}}
+.ef-txt-base,
+a.ef-txt-base{color:$cl-txt-base;}
+.ef-txt-base{a{color:$cl-txt-base;}}
+.ef-txt-rev,
+a.ef-txt-rev{color:$cl-txt-rev;}
+.ef-txt-rev{a{color:$cl-txt-rev;}}
+.ef-txt-theme,
+a.ef-txt-theme{color:$cl-txt-theme;}
+.ef-txt-theme{a{color:$cl-txt-theme;}}
+.ef-txt-link,
+a.ef-txt-link{color:$cl-txt-link;}
+.ef-txt-link{a{color:$cl-txt-link;}}
+.ef-txt-hover,
+a.ef-txt-hover{color:$cl-txt-hover;}
+.ef-txt-hover{a{color:$cl-txt-hover;}}
 /* =============================================================
  ▼ background color
 ============================================================== */
@@ -92,7 +130,39 @@
 //bold
 .is-bold{font-weight:bold;}
 .is-nobold{font-weight:normal;}
-
+//link
+a.is-link{
+	color:$cl-txt-link !important;
+	i{color:$cl-txt-link !important;}
+	&:hover{
+		color:$cl-txt-hover !important;
+		i{color:$cl-txt-hover !important;}	
+	}
+}
+a.is-linkrev{
+	text-decoration:underline;
+	&:hover{
+		text-decoration:none;
+	}
+}
+a.is-noclick{
+  @include opacity(0.5);
+  cursor: not-allowed;
+	&:hover{
+		color:$cl-txt-link;
+		@include opacity(0.5);
+		text-decoration: none;
+	}
+}
+a.is-notouch{
+  @include opacity(0.5);
+  cursor: not-allowed;
+	&:hover{
+		@include opacity(0.5);
+		text-decoration: none;
+		background:transparent !important;
+	}
+}
 // align
 .ef-txt-left{text-align:left;}
 .ef-txt-right{text-align:right;}
@@ -1574,17 +1644,38 @@
 .ef-op10{@include opacity(1.0);}
 .ef-op0{@include opacity(0);}
 /* =============================================================
- ▼ box-shadow
+ ▼ shadow box
 ============================================================== */
-.ef-shadow01{@include box-shadow(0 0 5px rgba($cl-txt-base, .1));}
-.ef-shadow02{@include box-shadow(0 0 5px rgba($cl-txt-base, .2));}
-.ef-shadow03{@include box-shadow(0 0 5px rgba($cl-txt-base, .3));}
-.ef-shadow04{@include box-shadow(0 0 5px rgba($cl-txt-base, .4));}
-.ef-shadow05{@include box-shadow(0 0 5px rgba($cl-txt-base, .5));}
-.ef-shadow06{@include box-shadow(0 0 5px rgba($cl-txt-base, .6));}
-.ef-shadow07{@include box-shadow(0 0 5px rgba($cl-txt-base, .7));}
-.ef-shadow08{@include box-shadow(0 0 5px rgba($cl-txt-base, .8));}
-.ef-shadow09{@include box-shadow(0 0 5px rgba($cl-txt-base, .9));}
+//all
+.ef-sdw01{@include box-shadow(0 0 5px rgba($cl-shadow-base, .1));}
+.ef-sdw02{@include box-shadow(0 0 5px rgba($cl-shadow-base, .2));}
+.ef-sdw03{@include box-shadow(0 0 5px rgba($cl-shadow-base, .3));}
+.ef-sdw04{@include box-shadow(0 0 5px rgba($cl-shadow-base, .4));}
+.ef-sdw05{@include box-shadow(0 0 5px rgba($cl-shadow-base, .5));}
+.ef-sdw06{@include box-shadow(0 0 5px rgba($cl-shadow-base, .6));}
+.ef-sdw07{@include box-shadow(0 0 5px rgba($cl-shadow-base, .7));}
+.ef-sdw08{@include box-shadow(0 0 5px rgba($cl-shadow-base, .8));}
+.ef-sdw09{@include box-shadow(0 0 5px rgba($cl-shadow-base, .9));}
+//right
+.ef-sdwr01{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow-base, .1));}
+.ef-sdwr02{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow-base, .2));}
+.ef-sdwr03{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow-base, .3));}
+.ef-sdwr04{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow-base, .4));}
+.ef-sdwr05{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow-base, .5));}
+.ef-sdwr06{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow-base, .6));}
+.ef-sdwr07{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow-base, .7));}
+.ef-sdwr08{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow-base, .8));}
+.ef-sdwr09{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow-base, .9));}
+//bottom
+.ef-sdwb01{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow-base, .1));}
+.ef-sdwb02{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow-base, .2));}
+.ef-sdwb03{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow-base, .3));}
+.ef-sdwb04{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow-base, .4));}
+.ef-sdwb05{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow-base, .5));}
+.ef-sdwb06{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow-base, .6));}
+.ef-sdwb07{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow-base, .7));}
+.ef-sdwb08{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow-base, .8));}
+.ef-sdwb09{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow-base, .9));}
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "view"
@@ -1600,22 +1691,15 @@
 .is-hidden{display:none;}
 .is-disable{
   @include opacity(0.5);
-  color:$cl-black;
   cursor: not-allowed;
 	&:hover{
 		@include opacity(0.5);
-		background:none;
-		color:$cl-black;
 		text-decoration: none;
 	}
 }
 a.is-disable{
   @extend .is-disable;
-  display:inline-block;
-}
-.is-grayout{
-  background-color:$cl-gray;
-  color:$cl-black;
+  // display:inline-block;
 }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -1632,10 +1716,6 @@ a.is-disable{
  ▼ centering
 ============================================================== */
 .ef-box-center{margin:auto;}
-/* =============================================================
- ▼ nowrap
-============================================================== */
-.ef-nowrap{white-space:nowrap;}
 /* =============================================================
  ▼ float
 ============================================================== */

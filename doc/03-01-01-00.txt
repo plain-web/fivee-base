@@ -1,11 +1,54 @@
-﻿<ul class="ef-float20 rs-bp3-ul-float">
-  <li>
-    float-left
-  </li>
-  <li>
-    float-left
-  </li>
-  <li class="ef-float-right">
-    float-right
-  </li>
-</ul>
+﻿<section class="ef-mgb20">
+  【1】有効幅1で解除させるクラスは
+  <span class="ef-txt-red">
+    rs1-ul-nofloat
+  </span>
+  になります。
+  <ul class="ef-float20 rs1-ul-nofloat">
+    <li>
+      float-left
+    </li>
+    <li>
+      float-left
+    </li>
+    <li class="ef-float-right">
+      float-right
+    </li>
+  </ul>
+</section>
+<section class="ef-mgb20">
+  【2】有効幅2で解除させるクラスは
+  <span class="ef-txt-red">
+    rs2-ul-nofloat
+  </span>
+  になります。
+  <ul class="ef-float20 rs2-ul-nofloat">
+    <li>
+      float-left
+    </li>
+    <li>
+      float-left
+    </li>
+    <li class="ef-float-right">
+      float-right
+    </li>
+  </ul>
+</section>
+<section class="ef-mgb20">
+  【3】有効幅3で解除させるクラスは
+  <span class="ef-txt-red">
+    rs3-ul-nofloat
+  </span>
+  になります。
+  <ul class="ef-float20 rs3-ul-nofloat">
+    <li>
+      float-left
+    </li>
+    <li>
+      float-left
+    </li>
+    <li class="ef-float-right">
+      float-right
+    </li>
+  </ul>
+</section>

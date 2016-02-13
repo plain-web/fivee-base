@@ -1,18 +1,22 @@
-﻿<div class="ef-txt-indent0">
-  txt-indent0
-</div>
-<div class="ef-txt-indent1">
-  txt-indent1
-</div>
-<div class="ef-txt-indent2">
-  txt-indent2
-</div>
-<div class="ef-txt-indent3">
-  txt-indent3
-</div>
-<div class="ef-txt-indent4">
-  txt-indent4
-</div>
-<div class="ef-txt-indent5">
-  txt-indent5
-</div>
+﻿<ul class="ef-float20">
+  <li>
+    <a href="#">
+      link
+    </a>
+  </li>
+  <li>
+    <a class="ef-txt-base" href="#">
+      link
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      link
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      link
+    </a>
+  </li>
+</ul>

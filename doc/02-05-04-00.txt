@@ -1,26 +1,63 @@
-﻿<dl class="ef-float rs-bp3-dl-float">
-  <dt class="ef-fs16 ef-w110">
-    Fivee-base
-  </dt>
-  <dd class="ef-mgl110">
-    about Fivee-base
-  </dd>
-  <dt class="ef-fs16 ef-w110">
-    Fivee-base
-  </dt>
-  <dd class="ef-mgl110">
-    about Fivee-base
-  </dd>
-  <dt class="ef-fs16 ef-w110">
-    Fivee-base
-  </dt>
-  <dd class="ef-mgl110">
-    about Fivee-base
-  </dd>
-  <dd class="ef-mgl110">
-    about Fivee-base
-  </dd>
-  <dd class="ef-mgl110">
-    about Fivee-base
-  </dd>
-</dl>
+﻿<section class="ef-mgb20">
+  【1】有効幅1で解除させるクラスは
+  <span class="ef-txt-red">
+    rs1-dl-nofloat
+  </span>
+  になります。
+  <dl class="ef-float rs1-dl-nofloat">
+    <dt class="ef-w110">
+      Fivee-base
+    </dt>
+    <dd class="ef-mgl110">
+      about Fivee-base
+    </dd>
+    <dt class="ef-w110">
+      Fivee-base
+    </dt>
+    <dd class="ef-mgl110">
+      about Fivee-base
+    </dd>
+  </dl>
+</section>
+<section class="ef-mgb20">
+  【2】有効幅2で解除させるクラスは
+  <span class="ef-txt-red">
+    rs2-dl-nofloat
+  </span>
+  になります。
+  <dl class="ef-float rs2-dl-nofloat">
+    <dt class="ef-w110">
+      Fivee-base
+    </dt>
+    <dd class="ef-mgl110">
+      about Fivee-base
+    </dd>
+    <dt class="ef-w110">
+      Fivee-base
+    </dt>
+    <dd class="ef-mgl110">
+      about Fivee-base
+    </dd>
+  </dl>
+</section>
+<section class="ef-mgb20">
+  【3】有効幅3で解除させるクラスは
+  <span class="ef-txt-red">
+    rs3-dl-nofloat
+  </span>
+  になります。
+  <dl class="ef-float rs3-dl-nofloat">
+    <dt class="ef-w110">
+      Fivee-base
+    </dt>
+    <dd class="ef-mgl110">
+      about Fivee-base
+    </dd>
+    <dt class="ef-w110">
+      Fivee-base
+    </dt>
+    <dd class="ef-mgl110">
+      about Fivee-base
+    </dd>
+  </dl>
+</section>

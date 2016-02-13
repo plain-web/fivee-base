@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
+var sassMin = require('gulp-sass');
 var haml = require('gulp-ruby-haml');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
@@ -15,7 +16,8 @@ var rename = require("gulp-rename");
 ======================================================================== */ 
 var path = {
   base: './',
-  js: './js/*.js',
+  js: ['./js/*.js', '!./js/*.min.js'],
+  jsMin: './js/',
   sass: './sass/**/*scss',
   css: './css',
   haml: './**/*.haml',
@@ -72,13 +74,12 @@ gulp.task('haml', function() {
 ======================================================================== */
 gulp.task('js', function() {
   gulp.src(path.js)
-    .pipe(changed('./js/min/'))
     .pipe(plumber())
     .pipe( uglify())
     .pipe(rename({
-        suffix: '.min'
+      suffix: '.min'
     }))
-    .pipe(gulp.dest('./js/min/'))
+    .pipe(gulp.dest(path.jsMin))
     .pipe(browserSync.reload({stream:true}));
 });
 /*========================================================================
@@ -90,6 +91,17 @@ gulp.task('sass', function() {
     .pipe(plumber())
     .pipe(sass({outputStyle: 'expanded'}))
     .pipe(autoprefixer())
+    .pipe(gulp.dest(path.css));
+});
+//minifi css
+gulp.task('sassMin', function() {
+  gulp.src(path.sass)
+    .pipe(plumber())
+    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(autoprefixer())
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(gulp.dest(path.css))
     .pipe(browserSync.reload({stream:true}));
 });
@@ -110,7 +122,7 @@ gulp.task('sass', function() {
 ======================================================================== */
 gulp.task('default', ['server'], function() {
   gulp.watch('./**/*.haml',['haml']);
-  gulp.watch(['./js/**/*.js','!./js/min/**/*.js'],['js']);
-  gulp.watch('./sass/**/*.scss',['sass']);
+  gulp.watch(['./js/**/*.js','!./js/**/*.min.js'],['js']);
+  gulp.watch('./sass/**/*.scss',['sass','sassMin']);
   //gulp.watch('./sass/_*.scss',['themeDefault']);
 });

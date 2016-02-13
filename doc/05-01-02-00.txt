@@ -1,0 +1,27 @@
+﻿<section class="ef-mgb20">
+  <a class="cp-btn is-disable" href="javascript:void(0);">
+    btn: is-disable
+  </a>
+  <a class="cp-btn-red is-disable" href="javascript:void(0);">
+    btn :is-disable
+  </a>
+  <a class="cp-btn-theme is-disable" href="javascript:void(0);">
+    btn :is-disable
+  </a>
+</section>
+<section class="ef-mgb20">
+  <a class="cp-tag is-disable" href="javascript:void(0);">
+    tag: is-disable
+  </a>
+  <a class="cp-tag-red is-disable" href="javascript:void(0);">
+    tag :is-disable
+  </a>
+  <a class="cp-tag-blue is-disable" href="javascript:void(0);">
+    tag: is-disable
+  </a>
+</section>
+<section>
+  <div class="is-disable">
+    text: is-disable
+  </div>
+</section>

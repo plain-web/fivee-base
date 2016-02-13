@@ -1,0 +1,9 @@
+﻿<section class="ef-posi-rel">
+  relative
+</section>
+<section class="ef-posi-abs">
+  absolute
+</section>
+<section class="ef-posi-fix">
+  fixed
+</section>

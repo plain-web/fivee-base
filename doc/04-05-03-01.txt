@@ -1,0 +1,5 @@
+﻿<!-- / aside////////////////////////////////////////////// -->
+<aside class="md-aside-main js-aside-main">
+  <div class="st-body">
+    <div class="st-inner">
+      内容はここ

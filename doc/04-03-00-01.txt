@@ -1,10 +1,10 @@
 ﻿<!-- popup///////////////////////////////////////////// -->
 <section class="md-popup js-popup" style="display:none;">
   <!-- popup contents type 'js-tpl0' -->
-  <div class="st-body ef-posi-fix js-tpl0">
-    <div class="st-inner">
+  <div class="st-body js-posi-fix js-tpl0">
+    <div class="st-inner ef-sdw02">
       <div class="md-popup-body">
-        <ul class="ef-list-hover-gray">
+        <ul class="cp-list-hover-gray">
           <li>
             <a href="javascript:void(0);">
               Project
@@ -25,10 +25,10 @@
     </div>
   </div>
   <!-- popup contents type 'js-tpl1' -->
-  <div class="st-body ef-posi-fix js-tpl1">
-    <div class="st-inner">
+  <div class="st-body js-posi-fix js-tpl1">
+    <div class="st-inner ef-sdw02">
       <div class="md-popup-body ef-mw250-ovf ef-mh400-ovf">
-        <ul class="ef-list-hover-gray">
+        <ul class="cp-list-hover-gray">
           <li>
             <a href="javascript:void(0);">
               <dl>
@@ -40,7 +40,7 @@
                 </dd>
               </dl>
             </a>
-            <hr class="is-dotted ef-mgt3 ef-mgb3">
+            <hr class="cp-hr1-dotted ef-mgt3 ef-mgb3">
           </li>
           <li>
             <a href="javascript:void(0);">
@@ -53,7 +53,7 @@
                 </dd>
               </dl>
             </a>
-            <hr class="is-dotted ef-mgt3 ef-mgb3">
+            <hr class="cp-hr1-dotted ef-mgt3 ef-mgb3">
           </li>
           <li>
             <a href="javascript:void(0);">
@@ -66,7 +66,7 @@
                 </dd>
               </dl>
             </a>
-            <hr class="is-dotted ef-mgt3 ef-mgb3">
+            <hr class="cp-hr1-dotted ef-mgt3 ef-mgb3">
           </li>
           <li>
             <a href="javascript:void(0);">
@@ -86,9 +86,9 @@
   </div>
   <!-- popup contents type 'js-tpl2' -->
   <div class="st-body ef-mgt-40 js-tpl2">
-    <div class="st-inner">
+    <div class="st-inner ef-sdw02">
       <div class="md-popup-body">
-        <ul class="ef-list-hover-gray">
+        <ul class="cp-list-hover-gray">
           <li>
             <a href="#js-pageTop0">
               popup
@@ -100,7 +100,7 @@
   </div>
   <!-- popup contents type 'js-tpl3' -->
   <div class="st-body ef-mgt-40 js-tpl3">
-    <div class="st-inner">
+    <div class="st-inner ef-sdw02">
       <div class="md-popup-header ef-mgb20">
         <ul class="ef-float">
           <li>
