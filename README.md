@@ -1,6 +1,9 @@
 # 概要
 Fivee-baseはアプリケーションやWebサイトのフロントエンド構築に必要な要素を5つに分類化する事で作業内容を明確にし、大幅に作業工数を削減する事ができるCSSフレームワークです。
 
+## ダウンロード
+Latest release (v1.1.0): [Download]
+
 ## ドキュメント
 導入方法や詳しい利用方法についてはこちらから。
 <http://plain-web.com/fivee-base/apps/>
@@ -32,3 +35,4 @@ Fivee-baseはアプリケーションやWebサイトのフロントエンド構�
 
    [MIT License]: <https://github.com/plain-web/fivee-base/blob/master/LICENSE>
    [Twitter]: <https://twitter.com/plain_web>
+   [Download]: <https://github.com/plain-web/fivee-base/releases/tag/v1.1.0>
