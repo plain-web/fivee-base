@@ -787,26 +787,6 @@ table.md-table-base{
 }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "collapse"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-// .md-collapse-horizontal{
-//   .st-inner{
-//     @include brd-top(1px,dotted,$cl-brd-base);
-//     .md-collapse-switch-box{
-//       @include border-bottom-radius(5px);
-//       background:$cl-bg-gray2;
-//       display:inline-block;
-//       @include min-width(50px);
-//       &:hover{
-//         background:$cl-bg-gray;
-//       }
-//     }
-//   }
-// }
-
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "nav"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *

@@ -6,8 +6,8 @@
       <div class="md-popup-body">
         <ul class="cp-list-hover-gray">
           <li>
-            <a href="javascript:void(0);">
-              Project
+            <a href="https://github.com/plain-web/fivee-base" target="_blank">
+              Github
             </a>
           </li>
           <li>
@@ -33,7 +33,7 @@
             <a href="javascript:void(0);">
               <dl>
                 <dt class="ef-txt-bold">
-                  jazzpoteto
+                  plain-web
                 </dt>
                 <dd class="ef-txt-ellipsis">
                   システム予約は15：00にセットされました。
@@ -46,7 +46,7 @@
             <a href="javascript:void(0);">
               <dl>
                 <dt class="ef-txt-bold">
-                  jazzpoteto
+                  plain-web
                 </dt>
                 <dd class="ef-txt-ellipsis">
                   システム予約は15：00にセットされました。
@@ -59,7 +59,7 @@
             <a href="javascript:void(0);">
               <dl>
                 <dt class="ef-txt-bold">
-                  jazzpoteto
+                  plain-web
                 </dt>
                 <dd class="ef-txt-ellipsis">
                   システム予約は15：00にセットされました。
@@ -72,7 +72,7 @@
             <a href="javascript:void(0);">
               <dl>
                 <dt class="ef-txt-bold">
-                  jazzpoteto
+                  plain-web
                 </dt>
                 <dd class="ef-txt-ellipsis">
                   システム予約は15：00にセットされました。

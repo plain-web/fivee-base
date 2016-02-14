@@ -593,18 +593,18 @@
                             %ul.cp-list-decimal
                               %li
                                 %section.ef-mgb30
-                                  まずはgithubよりzipをダウンロードしてください。
+                                  まずはGithubよりzipをダウンロードしてください。
                                 %section.ef-txt-center.ef-mgb50
                                   %a.cp-btn-large-green(href="https://github.com/plain-web/fivee-base" target="_blank")
                                     Download Zip
                                     %small
-                                      (ver.1.0.0)
+                                      (ver.1.1.0)
                               %li
                                 %section.ef-mgb20
                                   zipを解凍したらindex.htmlを参考に、あなたがこれから作成するサイトやアプリケーションに必要なファイルを読み込ませてください。
                                   %span.js-tooltip-hover
                                     .md-tooltip-key.js-tooltip-key
-                                      ファイルパスがbower_componentsになっているファイルはbowerを使って必要なファイルをまとめています。これは必ず必要なツールではありません。例えばjqueryは任意のフォルダに置いて読み込んでも問題はありません。
+                                      ファイルパスがbower_componentsから始まるファイルはbowerを使って必要なファイルをまとめています。これは必ず必要なツールではありません。例えばjqueryは任意のフォルダに置いて読み込んでも問題はありません。
                                     %a(href="#{v}")
                                       %i.fa.fa-question-circle
                                 %section.cp-panel-gray.ef-w100p.ef-mgb20
@@ -651,7 +651,7 @@
                                           (ie9以下で読み込むクロスブラウザ用CSSファイル)
                                           %span.js-tooltip-hover
                                             .md-tooltip-key.js-tooltip-key
-                                              本ページのhead直前のコンディショナルコメントの記載をコピーした場合「ie7,ie8,oldie」のクラスが、それぞれのブラウザに対して有効になります。
+                                              本ページのheadタグ直前のコンディショナルコメントの記載をコピーした場合「ie7,ie8,oldie」のクラスが、それぞれのブラウザに対して有効になります。
                                             %a(href="#{v}")
                                               %i.fa.fa-question-circle
                                 %section.cp-panel-gray.ef-w100p.ef-mgb50
@@ -778,6 +778,46 @@
                             %ul.ef-float.ef-lh25
                               %li
                                 %h5
+                                  対応ブラウザ
+                          .example-summary.ef-mgb30.ef-fs12
+                            Fivee-baseは以下のブラウザに対応しています。
+                          .example-box.ef-mgb40
+                            // example code ///////////////////////////
+                            %table.md-table-base.ef-w100p
+                              %thead
+                                /tr ///////////////////////
+                                %tr
+                                  %th
+                                    %a(href="#{v}")
+                                      %i.fa.fa-internet-explorer
+                                      Internet Explorer
+                                  %th
+                                    %a(href="#{v}")
+                                      %i.fa.fa-chrome
+                                      Chrome
+                                  %th
+                                    %a(href="#{v}")
+                                      %i.fa.fa-firefox
+                                      Firefox
+                              %tbody
+                                /tr ///////////////////////
+                                %tr
+                                  %td.ef-txt-center
+                                    IE8,IE9,IE10,IE11,Edge
+                                  %td.ef-txt-center
+                                    Edge
+                                  %td.ef-txt-center
+                                    Edge
+                            .ef-txt-gray5.ef-txt-right.ef-mgt7.ef-fs10
+                              IE8はレスポンシブ未対応
+                          %hr.cp-hr1-dotted.ef-pdt30
+                      // example03 //////////////////////////////////
+                      %section#js-pageTop3.examle-wrap.ef-mgb20
+                        .st-inner
+                          .example-title.ef-mgb10
+                            %ul.ef-float.ef-lh25
+                              %li
+                                %h5
                                   Sassについて
                           .example-summary.ef-mgb30.ef-fs12
                             sassを使う方は以下の特徴をお読みください。
@@ -798,7 +838,7 @@
                                 テーマカラーを増やす場合、例えば青色のテーマカラーを増やす手順は、theme-defaultフォルダを丸ごとコピーペーストし「teme-blue」等にリネーム。配下の
                                 %span.ef-txt-red
                                   _variables.scss
-                                の内容を青色に変更します。変更が終わったら現在の読み込んでいるCSSファイルのパス
+                                の内容を青色に変更します。変更後Sassのコンパイルが終わったら現在読み込んでいるCSSファイルのパスを
                                 %br
                                 %span.ef-txt-red
                                   css/theme-default/fivee-base.min.css
@@ -815,8 +855,8 @@
                                   $cl-theme　/ $cl-theme1 / $cl-theme2
                                 になります。
                           %hr.cp-hr1-dotted.ef-pdt30
-                      // example03 //////////////////////////////////
-                      %section#js-pageTop3.examle-wrap.ef-mgb20
+                      // example04 //////////////////////////////////
+                      %section#js-pageTop4.examle-wrap.ef-mgb20
                         .st-inner
                           .example-title.ef-mgb10
                             %ul.ef-float.ef-lh25
@@ -833,7 +873,7 @@
                                 こちら
                               からお気軽にご相談ください。
                             %section.is-bold
-                              以下のような症状に心当たりがある場合は導入をご検討ください。
+                              以下のような事例に心当たりがある場合は、是非導入をご検討ください。
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
                             %ul.cp-list-decimal.ef-mgb50
@@ -862,7 +902,7 @@
     %footer.page-footer
       .st-body.ef-posi-fix
         .st-inner.ef-txt-center.ef-fs11.ef-lh14
-          Copyright © 2014 Jazzpoteto all rights reserved.
+          Copyright © 2016 plain-web all rights reserved.
     /popup/////////////////////////////////////////////
     %section.md-popup.js-popup(style="display:none;")
       /popup contents type 'js-tpl0'
@@ -871,8 +911,8 @@
           .md-popup-body
             %ul.cp-list-hover-gray
               %li
-                %a(href="#{v}")
-                  Project
+                %a(href="https://github.com/plain-web/fivee-base" target="_blank")
+                  Github
               %li
                 %a(href="#{v}")
                   My Account
@@ -888,7 +928,7 @@
                 %a(href="#{v}")
                   %dl
                     %dt.ef-txt-bold
-                      jazzpoteto
+                      plain-web
                     %dd.ef-txt-ellipsis
                       システム予約は15：00にセットされました。
                 %hr.cp-hr1-dotted.ef-mgt3.ef-mgb3
@@ -896,7 +936,7 @@
                 %a(href="#{v}")
                   %dl
                     %dt.ef-txt-bold
-                      jazzpoteto
+                      plain-web
                     %dd.ef-txt-ellipsis
                       システム予約は15：00にセットされました。
                 %hr.cp-hr1-dotted.ef-mgt3.ef-mgb3
@@ -904,7 +944,7 @@
                 %a(href="#{v}")
                   %dl
                     %dt.ef-txt-bold
-                      jazzpoteto
+                      plain-web
                     %dd.ef-txt-ellipsis
                       システム予約は15：00にセットされました。
                 %hr.cp-hr1-dotted.ef-mgt3.ef-mgb3
@@ -912,7 +952,7 @@
                 %a(href="#{v}")
                   %dl
                     %dt.ef-txt-bold
-                      jazzpoteto
+                      plain-web
                     %dd.ef-txt-ellipsis
                       システム予約は15：00にセットされました。
       /popup contents type 'js-tpl2'
@@ -928,9 +968,12 @@
                   導入方法
               %li
                 %a(href="#js-pageTop2")
-                  Sassについて
+                  対応ブラウザ
               %li
                 %a(href="#js-pageTop3")
+                  Sassについて
+              %li
+                %a(href="#js-pageTop4")
                   導入サポート
       /popup contents type 'js-tpl3'
       .st-body.ef-mgt-40.js-tpl3

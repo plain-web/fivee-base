@@ -1,56 +1,13 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
  * Fivee base
- * version 1.0.0 / 2015 5 20
- * http://plain-web.com
- * Released under MIT license. Copyright 2015 Yusuke Maruyama.
+ * version 1.1.0 / 2016 2 14
+ * http://plain-web.com/fivee-base/apps/
+ * Released under MIT license. Copyright 2016 Yusuke Maruyama.
  *
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
 
 $(function (){
-/*========================================================================
-	placeholder
-======================================================================== */
-// var keys;
-// var inputKeys;
-// var placeholder = {
-//   keys: function(self){
-//     keys = self.parents('.js-ph-box').children('.js-ph');
-//   },
-//   inputKeys: function(self){
-//     inputKeys = self.val();
-//     keys = self.parents('.js-ph-box').children('.js-ph');
-//   }
-// }
-
-// $('.js-ph input').on({
-//   'focus': function(){
-//   var self = $(this);
-//   placeholder.keys(self);
-//   keys.hide();
-//   },
-//   'blur': function(){
-//     var self = $(this);
-//     placeholder.inputKeys(self);
-//     placeholder.keys(self);
-//     if(!inputKeys){
-//       keys.show();
-//     }else{
-//       keys.hide();
-//     }
-//   }
-// });
-
-// $('.js-ph-box input').each( function(){
-//   var self = $(this);
-//   placeholder.inputKeys(self);
-//   placeholder.keys(self);
-//   if(!inputKeys){
-//     keys.show();
-//   }else{
-//     keys.hide();
-//   }
-// });
 /*========================================================================
   scrolltop arrow
 ======================================================================== */
@@ -103,39 +60,6 @@ $('#js-pageTop').on('click', function(){
   }, 1000);
 })
 /*========================================================================
-  load common parts　
-======================================================================== */
-// var navType = $('body').attr('id');
-
-// //nav type
-// if( navType === 'nav-type00'){
-//   var pageUrl = ['header.html', 'footer.html', 'nav-00.html', 'components.html'];
-// }
-
-// //get parts
-// for( var i = 0; i < pageUrl.length; i++){
-//   function pageGet(i){
-//     var urlList = pageUrl[i];
-//     $.ajax({
-//       type: 'GET',
-//       url: urlList,
-//       dataType: 'html',
-//       timeout: 20000,
-//       success: function(html){
-//         //ｈｔｍｌ
-//         if( i === 0){$('.js-load-header').html(html);}
-//         if( i === 1){$('.js-load-footer').html(html);}
-//         if( i === 2){$('.js-load-nav').html(html);}
-//         if( i === 3){$('.js-load-components').html(html);}
-//       },
-//       error: function(){
-//           //error 
-//       }
-//     });
-//   }
-//   pageGet(i);
-// }
-/*========================================================================
   [return] return targetClass
 ======================================================================== */
 var clickThis, returnClass, targetClass, thisClass;
@@ -151,44 +75,6 @@ function thisClassGet(clickThis, returnClass){
   targetClass = '.' + thisClass;
   return targetClass;
 }
-
-/*========================================================================
-  focus target
-======================================================================== */
-// $('body').on('click', '.js-focus-on', function(){
-//   $('.js-focus-target').addClass('is-focus');
-//   //show cartain
-//   $('.js-cartain').show();
-//   //click cartain
-//   $('.js-cartain').on('click', function(){
-//     $('.js-focus-target').removeClass('is-focus');
-//     $(this).hide();
-//   });
-// });
-/*========================================================================
-	Login
-======================================================================== */
-// var userId = $('#userId');
-// var userPs = $('#userPs');
-// var alertToast = $('#toastAlert');
-// var success = $('#toastSuccess');
-
-// $('#signIn').on('click', function(){
-// 	var userIdInfo = userId.val();
-// 	var userPsInfo = userPs.val();
-
-// 	var idKey = 'admin';
-// 	var psKey = 'admin';
-
-// 	var keyFlg = false;
-
-// 	if( userIdInfo.match( idKey ) && userPsInfo.match( psKey )){
-// 		document.location = "portal.html";
-// 	}else{
-// 		alertToast.show(300);
-// 	}
-
-// });
 /*========================================================================
   equalizer
 ======================================================================== */
@@ -221,29 +107,6 @@ if(equalizerHere.length){
     }
   }
 }
-/*========================================================================
-	resize
-======================================================================== */
-// function resize(){
-//   var wHeight = $(window).height();
-//   var hHeight = $('#js-Header').outerHeight();
-//   var fHeight = $('#js-Footer').outerHeight();
-//   var cHeight = hHeight + fHeight;
-//   cHeight = wHeight - cHeight;
-//   $('#js-LeftCanvas').css('height', cHeight);
-// }
-
-// var timer = false;
-// $(window).resize(function() {
-//   if (timer !== false) {
-//     clearTimeout(timer);
-//   }
-//   timer = setTimeout(function() {
-//     resize();
-//   }, 40);
-// });
-// resize();
-
 /*========================================================================
 nav
 ======================================================================== */
@@ -944,13 +807,16 @@ $('.js-col a').on('click', function(){
 ======================================================================== */
 $( '.js-sameclass td, .js-sameclass th' ).on({
   'mouseenter': function(){
-    //this
-    clickThis = $(this);
-    //return class
-    returnClass = 'js-sameclass-num';
-    //target class
-    targetClass = thisClassGet(clickThis, returnClass);
-    $(targetClass).addClass('is-focus');
+    var matchKey = 'js-sameclass-num';
+    var hoverThis = $(this).attr('class');
+    if(hoverThis){
+      if(hoverThis.match(matchKey)){
+        clickThis = $(this);
+        returnClass = matchKey;
+        thisClassGet(clickThis, returnClass);
+        $(targetClass).addClass('is-focus');
+      }
+    }
   },
   'mouseleave': function(){
     //delete class

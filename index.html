@@ -1013,13 +1013,13 @@
                           <ul class="cp-list-decimal">
                             <li>
                               <section class="ef-mgb30">
-                                まずはgithubよりzipをダウンロードしてください。
+                                まずはGithubよりzipをダウンロードしてください。
                               </section>
                               <section class="ef-txt-center ef-mgb50">
                                 <a class="cp-btn-large-green" href="https://github.com/plain-web/fivee-base" target="_blank">
                                   Download Zip
                                   <small>
-                                    (ver.1.0.0)
+                                    (ver.1.1.0)
                                   </small>
                                 </a>
                               </section>
@@ -1029,7 +1029,7 @@
                                 zipを解凍したらindex.htmlを参考に、あなたがこれから作成するサイトやアプリケーションに必要なファイルを読み込ませてください。
                                 <span class="js-tooltip-hover">
                                   <div class="md-tooltip-key js-tooltip-key">
-                                    ファイルパスがbower_componentsになっているファイルはbowerを使って必要なファイルをまとめています。これは必ず必要なツールではありません。例えばjqueryは任意のフォルダに置いて読み込んでも問題はありません。
+                                    ファイルパスがbower_componentsから始まるファイルはbowerを使って必要なファイルをまとめています。これは必ず必要なツールではありません。例えばjqueryは任意のフォルダに置いて読み込んでも問題はありません。
                                   </div>
                                   <a href="javascript:void(0);">
                                     <i class="fa fa-question-circle"></i>
@@ -1097,7 +1097,7 @@
                                         (ie9以下で読み込むクロスブラウザ用CSSファイル)
                                         <span class="js-tooltip-hover">
                                           <div class="md-tooltip-key js-tooltip-key">
-                                            本ページのhead直前のコンディショナルコメントの記載をコピーした場合「ie7,ie8,oldie」のクラスが、それぞれのブラウザに対して有効になります。
+                                            本ページのheadタグ直前のコンディショナルコメントの記載をコピーした場合「ie7,ie8,oldie」のクラスが、それぞれのブラウザに対して有効になります。
                                           </div>
                                           <a href="javascript:void(0);">
                                             <i class="fa fa-question-circle"></i>
@@ -1298,6 +1298,69 @@
                           <ul class="ef-float ef-lh25">
                             <li>
                               <h5>
+                                対応ブラウザ
+                              </h5>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="example-summary ef-mgb30 ef-fs12">
+                          Fivee-baseは以下のブラウザに対応しています。
+                        </div>
+                        <div class="example-box ef-mgb40">
+                          <!-- / example code /////////////////////////// -->
+                          <table class="md-table-base ef-w100p">
+                            <thead>
+                              <!-- tr /////////////////////// -->
+                              <tr>
+                                <th>
+                                  <a href="javascript:void(0);">
+                                    <i class="fa fa-internet-explorer"></i>
+                                    Internet Explorer
+                                  </a>
+                                </th>
+                                <th>
+                                  <a href="javascript:void(0);">
+                                    <i class="fa fa-chrome"></i>
+                                    Chrome
+                                  </a>
+                                </th>
+                                <th>
+                                  <a href="javascript:void(0);">
+                                    <i class="fa fa-firefox"></i>
+                                    Firefox
+                                  </a>
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <!-- tr /////////////////////// -->
+                              <tr>
+                                <td class="ef-txt-center">
+                                  IE8,IE9,IE10,IE11,Edge
+                                </td>
+                                <td class="ef-txt-center">
+                                  Edge
+                                </td>
+                                <td class="ef-txt-center">
+                                  Edge
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="ef-txt-gray5 ef-txt-right ef-mgt7 ef-fs10">
+                            IE8はレスポンシブ未対応
+                          </div>
+                        </div>
+                        <hr class="cp-hr1-dotted ef-pdt30">
+                      </div>
+                    </section>
+                    <!-- / example03 ////////////////////////////////// -->
+                    <section class="examle-wrap ef-mgb20" id="js-pageTop3">
+                      <div class="st-inner">
+                        <div class="example-title ef-mgb10">
+                          <ul class="ef-float ef-lh25">
+                            <li>
+                              <h5>
                                 Sassについて
                               </h5>
                             </li>
@@ -1328,7 +1391,7 @@
                               <span class="ef-txt-red">
                                 _variables.scss
                               </span>
-                              の内容を青色に変更します。変更が終わったら現在の読み込んでいるCSSファイルのパス
+                              の内容を青色に変更します。変更後Sassのコンパイルが終わったら現在読み込んでいるCSSファイルのパスを
                               <br>
                               <span class="ef-txt-red">
                                 css/theme-default/fivee-base.min.css
@@ -1355,8 +1418,8 @@
                         <hr class="cp-hr1-dotted ef-pdt30">
                       </div>
                     </section>
-                    <!-- / example03 ////////////////////////////////// -->
-                    <section class="examle-wrap ef-mgb20" id="js-pageTop3">
+                    <!-- / example04 ////////////////////////////////// -->
+                    <section class="examle-wrap ef-mgb20" id="js-pageTop4">
                       <div class="st-inner">
                         <div class="example-title ef-mgb10">
                           <ul class="ef-float ef-lh25">
@@ -1380,7 +1443,7 @@
                             からお気軽にご相談ください。
                           </section>
                           <section class="is-bold">
-                            以下のような症状に心当たりがある場合は導入をご検討ください。
+                            以下のような事例に心当たりがある場合は、是非導入をご検討ください。
                           </section>
                         </div>
                         <div class="example-box ef-mgb40">
@@ -1435,7 +1498,7 @@
   <footer class="page-footer">
     <div class="st-body ef-posi-fix">
       <div class="st-inner ef-txt-center ef-fs11 ef-lh14">
-        Copyright © 2014 Jazzpoteto all rights reserved.
+        Copyright © 2016 plain-web all rights reserved.
       </div>
     </div>
   </footer>
@@ -1447,8 +1510,8 @@
         <div class="md-popup-body">
           <ul class="cp-list-hover-gray">
             <li>
-              <a href="javascript:void(0);">
-                Project
+              <a href="https://github.com/plain-web/fivee-base" target="_blank">
+                Github
               </a>
             </li>
             <li>
@@ -1474,7 +1537,7 @@
               <a href="javascript:void(0);">
                 <dl>
                   <dt class="ef-txt-bold">
-                    jazzpoteto
+                    plain-web
                   </dt>
                   <dd class="ef-txt-ellipsis">
                     システム予約は15：00にセットされました。
@@ -1487,7 +1550,7 @@
               <a href="javascript:void(0);">
                 <dl>
                   <dt class="ef-txt-bold">
-                    jazzpoteto
+                    plain-web
                   </dt>
                   <dd class="ef-txt-ellipsis">
                     システム予約は15：00にセットされました。
@@ -1500,7 +1563,7 @@
               <a href="javascript:void(0);">
                 <dl>
                   <dt class="ef-txt-bold">
-                    jazzpoteto
+                    plain-web
                   </dt>
                   <dd class="ef-txt-ellipsis">
                     システム予約は15：00にセットされました。
@@ -1513,7 +1576,7 @@
               <a href="javascript:void(0);">
                 <dl>
                   <dt class="ef-txt-bold">
-                    jazzpoteto
+                    plain-web
                   </dt>
                   <dd class="ef-txt-ellipsis">
                     システム予約は15：00にセットされました。
@@ -1542,11 +1605,16 @@
             </li>
             <li>
               <a href="#js-pageTop2">
-                Sassについて
+                対応ブラウザ
               </a>
             </li>
             <li>
               <a href="#js-pageTop3">
+                Sassについて
+              </a>
+            </li>
+            <li>
+              <a href="#js-pageTop4">
                 導入サポート
               </a>
             </li>

@@ -5,6 +5,11 @@ Fivee-baseはアプリケーションやWebサイトのフロントエンド構�
 導入方法や詳しい利用方法についてはこちらから。
 <http://plain-web.com/fivee-base/apps/>
 
+## 対応ブラウザ
+* Internet Explorer: `IE8,IE9,IE10,IE11,Edge`
+* Chrome: `Edge`
+* Firefox: `Edge`
+
 ## 導入サポート
 リリース間もないですが数社の企業様に導入いただき、その効果を実感いただいてます。 （2016年1月現在） Webサイトやアプリケーションのフロントエンド開発、デザイン刷新をお考えの企業様、導入サポート承ります。
 

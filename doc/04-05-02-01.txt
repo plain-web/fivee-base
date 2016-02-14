@@ -54,35 +54,6 @@
               </li>
             </ul>
           </a>
-          <ul class="ef-txt-indent1 js-collapse-num0" style="display:none;">
-            <li>
-              <a href="javascript:void(0);">
-                <ul class="ef-float3">
-                  <li class="ef-mgl3">
-                    Project
-                  </li>
-                </ul>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0);">
-                <ul class="ef-float3">
-                  <li class="ef-mgl3">
-                    My account
-                  </li>
-                </ul>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0);">
-                <ul class="ef-float3">
-                  <li class="ef-mgl3">
-                    ログアウト
-                  </li>
-                </ul>
-              </a>
-            </li>
-          </ul>
         </li>
       </ul>
     </div>

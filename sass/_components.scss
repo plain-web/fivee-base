@@ -34,24 +34,6 @@ a{
      @include transition(all 0.3s ease-in-out);
     }
   }
-  // &.ef-is-link{
-  //   text-decoration:underline;
-  //   &:hover{
-  //     text-decoration:none;
-  //     color: $cl-txt-hover;
-  //   }
-  // }
-  // &.ef-is-nolink{
-  //   text-decoration:none;
-  //   color: $cl-txt-base;
-  //   //cursor:default;
-  //   i{color: $cl-txt-base;}
-  //   &:hover{
-  //     text-decoration:none;
-  //     color: $cl-txt-base;
-  //     i{color: $cl-txt-base;}
-  //   }
-  // }
 }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -414,7 +396,7 @@ a{
   }
 }
 .cp-input{
-  line-height:$lh-form;
+  line-height:25px;
   height:30px;
 }
 .cp-select,
@@ -1377,49 +1359,6 @@ a.cp-badge-yellow{
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
  * =============================================================
- ▼ step circle
-============================================================== */
-// .cp-step-box{
-//   >.st-body{
-//     >.st-inner{
-//       ul{
-//         li{
-//           position:relative;
-//           .cp-step-point{
-//             height:40px;
-//             width:40px;
-//             @include brd(4px,solid,$cl-bg-gray2);
-//             @include border-radius(40px);
-//             @include posi-abs(0,0,auto,auto);
-//             text-align:center;
-//             line-height:35px;
-//             z-index:1;
-//             background:$cl-bg-white;
-//           }
-//           .cp-step-bar{
-//             height:4px;
-//             background:$cl-bg-gray2;
-//             @include posi-abs(20px,0,auto,0);
-//           }
-//           .cp-step-title{
-//             width:80px;
-//             margin-top:50px;
-//             margin-left:auto;
-//             margin-right:-20px;
-//             text-align: center;
-//           }
-//           &.current{
-//             .cp-step-point{
-//               @include brd(4px,solid,$cl-bg-theme);
-//             }
-//             .cp-step-bar{background:$cl-bg-theme;}
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-/* =============================================================
  ▼ step
 ============================================================== */
 .cp-stepbar{
