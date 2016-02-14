@@ -2,7 +2,7 @@
   "name": "fivee-base",
   "version": "1.0.0",
   "description": "Fivee-baseはアプリケーションやWebサイトのフロントエンド構築に必要な要素を5つに分類化する事で作業内容を明確にし、大幅に作業工数を削減する事ができるCSSフレームワークです。",
-  "main": "index.js",
+  "main": "index.html",
   "directories": {
     "doc": "doc"
   },
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jazzpoteto/fivee-base.git"
+    "url": "git+https://github.com/plain-web/fivee-base.git"
   },
   "author": "plain-web",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jazzpoteto/fivee-base/issues"
+    "url": "https://github.com/plain-web/fivee-base/issues"
   },
-  "homepage": "https://github.com/jazzpoteto/fivee-base#readme",
+  "homepage": "http://plain-web.com/fivee-base/apps/",
   "devDependencies": {
     "browser-sync": "^2.9.11",
     "gulp": "^3.9.0",
