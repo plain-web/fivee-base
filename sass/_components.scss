@@ -1070,7 +1070,7 @@ label{
 .cp-btn-large-theme{
   @extend .cp-btn;
   font-size:$fs-h6;
-  padding:7px 50px;
+  padding:7px 25px;
 }
 //fix
 .cp-btn-fix,
@@ -1087,24 +1087,6 @@ label{
   @extend .cp-btn;
   width:100%;
 }
-//combo
-// .cp-btn-combo-left{
-//   @include border-right-radius(0);
-// }
-// .cp-btn-combo{
-// @include border-radius(0);
-//   border-left:0;
-//   &:hover{
-//     border-left:0;
-//   }
-// }
-// .cp-btn-combo-right{
-// @include border-left-radius(0);
-//   border-left:0;
-//   &:hover{
-//     border-left:0;
-//   }
-// }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "beadclumb"

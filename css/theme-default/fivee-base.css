@@ -2,7 +2,7 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
  * Fivee base
- * version 1.1.0 / 2016 2 14
+ * version 1.1.5 / 2016 2 15
  * http://plain-web.com/fivee-base/apps/
  * Released under MIT license. Copyright 2016 Yusuke Maruyama.
  *
@@ -64,6 +64,10 @@ input, button {
 input::-moz-focus-inner,
 button::-moz-focus-inner {
   border: 0;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
 /*
@@ -427,7 +431,7 @@ h1 {
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 h3 {
@@ -3779,7 +3783,7 @@ label.cp-checkbox input[type="radio"] {
 .cp-btn-large-gray,
 .cp-btn-large-theme {
   font-size: 16px;
-  padding: 7px 50px;
+  padding: 7px 25px;
 }
 
 .cp-btn-fix,
@@ -6324,8 +6328,7 @@ table.md-table-base tr.ef-brdl0 th, table.md-table-base tr.ef-brdl0 td, table.md
 ============================================================== */
 .md-aside-main > .st-body {
   width: 180px;
-  margin: 20px;
-  margin-left: 15px;
+  margin: 20px 15px;
 }
 
 /*

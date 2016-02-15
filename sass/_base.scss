@@ -29,10 +29,13 @@ body {
 small{font-size: $fs-small;}
 em{font-style:normal;}
 pre,code{font-family: $ff-base;}
-
 input,button{outline: 0;}
+
 //for firefox
 input::-moz-focus-inner,
 button::-moz-focus-inner {
   border: 0;
 }
+
+//for mobile
+* {-webkit-tap-highlight-color: rgba(0,0,0,0);}
