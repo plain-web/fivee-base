@@ -17,16 +17,8 @@
 .ef-cl-blue{background:$cl-blue;}
 .ef-cl-green{background:$cl-green;}
 .ef-cl-yellow{background:$cl-yellow;}
-.ef-cl-brown{background:$cl-black;}
-.ef-cl-black{background:$cl-black;}
+.ef-cl-brown{background:$cl-brown;}
 .ef-cl-gray{background:$cl-gray;}
-.ef-cl-gray1{background:$cl-gray1;}
-.ef-cl-gray2{background:$cl-gray2;}
-.ef-cl-gray3{background:$cl-gray3;}
-.ef-cl-gray4{background:$cl-gray4;}
-.ef-cl-gray5{background:$cl-gray5;}
-.ef-cl-gray6{background:$cl-gray6;}
-.ef-cl-gray7{background:$cl-gray7;}
 .ef-cl-theme{background:$cl-theme;}
 /* =============================================================
  ▼ text color
@@ -52,36 +44,12 @@ a.ef-txt-yellow{color:$cl-txt-yellow;}
 .ef-txt-brown,
 a.ef-txt-brown{color:$cl-txt-brown;}
 .ef-txt-brown{a{color:$cl-txt-brown;}}
-.ef-txt-black,
-a.ef-txt-black{color:$cl-txt-black;}
-.ef-txt-black{a{color:$cl-txt-black;}}
 .ef-txt-gray,
 a.ef-txt-gray{color:$cl-txt-gray;}
 .ef-txt-gray{a{color:$cl-txt-gray;}}
-.ef-txt-gray1,
-a.ef-txt-gray1{color:$cl-txt-gray1;}
-.ef-txt-gray1{a{color:$cl-txt-gray1;}}
-.ef-txt-gray2,
-a.ef-txt-gray2{color:$cl-txt-gray2;}
-.ef-txt-gray2{a{color:$cl-txt-gray2;}}
-.ef-txt-gray3,
-a.ef-txt-gray3{color:$cl-txt-gray3;}
-.ef-txt-gray3{a{color:$cl-txt-gray3;}}
-.ef-txt-gray4,
-a.ef-txt-gray4{color:$cl-txt-gray4;}
-.ef-txt-gray4{a{color:$cl-txt-gray4;}}
-.ef-txt-gray5,
-a.ef-txt-gray5{color:$cl-txt-gray5;}
-.ef-txt-gray5{a{color:$cl-txt-gray5;}}
-.ef-txt-gray6,
-a.ef-txt-gray6{color:$cl-txt-gray6;}
-.ef-txt-gray6{a{color:$cl-txt-gray6;}}
-.ef-txt-gray7,
-a.ef-txt-gray7{color:$cl-txt-gray7;}
-.ef-txt-gray7{a{color:$cl-txt-gray7;}}
-.ef-txt-base,
-a.ef-txt-base{color:$cl-txt-base;}
-.ef-txt-base{a{color:$cl-txt-base;}}
+.ef-txt,
+a.ef-txt{color:$cl-txt;}
+.ef-txt{a{color:$cl-txt;}}
 .ef-txt-rev,
 a.ef-txt-rev{color:$cl-txt-rev;}
 .ef-txt-rev{a{color:$cl-txt-rev;}}
@@ -104,15 +72,7 @@ a.ef-txt-hover{color:$cl-txt-hover;}
 .ef-bg-green{background:$cl-bg-green;}
 .ef-bg-yellow{background:$cl-bg-yellow;}
 .ef-bg-brown{background:$cl-bg-brown;}
-.ef-bg-black{background:$cl-bg-black;}
 .ef-bg-gray{background:$cl-bg-gray;}
-.ef-bg-gray1{background:$cl-bg-gray1;}
-.ef-bg-gray2{background:$cl-bg-gray2;}
-.ef-bg-gray3{background:$cl-bg-gray3;}
-.ef-bg-gray4{background:$cl-bg-gray4;}
-.ef-bg-gray5{background:$cl-bg-gray5;}
-.ef-bg-gray6{background:$cl-bg-gray6;}
-.ef-bg-gray7{background:$cl-bg-gray7;}
 .ef-bg-theme{background:$cl-bg-theme;}
 /* =============================================================
  ▼ text
@@ -121,8 +81,6 @@ a.ef-txt-hover{color:$cl-txt-hover;}
 .ef-txt-ellipsis{
   white-space: nowrap;
   overflow: hidden;
-  // -ms-text-overflow: ellipsis;
-  // -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
 //nowrap
@@ -221,7 +179,19 @@ a.is-notouch{
 .ef-fs40{font-size:40px;}
 .ef-fs0{font-size:0;}
 
-/*line-height*/
+//size
+.ef-fs10p{font-size:10%;}
+.ef-fs20p{font-size:20%;}
+.ef-fs30p{font-size:30%;}
+.ef-fs40p{font-size:40%;}
+.ef-fs50p{font-size:50%;}
+.ef-fs60p{font-size:60%;}
+.ef-fs70p{font-size:70%;}
+.ef-fs80p{font-size:80%;}
+.ef-fs90p{font-size:90%;}
+.ef-fs100p{font-size:100%;}
+
+// line-height
 .ef-lh10{line-height:10px;}
 .ef-lh11{line-height:11px;}
 .ef-lh12{line-height:12px;}
@@ -253,7 +223,7 @@ a.is-notouch{
 .ef-lh38{line-height:38px;}
 .ef-lh39{line-height:39px;}
 .ef-lh40{line-height:40px;}
-.ef-lh0{line-height:0;}
+.ef-lh0{line-height:1.0;}
 /* =============================================================
  ▼ width (%)
 ============================================================== */
@@ -1341,181 +1311,165 @@ a.is-notouch{
  ▼ border
 ============================================================== */
 //default
-.ef-brd1{@include brd(1px, solid, $cl-brd-base);}
-.ef-brd2{@include brd(2px, solid, $cl-brd-base);}
-.ef-brd3{@include brd(3px, solid, $cl-brd-base);}
-.ef-brdt1{@include brd-top(1px, solid, $cl-brd-base);}
-.ef-brdt2{@include brd-top(2px, solid, $cl-brd-base);}
-.ef-brdt3{@include brd-top(3px, solid, $cl-brd-base);}
-.ef-brdr1{@include brd-right(1px, solid, $cl-brd-base);}
-.ef-brdr2{@include brd-right(2px, solid, $cl-brd-base);}
-.ef-brdr3{@include brd-right(3px, solid, $cl-brd-base);}
-.ef-brdb1{@include brd-bottom(1px, solid, $cl-brd-base);}
-.ef-brdb2{@include brd-bottom(2px, solid, $cl-brd-base);}
-.ef-brdb3{@include brd-bottom(3px, solid, $cl-brd-base);}
-.ef-brdl1{@include brd-left(1px, solid, $cl-brd-base);}
-.ef-brdl2{@include brd-left(2px, solid, $cl-brd-base);}
-.ef-brdl3{@include brd-left(3px, solid, $cl-brd-base);}
+.ef-brd1{@include brd(1px, solid, $cl-brd);}
+.ef-brd2{@include brd(2px, solid, $cl-brd);}
+.ef-brd3{@include brd(3px, solid, $cl-brd);}
+.ef-brdt1{@include brd-top(1px, solid, $cl-brd);}
+.ef-brdt2{@include brd-top(2px, solid, $cl-brd);}
+.ef-brdt3{@include brd-top(3px, solid, $cl-brd);}
+.ef-brdr1{@include brd-right(1px, solid, $cl-brd);}
+.ef-brdr2{@include brd-right(2px, solid, $cl-brd);}
+.ef-brdr3{@include brd-right(3px, solid, $cl-brd);}
+.ef-brdb1{@include brd-bottom(1px, solid, $cl-brd);}
+.ef-brdb2{@include brd-bottom(2px, solid, $cl-brd);}
+.ef-brdb3{@include brd-bottom(3px, solid, $cl-brd);}
+.ef-brdl1{@include brd-left(1px, solid, $cl-brd);}
+.ef-brdl2{@include brd-left(2px, solid, $cl-brd);}
+.ef-brdl3{@include brd-left(3px, solid, $cl-brd);}
 //white
-.ef-brd1-white{@include brd(1px, solid, $cl-white);}
-.ef-brd2-white{@include brd(2px, solid, $cl-white);}
-.ef-brd3-white{@include brd(3px, solid, $cl-white);}
-.ef-brdt1-white{@include brd-top(1px, solid, $cl-white);}
-.ef-brdt2-white{@include brd-top(2px, solid, $cl-white);}
-.ef-brdt3-white{@include brd-top(3px, solid, $cl-white);}
-.ef-brdr1-white{@include brd-right(1px, solid, $cl-white);}
-.ef-brdr2-white{@include brd-right(2px, solid, $cl-white);}
-.ef-brdr3-white{@include brd-right(3px, solid, $cl-white);}
-.ef-brdb1-white{@include brd-bottom(1px, solid, $cl-white);}
-.ef-brdb2-white{@include brd-bottom(2px, solid, $cl-white);}
-.ef-brdb3-white{@include brd-bottom(3px, solid, $cl-white);}
-.ef-brdl1-white{@include brd-left(1px, solid, $cl-white);}
-.ef-brdl2-white{@include brd-left(2px, solid, $cl-white);}
-.ef-brdl3-white{@include brd-left(3px, solid, $cl-white);}
+.ef-brd1-white{@include brd(1px, solid, $cl-brd-white);}
+.ef-brd2-white{@include brd(2px, solid, $cl-brd-white);}
+.ef-brd3-white{@include brd(3px, solid, $cl-brd-white);}
+.ef-brdt1-white{@include brd-top(1px, solid, $cl-brd-white);}
+.ef-brdt2-white{@include brd-top(2px, solid, $cl-brd-white);}
+.ef-brdt3-white{@include brd-top(3px, solid, $cl-brd-white);}
+.ef-brdr1-white{@include brd-right(1px, solid, $cl-brd-white);}
+.ef-brdr2-white{@include brd-right(2px, solid, $cl-brd-white);}
+.ef-brdr3-white{@include brd-right(3px, solid, $cl-brd-white);}
+.ef-brdb1-white{@include brd-bottom(1px, solid, $cl-brd-white);}
+.ef-brdb2-white{@include brd-bottom(2px, solid, $cl-brd-white);}
+.ef-brdb3-white{@include brd-bottom(3px, solid, $cl-brd-white);}
+.ef-brdl1-white{@include brd-left(1px, solid, $cl-brd-white);}
+.ef-brdl2-white{@include brd-left(2px, solid, $cl-brd-white);}
+.ef-brdl3-white{@include brd-left(3px, solid, $cl-brd-white);}
 //red
-.ef-brd1-red{@include brd(1px, solid, darken($cl-bg-red,7%));}
-.ef-brd2-red{@include brd(2px, solid, darken($cl-bg-red,7%));}
-.ef-brd3-red{@include brd(3px, solid, darken($cl-bg-red,7%));}
-.ef-brdt1-red{@include brd-top(1px, solid, darken($cl-bg-red,7%));}
-.ef-brdt2-red{@include brd-top(2px, solid, darken($cl-bg-red,7%));}
-.ef-brdt3-red{@include brd-top(3px, solid, darken($cl-bg-red,7%));}
-.ef-brdr1-red{@include brd-right(1px, solid, darken($cl-bg-red,7%));}
-.ef-brdr2-red{@include brd-right(2px, solid, darken($cl-bg-red,7%));}
-.ef-brdr3-red{@include brd-right(3px, solid, darken($cl-bg-red,7%));}
-.ef-brdb1-red{@include brd-bottom(1px, solid, darken($cl-bg-red,7%));}
-.ef-brdb2-red{@include brd-bottom(2px, solid, darken($cl-bg-red,7%));}
-.ef-brdb3-red{@include brd-bottom(3px, solid, darken($cl-bg-red,7%));}
-.ef-brdl1-red{@include brd-left(1px, solid, darken($cl-bg-red,7%));}
-.ef-brdl2-red{@include brd-left(2px, solid, darken($cl-bg-red,7%));}
-.ef-brdl3-red{@include brd-left(3px, solid, darken($cl-bg-red,7%));}
+.ef-brd1-red{@include brd(1px, solid, darken($cl-brd-red,7%));}
+.ef-brd2-red{@include brd(2px, solid, darken($cl-brd-red,7%));}
+.ef-brd3-red{@include brd(3px, solid, darken($cl-brd-red,7%));}
+.ef-brdt1-red{@include brd-top(1px, solid, darken($cl-brd-red,7%));}
+.ef-brdt2-red{@include brd-top(2px, solid, darken($cl-brd-red,7%));}
+.ef-brdt3-red{@include brd-top(3px, solid, darken($cl-brd-red,7%));}
+.ef-brdr1-red{@include brd-right(1px, solid, darken($cl-brd-red,7%));}
+.ef-brdr2-red{@include brd-right(2px, solid, darken($cl-brd-red,7%));}
+.ef-brdr3-red{@include brd-right(3px, solid, darken($cl-brd-red,7%));}
+.ef-brdb1-red{@include brd-bottom(1px, solid, darken($cl-brd-red,7%));}
+.ef-brdb2-red{@include brd-bottom(2px, solid, darken($cl-brd-red,7%));}
+.ef-brdb3-red{@include brd-bottom(3px, solid, darken($cl-brd-red,7%));}
+.ef-brdl1-red{@include brd-left(1px, solid, darken($cl-brd-red,7%));}
+.ef-brdl2-red{@include brd-left(2px, solid, darken($cl-brd-red,7%));}
+.ef-brdl3-red{@include brd-left(3px, solid, darken($cl-brd-red,7%));}
 //orange
-.ef-brd1-orange{@include brd(1px, solid, darken($cl-bg-orange,7%));}
-.ef-brd2-orange{@include brd(2px, solid, darken($cl-bg-orange,7%));}
-.ef-brd3-orange{@include brd(3px, solid, darken($cl-bg-orange,7%));}
-.ef-brdt1-orange{@include brd-top(1px, solid, darken($cl-bg-orange,7%));}
-.ef-brdt2-orange{@include brd-top(2px, solid, darken($cl-bg-orange,7%));}
-.ef-brdt3-orange{@include brd-top(3px, solid, darken($cl-bg-orange,7%));}
-.ef-brdr1-orange{@include brd-right(1px, solid, darken($cl-bg-orange,7%));}
-.ef-brdr2-orange{@include brd-right(2px, solid, darken($cl-bg-orange,7%));}
-.ef-brdr3-orange{@include brd-right(3px, solid, darken($cl-bg-orange,7%));}
-.ef-brdb1-orange{@include brd-bottom(1px, solid, darken($cl-bg-orange,7%));}
-.ef-brdb2-orange{@include brd-bottom(2px, solid, darken($cl-bg-orange,7%));}
-.ef-brdb3-orange{@include brd-bottom(3px, solid, darken($cl-bg-orange,7%));}
-.ef-brdl1-orange{@include brd-left(1px, solid, darken($cl-bg-orange,7%));}
-.ef-brdl2-orange{@include brd-left(2px, solid, darken($cl-bg-orange,7%));}
-.ef-brdl3-orange{@include brd-left(3px, solid, darken($cl-bg-orange,7%));}
+.ef-brd1-orange{@include brd(1px, solid, darken($cl-brd-orange,7%));}
+.ef-brd2-orange{@include brd(2px, solid, darken($cl-brd-orange,7%));}
+.ef-brd3-orange{@include brd(3px, solid, darken($cl-brd-orange,7%));}
+.ef-brdt1-orange{@include brd-top(1px, solid, darken($cl-brd-orange,7%));}
+.ef-brdt2-orange{@include brd-top(2px, solid, darken($cl-brd-orange,7%));}
+.ef-brdt3-orange{@include brd-top(3px, solid, darken($cl-brd-orange,7%));}
+.ef-brdr1-orange{@include brd-right(1px, solid, darken($cl-brd-orange,7%));}
+.ef-brdr2-orange{@include brd-right(2px, solid, darken($cl-brd-orange,7%));}
+.ef-brdr3-orange{@include brd-right(3px, solid, darken($cl-brd-orange,7%));}
+.ef-brdb1-orange{@include brd-bottom(1px, solid, darken($cl-brd-orange,7%));}
+.ef-brdb2-orange{@include brd-bottom(2px, solid, darken($cl-brd-orange,7%));}
+.ef-brdb3-orange{@include brd-bottom(3px, solid, darken($cl-brd-orange,7%));}
+.ef-brdl1-orange{@include brd-left(1px, solid, darken($cl-brd-orange,7%));}
+.ef-brdl2-orange{@include brd-left(2px, solid, darken($cl-brd-orange,7%));}
+.ef-brdl3-orange{@include brd-left(3px, solid, darken($cl-brd-orange,7%));}
 //blue
-.ef-brd1-blue{@include brd(1px, solid, darken($cl-bg-blue,7%));}
-.ef-brd2-blue{@include brd(2px, solid, darken($cl-bg-blue,7%));}
-.ef-brd3-blue{@include brd(3px, solid, darken($cl-bg-blue,7%));}
-.ef-brdt1-blue{@include brd-top(1px, solid, darken($cl-bg-blue,7%));}
-.ef-brdt2-blue{@include brd-top(2px, solid, darken($cl-bg-blue,7%));}
-.ef-brdt3-blue{@include brd-top(3px, solid, darken($cl-bg-blue,7%));}
-.ef-brdr1-blue{@include brd-right(1px, solid, darken($cl-bg-blue,7%));}
-.ef-brdr2-blue{@include brd-right(2px, solid, darken($cl-bg-blue,7%));}
-.ef-brdr3-blue{@include brd-right(3px, solid, darken($cl-bg-blue,7%));}
-.ef-brdb1-blue{@include brd-bottom(1px, solid, darken($cl-bg-blue,7%));}
-.ef-brdb2-blue{@include brd-bottom(2px, solid, darken($cl-bg-blue,7%));}
-.ef-brdb3-blue{@include brd-bottom(3px, solid, darken($cl-bg-blue,7%));}
-.ef-brdl1-blue{@include brd-left(1px, solid, darken($cl-bg-blue,7%));}
-.ef-brdl2-blue{@include brd-left(2px, solid, darken($cl-bg-blue,7%));}
-.ef-brdl3-blue{@include brd-left(3px, solid, darken($cl-bg-blue,7%));}
+.ef-brd1-blue{@include brd(1px, solid, darken($cl-brd-blue,7%));}
+.ef-brd2-blue{@include brd(2px, solid, darken($cl-brd-blue,7%));}
+.ef-brd3-blue{@include brd(3px, solid, darken($cl-brd-blue,7%));}
+.ef-brdt1-blue{@include brd-top(1px, solid, darken($cl-brd-blue,7%));}
+.ef-brdt2-blue{@include brd-top(2px, solid, darken($cl-brd-blue,7%));}
+.ef-brdt3-blue{@include brd-top(3px, solid, darken($cl-brd-blue,7%));}
+.ef-brdr1-blue{@include brd-right(1px, solid, darken($cl-brd-blue,7%));}
+.ef-brdr2-blue{@include brd-right(2px, solid, darken($cl-brd-blue,7%));}
+.ef-brdr3-blue{@include brd-right(3px, solid, darken($cl-brd-blue,7%));}
+.ef-brdb1-blue{@include brd-bottom(1px, solid, darken($cl-brd-blue,7%));}
+.ef-brdb2-blue{@include brd-bottom(2px, solid, darken($cl-brd-blue,7%));}
+.ef-brdb3-blue{@include brd-bottom(3px, solid, darken($cl-brd-blue,7%));}
+.ef-brdl1-blue{@include brd-left(1px, solid, darken($cl-brd-blue,7%));}
+.ef-brdl2-blue{@include brd-left(2px, solid, darken($cl-brd-blue,7%));}
+.ef-brdl3-blue{@include brd-left(3px, solid, darken($cl-brd-blue,7%));}
 //green
-.ef-brd1-green{@include brd(1px, solid, darken($cl-bg-green,7%));}
-.ef-brd2-green{@include brd(2px, solid, darken($cl-bg-green,7%));}
-.ef-brd3-green{@include brd(3px, solid, darken($cl-bg-green,7%));}
-.ef-brdt1-green{@include brd-top(1px, solid, darken($cl-bg-green,7%));}
-.ef-brdt2-green{@include brd-top(2px, solid, darken($cl-bg-green,7%));}
-.ef-brdt3-green{@include brd-top(3px, solid, darken($cl-bg-green,7%));}
-.ef-brdr1-green{@include brd-right(1px, solid, darken($cl-bg-green,7%));}
-.ef-brdr2-green{@include brd-right(2px, solid, darken($cl-bg-green,7%));}
-.ef-brdr3-green{@include brd-right(3px, solid, darken($cl-bg-green,7%));}
-.ef-brdb1-green{@include brd-bottom(1px, solid, darken($cl-bg-green,7%));}
-.ef-brdb2-green{@include brd-bottom(2px, solid, darken($cl-bg-green,7%));}
-.ef-brdb3-green{@include brd-bottom(3px, solid, darken($cl-bg-green,7%));}
-.ef-brdl1-green{@include brd-left(1px, solid, darken($cl-bg-green,7%));}
-.ef-brdl2-green{@include brd-left(2px, solid, darken($cl-bg-green,7%));}
-.ef-brdl3-green{@include brd-left(3px, solid, darken($cl-bg-green,7%));}
+.ef-brd1-green{@include brd(1px, solid, darken($cl-brd-green,7%));}
+.ef-brd2-green{@include brd(2px, solid, darken($cl-brd-green,7%));}
+.ef-brd3-green{@include brd(3px, solid, darken($cl-brd-green,7%));}
+.ef-brdt1-green{@include brd-top(1px, solid, darken($cl-brd-green,7%));}
+.ef-brdt2-green{@include brd-top(2px, solid, darken($cl-brd-green,7%));}
+.ef-brdt3-green{@include brd-top(3px, solid, darken($cl-brd-green,7%));}
+.ef-brdr1-green{@include brd-right(1px, solid, darken($cl-brd-green,7%));}
+.ef-brdr2-green{@include brd-right(2px, solid, darken($cl-brd-green,7%));}
+.ef-brdr3-green{@include brd-right(3px, solid, darken($cl-brd-green,7%));}
+.ef-brdb1-green{@include brd-bottom(1px, solid, darken($cl-brd-green,7%));}
+.ef-brdb2-green{@include brd-bottom(2px, solid, darken($cl-brd-green,7%));}
+.ef-brdb3-green{@include brd-bottom(3px, solid, darken($cl-brd-green,7%));}
+.ef-brdl1-green{@include brd-left(1px, solid, darken($cl-brd-green,7%));}
+.ef-brdl2-green{@include brd-left(2px, solid, darken($cl-brd-green,7%));}
+.ef-brdl3-green{@include brd-left(3px, solid, darken($cl-brd-green,7%));}
 //yellow
-.ef-brd1-yellow{@include brd(1px, solid, darken($cl-bg-yellow,7%));}
-.ef-brd2-yellow{@include brd(2px, solid, darken($cl-bg-yellow,7%));}
-.ef-brd3-yellow{@include brd(3px, solid, darken($cl-bg-yellow,7%));}
-.ef-brdt1-yellow{@include brd-top(1px, solid, darken($cl-bg-yellow,7%));}
-.ef-brdt2-yellow{@include brd-top(2px, solid, darken($cl-bg-yellow,7%));}
-.ef-brdt3-yellow{@include brd-top(3px, solid, darken($cl-bg-yellow,7%));}
-.ef-brdr1-yellow{@include brd-right(1px, solid, darken($cl-bg-yellow,7%));}
-.ef-brdr2-yellow{@include brd-right(2px, solid, darken($cl-bg-yellow,7%));}
-.ef-brdr3-yellow{@include brd-right(3px, solid, darken($cl-bg-yellow,7%));}
-.ef-brdb1-yellow{@include brd-bottom(1px, solid, darken($cl-bg-yellow,7%));}
-.ef-brdb2-yellow{@include brd-bottom(2px, solid, darken($cl-bg-yellow,7%));}
-.ef-brdb3-yellow{@include brd-bottom(3px, solid, darken($cl-bg-yellow,7%));}
-.ef-brdl1-yellow{@include brd-left(1px, solid, darken($cl-bg-yellow,7%));}
-.ef-brdl2-yellow{@include brd-left(2px, solid, darken($cl-bg-yellow,7%));}
-.ef-brdl3-yellow{@include brd-left(3px, solid, darken($cl-bg-yellow,7%));}
+.ef-brd1-yellow{@include brd(1px, solid, darken($cl-brd-yellow,7%));}
+.ef-brd2-yellow{@include brd(2px, solid, darken($cl-brd-yellow,7%));}
+.ef-brd3-yellow{@include brd(3px, solid, darken($cl-brd-yellow,7%));}
+.ef-brdt1-yellow{@include brd-top(1px, solid, darken($cl-brd-yellow,7%));}
+.ef-brdt2-yellow{@include brd-top(2px, solid, darken($cl-brd-yellow,7%));}
+.ef-brdt3-yellow{@include brd-top(3px, solid, darken($cl-brd-yellow,7%));}
+.ef-brdr1-yellow{@include brd-right(1px, solid, darken($cl-brd-yellow,7%));}
+.ef-brdr2-yellow{@include brd-right(2px, solid, darken($cl-brd-yellow,7%));}
+.ef-brdr3-yellow{@include brd-right(3px, solid, darken($cl-brd-yellow,7%));}
+.ef-brdb1-yellow{@include brd-bottom(1px, solid, darken($cl-brd-yellow,7%));}
+.ef-brdb2-yellow{@include brd-bottom(2px, solid, darken($cl-brd-yellow,7%));}
+.ef-brdb3-yellow{@include brd-bottom(3px, solid, darken($cl-brd-yellow,7%));}
+.ef-brdl1-yellow{@include brd-left(1px, solid, darken($cl-brd-yellow,7%));}
+.ef-brdl2-yellow{@include brd-left(2px, solid, darken($cl-brd-yellow,7%));}
+.ef-brdl3-yellow{@include brd-left(3px, solid, darken($cl-brd-yellow,7%));}
 //brown
-.ef-brd1-brown{@include brd(1px, solid, darken($cl-bg-brown,7%));}
-.ef-brd2-brown{@include brd(2px, solid, darken($cl-bg-brown,7%));}
-.ef-brd3-brown{@include brd(3px, solid, darken($cl-bg-brown,7%));}
-.ef-brdt1-brown{@include brd-top(1px, solid, darken($cl-bg-brown,7%));}
-.ef-brdt2-brown{@include brd-top(2px, solid, darken($cl-bg-brown,7%));}
-.ef-brdt3-brown{@include brd-top(3px, solid, darken($cl-bg-brown,7%));}
-.ef-brdr1-brown{@include brd-right(1px, solid, darken($cl-bg-brown,7%));}
-.ef-brdr2-brown{@include brd-right(2px, solid, darken($cl-bg-brown,7%));}
-.ef-brdr3-brown{@include brd-right(3px, solid, darken($cl-bg-brown,7%));}
-.ef-brdb1-brown{@include brd-bottom(1px, solid, darken($cl-bg-brown,7%));}
-.ef-brdb2-brown{@include brd-bottom(2px, solid, darken($cl-bg-brown,7%));}
-.ef-brdb3-brown{@include brd-bottom(3px, solid, darken($cl-bg-brown,7%));}
-.ef-brdl1-brown{@include brd-left(1px, solid, darken($cl-bg-brown,7%));}
-.ef-brdl2-brown{@include brd-left(2px, solid, darken($cl-bg-brown,7%));}
-.ef-brdl3-brown{@include brd-left(3px, solid, darken($cl-bg-brown,7%));}
-//black
-.ef-brd1-black{@include brd(1px, solid, darken($cl-bg-black,7%));}
-.ef-brd2-black{@include brd(2px, solid, darken($cl-bg-black,7%));}
-.ef-brd3-black{@include brd(3px, solid, darken($cl-bg-black,7%));}
-.ef-brdt1-black{@include brd-top(1px, solid, darken($cl-bg-black,7%));}
-.ef-brdt2-black{@include brd-top(2px, solid, darken($cl-bg-black,7%));}
-.ef-brdt3-black{@include brd-top(3px, solid, darken($cl-bg-black,7%));}
-.ef-brdr1-black{@include brd-right(1px, solid, darken($cl-bg-black,7%));}
-.ef-brdr2-black{@include brd-right(2px, solid, darken($cl-bg-black,7%));}
-.ef-brdr3-black{@include brd-right(3px, solid, darken($cl-bg-black,7%));}
-.ef-brdb1-black{@include brd-bottom(1px, solid, darken($cl-bg-black,7%));}
-.ef-brdb2-black{@include brd-bottom(2px, solid, darken($cl-bg-black,7%));}
-.ef-brdb3-black{@include brd-bottom(3px, solid, darken($cl-bg-black,7%));}
-.ef-brdl1-black{@include brd-left(1px, solid, darken($cl-bg-black,7%));}
-.ef-brdl2-black{@include brd-left(2px, solid, darken($cl-bg-black,7%));}
-.ef-brdl3-black{@include brd-left(3px, solid, darken($cl-bg-orange,7%));}
+.ef-brd1-brown{@include brd(1px, solid, darken($cl-brd-brown,7%));}
+.ef-brd2-brown{@include brd(2px, solid, darken($cl-brd-brown,7%));}
+.ef-brd3-brown{@include brd(3px, solid, darken($cl-brd-brown,7%));}
+.ef-brdt1-brown{@include brd-top(1px, solid, darken($cl-brd-brown,7%));}
+.ef-brdt2-brown{@include brd-top(2px, solid, darken($cl-brd-brown,7%));}
+.ef-brdt3-brown{@include brd-top(3px, solid, darken($cl-brd-brown,7%));}
+.ef-brdr1-brown{@include brd-right(1px, solid, darken($cl-brd-brown,7%));}
+.ef-brdr2-brown{@include brd-right(2px, solid, darken($cl-brd-brown,7%));}
+.ef-brdr3-brown{@include brd-right(3px, solid, darken($cl-brd-brown,7%));}
+.ef-brdb1-brown{@include brd-bottom(1px, solid, darken($cl-brd-brown,7%));}
+.ef-brdb2-brown{@include brd-bottom(2px, solid, darken($cl-brd-brown,7%));}
+.ef-brdb3-brown{@include brd-bottom(3px, solid, darken($cl-brd-brown,7%));}
+.ef-brdl1-brown{@include brd-left(1px, solid, darken($cl-brd-brown,7%));}
+.ef-brdl2-brown{@include brd-left(2px, solid, darken($cl-brd-brown,7%));}
+.ef-brdl3-brown{@include brd-left(3px, solid, darken($cl-brd-brown,7%));}
 //gray
-.ef-brd1-gray{@include brd(1px, solid, darken($cl-bg-gray,7%));}
-.ef-brd2-gray{@include brd(2px, solid, darken($cl-bg-gray,7%));}
-.ef-brd3-gray{@include brd(3px, solid, darken($cl-bg-gray,7%));}
-.ef-brdt1-gray{@include brd-top(1px, solid, darken($cl-bg-gray,7%));}
-.ef-brdt2-gray{@include brd-top(2px, solid, darken($cl-bg-gray,7%));}
-.ef-brdt3-gray{@include brd-top(3px, solid, darken($cl-bg-gray,7%));}
-.ef-brdr1-gray{@include brd-right(1px, solid, darken($cl-bg-gray,7%));}
-.ef-brdr2-gray{@include brd-right(2px, solid, darken($cl-bg-gray,7%));}
-.ef-brdr3-gray{@include brd-right(3px, solid, darken($cl-bg-gray,7%));}
-.ef-brdb1-gray{@include brd-bottom(1px, solid, darken($cl-bg-gray,7%));}
-.ef-brdb2-gray{@include brd-bottom(2px, solid, darken($cl-bg-gray,7%));}
-.ef-brdb3-gray{@include brd-bottom(3px, solid, darken($cl-bg-gray,7%));}
-.ef-brdl1-gray{@include brd-left(1px, solid, darken($cl-bg-gray,7%));}
-.ef-brdl2-gray{@include brd-left(2px, solid, darken($cl-bg-gray,7%));}
-.ef-brdl3-gray{@include brd-left(3px, solid, darken($cl-bg-gray,7%));}
+.ef-brd1-gray{@include brd(1px, solid, darken($cl-brd-gray,7%));}
+.ef-brd2-gray{@include brd(2px, solid, darken($cl-brd-gray,7%));}
+.ef-brd3-gray{@include brd(3px, solid, darken($cl-brd-gray,7%));}
+.ef-brdt1-gray{@include brd-top(1px, solid, darken($cl-brd-gray,7%));}
+.ef-brdt2-gray{@include brd-top(2px, solid, darken($cl-brd-gray,7%));}
+.ef-brdt3-gray{@include brd-top(3px, solid, darken($cl-brd-gray,7%));}
+.ef-brdr1-gray{@include brd-right(1px, solid, darken($cl-brd-gray,7%));}
+.ef-brdr2-gray{@include brd-right(2px, solid, darken($cl-brd-gray,7%));}
+.ef-brdr3-gray{@include brd-right(3px, solid, darken($cl-brd-gray,7%));}
+.ef-brdb1-gray{@include brd-bottom(1px, solid, darken($cl-brd-gray,7%));}
+.ef-brdb2-gray{@include brd-bottom(2px, solid, darken($cl-brd-gray,7%));}
+.ef-brdb3-gray{@include brd-bottom(3px, solid, darken($cl-brd-gray,7%));}
+.ef-brdl1-gray{@include brd-left(1px, solid, darken($cl-brd-gray,7%));}
+.ef-brdl2-gray{@include brd-left(2px, solid, darken($cl-brd-gray,7%));}
+.ef-brdl3-gray{@include brd-left(3px, solid, darken($cl-brd-gray,7%));}
 //theme
-.ef-brd1-theme{@include brd(1px, solid, darken($cl-bg-theme,7%));}
-.ef-brd2-theme{@include brd(2px, solid, darken($cl-bg-theme,7%));}
-.ef-brd3-theme{@include brd(3px, solid, darken($cl-bg-theme,7%));}
-.ef-brdt1-theme{@include brd-top(1px, solid, darken($cl-bg-theme,7%));}
-.ef-brdt2-theme{@include brd-top(2px, solid, darken($cl-bg-theme,7%));}
-.ef-brdt3-theme{@include brd-top(3px, solid, darken($cl-bg-theme,7%));}
-.ef-brdr1-theme{@include brd-right(1px, solid, darken($cl-bg-theme,7%));}
-.ef-brdr2-theme{@include brd-right(2px, solid, darken($cl-bg-theme,7%));}
-.ef-brdr3-theme{@include brd-right(3px, solid, darken($cl-bg-theme,7%));}
-.ef-brdb1-theme{@include brd-bottom(1px, solid, darken($cl-bg-theme,7%));}
-.ef-brdb2-theme{@include brd-bottom(2px, solid, darken($cl-bg-theme,7%));}
-.ef-brdb3-theme{@include brd-bottom(3px, solid, darken($cl-bg-theme,7%));}
-.ef-brdl1-theme{@include brd-left(1px, solid, darken($cl-bg-theme,7%));}
-.ef-brdl2-theme{@include brd-left(2px, solid, darken($cl-bg-theme,7%));}
-.ef-brdl3-theme{@include brd-left(3px, solid, darken($cl-bg-theme,7%));}
+.ef-brd1-theme{@include brd(1px, solid, darken($cl-brd-theme,7%));}
+.ef-brd2-theme{@include brd(2px, solid, darken($cl-brd-theme,7%));}
+.ef-brd3-theme{@include brd(3px, solid, darken($cl-brd-theme,7%));}
+.ef-brdt1-theme{@include brd-top(1px, solid, darken($cl-brd-theme,7%));}
+.ef-brdt2-theme{@include brd-top(2px, solid, darken($cl-brd-theme,7%));}
+.ef-brdt3-theme{@include brd-top(3px, solid, darken($cl-brd-theme,7%));}
+.ef-brdr1-theme{@include brd-right(1px, solid, darken($cl-brd-theme,7%));}
+.ef-brdr2-theme{@include brd-right(2px, solid, darken($cl-brd-theme,7%));}
+.ef-brdr3-theme{@include brd-right(3px, solid, darken($cl-brd-theme,7%));}
+.ef-brdb1-theme{@include brd-bottom(1px, solid, darken($cl-brd-theme,7%));}
+.ef-brdb2-theme{@include brd-bottom(2px, solid, darken($cl-brd-theme,7%));}
+.ef-brdb3-theme{@include brd-bottom(3px, solid, darken($cl-brd-theme,7%));}
+.ef-brdl1-theme{@include brd-left(1px, solid, darken($cl-brd-theme,7%));}
+.ef-brdl2-theme{@include brd-left(2px, solid, darken($cl-brd-theme,7%));}
+.ef-brdl3-theme{@include brd-left(3px, solid, darken($cl-brd-theme,7%));}
 
 //clear border
 .ef-brd0{border:none;}
@@ -1684,10 +1638,11 @@ a.is-notouch{
 /* =============================================================
  ▼ view
 ============================================================== */
-.is-block{display:block}
-.is-table{display:table}
-.is-inline{display:inline}
-.is-inline-block{display:inline-block}
+.is-block{display:block;}
+.is-table{display:table;}
+.is-inline{display:inline;}
+.is-inline-block{display:inline-block;}
+.is-table-cell{display:table-cell;}
 .is-hidden{display:none;}
 .is-disable{
   @include opacity(0.5);
@@ -2078,3 +2033,9 @@ dl.ef-float{
 .ef-rotate165{@include rotate(165deg);}
 .ef-rotate180{@include rotate(180deg);}
 .ef-rotate0{@include rotate(0deg);}
+/* =============================================================
+ ▼ vartical
+============================================================= */
+.ef-vat{vertical-align:top;}
+.ef-vam{vertical-align:middle;}
+.ef-vab{vertical-align:bottom;}

@@ -1,9 +1,9 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
- * Fivee base
- * version 1.1.5 / 2016 2 15
+ * Fivee-base
+ * ver.1.3.0 / 2016.3.8
  * http://plain-web.com/fivee-base/apps/
  * Released under MIT license. Copyright 2016 Yusuke Maruyama.
  *
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
-html,body{min-width:980px}.page-header .st-inner,.page-footer .st-inner{min-width:980px}
+.ie8 html,.ie8 body{min-width:980px}.ie8 .page-header .st-inner,.ie8 .page-footer .st-inner{min-width:980px}.ie9 ul.ef-float3 li>.cp-btn,.ie9 ul.ef-float3 li>.cp-btn-mini,.ie9 ul.ef-float3 li>.cp-btn-large,.ie9 ul.ef-float3 li>.cp-tag,.ie9 ul.ef-float3 li>.cp-tag-mini,.ie9 ul.ef-float7 li>.cp-btn,.ie9 ul.ef-float7 li>.cp-btn-mini,.ie9 ul.ef-float7 li>.cp-btn-large,.ie9 ul.ef-float7 li>.cp-tag,.ie9 ul.ef-float7 li>.cp-tag-mini,.ie9 ul.ef-float10 li>.cp-btn,.ie9 ul.ef-float10 li>.cp-btn-mini,.ie9 ul.ef-float10 li>.cp-btn-large,.ie9 ul.ef-float10 li>.cp-tag,.ie9 ul.ef-float10 li>.cp-tag-mini,.ie9 ul.ef-float20 li>.cp-btn,.ie9 ul.ef-float20 li>.cp-btn-mini,.ie9 ul.ef-float20 li>.cp-btn-large,.ie9 ul.ef-float20 li>.cp-tag,.ie9 ul.ef-float20 li>.cp-tag-mini,.ie9 ul.ef-float30 li>.cp-btn,.ie9 ul.ef-float30 li>.cp-btn-mini,.ie9 ul.ef-float30 li>.cp-btn-large,.ie9 ul.ef-float30 li>.cp-tag,.ie9 ul.ef-float30 li>.cp-tag-mini{display:block}.md-pagination>ul>li>a{display:block}

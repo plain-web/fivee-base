@@ -1,25 +1,25 @@
 ﻿<div class="ef-brd1 ef-mgb20">
-  <div class="ef-bg-gray1 ef-txt-center">
+  <div class="ef-bg-gray ef-txt-center">
     ボーダー1
   </div>
 </div>
 <div class="ef-brdt1 ef-mgb20">
-  <div class="ef-bg-gray1 ef-txt-center">
+  <div class="ef-bg-gray ef-txt-center">
     ボーダー1-トップ
   </div>
 </div>
 <div class="ef-brdr1 ef-mgb20">
-  <div class="ef-bg-gray1 ef-txt-center">
+  <div class="ef-bg-gray ef-txt-center">
     ボーダー1-ライト
   </div>
 </div>
 <div class="ef-brdb1 ef-mgb20">
-  <div class="ef-bg-gray1 ef-txt-center">
+  <div class="ef-bg-gray ef-txt-center">
     ボーダー1-ボトム
   </div>
 </div>
 <div class="ef-brdl1 ef-mgb20">
-  <div class="ef-bg-gray1 ef-txt-center">
+  <div class="ef-bg-gray ef-txt-center">
     ボーダー1-レフト
   </div>
 </div>

@@ -1,5 +1,5 @@
 ﻿<!-- / table/////////////////////////// -->
-<table class="md-table-base ef-w100p ef-mgb20">
+<table class="md-table ef-w100p ef-mgb20">
   <thead class="is-hover">
     <!-- tr /////////////////////// -->
     <tr>

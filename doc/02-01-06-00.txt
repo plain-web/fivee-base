@@ -5,14 +5,14 @@
     </div>
   </li>
   <li>
-    <select class="cp-select ef-lh30">
+    <select class="cp-select ef-h30">
       <option>
         keyword
       </option>
     </select>
   </li>
   <li>
-    <select class="cp-select ef-lh30 ef-w120" multiple="5" style="height:auto;">
+    <select class="cp-select ef-w120" multiple="5" style="height:auto;">
       <option value="keyword-01">
         keyword-01
       </option>

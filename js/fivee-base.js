@@ -1,7 +1,7 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
- * Fivee base
- * version 1.1.5 / 2016 2 15
+ * Fivee-base
+ * ver.1.3.0 / 2016.3.8
  * http://plain-web.com/fivee-base/apps/
  * Released under MIT license. Copyright 2016 Yusuke Maruyama.
  *
@@ -24,7 +24,7 @@ $(window).scroll(function() {
   scrolltop
 ======================================================================== */
 //check remove contents
-var pageTopRemove =  $('.js-pageTop-remove');
+var pageTopRemove =  $('.js-posi-remove');
 if(pageTopRemove.length){
   pageTopRemoveVal = pageTopRemoveHeightSum();
 }else{
@@ -962,6 +962,75 @@ $('.js-pagination li a').on('click', function(){
     $(this).parent('li').addClass('is-current');
   }
 });
+/*========================================================================
+  promotion bottom
+======================================================================== */
+var promoFooter = $("#js-promo-footer");
+if(promoFooter.length){
+  var scollSpeed = 300; //scroll speed
+  var promoWrap = $("#js-promo-footer > .st-body");
+  var pageFooterPosi = $(".js-page-footer");
+  var bottomPosition,footerOffset,bottomLimit,docHeight,winHeight,noWheight,resizeTimer,bottomLimit;
+  //footer
+  function footerPosi(){
+    footerOffset = pageFooterPosi.offset();
+    bottomLimit = $(document).outerHeight() - footerOffset.top;
+    return bottomLimit;
+  }
+  //initial
+  function initialPosi(){
+    docHeight = $(document).outerHeight();
+    winHeight = $(window).outerHeight();
+    noWheight = docHeight - winHeight;
+    bottomPosition =  noWheight - $(window).scrollTop();
+    console.log(docHeight, winHeight)
+    if(pageFooterPosi.length){
+      bottomLimit = footerPosi();
+      drowPromoPosiFooter()
+    }else{
+      drowPromoPosi();
+    }
+  }
+  //resize
+  resizeTimer = false;
+  $(window).resize(function() {
+    if (!resizeTimer) {
+      clearTimeout(resizeTimer);
+    }
+    resizeTimer = setTimeout(function() {
+      initialPosi();
+    }, 40);
+  });
+  //footer search
+  if(pageFooterPosi.length){
+    $(window).scroll(function() {
+      bottomLimit = footerPosi();
+      drowPromoPosiFooter();
+    });
+  }else{
+    $(window).scroll(function() {
+      drowPromoPosi();
+    });
+  }
+  //footer
+  function drowPromoPosiFooter(){
+    bottomPosition =  noWheight - $(window).scrollTop();
+    if(bottomLimit >= bottomPosition){
+      bottomPosition = bottomLimit;
+    }
+    promoWrap.stop().animate({
+      bottom: bottomPosition
+    },scollSpeed );
+  }
+  //no footer
+  function drowPromoPosi(){
+    bottomPosition =  noWheight - $(window).scrollTop();
+    promoWrap.stop().animate({
+      bottom: bottomPosition
+    },scollSpeed );
+  }
+  initialPosi();
+}
 /*========================================================================
   mediaquery aside
 ======================================================================== */

@@ -4,7 +4,7 @@
   <div class="st-body js-posi-fix js-tpl0">
     <div class="st-inner ef-sdw02">
       <div class="md-popup-body">
-        <ul class="cp-list-hover-gray">
+        <ul class="cp-list-hover ef-cp-gray">
           <li>
             <a href="https://github.com/plain-web/fivee-base" target="_blank">
               Github
@@ -28,7 +28,7 @@
   <div class="st-body js-posi-fix js-tpl1">
     <div class="st-inner ef-sdw02">
       <div class="md-popup-body ef-mw250-ovf ef-mh400-ovf">
-        <ul class="cp-list-hover-gray">
+        <ul class="cp-list-hover ef-cp-gray">
           <li>
             <a href="javascript:void(0);">
               <dl>
@@ -88,7 +88,7 @@
   <div class="st-body ef-mgt-40 js-tpl2">
     <div class="st-inner ef-sdw02">
       <div class="md-popup-body">
-        <ul class="cp-list-hover-gray">
+        <ul class="cp-list-hover ef-cp-gray">
           <li>
             <a href="#js-pageTop0">
               popup

@@ -1,5 +1,5 @@
 ﻿<!-- / table/////////////////////////// -->
-<table class="md-table-base ef-w100p js-sameclass">
+<table class="md-table ef-w100p js-sameclass">
   <thead>
     <!-- tr /////////////////////// -->
     <tr>

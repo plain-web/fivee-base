@@ -3,7 +3,7 @@
   <div class="st-inner">
     <ul class="ef-lh28 js-nav-main">
       <li>
-        <div class="ef-fs11 ef-txt-gray6">
+        <div class="ef-fs11 ef-op05">
           Category
         </div>
       </li>

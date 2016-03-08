@@ -5,7 +5,7 @@
         white
       </li>
       <li>
-        <span class="cp-badge-white">
+        <span class="cp-badge ef-cp-white">
           5
         </span>
       </li>
@@ -17,7 +17,7 @@
         red
       </li>
       <li>
-        <span class="cp-badge-red">
+        <span class="cp-badge ef-cp-red">
           5
         </span>
       </li>
@@ -29,7 +29,7 @@
         orange
       </li>
       <li>
-        <span class="cp-badge-orange">
+        <span class="cp-badge ef-cp-orange">
           5
         </span>
       </li>
@@ -41,7 +41,7 @@
         blue
       </li>
       <li>
-        <span class="cp-badge-blue">
+        <span class="cp-badge ef-cp-blue">
           5
         </span>
       </li>
@@ -53,7 +53,7 @@
         green
       </li>
       <li>
-        <span class="cp-badge-green">
+        <span class="cp-badge ef-cp-green">
           5
         </span>
       </li>
@@ -65,7 +65,7 @@
         yellow
       </li>
       <li>
-        <span class="cp-badge-yellow">
+        <span class="cp-badge ef-cp-yellow">
           5
         </span>
       </li>
@@ -77,19 +77,7 @@
         brown
       </li>
       <li>
-        <span class="cp-badge-brown">
-          5
-        </span>
-      </li>
-    </ul>
-  </li>
-  <li class="ef-mgb10">
-    <ul class="ef-float3">
-      <li>
-        black
-      </li>
-      <li>
-        <span class="cp-badge-black">
+        <span class="cp-badge ef-cp-brown">
           5
         </span>
       </li>
@@ -101,19 +89,7 @@
         gray
       </li>
       <li>
-        <span class="cp-badge-gray">
-          5
-        </span>
-      </li>
-    </ul>
-  </li>
-  <li class="ef-mgb10">
-    <ul class="ef-float3">
-      <li>
-        default
-      </li>
-      <li>
-        <span class="cp-badge">
+        <span class="cp-badge ef-cp-gray">
           5
         </span>
       </li>
@@ -125,7 +101,7 @@
         theme
       </li>
       <li>
-        <span class="cp-badge-theme">
+        <span class="cp-badge ef-cp-theme">
           5
         </span>
       </li>

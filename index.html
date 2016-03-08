@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<!--[if lt IE 8]> <html class="ie7 oldie" lang="ja"> <![endif]-->
-<!--[if IE 8]> <html class="ie8 oldie" lang="ja"> <![endif]-->
-<!--[if gt IE 9]><!--><html lang="ja"><!--<![endif]-->
+<!--[if lte IE 8]> <html class="ie8 oldie" lang="ja"> <![endif]-->
+<!--[if IE 9]> <html class="ie9 oldie" lang="ja"> <![endif]-->
+<!--[if gte IE 10]><!--><html lang="ja"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta content="CSSフレームワークはFivee-baseが便利です。豊富な機能とパーツでアプリケーションやWebサイトを簡単に作る事ができます。" name="description">
-  <meta content="css,フレームワーク,開発,html" name="keywords">
+  <title>Fivee-base | レスポンシブ対応のcssフレームワーク | html,css,javascript</title>
+  <meta content="cssフレームワークはFivee-baseが便利です。レスポンシブでアプリケーションのフロントエンドやWebサイトを簡単に作る事ができます。" name="description">
+  <meta content="css,フレームワーク,レスポンシブ,フロントエンド" name="keywords">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-  <title>Fivee-base</title>
-  <!--[if lt IE 9]> <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script> <![endif]-->
+  <!--[if lte IE 9]> <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script> <![endif]-->
   <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="css/theme-default/fivee-base.min.css" rel="stylesheet" type="text/css">
-  <link href="css/theme-default/page-contents.min.css" rel="stylesheet" type="text/css">
-  <!--[if lt IE 9]> <link href="css/old-ie.min.css" rel="stylesheet"> <![endif]-->
+  <link href="css/theme-default/unique.min.css" rel="stylesheet" type="text/css">
+  <!--[if lte IE 9]> <link href="css/old-ie.min.css" rel="stylesheet"> <![endif]-->
 </head>
 <body class="dashboad">
   <!-- header////////////////////////////////////////////// -->
   <header class="page-header">
-    <div class="st-body ef-posi-fix js-pageTop-remove">
+    <div class="st-body ef-posi-fix js-posi-remove">
       <div class="st-inner ef-float">
         <div class="ef-float-left ef-mgl-10 ef-mgr7 rs3-hide">
           <a class="ef-w30 js-aside-main-open" href="javascript:void(0);">
@@ -69,7 +69,7 @@
                     導入方法
                   </li>
                   <li>
-                    <span class="cp-badge-red">
+                    <span class="cp-badge ef-cp-red">
                       53
                     </span>
                   </li>
@@ -86,7 +86,7 @@
                     Message
                   </li>
                   <li>
-                    <span class="cp-badge-red">
+                    <span class="cp-badge ef-cp-red">
                       2
                     </span>
                   </li>
@@ -131,7 +131,7 @@
                     <i class="fa fa-info-circle ef-fs18"></i>
                   </li>
                   <li>
-                    <span class="cp-badge-red">
+                    <span class="cp-badge ef-cp-red">
                       53
                     </span>
                   </li>
@@ -148,7 +148,7 @@
                     <i class="fa fa-caret-down"></i>
                   </li>
                   <li>
-                    <span class="cp-badge-red">
+                    <span class="cp-badge ef-cp-red">
                       2
                     </span>
                   </li>
@@ -209,7 +209,7 @@
                   導入方法
                 </li>
                 <li>
-                  <span class="cp-badge-red">
+                  <span class="cp-badge ef-cp-red">
                     53
                   </span>
                 </li>
@@ -223,7 +223,7 @@
                   Message
                 </li>
                 <li>
-                  <span class="cp-badge-red">
+                  <span class="cp-badge ef-cp-red">
                     2
                   </span>
                 </li>
@@ -303,7 +303,7 @@
                       </a>
                     </li>
                     <li>
-                      <div class="ef-fs11 ef-txt-gray6">
+                      <div class="ef-fs11 ef-op05">
                         Structure
                       </div>
                     </li>
@@ -334,7 +334,7 @@
                       </ul>
                     </li>
                     <li>
-                      <div class="ef-fs11 ef-txt-gray6">
+                      <div class="ef-fs11 ef-op05">
                         Components
                       </div>
                     </li>
@@ -480,10 +480,10 @@
                           </a>
                         </li>
                         <li>
-                          <a href="page-components/step-wizard.html">
+                          <a href="page-components/stepbar.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
-                                step-wizard
+                                stepbar
                               </li>
                             </ul>
                           </a>
@@ -497,10 +497,19 @@
                             </ul>
                           </a>
                         </li>
+                        <li>
+                          <a href="page-components/talkbox.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                talkbox
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
                       </ul>
                     </li>
                     <li>
-                      <div class="ef-fs11 ef-txt-gray6">
+                      <div class="ef-fs11 ef-op05">
                         Effect
                       </div>
                     </li>
@@ -708,10 +717,19 @@
                             </ul>
                           </a>
                         </li>
+                        <li>
+                          <a href="page-effect/vertical.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                vertical
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
                       </ul>
                     </li>
                     <li>
-                      <div class="ef-fs11 ef-txt-gray6">
+                      <div class="ef-fs11 ef-op05">
                         Module
                       </div>
                     </li>
@@ -874,10 +892,19 @@
                             </ul>
                           </a>
                         </li>
+                        <li>
+                          <a href="page-module/promo-footer.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                promo-footer
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
                       </ul>
                     </li>
                     <li>
-                      <div class="ef-fs11 ef-txt-gray6">
+                      <div class="ef-fs11 ef-op05">
                         State
                       </div>
                     </li>
@@ -923,8 +950,8 @@
           </div>
         </aside>
         <!-- / page-main////////////////////////////////////////////// -->
-        <main class="page-contents js-page-contents" role="main">
-          <div class="st-body">
+        <main class="page-contents" role="main">
+          <div class="st-body js-page-contents">
             <div class="st-inner">
               <!-- / page title////////////////////////////////////////////// -->
               <section class="cp-page-title ef-mgb10">
@@ -956,17 +983,17 @@
                   <div class="ef-float-right">
                     <ul class="ef-float3">
                       <li class="ef-float-right">
-                        <a class="cp-btn-mini cp-btn-white ef-w30" href="index.html">
+                        <a class="cp-btn-mini ef-cp-white ef-w30" href="index.html">
                           <i class="fa fa-home ef-fs14"></i>
                         </a>
                       </li>
                       <li class="ef-float-right">
-                        <a class="cp-btn-mini cp-btn-white ef-w30 js-popup-open js-tpl2" href="javascript:void(0);">
+                        <a class="cp-btn-mini ef-cp-white ef-w30 js-popup-open js-tpl2" href="javascript:void(0);">
                           <i class="fa fa-link ef-fs14"></i>
                         </a>
                       </li>
                       <li class="ef-float-right">
-                        <a class="cp-btn-mini cp-btn-white ef-w30 js-bookmark-open js-tpl3" href="javascript:void(0);">
+                        <a class="cp-btn-mini ef-cp-white ef-w30 js-bookmark-open js-tpl3" href="javascript:void(0);">
                           <i class="fa fa-star-o ef-fs14"></i>
                         </a>
                       </li>
@@ -975,7 +1002,7 @@
                 </div>
               </section>
               <!-- / panel////////////////////////////////////////////// -->
-              <section class="cp-panel-white ef-w100p">
+              <section class="cp-panel ef-cp-white ef-w100p">
                 <div class="st-body">
                   <div class="st-inner ef-mh400">
                     <!-- / example00 ////////////////////////////////// -->
@@ -1016,10 +1043,10 @@
                                 まずはGithubよりzipをダウンロードしてください。
                               </section>
                               <section class="ef-txt-center ef-mgb50">
-                                <a class="cp-btn-large-green" href="https://github.com/plain-web/fivee-base" target="_blank">
+                                <a class="cp-btn-large ef-cp-green" href="https://github.com/plain-web/fivee-base" target="_blank">
                                   Download Zip
                                   <small>
-                                    (ver.1.1.5)
+                                    (ver.1.3.0 )
                                   </small>
                                 </a>
                               </section>
@@ -1036,7 +1063,7 @@
                                   </a>
                                 </span>
                               </section>
-                              <section class="cp-panel-gray ef-w100p ef-mgb20">
+                              <section class="cp-panel ef-cp-gray ef-w100p ef-mgb20">
                                 <div class="st-body">
                                   <div class="st-inner">
                                     <ul class="ef-lh28">
@@ -1050,7 +1077,7 @@
                                         <span class="is-bold">
                                           html5shiv.min.js
                                         </span>
-                                        (ie9以下でもhtml5が表示できるスクリプト)
+                                        (ie10以下でもhtml5が表示できるスクリプト)
                                       </li>
                                       <li>
                                         <i class="fa fa-file-text-o"></i>
@@ -1077,7 +1104,7 @@
                                       <li>
                                         <i class="fa fa-file-text-o"></i>
                                         <span class="is-bold">
-                                          page-contents.min.css
+                                          unique.min.css
                                         </span>
                                         (あなたのページに必要な指定を記述するファイル)
                                         <span class="js-tooltip-hover">
@@ -1094,10 +1121,10 @@
                                         <span class="is-bold">
                                           old-ie.min.css
                                         </span>
-                                        (ie9以下で読み込むクロスブラウザ用CSSファイル)
+                                        (ie10以下で読み込むクロスブラウザ用CSSファイル)
                                         <span class="js-tooltip-hover">
                                           <div class="md-tooltip-key js-tooltip-key">
-                                            本ページのheadタグ直前のコンディショナルコメントの記載をコピーした場合「ie7,ie8,oldie」のクラスが、それぞれのブラウザに対して有効になります。
+                                            本ページのheadタグ直前のコンディショナルコメントの記載をコピーした場合「ie8,ie9,oldie」のクラスが、それぞれのブラウザに対して有効になります。
                                           </div>
                                           <a href="javascript:void(0);">
                                             <i class="fa fa-question-circle"></i>
@@ -1108,7 +1135,7 @@
                                   </div>
                                 </div>
                               </section>
-                              <section class="cp-panel-gray ef-w100p ef-mgb50">
+                              <section class="cp-panel ef-cp-gray ef-w100p ef-mgb50">
                                 <div class="st-body">
                                   <div class="st-inner">
                                     <ul class="ef-lh28">
@@ -1122,14 +1149,14 @@
                                         <span class="is-bold">
                                           jquery/dist/jquery.min.js
                                         </span>
-                                        (ie8以上で読み込むjquery)
+                                        (ie9以上で読み込むjquery)
                                       </li>
                                       <li>
                                         <i class="fa fa-file-text-o"></i>
                                         <span class="is-bold">
                                           jquery-legacy/dist/jquery.min.js
                                         </span>
-                                        (ie9以下で読み込むjquery)
+                                        (ie10以下で読み込むjquery)
                                       </li>
                                       <li>
                                         <i class="fa fa-file-text-o"></i>
@@ -1147,7 +1174,7 @@
                               <section class="ef-mgb20">
                                 あなたのサイトやアプリケーションに不必要なファイルを削除してください。
                               </section>
-                              <section class="cp-panel-yellow ef-w100p ef-mgb40">
+                              <section class="cp-panel ef-cp-yellow ef-w100p ef-mgb40">
                                 <div class="st-body">
                                   <div class="st-inner">
                                     <ul class="ef-lh28">
@@ -1214,7 +1241,7 @@
                                       <li>
                                         <i class="fa fa-file-text-o"></i>
                                         <span class="is-bold">
-                                          gitignore
+                                          LICENSE
                                         </span>
                                         (github用のファイル：ライセンス)
                                         <span class="js-tooltip-hover">
@@ -1308,7 +1335,7 @@
                         </div>
                         <div class="example-box ef-mgb40">
                           <!-- / example code /////////////////////////// -->
-                          <table class="md-table-base ef-w100p">
+                          <table class="md-table ef-w100p">
                             <thead>
                               <!-- tr /////////////////////// -->
                               <tr>
@@ -1347,7 +1374,7 @@
                               </tr>
                             </tbody>
                           </table>
-                          <div class="ef-txt-gray5 ef-txt-right ef-mgt7 ef-fs10">
+                          <div class="ef-op05 ef-txt-right ef-mgt7 ef-fs10">
                             IE8はレスポンシブ未対応
                           </div>
                         </div>
@@ -1478,7 +1505,7 @@
                             </li>
                           </ul>
                           <section class="ef-txt-center">
-                            <a class="cp-btn-large-green" href="https://twitter.com/plain_web" target="blank">
+                            <a class="cp-btn-large ef-cp-green" href="https://twitter.com/plain_web" target="blank">
                               ご相談はこちらから
                             </a>
                           </section>
@@ -1496,7 +1523,7 @@
   </section>
   <!-- footer///////////////////////////////////////////// -->
   <footer class="page-footer">
-    <div class="st-body ef-posi-fix">
+    <div class="st-body">
       <div class="st-inner ef-txt-center ef-fs11 ef-lh14">
         Copyright © 2016 plain-web all rights reserved.
       </div>
@@ -1508,7 +1535,7 @@
     <div class="st-body js-posi-fix js-tpl0">
       <div class="st-inner ef-sdw02">
         <div class="md-popup-body">
-          <ul class="cp-list-hover-gray">
+          <ul class="cp-list-hover ef-cp-gray">
             <li>
               <a href="https://github.com/plain-web/fivee-base" target="_blank">
                 Github
@@ -1532,7 +1559,7 @@
     <div class="st-body js-posi-fix js-tpl1">
       <div class="st-inner ef-sdw02">
         <div class="md-popup-body ef-mw250-ovf ef-mh400-ovf">
-          <ul class="cp-list-hover-gray">
+          <ul class="cp-list-hover ef-cp-gray">
             <li>
               <a href="javascript:void(0);">
                 <dl>
@@ -1592,7 +1619,7 @@
     <div class="st-body ef-mgt-40 js-tpl2">
       <div class="st-inner ef-sdw02">
         <div class="md-popup-body">
-          <ul class="cp-list-hover-gray">
+          <ul class="cp-list-hover ef-cp-gray">
             <li>
               <a href="#js-pageTop0">
                 概要
@@ -1699,8 +1726,8 @@
     </div>
   </section>
   <!-- script//////////////////////////////////////////// -->
-  <!--[if gt IE 8]><!--><script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script><!--<![endif]-->
-  <!--[if lt IE 9]> <script src="bower_components/jquery-legacy/dist/jquery.min.js" type="text/javascript"></script> <![endif]-->
+  <!--[if gte IE 10]><!--><script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script><!--<![endif]-->
+  <!--[if lte IE 9]> <script src="bower_components/jquery-legacy/dist/jquery.min.js" type="text/javascript"></script> <![endif]-->
   <script src="js/fivee-base.min.js" type="text/javascript"></script>
   <!-- :javascript -->
   <!-- $(function(){ -->

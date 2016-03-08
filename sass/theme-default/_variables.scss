@@ -18,14 +18,15 @@ $page-header-height:40px;
 $page-footer-height:20px;
 
 //breakpoint border
-$breakpoint1-2: 480px; //| 1←|→2　| 3 |
-$breakpoint2-3: 768px; //| 1 |　2←|→3 |
+$breakpoint1-2: 480px;  //| 1←|→2　| 3 | 4 |
+$breakpoint2-3: 768px;  //| 1 |　2←|→3 | 4 |
+$breakpoint3-4: 1040px; //| 1 |　2 | 3←|→4 |
 
 //app font family
 $ff-base: Meiryo,メイリオ,Arial,Verdana,"Helvetica Neue",Helvetica,sans-serif;
 
 //font size
-$fs-base:13px;
+$fs:13px;
 $fs-small:11px;
 $fs-midium:12px;
 $fs-large:14px;
@@ -38,12 +39,12 @@ $fs-h1:24px;
 
 //line height
 $lh-reset:1.0;
-$lh-base:1.6;
+$lh:1.6;
 $lh-form:30px;
-$lh-table:$lh-base;
+$lh-table:$lh;
 $lh-btn:20px;
 $lh-btn-mini:16px;
-$lh-txt:$lh-base;
+$lh-txt:$lh;
 
 // theme color
 $cl-theme: #485169;
@@ -66,37 +67,21 @@ $cl-blue:#548BB5;
 $cl-green:#689C51;
 $cl-yellow:#fcff85;
 $cl-brown:#73402B;
-$cl-black:#000;
 $cl-gray:#666;
-$cl-gray1:#888;
-$cl-gray2:#999;
-$cl-gray3:#aaa;
-$cl-gray4:#bbb;
-$cl-gray5:#ccc;
-$cl-gray6:#ddd;
-$cl-gray7:#eee;
 
 //text color
-$cl-txt-white:#fff;
-$cl-txt-red:#cc3300;
+$cl-txt-white:$cl-white;
+$cl-txt-red:$cl-red;
 $cl-txt-orange:#B59654;
-$cl-txt-blue:#548BB5;
-$cl-txt-green:#689C51;
+$cl-txt-blue:$cl-blue;
+$cl-txt-green:$cl-green;
 $cl-txt-yellow:#F4DD17;
-$cl-txt-brown:#73402B;
-$cl-txt-black:#000;
+$cl-txt-brown:$cl-brown;
 $cl-txt-gray:#333;
-$cl-txt-gray1:#444;
-$cl-txt-gray2:#555;
-$cl-txt-gray3:#666;
-$cl-txt-gray4:#777;
-$cl-txt-gray5:#888;
-$cl-txt-gray6:#999;
-$cl-txt-gray7:#aaa;
 
 //text color
-$cl-txt-base: #333;
-$cl-txt-rev : #fff;
+$cl-txt: #333;
+$cl-txt-rev : $cl-white;
 $cl-txt-link:#448CCF;
 $cl-txt-hover: darken( $cl-txt-link, 15% );
 $cl-txt-theme : $cl-theme;
@@ -109,68 +94,92 @@ $cl-bg-blue: #EEF9FF;
 $cl-bg-green: #EFFFEE;
 $cl-bg-yellow: #FDFFEE;
 $cl-bg-brown: #EEE2DD;
-$cl-bg-black: $cl-black;
 $cl-bg-gray:#f6f6f6;
-$cl-bg-gray1:#f9f9f9;
-$cl-bg-gray2:#eee;
-$cl-bg-gray3:#ddd;
-$cl-bg-gray4:#ccc;
-$cl-bg-gray5:#bbb;
-$cl-bg-gray6:#aaa;
-$cl-bg-gray7:#999;
 $cl-bg-theme:#EEF0F5;
 
 //border color
-$cl-brd-base:#ccc;
+$cl-brd:#ccc;
+$cl-brd-white:$cl-white;
+$cl-brd-red:$cl-red;
+$cl-brd-orange:#E6AD2D;
+$cl-brd-blue:$cl-blue;
+$cl-brd-green:$cl-green;
+$cl-brd-yellow:$cl-yellow;
+$cl-brd-brown:$cl-brown;
+$cl-brd-gray:$cl-gray;
 $cl-brd-theme: $cl-theme;
 
-$cl-brd-lighten: lighten( $cl-brd-base, 5% );
-$cl-brd-darken: darken( $cl-brd-base, 5% );
 
 //focus color
 $cl-brd-focus :#8691C1;
 $cl-bg-focus :#EDF3F7;
 
 //shadow color
-$cl-shadow-base: $cl-txt-base;
+$cl-shadow-base: $cl-txt;
 
 //button color
-$cl-btn-base:#eee;
-$cl-btn-lighten: lighten( $cl-btn-base, 3% );
-$cl-btn-darken: darken( $cl-btn-base, 10% );
+$cl-btn:#eee;
+$cl-btn-lighten: lighten( $cl-btn, 3% );
+$cl-btn-darken: darken( $cl-btn, 10% );
+$cl-btn-hover: lighten( $cl-btn, 3% );
+$cl-btn-active: darken( $cl-btn, 3% );
+
 $cl-btn-white:#f9f9f9;
 $cl-btn-white-lighten: lighten( $cl-btn-white, 7% );
 $cl-btn-white-darken: darken( $cl-btn-white, 10% );
+$cl-btn-white-hover: lighten( $cl-btn-white, 3% );
+$cl-btn-white-active: darken( $cl-btn-white, 3% );
+
 $cl-btn-red:$cl-red;
 $cl-btn-red-lighten: lighten( $cl-btn-red, 7% );
 $cl-btn-red-darken: darken( $cl-btn-red, 10% );
+$cl-btn-red-hover: lighten( $cl-btn-red, 5% );
+$cl-btn-red-active: darken( $cl-btn-red, 3% );
+
 $cl-btn-orange:$cl-orange;
 $cl-btn-orange-lighten: lighten( $cl-btn-orange, 7% );
 $cl-btn-orange-darken: darken( $cl-btn-orange, 10% );
+$cl-btn-orange-hover: lighten( $cl-btn-orange, 10% );
+$cl-btn-orange-active: darken( $cl-btn-orange, 3% );
+
 $cl-btn-blue:$cl-blue;
 $cl-btn-blue-lighten: lighten( $cl-btn-blue, 7% );
 $cl-btn-blue-darken: darken( $cl-btn-blue, 10% );
+$cl-btn-blue-hover: lighten( $cl-btn-blue, 10% );
+$cl-btn-blue-active: darken( $cl-btn-blue, 3% );
+
 $cl-btn-green:$cl-green;
 $cl-btn-green-lighten: lighten( $cl-btn-green, 7% );
 $cl-btn-green-darken: darken( $cl-btn-green, 10% );
+$cl-btn-green-hover: lighten( $cl-btn-green, 10% );
+$cl-btn-green-active: darken( $cl-btn-green, 3% );
+
 $cl-btn-yellow:#F9FF1F;
 $cl-btn-yellow-lighten: lighten( $cl-btn-yellow, 20% );
 $cl-btn-yellow-darken: darken( $cl-btn-yellow, 10% );
+$cl-btn-yellow-hover: lighten( $cl-btn-yellow, 25% );
+$cl-btn-yellow-active: darken( $cl-btn-yellow, 3% );
+
 $cl-btn-brown:$cl-brown;
 $cl-btn-brown-lighten: lighten( $cl-btn-brown, 7% );
 $cl-btn-brown-darken: darken( $cl-btn-brown, 10% );
-$cl-btn-black:$cl-black;
-$cl-btn-black-lighten: lighten( $cl-btn-black, 10% );
-$cl-btn-black-darken: darken( $cl-btn-black, 10% );
+$cl-btn-brown-hover: lighten( $cl-btn-brown, 15% );
+$cl-btn-brown-active: darken( $cl-btn-brown, 3% );
+
 $cl-btn-gray:$cl-gray;
 $cl-btn-gray-lighten: lighten( $cl-btn-gray, 7% );
 $cl-btn-gray-darken: darken( $cl-btn-gray, 10% );
+$cl-btn-gray-hover: lighten( $cl-btn-gray, 15% );
+$cl-btn-gray-active: darken( $cl-btn-gray, 3% );
+
 $cl-btn-theme:$cl-theme;
 $cl-btn-theme-lighten: lighten( $cl-btn-theme, 7% );
 $cl-btn-theme-darken: darken( $cl-btn-theme, 10% );
+$cl-btn-theme-hover: lighten( $cl-btn-theme, 15% );
+$cl-btn-theme-active: darken( $cl-btn-theme, 3% );
 
 //userinfo color
-$cl-alert: #cc3300;
+$cl-alert: $cl-red;
 $cl-success: #3E7B13;
 $cl-info: #4F8AB4;
 $cl-warning: #857F6A;
@@ -189,7 +198,7 @@ $cl-delete-darken: darken( $cl-delete, 5% );
 $cl-bg-header: $cl-theme;
 
 //nav
-$cl-bg-nav: #fff;
+$cl-bg-nav: $cl-white;
 $cl-bg-nav-current: #f6f6f6;
 $cl-bg-nav-hover:  darken( $cl-bg-nav-current, 5% );
 
@@ -206,7 +215,7 @@ $cl-bg-footer: $cl-theme;
 
 //table
 $cl-bg-table-th : #e5e5e5;
-$cl-bg-table-td : #fff;
+$cl-bg-table-td : $cl-white;
 $cl-bg-table-th-hover : $cl-bg-gray;
 $cl-bg-table-td-hover : $cl-bg-gray;
 $cl-bg-table-highlight : $cl-yellow;
@@ -215,19 +224,19 @@ $pd-table:5px;
 
 //modal
 $cl-bg-modal-header: #CAD5D9;
-$cl-bg-modal-body: #fff;
+$cl-bg-modal-body: $cl-white;
 $cl-bg-modal-footer: #f6f6f6;
 //image-viewer
-$cl-bg-image-viewer-header: #fff;
+$cl-bg-image-viewer-header: $cl-white;
 
 //popup
-$cl-bg-popup:#fff;
+$cl-bg-popup:$cl-white;
 
 //tooltip
-$cl-bg-tooltip:#666;
+$cl-bg-tooltip:$cl-gray;
 
 //remarks
-$cl-bg-remarks: #fff;
+$cl-bg-remarks: $cl-white;
 $cl-bg-remarks-supplement:#FEFDDA;
 
 //badge
@@ -238,7 +247,6 @@ $cl-badge-green:$cl-green;
 $cl-badge-orange:$cl-orange;
 $cl-badge-blue:$cl-blue;
 $cl-badge-yellow:$cl-yellow;
-$cl-badge-black:$cl-black;
 $cl-badge-brown:$cl-brown;
 $cl-badge-theme:$cl-theme;
 
@@ -250,7 +258,6 @@ $cl-tag-green:$cl-green;
 $cl-tag-orange:$cl-orange;
 $cl-tag-blue:$cl-blue;
 $cl-tag-yellow:$cl-yellow;
-$cl-tag-black:$cl-black;
 $cl-tag-brown:$cl-brown;
 $cl-tag-theme:$cl-theme;
 
@@ -262,6 +269,13 @@ $cl-progress-bar-green:$cl-green;
 $cl-progress-bar-orange:$cl-orange;
 $cl-progress-bar-blue:$cl-blue;
 $cl-progress-bar-yellow:$cl-yellow;
-$cl-progress-bar-black:$cl-black;
 $cl-progress-bar-brown:$cl-brown;
 $cl-progress-bar-theme:$cl-theme;
+
+//stepbar
+$cl-stepbar:#ddd;
+$cl-stepbar-current:#098DB1;
+
+//talkbox
+$talkbox-arrow-height:6px;
+$talkbox-arrow-width:13px;

@@ -5,9 +5,9 @@
     </div>
   </li>
   <li>
-    <input class="cp-input ef-lh30 ef-w100" type="text">
+    <input class="cp-input ef-w100" type="text">
   </li>
   <li>
-    <input class="cp-input ef-lh30 ef-w120" type="text">
+    <input class="cp-input ef-w120" type="text">
   </li>
 </ul>

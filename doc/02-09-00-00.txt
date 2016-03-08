@@ -3,17 +3,17 @@
     <div class="ef-float-left">
       <ul class="ef-float7">
         <li>
-          <a class="cp-btn-mini-white ef-mw60" href="javascript:void(0);">
+          <a class="cp-btn-mini ef-cp-white ef-mw60" href="javascript:void(0);">
             操作A
           </a>
         </li>
         <li>
-          <a class="cp-btn-mini-white ef-mw60" href="javascript:void(0);">
+          <a class="cp-btn-mini ef-cp-white ef-mw60" href="javascript:void(0);">
             操作B
           </a>
         </li>
         <li>
-          <a class="cp-btn-mini-white ef-mw60" href="javascript:void(0);">
+          <a class="cp-btn-mini ef-cp-white ef-mw60" href="javascript:void(0);">
             操作C
           </a>
         </li>

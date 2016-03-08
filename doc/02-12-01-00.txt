@@ -1,56 +1,46 @@
 ﻿<ul class="ef-float7">
   <li class="ef-mgb10">
-    <span class="cp-tag-mini-white">
+    <span class="cp-tag-mini ef-cp-white">
       white
     </span>
   </li>
   <li class="ef-mgb10">
-    <span class="cp-tag-mini-red">
+    <span class="cp-tag-mini ef-cp-red">
       red
     </span>
   </li>
   <li class="ef-mgb10">
-    <span class="cp-tag-mini-orange">
+    <span class="cp-tag-mini ef-cp-orange">
       orange
     </span>
   </li>
   <li class="ef-mgb10">
-    <span class="cp-tag-mini-blue">
+    <span class="cp-tag-mini ef-cp-blue">
       blue
     </span>
   </li>
   <li class="ef-mgb10">
-    <span class="cp-tag-mini-green">
+    <span class="cp-tag-mini ef-cp-green">
       green
     </span>
   </li>
   <li class="ef-mgb10">
-    <span class="cp-tag-mini-yellow">
+    <span class="cp-tag-mini ef-cp-yellow">
       yellow
     </span>
   </li>
   <li class="ef-mgb10">
-    <span class="cp-tag-mini-brown">
+    <span class="cp-tag-mini ef-cp-brown">
       brown
     </span>
   </li>
   <li class="ef-mgb10">
-    <span class="cp-tag-mini-black">
-      black
-    </span>
-  </li>
-  <li class="ef-mgb10">
-    <span class="cp-tag-mini-gray">
+    <span class="cp-tag-mini ef-cp-gray">
       gray
     </span>
   </li>
   <li class="ef-mgb10">
-    <span class="cp-tag-mini">
-      default
-    </span>
-  </li>
-  <li class="ef-mgb10">
-    <span class="cp-tag-mini-theme">
+    <span class="cp-tag-mini ef-cp-theme">
       theme
     </span>
   </li>

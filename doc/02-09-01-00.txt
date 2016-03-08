@@ -27,7 +27,7 @@
           </select>
         </li>
         <li class="ef-mgl7">
-          <a class="cp-btn-mini-blue ef-mw40" href="javascript:void(0);">
+          <a class="cp-btn-mini ef-cp-blue ef-mw40" href="javascript:void(0);">
             検索
           </a>
         </li>

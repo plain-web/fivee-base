@@ -10,6 +10,11 @@
     </span>
   </li>
   <li>
+    <span class="ef-pd10 ef-cl-green ef-txt-white is-table-cell">
+      is-table-cell
+    </span>
+  </li>
+  <li>
     <span class="ef-pd10 ef-cl-green ef-txt-white is-inline">
       is-inline
     </span>

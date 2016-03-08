@@ -3,9 +3,13 @@
     <a class="cp-btn ef-response ef-mw40" href="javascript:void(0);">
       <i class="fa fa-bars"></i>
     </a>
+  </li>
+  <li>
     <a class="cp-btn ef-response ef-mw40" href="javascript:void(0);">
       <i class="fa fa-user"></i>
     </a>
+  </li>
+  <li>
     <a class="cp-btn ef-response ef-mw40" href="javascript:void(0);">
       <i class="fa fa-times"></i>
     </a>

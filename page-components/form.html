@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<!--[if lt IE 8]> <html class="ie7 oldie" lang="ja"> <![endif]-->
-<!--[if IE 8]> <html class="ie8 oldie" lang="ja"> <![endif]-->
-<!--[if gt IE 9]><!--><html lang="ja"><!--<![endif]-->
+<!--[if lte IE 8]> <html class="ie8 oldie" lang="ja"> <![endif]-->
+<!--[if IE 9]> <html class="ie9 oldie" lang="ja"> <![endif]-->
+<!--[if gte IE 10]><!--><html lang="ja"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta content="CSSフレームワークはFivee-baseが便利です。豊富な機能とパーツでアプリケーションやWebサイトを簡単に作る事ができます。" name="description">
-  <meta content="css,フレームワーク,開発,html" name="keywords">
+  <title>Fivee-base | レスポンシブ対応のcssフレームワーク | html,css,javascript</title>
+  <meta content="cssフレームワークはFivee-baseが便利です。レスポンシブでアプリケーションのフロントエンドやWebサイトを簡単に作る事ができます。" name="description">
+  <meta content="css,フレームワーク,レスポンシブ,フロントエンド" name="keywords">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-  <title>Fivee-base</title>
-  <!--[if lt IE 9]> <script src="../bower_components/html5shiv/dist/html5shiv.min.js"></script> <![endif]-->
+  <!--[if lte IE 9]> <script src="../bower_components/html5shiv/dist/html5shiv.min.js"></script> <![endif]-->
   <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="../css/theme-default/fivee-base.min.css" rel="stylesheet" type="text/css">
-  <link href="../css/theme-default/page-contents.min.css" rel="stylesheet" type="text/css">
-  <!--[if lt IE 9]> <link href="../css/old-ie.min.css" rel="stylesheet"> <![endif]-->
+  <link href="../css/theme-default/unique.min.css" rel="stylesheet" type="text/css">
+  <!--[if lte IE 9]> <link href="../css/old-ie.min.css" rel="stylesheet"> <![endif]-->
 </head>
 <body class="components-form">
   <!-- header////////////////////////////////////////////// -->
   <header class="page-header">
-    <div class="st-body ef-posi-fix js-pageTop-remove">
+    <div class="st-body ef-posi-fix js-posi-remove">
       <div class="st-inner ef-float">
         <div class="ef-float-left ef-mgl-10 ef-mgr7 rs3-hide">
           <a class="ef-w30 js-aside-main-open" href="javascript:void(0);">
@@ -69,7 +69,7 @@
                     導入方法
                   </li>
                   <li>
-                    <span class="cp-badge-red">
+                    <span class="cp-badge ef-cp-red">
                       53
                     </span>
                   </li>
@@ -86,7 +86,7 @@
                     Message
                   </li>
                   <li>
-                    <span class="cp-badge-red">
+                    <span class="cp-badge ef-cp-red">
                       2
                     </span>
                   </li>
@@ -131,7 +131,7 @@
                     <i class="fa fa-info-circle ef-fs18"></i>
                   </li>
                   <li>
-                    <span class="cp-badge-red">
+                    <span class="cp-badge ef-cp-red">
                       53
                     </span>
                   </li>
@@ -148,7 +148,7 @@
                     <i class="fa fa-caret-down"></i>
                   </li>
                   <li>
-                    <span class="cp-badge-red">
+                    <span class="cp-badge ef-cp-red">
                       2
                     </span>
                   </li>
@@ -209,7 +209,7 @@
                   導入方法
                 </li>
                 <li>
-                  <span class="cp-badge-red">
+                  <span class="cp-badge ef-cp-red">
                     53
                   </span>
                 </li>
@@ -223,7 +223,7 @@
                   Message
                 </li>
                 <li>
-                  <span class="cp-badge-red">
+                  <span class="cp-badge ef-cp-red">
                     2
                   </span>
                 </li>
@@ -274,7 +274,7 @@
                       </a>
                     </li>
                     <li>
-                      <div class="ef-fs11 ef-txt-gray6">
+                      <div class="ef-fs11 ef-op05">
                         Structure
                       </div>
                     </li>
@@ -305,7 +305,7 @@
                       </ul>
                     </li>
                     <li>
-                      <div class="ef-fs11 ef-txt-gray6">
+                      <div class="ef-fs11 ef-op05">
                         Components
                       </div>
                     </li>
@@ -451,10 +451,10 @@
                           </a>
                         </li>
                         <li>
-                          <a href="../page-components/step-wizard.html">
+                          <a href="../page-components/stepbar.html">
                             <ul class="ef-float3">
                               <li class="ef-mgl3">
-                                step-wizard
+                                stepbar
                               </li>
                             </ul>
                           </a>
@@ -468,10 +468,19 @@
                             </ul>
                           </a>
                         </li>
+                        <li>
+                          <a href="../page-components/talkbox.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                talkbox
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
                       </ul>
                     </li>
                     <li>
-                      <div class="ef-fs11 ef-txt-gray6">
+                      <div class="ef-fs11 ef-op05">
                         Effect
                       </div>
                     </li>
@@ -679,10 +688,19 @@
                             </ul>
                           </a>
                         </li>
+                        <li>
+                          <a href="../page-effect/vertical.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                vertical
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
                       </ul>
                     </li>
                     <li>
-                      <div class="ef-fs11 ef-txt-gray6">
+                      <div class="ef-fs11 ef-op05">
                         Module
                       </div>
                     </li>
@@ -845,10 +863,19 @@
                             </ul>
                           </a>
                         </li>
+                        <li>
+                          <a href="../page-module/promo-footer.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                promo-footer
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
                       </ul>
                     </li>
                     <li>
-                      <div class="ef-fs11 ef-txt-gray6">
+                      <div class="ef-fs11 ef-op05">
                         State
                       </div>
                     </li>
@@ -894,8 +921,8 @@
           </div>
         </aside>
         <!-- / page-main////////////////////////////////////////////// -->
-        <main class="page-contents js-page-contents" role="main">
-          <div class="st-body">
+        <main class="page-contents" role="main">
+          <div class="st-body js-page-contents">
             <div class="st-inner">
               <!-- / page title////////////////////////////////////////////// -->
               <section class="cp-page-title ef-mgb10">
@@ -935,17 +962,17 @@
                   <div class="ef-float-right">
                     <ul class="ef-float3">
                       <li class="ef-float-right">
-                        <a class="cp-btn-mini cp-btn-white ef-w30" href="../index.html">
+                        <a class="cp-btn-mini ef-cp-white ef-w30" href="../index.html">
                           <i class="fa fa-home ef-fs14"></i>
                         </a>
                       </li>
                       <li class="ef-float-right">
-                        <a class="cp-btn-mini cp-btn-white ef-w30 js-popup-open js-tpl2" href="javascript:void(0);">
+                        <a class="cp-btn-mini ef-cp-white ef-w30 js-popup-open js-tpl2" href="javascript:void(0);">
                           <i class="fa fa-link ef-fs14"></i>
                         </a>
                       </li>
                       <li class="ef-float-right">
-                        <a class="cp-btn-mini cp-btn-white ef-w30 js-bookmark-open js-tpl3" href="javascript:void(0);">
+                        <a class="cp-btn-mini ef-cp-white ef-w30 js-bookmark-open js-tpl3" href="javascript:void(0);">
                           <i class="fa fa-star-o ef-fs14"></i>
                         </a>
                       </li>
@@ -954,7 +981,7 @@
                 </div>
               </section>
               <!-- / panel////////////////////////////////////////////// -->
-              <section class="cp-panel-white ef-w100p">
+              <section class="cp-panel ef-cp-white ef-w100p">
                 <div class="st-body">
                   <div class="st-inner ef-mh400">
                     <!-- / example00 ////////////////////////////////// -->
@@ -1140,7 +1167,7 @@
                           </ul>
                         </div>
                         <div class="example-remarks ef-mgb20">
-                          <section class="cp-remarks-blue ef-w100p">
+                          <section class="cp-remarks ef-cp-blue ef-w100p">
                             <div class="st-inner">
                               <div class="st-outer ef-lh20">
                                 横並びの間隔はHTMLソースの
@@ -1305,7 +1332,7 @@
                           </ul>
                         </div>
                         <div class="example-remarks ef-mgb20">
-                          <section class="cp-remarks-blue ef-w100p">
+                          <section class="cp-remarks ef-cp-blue ef-w100p">
                             <div class="st-inner">
                               <div class="st-outer ef-lh20">
                                 横並びの間隔はHTMLソースの
@@ -1359,7 +1386,7 @@
                           </span>
                           の後に
                           <span class="ef-txt-red">
-                            ef-lh30
+                            ef-h30
                           </span>
                           を付与してください。
                           <span class="js-tooltip-hover">
@@ -1412,7 +1439,7 @@
                         <div class="example-summary ef-fs12 ef-mgb30">
                           高さを調整する事ができます。HTMLソースの
                           <span class="ef-txt-red">
-                            ef-lh30
+                            ef-h30
                           </span>
                           の数値を変更してください。
                           <span class="js-tooltip-hover">
@@ -1433,14 +1460,14 @@
                               </div>
                             </li>
                             <li>
-                              <select class="cp-select ef-lh30">
+                              <select class="cp-select ef-h30">
                                 <option>
                                   keyword
                                 </option>
                               </select>
                             </li>
                             <li>
-                              <select class="cp-select ef-lh30 ef-w120" float="5" style="height:auto;">
+                              <select class="cp-select ef-w120" multiple="5" style="height:auto;">
                                 <option value="keyword-01">
                                   keyword-01
                                 </option>
@@ -1461,7 +1488,7 @@
                           </ul>
                         </div>
                         <div class="example-remarks ef-mgb20">
-                          <section class="cp-remarks-blue ef-w100p">
+                          <section class="cp-remarks ef-cp-blue ef-w100p">
                             <div class="st-inner">
                               <div class="st-outer ef-lh20">
                                 横並びの間隔はHTMLソースの
@@ -1515,7 +1542,7 @@
                           </span>
                           の後に
                           <span class="ef-txt-red">
-                            ef-lh40
+                            ef-h40
                           </span>
                           を付与してください。
                           <span class="js-tooltip-hover">
@@ -1562,14 +1589,14 @@
                           </ul>
                         </div>
                         <div class="example-summary ef-fs12 ef-mgb30">
-                          高さを調整する事ができます。HTMLソースの
+                          文章の高さを調整する事ができます。HTMLソースの
                           <span class="ef-txt-red">
                             ef-lh30
                           </span>
                           の数値を変更してください。
                           <span class="js-tooltip-hover">
                             <div class="md-tooltip-key js-tooltip-key">
-                              10～40
+                              0/10～40
                             </div>
                             <a href="javascript:void(0);">
                               [数値]
@@ -1585,15 +1612,15 @@
                               </div>
                             </li>
                             <li>
-                              <input class="cp-input ef-lh30 ef-w100" type="text">
+                              <input class="cp-input ef-w100" type="text">
                             </li>
                             <li>
-                              <input class="cp-input ef-lh30 ef-w120" type="text">
+                              <input class="cp-input ef-w120" type="text">
                             </li>
                           </ul>
                         </div>
                         <div class="example-remarks ef-mgb20">
-                          <section class="cp-remarks-blue ef-w100p">
+                          <section class="cp-remarks ef-cp-blue ef-w100p">
                             <div class="st-inner">
                               <div class="st-outer ef-lh20">
                                 横並びの間隔はHTMLソースの
@@ -1650,7 +1677,7 @@
                           </span>
                           の後に
                           <span class="ef-txt-red">
-                            ef-lh30
+                            ef-h30
                           </span>
                           を付与してください。
                           <span class="js-tooltip-hover">
@@ -1667,7 +1694,7 @@
                           <input class="cp-input ef-rd10" type="text">
                         </div>
                         <div class="example-remarks ef-mgb20">
-                          <section class="cp-remarks-blue ef-w100p">
+                          <section class="cp-remarks ef-cp-blue ef-w100p">
                             <div class="st-inner">
                               <div class="st-outer ef-lh20">
                                 角丸を調整する事ができます。HTMLソースの
@@ -1724,7 +1751,7 @@
                           </span>
                           の後に
                           <span class="ef-txt-red">
-                            ef-lh30
+                            ef-h30
                           </span>
                           を付与してください。
                           <span class="js-tooltip-hover">
@@ -1748,7 +1775,7 @@
                           </ul>
                         </div>
                         <div class="example-remarks ef-mgb20">
-                          <section class="cp-remarks-blue ef-w100p">
+                          <section class="cp-remarks ef-cp-blue ef-w100p">
                             <div class="st-inner">
                               <div class="st-outer ef-lh20">
                                 背景色を調整する事でalertやsuccessといった効果を演出できます。HTMLソースの
@@ -1758,7 +1785,7 @@
                                 を変更してください。
                                 <span class="js-tooltip-hover">
                                   <div class="md-tooltip-key js-tooltip-key">
-                                    white/red/orange/blue/green/yellow/brown/black/gray/gray(1～7)/theme
+                                    white/red/orange/blue/green/yellow/brown/gray/theme
                                   </div>
                                   <a href="javascript:void(0);">
                                     [カラー]
@@ -1805,7 +1832,7 @@
                           </span>
                           の後に
                           <span class="ef-txt-red">
-                            ef-lh30
+                            ef-h30
                           </span>
                           を付与してください。
                           <span class="js-tooltip-hover">
@@ -1843,7 +1870,7 @@
                           </ul>
                         </div>
                         <div class="example-remarks ef-mgb20">
-                          <section class="cp-remarks-blue ef-w100p">
+                          <section class="cp-remarks ef-cp-blue ef-w100p">
                             <div class="st-inner">
                               <div class="st-outer ef-lh20">
                                 アイコンはサイズ16×16であれば画像でも配置できます。HTMLソースの
@@ -1892,7 +1919,7 @@
                           </span>
                           の後に
                           <span class="ef-txt-red">
-                            ef-lh30
+                            ef-h40
                           </span>
                           を付与してください。
                           <span class="js-tooltip-hover">
@@ -1917,8 +1944,8 @@
                             </li>
                             <li>
                               <div class="cp-input-btn-right">
-                                <input class="cp-input ef-w220" type="text">
-                                <a class="cp-btn-blue" href="javascript:void(0);">
+                                <input class="cp-input ef-w220 ef-h40" type="text">
+                                <a class="cp-btn ef-cp-blue" href="javascript:void(0);">
                                   search
                                 </a>
                               </div>
@@ -1926,12 +1953,12 @@
                           </ul>
                         </div>
                         <div class="example-remarks ef-mgb20">
-                          <section class="cp-remarks-blue ef-w100p">
+                          <section class="cp-remarks ef-cp-blue ef-w100p">
                             <div class="st-inner">
                               <div class="st-outer ef-lh20">
                                 ボタンの色を変更できます。
                                 <span class="ef-txt-red">
-                                  cp-btn-blue
+                                  ef-cp-blue
                                 </span>
                                 の色に該当する箇所を変更してください。
                                 <span class="js-tooltip-hover">
@@ -2074,7 +2101,7 @@
     <div class="st-body js-posi-fix js-tpl0">
       <div class="st-inner ef-sdw02">
         <div class="md-popup-body">
-          <ul class="cp-list-hover-gray">
+          <ul class="cp-list-hover ef-cp-gray">
             <li>
               <a href="https://github.com/plain-web/fivee-base" target="_blank">
                 Github
@@ -2098,7 +2125,7 @@
     <div class="st-body js-posi-fix js-tpl1">
       <div class="st-inner ef-sdw02">
         <div class="md-popup-body ef-mw250-ovf ef-mh400-ovf">
-          <ul class="cp-list-hover-gray">
+          <ul class="cp-list-hover ef-cp-gray">
             <li>
               <a href="javascript:void(0);">
                 <dl>
@@ -2158,7 +2185,7 @@
     <div class="st-body ef-mgt-40 js-tpl2">
       <div class="st-inner ef-sdw02">
         <div class="md-popup-body">
-          <ul class="cp-list-hover-gray">
+          <ul class="cp-list-hover ef-cp-gray">
             <li>
               <a href="#js-pageTop0">
                 checkbox
@@ -2348,8 +2375,8 @@
     </div>
   </section>
   <!-- script//////////////////////////////////////////// -->
-  <!--[if gt IE 8]><!--><script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script><!--<![endif]-->
-  <!--[if lt IE 9]> <script src="../bower_components/jquery-legacy/dist/jquery.min.js" type="text/javascript"></script> <![endif]-->
+  <!--[if gte IE 10]><!--><script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script><!--<![endif]-->
+  <!--[if lte IE 9]> <script src="../bower_components/jquery-legacy/dist/jquery.min.js" type="text/javascript"></script> <![endif]-->
   <script src="../js/fivee-base.min.js" type="text/javascript"></script>
   <!-- :javascript -->
   <!-- $(function(){ -->

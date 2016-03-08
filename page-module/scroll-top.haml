@@ -1,27 +1,27 @@
 -# Encoding:utf-8
 !!!
-/[if lt IE 8] <html class="ie7 oldie" lang="ja">
-/[if IE 8] <html class="ie8 oldie" lang="ja">
-<!--[if gt IE 9]><!-->
+/[if lte IE 8] <html class="ie8 oldie" lang="ja">
+/[if IE 9] <html class="ie9 oldie" lang="ja">
+<!--[if gte IE 10]><!-->
 %html(lang="ja")<>
   <!--<![endif]-->
   %head
     %meta(charset="utf-8")
-    %meta(name="description" content="CSSフレームワークはFivee-baseが便利です。豊富な機能とパーツでアプリケーションやWebサイトを簡単に作る事ができます。")
-    %meta(name="keywords" content="css,フレームワーク,開発,html")
+    %title Fivee-base | レスポンシブ対応のcssフレームワーク | html,css,javascript
+    %meta(name="description" content="cssフレームワークはFivee-baseが便利です。レスポンシブでアプリケーションのフロントエンドやWebサイトを簡単に作る事ができます。")
+    %meta(name="keywords" content="css,フレームワーク,レスポンシブ,フロントエンド")
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
     %meta(content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport")
-    %title Fivee-base
-    /[if lt IE 9] <script src="../bower_components/html5shiv/dist/html5shiv.min.js"></script>
+    /[if lte IE 9] <script src="../bower_components/html5shiv/dist/html5shiv.min.js"></script>
     %link(href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css")
     %link(href="../css/theme-default/fivee-base.min.css" rel="stylesheet" type="text/css")
-    %link(href="../css/theme-default/page-contents.min.css" rel="stylesheet" type="text/css")
-    /[if lt IE 9] <link href="../css/old-ie.min.css" rel="stylesheet">
+    %link(href="../css/theme-default/unique.min.css" rel="stylesheet" type="text/css")
+    /[if lte IE 9] <link href="../css/old-ie.min.css" rel="stylesheet">
   - v = 'javascript:void(0);'
   %body.module-scroll-top
     / header//////////////////////////////////////////////
     %header.page-header
-      .st-body.ef-posi-fix.js-pageTop-remove
+      .st-body.ef-posi-fix.js-posi-remove
         .st-inner.ef-float
           .ef-float-left.ef-mgl-10.ef-mgr7.rs3-hide
             %a.ef-w30.js-aside-main-open(href="#{v}")
@@ -54,7 +54,7 @@
                     %li
                       導入方法
                     %li
-                      %span.cp-badge-red
+                      %span.cp-badge.ef-cp-red
                         53
               %li
                 %a.js-popup-open.js-tpl1(href="#{v}")
@@ -64,7 +64,7 @@
                     %li
                       Message
                     %li
-                      %span.cp-badge-red
+                      %span.cp-badge.ef-cp-red
                         2
                     %li
                       %i.fa.fa-caret-down
@@ -90,7 +90,7 @@
                     %li
                       %i.fa.fa-info-circle.ef-fs18
                     %li
-                      %span.cp-badge-red
+                      %span.cp-badge.ef-cp-red
                         53
               %li
                 %a.js-popup-open.js-tpl1(href="#{v}")
@@ -100,7 +100,7 @@
                     %li
                       %i.fa.fa-caret-down
                     %li
-                      %span.cp-badge-red
+                      %span.cp-badge.ef-cp-red
                         2
               %li
                 %a.js-popup-open.js-tpl0(href="#{v}")
@@ -134,7 +134,7 @@
                   %li
                     導入方法
                   %li
-                    %span.cp-badge-red
+                    %span.cp-badge.ef-cp-red
                       53
             %li
               %a.js-popup-inset-open.js-tpl1(href="#{v}")
@@ -142,7 +142,7 @@
                   %li
                     Message
                   %li
-                    %span.cp-badge-red
+                    %span.cp-badge.ef-cp-red
                       2
                   %li.js-ic-arrow
                     %i.fa.fa-caret-down
@@ -173,7 +173,7 @@
                             %li
                               Dashboard
                       %li
-                        .ef-fs11.ef-txt-gray6
+                        .ef-fs11.ef-op05
                           Structure
                       %li.js-nav-main-parent0
                         %a(href="#{v}")
@@ -191,7 +191,7 @@
                                 %li.ef-mgl3
                                   layout
                       %li
-                        .ef-fs11.ef-txt-gray6
+                        .ef-fs11.ef-op05
                           Components
                       %li.js-nav-main-parent1
                         %a(href="#{v}")
@@ -274,17 +274,22 @@
                                 %li.ef-mgl3
                                   progress-bar
                           %li
-                            %a(href="../page-components/step-wizard.html")
+                            %a(href="../page-components/stepbar.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
-                                  step-wizard
+                                  stepbar
                           %li
                             %a(href="../page-components/cursor.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   cursor
+                          %li
+                            %a(href="../page-components/talkbox.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  talkbox
                       %li
-                        .ef-fs11.ef-txt-gray6
+                        .ef-fs11.ef-op05
                           Effect
                       %li.js-nav-main-parent2
                         %a(href="#{v}")
@@ -401,8 +406,13 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   position
+                          %li
+                            %a(href="../page-effect/vertical.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  vertical
                       %li
-                        .ef-fs11.ef-txt-gray6
+                        .ef-fs11.ef-op05
                           Module
                       %li.js-nav-main-parent3
                         %a(href="#{v}")
@@ -494,8 +504,13 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   scroll-top
+                          %li
+                            %a(href="../page-module/promo-footer.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  promo-footer
                       %li
-                        .ef-fs11.ef-txt-gray6
+                        .ef-fs11.ef-op05
                           State
                       %li.js-nav-main-parent4
                         %a(href="#{v}")
@@ -518,8 +533,8 @@
                                 %li.ef-mgl3
                                   text
           // page-main//////////////////////////////////////////////
-          %main.page-contents.js-page-contents(role="main")
-            .st-body
+          %main.page-contents(role="main")
+            .st-body.js-page-contents
               .st-inner
                 // page title//////////////////////////////////////////////
                 %section.cp-page-title.ef-mgb10
@@ -546,16 +561,16 @@
                     .ef-float-right
                       %ul.ef-float3
                         %li.ef-float-right
-                          %a.cp-btn-mini.cp-btn-white.ef-w30(href="../index.html")
+                          %a.cp-btn-mini.ef-cp-white.ef-w30(href="../index.html")
                             %i.fa.fa-home.ef-fs14
                         %li.ef-float-right
-                          %a.cp-btn-mini.cp-btn-white.ef-w30.js-popup-open.js-tpl2(href="#{v}")
+                          %a.cp-btn-mini.ef-cp-white.ef-w30.js-popup-open.js-tpl2(href="#{v}")
                             %i.fa.fa-link.ef-fs14
                         %li.ef-float-right
-                          %a.cp-btn-mini.cp-btn-white.ef-w30.js-bookmark-open.js-tpl3(href="#{v}")
+                          %a.cp-btn-mini.ef-cp-white.ef-w30.js-bookmark-open.js-tpl3(href="#{v}")
                             %i.fa.fa-star-o.ef-fs14
                 // panel//////////////////////////////////////////////
-                %section.cp-panel-white.ef-w100p
+                %section.cp-panel.ef-cp-white.ef-w100p
                   .st-body
                     .st-inner.ef-mh400
                       // example00 //////////////////////////////////
@@ -571,12 +586,12 @@
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
                           .example-remarks.ef-mgb20
-                            %section.cp-remarks-blue.ef-w100p
+                            %section.cp-remarks.ef-cp-blue.ef-w100p
                               .st-inner
                                 .st-outer.ef-lh20
                                   本moduleを使う際にposition:abosolute;かfixedを使っているヘッダーなどのパーツがある際は、そのパーツにクラス
                                   %span.ef-txt-red
-                                    js-pageTop-remove
+                                    js-posi-remove
                                   を付与してください。このクラスが付与されたパーツの高さを計算し、ページ上部までスクロールします。
                                   %br
                                   windowのスクロールを600下げると出現するようになります。本moduleのソースはページ下部に設置してください。
@@ -605,7 +620,7 @@
                             %a(href="#js-pageTop0")
                               任意の場所へスクロール
                           .example-remarks.ef-mgb20
-                            %section.cp-remarks-blue.ef-w100p
+                            %section.cp-remarks.ef-cp-blue.ef-w100p
                               .st-inner
                                 .st-outer.ef-lh20
                                   スクロールさせたい場所には、htmlソースのid名
@@ -643,7 +658,7 @@
       .st-body.js-posi-fix.js-tpl0
         .st-inner.ef-sdw02
           .md-popup-body
-            %ul.cp-list-hover-gray
+            %ul.cp-list-hover.ef-cp-gray
               %li
                 %a(href="https://github.com/plain-web/fivee-base" target="_blank")
                   Github
@@ -657,7 +672,7 @@
       .st-body.js-posi-fix.js-tpl1
         .st-inner.ef-sdw02
           .md-popup-body.ef-mw250-ovf.ef-mh400-ovf
-            %ul.cp-list-hover-gray
+            %ul.cp-list-hover.ef-cp-gray
               %li
                 %a(href="#{v}")
                   %dl
@@ -693,7 +708,7 @@
       .st-body.ef-mgt-40.js-tpl2
         .st-inner.ef-sdw02
           .md-popup-body
-            %ul.cp-list-hover-gray
+            %ul.cp-list-hover.ef-cp-gray
               %li
                 %a(href="#js-pageTop0")
                   scroll-top
@@ -748,10 +763,10 @@
           %a#js-pageTop.ef-fs16(href="#{v}")
             %i.fa.fa-arrow-up
     / script////////////////////////////////////////////
-    <!--[if gt IE 8]><!-->
+    <!--[if gte IE 10]><!-->
     %script(src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript")<>
     <!--<![endif]-->
-    /[if lt IE 9] <script src="../bower_components/jquery-legacy/dist/jquery.min.js" type="text/javascript"></script>
+    /[if lte IE 9] <script src="../bower_components/jquery-legacy/dist/jquery.min.js" type="text/javascript"></script>
     %script(src="../js/fivee-base.min.js" type="text/javascript")
     / :javascript
     /   $(function(){

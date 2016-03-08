@@ -9,8 +9,8 @@
   </li>
   <li>
     <div class="cp-input-btn-right">
-      <input class="cp-input ef-w220" type="text">
-      <a class="cp-btn-blue" href="javascript:void(0);">
+      <input class="cp-input ef-w220 ef-h40" type="text">
+      <a class="cp-btn ef-cp-blue" href="javascript:void(0);">
         search
       </a>
     </div>

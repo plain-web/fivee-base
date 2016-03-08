@@ -1,3 +1,3 @@
-﻿<a class="cp-btn-blue js-modal-open js-tpl0" href="javascript:void(0);">
+﻿<a class="cp-btn ef-cp-blue js-modal-open js-tpl0" href="javascript:void(0);">
   viewerを開く
 </a>

@@ -19,7 +19,7 @@
                 導入方法
               </li>
               <li>
-                <span class="cp-badge-red">
+                <span class="cp-badge ef-cp-red">
                   53
                 </span>
               </li>
@@ -33,7 +33,7 @@
                 Message
               </li>
               <li>
-                <span class="cp-badge-red">
+                <span class="cp-badge ef-cp-red">
                   2
                 </span>
               </li>

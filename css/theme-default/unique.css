@@ -11,14 +11,14 @@
  */
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
- * Fivee base
- * version 1.1.5 / 2016 2 15
+ * Fivee-base
+ * ver.1.3.0 / 2016.3.8
  * http://plain-web.com/fivee-base/apps/
  * Released under MIT license. Copyright 2016 Yusuke Maruyama.
  *
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
 /*
- * page-contents.scss
+ * unique.scss
  * include:
  * "header" "footer" "container"
  *
@@ -97,6 +97,21 @@
   border-radius: 2px;
 }
 
+/* =============================================================
+ ▼ nav-slide
+============================================================== */
+.md-nav-slide .st-inner ul li a {
+  font-size: 15px;
+}
+
+.md-nav-slide .st-inner ul li a .cp-badge {
+  color: #fff;
+}
+
+.md-nav-slide .st-inner ul li a:hover {
+  background: #e9e9e9;
+}
+
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "footer"
@@ -122,15 +137,21 @@
 
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "aside"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.md-aside-main > .st-body {
+  width: 180px;
+  margin: 20px 15px;
+}
+
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "container"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .page-container > .st-body {
   margin: 40px 0 20px;
-}
-
-.page-container > .st-body > .st-inner {
-  margin-bottom: 30px;
 }
 
 .page-container > .st-body > .st-inner > .page-contents {
@@ -153,5 +174,9 @@
 @media (max-width: 768px) {
   .page-container > .st-body > .st-inner > .page-contents {
     margin-left: 0;
+  }
+  .md-aside-main > .st-body {
+    width: 100%;
+    margin: 0;
   }
 }

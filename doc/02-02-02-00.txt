@@ -1,56 +1,51 @@
 ﻿<ul class="ef-float7">
   <li class="ef-mgb10">
-    <a class="cp-btn-large-white ef-mw100" href="javascript:void(0);">
-      white
-    </a>
-  </li>
-  <li class="ef-mgb10">
-    <a class="cp-btn-large-red ef-mw100" href="javascript:void(0);">
-      red
-    </a>
-  </li>
-  <li class="ef-mgb10">
-    <a class="cp-btn-large-orange ef-mw100" href="javascript:void(0);">
-      orange
-    </a>
-  </li>
-  <li class="ef-mgb10">
-    <a class="cp-btn-large-blue ef-mw100" href="javascript:void(0);">
-      blue
-    </a>
-  </li>
-  <li class="ef-mgb10">
-    <a class="cp-btn-large-green ef-mw100" href="javascript:void(0);">
-      green
-    </a>
-  </li>
-  <li class="ef-mgb10">
-    <a class="cp-btn-large-yellow ef-mw100" href="javascript:void(0);">
-      yellow
-    </a>
-  </li>
-  <li class="ef-mgb10">
-    <a class="cp-btn-large-brown ef-mw100" href="javascript:void(0);">
-      brown
-    </a>
-  </li>
-  <li class="ef-mgb10">
-    <a class="cp-btn-large-black ef-mw100" href="javascript:void(0);">
-      black
-    </a>
-  </li>
-  <li class="ef-mgb10">
-    <a class="cp-btn-large-gray ef-mw100" href="javascript:void(0);">
-      gray
-    </a>
-  </li>
-  <li class="ef-mgb10">
     <a class="cp-btn-large ef-mw100" href="javascript:void(0);">
       default
     </a>
   </li>
   <li class="ef-mgb10">
-    <a class="cp-btn-large-theme ef-mw100" href="javascript:void(0);">
+    <a class="cp-btn-large ef-cp-white ef-mw100" href="javascript:void(0);">
+      white
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-large ef-cp-red ef-mw100" href="javascript:void(0);">
+      red
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-large ef-cp-orange ef-mw100" href="javascript:void(0);">
+      orange
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-large ef-cp-blue ef-mw100" href="javascript:void(0);">
+      blue
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-large ef-cp-green ef-mw100" href="javascript:void(0);">
+      green
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-large ef-cp-yellow ef-mw100" href="javascript:void(0);">
+      yellow
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-large ef-cp-brown ef-mw100" href="javascript:void(0);">
+      brown
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-large ef-cp-gray ef-mw100" href="javascript:void(0);">
+      gray
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-large ef-cp-theme ef-mw100" href="javascript:void(0);">
       theme
     </a>
   </li>

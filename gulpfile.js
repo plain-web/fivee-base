@@ -121,8 +121,8 @@ gulp.task('sassMin', function() {
   default (watch)
 ======================================================================== */
 gulp.task('default', ['server'], function() {
-  gulp.watch('./**/*.haml',['haml']);
-  gulp.watch(['./js/**/*.js','!./js/**/*.min.js'],['js']);
-  gulp.watch('./sass/**/*.scss',['sass','sassMin']);
+  gulp.watch(path.haml,['haml']);
+  gulp.watch(path.js,['js']);
+  gulp.watch(path.sass,['sass','sassMin']);
   //gulp.watch('./sass/_*.scss',['themeDefault']);
 });

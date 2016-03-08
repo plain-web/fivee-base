@@ -20,17 +20,17 @@
     <div class="ef-float-right">
       <ul class="ef-float3">
         <li class="ef-float-right">
-          <a class="cp-btn-mini cp-btn-white ef-w30" href="javascript:void(0);">
+          <a class="cp-btn-mini ef-cp-white ef-w30" href="javascript:void(0);">
             <i class="fa fa-home ef-fs14"></i>
           </a>
         </li>
         <li class="ef-float-right">
-          <a class="cp-btn-mini cp-btn-white ef-w30" href="javascript:void(0);">
+          <a class="cp-btn-mini ef-cp-white ef-w30" href="javascript:void(0);">
             <i class="fa fa-link ef-fs14"></i>
           </a>
         </li>
         <li class="ef-float-right">
-          <a class="cp-btn-mini cp-btn-white ef-w30" href="javascript:void(0);">
+          <a class="cp-btn-mini ef-cp-white ef-w30" href="javascript:void(0);">
             <i class="fa fa-star-o ef-fs14"></i>
           </a>
         </li>

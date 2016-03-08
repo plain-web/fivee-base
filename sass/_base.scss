@@ -19,9 +19,9 @@ html,body {
 body {
   position: relative;
   background: $cl-bg-body;
-  font-size: $fs-base;
-  color: $cl-txt-base;
-  line-height: $lh-base;
+  font-size: $fs;
+  color: $cl-txt;
+  line-height: $lh;
   font-family: $ff-base;
 }
 *,*:before, *:after {box-sizing: border-box;}
