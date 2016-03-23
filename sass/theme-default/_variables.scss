@@ -58,6 +58,7 @@ $cl-theme1-lighten: lighten( $cl-theme1, 5% );
 
 //body background color
 $cl-bg-body: #f6f6f6;
+$cl-bg-content: #f6f6f6;
 
 //color
 $cl-white:#fff;
@@ -120,61 +121,61 @@ $cl-shadow-base: $cl-txt;
 //button color
 $cl-btn:#eee;
 $cl-btn-lighten: lighten( $cl-btn, 3% );
-$cl-btn-darken: darken( $cl-btn, 10% );
+$cl-btn-border: darken( $cl-btn, 10% );
 $cl-btn-hover: lighten( $cl-btn, 3% );
 $cl-btn-active: darken( $cl-btn, 3% );
 
 $cl-btn-white:#f9f9f9;
 $cl-btn-white-lighten: lighten( $cl-btn-white, 7% );
-$cl-btn-white-darken: darken( $cl-btn-white, 10% );
+$cl-btn-white-border: darken( $cl-btn-white, 10% );
 $cl-btn-white-hover: lighten( $cl-btn-white, 3% );
 $cl-btn-white-active: darken( $cl-btn-white, 3% );
 
 $cl-btn-red:$cl-red;
 $cl-btn-red-lighten: lighten( $cl-btn-red, 7% );
-$cl-btn-red-darken: darken( $cl-btn-red, 10% );
+$cl-btn-red-border: darken( $cl-btn-red, 10% );
 $cl-btn-red-hover: lighten( $cl-btn-red, 5% );
 $cl-btn-red-active: darken( $cl-btn-red, 3% );
 
 $cl-btn-orange:$cl-orange;
 $cl-btn-orange-lighten: lighten( $cl-btn-orange, 7% );
-$cl-btn-orange-darken: darken( $cl-btn-orange, 10% );
+$cl-btn-orange-border: darken( $cl-btn-orange, 10% );
 $cl-btn-orange-hover: lighten( $cl-btn-orange, 10% );
 $cl-btn-orange-active: darken( $cl-btn-orange, 3% );
 
 $cl-btn-blue:$cl-blue;
 $cl-btn-blue-lighten: lighten( $cl-btn-blue, 7% );
-$cl-btn-blue-darken: darken( $cl-btn-blue, 10% );
+$cl-btn-blue-border: darken( $cl-btn-blue, 10% );
 $cl-btn-blue-hover: lighten( $cl-btn-blue, 10% );
 $cl-btn-blue-active: darken( $cl-btn-blue, 3% );
 
 $cl-btn-green:$cl-green;
 $cl-btn-green-lighten: lighten( $cl-btn-green, 7% );
-$cl-btn-green-darken: darken( $cl-btn-green, 10% );
+$cl-btn-green-border: darken( $cl-btn-green, 10% );
 $cl-btn-green-hover: lighten( $cl-btn-green, 10% );
 $cl-btn-green-active: darken( $cl-btn-green, 3% );
 
 $cl-btn-yellow:#F9FF1F;
 $cl-btn-yellow-lighten: lighten( $cl-btn-yellow, 20% );
-$cl-btn-yellow-darken: darken( $cl-btn-yellow, 10% );
+$cl-btn-yellow-border: darken( $cl-btn-yellow, 10% );
 $cl-btn-yellow-hover: lighten( $cl-btn-yellow, 25% );
 $cl-btn-yellow-active: darken( $cl-btn-yellow, 3% );
 
 $cl-btn-brown:$cl-brown;
 $cl-btn-brown-lighten: lighten( $cl-btn-brown, 7% );
-$cl-btn-brown-darken: darken( $cl-btn-brown, 10% );
+$cl-btn-brown-border: darken( $cl-btn-brown, 10% );
 $cl-btn-brown-hover: lighten( $cl-btn-brown, 15% );
 $cl-btn-brown-active: darken( $cl-btn-brown, 3% );
 
 $cl-btn-gray:$cl-gray;
 $cl-btn-gray-lighten: lighten( $cl-btn-gray, 7% );
-$cl-btn-gray-darken: darken( $cl-btn-gray, 10% );
+$cl-btn-gray-border: darken( $cl-btn-gray, 10% );
 $cl-btn-gray-hover: lighten( $cl-btn-gray, 15% );
 $cl-btn-gray-active: darken( $cl-btn-gray, 3% );
 
 $cl-btn-theme:$cl-theme;
 $cl-btn-theme-lighten: lighten( $cl-btn-theme, 7% );
-$cl-btn-theme-darken: darken( $cl-btn-theme, 10% );
+$cl-btn-theme-border: darken( $cl-btn-theme, 10% );
 $cl-btn-theme-hover: lighten( $cl-btn-theme, 15% );
 $cl-btn-theme-active: darken( $cl-btn-theme, 3% );
 
@@ -196,11 +197,13 @@ $cl-delete-darken: darken( $cl-delete, 5% );
 
 //header
 $cl-bg-header: $cl-theme;
+$cl-link-header :#fff;
 
 //nav
 $cl-bg-nav: $cl-white;
 $cl-bg-nav-current: #f6f6f6;
 $cl-bg-nav-hover:  darken( $cl-bg-nav-current, 5% );
+$cl-link-nav :#333;
 
 //tab
 $cl-tab-current: $cl-theme;
@@ -212,6 +215,7 @@ $cl-bg-toolbar: $cl-gray;
 
 //footer
 $cl-bg-footer: $cl-theme;
+$cl-link-footer :#fff;
 
 //table
 $cl-bg-table-th : #e5e5e5;
@@ -231,6 +235,8 @@ $cl-bg-image-viewer-header: $cl-white;
 
 //popup
 $cl-bg-popup:$cl-white;
+$popup-arrow-height:10px;
+$popup-arrow-width:8px;
 
 //tooltip
 $cl-bg-tooltip:$cl-gray;

@@ -7,7 +7,7 @@
   <!--<![endif]-->
   %head
     %meta(charset="utf-8")
-    %title Fivee-base | レスポンシブ対応のcssフレームワーク | html,css,javascript
+    %title tag | レスポンシブ対応のcssフレームワーク | html,css,javascript
     %meta(name="description" content="cssフレームワークはFivee-baseが便利です。レスポンシブでアプリケーションのフロントエンドやWebサイトを簡単に作る事ができます。")
     %meta(name="keywords" content="css,フレームワーク,レスポンシブ,フロントエンド")
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
@@ -137,7 +137,7 @@
                     %span.cp-badge.ef-cp-red
                       53
             %li
-              %a.js-popup-inset-open.js-tpl1(href="#{v}")
+              %a.js-popup-open.js-tpl1(href="#{v}")
                 %ul.ef-float3
                   %li
                     Message
@@ -147,7 +147,7 @@
                   %li.js-ic-arrow
                     %i.fa.fa-caret-down
             %li
-              %a.js-popup-inset-open.js-tpl0(href="#{v}")
+              %a.js-popup-open.js-tpl0(href="#{v}")
                 %ul.ef-float3
                   %li
                     Your name
@@ -509,6 +509,11 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   promo-footer
+                          %li
+                            %a(href="../page-module/remover.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  remover
                       %li
                         .ef-fs11.ef-op05
                           State
@@ -621,6 +626,14 @@
                               %li.ef-mgb10
                                 %span.cp-tag.ef-cp-theme.ef-mw100
                                   theme
+                          .example-remarks.ef-mgb20
+                            %section.cp-remarks.ef-cp-blue.ef-w100p
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  tag自体をクリックで消す事ができるModuleは
+                                  %a(href="../page-module/remover.html")
+                                    こちら
+                                  をご覧ください。
                           .example-btn
                             %ul.ef-float7
                               %li
@@ -685,7 +698,9 @@
     %section.md-popup.js-popup(style="display:none;")
       /popup contents type 'js-tpl0'
       .st-body.js-posi-fix.js-tpl0
-        .st-inner.ef-sdw02
+        .st-inner.ef-w120.ef-sdw02
+          .md-popup-arrow.js-popup-arrow
+          .md-popup-arrow-back.js-popup-arrow
           .md-popup-body
             %ul.cp-list-hover.ef-cp-gray
               %li
@@ -700,7 +715,9 @@
       /popup contents type 'js-tpl1'
       .st-body.js-posi-fix.js-tpl1
         .st-inner.ef-sdw02
-          .md-popup-body.ef-mw250-ovf.ef-mh400-ovf
+          .md-popup-arrow.js-popup-arrow
+          .md-popup-arrow-back.js-popup-arrow
+          .md-popup-body
             %ul.cp-list-hover.ef-cp-gray
               %li
                 %a(href="#{v}")
@@ -736,6 +753,8 @@
       /popup contents type 'js-tpl2'
       .st-body.ef-mgt-40.js-tpl2
         .st-inner.ef-sdw02
+          .md-popup-arrow.js-popup-arrow
+          .md-popup-arrow-back.js-popup-arrow
           .md-popup-body
             %ul.cp-list-hover.ef-cp-gray
               %li
@@ -749,6 +768,8 @@
       /popup contents type 'js-tpl3'
       .st-body.ef-mgt-40.js-tpl3
         .st-inner.ef-sdw02
+          .md-popup-arrow.js-popup-arrow
+          .md-popup-arrow-back.js-popup-arrow
           .md-popup-header.ef-mgb20
             %ul.ef-float
               %li
@@ -769,7 +790,6 @@
                   %select.cp-input
                     %option
                       folder
-            %section
           .md-popup-footer
             .ef-txt-center.ef-pdt30.ef-txt-nowrap
               %a.cp-btn-mini.ef-w80.js-popup-close(href="#{v}")

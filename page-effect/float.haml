@@ -7,7 +7,7 @@
   <!--<![endif]-->
   %head
     %meta(charset="utf-8")
-    %title Fivee-base | レスポンシブ対応のcssフレームワーク | html,css,javascript
+    %title float | レスポンシブ対応のcssフレームワーク | html,css,javascript
     %meta(name="description" content="cssフレームワークはFivee-baseが便利です。レスポンシブでアプリケーションのフロントエンドやWebサイトを簡単に作る事ができます。")
     %meta(name="keywords" content="css,フレームワーク,レスポンシブ,フロントエンド")
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
@@ -137,7 +137,7 @@
                     %span.cp-badge.ef-cp-red
                       53
             %li
-              %a.js-popup-inset-open.js-tpl1(href="#{v}")
+              %a.js-popup-open.js-tpl1(href="#{v}")
                 %ul.ef-float3
                   %li
                     Message
@@ -147,7 +147,7 @@
                   %li.js-ic-arrow
                     %i.fa.fa-caret-down
             %li
-              %a.js-popup-inset-open.js-tpl0(href="#{v}")
+              %a.js-popup-open.js-tpl0(href="#{v}")
                 %ul.ef-float3
                   %li
                     Your name
@@ -509,6 +509,11 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   promo-footer
+                          %li
+                            %a(href="../page-module/remover.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  remover
                       %li
                         .ef-fs11.ef-op05
                           State
@@ -840,6 +845,79 @@
                                   show html
                           .example-box-html.js-example-tag-num03-01-03(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
+                          %hr.cp-hr1-dotted.ef-pdt60
+                      // example04 //////////////////////////////////
+                      %section#js-pageTop4.examle-wrap.ef-mgb20
+                        .st-inner
+                          .example-title.ef-mgb3
+                            %ul.ef-float.ef-lh25
+                              %li
+                                %h5
+                                  float-grid
+                          .example-summary.ef-fs12.ef-mgb30
+                            横並びの幅を等間隔で行う事ができます。htmlソースの
+                            %span.ef-txt-red
+                              ef-float
+                            の後にクラス名
+                            %span.ef-txt-red
+                              is-col*
+                            を付与してください。等間隔については
+                            %span.ef-txt-red
+                              is-col3
+                            などの数値を変更してください。
+                            %span.js-tooltip-hover
+                              .md-tooltip-key.js-tooltip-key
+                                2～10
+                              %a(href="#{v}")
+                                [数値]
+                          .example-box.ef-mgb40
+                            // example code ///////////////////////////
+                            %section.ef-mgb10
+                              .ef-float.is-col3
+                                .ef-float-left.ef-cl-gray
+                                  .st-inner.ef-txt-white.ef-pd7
+                                    grid
+                                .ef-float-left.ef-cl-blue
+                                  .st-inner.ef-txt-white.ef-pd7.ef-pdl10
+                                    grid
+                                .ef-float-left.ef-cl-green
+                                  .st-inner.ef-txt-white.ef-pd7
+                                    grid
+                            %section.ef-mgb10
+                              %ul.ef-float.is-col5
+                                %li.ef-cl-gray
+                                  .st-inner.ef-txt-white.ef-pd7
+                                    grid
+                                %li.ef-cl-blue
+                                  .st-inner.ef-txt-white.ef-pd7.ef-pdl10
+                                    grid
+                                %li.ef-cl-green
+                                  .st-inner.ef-txt-white.ef-pd7
+                                    grid
+                                %li.ef-cl-orange
+                                  .st-inner.ef-txt-white.ef-pd7
+                                    grid
+                                %li.ef-cl-brown
+                                  .st-inner.ef-txt-white.ef-pd7
+                                    grid
+                          .example-remarks.ef-mgb20
+                            %section.cp-remarks.ef-cp-blue.ef-w100p
+                              .st-inner
+                                .st-outer.ef-lh20
+                                  grid以外にも横並びを通常の相対指定で行う事もできます。横並びさせるブロックに対して
+                                  %span.ef-txt-red
+                                    ef-w20p
+                                  などを付与してください。幅の指定に関しては
+                                  %a(href="../page-effect/width.html")
+                                    こちら
+                                  をご覧ください。
+                          .example-btn
+                            %ul.ef-float7
+                              %li
+                                %a.cp-btn.js-html-show.js-example-num03-01-04-00(href="#{v}")
+                                  show html
+                          .example-box-html.js-example-tag-num03-01-04(style="display:none;")
+                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
     / footer/////////////////////////////////////////////
     %footer.page-footer
       .st-body.ef-posi-fix
@@ -849,7 +927,9 @@
     %section.md-popup.js-popup(style="display:none;")
       /popup contents type 'js-tpl0'
       .st-body.js-posi-fix.js-tpl0
-        .st-inner.ef-sdw02
+        .st-inner.ef-w120.ef-sdw02
+          .md-popup-arrow.js-popup-arrow
+          .md-popup-arrow-back.js-popup-arrow
           .md-popup-body
             %ul.cp-list-hover.ef-cp-gray
               %li
@@ -864,7 +944,9 @@
       /popup contents type 'js-tpl1'
       .st-body.js-posi-fix.js-tpl1
         .st-inner.ef-sdw02
-          .md-popup-body.ef-mw250-ovf.ef-mh400-ovf
+          .md-popup-arrow.js-popup-arrow
+          .md-popup-arrow-back.js-popup-arrow
+          .md-popup-body
             %ul.cp-list-hover.ef-cp-gray
               %li
                 %a(href="#{v}")
@@ -900,6 +982,8 @@
       /popup contents type 'js-tpl2'
       .st-body.ef-mgt-40.js-tpl2
         .st-inner.ef-sdw02
+          .md-popup-arrow.js-popup-arrow
+          .md-popup-arrow-back.js-popup-arrow
           .md-popup-body
             %ul.cp-list-hover.ef-cp-gray
               %li
@@ -918,9 +1002,14 @@
                   float-box
                   %span.ef-fs11
                     (mediaquery)
+              %li
+                %a(href="#js-pageTop4")
+                  float-grid
       /popup contents type 'js-tpl3'
       .st-body.ef-mgt-40.js-tpl3
         .st-inner.ef-sdw02
+          .md-popup-arrow.js-popup-arrow
+          .md-popup-arrow-back.js-popup-arrow
           .md-popup-header.ef-mgb20
             %ul.ef-float
               %li
@@ -941,7 +1030,6 @@
                   %select.cp-input
                     %option
                       folder
-            %section
           .md-popup-footer
             .ef-txt-center.ef-pdt30.ef-txt-nowrap
               %a.cp-btn-mini.ef-w80.js-popup-close(href="#{v}")

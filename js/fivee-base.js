@@ -1,7 +1,7 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
  * Fivee-base
- * ver.1.3.0 / 2016.3.8
+ * ver.1.4.0 / 2016.3.24
  * http://plain-web.com/fivee-base/apps/
  * Released under MIT license. Copyright 2016 Yusuke Maruyama.
  *
@@ -139,6 +139,7 @@ $('.js-nav-main a').on('click', function(){
       var openFlg = navClass.find(targetClass).is(':visible');
       if(!openFlg){
         navClass.find(targetClass).show(300);
+        parentClass.addClass('is-open');
         //icon
         if(iconArrowClass){
           iconArrowClass = iconArrowClass.replace('down', 'up');
@@ -154,6 +155,7 @@ $('.js-nav-main a').on('click', function(){
         }
       }else{
         navClass.find(targetClass).hide(100);
+        parentClass.removeClass('is-open');
         //icon
         if(iconArrowClass){
           iconArrowClass = iconArrowClass.replace('up', 'down');
@@ -178,34 +180,38 @@ $('.js-nav-main a').on('click', function(){
 /*========================================================================
    nav current / page load
 ======================================================================== */
-var navCurrent = $('.js-nav-main .is-current').parents('ul'); 
-//presence class
-var hasclass = navCurrent.attr('class');
-if(hasclass){
-  var matchKey = hasclass.match('child');
-  if(matchKey){
-    navCurrent.show(100);
-    var pageLoadIconParent = navCurrent.parents('li');
-    //icon
-    var iconArrow = pageLoadIconParent.find('.js-ic-arrow').children();
-    var iconFolder = pageLoadIconParent.find('.js-ic-folder').children();
-    var iconFolderArrow = pageLoadIconParent.find('.js-ic-folder-arrow').children();
+var navMain = $('.js-nav-main');
+if(navMain.length){
+  var navCurrent = $('.js-nav-main .is-current').parents('ul'); 
+  navCurrent.parent('li').addClass('is-open'); 
+  //presence class
+  var hasclass = navCurrent.attr('class');
+  if(hasclass){
+    var matchKey = hasclass.match('child');
+    if(matchKey){
+      navCurrent.show(100);
+      var pageLoadIconParent = navCurrent.parents('li');
+      //icon
+      var iconArrow = pageLoadIconParent.find('.js-ic-arrow').children();
+      var iconFolder = pageLoadIconParent.find('.js-ic-folder').children();
+      var iconFolderArrow = pageLoadIconParent.find('.js-ic-folder-arrow').children();
 
-    var iconArrowClass = iconArrow.attr('class');
-    var iconFolderClass  = iconFolder.attr('class');
-    var iconFolderArrowClass  = iconFolderArrow.attr('class');
+      var iconArrowClass = iconArrow.attr('class');
+      var iconFolderClass  = iconFolder.attr('class');
+      var iconFolderArrowClass  = iconFolderArrow.attr('class');
 
-    if(iconArrowClass){
-      iconArrowClass = iconArrowClass.replace('down', 'up');
-      $(iconArrow).removeClass().addClass(iconArrowClass);
-    }
-    if(iconFolderClass){
-      iconFolderClass = iconFolderClass.replace('folder', 'folder-open');
-      $(iconFolder).removeClass().addClass(iconFolderClass);
-    }
-    if(iconFolderArrowClass){
-      iconFolderArrowClass = iconFolderArrowClass.replace('right', 'down');
-      $(iconFolderArrow).removeClass().addClass(iconFolderArrowClass);
+      if(iconArrowClass){
+        iconArrowClass = iconArrowClass.replace('down', 'up');
+        $(iconArrow).removeClass().addClass(iconArrowClass);
+      }
+      if(iconFolderClass){
+        iconFolderClass = iconFolderClass.replace('folder', 'folder-open');
+        $(iconFolder).removeClass().addClass(iconFolderClass);
+      }
+      if(iconFolderArrowClass){
+        iconFolderArrowClass = iconFolderArrowClass.replace('right', 'down');
+        $(iconFolderArrow).removeClass().addClass(iconFolderArrowClass);
+      }
     }
   }
 }
@@ -293,6 +299,147 @@ function toolTipOn(target){
   tip.addClass('is-show');
 };
 /*========================================================================
+  popup
+======================================================================== */
+var popupClickCnt = 0;
+var popupTrigger = '.js-popup-open';
+var popupCloseTrigger = '.js-popup-close';
+var popupTriggerRemove = '.js-popup-open, .js-popup, .js-bookmark-open';
+var popupWrap = '.js-popup';
+var popupArrow = '.js-popup-arrow';
+var popupActive = 'is-on';
+var popupPosiFIx = 'js-posi-fix';
+var popupShowSpeed = 0;
+var popupLowMargin = 7;
+var popupArrowEdgeLimit = 20;
+var thisSelector, windowWidth, popupPosi, topPosi, triggerWidth,leftPosi;
+var popupLeftDiff, popupArrowPosi, posiType, popupWidth, totalLeftPosi;
+
+$(popupTrigger).on('click', function(){
+  thisSelector = $(this);
+  if(thisSelector.hasClass(popupActive)){
+    $(popupWrap).hide( function(){
+      $(popupTrigger + '.' + popupActive).removeClass(popupActive);
+    });
+  }else{
+    $(popupTrigger + '.' + popupActive).removeClass(popupActive);
+    thisSelector.addClass(popupActive);
+    returnClass = 'js-tpl';
+    popupHandler.popupPosi(thisSelector, returnClass);
+  }
+});
+var popupHandler = {
+  popupPosi: function(thisSelector, returnClass){
+    windowWidth = $(window).outerWidth(true);
+    popupPosi = thisSelector.offset();
+    topPosi = popupPosi.top;
+    topPosi = topPosi + thisSelector.outerHeight(true) + 7 ;
+    triggerWidth = thisSelector.outerWidth(true);
+    leftPosi = popupPosi.left;
+    //this
+    clickThis = thisSelector;
+    //return class
+    returnClass = returnClass;
+    //target class
+    targetClass = thisClassGet(clickThis, returnClass);
+
+    popupHandler.popupShow(topPosi, leftPosi, targetClass);
+  },
+  popupShow: function(topPosi, leftPosi, targetClass){
+    //show contents
+    $(popupWrap + ' > .st-body').removeClass('is-current');
+    $(popupWrap + ' ' + targetClass).addClass('is-current');
+
+    $(popupWrap).css({
+      opacity: '0',
+      display: 'block'
+    });
+
+    popupWidth = $(popupWrap + ' ' + targetClass).outerWidth(true);
+    totalLeftPosi = leftPosi + popupWidth;
+    popupArrowPosi = triggerWidth / 2;
+
+    //trigger width > popupWidth
+    if( triggerWidth > popupWidth){
+      popupArrowPosi = popupArrowEdgeLimit;
+    }
+    //overflow right
+    if(windowWidth <= totalLeftPosi){
+      popupLeftDiff = totalLeftPosi - windowWidth + popupLowMargin;
+      leftPosi = leftPosi - popupLeftDiff;
+      popupArrowPosi = popupArrowPosi + popupLeftDiff;
+    }
+    //overflow left
+    if( leftPosi < popupLowMargin){
+      leftPosi = popupLowMargin
+    }
+    //limit arrow posi
+    if( popupArrowPosi < popupArrowEdgeLimit){
+      popupArrowPosi = popupArrowEdgeLimit;
+    }
+    //position fix
+    posiType = $(popupWrap + ' ' + targetClass).hasClass(popupPosiFIx);
+
+    if(posiType){
+      topPosi = topPosi - $(window).scrollTop();
+      leftPosi = leftPosi + $(window).scrollLeft();
+      //position
+      $(popupWrap + ' ' + targetClass).css({
+        position:'',
+        top:'',
+        left:'',
+        right:''
+      }).css({
+        position:'fixed',
+        top: topPosi,
+        bottom: 'auto',
+        right: 'auto',
+        left: leftPosi
+      });
+    }else{
+      //position
+      $(popupWrap + ' ' + targetClass).css({
+        position:'',
+        top:'',
+        left:'',
+        right:''
+      }).css({
+        top: topPosi,
+        bottom: 'auto',
+        right: 'auto',
+        left: leftPosi
+      });
+    }
+    //arrow
+    $(popupArrow).css('left', '').css('left', popupArrowPosi);
+
+    //show popup
+    $(popupWrap).fadeTo(popupShowSpeed, 1, function(){
+      popupClickCnt++;
+      if(popupClickCnt === 1){
+        //find out 'js-popup-open'
+        $(document).on('click', function(e){
+          var findOutTrigger = $(e.target).closest(popupTriggerRemove).length;
+          // popupClickCnt++;
+          if( !findOutTrigger ){
+            $(popupWrap).hide();
+            $(popupTrigger + '.' + popupActive).removeClass(popupActive);
+            popupClickCnt = 0;
+            $(this).off();
+          }
+          return false;
+        });
+      }
+    });
+  }
+}
+//close popup
+$(popupCloseTrigger).on('click', function(){
+  $(popupWrap).hide( function(){
+    $(popupTrigger + '.' + popupActive).removeClass(popupActive);
+  });
+});
+/*========================================================================
   bookmark
 ======================================================================== */
 var bookmartFlg = 0;
@@ -307,162 +454,10 @@ $('.js-bookmark-open').on('click', function(){
 
     var thisSelector = $(this);
     returnClass = 'js-tpl';
-    popupHandler.popupPosi(thisSelector, returnClass);
-    
     bookmartFlg = 0;
-  }
-});
-/*========================================================================
-  popup
-======================================================================== */
-var popupFlgCheck = $('body');
-var popupFlgCount = ['off'];
-var popupFlg, lastFlg;
-
-$('.js-popup-open').on('click', function(){
-  lastFlg = popupFlgCount[popupFlgCount.length-1];
-  if(lastFlg === 'off'){
-    var thisSelector = $(this);
-    returnClass = 'js-tpl';
     popupHandler.popupPosi(thisSelector, returnClass);
   }
 });
-var popupHandler = {
-  popupPosi: function(thisSelector, returnClass){
-    var windowWidth = $(window).outerWidth(true);
-    var popupPosi = thisSelector.offset();
-    var topPosi = popupPosi.top;
-        topPosi = topPosi + thisSelector.outerHeight(true) + 7 ;
-    var thisWidth = thisSelector.outerWidth(true);
-    var rightPosi = windowWidth - popupPosi.left - thisWidth;
-    //this
-    clickThis = thisSelector;
-    //return class
-    returnClass = returnClass;
-    //target class
-    targetClass = thisClassGet(clickThis, returnClass);
-
-    popupHandler.popupShow(topPosi, rightPosi, targetClass);
-  },
-  popupShow: function(topPosi, rightPosi, targetClass){
-    //show contents
-    $('.js-popup > .st-body').removeClass('is-current');
-    $('.js-popup ' + targetClass).addClass('is-current');
-    var posiType = $('.js-popup ' + targetClass).hasClass('js-posi-fix');
-
-    if(posiType){
-      topPosi = topPosi - $(window).scrollTop();
-      rightPosi = rightPosi + $(window).scrollLeft();
-      //position
-      $('.js-popup ' + targetClass).css({
-        position:'',
-        top:'',
-        left:'',
-        right:''
-      }).css({
-        position:'fixed',
-        top: topPosi,
-        bottom: 'auto',
-        right: rightPosi,
-        left: 'auto'
-      });
-    }else{
-      //position
-      $('.js-popup ' + targetClass).css({
-        position:'',
-        top:'',
-        left:'',
-        right:''
-      }).css({
-        top: topPosi,
-        bottom: 'auto',
-        right: rightPosi,
-        left: 'auto'
-      });
-    }
-    popupShowHide();
-  }
-}
-/*========================================================================
-  popup inset
-======================================================================== */
-$('.js-popup-inset-open').on('click', function(){
-  lastFlg = popupFlgCount[popupFlgCount.length-1];
-  if(lastFlg === 'off'){
-    var thisSelector = $(this);
-    returnClass = 'js-tpl';
-    popupInsetHandler.popupPosi(thisSelector, returnClass);
-  }
-});
-var popupInsetHandler = {
-  popupPosi: function(thisSelector, returnClass){
-    var popupPosi = thisSelector.offset();
-    var topPosi = popupPosi.top;
-        topPosi = topPosi + thisSelector.outerHeight(true);
-    //this
-    clickThis = thisSelector;
-    //return class
-    returnClass = returnClass;
-    //target class
-    targetClass = thisClassGet(clickThis, returnClass);
-
-    popupInsetHandler.popupShow(topPosi, targetClass);
-  },
-  popupShow: function(topPosi, targetClass){
-    //show contents
-    $('.js-popup > .st-body').removeClass('is-current');
-    $('.js-popup ' + targetClass).addClass('is-current');
-    var posiType = $('.js-popup ' + targetClass).hasClass('js-posi-fix');
-
-    if(posiType){
-      topPosi = topPosi - $(window).scrollTop();
-      //position
-      $('.js-popup ' + targetClass).css({
-        position:'',
-        top:'',
-        left:'',
-        right:''
-      }).css({
-        position:'fixed',
-        top: topPosi,
-        bottom: 'auto',
-        right: 10,
-        left: 10
-      });
-    }else{
-      //position
-      $('.js-popup ' + targetClass).css({
-        position:'',
-        top:'',
-        left:'',
-        right:''
-      }).css({
-        position:'fixed',
-        top: topPosi,
-        bottom: 'auto',
-        right: 10,
-        left: 10
-      });
-    }
-    popupShowHide();
-  }
-}
-function popupShowHide(){
-  //show popup
-  $('.js-popup').show(100, function() {
-    popupFlg = 'popupOpen';
-    popupFlgCount.push(popupFlg);
-  });
-  //hide popup
-  popupFlgCheck.on('click', function(){
-    lastFlg = popupFlgCount[popupFlgCount.length-1];
-    if(lastFlg === 'popupOpen'){
-      $('.js-popup').hide(100);
-      popupFlgCount = ['off'];
-      $(this).off();
-    }
-  });
-}
 /*========================================================================
   modal 
 ======================================================================== */
@@ -1031,6 +1026,25 @@ if(promoFooter.length){
   }
   initialPosi();
 }
+/*========================================================================
+  remover UL / DL / TR
+======================================================================== */
+var removerTrigger = $('.js-remover-tri');
+var removerClass = '.js-remover';
+var removeSpeed = 400;
+var thisParent, removerTarget, removerTargetWidth;
+
+removerTrigger.on('click', function(){
+  thisParent = $(this).parents(removerClass);
+  //get tagname '.js-remover'
+  parentNameUl = thisParent.get(0).tagName;
+  // ul
+  if(parentNameUl === 'UL'){
+    removerTarget = $(this).parents('li');
+    removerTarget.addClass('is-remove');
+    thisParent.find('.is-remove').hide(removeSpeed);
+  }
+});
 /*========================================================================
   mediaquery aside
 ======================================================================== */

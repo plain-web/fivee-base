@@ -1,0 +1,72 @@
+﻿<ul class="ef-float10 js-remover">
+  <li>
+    <span class="cp-tag ef-rd3 ef-cp-yellow">
+      <ul class="ef-float10 ef-lh20">
+        <li>
+          Tag
+        </li>
+        <li class="ef-float-right">
+          <a href="javascript:void(0);">
+            <i class="fa fa-times ef-fs16 md-remover-tri js-remover-tri"></i>
+          </a>
+        </li>
+      </ul>
+    </span>
+  </li>
+  <li>
+    <span class="cp-tag ef-rd3 ef-cp-green">
+      <ul class="ef-float10 ef-lh20">
+        <li>
+          Tag
+        </li>
+        <li class="ef-float-right">
+          <a class="ef-txt-white" href="javascript:void(0);">
+            <i class="fa fa-times ef-fs16 md-remover-tri js-remover-tri"></i>
+          </a>
+        </li>
+      </ul>
+    </span>
+  </li>
+  <li>
+    <span class="cp-tag ef-rd3 ef-cp-blue">
+      <ul class="ef-float10 ef-lh20">
+        <li>
+          Tag
+        </li>
+        <li class="ef-float-right">
+          <a class="ef-txt-white" href="javascript:void(0);">
+            <i class="fa fa-times ef-fs16 md-remover-tri js-remover-tri"></i>
+          </a>
+        </li>
+      </ul>
+    </span>
+  </li>
+  <li>
+    <span class="cp-tag ef-rd3 ef-cp-orange">
+      <ul class="ef-float10 ef-lh20">
+        <li>
+          Tag
+        </li>
+        <li class="ef-float-right">
+          <a class="ef-txt-white" href="javascript:void(0);">
+            <i class="fa fa-check ef-fs16 md-remover-tri js-remover-tri"></i>
+          </a>
+        </li>
+      </ul>
+    </span>
+  </li>
+  <li>
+    <span class="cp-tag ef-rd3 ef-cp-brown">
+      <ul class="ef-float10 ef-lh20">
+        <li>
+          Tag
+        </li>
+        <li class="ef-float-right">
+          <a class="ef-txt-white" href="javascript:void(0);">
+            <i class="fa fa-check ef-fs16 md-remover-tri js-remover-tri"></i>
+          </a>
+        </li>
+      </ul>
+    </span>
+  </li>
+</ul>

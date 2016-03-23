@@ -65,7 +65,7 @@ ol{
 .cp-list-hover{
   >li{
     a{
-      padding:3px 10px;
+      padding:3px 7px;
       color:$cl-txt;
       display:block;
       &:hover{
@@ -493,12 +493,13 @@ input[type="checkbox"]{margin:6px 0;}
   vertical-align: middle;
   text-decoration:none;
   outline:none;
+  position:relative;
   color:$cl-txt;
   i{color:$cl-txt;}
   background:$cl-btn; // for oldie
   font-family:$ff-base;
   font-size:$fs;
-  @include brd(1px,solid,$cl-btn-darken);
+  @include brd(1px,solid,$cl-btn-border);
   @include border-radius(3px 3px);
   @include gradation($cl-btn-lighten, $cl-btn);
   //@include gradation-ie(#ffffffff, #ffeeeeee); // for oldie
@@ -526,13 +527,13 @@ input[type="checkbox"]{margin:6px 0;}
       color:$cl-txt;
       i{color:$cl-txt;}
       background:$cl-btn-hover; // for oldie
-      @include brd(1px,solid,$cl-btn-darken);
+      @include brd(1px,solid,$cl-btn-border);
       @include gradation($cl-btn-hover, $cl-btn-hover);
       //@include gradation-ie(#FFf2f2f2, #FFe1e1e1); // for oldie
     }
     &:active{
       background:$cl-btn-active; // for oldie
-      @include brd(1px,solid,$cl-btn-darken);
+      @include brd(1px,solid,$cl-btn-border);
       @include gradation($cl-btn-active, $cl-btn-active);
     }
     &.is-disable{
@@ -548,7 +549,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt;
   i{color:$cl-txt;}
   background:$cl-btn-white; // for oldie
-  @include brd(1px,solid,$cl-btn-white-darken);
+  @include brd(1px,solid,$cl-btn-white-border);
   @include gradation($cl-btn-white-lighten, $cl-btn-white);
   &:hover{
     color:$cl-txt;
@@ -571,7 +572,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-red; // for oldie
-  @include brd(1px,solid,$cl-btn-red-darken);
+  @include brd(1px,solid,$cl-btn-red-border);
   @include gradation($cl-btn-red-lighten, $cl-btn-red);
   &:hover{
     color:$cl-txt-rev;
@@ -594,7 +595,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-orange; // for oldie
-  @include brd(1px,solid,$cl-btn-orange-darken);
+  @include brd(1px,solid,$cl-btn-orange-border);
   @include gradation($cl-btn-orange-lighten, $cl-btn-orange);
   &:hover{
     color:$cl-txt-rev;
@@ -617,7 +618,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-blue; // for oldie
-  @include brd(1px,solid,$cl-btn-blue-darken);
+  @include brd(1px,solid,$cl-btn-blue-border);
   @include gradation($cl-btn-blue-lighten, $cl-btn-blue);
   &:hover{
     color:$cl-txt-rev;
@@ -640,7 +641,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-green; // for oldie
-  @include brd(1px,solid,$cl-btn-green-darken);
+  @include brd(1px,solid,$cl-btn-green-border);
   @include gradation($cl-btn-green-lighten, $cl-btn-green);
   &:hover{
     color:$cl-txt-rev;
@@ -663,7 +664,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt;
   i{color:$cl-txt;}
   background:$cl-btn-yellow; // for oldie
-  @include brd(1px,solid,$cl-btn-yellow-darken);
+  @include brd(1px,solid,$cl-btn-yellow-border);
   @include gradation($cl-btn-yellow-lighten, $cl-btn-yellow);
   &:hover{
     color:$cl-txt;
@@ -686,7 +687,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-brown; // for oldie
-  @include brd(1px,solid,$cl-btn-brown-darken);
+  @include brd(1px,solid,$cl-btn-brown-border);
   @include gradation($cl-btn-brown-lighten, $cl-btn-brown);
   &:hover{
     color:$cl-txt-rev;
@@ -709,7 +710,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-gray; // for oldie
-  @include brd(1px,solid,$cl-btn-gray-darken);
+  @include brd(1px,solid,$cl-btn-gray-border);
   @include gradation($cl-btn-gray-lighten, $cl-btn-gray);
   &:hover{
     color:$cl-txt-rev;
@@ -732,7 +733,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-theme; // for oldie
-  @include brd(1px,solid,$cl-btn-theme-darken);
+  @include brd(1px,solid,$cl-btn-theme-border);
   @include gradation($cl-btn-theme-lighten, $cl-btn-theme);
   &:hover{
     color:$cl-txt-rev;
@@ -754,7 +755,7 @@ input[type="checkbox"]{margin:6px 0;}
 .cp-btn-mini{
   @extend .cp-btn;
   font-size:$fs-small;
-  padding:3px;
+  padding:3px 7px;
   line-height:$lh-btn-mini;
 }
 //large
@@ -897,16 +898,16 @@ input[type="checkbox"]{margin:6px 0;}
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .cp-badge{
-  @include border-radius(50%);
-  padding:0 3px;
+  @include border-radius(10px);
+  padding:3px 5px;
   display:inline-block;
-  line-height:15px;
-  min-width:16px;
+  line-height:1.0;
   text-align:center;
   font-size:10px;
   color:$cl-txt-rev;
+  vertical-align:middle;
   i{
-    line-height:15px;
+    line-height:1.0;
     color:$cl-txt-rev;
   }
 }
@@ -1008,18 +1009,20 @@ a.cp-badge.ef-cp-yellow{
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .cp-tag{
-  padding:2px 5px;
+  padding:5px 7px;
   display:inline-block;
   text-align:center;
   min-width:15px;
   color:$cl-txt-rev;
   font-size:12px;
   line-height:20px;
+  position:relative;
   i{color:$cl-txt-rev;}
 }
 a.cp-tag{
   &:hover{
     color:$cl-txt-rev;
+    i{color:$cl-txt-rev;}
     @include opacity(0.5);
     text-decoration: none;
   }
@@ -1031,14 +1034,17 @@ a.cp-tag.ef-cp-white,
 a.cp-tag.ef-cp-yellow{
   &:hover{
     color:$cl-txt;
+    i{color:$cl-txt;}
   }
 }
 .cp-tag.ef-cp-white{
   color:$cl-txt;
+  i{color:$cl-txt;}
   background:$cl-tag-white;
 }
 .cp-tag.ef-cp-yellow{
   color:$cl-txt;
+  i{color:$cl-txt;}
   background:$cl-tag-yellow;
 }
 .cp-tag.ef-cp-white{background:$cl-tag-white;}
@@ -1083,37 +1089,37 @@ a.cp-tag.ef-cp-yellow{
   progress bar
 ============================================================= */
 .cp-progress-bar{
-  .lo-body{
+  .st-body{
     @include border-radius(3px);
     @include brd;
   }
 }
 .cp-progress-bar.ef-cp-white{
-  .lo-inner{background:$cl-progress-bar-white;}
+  .st-inner{background:$cl-progress-bar-white;}
 }
 .cp-progress-bar.ef-cp-red{
-  .lo-inner{background:$cl-progress-bar-red;}
+  .st-inner{background:$cl-progress-bar-red;}
 }
 .cp-progress-bar.ef-cp-orange{
-  .lo-inner{background:$cl-progress-bar-orange;}
+  .st-inner{background:$cl-progress-bar-orange;}
 }
 .cp-progress-bar.ef-cp-blue{
-  .lo-inner{background:$cl-progress-bar-blue;}
+  .st-inner{background:$cl-progress-bar-blue;}
 }
 .cp-progress-bar.ef-cp-green{
-  .lo-inner{background:$cl-progress-bar-green;}
+  .st-inner{background:$cl-progress-bar-green;}
 }
 .cp-progress-bar.ef-cp-yellow{
-  .lo-inner{background:$cl-progress-bar-yellow;}
+  .st-inner{background:$cl-progress-bar-yellow;}
 }
 .cp-progress-bar.ef-cp-gray{
-  .lo-inner{background:$cl-progress-bar-gray;}
+  .st-inner{background:$cl-progress-bar-gray;}
 }
 .cp-progress-bar.ef-cp-brown{
-  .lo-inner{background:$cl-progress-bar-brown;}
+  .st-inner{background:$cl-progress-bar-brown;}
 }
 .cp-progress-bar.ef-cp-theme{
-  .lo-inner{background:$cl-progress-bar-theme;}
+  .st-inner{background:$cl-progress-bar-theme;}
 }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -1144,7 +1150,7 @@ a.cp-tag.ef-cp-yellow{
     margin-left: $talkbox-arrow-width;
   }
   .cp-talkbox-arrow{
-    @include posi-abs(50%,auto,auto,1px);
+    @include posi-abs(50%,auto,auto,2px);
     margin-top: -$talkbox-arrow-height;
     border-top: $talkbox-arrow-height solid transparent;
     border-bottom: $talkbox-arrow-height solid transparent;
@@ -1208,7 +1214,7 @@ a.cp-tag.ef-cp-yellow{
     margin-right: $talkbox-arrow-width;
   }
   .cp-talkbox-arrow{
-    @include posi-abs(50%,1px,auto,auto);
+    @include posi-abs(50%,2px,auto,auto);
     margin-top: -$talkbox-arrow-height;
     border-top: $talkbox-arrow-height solid transparent;
     border-bottom: $talkbox-arrow-height solid transparent;

@@ -129,7 +129,7 @@
                   %li
                     質問・感想
             %li
-              %a(href="index.html")
+              %a(href="../index.html")
                 %ul.ef-float3
                   %li
                     導入方法
@@ -137,7 +137,7 @@
                     %span.cp-badge.ef-cp-red
                       53
             %li
-              %a.js-popup-inset-open.js-tpl1(href="#{v}")
+              %a.js-popup-open.js-tpl1(href="#{v}")
                 %ul.ef-float3
                   %li
                     Message
@@ -147,28 +147,12 @@
                   %li.js-ic-arrow
                     %i.fa.fa-caret-down
             %li
-              %a.js-popup-inset-open.js-tpl0(href="#{v}")
+              %a.js-popup-open.js-tpl0(href="#{v}")
                 %ul.ef-float3
                   %li
                     Your name
                   %li.js-ic-arrow
                     %i.fa.fa-caret-down
-              %ul.ef-txt-indent1.js-collapse-num0(style="display:none;")
-                %li
-                  %a(href="#{v}")
-                    %ul.ef-float3
-                      %li.ef-mgl3
-                        Project
-                %li
-                  %a(href="#{v}")
-                    %ul.ef-float3
-                      %li.ef-mgl3
-                        My account
-                %li
-                  %a(href="#{v}")
-                    %ul.ef-float3
-                      %li.ef-mgl3
-                        ログアウト
     / page-container//////////////////////////////////////////////
     %section.page-container
       .st-body
@@ -525,6 +509,11 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   promo-footer
+                          %li
+                            %a(href="page-module/remover.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  remover
                       %li
                         .ef-fs11.ef-op05
                           State
@@ -870,6 +859,79 @@
                                   $cl-theme　/ $cl-theme1 / $cl-theme2
                                 になります。
                           %hr.cp-hr1-dotted.ef-pdt30
+                      // example03 //////////////////////////////////
+                      %section#js-pageTop3.examle-wrap.ef-mgb20
+                        .st-inner
+                          .example-title.ef-mgb10
+                            %ul.ef-float.ef-lh25
+                              %li
+                                %h5
+                                  クラス名について
+                          .example-summary.ef-mgb10.ef-fs12
+                            Fivee-baseのクラス名ルールは以下になります。
+                          .example-box.ef-mgb40
+                            // example code ///////////////////////////
+                            %table.md-table.ef-w100p
+                              %tbody
+                                /tr ///////////////////////
+                                %tr
+                                  %th.ef-w20p
+                                    頭文字
+                                  %th
+                                    クラスの概要
+                                /tr ///////////////////////
+                                %tr
+                                  %th
+                                    st-
+                                  %td
+                                    「st-」からはじまるクラス名はstructureです。構造を意味します。主にコンテンツのレイアウト用に使用されます。
+                                    %a(href="page-structure/index.html")
+                                      詳細
+                                /tr ///////////////////////
+                                %tr
+                                  %th
+                                    cp-
+                                  %td
+                                    「cp-」からはじまるクラス名はcomponentsです。ボタンなどの小さなパーツです。
+                                    %a(href="page-components/index.html")
+                                      詳細
+                                /tr ///////////////////////
+                                %tr
+                                  %th
+                                    ef-
+                                  %td
+                                    「ef-」からはじまるクラス名はeffect-classです。色、背景、形、位置など対象コンテンツの意匠を変化させます。
+                                    %a(href="page-effect/index.html")
+                                      詳細
+                                /tr ///////////////////////
+                                %tr
+                                  %th
+                                    md-
+                                  %td
+                                    「md-」からはじまるクラス名はmoduleです。modalなど一つの機能として成立するパーツです。moduleはjqueryを必要とします。
+                                    %a(href="page-module/index.html")
+                                      詳細
+                                /tr ///////////////////////
+                                %tr
+                                  %th
+                                    is-
+                                  %td
+                                    「is-」からはじまるクラス名はstate-classです。対象コンテンツの状態を示します。
+                                    %a(href="page-state/index.html")
+                                      詳細
+                                /tr ///////////////////////
+                                %tr
+                                  %th
+                                    rs-
+                                  %td
+                                    「rs-」からはじまるクラス名はレスポンシブ用に使用されます。
+                                /tr ///////////////////////
+                                %tr
+                                  %th
+                                    js-
+                                  %td
+                                    「js-」からはじまるクラス名はjavascript用のクラスです。このクラス名にはCSSの指定はNGになっています。
+                          %hr.cp-hr1-dotted.ef-pdt30
                       // example04 //////////////////////////////////
                       %section#js-pageTop4.examle-wrap.ef-mgb20
                         .st-inner
@@ -922,7 +984,9 @@
     %section.md-popup.js-popup(style="display:none;")
       /popup contents type 'js-tpl0'
       .st-body.js-posi-fix.js-tpl0
-        .st-inner.ef-sdw02
+        .st-inner.ef-w120.ef-sdw02
+          .md-popup-arrow.js-popup-arrow
+          .md-popup-arrow-back.js-popup-arrow
           .md-popup-body
             %ul.cp-list-hover.ef-cp-gray
               %li
@@ -937,7 +1001,9 @@
       /popup contents type 'js-tpl1'
       .st-body.js-posi-fix.js-tpl1
         .st-inner.ef-sdw02
-          .md-popup-body.ef-mw250-ovf.ef-mh400-ovf
+          .md-popup-arrow.js-popup-arrow
+          .md-popup-arrow-back.js-popup-arrow
+          .md-popup-body
             %ul.cp-list-hover.ef-cp-gray
               %li
                 %a(href="#{v}")
@@ -973,6 +1039,8 @@
       /popup contents type 'js-tpl2'
       .st-body.ef-mgt-40.js-tpl2
         .st-inner.ef-sdw02
+          .md-popup-arrow.js-popup-arrow
+          .md-popup-arrow-back.js-popup-arrow
           .md-popup-body
             %ul.cp-list-hover.ef-cp-gray
               %li
@@ -993,6 +1061,8 @@
       /popup contents type 'js-tpl3'
       .st-body.ef-mgt-40.js-tpl3
         .st-inner.ef-sdw02
+          .md-popup-arrow.js-popup-arrow
+          .md-popup-arrow-back.js-popup-arrow
           .md-popup-header.ef-mgb20
             %ul.ef-float
               %li
@@ -1013,7 +1083,6 @@
                   %select.cp-input
                     %option
                       folder
-            %section
           .md-popup-footer
             .ef-txt-center.ef-pdt30.ef-txt-nowrap
               %a.cp-btn-mini.ef-w80.js-popup-close(href="#{v}")

@@ -7,7 +7,7 @@
   <!--<![endif]-->
   %head
     %meta(charset="utf-8")
-    %title margin | レスポンシブ対応のcssフレームワーク | html,css,javascript
+    %title remover | レスポンシブ対応のcssフレームワーク | html,css,javascript
     %meta(name="description" content="cssフレームワークはFivee-baseが便利です。レスポンシブでアプリケーションのフロントエンドやWebサイトを簡単に作る事ができます。")
     %meta(name="keywords" content="css,フレームワーク,レスポンシブ,フロントエンド")
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
@@ -18,7 +18,7 @@
     %link(href="../css/theme-default/unique.min.css" rel="stylesheet" type="text/css")
     /[if lte IE 9] <link href="../css/old-ie.min.css" rel="stylesheet">
   - v = 'javascript:void(0);'
-  %body.effect-class-margin
+  %body.module-remover
     / header//////////////////////////////////////////////
     %header.page-header
       .st-body.ef-posi-fix.js-posi-remove
@@ -311,7 +311,7 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   align
-                          %li.is-current
+                          %li
                             %a(href="../page-effect/margin.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
@@ -509,7 +509,7 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   promo-footer
-                          %li
+                          %li.is-current
                             %a(href="../page-module/remover.html")
                               %ul.ef-float3
                                 %li.ef-mgl3
@@ -547,9 +547,9 @@
                     %ul.ef-float20.ef-lh30
                       %li
                         %h1
-                          margin
+                          remover
                       %li
-                        marginについての説明です。
+                        タグを消すUIなど、コンテンツをユーザーに消してもらう事ができます。
                 // breadcrumb//////////////////////////////////////////////
                 %section.cp-breadcrumb-model1.ef-mgb20
                   .st-inner.ef-float
@@ -557,12 +557,12 @@
                       %ul.ef-float10.ef-lh24
                         %li
                           %a(href="index.html")
-                            Effect-class
+                            Module
                         %li
                           .ef-txt-center
                             %i.fa.fa-angle-right
                         %li
-                          margin
+                          remover
                     .ef-float-right
                       %ul.ef-float3
                         %li.ef-float-right
@@ -579,158 +579,88 @@
                   .st-body
                     .st-inner.ef-mh400
                       // example00 //////////////////////////////////
-                      %section#js-pageTop0.examle-wrap.ef-mgb20
+                      %section#js-pageTop0.examle-wrap
                         .st-inner
                           .example-title.ef-mgb3
                             %ul.ef-float.ef-lh25
                               %li
                                 %h5
-                                  margin
-                          .example-summary.ef-fs12.ef-mgb30
-                            marginの値を調整する事ができます。HTMLソースのクラス名
-                            %span.ef-txt-red
-                              ef-mg*50
-                            の数値を変更してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                0/3/7/10～300(10単位)
-                              %a(href="#{v}")
-                                [数値]
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            %ul
-                              %li.ef-bg-red.ef-mgb10.is-table
-                                .ef-mgt50
-                                  .ef-cl-theme.ef-txt-white.ef-txt-center.ef-w100
-                                    margin-top
-                              %li.ef-bg-red.ef-mgb10.is-table
-                                .ef-mgr50
-                                  .ef-cl-theme.ef-txt-white.ef-txt-center.ef-w100
-                                    margin-right
-                              %li.ef-bg-red.ef-mgb10.is-table
-                                .ef-mgb50
-                                  .ef-cl-theme.ef-txt-white.ef-txt-center.ef-w100
-                                    margin-bottom
-                              %li.ef-bg-red.ef-mgb10.is-table
-                                .ef-mgl50
-                                  .ef-cl-theme.ef-txt-white.ef-txt-center.ef-w100
-                                    margin-left
-                          .example-remarks.ef-mgb20
-                            %section.cp-remarks.ef-cp-blue.ef-w100p
-                              .st-inner
-                                .st-outer.ef-lh20
-                                  ネガティブマージンは、例えばマージンのクラスが
-                                  %span.ef-txt-red
-                                    ef-mgt50
-                                  の場合
-                                  %span.ef-txt-red
-                                    ef-mgt-50
-                                  に変更する事でネガティブマージンになります。
-                                  %br
-                                  マージンをクリアする場合は
-                                  %span.ef-txt-red
-                                    ef-mg0
-                                  %br
-                                  マージントップをクリアする場合は
-                                  %span.ef-txt-red
-                                    ef-mgt0
-                                  %br
-                                  マージンライトをクリアする場合は
-                                  %span.ef-txt-red
-                                    ef-mgr0
-                                  %br
-                                  マージンボトムをクリアする場合は
-                                  %span.ef-txt-red
-                                    ef-mgb0
-                                  %br
-                                  マージンレフトをクリアする場合は
-                                  %span.ef-txt-red
-                                    ef-mgl0
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num03-03-00-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num03-03-00(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.cp-hr1-dotted.ef-pdt60
-                      // example01 //////////////////////////////////
-                      %section#js-pageTop1.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb3
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h5
-                                  margin
+                                  remover
                                   %span.ef-fs14
-                                    (relative)
+                                    (ul)
                           .example-summary.ef-fs12.ef-mgb30
-                            marginの値を相対値で調整する事ができます。HTMLソースのクラス名
+                            クラス名
                             %span.ef-txt-red
-                              ef-mg*50p
-                            の数値を変更してください。
-                            %span.js-tooltip-hover
-                              .md-tooltip-key.js-tooltip-key
-                                0/3/7/10～100(10単位)
-                              %a(href="#{v}")
-                                [数値]
+                              js-remover
+                            が付与されたul直下のliをトリガーを押す事により消す事ができます。
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
-                            %ul
-                              %li.ef-bg-red.ef-mgb10.is-table
-                                .ef-mgt50p
-                                  .ef-cl-theme.ef-txt-white.ef-txt-center.ef-w100
-                                    margin-top
-                              %li.ef-bg-red.ef-mgb10.is-table
-                                .ef-mgr50p
-                                  .ef-cl-theme.ef-txt-white.ef-txt-center.ef-w100
-                                    margin-right
-                              %li.ef-bg-red.ef-mgb10.is-table
-                                .ef-mgb50p
-                                  .ef-cl-theme.ef-txt-white.ef-txt-center.ef-w100
-                                    margin-bottom
-                              %li.ef-bg-red.ef-mgb10.is-table
-                                .ef-mgl50p
-                                  .ef-cl-theme.ef-txt-white.ef-txt-center.ef-w100
-                                    margin-left
+                            %ul.ef-float10.js-remover
+                              %li
+                                %span.cp-tag.ef-rd3.ef-cp-yellow
+                                  %ul.ef-float10.ef-lh20
+                                    %li
+                                      Tag
+                                    %li.ef-float-right
+                                      %a(href="#{v}")
+                                        %i.fa.fa-times.ef-fs16.md-remover-tri.js-remover-tri
+                              %li
+                                %span.cp-tag.ef-rd3.ef-cp-green
+                                  %ul.ef-float10.ef-lh20
+                                    %li
+                                      Tag
+                                    %li.ef-float-right
+                                      %a.ef-txt-white(href="#{v}")
+                                        %i.fa.fa-times.ef-fs16.md-remover-tri.js-remover-tri
+                              %li
+                                %span.cp-tag.ef-rd3.ef-cp-blue
+                                  %ul.ef-float10.ef-lh20
+                                    %li
+                                      Tag
+                                    %li.ef-float-right
+                                      %a.ef-txt-white(href="#{v}")
+                                        %i.fa.fa-times.ef-fs16.md-remover-tri.js-remover-tri
+                              %li
+                                %span.cp-tag.ef-rd3.ef-cp-orange
+                                  %ul.ef-float10.ef-lh20
+                                    %li
+                                      Tag
+                                    %li.ef-float-right
+                                      %a.ef-txt-white(href="#{v}")
+                                        %i.fa.fa-check.ef-fs16.md-remover-tri.js-remover-tri
+                              %li
+                                %span.cp-tag.ef-rd3.ef-cp-brown
+                                  %ul.ef-float10.ef-lh20
+                                    %li
+                                      Tag
+                                    %li.ef-float-right
+                                      %a.ef-txt-white(href="#{v}")
+                                        %i.fa.fa-check.ef-fs16.md-remover-tri.js-remover-tri
                           .example-remarks.ef-mgb20
                             %section.cp-remarks.ef-cp-blue.ef-w100p
                               .st-inner
                                 .st-outer.ef-lh20
-                                  ネガティブマージンは、例えばマージンのクラスが
+                                  htmlソースの
                                   %span.ef-txt-red
-                                    ef-mgt50p
-                                  の場合
+                                    ul
+                                  に
                                   %span.ef-txt-red
-                                    ef-mgt-50p
-                                  に変更する事でネガティブマージンになります。
-                                  %br
-                                  マージンをクリアする場合は
+                                    js-remover
+                                  を付与し、
                                   %span.ef-txt-red
-                                    ef-mg0
-                                  %br
-                                  マージントップをクリアする場合は
+                                    li
+                                  配下の任意の箇所に
                                   %span.ef-txt-red
-                                    ef-mgt0
-                                  %br
-                                  マージンライトをクリアする場合は
-                                  %span.ef-txt-red
-                                    ef-mgr0
-                                  %br
-                                  マージンボトムをクリアする場合は
-                                  %span.ef-txt-red
-                                    ef-mgb0
-                                  %br
-                                  マージンレフトをクリアする場合は
-                                  %span.ef-txt-red
-                                    ef-mgl0
+                                    md-remover-tri js-remover-tri
+                                  を付与してください。
                           .example-btn
                             %ul.ef-float7
                               %li
-                                %a.cp-btn.js-html-show.js-example-num03-03-01-00(href="#{v}")
+                                %a.cp-btn.js-html-show.js-example-num04-18-00-00(href="#{v}")
                                   show html
-                          .example-box-html.js-example-tag-num03-03-01(style="display:none;")
+                          .example-box-html.js-example-tag-num04-18-00(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
+                          .ef-h600
     / footer/////////////////////////////////////////////
     %footer.page-footer
       .st-body.ef-posi-fix
@@ -801,12 +731,7 @@
             %ul.cp-list-hover.ef-cp-gray
               %li
                 %a(href="#js-pageTop0")
-                  margin
-              %li
-                %a(href="#js-pageTop1")
-                  margin
-                  %span.ef-fs11
-                    (relative)
+                  remover
       /popup contents type 'js-tpl3'
       .st-body.ef-mgt-40.js-tpl3
         .st-inner.ef-sdw02

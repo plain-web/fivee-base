@@ -11,10 +11,6 @@
  * =============================================================
  ▼ common
  ============================================================== */
-//breakpoint border
-//| 1←|→2　| 3 | //$breakpoint1-2
-//| 1 |　2←|→3 | //$breakpoint2-3
-
 //breackpoint3
 .rs1-hide,
 .rs2-hide,
@@ -188,7 +184,6 @@
 	.md-aside-main{
 	  @include posi-abs(0,auto,0,0);
 	  z-index:2;
-	  @include brd-right;
 	  background:$cl-bg-white;
 	  @include transform(translateX(-100%));
 	  width:80%;
@@ -197,7 +192,7 @@
 	  }
 	  &.is-open{
 	    @include transform(translateX(0));
-	    @include box-shadow(rgba($cl-brd, 0.9) 0 0 60px);
+	    @include box-shadow(rgba($cl-gray, 0.9) 0 10px 10px);
 	   }
 	}
 }

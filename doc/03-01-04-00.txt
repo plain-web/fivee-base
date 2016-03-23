@@ -1,0 +1,48 @@
+﻿<section class="ef-mgb10">
+  <div class="ef-float is-col3">
+    <div class="ef-float-left ef-cl-gray">
+      <div class="st-inner ef-txt-white ef-pd7">
+        grid
+      </div>
+    </div>
+    <div class="ef-float-left ef-cl-blue">
+      <div class="st-inner ef-txt-white ef-pd7 ef-pdl10">
+        grid
+      </div>
+    </div>
+    <div class="ef-float-left ef-cl-green">
+      <div class="st-inner ef-txt-white ef-pd7">
+        grid
+      </div>
+    </div>
+  </div>
+</section>
+<section class="ef-mgb10">
+  <ul class="ef-float is-col5">
+    <li class="ef-cl-gray">
+      <div class="st-inner ef-txt-white ef-pd7">
+        grid
+      </div>
+    </li>
+    <li class="ef-cl-blue">
+      <div class="st-inner ef-txt-white ef-pd7 ef-pdl10">
+        grid
+      </div>
+    </li>
+    <li class="ef-cl-green">
+      <div class="st-inner ef-txt-white ef-pd7">
+        grid
+      </div>
+    </li>
+    <li class="ef-cl-orange">
+      <div class="st-inner ef-txt-white ef-pd7">
+        grid
+      </div>
+    </li>
+    <li class="ef-cl-brown">
+      <div class="st-inner ef-txt-white ef-pd7">
+        grid
+      </div>
+    </li>
+  </ul>
+</section>

@@ -24,43 +24,43 @@
  ▼ text color
 ============================================================== */
 .ef-txt-white,
-a.ef-txt-white{color:$cl-txt-white;}
+a.ef-txt-white{color:$cl-txt-white;i,i:hover{color:$cl-txt-white;}}
 .ef-txt-white{a{color:$cl-txt-white;}}
 .ef-txt-red,
-a.ef-txt-red{color:$cl-txt-red;}
+a.ef-txt-red{color:$cl-txt-red;i,i:hover{color:$cl-txt-red;}}
 .ef-txt-red{a{color:$cl-txt-red;}}
 .ef-txt-orange,
-a.ef-txt-orange{color:$cl-txt-orange;}
+a.ef-txt-orange{color:$cl-txt-orange;i,i:hover{color:$cl-txt-orange;}}
 .ef-txt-orange{a{color:$cl-txt-orange;}}
 .ef-txt-blue,
-a.ef-txt-blue{color:$cl-txt-blue;}
+a.ef-txt-blue{color:$cl-txt-blue;i,i:hover{color:$cl-txt-blue;}}
 .ef-txt-blue{a{color:$cl-txt-blue;}}
 .ef-txt-green,
-a.ef-txt-green{color:$cl-txt-green;}
+a.ef-txt-green{color:$cl-txt-green;i,i:hover{color:$cl-txt-green;}}
 .ef-txt-green{a{color:$cl-txt-green;}}
 .ef-txt-yellow,
-a.ef-txt-yellow{color:$cl-txt-yellow;}
+a.ef-txt-yellow{color:$cl-txt-yellow;i,i:hover{color:$cl-txt-yellow;}}
 .ef-txt-yellow{a{color:$cl-txt-yellow;}}
 .ef-txt-brown,
-a.ef-txt-brown{color:$cl-txt-brown;}
+a.ef-txt-brown{color:$cl-txt-brown;i,i:hover{color:$cl-txt-brown;}}
 .ef-txt-brown{a{color:$cl-txt-brown;}}
 .ef-txt-gray,
-a.ef-txt-gray{color:$cl-txt-gray;}
+a.ef-txt-gray{color:$cl-txt-gray;i,i:hover{color:$cl-txt-gray;}}
 .ef-txt-gray{a{color:$cl-txt-gray;}}
 .ef-txt,
-a.ef-txt{color:$cl-txt;}
+a.ef-txt{color:$cl-txt;i,i:hover{color:$cl-txt;}}
 .ef-txt{a{color:$cl-txt;}}
 .ef-txt-rev,
-a.ef-txt-rev{color:$cl-txt-rev;}
+a.ef-txt-rev{color:$cl-txt-rev;i,i:hover{color:$cl-txt-rev;}}
 .ef-txt-rev{a{color:$cl-txt-rev;}}
 .ef-txt-theme,
-a.ef-txt-theme{color:$cl-txt-theme;}
+a.ef-txt-theme{color:$cl-txt-theme;i,i:hover{color:$cl-txt-theme;}}
 .ef-txt-theme{a{color:$cl-txt-theme;}}
 .ef-txt-link,
-a.ef-txt-link{color:$cl-txt-link;}
+a.ef-txt-link{color:$cl-txt-link;i,i:hover{color:$cl-txt-link;}}
 .ef-txt-link{a{color:$cl-txt-link;}}
 .ef-txt-hover,
-a.ef-txt-hover{color:$cl-txt-hover;}
+a.ef-txt-hover{color:$cl-txt-hover;i,i:hover{color:$cl-txt-hover;}}
 .ef-txt-hover{a{color:$cl-txt-hover;}}
 /* =============================================================
  ▼ background color
@@ -1739,7 +1739,16 @@ dl.ef-float{
   	@include clearfix-after
   }
 }
-
+//grid
+.is-col2{>li,>.ef-float-left,>.ef-float-right{width:50%;}}
+.is-col3{>li,>.ef-float-left,>.ef-float-right{width:33.33%;}}
+.is-col4{>li,>.ef-float-left,>.ef-float-right{width:25%;}}
+.is-col5{>li,>.ef-float-left,>.ef-float-right{width:20%;}}
+.is-col6{>li,>.ef-float-left,>.ef-float-right{width:16.66%;}}
+.is-col7{>li,>.ef-float-left,>.ef-float-right{width:14.28%;}}
+.is-col8{>li,>.ef-float-left,>.ef-float-right{width:12.5%;}}
+.is-col9{>li,>.ef-float-left,>.ef-float-right{width:11.11%;}}
+.is-col10{>li,>.ef-float-left,>.ef-float-right{width:25%;}}
 /* =============================================================
  ▼ overflow
 ============================================================== */
