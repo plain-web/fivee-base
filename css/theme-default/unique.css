@@ -180,7 +180,7 @@
 /* =============================================================
  ▼ pages
 ============================================================== */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .page-container > .st-body > .st-inner > .page-contents {
     margin-left: 0;
   }
