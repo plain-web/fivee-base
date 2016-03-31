@@ -4,13 +4,13 @@
       Fivee-base
     </a>
   </li>
-  <li>
+  <li class="is-current">
     <a href="#">
       Fivee-base
     </a>
   </li>
   <li>
-    <a href="#">
+    <a class="is-notouch" href="#">
       Fivee-base
     </a>
   </li>

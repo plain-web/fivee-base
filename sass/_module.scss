@@ -89,7 +89,7 @@
       .md-tab-btn-right{
         z-index:1;
         ul{li{margin-bottom:-1px;}}
-        .is-disable{a{cursor: not-allowed;}}
+        .is-disabled{a{cursor: not-allowed;}}
       }
       .md-tab-btn-left{
         @include posi-abs(0,auto,auto,0);
@@ -563,7 +563,7 @@ table.md-table{
     >li.is-current{
       >a{cursor:default;}
     }
-    >li.is-disable{
+    >li.is-disabled{
       >a{
         cursor:default;
         color:$cl-txt;
@@ -667,7 +667,7 @@ table.md-table{
 .md-pagination.ef-cp-gray,
 .md-pagination.ef-cp-theme{
   >ul{
-    >li.is-disable{
+    >li.is-disabled{
       >a{
         cursor:default;
         color:$cl-txt;

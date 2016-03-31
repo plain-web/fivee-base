@@ -57,7 +57,7 @@
                       %span.cp-badge.ef-cp-red
                         53
               %li
-                %a.js-popup-open.js-tpl1(href="#{v}")
+                %a.js-popup-open.is-fixed.js-tpl1(href="#{v}")
                   %ul.ef-float3
                     %li
                       %i.fa.fa-envelope
@@ -69,10 +69,10 @@
                     %li
                       %i.fa.fa-caret-down
               %li
-                %a.js-popup-open.js-tpl0(href="#{v}")
+                %a.js-popup-open.is-fixed.js-tpl0(href="#{v}")
                   %ul.ef-float3
                     %li
-                      %img.prof(src="../img/myprof.png")
+                      %img.prof(src="../img/myprof.png" alt="profile")
                     %li
                       Your name
                     %li
@@ -93,7 +93,7 @@
                       %span.cp-badge.ef-cp-red
                         53
               %li
-                %a.js-popup-open.js-tpl1(href="#{v}")
+                %a.js-popup-open.is-fixed.js-tpl1(href="#{v}")
                   %ul.ef-float3
                     %li
                       %i.fa.fa-envelope.ef-fs18
@@ -103,10 +103,10 @@
                       %span.cp-badge.ef-cp-red
                         2
               %li
-                %a.js-popup-open.js-tpl0(href="#{v}")
+                %a.js-popup-open.is-fixed.js-tpl0(href="#{v}")
                   %ul.ef-float3
                     %li
-                      %img.prof(src="../img/myprof.png")
+                      %img.prof(src="../img/myprof.png" alt="profile")
                     %li
                       %i.fa.fa-caret-down
           .ef-float-right.rs1-show
@@ -115,7 +115,7 @@
                 %a.js-nav-slide-open(href="#{v}")
                   %ul.ef-float3
                     %li
-                      %img.prof(src="../img/myprof.png")
+                      %img.prof(src="../img/myprof.png" alt="profile")
                     %li
                       %i.fa.fa-caret-down
     / slide-nav//////////////////////////////////////////////
@@ -137,7 +137,7 @@
                     %span.cp-badge.ef-cp-red
                       53
             %li
-              %a.js-popup-open.js-tpl1(href="#{v}")
+              %a.js-popup-open.is-fixed.js-tpl1(href="#{v}")
                 %ul.ef-float3
                   %li
                     Message
@@ -147,7 +147,7 @@
                   %li.js-ic-arrow
                     %i.fa.fa-caret-down
             %li
-              %a.js-popup-open.js-tpl0(href="#{v}")
+              %a.js-popup-open.is-fixed.js-tpl0(href="#{v}")
                 %ul.ef-float3
                   %li
                     Your name
@@ -514,6 +514,16 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   remover
+                          %li
+                            %a(href="../page-module/current.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  current
+                          %li
+                            %a(href="../page-module/number-counter.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  number-counter
                       %li
                         .ef-fs11.ef-op05
                           State
@@ -538,7 +548,7 @@
                                 %li.ef-mgl3
                                   text
           // page-main//////////////////////////////////////////////
-          %main.page-contents(role="main")
+          .page-contents
             .st-body.js-page-contents
               .st-inner
                 // page title//////////////////////////////////////////////
@@ -655,33 +665,33 @@
                           .example-summary.ef-fs12.ef-mgb30
                             コンテンツをdisable状態にする場合のクラスは
                             %span.ef-txt-red
-                              is-disable
+                              is-disabled
                             になります。
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
                             %section.ef-mgb20
-                              %a.cp-btn.is-disable(href="#{v}")
-                                btn: is-disable
-                              %a.cp-btn.ef-cp-red.is-disable(href="#{v}")
-                                btn :is-disable
-                              %a.cp-btn.ef-cp-theme.is-disable(href="#{v}")
-                                btn :is-disable
+                              %a.cp-btn.is-disabled(href="#{v}")
+                                btn: is-disabled
+                              %a.cp-btn.ef-cp-red.is-disabled(href="#{v}")
+                                btn :is-disabled
+                              %a.cp-btn.ef-cp-theme.is-disabled(href="#{v}")
+                                btn :is-disabled
                             %section.ef-mgb20
-                              %a.cp-tag.ef-cp-red.is-disable(href="#{v}")
-                                tag: is-disable
-                              %a.cp-tag.ef-cp-blue.is-disable(href="#{v}")
-                                tag :is-disable
-                              %a.cp-tag.ef-cp-green.is-disable(href="#{v}")
-                                tag: is-disable
+                              %a.cp-tag.ef-cp-red.is-disabled(href="#{v}")
+                                tag: is-disabled
+                              %a.cp-tag.ef-cp-blue.is-disabled(href="#{v}")
+                                tag :is-disabled
+                              %a.cp-tag.ef-cp-green.is-disabled(href="#{v}")
+                                tag: is-disabled
                             %section
-                              .is-disable
-                                text: is-disable
+                              .is-disabled
+                                text: is-disabled
                           .example-remarks.ef-mgb20
                             %section.cp-remarks.ef-cp-blue.ef-w100p
                               .st-inner
                                 .st-outer.ef-lh20
                                   %span.ef-txt-red
-                                    is-disable
+                                    is-disabled
                                   でうまく表現できない場合は
                                   %span.ef-txt-red
                                     is-notouch
@@ -881,7 +891,7 @@
     /popup/////////////////////////////////////////////
     %section.md-popup.js-popup(style="display:none;")
       /popup contents type 'js-tpl0'
-      .st-body.js-posi-fix.js-tpl0
+      .st-body.js-tpl0
         .st-inner.ef-w120.ef-sdw02
           .md-popup-arrow.js-popup-arrow
           .md-popup-arrow-back.js-popup-arrow
@@ -897,7 +907,7 @@
                 %a(href="#{v}")
                   ログアウト
       /popup contents type 'js-tpl1'
-      .st-body.js-posi-fix.js-tpl1
+      .st-body.js-tpl1
         .st-inner.ef-sdw02
           .md-popup-arrow.js-popup-arrow
           .md-popup-arrow-back.js-popup-arrow
@@ -935,7 +945,7 @@
                     %dd.ef-txt-ellipsis
                       システム予約は15：00にセットされました。
       /popup contents type 'js-tpl2'
-      .st-body.ef-mgt-40.js-tpl2
+      .st-body.js-tpl2
         .st-inner.ef-sdw02
           .md-popup-arrow.js-popup-arrow
           .md-popup-arrow-back.js-popup-arrow
@@ -965,16 +975,16 @@
                   %span.ef-fs11
                     (mediaquery hidden)
       /popup contents type 'js-tpl3'
-      .st-body.ef-mgt-40.js-tpl3
+      .st-body.js-tpl3
         .st-inner.ef-sdw02
           .md-popup-arrow.js-popup-arrow
           .md-popup-arrow-back.js-popup-arrow
-          .md-popup-header.ef-mgb20
+          .md-popup-header.ef-mgb10
             %ul.ef-float
               %li
                 %h6
                   Bookmark
-          .md-popup-body
+          .md-popup-body.ef-pd10.ef-mgb10
             %section.ef-mgb10
               %ul.ef-float7.ef-lh30
                 %li.ef-w50.ef-txt-right
@@ -989,17 +999,15 @@
                   %select.cp-input
                     %option
                       folder
-          .md-popup-footer
-            .ef-txt-center.ef-pdt30.ef-txt-nowrap
-              %a.cp-btn-mini.ef-w80.js-popup-close(href="#{v}")
-                削除
-              %a.cp-btn-mini.ef-w80.js-popup-close(href="#{v}")
-                登録
-              %a.cp-btn-mini.ef-w80.js-popup-close(href="#{v}")
-                キャンセル
+          .md-popup-footer.ef-pdb7
+            .ef-txt-center
+              %a.cp-btn.ef-cp-red.ef-w70.js-popup-close.js-bookmark-delete(href="#{v}")
+                Delete
+              %a.cp-btn.ef-w70.js-popup-close(href="#{v}")
+                Edit
     /tooltip/////////////////////////////////////////////
     %section.md-tooltip.js-tooltip(style="display:none;")
-      .st-body.ef-mgt-40.ef-mxw170
+      .st-body.ef-mxw170
         .st-inner
           %section.md-tooltip-wrap.js-tooltip-wrap
           %section.md-balloon.js-balloon

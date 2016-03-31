@@ -1,7 +1,7 @@
 ﻿<div class="js-tooltip-hover">
-  <div class="md-tooltip-key js-tooltip-key">
+  <span class="md-tooltip-key js-tooltip-key">
     ツールチップの内容はここ
-  </div>
+  </span>
   <a href="javascript:void(0);">
     [ツールチップ]
   </a>

@@ -1,27 +1,27 @@
 ﻿<section class="ef-mgb20">
-  <a class="cp-btn is-disable" href="javascript:void(0);">
-    btn: is-disable
+  <a class="cp-btn is-disabled" href="javascript:void(0);">
+    btn: is-disabled
   </a>
-  <a class="cp-btn ef-cp-red is-disable" href="javascript:void(0);">
-    btn :is-disable
+  <a class="cp-btn ef-cp-red is-disabled" href="javascript:void(0);">
+    btn :is-disabled
   </a>
-  <a class="cp-btn ef-cp-theme is-disable" href="javascript:void(0);">
-    btn :is-disable
+  <a class="cp-btn ef-cp-theme is-disabled" href="javascript:void(0);">
+    btn :is-disabled
   </a>
 </section>
 <section class="ef-mgb20">
-  <a class="cp-tag ef-cp-red is-disable" href="javascript:void(0);">
-    tag: is-disable
+  <a class="cp-tag ef-cp-red is-disabled" href="javascript:void(0);">
+    tag: is-disabled
   </a>
-  <a class="cp-tag ef-cp-blue is-disable" href="javascript:void(0);">
-    tag :is-disable
+  <a class="cp-tag ef-cp-blue is-disabled" href="javascript:void(0);">
+    tag :is-disabled
   </a>
-  <a class="cp-tag ef-cp-green is-disable" href="javascript:void(0);">
-    tag: is-disable
+  <a class="cp-tag ef-cp-green is-disabled" href="javascript:void(0);">
+    tag: is-disabled
   </a>
 </section>
 <section>
-  <div class="is-disable">
-    text: is-disable
+  <div class="is-disabled">
+    text: is-disabled
   </div>
 </section>

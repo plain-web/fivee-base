@@ -1,8 +1,8 @@
 ﻿<section class="ef-mgb20">
-  <a class="cp-btn ef-cp-blue js-popup-open js-tpl0" href="javascript:void(0);">
+  <a class="cp-btn ef-cp-blue js-popup-open is-fixed js-tpl0" href="javascript:void(0);">
     ポップアップ(fixed)
   </a>
-  <a class="cp-btn ef-cp-blue js-popup-open js-tpl1" href="javascript:void(0);">
+  <a class="cp-btn ef-cp-blue js-popup-open is-fixed js-tpl1" href="javascript:void(0);">
     ポップアップ1(fixed)
   </a>
 </section>

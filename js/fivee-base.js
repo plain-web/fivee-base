@@ -1,13 +1,49 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
  * Fivee-base
- * ver.1.4.0 / 2016.3.24
+ * ver.1.5.0 / 2016.3.31
  * http://plain-web.com/fivee-base/apps/
  * Released under MIT license. Copyright 2016 Yusuke Maruyama.
  *
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
 
 $(function (){
+/*========================================================================
+  [common]fixed contents remove
+======================================================================== */
+//check remove contents
+var pageTopRemove =  $('.js-posi-remove');
+if(pageTopRemove.length){
+  fixContentsRemoveVal = pageTopRemoveHeightSum();
+}else{
+  fixContentsRemoveVal = 0;
+}
+//sum remove contents
+function pageTopRemoveHeightSum(){
+  var pageTopRemoveHeightTotal = 0;
+  var pageTopCounter = 0;
+  pageTopRemove.each(function() {
+    pageTopRemoveHeightTotal += $(this).outerHeight(true);
+    pageTopCounter++;
+  });
+  return pageTopRemoveHeightTotal;
+}
+/*========================================================================
+  [common] return targetClass
+======================================================================== */
+var clickThis, returnClass, targetClass, thisClass;
+function thisClassGet(clickThis, returnClass){
+  //get class
+  thisClass = $(clickThis).attr('class');
+  //split class　
+  thisClass = thisClass.split(" ");
+  //return class
+  thisClass = $.grep(thisClass, function(value, index) {
+    return value.indexOf(returnClass) >= 0;
+  });
+  targetClass = '.' + thisClass;
+  return targetClass;
+}
 /*========================================================================
   scrolltop arrow
 ======================================================================== */
@@ -23,23 +59,6 @@ $(window).scroll(function() {
 /*========================================================================
   scrolltop
 ======================================================================== */
-//check remove contents
-var pageTopRemove =  $('.js-posi-remove');
-if(pageTopRemove.length){
-  pageTopRemoveVal = pageTopRemoveHeightSum();
-}else{
-  pageTopRemoveVal = 0;
-}
-//sum remove contents
-function pageTopRemoveHeightSum(){
-  var pageTopRemoveHeightTotal = 0;
-  var pageTopCounter = 0;
-  pageTopRemove.each(function() {
-    pageTopRemoveHeightTotal += $(this).outerHeight(true);
-    pageTopCounter++;
-  });
-  return pageTopRemoveHeightTotal;
-}
 //scroll handler
 $('a[href*=#]:not([href=#])').on('click', function(){
   if(location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -48,7 +67,7 @@ $('a[href*=#]:not([href=#])').on('click', function(){
     var scPosition = pageTopTarget.offset();
     if(pageTopTarget.length) {
       $('html,body').animate({
-        scrollTop: scPosition.top - pageTopRemoveVal
+        scrollTop: scPosition.top - fixContentsRemoveVal
       }, 1000);
       return false;
     }
@@ -59,22 +78,6 @@ $('#js-pageTop').on('click', function(){
     scrollTop: 0
   }, 1000);
 })
-/*========================================================================
-  [return] return targetClass
-======================================================================== */
-var clickThis, returnClass, targetClass, thisClass;
-function thisClassGet(clickThis, returnClass){
-  //get class
-  thisClass = $(clickThis).attr('class');
-  //split class　
-  thisClass = thisClass.split(" ");
-  //return class
-  thisClass = $.grep(thisClass, function(value, index) {
-    return value.indexOf(returnClass) >= 0;
-  });
-  targetClass = '.' + thisClass;
-  return targetClass;
-}
 /*========================================================================
   equalizer
 ======================================================================== */
@@ -264,7 +267,8 @@ function toolTipOff(toolTipFlg){
         $(this).removeClass('is-show');
         tipBody.css({
           top: 0,
-          left: 0
+          left: 0,
+          marginTop:''
         });
       })
       toolTipHiretsu = [];
@@ -294,7 +298,8 @@ function toolTipOn(target){
   }
   tipBody.css({
     top: topPosi - tipHeight - 7,
-    left: leftPosi
+    left: leftPosi,
+    marginTop:-fixContentsRemoveVal + 'px'
   });
   tip.addClass('is-show');
 };
@@ -308,12 +313,12 @@ var popupTriggerRemove = '.js-popup-open, .js-popup, .js-bookmark-open';
 var popupWrap = '.js-popup';
 var popupArrow = '.js-popup-arrow';
 var popupActive = 'is-on';
-var popupPosiFIx = 'js-posi-fix';
+var popupPosiFIx = 'is-fixed';
 var popupShowSpeed = 0;
 var popupLowMargin = 7;
 var popupArrowEdgeLimit = 20;
 var thisSelector, windowWidth, popupPosi, topPosi, triggerWidth,leftPosi;
-var popupLeftDiff, popupArrowPosi, posiType, popupWidth, totalLeftPosi;
+var popupLeftDiff, popupArrowPosi, popupWidth, totalLeftPosi, positionType;
 
 $(popupTrigger).on('click', function(){
   thisSelector = $(this);
@@ -325,6 +330,7 @@ $(popupTrigger).on('click', function(){
     $(popupTrigger + '.' + popupActive).removeClass(popupActive);
     thisSelector.addClass(popupActive);
     returnClass = 'js-tpl';
+    positionType = thisSelector.hasClass(popupPosiFIx);
     popupHandler.popupPosi(thisSelector, returnClass);
   }
 });
@@ -377,18 +383,17 @@ var popupHandler = {
     if( popupArrowPosi < popupArrowEdgeLimit){
       popupArrowPosi = popupArrowEdgeLimit;
     }
-    //position fix
-    posiType = $(popupWrap + ' ' + targetClass).hasClass(popupPosiFIx);
 
-    if(posiType){
+    if(positionType){
       topPosi = topPosi - $(window).scrollTop();
       leftPosi = leftPosi + $(window).scrollLeft();
       //position
       $(popupWrap + ' ' + targetClass).css({
         position:'',
-        top:'',
+        top:' ',
         left:'',
-        right:''
+        right:'',
+        marginTop:''
       }).css({
         position:'fixed',
         top: topPosi,
@@ -402,12 +407,14 @@ var popupHandler = {
         position:'',
         top:'',
         left:'',
-        right:''
+        right:'',
+        marginTop:''
       }).css({
         top: topPosi,
         bottom: 'auto',
         right: 'auto',
-        left: leftPosi
+        left: leftPosi,
+        marginTop:-fixContentsRemoveVal + 'px'
       });
     }
     //arrow
@@ -442,21 +449,22 @@ $(popupCloseTrigger).on('click', function(){
 /*========================================================================
   bookmark
 ======================================================================== */
-var bookmartFlg = 0;
-$('.js-bookmark-open').on('click', function(){
-  var bookmarkIcon = $(this).children('i');
-  bookmartFlg++;
-  if(bookmartFlg === 1){
-    bookmarkIcon.removeClass('fa-star-o').addClass('fa-star');
-  }
-  if(bookmartFlg === 2){
-    bookmarkIcon.removeClass('fa-star').addClass('fa-star-o');
-
-    var thisSelector = $(this);
+var bookmarkOpen = $('.js-bookmark-open')
+var bookmarkDelete = $('.js-bookmark-delete')
+var bookmarkIcon, thisSelector;
+bookmarkOpen.on('click', function(){
+  bookmarkIcon = $(this).children('i');
+  thisSelector = $(this);
+  if(thisSelector.hasClass(popupActive)){
     returnClass = 'js-tpl';
-    bookmartFlg = 0;
     popupHandler.popupPosi(thisSelector, returnClass);
   }
+  bookmarkIcon.removeClass('fa-star-o').addClass('fa-star');
+  thisSelector.addClass(popupActive);
+  bookmarkDelete.on('click', function(){
+    bookmarkIcon.removeClass('fa-star').addClass('fa-star-o');
+    thisSelector.removeClass(popupActive);
+  });
 });
 /*========================================================================
   modal 
@@ -644,7 +652,7 @@ var tabWrap = $('.js-tab-scroll');
 var tabFirstContact = tabWrap.length;
 var tabSelect = $('.js-tab-scroll-select');
 var tabMoveView = $('.js-tab-scroll-select > li:visible');
-var tabDisable = 'is-disable';
+var tabDisable = 'is-disabled';
 var tabScrollLeft = $('.js-tab-arrow-right');
 var tabArrowLeft = $('.js-tab-arrow-right');
 var tabScrollRight = $('.js-tab-arrow-left');
@@ -950,11 +958,18 @@ $('.js-nav-block a').on('click', function(){
 /*========================================================================
   pagination
 ======================================================================== */
-$('.js-pagination li a').on('click', function(){
-  var notouchClass = $(this).parents('li').hasClass('js-notouch');
+var pagenation = '.js-pagination';
+var pagenationList = pagenation + ' li';
+var notouchClass, parentList, listNum;
+$(pagenationList + ' a').on('click', function(){
+  notouchClass = $(this).parents('li').hasClass('js-notouch');
   if(!notouchClass){
-    $('.js-pagination li').removeClass('is-current');
-    $(this).parent('li').addClass('is-current');
+    $(pagenationList).removeClass('is-current');
+    parentList = $(this).parent('li');
+    listNum = parentList.index();
+    $(pagenation).each(function(){
+      $(this).find('li').eq(listNum).addClass('is-current');
+    });
   }
 });
 /*========================================================================
@@ -978,7 +993,6 @@ if(promoFooter.length){
     winHeight = $(window).outerHeight();
     noWheight = docHeight - winHeight;
     bottomPosition =  noWheight - $(window).scrollTop();
-    console.log(docHeight, winHeight)
     if(pageFooterPosi.length){
       bottomLimit = footerPosi();
       drowPromoPosiFooter()
@@ -1045,6 +1059,44 @@ removerTrigger.on('click', function(){
     thisParent.find('.is-remove').hide(removeSpeed);
   }
 });
+/*========================================================================
+  number counter
+======================================================================== */
+var numCounter = $('.js-numCounter');
+if(numCounter.length){
+  var numCounterStart = 0;
+  var numCounterSpeed = 2000;
+  numCounterRun();
+}
+function numCounterRun(){
+  numCounter.each(function(){
+    var numCounterEnd = $(this).text();
+    if( numCounterStart < numCounterEnd){
+      $(this).animate({count: numCounterEnd}, {
+        duration: numCounterSpeed,
+        easing: 'linear',
+        progress: function() { 
+          $(this).text(Math.ceil(this.count)); 
+        },
+        queue: false
+      });
+    }
+  });
+}
+/*========================================================================
+  state current
+======================================================================== */
+var stateCurrent = $('.js-state-current');
+var isCurrentTrigger = $('.js-state-current > a');
+var isCurrent = 'is-current';
+var thisParent;
+if(stateCurrent.length){
+  $(isCurrentTrigger).on('click', function(){
+    thisParent = $(this).parent(stateCurrent);
+    thisParent.find('.' + isCurrent).removeClass(isCurrent);
+    $(this).addClass(isCurrent);
+  })
+}
 /*========================================================================
   mediaquery aside
 ======================================================================== */

@@ -57,7 +57,7 @@
                       %span.cp-badge.ef-cp-red
                         53
               %li
-                %a.js-popup-open.js-tpl1(href="#{v}")
+                %a.js-popup-open.is-fixed.js-tpl1(href="#{v}")
                   %ul.ef-float3
                     %li
                       %i.fa.fa-envelope
@@ -69,10 +69,10 @@
                     %li
                       %i.fa.fa-caret-down
               %li
-                %a.js-popup-open.js-tpl0(href="#{v}")
+                %a.js-popup-open.is-fixed.js-tpl0(href="#{v}")
                   %ul.ef-float3
                     %li
-                      %img.prof(src="img/myprof.png")
+                      %img.prof(src="img/myprof.png" alt="profile")
                     %li
                       Your name
                     %li
@@ -93,7 +93,7 @@
                       %span.cp-badge.ef-cp-red
                         53
               %li
-                %a.js-popup-open.js-tpl1(href="#{v}")
+                %a.js-popup-open.is-fixed.js-tpl1(href="#{v}")
                   %ul.ef-float3
                     %li
                       %i.fa.fa-envelope.ef-fs18
@@ -103,7 +103,7 @@
                       %span.cp-badge.ef-cp-red
                         2
               %li
-                %a.js-popup-open.js-tpl0(href="#{v}")
+                %a.js-popup-open.is-fixed.js-tpl0(href="#{v}")
                   %ul.ef-float3
                     %li
                       %img.prof(src="img/myprof.png")
@@ -137,7 +137,7 @@
                     %span.cp-badge.ef-cp-red
                       53
             %li
-              %a.js-popup-open.js-tpl1(href="#{v}")
+              %a.js-popup-open.is-fixed.js-tpl1(href="#{v}")
                 %ul.ef-float3
                   %li
                     Message
@@ -147,7 +147,7 @@
                   %li.js-ic-arrow
                     %i.fa.fa-caret-down
             %li
-              %a.js-popup-open.js-tpl0(href="#{v}")
+              %a.js-popup-open.is-fixed.js-tpl0(href="#{v}")
                 %ul.ef-float3
                   %li
                     Your name
@@ -514,6 +514,16 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   remover
+                          %li
+                            %a(href="page-module/current.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  current
+                          %li
+                            %a(href="page-module/number-counter.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  number-counter
                       %li
                         .ef-fs11.ef-op05
                           State
@@ -538,7 +548,7 @@
                                 %li.ef-mgl3
                                   text
           // page-main//////////////////////////////////////////////
-          %main.page-contents(role="main")
+          .page-contents
             .st-body.js-page-contents
               .st-inner
                 // page title//////////////////////////////////////////////
@@ -602,12 +612,12 @@
                                   %a.cp-btn-large.ef-cp-green(href="https://github.com/plain-web/fivee-base" target="_blank")
                                     Download Zip
                                     %small
-                                      (ver.1.4.0 )
+                                      (ver.1.5.0 )
                               %li
                                 %section.ef-mgb20
                                   zipを解凍したらindex.htmlを参考に、あなたがこれから作成するサイトやアプリケーションに必要なファイルを読み込ませてください。
                                   %span.js-tooltip-hover
-                                    .md-tooltip-key.js-tooltip-key
+                                    %span.md-tooltip-key.js-tooltip-key
                                       ファイルパスがbower_componentsから始まるファイルはbowerを使って必要なファイルをまとめています。これは必ず必要なツールではありません。例えばjqueryは任意のフォルダに置いて読み込んでも問題はありません。
                                     %a(href="#{v}")
                                       %i.fa.fa-question-circle
@@ -634,7 +644,7 @@
                                             fivee-base.min.css
                                           (fivee-baseのCSSファイル圧縮版)
                                           %span.js-tooltip-hover
-                                            .md-tooltip-key.js-tooltip-key
+                                            %span.md-tooltip-key.js-tooltip-key
                                               minファイル（圧縮ファイル）の内容を見るには同フォルダの.cssファイルをご覧ください。
                                             %a(href="#{v}")
                                               %i.fa.fa-question-circle
@@ -644,7 +654,7 @@
                                             unique.min.css
                                           (あなたのページに必要な指定を記述するファイル)
                                           %span.js-tooltip-hover
-                                            .md-tooltip-key.js-tooltip-key
+                                            %span.md-tooltip-key.js-tooltip-key
                                               このファイルはGulpを使って圧縮しています。圧縮を必要としない場合は同フォルダの.cssファイル内に必要な指定を追加して読み込んでください。このファイルには本ページに必要なレイアウトの指定が記載されています。必要なければ削除してください。
                                             %a(href="#{v}")
                                               %i.fa.fa-question-circle
@@ -654,7 +664,7 @@
                                             old-ie.min.css
                                           (ie10以下で読み込むクロスブラウザ用CSSファイル)
                                           %span.js-tooltip-hover
-                                            .md-tooltip-key.js-tooltip-key
+                                            %span.md-tooltip-key.js-tooltip-key
                                               本ページのheadタグ直前のコンディショナルコメントの記載をコピーした場合「ie8,ie9,oldie」のクラスが、それぞれのブラウザに対して有効になります。
                                             %a(href="#{v}")
                                               %i.fa.fa-question-circle
@@ -693,7 +703,7 @@
                                             bower.json
                                           (bower用のjsonファイル)
                                           %span.js-tooltip-hover
-                                            .md-tooltip-key.js-tooltip-key
+                                            %span.md-tooltip-key.js-tooltip-key
                                               bowerを使わない場合削除してください。
                                             %a(href="#{v}")
                                               %i.fa.fa-question-circle
@@ -703,7 +713,7 @@
                                             package.json
                                           (gulpのプラグイン等の記載があるjsonファイル)
                                           %span.js-tooltip-hover
-                                            .md-tooltip-key.js-tooltip-key
+                                            %span.md-tooltip-key.js-tooltip-key
                                               gulpを使わない場合削除してください。
                                             %a(href="#{v}")
                                               %i.fa.fa-question-circle
@@ -713,7 +723,7 @@
                                             gulpfile.js
                                           (gulpの設定ファイル)
                                           %span.js-tooltip-hover
-                                            .md-tooltip-key.js-tooltip-key
+                                            %span.md-tooltip-key.js-tooltip-key
                                               gulpを使わない場合削除してください。
                                             %a(href="#{v}")
                                               %i.fa.fa-question-circle
@@ -723,7 +733,7 @@
                                             gitignore
                                           (github用のファイル：無視リスト)
                                           %span.js-tooltip-hover
-                                            .md-tooltip-key.js-tooltip-key
+                                            %span.md-tooltip-key.js-tooltip-key
                                               githubを使わない場合削除してください。
                                             %a(href="#{v}")
                                               %i.fa.fa-question-circle
@@ -733,7 +743,7 @@
                                             LICENSE
                                           (github用のファイル：ライセンス)
                                           %span.js-tooltip-hover
-                                            .md-tooltip-key.js-tooltip-key
+                                            %span.md-tooltip-key.js-tooltip-key
                                               githubを使わない場合削除してください。
                                             %a(href="#{v}")
                                               %i.fa.fa-question-circle
@@ -743,7 +753,7 @@
                                             README.md
                                           (github用のファイル：説明文)
                                           %span.js-tooltip-hover
-                                            .md-tooltip-key.js-tooltip-key
+                                            %span.md-tooltip-key.js-tooltip-key
                                               githubを使わない場合削除してください。
                                             %a(href="#{v}")
                                               %i.fa.fa-question-circle
@@ -753,7 +763,7 @@
                                             haml
                                           (hamlファイル)
                                           %span.js-tooltip-hover
-                                            .md-tooltip-key.js-tooltip-key
+                                            %span.md-tooltip-key.js-tooltip-key
                                               hamlを使わない場合削除してください。
                                             %a(href="#{v}")
                                               %i.fa.fa-question-circle
@@ -763,7 +773,7 @@
                                             sass
                                           (sassファイルが入っているフォルダー)
                                           %span.js-tooltip-hover
-                                            .md-tooltip-key.js-tooltip-key
+                                            %span.md-tooltip-key.js-tooltip-key
                                               sassを使わない場合削除してください。
                                             %a(href="#{v}")
                                               %i.fa.fa-question-circle
@@ -983,7 +993,7 @@
     /popup/////////////////////////////////////////////
     %section.md-popup.js-popup(style="display:none;")
       /popup contents type 'js-tpl0'
-      .st-body.js-posi-fix.js-tpl0
+      .st-body.js-tpl0
         .st-inner.ef-w120.ef-sdw02
           .md-popup-arrow.js-popup-arrow
           .md-popup-arrow-back.js-popup-arrow
@@ -999,7 +1009,7 @@
                 %a(href="#{v}")
                   ログアウト
       /popup contents type 'js-tpl1'
-      .st-body.js-posi-fix.js-tpl1
+      .st-body.js-tpl1
         .st-inner.ef-sdw02
           .md-popup-arrow.js-popup-arrow
           .md-popup-arrow-back.js-popup-arrow
@@ -1037,7 +1047,7 @@
                     %dd.ef-txt-ellipsis
                       システム予約は15：00にセットされました。
       /popup contents type 'js-tpl2'
-      .st-body.ef-mgt-40.js-tpl2
+      .st-body.js-tpl2
         .st-inner.ef-sdw02
           .md-popup-arrow.js-popup-arrow
           .md-popup-arrow-back.js-popup-arrow
@@ -1062,16 +1072,16 @@
                 %a(href="#js-pageTop5")
                   導入サポート
       /popup contents type 'js-tpl3'
-      .st-body.ef-mgt-40.js-tpl3
+      .st-body.js-tpl3
         .st-inner.ef-sdw02
           .md-popup-arrow.js-popup-arrow
           .md-popup-arrow-back.js-popup-arrow
-          .md-popup-header.ef-mgb20
+          .md-popup-header.ef-mgb10
             %ul.ef-float
               %li
                 %h6
                   Bookmark
-          .md-popup-body
+          .md-popup-body.ef-pd10.ef-mgb10
             %section.ef-mgb10
               %ul.ef-float7.ef-lh30
                 %li.ef-w50.ef-txt-right
@@ -1086,17 +1096,15 @@
                   %select.cp-input
                     %option
                       folder
-          .md-popup-footer
-            .ef-txt-center.ef-pdt30.ef-txt-nowrap
-              %a.cp-btn-mini.ef-w80.js-popup-close(href="#{v}")
-                削除
-              %a.cp-btn-mini.ef-w80.js-popup-close(href="#{v}")
-                登録
-              %a.cp-btn-mini.ef-w80.js-popup-close(href="#{v}")
-                キャンセル
+          .md-popup-footer.ef-pdb7
+            .ef-txt-center
+              %a.cp-btn.ef-cp-red.ef-w70.js-popup-close.js-bookmark-delete(href="#{v}")
+                Delete
+              %a.cp-btn.ef-w70.js-popup-close(href="#{v}")
+                Edit
     /tooltip/////////////////////////////////////////////
     %section.md-tooltip.js-tooltip(style="display:none;")
-      .st-body.ef-mgt-40.ef-mxw300
+      .st-body.ef-mxw300
         .st-inner
           %section.md-tooltip-wrap.js-tooltip-wrap
           %section.md-balloon.js-balloon

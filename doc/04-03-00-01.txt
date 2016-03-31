@@ -1,7 +1,7 @@
 ﻿<!-- popup///////////////////////////////////////////// -->
 <section class="md-popup js-popup" style="display:none;">
   <!-- popup contents type 'js-tpl0' -->
-  <div class="st-body js-posi-fix js-tpl0">
+  <div class="st-body js-tpl0">
     <div class="st-inner ef-w120 ef-sdw02">
       <div class="md-popup-arrow js-popup-arrow"></div>
       <div class="md-popup-arrow-back js-popup-arrow"></div>
@@ -27,7 +27,7 @@
     </div>
   </div>
   <!-- popup contents type 'js-tpl1' -->
-  <div class="st-body js-posi-fix js-tpl1">
+  <div class="st-body js-tpl1">
     <div class="st-inner ef-sdw02">
       <div class="md-popup-arrow js-popup-arrow"></div>
       <div class="md-popup-arrow-back js-popup-arrow"></div>
@@ -89,7 +89,7 @@
     </div>
   </div>
   <!-- popup contents type 'js-tpl2' -->
-  <div class="st-body ef-mgt-40 js-tpl2">
+  <div class="st-body js-tpl2">
     <div class="st-inner ef-sdw02">
       <div class="md-popup-arrow js-popup-arrow"></div>
       <div class="md-popup-arrow-back js-popup-arrow"></div>
@@ -105,11 +105,11 @@
     </div>
   </div>
   <!-- popup contents type 'js-tpl3' -->
-  <div class="st-body ef-mgt-40 js-tpl3">
+  <div class="st-body js-tpl3">
     <div class="st-inner ef-sdw02">
       <div class="md-popup-arrow js-popup-arrow"></div>
       <div class="md-popup-arrow-back js-popup-arrow"></div>
-      <div class="md-popup-header ef-mgb20">
+      <div class="md-popup-header ef-mgb10">
         <ul class="ef-float">
           <li>
             <h6>
@@ -118,7 +118,7 @@
           </li>
         </ul>
       </div>
-      <div class="md-popup-body">
+      <div class="md-popup-body ef-pd10 ef-mgb10">
         <section class="ef-mgb10">
           <ul class="ef-float7 ef-lh30">
             <li class="ef-w50 ef-txt-right">
@@ -143,18 +143,14 @@
             </li>
           </ul>
         </section>
-        <section></section>
       </div>
-      <div class="md-popup-footer">
-        <div class="ef-txt-center ef-pdt30 ef-txt-nowrap">
-          <a class="cp-btn-mini ef-w80 js-popup-close" href="javascript:void(0);">
-            削除
+      <div class="md-popup-footer ef-pdb7">
+        <div class="ef-txt-center">
+          <a class="cp-btn ef-cp-red ef-w70 js-popup-close js-bookmark-delete" href="javascript:void(0);">
+            Delete
           </a>
-          <a class="cp-btn-mini ef-w80 js-popup-close" href="javascript:void(0);">
-            登録
-          </a>
-          <a class="cp-btn-mini ef-w80 js-popup-close" href="javascript:void(0);">
-            キャンセル
+          <a class="cp-btn ef-w70 js-popup-close" href="javascript:void(0);">
+            Edit
           </a>
         </div>
       </div>

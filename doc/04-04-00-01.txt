@@ -1,6 +1,6 @@
 ﻿<!-- tooltip///////////////////////////////////////////// -->
 <section class="md-tooltip js-tooltip" style="display:none;">
-  <div class="st-body ef-mgt-40 ef-w170">
+  <div class="st-body ef-mxw170">
     <div class="st-inner">
       <section class="md-tooltip-wrap js-tooltip-wrap"></section>
       <section class="md-balloon js-balloon">

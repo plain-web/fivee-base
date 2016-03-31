@@ -4,7 +4,7 @@
     <div class="st-inner">
       <!-- / arrow /////////////////////////// -->
       <div class="md-tab-btn-left">
-        <ul class="js-tab-arrow-left is-disable">
+        <ul class="js-tab-arrow-left is-disabled">
           <li class="md-notab">
             <a href="javascript:void(0);">
               <i class="fa fa-caret-left"></i>
@@ -68,7 +68,7 @@
       </div>
       <!-- / arrow /////////////////////////// -->
       <div class="md-tab-btn-right">
-        <ul class="js-tab-arrow-right is-disable">
+        <ul class="js-tab-arrow-right is-disabled">
           <li class="md-notab">
             <a href="javascript:void(0);">
               <i class="fa fa-caret-right"></i>

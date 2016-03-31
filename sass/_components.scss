@@ -76,83 +76,56 @@ ol{
 }
 .cp-list-hover.ef-cp-white{
   >li{
-    a{
-      &:hover{
-        background:$cl-bg-white;
-      }
-    }
+    a{&:hover{background:$cl-bg-white;}}
+    &.is-current{a{background:$cl-bg-white;}}
   }
 }
 .cp-list-hover.ef-cp-red{
   >li{
-    a{
-      &:hover{
-        background:$cl-bg-red;
-      }
-    }
+    a{&:hover{background:$cl-bg-red;}}
+    &.is-current{a{background:$cl-bg-red;}}
   }
 }
 .cp-list-hover.ef-cp-orange{
   >li{
-    a{
-      &:hover{
-        background:$cl-bg-orange;
-      }
-    }
+    a{&:hover{background:$cl-bg-orange;}}
+    &.is-current{a{background:$cl-bg-orange;}}
   }
 }
 .cp-list-hover.ef-cp-blue{
   >li{
-    a{
-      &:hover{
-        background:$cl-bg-blue;
-      }
-    }
+    a{&:hover{background:$cl-bg-blue;}}
+    &.is-current{a{background:$cl-bg-blue;}}
   }
 }
 .cp-list-hover.ef-cp-green{
   >li{
-    a{
-      &:hover{
-        background:$cl-bg-green;
-      }
-    }
+    a{&:hover{background:$cl-bg-green;}}
+    &.is-current{a{background:$cl-bg-green;}}
   }
 }
 .cp-list-hover.ef-cp-yellow{
   >li{
-    a{
-      &:hover{
-        background:$cl-bg-yellow;
-      }
-    }
+    a{&:hover{background:$cl-bg-yellow;}}
+    &.is-current{a{background:$cl-bg-yellow;}}
   }
 }
 .cp-list-hover.ef-cp-brown{
   >li{
-    a{
-      &:hover{
-        background:$cl-bg-brown;
-      }
-    }
+    a{&:hover{background:$cl-bg-brown;}}
+    &.is-current{a{background:$cl-bg-brown;}}
   }
 }
 .cp-list-hover.ef-cp-gray{
   >li{
-    a{
-      &:hover{
-        background:$cl-bg-gray;
-      }
-    }
+    a{&:hover{background:$cl-bg-gray;}}
+    &.is-current{a{background:$cl-bg-gray;}}
   }
 }
 .cp-list-hover.ef-cp-theme{
   >li{
-    a{
-      &:hover{
-        background:$cl-bg-theme;
-      }
-    }
+    a{&:hover{background:$cl-bg-theme;}}
+    &.is-current{a{background:$cl-bg-theme;}}
   }
 }
 /*
@@ -503,7 +476,8 @@ input[type="checkbox"]{margin:6px 0;}
   @include border-radius(3px 3px);
   @include gradation($cl-btn-lighten, $cl-btn);
   //@include gradation-ie(#ffffffff, #ffeeeeee); // for oldie
-  &:hover{
+  &:hover,
+  &.is-current{
     text-decoration:none;
     color:$cl-txt;
     i{color:$cl-txt;}
@@ -514,7 +488,7 @@ input[type="checkbox"]{margin:6px 0;}
     background:$cl-btn-active;
     @include gradation($cl-btn-active, $cl-btn-active);
   }
-  &.is-disable{
+  &.is-disabled{
     &:hover{
       @include gradation($cl-btn-lighten, $cl-btn);
     }
@@ -522,7 +496,8 @@ input[type="checkbox"]{margin:6px 0;}
   &.ef-response{
     background:none;
     @include brd(1px,solid,transparent);
-    &:hover{
+    &:hover,
+    &.is-current{
       text-decoration:none;
       color:$cl-txt;
       i{color:$cl-txt;}
@@ -536,7 +511,7 @@ input[type="checkbox"]{margin:6px 0;}
       @include brd(1px,solid,$cl-btn-border);
       @include gradation($cl-btn-active, $cl-btn-active);
     }
-    &.is-disable{
+    &.is-disabled{
       &:hover{
         background:none;
         border:0;
@@ -549,9 +524,10 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt;
   i{color:$cl-txt;}
   background:$cl-btn-white; // for oldie
-  @include brd(1px,solid,$cl-btn-white-border);
+  border-color:$cl-btn-white-border;
   @include gradation($cl-btn-white-lighten, $cl-btn-white);
-  &:hover{
+  &:hover,
+  &.is-current{
     color:$cl-txt;
     i{color:$cl-txt;}
     background:$cl-btn-white-hover; // for oldie
@@ -561,7 +537,7 @@ input[type="checkbox"]{margin:6px 0;}
     background:$cl-btn-white;
     @include gradation($cl-btn-white-active, $cl-btn-white-active);
   }
-  &.is-disable{
+  &.is-disabled{
     &:hover{
       @include gradation($cl-btn-white-lighten, $cl-btn-white);
     }
@@ -572,9 +548,10 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-red; // for oldie
-  @include brd(1px,solid,$cl-btn-red-border);
+  border-color:$cl-btn-red-border;
   @include gradation($cl-btn-red-lighten, $cl-btn-red);
-  &:hover{
+  &:hover,
+  &.is-current{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     background:$cl-btn-red-hover; // for oldie
@@ -584,7 +561,7 @@ input[type="checkbox"]{margin:6px 0;}
     background:$cl-btn-red-active; // for oldie
     @include gradation($cl-btn-red-active, $cl-btn-red-active);
   }
-  &.is-disable{
+  &.is-disabled{
     &:hover{
       @include gradation($cl-btn-red-lighten, $cl-btn-red);
     }
@@ -595,9 +572,10 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-orange; // for oldie
-  @include brd(1px,solid,$cl-btn-orange-border);
+  border-color:$cl-btn-orange-border;
   @include gradation($cl-btn-orange-lighten, $cl-btn-orange);
-  &:hover{
+  &:hover,
+  &.is-current{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     background:$cl-btn-orange-hover; // for oldie
@@ -607,7 +585,7 @@ input[type="checkbox"]{margin:6px 0;}
     background:$cl-btn-orange-active; // for oldie
     @include gradation($cl-btn-orange-active, $cl-btn-orange-active);
   }
-  &.is-disable{
+  &.is-disabled{
     &:hover{
       @include gradation($cl-btn-orange-lighten, $cl-btn-orange);
     }
@@ -618,9 +596,10 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-blue; // for oldie
-  @include brd(1px,solid,$cl-btn-blue-border);
+  border-color:$cl-btn-blue-border;
   @include gradation($cl-btn-blue-lighten, $cl-btn-blue);
-  &:hover{
+  &:hover,
+  &.is-current{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     background:$cl-btn-blue-hover; // for oldie
@@ -630,7 +609,7 @@ input[type="checkbox"]{margin:6px 0;}
     background:$cl-btn-blue-active; // for oldie
     @include gradation($cl-btn-blue-active, $cl-btn-blue-active);
   }
-  &.is-disable{
+  &.is-disabled{
     &:hover{
       @include gradation($cl-btn-blue-lighten, $cl-btn-blue);
     }
@@ -641,9 +620,10 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-green; // for oldie
-  @include brd(1px,solid,$cl-btn-green-border);
+  border-color:$cl-btn-green-border;
   @include gradation($cl-btn-green-lighten, $cl-btn-green);
-  &:hover{
+  &:hover,
+  &.is-current{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     background:$cl-btn-green-hover; // for oldie
@@ -653,7 +633,7 @@ input[type="checkbox"]{margin:6px 0;}
     background:$cl-btn-green-active; // for oldie
     @include gradation($cl-btn-green-active, $cl-btn-green-active);
   }
-  &.is-disable{
+  &.is-disabled{
     &:hover{
       @include gradation($cl-btn-green-lighten, $cl-btn-green);
     }
@@ -664,9 +644,10 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt;
   i{color:$cl-txt;}
   background:$cl-btn-yellow; // for oldie
-  @include brd(1px,solid,$cl-btn-yellow-border);
+  border-color:$cl-btn-yellow-border;
   @include gradation($cl-btn-yellow-lighten, $cl-btn-yellow);
-  &:hover{
+  &:hover,
+  &.is-current{
     color:$cl-txt;
     i{color:$cl-txt;}
     background:$cl-btn-yellow-hover; // for oldie
@@ -676,7 +657,7 @@ input[type="checkbox"]{margin:6px 0;}
     background:$cl-btn-yellow-active; // for oldie
     @include gradation($cl-btn-yellow-active, $cl-btn-yellow-active);
   }
-  &.is-disable{
+  &.is-disabled{
     &:hover{
       @include gradation($cl-btn-yellow-lighten, $cl-btn-yellow);
     }
@@ -687,9 +668,10 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-brown; // for oldie
-  @include brd(1px,solid,$cl-btn-brown-border);
+  border-color:$cl-btn-brown-border;
   @include gradation($cl-btn-brown-lighten, $cl-btn-brown);
-  &:hover{
+  &:hover,
+  &.is-current{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     background:$cl-btn-brown-hover; // for oldie
@@ -699,7 +681,7 @@ input[type="checkbox"]{margin:6px 0;}
     background:$cl-btn-brown-active; // for oldie
     @include gradation($cl-btn-brown-active, $cl-btn-brown-active);
   }
-  &.is-disable{
+  &.is-disabled{
     &:hover{
       @include gradation($cl-btn-brown-lighten, $cl-btn-brown);
     }
@@ -710,9 +692,10 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-gray; // for oldie
-  @include brd(1px,solid,$cl-btn-gray-border);
+  border-color:$cl-btn-gray-border;
   @include gradation($cl-btn-gray-lighten, $cl-btn-gray);
-  &:hover{
+  &:hover,
+  &.is-current{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     background:$cl-btn-gray-hover; // for oldie
@@ -722,7 +705,7 @@ input[type="checkbox"]{margin:6px 0;}
     background:$cl-btn-gray-active; // for oldie
     @include gradation($cl-btn-gray-active, $cl-btn-gray-active);
   }
-  &.is-disable{
+  &.is-disabled{
     &:hover{
       @include gradation($cl-btn-gray-lighten, $cl-btn-gray);
     }
@@ -733,9 +716,10 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-theme; // for oldie
-  @include brd(1px,solid,$cl-btn-theme-border);
+  border-color:$cl-btn-theme-border;
   @include gradation($cl-btn-theme-lighten, $cl-btn-theme);
-  &:hover{
+  &:hover,
+  &.is-current{
     color:$cl-txt-rev;
     i{color:$cl-txt-rev;}
     background:$cl-btn-theme-hover; // for oldie
@@ -745,7 +729,7 @@ input[type="checkbox"]{margin:6px 0;}
     background:$cl-btn-theme-active; // for oldie
     @include gradation($cl-btn-theme-active, $cl-btn-theme-active);
   }
-  &.is-disable{
+  &.is-disabled{
     &:hover{
       @include gradation($cl-btn-theme-lighten, $cl-btn-theme);
     }
@@ -763,6 +747,10 @@ input[type="checkbox"]{margin:6px 0;}
   @extend .cp-btn;
   font-size:$fs-h6;
   padding:7px 25px;
+}
+.cp-btn-row{
+  display:table;
+  a{display:table-cell;}
 }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -917,7 +905,7 @@ a.cp-badge{
     @include opacity(0.5);
     text-decoration: none;
   }
-  &.is-disable{
+  &.is-disabled{
     &:hover{@include opacity(0.5);}
   }
 }
@@ -1026,7 +1014,7 @@ a.cp-tag{
     @include opacity(0.5);
     text-decoration: none;
   }
-  &.is-disable{
+  &.is-disabled{
     &:hover{@include opacity(0.5);}
   }
 }

@@ -3,7 +3,7 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
  * Fivee-base
- * ver.1.4.0 / 2016.3.24
+ * ver.1.5.0 / 2016.3.31
  * http://plain-web.com/fivee-base/apps/
  * Released under MIT license. Copyright 2016 Yusuke Maruyama.
  *
@@ -23,7 +23,7 @@
     background:$cl-bg-header;
     &.ef-posi-fix{
       @include posi-fix(0,0,auto,0);
-      z-index:3;
+      z-index:5;
     }
     .st-inner{
       padding:0 10px;

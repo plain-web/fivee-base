@@ -1,0 +1,14 @@
+﻿<section class="cp-btn-row js-state-current">
+  <a class="cp-btn ef-cp-brown ef-brdr0 ef-rdr0 is-current" href="javascript:void(0);">
+    btn
+  </a>
+  <a class="cp-btn ef-cp-brown ef-brdr0 ef-rd0" href="javascript:void(0);">
+    btn
+  </a>
+  <a class="cp-btn ef-cp-brown ef-rd0" href="javascript:void(0);">
+    btn
+  </a>
+  <a class="cp-btn ef-cp-brown ef-brdl0 ef-rdl0" href="javascript:void(0);">
+    btn
+  </a>
+</section>
