@@ -7,7 +7,7 @@
 // ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 // "variables"
 // ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-//app body size
+//default body size
 $app-minWidth: auto;
 $app-minHeight: auto;
 $app-maxWidth: auto;
@@ -26,11 +26,23 @@ $breakpoint1-2-max: $breakpoint1-2-min - 1;
 $breakpoint2-3-max: $breakpoint2-3-min - 1;
 $breakpoint3-4-max: $breakpoint3-4-min - 1;
 
-//app font family
+// theme color
+$cl-theme: #485169;
+$cl-theme1: #555;
+$cl-theme2: #111;
+
+$cl-theme-darken: darken( $cl-theme, 5% );
+$cl-theme-lighten: lighten( $cl-theme, 5% );
+$cl-theme1-darken: darken( $cl-theme1, 5% );
+$cl-theme1-lighten: lighten( $cl-theme1, 5% );
+$cl-theme2-darken: darken( $cl-theme2, 25% );
+$cl-theme2-lighten: lighten( $cl-theme2, 3% );
+
+//default font family
 $ff-base: Meiryo,メイリオ,Arial,Verdana,"Helvetica Neue",Helvetica,sans-serif;
 
 //font size
-$fs:13px;
+$fs:13px; //default font size
 $fs-small:11px;
 $fs-midium:12px;
 $fs-large:14px;
@@ -43,22 +55,14 @@ $fs-h1:24px;
 
 //line height
 $lh-reset:1.0;
-$lh:1.6;
-$lh-form:30px;
+$lh:1.6; //default line height
 $lh-table:$lh;
 $lh-btn:20px;
 $lh-btn-mini:16px;
 $lh-txt:$lh;
 
-// theme color
-$cl-theme: #485169;
-$cl-theme1: #555;
-$cl-theme2: #111;
-
-$cl-theme-darken: darken( $cl-theme, 5% );
-$cl-theme-lighten: lighten( $cl-theme, 5% );
-$cl-theme1-darken: darken( $cl-theme1, 5% );
-$cl-theme1-lighten: lighten( $cl-theme1, 5% );
+//default form height
+$form-height:33px;
 
 //body background color
 $cl-bg-body: #f6f6f6;
@@ -113,6 +117,9 @@ $cl-brd-yellow:$cl-yellow;
 $cl-brd-brown:$cl-brown;
 $cl-brd-gray:$cl-gray;
 $cl-brd-theme: $cl-theme;
+
+//hover speed(img)
+$speed-hover:0s;
 
 
 //focus color

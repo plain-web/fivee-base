@@ -28,10 +28,10 @@ a{
     text-decoration:underline;
     color: $cl-txt-hover;
     //@include opacity(0.8);
-    @include transition(all 0.3s ease-in-out);
+    @include transition(all $speed-hover ease-in-out);
     img{
      @include opacity(0.8);
-     @include transition(all 0.3s ease-in-out);
+     @include transition(all $speed-hover ease-in-out);
     }
   }
 }
@@ -60,6 +60,12 @@ ol{
   >li{
     list-style-type:decimal;
     margin-left:28px;
+  }
+}
+.cp-list-dotted{
+  >li{
+    padding-left:10px;
+    background:url(../../../../img/ic-list-dotted.png) no-repeat 0 11px;
   }
 }
 .cp-list-hover{
@@ -227,12 +233,13 @@ a{
 ============================================================= */
 .cp-form{
   display: block;
-  //margin:0;
+  line-height:$lh;
   padding:5px 7px;
   font-size:100%;
   vertical-align:middle;
   outline: 0;
   border:0;
+  height:$form-height;
   @include brd;
   @include border-radius(3px);
   font-family: $ff-base;
@@ -368,7 +375,7 @@ a{
   &.ef-rdl90p{@include border-left-radius(90%);}
   &.ef-rdl100p{@include border-left-radius(100%);}
 }
-.cp-select{padding:0 5px;}
+.cp-select{padding:0 5px;height:$form-height;}
 .cp-select[size]{height:auto;}
 
 input[type="checkbox"]{margin:6px 0;}
@@ -459,7 +466,7 @@ input[type="checkbox"]{margin:6px 0;}
 ============================================================== */
 .cp-btn{
   text-align:center;
-  padding:4px 12px;
+  padding:5px 12px;
   cursor: pointer;
   display: inline-block;
   white-space: nowrap;
@@ -472,6 +479,7 @@ input[type="checkbox"]{margin:6px 0;}
   background:$cl-btn; // for oldie
   font-family:$ff-base;
   font-size:$fs;
+  line-height:$lh;
   @include brd(1px,solid,$cl-btn-border);
   @include border-radius(3px 3px);
   @include gradation($cl-btn-lighten, $cl-btn);
