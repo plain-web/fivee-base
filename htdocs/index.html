@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]> <html class="ie8 oldie" lang="ja"> <![endif]-->
+<!--[if IE 9]> <html class="ie9 oldie" lang="ja"> <![endif]-->
+<!--[if gte IE 10]><!--><html lang="ja"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Fivee-base | レスポンシブ対応のcssフレームワーク | html,css,javascript</title>
+  <meta content="cssフレームワークはFivee-baseが便利です。レスポンシブでアプリケーションのフロントエンドやWebサイトを簡単に作る事ができます。" name="description">
+  <meta content="css,フレームワーク,レスポンシブ,フロントエンド" name="keywords">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  <!--[if lte IE 9]> <script src="js/vendor/html5shiv/dist/html5shiv.min.js"></script> <![endif]-->
+  <link href="js/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/theme-default/fivee-base.min.css" rel="stylesheet" type="text/css">
+  <link href="css/theme-default/unique.min.css" rel="stylesheet" type="text/css">
+  <!--[if lte IE 9]> <link href="css/old-ie.min.css" rel="stylesheet"> <![endif]-->
+</head>
+<body class="dashboad">
+  <!-- header////////////////////////////////////////////// -->
+  <header class="page-header">
+    <div class="st-body ef-posi-fix js-posi-remove">
+      <div class="st-inner ef-float">
+        <div class="ef-float-left ef-mgl-10 ef-mgr7 rs3-hide">
+          <a class="ef-w30 js-aside-main-open" href="javascript:void(0);">
+            <ul class="ef-float7">
+              <li>
+                <i class="fa fa-bars ef-fs18 ef-lh30"></i>
+              </li>
+            </ul>
+          </a>
+        </div>
+        <div class="ef-float-left">
+          <a href="index.html">
+            <ul class="ef-float3 wrap-logo">
+              <li>
+                <div class="logo">
+                  <i class="fa fa-puzzle-piece"></i>
+                </div>
+              </li>
+              <li>
+                <strong class="ef-fs20 ef-lh30">
+                  Fivee-base
+                </strong>
+              </li>
+            </ul>
+          </a>
+        </div>
+        <div class="ef-float-right rs3-show">
+          <ul class="ef-float20 ef-lh30">
+            <li>
+              <a href="https://twitter.com/plain_web" target="_blank">
+                <ul class="ef-float3">
+                  <li>
+                    <i class="fa fa-twitter"></i>
+                  </li>
+                  <li>
+                    質問・感想
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="index.html">
+                <ul class="ef-float3">
+                  <li>
+                    <i class="fa fa-info-circle"></i>
+                  </li>
+                  <li>
+                    導入方法
+                  </li>
+                  <li>
+                    <span class="cp-badge ef-cp-red">
+                      53
+                    </span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a class="js-popup-open is-fixed js-tpl1" href="javascript:void(0);">
+                <ul class="ef-float3">
+                  <li>
+                    <i class="fa fa-envelope"></i>
+                  </li>
+                  <li>
+                    Message
+                  </li>
+                  <li>
+                    <span class="cp-badge ef-cp-red">
+                      2
+                    </span>
+                  </li>
+                  <li>
+                    <i class="fa fa-caret-down"></i>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a class="js-popup-open is-fixed js-tpl0" href="javascript:void(0);">
+                <ul class="ef-float3">
+                  <li>
+                    <img alt="profile" class="prof" src="img/myprof.png">
+                  </li>
+                  <li>
+                    Your name
+                  </li>
+                  <li>
+                    <i class="fa fa-caret-down"></i>
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="ef-float-right rs2-show">
+          <ul class="ef-float20 ef-lh30">
+            <li>
+              <a href="https://twitter.com/plain_web" target="_blank">
+                <ul class="ef-float3">
+                  <li>
+                    <i class="fa fa-twitter ef-fs18"></i>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a href="index.html">
+                <ul class="ef-float3">
+                  <li>
+                    <i class="fa fa-info-circle ef-fs18"></i>
+                  </li>
+                  <li>
+                    <span class="cp-badge ef-cp-red">
+                      53
+                    </span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a class="js-popup-open is-fixed js-tpl1" href="javascript:void(0);">
+                <ul class="ef-float3">
+                  <li>
+                    <i class="fa fa-envelope ef-fs18"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-caret-down"></i>
+                  </li>
+                  <li>
+                    <span class="cp-badge ef-cp-red">
+                      2
+                    </span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li>
+              <a class="js-popup-open is-fixed js-tpl0" href="javascript:void(0);">
+                <ul class="ef-float3">
+                  <li>
+                    <img class="prof" src="img/myprof.png">
+                  </li>
+                  <li>
+                    <i class="fa fa-caret-down"></i>
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="ef-float-right rs1-show">
+          <ul class="ef-float20 ef-lh30">
+            <li>
+              <a class="js-nav-slide-open" href="javascript:void(0);">
+                <ul class="ef-float3">
+                  <li>
+                    <img class="prof" src="img/myprof.png">
+                  </li>
+                  <li>
+                    <i class="fa fa-caret-down"></i>
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- slide-nav////////////////////////////////////////////// -->
+  <section class="md-nav-slide rs1-show js-nav-slide">
+    <div class="st-body">
+      <div class="st-inner">
+        <ul class="ef-lh40">
+          <li>
+            <a href="https://twitter.com/plain_web" target="_blank">
+              <ul class="ef-float3">
+                <li>
+                  質問・感想
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a href="../index.html">
+              <ul class="ef-float3">
+                <li>
+                  導入方法
+                </li>
+                <li>
+                  <span class="cp-badge ef-cp-red">
+                    53
+                  </span>
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a class="js-popup-open is-fixed js-tpl1" href="javascript:void(0);">
+              <ul class="ef-float3">
+                <li>
+                  Message
+                </li>
+                <li>
+                  <span class="cp-badge ef-cp-red">
+                    2
+                  </span>
+                </li>
+                <li class="js-ic-arrow">
+                  <i class="fa fa-caret-down"></i>
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a class="js-popup-open is-fixed js-tpl0" href="javascript:void(0);">
+              <ul class="ef-float3">
+                <li>
+                  Your name
+                </li>
+                <li class="js-ic-arrow">
+                  <i class="fa fa-caret-down"></i>
+                </li>
+              </ul>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- page-container////////////////////////////////////////////// -->
+  <section class="page-container">
+    <div class="st-body">
+      <div class="st-inner ef-float">
+        <!-- / page-nav////////////////////////////////////////////// -->
+        <aside class="page-nav md-aside-main ef-float-left js-aside-main">
+          <div class="st-body">
+            <div class="st-inner">
+              <!-- / side-menu////////////////////////////////////////////// -->
+              <nav class="md-nav-main">
+                <div class="st-inner">
+                  <ul class="ef-lh28 js-nav-main">
+                    <li class="is-current">
+                      <a href="index.html">
+                        <ul class="ef-float3">
+                          <li>
+                            <i class="fa fa-home"></i>
+                          </li>
+                          <li>
+                            Dashboard
+                          </li>
+                        </ul>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="ef-fs11 ef-op05">
+                        Structure
+                      </div>
+                    </li>
+                    <li class="js-nav-main-parent0">
+                      <a href="javascript:void(0);">
+                        <ul class="ef-float3">
+                          <li>
+                            <i class="fa fa-columns"></i>
+                          </li>
+                          <li>
+                            Structure
+                          </li>
+                          <li class="ef-float-right js-ic-arrow">
+                            <i class="fa fa-angle-down"></i>
+                          </li>
+                        </ul>
+                      </a>
+                      <ul class="ef-txt-indent1 js-nav-main-child0" style="display:none;">
+                        <li>
+                          <a href="page-structure/layout.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                layout
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="ef-fs11 ef-op05">
+                        Components
+                      </div>
+                    </li>
+                    <li class="js-nav-main-parent1">
+                      <a href="javascript:void(0);">
+                        <ul class="ef-float3">
+                          <li>
+                            <i class="fa fa-cubes"></i>
+                          </li>
+                          <li>
+                            Components
+                          </li>
+                          <li class="ef-float-right js-ic-arrow">
+                            <i class="fa fa-angle-down"></i>
+                          </li>
+                        </ul>
+                      </a>
+                      <ul class="ef-txt-indent1 js-nav-main-child1" style="display:none;">
+                        <li>
+                          <a href="page-components/form.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                form
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/button.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                button
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/title.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                title
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/list.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                list
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/dl.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                dl
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/panel.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                panel
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/remarks.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                remarks
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/breadcrumb.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                breadcrumb
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/toolbar.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                toolbar
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/underline.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                underline
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/image.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                image
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/tag.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                tag
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/badge.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                badge
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/progress-bar.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                progress-bar
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/stepbar.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                stepbar
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/cursor.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                cursor
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-components/talkbox.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                talkbox
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="ef-fs11 ef-op05">
+                        Effect
+                      </div>
+                    </li>
+                    <li class="js-nav-main-parent2">
+                      <a href="javascript:void(0);">
+                        <ul class="ef-float3">
+                          <li>
+                            <i class="fa fa-code"></i>
+                          </li>
+                          <li>
+                            Effect Class
+                          </li>
+                          <li class="ef-float-right js-ic-arrow">
+                            <i class="fa fa-angle-down"></i>
+                          </li>
+                        </ul>
+                      </a>
+                      <ul class="ef-txt-indent1 js-nav-main-child2" style="display:none">
+                        <li>
+                          <a href="page-effect/float.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                float
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/align.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                align
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/margin.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                margin
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/padding.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                padding
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/width.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                width
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/height.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                height
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/line-height.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                line-height
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/font-size.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                font-size
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/text.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                text
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/border.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                border
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/radius.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                radius
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/heading.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                heading
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/color.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                color
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/font-color.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                font-color
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/bg-color.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                bg-color
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/opacity.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                opacity
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/overflow.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                overflow
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/text-ellipsis.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                text-ellipsis
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/rotate.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                rotate
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/shadow.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                shadow
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/position.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                position
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-effect/vertical.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                vertical
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="ef-fs11 ef-op05">
+                        Module
+                      </div>
+                    </li>
+                    <li class="js-nav-main-parent3">
+                      <a href="javascript:void(0);">
+                        <ul class="ef-float3">
+                          <li>
+                            <i class="fa fa-puzzle-piece"></i>
+                          </li>
+                          <li>
+                            Module
+                          </li>
+                          <li class="ef-float-right js-ic-arrow">
+                            <i class="fa fa-angle-down"></i>
+                          </li>
+                        </ul>
+                      </a>
+                      <ul class="ef-txt-indent1 js-nav-main-child3" style="display:none">
+                        <li>
+                          <a href="page-module/modal.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                modal
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/cartain.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                cartain
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/popup.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                popup
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/tooltip.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                tooltip
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/nav.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                nav
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/table.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                table
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/message.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                message
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/toast.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                toast
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/pagination.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                pagination
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/tab.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                tab
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/collapse.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                collapse
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/loader.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                loader
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/image-viewer.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                image-viewer
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/folder.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                folder
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/equalizer.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                equalizer
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/scroll-top.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                scroll-top
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/promo-footer.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                promo-footer
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/remover.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                remover
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/current.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                current
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-module/number-counter.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                number-counter
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div class="ef-fs11 ef-op05">
+                        State
+                      </div>
+                    </li>
+                    <li class="js-nav-main-parent4">
+                      <a href="javascript:void(0);">
+                        <ul class="ef-float3">
+                          <li>
+                            <i class="fa fa-quote-left"></i>
+                          </li>
+                          <li>
+                            State Class
+                          </li>
+                          <li class="ef-float-right js-ic-arrow">
+                            <i class="fa fa-angle-down"></i>
+                          </li>
+                        </ul>
+                      </a>
+                      <ul class="ef-txt-indent1 js-nav-main-child4" style="display:none">
+                        <li>
+                          <a href="page-state/display.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                display
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="page-state/text.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                text
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </aside>
+        <!-- / page-main////////////////////////////////////////////// -->
+        <div class="page-contents">
+          <div class="st-body js-page-contents">
+            <div class="st-inner">
+              <!-- / page title////////////////////////////////////////////// -->
+              <section class="cp-page-title ef-mgb10">
+                <div class="st-inner">
+                  <ul class="ef-float20 ef-lh30">
+                    <li>
+                      <h1>
+                        Dashboard
+                      </h1>
+                    </li>
+                    <li>
+                      Fivee-baseの紹介や導入方法についての説明です。
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <!-- / breadcrumb////////////////////////////////////////////// -->
+              <section class="cp-breadcrumb-model1 ef-mgb20">
+                <div class="st-inner ef-float">
+                  <div class="ef-float-left ef-mxw80p">
+                    <ul class="ef-float10 ef-lh24">
+                      <li>
+                        <a href="index.html">
+                          Dashboard
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="ef-float-right">
+                    <ul class="ef-float3">
+                      <li class="ef-float-right">
+                        <a class="cp-btn-mini ef-cp-white ef-w30" href="index.html">
+                          <i class="fa fa-home ef-fs14"></i>
+                        </a>
+                      </li>
+                      <li class="ef-float-right">
+                        <a class="cp-btn-mini ef-cp-white ef-w30 js-popup-open js-tpl2" href="javascript:void(0);">
+                          <i class="fa fa-link ef-fs14"></i>
+                        </a>
+                      </li>
+                      <li class="ef-float-right">
+                        <a class="cp-btn-mini ef-cp-white ef-w30 js-bookmark-open js-tpl3" href="javascript:void(0);">
+                          <i class="fa fa-star-o ef-fs14"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <!-- / panel////////////////////////////////////////////// -->
+              <section class="cp-panel ef-cp-white ef-w100p">
+                <div class="st-body">
+                  <div class="st-inner ef-mh400">
+                    <!-- / example00 ////////////////////////////////// -->
+                    <section class="examle-wrap ef-mgb40" id="js-pageTop0">
+                      <div class="st-inner">
+                        <div class="example-title ef-mgb10">
+                          <ul class="ef-float ef-lh25">
+                            <li>
+                              <h5>
+                                概要
+                              </h5>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="example-summary ef-fs12 ef-mgb20">
+                          Fivee-baseはアプリケーションやWebサイトのフロントエンド構築に必要な要素を5つに分類化する事で作業内容を明確にし、大幅に作業工数を削減する事ができるCSSフレームワークです。
+                        </div>
+                        <hr class="cp-hr1-dotted ef-sdwb01 ef-pdt30">
+                      </div>
+                    </section>
+                    <!-- / example01 ////////////////////////////////// -->
+                    <section class="examle-wrap ef-mgb20" id="js-pageTop1">
+                      <div class="st-inner">
+                        <div class="example-title ef-mgb10">
+                          <ul class="ef-float ef-lh25">
+                            <li>
+                              <h5>
+                                導入方法
+                              </h5>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="example-box ef-mgb40">
+                          <!-- / example code /////////////////////////// -->
+                          <ul class="cp-list-decimal">
+                            <li>
+                              <section class="ef-mgb30">
+                                まずはGithubよりzipをダウンロードしてください。
+                              </section>
+                              <section class="ef-txt-center ef-mgb50">
+                                <a class="cp-btn-large ef-cp-green" href="https://github.com/plain-web/fivee-base" target="_blank">
+                                  Download Zip
+                                  <small>
+                                    (ver.1.5.5 )
+                                  </small>
+                                </a>
+                              </section>
+                            </li>
+                            <li>
+                              zipを解凍すると「htdocs」と「src」フォルダがあり、htdocsがルートフォルダ（通常のhtml,css,jsファイルが収められています）、srcがソースフォルダ（haml,scssなどが収められています）
+                              <br>
+                              hamlやscssを使わない方はhtdocs内のファイルをご利用ください。hamlやscssを使う場合はsrcフォルダをご利用ください。
+                            </li>
+                            <li>
+                              <section class="ef-mgb20">
+                                続いてhtdocs内のindex.htmlを参考に、あなたがこれから作成するサイトやアプリケーションに必要なファイルを以下に従って読み込ませてください。（hamlを使う場合はsrc内のindex.hamlをご利用ください）
+                                <span class="js-tooltip-hover">
+                                  <span class="md-tooltip-key js-tooltip-key">
+                                    ファイルパスがjs/vendor/から始まるファイルはfivee-baseに必要なライブラリーになります。
+                                  </span>
+                                  <a href="javascript:void(0);">
+                                    <i class="fa fa-question-circle"></i>
+                                  </a>
+                                </span>
+                              </section>
+                              <section class="cp-panel ef-cp-gray ef-w100p ef-mgb20">
+                                <div class="st-body">
+                                  <div class="st-inner">
+                                    <ul class="ef-lh28">
+                                      <li>
+                                        <div class="ef-mgb7">
+                                          index.htmlのheadタグ内で読み込むファイル
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          html5shiv.min.js
+                                        </span>
+                                        (ie10以下でもhtml5が表示できるスクリプト)
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          font-awesome.min.css
+                                        </span>
+                                        (Webフォントアイコン)
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          fivee-base.min.css
+                                        </span>
+                                        (fivee-baseのCSSファイル圧縮版)
+                                        <span class="js-tooltip-hover">
+                                          <span class="md-tooltip-key js-tooltip-key">
+                                            minファイル（圧縮ファイル）の内容を見るには同フォルダの.cssファイルをご覧ください。
+                                          </span>
+                                          <a href="javascript:void(0);">
+                                            <i class="fa fa-question-circle"></i>
+                                          </a>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          unique.min.css
+                                        </span>
+                                        (あなたのページに必要な指定を記述するファイル)
+                                        <span class="js-tooltip-hover">
+                                          <span class="md-tooltip-key js-tooltip-key">
+                                            このファイルはGulpを使って圧縮しています。圧縮を必要としない場合は同フォルダの.cssファイル内に必要な指定を追加して読み込んでください。このファイルには本ページに必要なレイアウトの指定が記載されています。必要なければ削除してください。
+                                          </span>
+                                          <a href="javascript:void(0);">
+                                            <i class="fa fa-question-circle"></i>
+                                          </a>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          old-ie.min.css
+                                        </span>
+                                        (ie10以下で読み込むクロスブラウザ用CSSファイル)
+                                        <span class="js-tooltip-hover">
+                                          <span class="md-tooltip-key js-tooltip-key">
+                                            本ページのheadタグ直前のコンディショナルコメントの記載をコピーした場合「ie8,ie9,oldie」のクラスが、それぞれのブラウザに対して有効になります。
+                                          </span>
+                                          <a href="javascript:void(0);">
+                                            <i class="fa fa-question-circle"></i>
+                                          </a>
+                                        </span>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </section>
+                              <section class="cp-panel ef-cp-gray ef-w100p ef-mgb50">
+                                <div class="st-body">
+                                  <div class="st-inner">
+                                    <ul class="ef-lh28">
+                                      <li>
+                                        <div class="ef-mgb7">
+                                          index.htmlのbodyタグの最下部で読み込むファイル
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          jquery/dist/jquery.min.js
+                                        </span>
+                                        (ie9以上で読み込むjquery)
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          jquery-legacy/dist/jquery.min.js
+                                        </span>
+                                        (ie10以下で読み込むjquery)
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          fivee-base.min.js
+                                        </span>
+                                        (fivee-baseのjsファイル圧縮版)
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </section>
+                            </li>
+                            <li>
+                              <section class="ef-mgb20">
+                                あなたのサイトやアプリケーションに不必要なファイルを削除してください。
+                              </section>
+                              <section class="cp-panel ef-cp-yellow ef-w100p ef-mgb40">
+                                <div class="st-body">
+                                  <div class="st-inner">
+                                    <ul class="ef-lh28">
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          bower.json
+                                        </span>
+                                        (bower用のjsonファイル)
+                                        <span class="js-tooltip-hover">
+                                          <span class="md-tooltip-key js-tooltip-key">
+                                            bowerを使わない場合削除してください。
+                                          </span>
+                                          <a href="javascript:void(0);">
+                                            <i class="fa fa-question-circle"></i>
+                                          </a>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          bowerrc
+                                        </span>
+                                        (bower用のインストール先設定ファイル)
+                                        <span class="js-tooltip-hover">
+                                          <span class="md-tooltip-key js-tooltip-key">
+                                            bowerを使わない場合削除してください。
+                                          </span>
+                                          <a href="javascript:void(0);">
+                                            <i class="fa fa-question-circle"></i>
+                                          </a>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          package.json
+                                        </span>
+                                        (gulpのプラグイン等の記載があるjsonファイル)
+                                        <span class="js-tooltip-hover">
+                                          <span class="md-tooltip-key js-tooltip-key">
+                                            gulpを使わない場合削除してください。
+                                          </span>
+                                          <a href="javascript:void(0);">
+                                            <i class="fa fa-question-circle"></i>
+                                          </a>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          gulpfile.js
+                                        </span>
+                                        (gulpの設定ファイル)
+                                        <span class="js-tooltip-hover">
+                                          <span class="md-tooltip-key js-tooltip-key">
+                                            gulpを使わない場合削除してください。
+                                          </span>
+                                          <a href="javascript:void(0);">
+                                            <i class="fa fa-question-circle"></i>
+                                          </a>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          gitignore
+                                        </span>
+                                        (github用のファイル：無視リスト)
+                                        <span class="js-tooltip-hover">
+                                          <span class="md-tooltip-key js-tooltip-key">
+                                            githubを使わない場合削除してください。
+                                          </span>
+                                          <a href="javascript:void(0);">
+                                            <i class="fa fa-question-circle"></i>
+                                          </a>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          LICENSE
+                                        </span>
+                                        (github用のファイル：ライセンス)
+                                        <span class="js-tooltip-hover">
+                                          <span class="md-tooltip-key js-tooltip-key">
+                                            githubを使わない場合削除してください。
+                                          </span>
+                                          <a href="javascript:void(0);">
+                                            <i class="fa fa-question-circle"></i>
+                                          </a>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          README.md
+                                        </span>
+                                        (github用のファイル：説明文)
+                                        <span class="js-tooltip-hover">
+                                          <span class="md-tooltip-key js-tooltip-key">
+                                            githubを使わない場合削除してください。
+                                          </span>
+                                          <a href="javascript:void(0);">
+                                            <i class="fa fa-question-circle"></i>
+                                          </a>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-file-text-o"></i>
+                                        <span class="is-bold">
+                                          src/haml
+                                        </span>
+                                        (hamlファイル)
+                                        <span class="js-tooltip-hover">
+                                          <span class="md-tooltip-key js-tooltip-key">
+                                            hamlを使わない場合srcフォルダごと削除してください。
+                                          </span>
+                                          <a href="javascript:void(0);">
+                                            <i class="fa fa-question-circle"></i>
+                                          </a>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-folder-o"></i>
+                                        <span class="is-bold">
+                                          src/scss
+                                        </span>
+                                        (scssファイルが入っているフォルダー)
+                                        <span class="js-tooltip-hover">
+                                          <span class="md-tooltip-key js-tooltip-key">
+                                            scssを使わない場合srcフォルダごと削除してください。
+                                          </span>
+                                          <a href="javascript:void(0);">
+                                            <i class="fa fa-question-circle"></i>
+                                          </a>
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <i class="fa fa-folder-o"></i>
+                                        <span class="is-bold">
+                                          htdocs/doc
+                                        </span>
+                                        (本サイト用のdocファイルです。削除してください。)
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </section>
+                            </li>
+                            <li>
+                              以上で準備は完了です。あとは左メニューから必要なパーツや必要な効果を探して、ページ内の「show html」ボタンからhtmlソースをコピーペーストするだけです。
+                            </li>
+                          </ul>
+                        </div>
+                        <hr class="cp-hr1-dotted ef-pdt30">
+                      </div>
+                    </section>
+                    <!-- / example02 ////////////////////////////////// -->
+                    <section class="examle-wrap ef-mgb20" id="js-pageTop2">
+                      <div class="st-inner">
+                        <div class="example-title ef-mgb10">
+                          <ul class="ef-float ef-lh25">
+                            <li>
+                              <h5>
+                                対応ブラウザ
+                              </h5>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="example-summary ef-mgb30 ef-fs12">
+                          Fivee-baseは以下のブラウザに対応しています。
+                        </div>
+                        <div class="example-box ef-mgb40">
+                          <!-- / example code /////////////////////////// -->
+                          <table class="md-table ef-w100p">
+                            <thead>
+                              <!-- tr /////////////////////// -->
+                              <tr>
+                                <th>
+                                  <a href="javascript:void(0);">
+                                    <i class="fa fa-internet-explorer"></i>
+                                    Internet Explorer
+                                  </a>
+                                </th>
+                                <th>
+                                  <a href="javascript:void(0);">
+                                    <i class="fa fa-chrome"></i>
+                                    Chrome
+                                  </a>
+                                </th>
+                                <th>
+                                  <a href="javascript:void(0);">
+                                    <i class="fa fa-firefox"></i>
+                                    Firefox
+                                  </a>
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <!-- tr /////////////////////// -->
+                              <tr>
+                                <td class="ef-txt-center">
+                                  IE8,IE9,IE10,IE11,Edge
+                                </td>
+                                <td class="ef-txt-center">
+                                  Edge
+                                </td>
+                                <td class="ef-txt-center">
+                                  Edge
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="ef-op05 ef-txt-right ef-mgt7 ef-fs10">
+                            IE8はレスポンシブ未対応
+                          </div>
+                        </div>
+                        <hr class="cp-hr1-dotted ef-pdt30">
+                      </div>
+                    </section>
+                    <!-- / example03 ////////////////////////////////// -->
+                    <section class="examle-wrap ef-mgb20" id="js-pageTop3">
+                      <div class="st-inner">
+                        <div class="example-title ef-mgb10">
+                          <ul class="ef-float ef-lh25">
+                            <li>
+                              <h5>
+                                Sassについて
+                              </h5>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="example-summary ef-mgb30 ef-fs12">
+                          sassを使う方は以下の特徴をお読みください。
+                        </div>
+                        <div class="example-box ef-mgb40">
+                          <!-- / example code /////////////////////////// -->
+                          <ul class="cp-list-decimal">
+                            <li class="ef-mgb20">
+                              theme-defaultフォルダ配下の
+                              <span class="ef-txt-red">
+                                _variables.scss
+                              </span>
+                              には、色やフォントサイズなどFivee-baseに必要なプロパティがすべて記述されています。テーマカラーを変えたい、ボタンの色を変えたいと言った際は、こちらのファイルにあるカラーコードやフォントサイズを変更してください。
+                            </li>
+                            <li class="ef-mgb20">
+                              テーマカラーを変更する場合は
+                              <span class="ef-txt-red">
+                                _variables.scss
+                              </span>
+                              のカラーコードを変えるだけで、すべてのcomponentsやmoduleに反映されます。
+                            </li>
+                            <li class="ef-mgb20">
+                              テーマカラーを増やす場合、例えば青色のテーマカラーを増やす手順は、theme-defaultフォルダを丸ごとコピーペーストし「teme-blue」等にリネーム。配下の
+                              <span class="ef-txt-red">
+                                _variables.scss
+                              </span>
+                              の内容を青色に変更します。変更後Sassのコンパイルが終わったら現在読み込んでいるCSSファイルのパスを
+                              <br>
+                              <span class="ef-txt-red">
+                                css/theme-default/fivee-base.min.css
+                              </span>
+                              から
+                              <br>
+                              <span class="ef-txt-red">
+                                css/theme-blue/fivee-base.min.css
+                              </span>
+                              に変更すると青色のテーマカラーになります。
+                            </li>
+                            <li class="ef-mgb20">
+                              <span class="ef-txt-red">
+                                _variables.scss
+                              </span>
+                              のテーマーカラーの指定は
+                              <span class="ef-txt-red">
+                                $cl-theme　/ $cl-theme1 / $cl-theme2
+                              </span>
+                              になります。
+                            </li>
+                          </ul>
+                        </div>
+                        <hr class="cp-hr1-dotted ef-pdt30">
+                      </div>
+                    </section>
+                    <!-- / example04 ////////////////////////////////// -->
+                    <section class="examle-wrap ef-mgb20" id="js-pageTop4">
+                      <div class="st-inner">
+                        <div class="example-title ef-mgb10">
+                          <ul class="ef-float ef-lh25">
+                            <li>
+                              <h5>
+                                クラス名について
+                              </h5>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="example-summary ef-mgb10 ef-fs12">
+                          Fivee-baseのクラス名ルールは以下になります。
+                        </div>
+                        <div class="example-box ef-mgb40">
+                          <!-- / example code /////////////////////////// -->
+                          <table class="md-table ef-w100p">
+                            <tbody>
+                              <!-- tr /////////////////////// -->
+                              <tr>
+                                <th class="ef-w20p">
+                                  頭文字
+                                </th>
+                                <th>
+                                  クラスの概要
+                                </th>
+                              </tr>
+                              <!-- tr /////////////////////// -->
+                              <tr>
+                                <th>
+                                  st-
+                                </th>
+                                <td>
+                                  「st-」からはじまるクラス名はstructureです。構造を意味します。主にコンテンツのレイアウト用に使用されます。
+                                  <a href="page-structure/index.html">
+                                    詳細
+                                  </a>
+                                </td>
+                              </tr>
+                              <!-- tr /////////////////////// -->
+                              <tr>
+                                <th>
+                                  cp-
+                                </th>
+                                <td>
+                                  「cp-」からはじまるクラス名はcomponentsです。ボタンなどの小さなパーツです。
+                                  <a href="page-components/index.html">
+                                    詳細
+                                  </a>
+                                </td>
+                              </tr>
+                              <!-- tr /////////////////////// -->
+                              <tr>
+                                <th>
+                                  ef-
+                                </th>
+                                <td>
+                                  「ef-」からはじまるクラス名はeffect-classです。色、背景、形、位置など対象コンテンツの意匠を変化させます。
+                                  <a href="page-effect/index.html">
+                                    詳細
+                                  </a>
+                                </td>
+                              </tr>
+                              <!-- tr /////////////////////// -->
+                              <tr>
+                                <th>
+                                  md-
+                                </th>
+                                <td>
+                                  「md-」からはじまるクラス名はmoduleです。modalなど一つの機能として成立するパーツです。moduleはjqueryを必要とします。
+                                  <a href="page-module/index.html">
+                                    詳細
+                                  </a>
+                                </td>
+                              </tr>
+                              <!-- tr /////////////////////// -->
+                              <tr>
+                                <th>
+                                  is-
+                                </th>
+                                <td>
+                                  「is-」からはじまるクラス名はstate-classです。対象コンテンツの状態を示します。
+                                  <a href="page-state/index.html">
+                                    詳細
+                                  </a>
+                                </td>
+                              </tr>
+                              <!-- tr /////////////////////// -->
+                              <tr>
+                                <th>
+                                  rs-
+                                </th>
+                                <td>
+                                  「rs-」からはじまるクラス名はレスポンシブ用に使用されます。
+                                </td>
+                              </tr>
+                              <!-- tr /////////////////////// -->
+                              <tr>
+                                <th>
+                                  js-
+                                </th>
+                                <td>
+                                  「js-」からはじまるクラス名はjavascript用のクラスです。このクラス名にはCSSの指定はNGになっています。
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <hr class="cp-hr1-dotted ef-pdt30">
+                      </div>
+                    </section>
+                    <!-- / example05 ////////////////////////////////// -->
+                    <section class="examle-wrap ef-mgb20" id="js-pageTop5">
+                      <div class="st-inner">
+                        <div class="example-title ef-mgb10">
+                          <ul class="ef-float ef-lh25">
+                            <li>
+                              <h5>
+                                導入サポート
+                              </h5>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="example-summary ef-mgb10 ef-fs12">
+                          <section class="ef-mgb40">
+                            リリース間もないですが数社の企業様に導入いただき、その効果を実感いただいてます。
+                            <small>
+                              （2016年1月現在）
+                            </small>
+                            Webサイトやアプリケーションのフロントエンド開発、デザイン刷新をお考えの企業様、導入サポート承ります。
+                            <a href="https://twitter.com/plain_web" target="blank">
+                              こちら
+                            </a>
+                            からお気軽にご相談ください。
+                          </section>
+                          <section class="is-bold">
+                            以下のような事例に心当たりがある場合は、是非導入をご検討ください。
+                          </section>
+                        </div>
+                        <div class="example-box ef-mgb40">
+                          <!-- / example code /////////////////////////// -->
+                          <ul class="cp-list-decimal ef-mgb50">
+                            <li class="ef-mgb20">
+                              既存のCSSフレームワークだと色のバリエーションや細かいカスタマイズができなかった。
+                            </li>
+                            <li class="ef-mgb20">
+                              既存のCSSフレームワークが日本向けのデザインに合わない為、カスタマイズ用のCSSが肥大化している。
+                            </li>
+                            <li class="ef-mgb20">
+                              オフショアなど遠隔地との打ち合わせにdocサイトやパーツリストがなくエクセル資料だけではうまく伝わらない。
+                            </li>
+                            <li class="ef-mgb20">
+                              ページによって関わる担当者が違い、余白やデザインのディテールが異なる。CSSの指定もその都度行っている為に重複している。
+                            </li>
+                            <li class="ef-mgb20">
+                              CSSに関する社内レギュレーションがうまく伝達できず、1px単位の差でCSSの指定が行われている。
+                            </li>
+                            <li class="ef-mgb20">
+                              CSSに関する社内レギュレーションがうまく伝達できず、よく似た色が多数存在している。
+                            </li>
+                            <li class="ef-mgb20">
+                              CSSファイルのIDやクラス名が何に使われているのか分からない為に、その都度CSSの追加が発生している。
+                            </li>
+                            <li class="ef-mgb20">
+                              バックエンド技術者がCSSファイルに記述をするのは敷居が高く、ついついインラインでCSSを記述してしまう。
+                            </li>
+                            <li>
+                              パーツの共通化が行われておらず、微妙な違いのパーツが多数存在してしまっている。
+                            </li>
+                          </ul>
+                          <section class="ef-txt-center">
+                            <a class="cp-btn-large ef-cp-green" href="https://twitter.com/plain_web" target="blank">
+                              ご相談はこちらから
+                            </a>
+                          </section>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer///////////////////////////////////////////// -->
+  <footer class="page-footer">
+    <div class="st-body">
+      <div class="st-inner ef-txt-center ef-fs11 ef-lh14">
+        Copyright © 2016 plain-web all rights reserved.
+      </div>
+    </div>
+  </footer>
+  <!-- popup///////////////////////////////////////////// -->
+  <section class="md-popup js-popup" style="display:none;">
+    <!-- popup contents type 'js-tpl0' -->
+    <div class="st-body js-tpl0">
+      <div class="st-inner ef-w120 ef-sdw02">
+        <div class="md-popup-arrow js-popup-arrow"></div>
+        <div class="md-popup-arrow-back js-popup-arrow"></div>
+        <div class="md-popup-body">
+          <ul class="cp-list-hover ef-cp-gray">
+            <li>
+              <a href="https://github.com/plain-web/fivee-base" target="_blank">
+                Github
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                My Account
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                ログアウト
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- popup contents type 'js-tpl1' -->
+    <div class="st-body js-tpl1">
+      <div class="st-inner ef-sdw02">
+        <div class="md-popup-arrow js-popup-arrow"></div>
+        <div class="md-popup-arrow-back js-popup-arrow"></div>
+        <div class="md-popup-body">
+          <ul class="cp-list-hover ef-cp-gray">
+            <li>
+              <a href="javascript:void(0);">
+                <dl>
+                  <dt class="ef-txt-bold">
+                    plain-web
+                  </dt>
+                  <dd class="ef-txt-ellipsis">
+                    システム予約は15：00にセットされました。
+                  </dd>
+                </dl>
+              </a>
+              <hr class="cp-hr1-dotted ef-mgt3 ef-mgb3">
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <dl>
+                  <dt class="ef-txt-bold">
+                    plain-web
+                  </dt>
+                  <dd class="ef-txt-ellipsis">
+                    システム予約は15：00にセットされました。
+                  </dd>
+                </dl>
+              </a>
+              <hr class="cp-hr1-dotted ef-mgt3 ef-mgb3">
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <dl>
+                  <dt class="ef-txt-bold">
+                    plain-web
+                  </dt>
+                  <dd class="ef-txt-ellipsis">
+                    システム予約は15：00にセットされました。
+                  </dd>
+                </dl>
+              </a>
+              <hr class="cp-hr1-dotted ef-mgt3 ef-mgb3">
+            </li>
+            <li>
+              <a href="javascript:void(0);">
+                <dl>
+                  <dt class="ef-txt-bold">
+                    plain-web
+                  </dt>
+                  <dd class="ef-txt-ellipsis">
+                    システム予約は15：00にセットされました。
+                  </dd>
+                </dl>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- popup contents type 'js-tpl2' -->
+    <div class="st-body js-tpl2">
+      <div class="st-inner ef-sdw02">
+        <div class="md-popup-arrow js-popup-arrow"></div>
+        <div class="md-popup-arrow-back js-popup-arrow"></div>
+        <div class="md-popup-body">
+          <ul class="cp-list-hover ef-cp-gray">
+            <li>
+              <a href="#js-pageTop0">
+                概要
+              </a>
+            </li>
+            <li>
+              <a href="#js-pageTop1">
+                導入方法
+              </a>
+            </li>
+            <li>
+              <a href="#js-pageTop2">
+                対応ブラウザ
+              </a>
+            </li>
+            <li>
+              <a href="#js-pageTop3">
+                Sassについて
+              </a>
+            </li>
+            <li>
+              <a href="#js-pageTop4">
+                クラス名について
+              </a>
+            </li>
+            <li>
+              <a href="#js-pageTop5">
+                導入サポート
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- popup contents type 'js-tpl3' -->
+    <div class="st-body js-tpl3">
+      <div class="st-inner ef-sdw02">
+        <div class="md-popup-arrow js-popup-arrow"></div>
+        <div class="md-popup-arrow-back js-popup-arrow"></div>
+        <div class="md-popup-header ef-mgb10">
+          <ul class="ef-float">
+            <li>
+              <h6>
+                Bookmark
+              </h6>
+            </li>
+          </ul>
+        </div>
+        <div class="md-popup-body ef-pd10 ef-mgb10">
+          <section class="ef-mgb10">
+            <ul class="ef-float7 ef-lh30">
+              <li class="ef-w50 ef-txt-right">
+                Title
+              </li>
+              <li>
+                <input class="cp-input ef-w150" type="text">
+              </li>
+            </ul>
+          </section>
+          <section>
+            <ul class="ef-float7 ef-lh30">
+              <li class="ef-w50 ef-txt-right">
+                Folder
+              </li>
+              <li>
+                <select class="cp-input">
+                  <option>
+                    folder
+                  </option>
+                </select>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div class="md-popup-footer ef-pdb7">
+          <div class="ef-txt-center">
+            <a class="cp-btn ef-cp-red ef-w70 js-popup-close js-bookmark-delete" href="javascript:void(0);">
+              Delete
+            </a>
+            <a class="cp-btn ef-w70 js-popup-close" href="javascript:void(0);">
+              Edit
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- tooltip///////////////////////////////////////////// -->
+  <section class="md-tooltip js-tooltip" style="display:none;">
+    <div class="st-body ef-mxw300">
+      <div class="st-inner">
+        <section class="md-tooltip-wrap js-tooltip-wrap"></section>
+        <section class="md-balloon js-balloon">
+          <div class="md-triangle-bottom"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+  <!-- scrolltop/////////////////////////////////////////// -->
+  <section class="md-scrolltop js-scrolltop" style="display:none;">
+    <div class="st-body ef-sdw01">
+      <div class="st-inner">
+        <a class="ef-fs16" href="javascript:void(0);" id="js-pageTop">
+          <i class="fa fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- script//////////////////////////////////////////// -->
+  <!--[if gte IE 10]><!--><script src="js/vendor/jquery/dist/jquery.min.js" type="text/javascript"></script><!--<![endif]-->
+  <!--[if lte IE 9]> <script src="js/vendor/jquery-legacy/dist/jquery.min.js" type="text/javascript"></script> <![endif]-->
+  <script src="js/fivee-base.min.js" type="text/javascript"></script>
+  <!-- :javascript -->
+  <!-- $(function(){ -->
+  <!-- )); -->
+</body></html>

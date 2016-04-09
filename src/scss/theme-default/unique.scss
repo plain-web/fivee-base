@@ -1,0 +1,190 @@
+@import "variables";
+@import "../setting";
+/*! ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ *
+ * Fivee-base
+ * ver.1.5.5 / 2016.4.9
+ * http://plain-web.com/fivee-base/apps/
+ * Released under MIT license. Copyright 2016 Yusuke Maruyama.
+ *
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ !*/
+/*
+ * unique.scss
+ * include:
+ * "header" "footer" "container"
+ *
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "header"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.page-header{
+  .st-body{
+    @include min-width($app-minWidth);
+    background:$cl-bg-header;
+    &.ef-posi-fix{
+      @include posi-fix(0,0,auto,0);
+      z-index:5;
+    }
+    .st-inner{
+      padding:0 10px;
+      a{
+        display:block;
+        color:$cl-link-header;
+        i{color:$cl-link-header;}
+        &:hover{
+          color:darken($cl-link-header, 10%);
+          i{color:darken($cl-link-header, 10%);}
+        }
+      }
+      //left////////////////////////////////////////
+      .ef-float-left{
+        >a{
+          padding-top:5px;
+          padding-bottom:5px;
+          .wrap-logo{
+            .logo{
+              width:25px;
+              line-height:25px;
+              font-size:18px;
+              text-align: center;
+              @include border-radius(50%);
+              margin-top: 2px;
+              background:$cl-white;
+              i{color:$cl-bg-header;}
+            }
+          }
+        }
+      }
+      //right////////////////////////////////////////
+      .ef-float-right{
+        >ul{
+          >li{
+            >a{
+              padding-top:5px;
+              padding-bottom:5px;
+              i{
+                display:block;
+                line-height:30px;
+              }
+            }
+            .prof{
+              display: block;
+              width:25px;
+              margin-top: 3px;
+              @include border-radius(2px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* =============================================================
+ ▼ nav-slide
+============================================================== */
+.md-nav-slide{
+  .st-inner{
+    ul{
+      li{
+        a{
+          font-size: 15px;
+          .cp-badge{color:$cl-white;}
+          &:hover{
+            background:$cl-bg-nav-hover;
+          }
+        }
+      }
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "footer"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.page-footer{
+  .st-body{
+    &.ef-posi-fix{
+      @include posi-fix(auto,0,0,0);
+      z-index:3;
+    }
+    background-color:$cl-theme;
+    .st-inner{
+      padding:3px 20px;
+      color:$cl-link-footer;
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "aside"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.md-aside-main{
+  >.st-body{
+    width:180px;
+    margin:20px 15px;
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "container"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.page-container{
+  >.st-body{
+    margin:$page-header-height 0 $page-footer-height;
+  }
+}
+// page-main ////////////////////////////
+.page-contents{
+  display:block;
+  margin-left:195px;
+  >.st-body{
+    >.st-inner{
+      padding:20px 15px;
+      background:$cl-bg-content;
+    }
+  }
+}
+/* =============================================================
+ ▼ nav-main
+============================================================== */
+.md-nav-main{
+  >.st-inner{
+    >ul{
+      >li{
+        >ul{
+          max-height:300px;
+          overflow: auto;
+        }
+      }
+    }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "responsive"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+/* =============================================================
+ ▼ pages
+============================================================== */
+@media (max-width: $breakpoint2-3-max) {
+  .page-container{
+    >.st-body{
+      >.st-inner{
+        // page-main ////////////////////////////
+        >.page-contents{
+          margin-left:0;
+        }
+      }
+    }
+  }
+  .md-aside-main{
+    >.st-body{
+      width:100%;
+      margin:0;
+    }
+  }
+}

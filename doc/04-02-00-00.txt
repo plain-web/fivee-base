@@ -1,2 +1,0 @@
-﻿<!-- cartain//////////////////////////////////////////// -->
-<section class="md-cartain js-cartain ef-bg-black ef-op05" style="display:none;"></section>

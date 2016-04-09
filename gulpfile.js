@@ -1,30 +1,34 @@
 // plugin
 var gulp = require('gulp');
-var plumber = require('gulp-plumber');
-var sass = require('gulp-sass');
-var sassMin = require('gulp-sass');
-var haml = require('gulp-ruby-haml');
-var autoprefixer = require('gulp-autoprefixer');
-var browserSync = require('browser-sync');
-var changed  = require('gulp-changed');
-var uglify = require('gulp-uglify');
-var rename = require("gulp-rename");
-//var spritesmith = require('gulp.spritesmith');
+var plumber = require('gulp-plumber'); //error gulp
+var scss = require('gulp-sass'); //scss
+var scssMin = require('gulp-sass'); //scss minifi
+var haml = require('gulp-ruby-haml'); // haml
+var autoprefixer = require('gulp-autoprefixer'); //vendor prefix
+var browserSync = require('browser-sync'); //browser reloat
+var changed  = require('gulp-changed'); // change path
+var uglify = require('gulp-uglify'); //minifi 
+var rename = require("gulp-rename"); //rename minifi files
+var replace = require('gulp-replace'); //minify scss comment
+//var spritesmith = require('gulp.spritesmith'); //photo sprite
 
 /*========================================================================
   path
 ======================================================================== */ 
 var path = {
-  base: './',
-  js: ['./js/*.js', '!./js/*.min.js'],
-  jsMin: './js/',
-  sass: './sass/**/*scss',
-  css: './css',
-  haml: './**/*.haml',
-  html: './'
+  base: './htdocs',
+  watchJs: ['./src/js/*.js', '!./htdocs/js/*.min.js'],
+  htdocsJs: './htdocs/js',
+  srcJs : './src/js/**',
+  srcScss: './src/scss/**/*scss',
+  srcCss: './htdocs/css',
+  srcImg: './src/img/**',
+  htdocsImg: './htdocs/img',
+  srcHaml: './src/**/*.haml',
+  htdocsHtml: './htdocs'
   //sprite :'./img/sprite/*.png',
   //spriteImg :'./img/',
-  //spriteScss :'./sass/'
+  //spriteScss :'./scss/'
 };
 /*========================================================================
   browser-sync
@@ -62,58 +66,68 @@ gulp.task('haml', function() {
   var options = {
     doubleQuote: true
   };
-  gulp.src(path.haml)
-    .pipe(changed(path.html, { extension: '.html' }))
+  gulp.src(path.srcHaml)
+    .pipe(changed(path.htdocsHtml, { extension: '.html' }))
     .pipe(plumber())
     .pipe(haml(options))
-    .pipe(gulp.dest(path.html))
+    .pipe(gulp.dest(path.htdocsHtml))
     .pipe(browserSync.reload({stream:true}));
 });
 /*========================================================================
   js
 ======================================================================== */
 gulp.task('js', function() {
-  gulp.src(path.js)
+  gulp.src(path.watchJs)
     .pipe(plumber())
-    .pipe( uglify())
+    .pipe(uglify({preserveComments: 'some'}))
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest(path.jsMin))
+    .pipe(gulp.dest(path.htdocsJs))
     .pipe(browserSync.reload({stream:true}));
 });
 /*========================================================================
-  sass
+  scss
 ======================================================================== */
-gulp.task('sass', function() {
-  gulp.src(path.sass)
-    //.pipe(changed(path.css, { extension: '.css' }))
+gulp.task('scss', function() {
+  gulp.src(path.srcScss)
+    //.pipe(changed(path.srcCss, { extension: '.css' }))
     .pipe(plumber())
-    .pipe(sass({outputStyle: 'expanded'}))
-    .pipe(autoprefixer())
-    .pipe(gulp.dest(path.css));
+    .pipe(scss({outputStyle: 'expanded'}))
+    .pipe(autoprefixer({
+      browsers: ['last 3 versions'],
+      cascade: false
+    }))
+    .pipe(gulp.dest(path.srcCss));
 });
 //minifi css
-gulp.task('sassMin', function() {
-  gulp.src(path.sass)
+gulp.task('scssMin', function() {
+  gulp.src(path.srcScss)
     .pipe(plumber())
-    .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(autoprefixer())
+    .pipe(scss({outputStyle: 'compressed'}))
+    .pipe(replace('/*!', '/*'))
+    .pipe(autoprefixer({
+      browsers: ['last 3 versions'],
+      cascade: false
+    }))
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest(path.css))
+    .pipe(gulp.dest(path.srcCss))
     .pipe(browserSync.reload({stream:true}));
 });
 // /*========================================================================
 //   theme-default
 // ======================================================================== */
-// var themeDefault = require('gulp-sass');
+// var themeDefault = require('gulp-scss');
 // gulp.task('themeDefault', function() {
-//   gulp.src('./sass/theme-default/*.scss')
+//   gulp.src('./scss/theme-default/*.scss')
 //     .pipe(plumber())
-//     .pipe(sass({outputStyle: 'expanded'}))
-//     .pipe(autoprefixer())
+//     .pipe(scss({outputStyle: 'expanded'}))
+    // .pipe(autoprefixer({
+    //   browsers: ['last 3 versions'],
+    //   cascade: false
+    // }))
 //     .pipe(gulp.dest('./css/theme-default/'))
 //     .pipe(browserSync.reload({stream:true}));
 // });
@@ -121,8 +135,22 @@ gulp.task('sassMin', function() {
   default (watch)
 ======================================================================== */
 gulp.task('default', ['server'], function() {
-  gulp.watch(path.haml,['haml']);
-  gulp.watch(path.js,['js']);
-  gulp.watch(path.sass,['sass','sassMin']);
-  //gulp.watch('./sass/_*.scss',['themeDefault']);
+  gulp.watch(path.srcHaml,['haml']);
+  gulp.watch(path.watchJs,['js']);
+  gulp.watch(path.srcScss,['scss','scssMin']);
+  //gulp.watch('./scss/_*.scss',['themeDefault']);
 });
+/*========================================================================
+  build task
+======================================================================== */
+gulp.task('copy', function(){
+  //copy js and img
+  gulp.src(path.srcJs)
+    .pipe(gulp.dest(path.htdocsJs));
+  gulp.src(path.srcImg)
+    .pipe(gulp.dest(path.htdocsImg));
+});
+/*========================================================================
+  build task
+======================================================================== */
+gulp.task('build', ['haml','js','scss','scssMin','copy']);

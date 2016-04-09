@@ -1,0 +1,34 @@
+﻿<ul class="cp-list-disc ef-mgb20">
+  <li>
+    Fivee-base(ブラウザ)
+  </li>
+  <li>
+    Fivee-base(ブラウザ)
+  </li>
+  <li>
+    Fivee-base(ブラウザ)
+  </li>
+  <li>
+    Fivee-base(ブラウザ)
+  </li>
+  <li>
+    Fivee-base(ブラウザ)
+  </li>
+</ul>
+<ul class="cp-list-dotted">
+  <li>
+    Fivee-base(画像)
+  </li>
+  <li>
+    Fivee-base(画像)
+  </li>
+  <li>
+    Fivee-base(画像)
+  </li>
+  <li>
+    Fivee-base(画像)
+  </li>
+  <li>
+    Fivee-base(画像)
+  </li>
+</ul>
