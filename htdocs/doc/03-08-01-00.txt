@@ -1,4 +1,4 @@
-﻿<div class="ef-w250 ef-fs30">
+<div class="ef-w250 ef-fs30">
   <div class="ef-fs50p">
     font-size:50%;
   </div>

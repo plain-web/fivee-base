@@ -1,4 +1,4 @@
-﻿<div class="cp-talkbox-left ef-w250 ef-mgb20">
+<div class="cp-talkbox-left ef-w250 ef-mgb20">
   <div class="st-inner">
     Fivee-base is css framework. please enjoy the smart coding.
     <div class="cp-talkbox-arrow"></div>

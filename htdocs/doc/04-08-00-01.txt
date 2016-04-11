@@ -1,4 +1,4 @@
-﻿<!-- toast///////////////////////////////////////////// -->
+<!-- toast///////////////////////////////////////////// -->
 <section class="md-toast js-toast">
   <!-- toast contents type 'js-tpl0' -->
   <div class="st-body md-toast-alert ef-w300 ef-mgt70 js-tpl0">

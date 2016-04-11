@@ -1,0 +1,30 @@
+﻿<section class="ef-mgb20">
+  【1】有効幅1だけで非表示させるクラスは
+  <span class="ef-txt-red">
+    rs1-hide
+  </span>
+  になります。
+  <div class="ef-cl-blue ef-txt-white ef-pd10 rs1-hide">
+    有効幅1だけで非表示
+  </div>
+</section>
+<section class="ef-mgb20">
+  【2】有効幅2だけで非表示させるクラスは
+  <span class="ef-txt-red">
+    rs2-hide
+  </span>
+  になります。
+  <div class="ef-cl-blue ef-txt-white ef-pd10 rs2-hide">
+    有効幅2だけで非表示
+  </div>
+</section>
+<section class="ef-mgb20">
+  【3】有効幅3だけで非表示させるクラスは
+  <span class="ef-txt-red">
+    rs3-hide
+  </span>
+  になります。
+  <div class="ef-cl-blue ef-txt-white ef-pd10 rs3-hide">
+    有効幅3だけで非表示
+  </div>
+</section>

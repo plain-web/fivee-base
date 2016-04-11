@@ -1,4 +1,4 @@
-﻿<ul>
+<ul>
   <li class="ef-bg-red ef-mgb10 is-table">
     <div class="ef-pdt50">
       <div class="ef-cl-theme ef-txt-white ef-txt-center ef-w120">

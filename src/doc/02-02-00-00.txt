@@ -1,0 +1,52 @@
+﻿<ul class="ef-float7">
+  <li class="ef-mgb10">
+    <a class="cp-btn ef-mw100" href="javascript:void(0);">
+      default
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn ef-cp-white ef-mw100" href="javascript:void(0);">
+      white
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn ef-cp-red ef-mw100" href="javascript:void(0);">
+      red
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn ef-cp-orange ef-mw100" href="javascript:void(0);">
+      orange
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn ef-cp-blue ef-mw100" href="javascript:void(0);">
+      blue
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn ef-cp-green ef-mw100" href="javascript:void(0);">
+      green
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn ef-cp-yellow ef-mw100" href="javascript:void(0);">
+      yellow
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn ef-cp-brown ef-mw100" href="javascript:void(0);">
+      brown
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn ef-cp-gray ef-mw100" href="javascript:void(0);">
+      gray
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn ef-cp-theme ef-mw100" href="javascript:void(0);">
+      theme
+    </a>
+  </li>
+</ul>

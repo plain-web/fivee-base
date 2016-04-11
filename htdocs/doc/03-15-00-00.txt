@@ -1,4 +1,4 @@
-﻿<section class="ef-mgb20">
+<section class="ef-mgb20">
   <div class="ef-bg-red ef-txt-center ef-pd50">
     ef-bg-red
   </div>

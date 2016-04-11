@@ -1,0 +1,51 @@
+﻿<!-- toast///////////////////////////////////////////// -->
+<section class="md-toast js-toast">
+  <!-- toast contents type 'js-tpl0' -->
+  <div class="st-body md-toast-alert ef-w300 ef-mgt70 js-tpl0">
+    <div class="st-inner ef-sdw02">
+      <dl>
+        <dt class="ef-lh28 ef-fs18"><i class="fa fa-exclamation-triangle ef-mgr3"></i>Error
+        </dt>
+        <dd>
+          message here
+        </dd>
+      </dl>
+    </div>
+  </div>
+  <!-- toast contents type 'js-tpl1' -->
+  <div class="st-body md-toast-success ef-w300 ef-mgt70 js-tpl1">
+    <div class="st-inner ef-sdw02">
+      <dl>
+        <dt class="ef-lh28 ef-fs18"><i class="fa fa-check-circle ef-mgr3"></i>Success
+        </dt>
+        <dd>
+          message here
+        </dd>
+      </dl>
+    </div>
+  </div>
+  <!-- toast contents type 'js-tpl2' -->
+  <div class="st-body md-toast-info ef-w300 ef-mgt70 js-tpl2">
+    <div class="st-inner ef-sdw02">
+      <dl>
+        <dt class="ef-lh28 ef-fs18"><i class="fa fa-info-circle ef-mgr3"></i>Info
+        </dt>
+        <dd>
+          message here
+        </dd>
+      </dl>
+    </div>
+  </div>
+  <!-- toast contents type 'js-tpl3' -->
+  <div class="st-body md-toast-warning ef-w300 ef-mgt70 js-tpl3">
+    <div class="st-inner ef-sdw02">
+      <dl>
+        <dt class="ef-lh28 ef-fs18"><i class="fa fa-exclamation-circle ef-mgr3"></i>Warning
+        </dt>
+        <dd>
+          message here
+        </dd>
+      </dl>
+    </div>
+  </div>
+</section>

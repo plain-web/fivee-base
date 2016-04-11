@@ -1,4 +1,4 @@
-﻿<!-- popup///////////////////////////////////////////// -->
+<!-- popup///////////////////////////////////////////// -->
 <section class="md-popup js-popup" style="display:none;">
   <!-- popup contents type 'js-tpl0' -->
   <div class="st-body js-tpl0">

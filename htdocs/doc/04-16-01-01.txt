@@ -1,2 +1,2 @@
-﻿<section id="js-pageTop0">
+<section id="js-pageTop0">
   コンテンツはここ

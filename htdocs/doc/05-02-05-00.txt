@@ -1,1 +1,1 @@
-﻿<a href="#" class="is-nodeco">link</a>
+<a href="#" class="is-nodeco">link</a>

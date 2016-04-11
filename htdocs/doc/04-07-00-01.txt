@@ -1,4 +1,4 @@
-﻿<!-- message///////////////////////////////////////////// -->
+<!-- message///////////////////////////////////////////// -->
 <section class="md-message js-message">
   <!-- message contents type 'js-tpl0' -->
   <div class="st-body md-message-alert ef-mgt20 js-tpl0">

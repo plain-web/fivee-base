@@ -1,0 +1,63 @@
+﻿<div class="cp-panel-mini ef-cp-white ef-w100p ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      white
+    </div>
+  </div>
+</div>
+<div class="cp-panel-mini ef-cp-red ef-w100p ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      red
+    </div>
+  </div>
+</div>
+<div class="cp-panel-mini ef-cp-orange ef-w100p ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      orange
+    </div>
+  </div>
+</div>
+<div class="cp-panel-mini ef-cp-blue ef-w100p ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      blue
+    </div>
+  </div>
+</div>
+<div class="cp-panel-mini ef-cp-green ef-w100p ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      green
+    </div>
+  </div>
+</div>
+<div class="cp-panel-mini ef-cp-yellow ef-w100p ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      yellow
+    </div>
+  </div>
+</div>
+<div class="cp-panel-mini ef-cp-brown ef-w100p ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      brown
+    </div>
+  </div>
+</div>
+<div class="cp-panel-mini ef-cp-gray ef-w100p ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      gray
+    </div>
+  </div>
+</div>
+<div class="cp-panel-mini ef-cp-theme ef-w100p">
+  <div class="st-body">
+    <div class="st-inner">
+      theme
+    </div>
+  </div>
+</div>

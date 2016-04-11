@@ -1,4 +1,4 @@
-﻿<!-- / folder//////////////////////////////////// -->
+<!-- / folder//////////////////////////////////// -->
 <nav class="md-nav-main">
   <div class="st-inner">
     <ul class="ef-lh28 js-nav-main">

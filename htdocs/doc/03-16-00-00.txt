@@ -1,4 +1,4 @@
-﻿<section class="ef-w150 ef-mgb20">
+<section class="ef-w150 ef-mgb20">
   <div class="ef-op01">
     <div class="ef-cl-green ef-txt-white ef-txt-center ef-fs22">
       opacity:0.1;

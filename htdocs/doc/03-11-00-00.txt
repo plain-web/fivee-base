@@ -1,4 +1,4 @@
-﻿<span class="ef-rd5 ef-cl-theme ef-pd10 ef-mgr20">
+<span class="ef-rd5 ef-cl-theme ef-pd10 ef-mgr20">
   <span class="ef-txt-white">
     all
   </span>

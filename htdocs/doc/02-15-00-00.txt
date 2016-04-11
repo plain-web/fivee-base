@@ -1,4 +1,4 @@
-﻿<div class="cp-stepbar">
+<div class="cp-stepbar">
   <ul class="ef-w100p">
     <li>
       <div class="cp-stepbar-key">

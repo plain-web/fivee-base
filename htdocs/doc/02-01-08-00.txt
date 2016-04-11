@@ -1,4 +1,4 @@
-﻿<ul class="ef-float20">
+<ul class="ef-float20">
   <li>
     <div class="ef-lh30">
       title

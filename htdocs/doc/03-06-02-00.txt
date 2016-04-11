@@ -1,4 +1,4 @@
-﻿<div class="ef-mxh150 ef-bg-orange">
+<div class="ef-mxh150 ef-bg-orange">
   <div class="ef-txt-center ef-pd10">
     max-height:150px;
     <br>

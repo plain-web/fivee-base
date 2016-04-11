@@ -1,0 +1,27 @@
+﻿<ul class="ef-float10">
+  <li>
+    <span class="ef-pd10 ef-cl-green ef-txt-white is-block">
+      is-block
+    </span>
+  </li>
+  <li>
+    <span class="ef-pd10 ef-cl-green ef-txt-white is-table">
+      is-table
+    </span>
+  </li>
+  <li>
+    <span class="ef-pd10 ef-cl-green ef-txt-white is-table-cell">
+      is-table-cell
+    </span>
+  </li>
+  <li>
+    <span class="ef-pd10 ef-cl-green ef-txt-white is-inline">
+      is-inline
+    </span>
+  </li>
+  <li>
+    <span class="ef-pd10 ef-cl-green ef-txt-white is-inline-block">
+      is-inline-block
+    </span>
+  </li>
+</ul>

@@ -1,4 +1,4 @@
-﻿<a class="js-collapse js-collapse-parent0" href="javascript:void(0);">
+<a class="js-collapse js-collapse-parent0" href="javascript:void(0);">
   続きを見る
   <i class="fa fa-caret-down"></i>
 </a>

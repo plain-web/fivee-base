@@ -1,4 +1,4 @@
-﻿<section class="cp-progress-bar ef-cp-gray ef-w250 ef-mgb20">
+<section class="cp-progress-bar ef-cp-gray ef-w250 ef-mgb20">
   <div class="st-body ef-bg-gray">
     <div class="st-inner ef-lh15" style="width:16%;">
       &nbsp;

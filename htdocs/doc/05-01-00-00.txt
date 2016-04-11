@@ -1,4 +1,4 @@
-﻿<ul class="ef-float10">
+<ul class="ef-float10">
   <li>
     <span class="ef-pd10 ef-cl-green ef-txt-white is-block">
       is-block

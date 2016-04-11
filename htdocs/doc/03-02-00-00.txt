@@ -1,4 +1,4 @@
-﻿<div class="ef-txt-left">
+<div class="ef-txt-left">
   left
 </div>
 <div class="ef-txt-center">

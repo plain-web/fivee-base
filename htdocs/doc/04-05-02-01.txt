@@ -1,4 +1,4 @@
-﻿<!-- slide-nav////////////////////////////////////////////// -->
+<!-- slide-nav////////////////////////////////////////////// -->
 <section class="md-nav-slide rs1-show js-nav-slide">
   <div class="st-body">
     <div class="st-inner">

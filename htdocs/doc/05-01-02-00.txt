@@ -1,4 +1,4 @@
-﻿<section class="ef-mgb20">
+<section class="ef-mgb20">
   <a class="cp-btn is-disabled" href="javascript:void(0);">
     btn: is-disabled
   </a>

@@ -1,4 +1,4 @@
-﻿<!-- nav block body//////////////////////// -->
+<!-- nav block body//////////////////////// -->
 <section class="js-nav-block-content0 ef-mgb50">
   <div class="st-inner">
     <ul>

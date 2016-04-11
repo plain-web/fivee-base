@@ -1,4 +1,4 @@
-﻿<section class="ef-mgb10">
+<section class="ef-mgb10">
   <div class="is-bold">
     ボールドにする
   </div>

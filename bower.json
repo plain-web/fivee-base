@@ -11,7 +11,7 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "js"
+    "src/js"
   ],
   "devDependencies": {
     "font-awesome": "~4.4.0",

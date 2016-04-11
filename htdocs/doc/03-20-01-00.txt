@@ -1,4 +1,4 @@
-﻿<ul class="ef-float10">
+<ul class="ef-float10">
   <li class="ef-pd10">
     <div class="ef-pd10 ef-sdwr01">
       shadow01

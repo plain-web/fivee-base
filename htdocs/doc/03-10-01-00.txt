@@ -1,4 +1,4 @@
-﻿<div class="ef-brd3 ef-mgb20">
+<div class="ef-brd3 ef-mgb20">
   <div class="ef-bg-gray ef-txt-center">
     ボーダー3
   </div>

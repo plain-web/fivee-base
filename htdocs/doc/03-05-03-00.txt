@@ -1,4 +1,4 @@
-﻿<span class="ef-mw50p is-inline-block">
+<span class="ef-mw50p is-inline-block">
   <div class="ef-cl-theme ef-txt-center ef-txt-white ef-pd10">
     min-width:50%;
   </div>

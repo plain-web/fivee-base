@@ -1,4 +1,4 @@
-﻿<ul class="ef-float7">
+<ul class="ef-float7">
   <li class="ef-mgb10">
     <a class="cp-btn ef-mw100" href="javascript:void(0);">
       default

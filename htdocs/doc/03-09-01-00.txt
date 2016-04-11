@@ -1,4 +1,4 @@
-﻿<div class="ef-txt-indent0">
+<div class="ef-txt-indent0">
   txt-indent0
 </div>
 <div class="ef-txt-indent1">

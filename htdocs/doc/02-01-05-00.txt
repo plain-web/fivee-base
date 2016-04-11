@@ -1,4 +1,4 @@
-﻿<select class="cp-select">
+<select class="cp-select">
   <option>
     keyword
   </option>

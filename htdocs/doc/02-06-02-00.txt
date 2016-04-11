@@ -1,4 +1,4 @@
-﻿<div class="cp-panel-mini ef-cp-white ef-w300 ef-mgb10">
+<div class="cp-panel-mini ef-cp-white ef-w300 ef-mgb10">
   <div class="st-body">
     <div class="st-inner">
       white

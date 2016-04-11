@@ -1,4 +1,4 @@
-﻿<section class="ef-mgb20">
+<section class="ef-mgb20">
   <ul class="ef-float20 cp-list-decimal ef-lh30 js-col">
     <li>
       <a href="javascript:void(0);">

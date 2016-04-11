@@ -1,14 +1,14 @@
-﻿<div class="cp-toolbar-model0">
+<div class="cp-toolbar-model0">
   <div class="st-inner ef-float ef-brd1 ef-bg-gray">
     <div class="ef-float-left ef-mxw80p">
       <ul class="ef-float0">
         <li>
-          <div class="ef-lh24">
+          <div class="ef-lh34">
             絞込：
           </div>
         </li>
         <li>
-          <select class="cp-select ef-lh24">
+          <select class="cp-select">
             <option>
               select
             </option>
@@ -27,7 +27,7 @@
           </select>
         </li>
         <li class="ef-mgl7">
-          <a class="cp-btn-mini ef-cp-blue ef-mw40" href="javascript:void(0);">
+          <a class="cp-btn ef-cp-blue ef-mw40" href="javascript:void(0);">
             検索
           </a>
         </li>
@@ -36,7 +36,7 @@
     <div class="ef-float-right">
       <ul class="ef-float7">
         <li class="ef-float-right">
-          <a class="cp-btn-mini ef-response ef-mw30" href="javascript:void(0);">
+          <a class="cp-btn ef-response ef-mw30" href="javascript:void(0);">
             <i class="fa fa-bars"></i>
           </a>
         </li>

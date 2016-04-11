@@ -1,4 +1,4 @@
-﻿<div class="cp-breadcrumb">
+<div class="cp-breadcrumb">
   <div class="st-inner ef-float">
     <div class="ef-float-left">
       <ul class="ef-float10 ef-lh24">

@@ -1,0 +1,118 @@
+﻿<!-- / table/////////////////////////// -->
+<table class="md-table ef-w100p js-col-on">
+  <colgroup>
+    <col>
+    <col>
+    <col>
+    <col>
+    <col>
+    <col>
+  </colgroup>
+  <thead>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <th>
+        <a href="javascript:void(0);">
+          header
+        </a>
+      </th>
+      <th>
+        <a href="javascript:void(0);">
+          header
+        </a>
+      </th>
+      <th>
+        <a href="javascript:void(0);">
+          header
+        </a>
+      </th>
+      <th>
+        <a href="javascript:void(0);">
+          header
+          <i class="fa fa-caret-down"></i>
+        </a>
+      </th>
+      <th>
+        <a href="javascript:void(0);">
+          header
+        </a>
+      </th>
+      <th class="ef-w20">
+        <a href="javascript:void(0);">
+          header
+        </a>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="md-td-hover">
+    <!-- tr /////////////////////// -->
+    <tr>
+      <td>
+        column
+      </td>
+      <td>
+        column
+      </td>
+      <td>
+        column
+      </td>
+      <td>
+        column
+      </td>
+      <td>
+        column
+      </td>
+      <td class="ef-txt-center">
+        <a class="cp-btn-mini" href="javascript:void(0);">
+          option
+        </a>
+      </td>
+    </tr>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <td>
+        column
+      </td>
+      <td>
+        column
+      </td>
+      <td>
+        column
+      </td>
+      <td>
+        column
+      </td>
+      <td>
+        column
+      </td>
+      <td class="ef-txt-center">
+        <a class="cp-btn-mini" href="javascript:void(0);">
+          option
+        </a>
+      </td>
+    </tr>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <td>
+        column
+      </td>
+      <td>
+        column
+      </td>
+      <td>
+        column
+      </td>
+      <td>
+        column
+      </td>
+      <td>
+        column
+      </td>
+      <td class="ef-txt-center">
+        <a class="cp-btn-mini" href="javascript:void(0);">
+          option
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

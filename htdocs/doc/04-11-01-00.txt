@@ -1,4 +1,4 @@
-﻿<!-- / collapse slide ///////////////////////// -->
+<!-- / collapse slide ///////////////////////// -->
 <div class="ef-float">
   <div class="ef-float-left">
     <section class="js-collapse-slide-child0">

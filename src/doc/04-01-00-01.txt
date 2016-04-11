@@ -1,0 +1,85 @@
+﻿<!-- modal/////////////////////////////////////////////// -->
+<section class="md-modal js-modal" style="display:none;">
+  <!-- modal contents type 'js-tpl0' -->
+  <div class="st-body ef-w500 js-tpl0">
+    <div class="st-inner">
+      <!-- modal-header /////////////////// -->
+      <div class="md-modal-header">
+        <div class="md-modal-title">
+          <h6>
+            modal example
+          </h6>
+        </div>
+        <div class="md-modal-close">
+          <a class="ef-fs20 js-modal-close" href="javascript:void(0);">
+            <i class="fa fa-times"></i>
+          </a>
+        </div>
+      </div>
+      <!-- modal-body  //////////////////// -->
+      <div class="md-modal-body ef-mh250 ef-pd20 ef-mxh300-ovf">
+        <section class="is-bold ef-mgb10">
+          Modal contents here
+        </section>
+        <section>
+          Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents
+        </section>
+      </div>
+      <!-- modal-footer ////////////////// -->
+      <div class="md-modal-footer">
+        <div class="ef-txt-center">
+          <a class="cp-btn ef-cp-theme ef-mw100" href="javascript:void(0);">
+            submit
+          </a>
+          <a class="cp-btn ef-mw100 js-modal-close" href="javascript:void(0);">
+            cancel
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal contents type 'js-tpl1' -->
+  <div class="st-body ef-w400 js-tpl1">
+    <div class="st-inner">
+      <!-- modal-header /////////////////// -->
+      <div class="md-modal-header">
+        <div class="md-modal-title">
+          <h6>
+            modal example1
+          </h6>
+        </div>
+        <div class="md-modal-close">
+          <a class="ef-fs20 js-modal-close" href="javascript:void(0);">
+            <i class="fa fa-times"></i>
+          </a>
+        </div>
+      </div>
+      <!-- modal-body  //////////////////// -->
+      <div class="md-modal-body ef-pd20 ef-mxh300-ovf">
+        <section class="ef-mgb10">
+          Modal contents here
+        </section>
+        <section class="ef-mgb10">
+          <input class="cp-input" type="text">
+        </section>
+        <section class="ef-mgb10">
+          <input class="cp-input" type="text">
+        </section>
+        <section class="ef-mgb10">
+          <textarea class="cp-textarea"></textarea>
+        </section>
+      </div>
+      <!-- modal-footer ////////////////// -->
+      <div class="md-modal-footer">
+        <div class="ef-txt-center">
+          <a class="cp-btn ef-cp-theme ef-mw100" href="javascript:void(0);">
+            submit
+          </a>
+          <a class="cp-btn ef-mw100 js-modal-close" href="javascript:void(0);">
+            cancel
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

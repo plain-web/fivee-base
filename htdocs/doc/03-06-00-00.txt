@@ -1,4 +1,4 @@
-﻿<div class="ef-h200 ef-cl-theme">
+<div class="ef-h200 ef-cl-theme">
   <div class="ef-txt-center ef-txt-white ef-pd10">
     height:200px;
   </div>

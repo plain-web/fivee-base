@@ -1,4 +1,4 @@
-﻿<!-- / pagination/////////////////////////// -->
+<!-- / pagination/////////////////////////// -->
 <div class="md-pagination ef-cp-blue js-pagination">
   <ul class="ef-float3">
     <li class="js-notouch">

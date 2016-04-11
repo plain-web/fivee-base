@@ -1,4 +1,4 @@
-﻿<ul class="ef-float10 js-remover">
+<ul class="ef-float10 js-remover">
   <li>
     <span class="cp-tag ef-rd3 ef-cp-yellow">
       <ul class="ef-float10 ef-lh20">

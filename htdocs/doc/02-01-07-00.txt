@@ -1,1 +1,1 @@
-﻿<input class="cp-input" type="text">
+<input class="cp-input" type="text">

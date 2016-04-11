@@ -1,0 +1,47 @@
+﻿<ul class="ef-float7">
+  <li class="ef-mgb10">
+    <span class="cp-tag ef-cp-white ef-mw100">
+      white
+    </span>
+  </li>
+  <li class="ef-mgb10">
+    <span class="cp-tag ef-cp-red ef-mw100">
+      red
+    </span>
+  </li>
+  <li class="ef-mgb10">
+    <span class="cp-tag ef-cp-orange ef-mw100">
+      orange
+    </span>
+  </li>
+  <li class="ef-mgb10">
+    <span class="cp-tag ef-cp-blue ef-mw100">
+      blue
+    </span>
+  </li>
+  <li class="ef-mgb10">
+    <span class="cp-tag ef-cp-green ef-mw100">
+      green
+    </span>
+  </li>
+  <li class="ef-mgb10">
+    <span class="cp-tag ef-cp-yellow ef-mw100">
+      yellow
+    </span>
+  </li>
+  <li class="ef-mgb10">
+    <span class="cp-tag ef-cp-brown ef-mw100">
+      brown
+    </span>
+  </li>
+  <li class="ef-mgb10">
+    <span class="cp-tag ef-cp-gray ef-mw100">
+      gray
+    </span>
+  </li>
+  <li class="ef-mgb10">
+    <span class="cp-tag ef-cp-theme ef-mw100">
+      theme
+    </span>
+  </li>
+</ul>

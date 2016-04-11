@@ -1,4 +1,4 @@
-﻿<ul>
+<ul>
   <li class="ef-mgb10">
     <a class="cp-btn ef-w100p" href="javascript:void(0);">
       default

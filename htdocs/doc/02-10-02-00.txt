@@ -1,1 +1,1 @@
-﻿<hr class="cp-hr1-dashed">
+<hr class="cp-hr1-dashed">

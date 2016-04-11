@@ -1,0 +1,17 @@
+﻿<ul class="ef-float20">
+  <li>
+    <a class="cp-cursor-default" href="#">
+      cursor default
+    </a>
+  </li>
+  <li>
+    <a class="cp-cursor-move" href="#">
+      cursor move
+    </a>
+  </li>
+  <li>
+    <a class="cp-cursor-pointer" href="#">
+      cursor pointer
+    </a>
+  </li>
+</ul>

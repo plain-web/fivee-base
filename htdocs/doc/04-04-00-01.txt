@@ -1,4 +1,4 @@
-﻿<!-- tooltip///////////////////////////////////////////// -->
+<!-- tooltip///////////////////////////////////////////// -->
 <section class="md-tooltip js-tooltip" style="display:none;">
   <div class="st-body ef-mxw170">
     <div class="st-inner">

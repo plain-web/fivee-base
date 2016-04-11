@@ -10,22 +10,22 @@ var changed  = require('gulp-changed'); // change path
 var uglify = require('gulp-uglify'); //minifi 
 var rename = require("gulp-rename"); //rename minifi files
 var replace = require('gulp-replace'); //minify scss comment
+var ignore = require('gulp-ignore'); //ignore list
 //var spritesmith = require('gulp.spritesmith'); //photo sprite
 
 /*========================================================================
   path
 ======================================================================== */ 
 var path = {
-  base: './htdocs',
-  watchJs: ['./src/js/*.js', '!./htdocs/js/*.min.js'],
-  htdocsJs: './htdocs/js',
-  srcJs : './src/js/**',
+  base: './src',
+  copyDir: './htdocs',
+  noCopyFiles: ['./src/**', '!./src/**/test_*','!./src/**/*haml','!./src/**/*scss'],
+  watchJs: ['./src/js/*.js', '!./src/js/*.min.js'],
+  srcMinifiJs : './src/js',
   srcScss: './src/scss/**/*scss',
-  srcCss: './htdocs/css',
-  srcImg: './src/img/**',
-  htdocsImg: './htdocs/img',
+  srcCss: './src/css',
   srcHaml: './src/**/*.haml',
-  htdocsHtml: './htdocs'
+  srcHtml: './src',
   //sprite :'./img/sprite/*.png',
   //spriteImg :'./img/',
   //spriteScss :'./scss/'
@@ -67,10 +67,10 @@ gulp.task('haml', function() {
     doubleQuote: true
   };
   gulp.src(path.srcHaml)
-    .pipe(changed(path.htdocsHtml, { extension: '.html' }))
+    .pipe(changed(path.srcHtml, { extension: '.html' }))
     .pipe(plumber())
     .pipe(haml(options))
-    .pipe(gulp.dest(path.htdocsHtml))
+    .pipe(gulp.dest(path.srcHtml))
     .pipe(browserSync.reload({stream:true}));
 });
 /*========================================================================
@@ -83,7 +83,7 @@ gulp.task('js', function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest(path.htdocsJs))
+    .pipe(gulp.dest(path.srcMinifiJs))
     .pipe(browserSync.reload({stream:true}));
 });
 /*========================================================================
@@ -144,11 +144,9 @@ gulp.task('default', ['server'], function() {
   build task
 ======================================================================== */
 gulp.task('copy', function(){
-  //copy js and img
-  gulp.src(path.srcJs)
-    .pipe(gulp.dest(path.htdocsJs));
-  gulp.src(path.srcImg)
-    .pipe(gulp.dest(path.htdocsImg));
+  gulp.src(path.noCopyFiles)
+    .pipe(ignore.include({isFile: true}))
+    .pipe(gulp.dest(path.copyDir));
 });
 /*========================================================================
   build task

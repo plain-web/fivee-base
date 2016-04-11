@@ -1,4 +1,4 @@
-﻿<ul class="ef-float20">
+<ul class="ef-float20">
   <li>
     <label class="cp-checkbox">
       <input type="checkbox">

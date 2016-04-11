@@ -1,4 +1,4 @@
-﻿<div class="js-tooltip-hover">
+<div class="js-tooltip-hover">
   <span class="md-tooltip-key js-tooltip-key">
     ツールチップの内容はここ
   </span>

@@ -1,0 +1,11 @@
+﻿<div class="ef-w250 ef-fs30">
+  <div class="ef-fs50p">
+    font-size:50%;
+  </div>
+  <div class="ef-fs80p">
+    font-size:80%;
+  </div>
+  <div class="ef-fs100p">
+    font-size:100%;
+  </div>
+</div>

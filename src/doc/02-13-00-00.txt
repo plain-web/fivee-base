@@ -1,0 +1,110 @@
+﻿<ul>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        white
+      </li>
+      <li>
+        <span class="cp-badge ef-cp-white">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        red
+      </li>
+      <li>
+        <span class="cp-badge ef-cp-red">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        orange
+      </li>
+      <li>
+        <span class="cp-badge ef-cp-orange">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        blue
+      </li>
+      <li>
+        <span class="cp-badge ef-cp-blue">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        green
+      </li>
+      <li>
+        <span class="cp-badge ef-cp-green">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        yellow
+      </li>
+      <li>
+        <span class="cp-badge ef-cp-yellow">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        brown
+      </li>
+      <li>
+        <span class="cp-badge ef-cp-brown">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        gray
+      </li>
+      <li>
+        <span class="cp-badge ef-cp-gray">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+  <li class="ef-mgb10">
+    <ul class="ef-float3">
+      <li>
+        theme
+      </li>
+      <li>
+        <span class="cp-badge ef-cp-theme">
+          5
+        </span>
+      </li>
+    </ul>
+  </li>
+</ul>

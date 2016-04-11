@@ -1,0 +1,26 @@
+﻿<ul>
+  <li class="ef-mgb10">
+    <a class="cp-btn ef-mw100" href="javascript:void(0);">
+      <i class="fa fa-pencil"></i>
+      white
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-mini ef-cp-red ef-mw100" href="javascript:void(0);">
+      <i class="fa fa-pencil"></i>
+      red
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn-large ef-cp-orange ef-mw100" href="javascript:void(0);">
+      <i class="fa fa-pencil"></i>
+      orange
+    </a>
+  </li>
+  <li class="ef-mgb10">
+    <a class="cp-btn ef-cp-blue ef-w100p" href="javascript:void(0);">
+      <i class="fa fa-pencil"></i>
+      blue
+    </a>
+  </li>
+</ul>

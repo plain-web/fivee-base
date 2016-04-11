@@ -1,4 +1,4 @@
-﻿<div class="is-table ef-w100p ef-bg-red ef-h200">
+<div class="is-table ef-w100p ef-bg-red ef-h200">
   <div class="is-table-cell ef-brdr1 ef-w20p ef-vat">
     ef-vat
   </div>

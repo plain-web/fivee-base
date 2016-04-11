@@ -1,0 +1,6 @@
+﻿<div class="ef-bg-red">
+  <a href="#">
+    2015年12月20日 お知らせ
+  </a>
+  <img class="ef-txt-icon" src="../img/test-02.png">
+</div>

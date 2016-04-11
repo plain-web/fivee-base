@@ -1,4 +1,4 @@
-﻿<div class="ef-w300 ef-h300 ef-w0-ovf ef-h0-ovf">
+<div class="ef-w300 ef-h300 ef-w0-ovf ef-h0-ovf">
   <div class="is-nowrap">
     Fivee-base
     <br>

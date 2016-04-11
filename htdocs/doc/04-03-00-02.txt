@@ -1,4 +1,4 @@
-﻿<section class="ef-mgb20">
+<section class="ef-mgb20">
   <a class="cp-btn ef-cp-blue js-popup-open is-fixed js-tpl0" href="javascript:void(0);">
     ポップアップ(fixed)
   </a>

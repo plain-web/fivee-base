@@ -1,4 +1,4 @@
-﻿<dl class="cp-thumbnail">
+<dl class="cp-thumbnail">
   <dt class="ef-w50">
     <img class="ef-pdr7" src="../img/test-01.png">
   </dt>

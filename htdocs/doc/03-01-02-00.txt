@@ -1,4 +1,4 @@
-﻿<div class="ef-float">
+<div class="ef-float">
   <div class="ef-float-left ef-bg-gray">
     <div class="st-inner">
       float-left

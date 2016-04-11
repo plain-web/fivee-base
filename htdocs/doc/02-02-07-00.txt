@@ -1,4 +1,4 @@
-﻿<section class="cp-btn-row js-state-current">
+<section class="cp-btn-row js-state-current">
   <a class="cp-btn ef-cp-blue ef-brdr0 ef-rdr0 is-current" href="javascript:void(0);">
     Fivee-base
   </a>

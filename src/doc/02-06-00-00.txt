@@ -1,0 +1,63 @@
+﻿<div class="cp-panel ef-cp-white ef-w300 ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      white
+    </div>
+  </div>
+</div>
+<div class="cp-panel ef-cp-red ef-w300 ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      red
+    </div>
+  </div>
+</div>
+<div class="cp-panel ef-cp-orange ef-w300 ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      orange
+    </div>
+  </div>
+</div>
+<div class="cp-panel ef-cp-blue ef-w300 ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      blue
+    </div>
+  </div>
+</div>
+<div class="cp-panel ef-cp-green ef-w300 ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      green
+    </div>
+  </div>
+</div>
+<div class="cp-panel ef-cp-yellow ef-w300 ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      yellow
+    </div>
+  </div>
+</div>
+<div class="cp-panel ef-cp-brown ef-w300 ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      brown
+    </div>
+  </div>
+</div>
+<div class="cp-panel ef-cp-gray ef-w300 ef-mgb10">
+  <div class="st-body">
+    <div class="st-inner">
+      gray
+    </div>
+  </div>
+</div>
+<div class="cp-panel ef-cp-theme ef-w300">
+  <div class="st-body">
+    <div class="st-inner">
+      theme
+    </div>
+  </div>
+</div>

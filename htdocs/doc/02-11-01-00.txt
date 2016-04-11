@@ -1,1 +1,1 @@
-﻿<img class="ef-wauto" src="../img/test-01.png">
+<img class="ef-wauto" src="../img/test-01.png">

@@ -1,0 +1,22 @@
+﻿<ul>
+  <li class="ef-mgb10">
+    <ul class="cp-input-icon-left ef-w120">
+      <li>
+        <i class="fa fa-user"></i>
+      </li>
+      <li>
+        <input class="cp-input ef-w100p" type="text">
+      </li>
+    </ul>
+  </li>
+  <li>
+    <ul class="cp-input-icon-right ef-w120">
+      <li>
+        <i class="fa fa-user"></i>
+      </li>
+      <li>
+        <input class="cp-input ef-w100p" type="text">
+      </li>
+    </ul>
+  </li>
+</ul>

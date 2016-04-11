@@ -1,0 +1,85 @@
+﻿<!-- / table/////////////////////////// -->
+<table class="md-table ef-w100p js-sameclass">
+  <thead>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <th></th>
+      <th>
+        <a href="javascript:void(0);">
+          price
+        </a>
+      </th>
+      <th>
+        <a href="javascript:void(0);">
+          price
+        </a>
+      </th>
+      <th>
+        <a href="javascript:void(0);">
+          price
+        </a>
+      </th>
+      <th>
+        <a href="javascript:void(0);">
+          total
+        </a>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <th class="js-sameclass-num0">
+        1day
+      </th>
+      <td>
+        156
+      </td>
+      <td>
+        7,899
+      </td>
+      <td>
+        1,587
+      </td>
+      <td class="js-sameclass-num0">
+        16,452
+      </td>
+    </tr>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <th class="js-sameclass-num1">
+        2day
+      </th>
+      <td>
+        156
+      </td>
+      <td>
+        7,899
+      </td>
+      <td>
+        1,587
+      </td>
+      <td class="js-sameclass-num1">
+        16,452
+      </td>
+    </tr>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <th class="js-sameclass-num3">
+        3day
+      </th>
+      <td>
+        156
+      </td>
+      <td>
+        7,899
+      </td>
+      <td>
+        1,587
+      </td>
+      <td class="js-sameclass-num3">
+        16,452
+      </td>
+    </tr>
+  </tbody>
+</table>

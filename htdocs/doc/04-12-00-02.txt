@@ -1,4 +1,4 @@
-﻿<a class="cp-btn ef-cp-blue js-loader-on" href="javascript:void(0);">
+<a class="cp-btn ef-cp-blue js-loader-on" href="javascript:void(0);">
   ローダーを開く
 </a>
 <a class="cp-btn ef-cp-brown js-loader-off" href="javascript:void(0);">

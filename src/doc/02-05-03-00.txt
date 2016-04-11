@@ -1,0 +1,30 @@
+﻿<a class="is-table ef-mgb10" href="#">
+  <dl class="cp-thumbnail">
+    <dt class="ef-w60">
+      <img class="ef-pdr7" src="../img/test-01.png">
+    </dt>
+    <dd class="ef-mgl60">
+      <div class="cp-thumbnail-title ef-fs16">
+        Fivee-base
+      </div>
+      <div class="cp-thumbnail-summary">
+        about Fivee-base
+      </div>
+    </dd>
+  </dl>
+</a>
+<a class="is-table ef-is-nolink ef-mgb10" href="#">
+  <dl class="cp-thumbnail">
+    <dt class="ef-w60">
+      <img class="ef-pdr7" src="../img/test-01.png">
+    </dt>
+    <dd class="ef-mgl60">
+      <div class="cp-thumbnail-title ef-fs16">
+        Fivee-base
+      </div>
+      <div class="cp-thumbnail-summary">
+        about Fivee-base
+      </div>
+    </dd>
+  </dl>
+</a>

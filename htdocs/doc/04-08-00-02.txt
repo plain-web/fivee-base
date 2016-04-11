@@ -1,4 +1,4 @@
-﻿<ul class="ef-float10">
+<ul class="ef-float10">
   <li>
     <a class="cp-btn js-toast-open js-tpl0" href="javascript:void(0);">
       alert

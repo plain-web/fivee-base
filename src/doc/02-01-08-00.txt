@@ -1,0 +1,13 @@
+﻿<ul class="ef-float20">
+  <li>
+    <div class="ef-lh30">
+      title
+    </div>
+  </li>
+  <li>
+    <input class="cp-input ef-w100" type="text">
+  </li>
+  <li>
+    <input class="cp-input ef-w120" type="text">
+  </li>
+</ul>

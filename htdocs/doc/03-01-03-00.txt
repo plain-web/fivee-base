@@ -1,4 +1,4 @@
-﻿<section class="ef-mgb20">
+<section class="ef-mgb20">
   【1】有効幅1で解除させるクラスは
   <span class="ef-txt-red">
     rs1-nofloat

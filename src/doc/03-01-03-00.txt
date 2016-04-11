@@ -1,0 +1,72 @@
+﻿<section class="ef-mgb20">
+  【1】有効幅1で解除させるクラスは
+  <span class="ef-txt-red">
+    rs1-nofloat
+  </span>
+  になります。
+  <div class="ef-float rs1-nofloat">
+    <div class="ef-float-left ef-bg-gray">
+      <div class="st-inner">
+        float-left
+      </div>
+    </div>
+    <div class="ef-float-left ef-bg-gray">
+      <div class="st-inner ef-pdl10">
+        float-left
+      </div>
+    </div>
+    <div class="ef-float-right ef-bg-gray">
+      <div class="st-inner">
+        float-right
+      </div>
+    </div>
+  </div>
+</section>
+<section class="ef-mgb20">
+  【2】有効幅2で解除させるクラスは
+  <span class="ef-txt-red">
+    rs2-nofloat
+  </span>
+  になります。
+  <div class="ef-float rs2-nofloat">
+    <div class="ef-float-left ef-bg-gray">
+      <div class="st-inner">
+        float-left
+      </div>
+    </div>
+    <div class="ef-float-left ef-bg-gray">
+      <div class="st-inner ef-pdl10">
+        float-left
+      </div>
+    </div>
+    <div class="ef-float-right ef-bg-gray">
+      <div class="st-inner">
+        float-right
+      </div>
+    </div>
+  </div>
+</section>
+<section class="ef-mgb20">
+  【3】有効幅3で解除させるクラスは
+  <span class="ef-txt-red">
+    rs3-nofloat
+  </span>
+  になります。
+  <div class="ef-float rs3-nofloat">
+    <div class="ef-float-left ef-bg-gray">
+      <div class="st-inner">
+        float-left
+      </div>
+    </div>
+    <div class="ef-float-left ef-bg-gray">
+      <div class="st-inner ef-pdl10">
+        float-left
+      </div>
+    </div>
+    <div class="ef-float-right ef-bg-gray">
+      <div class="st-inner">
+        float-right
+      </div>
+    </div>
+  </div>
+</section>

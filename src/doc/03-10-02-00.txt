@@ -1,0 +1,25 @@
+﻿<div class="ef-brd3-red ef-mgb20">
+  <div class="ef-bg-gray ef-txt-center">
+    ボーダー3
+  </div>
+</div>
+<div class="ef-brdt3-orange ef-mgb20">
+  <div class="ef-bg-gray ef-txt-center">
+    ボーダー3-トップ
+  </div>
+</div>
+<div class="ef-brdr3-blue ef-mgb20">
+  <div class="ef-bg-gray ef-txt-center">
+    ボーダー3-ライト
+  </div>
+</div>
+<div class="ef-brdb3-green ef-mgb20">
+  <div class="ef-bg-gray ef-txt-center">
+    ボーダー3-ボトム
+  </div>
+</div>
+<div class="ef-brdl3-brown ef-mgb20">
+  <div class="ef-bg-gray ef-txt-center">
+    ボーダー3-レフト
+  </div>
+</div>

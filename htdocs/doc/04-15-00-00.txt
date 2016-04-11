@@ -1,4 +1,4 @@
-﻿<ul id="js-eql">
+<ul id="js-eql">
   <li class="ef-mgb10">
     <div class="ef-w100 ef-cl-blue js-eql-width">
       <div class="ef-txt-center ef-txt-white">

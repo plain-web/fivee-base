@@ -1,0 +1,159 @@
+﻿<!-- popup///////////////////////////////////////////// -->
+<section class="md-popup js-popup" style="display:none;">
+  <!-- popup contents type 'js-tpl0' -->
+  <div class="st-body js-tpl0">
+    <div class="st-inner ef-w120 ef-sdw02">
+      <div class="md-popup-arrow js-popup-arrow"></div>
+      <div class="md-popup-arrow-back js-popup-arrow"></div>
+      <div class="md-popup-body">
+        <ul class="cp-list-hover ef-cp-gray">
+          <li>
+            <a href="https://github.com/plain-web/fivee-base" target="_blank">
+              Github
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">
+              My Account
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">
+              ログアウト
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- popup contents type 'js-tpl1' -->
+  <div class="st-body js-tpl1">
+    <div class="st-inner ef-sdw02">
+      <div class="md-popup-arrow js-popup-arrow"></div>
+      <div class="md-popup-arrow-back js-popup-arrow"></div>
+      <div class="md-popup-body">
+        <ul class="cp-list-hover ef-cp-gray">
+          <li>
+            <a href="javascript:void(0);">
+              <dl>
+                <dt class="ef-txt-bold">
+                  plain-web
+                </dt>
+                <dd class="ef-txt-ellipsis">
+                  システム予約は15：00にセットされました。
+                </dd>
+              </dl>
+            </a>
+            <hr class="cp-hr1-dotted ef-mgt3 ef-mgb3">
+          </li>
+          <li>
+            <a href="javascript:void(0);">
+              <dl>
+                <dt class="ef-txt-bold">
+                  plain-web
+                </dt>
+                <dd class="ef-txt-ellipsis">
+                  システム予約は15：00にセットされました。
+                </dd>
+              </dl>
+            </a>
+            <hr class="cp-hr1-dotted ef-mgt3 ef-mgb3">
+          </li>
+          <li>
+            <a href="javascript:void(0);">
+              <dl>
+                <dt class="ef-txt-bold">
+                  plain-web
+                </dt>
+                <dd class="ef-txt-ellipsis">
+                  システム予約は15：00にセットされました。
+                </dd>
+              </dl>
+            </a>
+            <hr class="cp-hr1-dotted ef-mgt3 ef-mgb3">
+          </li>
+          <li>
+            <a href="javascript:void(0);">
+              <dl>
+                <dt class="ef-txt-bold">
+                  plain-web
+                </dt>
+                <dd class="ef-txt-ellipsis">
+                  システム予約は15：00にセットされました。
+                </dd>
+              </dl>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- popup contents type 'js-tpl2' -->
+  <div class="st-body js-tpl2">
+    <div class="st-inner ef-sdw02">
+      <div class="md-popup-arrow js-popup-arrow"></div>
+      <div class="md-popup-arrow-back js-popup-arrow"></div>
+      <div class="md-popup-body">
+        <ul class="cp-list-hover ef-cp-gray">
+          <li>
+            <a href="#js-pageTop0">
+              popup
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- popup contents type 'js-tpl3' -->
+  <div class="st-body js-tpl3">
+    <div class="st-inner ef-sdw02">
+      <div class="md-popup-arrow js-popup-arrow"></div>
+      <div class="md-popup-arrow-back js-popup-arrow"></div>
+      <div class="md-popup-header ef-mgb10">
+        <ul class="ef-float">
+          <li>
+            <h6>
+              Bookmark
+            </h6>
+          </li>
+        </ul>
+      </div>
+      <div class="md-popup-body ef-pd10 ef-mgb10">
+        <section class="ef-mgb10">
+          <ul class="ef-float7 ef-lh30">
+            <li class="ef-w50 ef-txt-right">
+              Title
+            </li>
+            <li>
+              <input class="cp-input ef-w150" type="text">
+            </li>
+          </ul>
+        </section>
+        <section>
+          <ul class="ef-float7 ef-lh30">
+            <li class="ef-w50 ef-txt-right">
+              Folder
+            </li>
+            <li>
+              <select class="cp-input">
+                <option>
+                  folder
+                </option>
+              </select>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="md-popup-footer ef-pdb7">
+        <div class="ef-txt-center">
+          <a class="cp-btn ef-cp-red ef-w70 js-popup-close js-bookmark-delete" href="javascript:void(0);">
+            Delete
+          </a>
+          <a class="cp-btn ef-w70 js-popup-close" href="javascript:void(0);">
+            Edit
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -612,11 +612,17 @@
                                   %a.cp-btn-large.ef-cp-green(href="https://github.com/plain-web/fivee-base" target="_blank")
                                     Download Zip
                                     %small
-                                      (ver.1.5.5 )
+                                      (ver.1.5.8)
                               %li
-                                zipを解凍すると「htdocs」と「src」フォルダがあり、htdocsがルートフォルダ（通常のhtml,css,jsファイルが収められています）、srcがソースフォルダ（haml,scssなどが収められています）
-                                %br
-                                hamlやscssを使わない方はhtdocs内のファイルをご利用ください。hamlやscssを使う場合はsrcフォルダをご利用ください。
+                                %section
+                                  zipを解凍すると「htdocs」と「src」フォルダがあり、htdocsがルートフォルダ（通常のhtml,css,jsファイルが収められています）、srcがソースフォルダ（haml,scssなどが収められています）
+                                  %br
+                                  hamlやscssを使わない方はhtdocs内のファイルをご利用ください。hamlやscssを使う場合はsrcフォルダをご利用ください。
+                                  %span.js-tooltip-hover
+                                    %span.md-tooltip-key.js-tooltip-key
+                                      srcフォルダはソースフォルダになります。gulpをお使いの際は本フォルダ内でテストやモック作成が行えます。gulpで"gulp copy"コマンドを打つとhtdocsにファイルがコピーされます。その際ファイルや画像に"test_"の文字があるとそのファイルや画像を除いてhtml,css,js,その他ファイルがコピーされます。
+                                    %a(href="#{v}")
+                                      %i.fa.fa-question-circle
                               %li
                                 %section.ef-mgb20
                                   続いてhtdocs内のindex.htmlを参考に、あなたがこれから作成するサイトやアプリケーションに必要なファイルを以下に従って読み込ませてください。（hamlを使う場合はsrc内のindex.hamlをご利用ください）

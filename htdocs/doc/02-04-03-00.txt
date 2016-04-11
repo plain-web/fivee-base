@@ -1,4 +1,4 @@
-﻿<ul class="cp-list-decimal">
+<ul class="cp-list-decimal">
   <li>
     Fivee-base
   </li>

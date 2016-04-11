@@ -1,7 +1,7 @@
 /*! ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
  * Fivee-base
- * ver.1.5.5 / 2016.4.9
+ * ver.1.5.8 / 2016.4.11
  * http://plain-web.com/fivee-base/apps/
  * Released under MIT license. Copyright 2016 Yusuke Maruyama.
  *

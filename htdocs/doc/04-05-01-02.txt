@@ -1,4 +1,4 @@
-﻿<!-- nav block trigger//////////////////////// -->
+<!-- nav block trigger//////////////////////// -->
 <nav class="md-nav-block js-nav-block js-nav-block-select0 ef-mgb30">
   <div class="st-inner">
     <ul class="ef-float is-col4">

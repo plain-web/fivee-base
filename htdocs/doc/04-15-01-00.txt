@@ -1,4 +1,4 @@
-﻿<ul class="ef-float10" id="js-eql">
+<ul class="ef-float10" id="js-eql">
   <li class="ef-mgb10">
     <div class="ef-h100 ef-w200 ef-cl-blue js-eql-height">
       <div class="ef-txt-center ef-txt-white">

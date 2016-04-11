@@ -1,0 +1,60 @@
+﻿<!-- / table/////////////////////////// -->
+<table class="md-table ef-w100p ef-mgb20">
+  <thead>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <th colspan="4">
+        <a href="javascript:void(0);">
+          click select
+        </a>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="js-select-tr">
+    <!-- tr /////////////////////// -->
+    <tr>
+      <td>
+        click select
+      </td>
+      <td>
+        click select
+      </td>
+      <td>
+        click select
+      </td>
+      <td>
+        click select
+      </td>
+    </tr>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <td>
+        click select
+      </td>
+      <td>
+        click select
+      </td>
+      <td>
+        click select
+      </td>
+      <td>
+        click select
+      </td>
+    </tr>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <td>
+        click select
+      </td>
+      <td>
+        click select
+      </td>
+      <td>
+        click select
+      </td>
+      <td>
+        click select
+      </td>
+    </tr>
+  </tbody>
+</table>

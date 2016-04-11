@@ -1,0 +1,22 @@
+﻿<ul class="test ef-float20">
+  <li>
+    <a href="#">
+      link
+    </a>
+  </li>
+  <li>
+    <a class="is-link" href="#">
+      link
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      link
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      link
+    </a>
+  </li>
+</ul>

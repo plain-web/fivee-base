@@ -1,4 +1,4 @@
-﻿<section class="ef-posi-rel">
+<section class="ef-posi-rel">
   relative
 </section>
 <section class="ef-posi-abs">

@@ -1,0 +1,69 @@
+﻿<!-- / table/////////////////////////// -->
+<table class="md-table ef-w100p ef-mgb20">
+  <thead>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <th colspan="5">
+        <a href="javascript:void(0);">
+          border
+        </a>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- tr /////////////////////// -->
+    <tr class="ef-brd2-red">
+      <td>
+        tr > td border
+      </td>
+      <td>
+        tr > td border
+      </td>
+      <td>
+        tr > td border
+      </td>
+      <td>
+        tr > td border
+      </td>
+      <td>
+        tr > td border
+      </td>
+    </tr>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        &nbsp;
+      </td>
+    </tr>
+    <!-- tr /////////////////////// -->
+    <tr>
+      <td class="ef-brd2-theme">
+        all
+      </td>
+      <td class="ef-brdt2-theme">
+        top
+      </td>
+      <td class="ef-brdr2-theme">
+        right
+      </td>
+      <td class="ef-brdb2-theme">
+        bottom
+      </td>
+      <td class="ef-brdl2-theme">
+        left
+      </td>
+    </tr>
+  </tbody>
+</table>

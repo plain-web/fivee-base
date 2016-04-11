@@ -1,4 +1,4 @@
-﻿<ul class="test ef-float20">
+<ul class="test ef-float20">
   <li>
     <a href="#">
       link

@@ -1,4 +1,4 @@
-﻿<div class="ef-fs10">
+<div class="ef-fs10">
   font-size:10px;
 </div>
 <div class="ef-fs20">

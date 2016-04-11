@@ -1,4 +1,4 @@
-﻿<div class="cp-page-title">
+<div class="cp-page-title">
   <ul class="ef-float20 ef-lh30">
     <li>
       <h1>

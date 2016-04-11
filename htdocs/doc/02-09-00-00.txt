@@ -1,29 +1,29 @@
-﻿<div class="cp-toolbar">
+<div class="cp-toolbar">
   <div class="st-inner ef-float ef-bg-gray">
     <div class="ef-float-left">
       <ul class="ef-float7">
         <li>
-          <a class="cp-btn-mini ef-cp-white ef-mw60" href="javascript:void(0);">
+          <a class="cp-btn ef-cp-white ef-mw60" href="javascript:void(0);">
             操作A
           </a>
         </li>
         <li>
-          <a class="cp-btn-mini ef-cp-white ef-mw60" href="javascript:void(0);">
+          <a class="cp-btn ef-cp-white ef-mw60" href="javascript:void(0);">
             操作B
           </a>
         </li>
         <li>
-          <a class="cp-btn-mini ef-cp-white ef-mw60" href="javascript:void(0);">
+          <a class="cp-btn ef-cp-white ef-mw60" href="javascript:void(0);">
             操作C
           </a>
         </li>
         <li>
-          <a class="ef-lh24" href="javascript:void(0);">
+          <a class="ef-lh34" href="javascript:void(0);">
             text link
           </a>
         </li>
         <li>
-          <select class="cp-select ef-lh24">
+          <select class="cp-select">
             <option>
               select
             </option>
@@ -42,7 +42,7 @@
           </select>
         </li>
         <li>
-          <label class="cp-checkbox ef-lh24" href="javascript:void(0);">
+          <label class="cp-checkbox ef-lh34" href="javascript:void(0);">
             <input type="checkbox">
               checkbox
             </input>

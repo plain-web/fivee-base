@@ -1,4 +1,4 @@
-﻿<!-- modal/////////////////////////////////////////////// -->
+<!-- modal/////////////////////////////////////////////// -->
 <section class="md-modal js-modal" style="display:none;">
   <!-- modal contents type 'js-tpl0' -->
   <div class="st-body ef-w500 js-tpl0">

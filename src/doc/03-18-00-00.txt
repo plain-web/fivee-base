@@ -1,0 +1,3 @@
+﻿<div class="ef-bg-red ef-w200 ef-txt-ellipsis">
+  Fivee-base,Fivee-base,Fivee-base,Fivee-base,Fivee-base
+</div>

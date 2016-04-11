@@ -1,4 +1,4 @@
-﻿<section class="is-hidden">
+<section class="is-hidden">
   <span class="ef-txt-red">
     コンテンツを非表示にする場合のクラス: is-hidden
   </span>

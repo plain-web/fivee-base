@@ -1,0 +1,11 @@
+﻿<div class="is-table ef-w100p ef-bg-red ef-h200">
+  <div class="is-table-cell ef-brdr1 ef-w20p ef-vat">
+    ef-vat
+  </div>
+  <div class="is-table-cell ef-brdr1 ef-w20p ef-vam">
+    ef-vam
+  </div>
+  <div class="is-table-cell ef-w20p ef-vab">
+    ef-vab
+  </div>
+</div>

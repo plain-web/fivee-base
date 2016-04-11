@@ -1,4 +1,4 @@
-﻿<section class="ef-mgb10">
+<section class="ef-mgb10">
   <div class="ef-float is-col3">
     <div class="ef-float-left ef-cl-gray">
       <div class="st-inner ef-txt-white ef-pd7">
