@@ -242,7 +242,7 @@
 ============================================================= */
 table.md-table{
   line-height:$lh-table;
-  @include brd;
+  @include brd(1px,solid,$cl-brd-table);
   border-collapse: collapse;
   border-spacing: 0;
   background:$cl-white;
@@ -270,16 +270,16 @@ table.md-table{
       padding:$pd-table;
       font-size:$fs;
       background:$cl-bg-table-th;
-      @include brd-right(1px,solid,$cl-brd);
-      @include brd-bottom(1px,solid,$cl-brd);
+      @include brd-right(1px,solid,$cl-brd-table);
+      @include brd-bottom(1px,solid,$cl-brd-table);
       //white-space: nowrap;
       font-weight:bold;
       a,i{color:$cl-txt;}
     }
     td{
       padding:$pd-table;
-      @include brd-right(1px,solid,$cl-brd);
-      @include brd-bottom(1px,solid,$cl-brd);
+      @include brd-right(1px,solid,$cl-brd-table);
+      @include brd-bottom(1px,solid,$cl-brd-table);
     }
     th:last-child,
     td:last-child{border-right-width:none;}
