@@ -1,16 +1,16 @@
-﻿<section class="ef-mgb20">
+﻿<div class="ef-mgb20">
   <a class="cp-btn ef-cp-blue js-popup-open is-fixed js-tpl0" href="javascript:void(0);">
     ポップアップ(fixed)
   </a>
   <a class="cp-btn ef-cp-blue js-popup-open is-fixed js-tpl1" href="javascript:void(0);">
     ポップアップ1(fixed)
   </a>
-</section>
-<section>
+</div>
+<div>
   <a class="cp-btn ef-cp-green js-popup-open js-tpl2" href="javascript:void(0);">
     ポップアップ2(absolute)
   </a>
   <a class="cp-btn ef-cp-green js-popup-open js-tpl3" href="javascript:void(0);">
     ポップアップ3(absolute)
   </a>
-</section>
+</div>

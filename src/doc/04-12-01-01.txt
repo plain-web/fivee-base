@@ -1,8 +1,8 @@
 ﻿<!-- loader absolute////////////////////////////////// -->
-<section class="md-loader-abs js-loader-abs" style="display:none;">
+<div class="md-loader-abs js-loader-abs" style="display:none;">
   <div class="st-body ef-mgt7 ef-mgl40">
     <div class="st-inner">
       <img class="ef-w30" src="../img/loader.gif">
     </div>
   </div>
-</section>
+</div>

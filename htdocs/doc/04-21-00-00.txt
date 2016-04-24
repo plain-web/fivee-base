@@ -1,0 +1,24 @@
+<div id="js-ellipsis">
+  <ul>
+    <li>
+      <div class="js-ellipsis js-limit-txt40">
+        これはテスト文章で文字が設定された以上の数になると省略されます。これはテスト文章で文字が設定された以上の数になると省略されます。
+      </div>
+    </li>
+    <li>
+      <div class="js-ellipsis js-limit-txt35">
+        これはテスト文章で文字が設定された以上の数になると省略されます。これはテスト文章で文字が設定された以上の数になると省略されます。
+      </div>
+    </li>
+    <li>
+      <div class="js-ellipsis js-limit-txt20">
+        fivee-base,fivee-base,fivee-base,fivee-base,fivee-base,fivee-base,fivee-base,fivee-base,fivee-base,fivee-base,fivee-base,fivee-base,fivee-base,fivee-base,fivee-base,fivee-base,
+      </div>
+    </li>
+    <li>
+      <div class="js-ellipsis js-limit-txt50">
+        123456789101234567891012345678910123456789101234567891012345678910123456789101234567891012345678910123456789101234567891012345678910123456789101234567891012345678910123456789101234567891012345678910
+      </div>
+    </li>
+  </ul>
+</div>

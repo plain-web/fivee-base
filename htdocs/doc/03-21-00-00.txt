@@ -1,9 +1,9 @@
-<section class="ef-posi-rel">
+<div class="ef-posi-rel">
   relative
-</section>
-<section class="ef-posi-abs">
+</div>
+<div class="ef-posi-abs">
   absolute
-</section>
-<section class="ef-posi-fix">
+</div>
+<div class="ef-posi-fix">
   fixed
-</section>
+</div>

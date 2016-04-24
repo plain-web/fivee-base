@@ -1,7 +1,7 @@
 ﻿<!-- / collapse slide ///////////////////////// -->
 <div class="ef-float">
   <div class="ef-float-left">
-    <section class="js-collapse-slide-child0">
+    <div class="js-collapse-slide-child0">
       <div class="st-inner ef-bg-gray ef-brd1 ef-pd20">
         隠しコンテンツはここ
         <br>
@@ -9,15 +9,15 @@
         <br>
         隠しコンテンツはここ
       </div>
-    </section>
+    </div>
   </div>
   <div class="ef-float-left">
-    <section class="ef-mgt10">
+    <div class="ef-mgt10">
       <div class="st-inner ef-bg-gray ef-pd3 ef-brd1 ef-brdl0 ef-txt-center">
         <a class="js-collapse-slide js-collapse-slide-parent0" href="javascript:void(0);">
           <i class="fa fa-caret-left"></i>
         </a>
       </div>
-    </section>
+    </div>
   </div>
 </div>

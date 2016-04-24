@@ -1,70 +1,70 @@
-﻿<section class="ef-w150 ef-mgb20">
+﻿<div class="ef-w150 ef-mgb20">
   <div class="ef-op01">
     <div class="ef-cl-green ef-txt-white ef-txt-center ef-fs22">
       opacity:0.1;
     </div>
   </div>
-</section>
-<section class="ef-w150 ef-mgb20">
+</div>
+<div class="ef-w150 ef-mgb20">
   <div class="ef-op02">
     <div class="ef-cl-green ef-txt-white ef-txt-center ef-fs22">
       opacity:0.2;
     </div>
   </div>
-</section>
-<section class="ef-w150 ef-mgb20">
+</div>
+<div class="ef-w150 ef-mgb20">
   <div class="ef-op03">
     <div class="ef-cl-green ef-txt-white ef-txt-center ef-fs22">
       opacity:0.3;
     </div>
   </div>
-</section>
-<section class="ef-w150 ef-mgb20">
+</div>
+<div class="ef-w150 ef-mgb20">
   <div class="ef-op04">
     <div class="ef-cl-green ef-txt-white ef-txt-center ef-fs22">
       opacity:0.4;
     </div>
   </div>
-</section>
-<section class="ef-w150 ef-mgb20">
+</div>
+<div class="ef-w150 ef-mgb20">
   <div class="ef-op05">
     <div class="ef-cl-green ef-txt-white ef-txt-center ef-fs22">
       opacity:0.5;
     </div>
   </div>
-</section>
-<section class="ef-w150 ef-mgb20">
+</div>
+<div class="ef-w150 ef-mgb20">
   <div class="ef-op06">
     <div class="ef-cl-green ef-txt-white ef-txt-center ef-fs22">
       opacity:0.6;
     </div>
   </div>
-</section>
-<section class="ef-w150 ef-mgb20">
+</div>
+<div class="ef-w150 ef-mgb20">
   <div class="ef-op07">
     <div class="ef-cl-green ef-txt-white ef-txt-center ef-fs22">
       opacity:0.7;
     </div>
   </div>
-</section>
-<section class="ef-w150 ef-mgb20">
+</div>
+<div class="ef-w150 ef-mgb20">
   <div class="ef-op08">
     <div class="ef-cl-green ef-txt-white ef-txt-center ef-fs22">
       opacity:0.8;
     </div>
   </div>
-</section>
-<section class="ef-w150 ef-mgb20">
+</div>
+<div class="ef-w150 ef-mgb20">
   <div class="ef-op09">
     <div class="ef-cl-green ef-txt-white ef-txt-center ef-fs22">
       opacity:0.9;
     </div>
   </div>
-</section>
-<section class="ef-w150 ef-mgb20">
+</div>
+<div class="ef-w150 ef-mgb20">
   <div class="ef-op10">
     <div class="ef-cl-green ef-txt-white ef-txt-center ef-fs22">
       opacity:1.0;
     </div>
   </div>
-</section>
+</div>

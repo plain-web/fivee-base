@@ -1,5 +1,5 @@
 ﻿<!-- / tab /////////////////////////// -->
-<section class="md-tab js-tab ef-mgb20">
+<div class="md-tab js-tab ef-mgb20">
   <div class="st-body md-tab-btn">
     <div class="st-inner">
       <!-- / tab /////////////////////////// -->
@@ -63,7 +63,7 @@
       <ul class="js-tab-content">
         <!-- /● tab content /////////////////////////// -->
         <li class="is-current">
-          <section>
+          <div>
             <div class="st-inner">
               <strong>
                 tab0
@@ -71,11 +71,11 @@
               <br>
               タブの内容はここ
             </div>
-          </section>
+          </div>
         </li>
         <!-- /● tab content /////////////////////////// -->
         <li>
-          <section>
+          <div>
             <div class="st-inner">
               <strong>
                 tab1
@@ -83,11 +83,11 @@
               <br>
               タブの内容はここ
             </div>
-          </section>
+          </div>
         </li>
         <!-- /● tab content /////////////////////////// -->
         <li>
-          <section>
+          <div>
             <div class="st-inner">
               <strong>
                 tab2
@@ -95,11 +95,11 @@
               <br>
               タブの内容はここ
             </div>
-          </section>
+          </div>
         </li>
         <!-- /● tab content /////////////////////////// -->
         <li>
-          <section>
+          <div>
             <div class="st-inner">
               <strong>
                 tab3
@@ -107,11 +107,11 @@
               <br>
               タブの内容はここ
             </div>
-          </section>
+          </div>
         </li>
         <!-- /● tab content /////////////////////////// -->
         <li>
-          <section>
+          <div>
             <div class="st-inner">
               <strong>
                 tab4
@@ -119,11 +119,11 @@
               <br>
               タブの内容はここ
             </div>
-          </section>
+          </div>
         </li>
         <!-- /● tab content /////////////////////////// -->
         <li>
-          <section>
+          <div>
             <div class="st-inner">
               <strong>
                 tab5
@@ -131,11 +131,11 @@
               <br>
               タブの内容はここ
             </div>
-          </section>
+          </div>
         </li>
         <!-- /● tab content /////////////////////////// -->
         <li>
-          <section>
+          <div>
             <div class="st-inner">
               <strong>
                 tab6
@@ -143,11 +143,11 @@
               <br>
               タブの内容はここ
             </div>
-          </section>
+          </div>
         </li>
         <!-- /● tab content /////////////////////////// -->
         <li>
-          <section>
+          <div>
             <div class="st-inner">
               <strong>
                 tab7
@@ -155,9 +155,9 @@
               <br>
               タブの内容はここ
             </div>
-          </section>
+          </div>
         </li>
       </ul>
     </div>
   </div>
-</section>
+</div>

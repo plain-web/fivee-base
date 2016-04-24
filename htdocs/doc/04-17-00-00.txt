@@ -1,5 +1,5 @@
 <!-- promo footer/////////////////////////////////////////// -->
-<section class="md-promo-footer" id="js-promo-footer">
+<div class="md-promo-footer" id="js-promo-footer">
   <div class="st-body ef-op09">
     <div class="st-inner is-bold ef-bg-gray ef-pd7 ef-txt-center">
       <a class="cp-btn ef-cp-green ef-mgr3" href="javascript:void(0);">
@@ -10,4 +10,4 @@
       </a>
     </div>
   </div>
-</section>
+</div>

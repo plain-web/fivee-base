@@ -1,4 +1,4 @@
-<section class="ef-mgb10">
+<div class="ef-mgb10">
   <div class="ef-float is-col3">
     <div class="ef-float-left ef-cl-gray">
       <div class="st-inner ef-txt-white ef-pd7">
@@ -16,8 +16,8 @@
       </div>
     </div>
   </div>
-</section>
-<section class="ef-mgb10">
+</div>
+<div class="ef-mgb10">
   <ul class="ef-float is-col5">
     <li class="ef-cl-gray">
       <div class="st-inner ef-txt-white ef-pd7">
@@ -45,4 +45,4 @@
       </div>
     </li>
   </ul>
-</section>
+</div>

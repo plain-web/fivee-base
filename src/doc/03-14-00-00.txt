@@ -1,15 +1,15 @@
-﻿<section class="ef-mgb20">
+﻿<div class="ef-mgb20">
   <div class="ef-txt-red ef-fs22 is-bold">
     ef-txt-red
   </div>
-</section>
-<section class="ef-mgb20">
+</div>
+<div class="ef-mgb20">
   <div class="ef-txt-blue ef-fs22 is-bold">
     ef-txt-blue
   </div>
-</section>
-<section class="ef-mgb20">
+</div>
+<div class="ef-mgb20">
   <div class="ef-txt-green ef-fs22 is-bold">
     ef-txt-green
   </div>
-</section>
+</div>

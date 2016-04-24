@@ -1,7 +1,7 @@
 /*! ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
  * Fivee-base
- * ver.1.5.8 / 2016.4.11
+ * ver.1.6.0 / 2016.4.20
  * http://plain-web.com/fivee-base/apps/
  * Released under MIT license. Copyright 2016 Yusuke Maruyama.
  *
@@ -43,6 +43,15 @@ function thisClassGet(clickThis, returnClass){
   });
   targetClass = '.' + thisClass;
   return targetClass;
+}
+/*========================================================================
+  [common] input text chacker
+======================================================================== */
+function inputChecker(targetTxt) {
+ if (targetTxt.match(/[^A-Za-z0-9]+/)) { //only en
+  return false;
+ }
+ return true;
 }
 /*========================================================================
   scrolltop arrow
@@ -111,7 +120,7 @@ if(equalizerHere.length){
   }
 }
 /*========================================================================
-nav
+ nav
 ======================================================================== */
 $('.js-nav-main a').on('click', function(){
   //parents class
@@ -354,14 +363,14 @@ var popupHandler = {
   popupShow: function(topPosi, leftPosi, targetClass){
     //show contents
     $(popupWrap + ' > .st-body').removeClass('is-current');
-    $(popupWrap + ' ' + targetClass).addClass('is-current');
+    $(popupWrap + ' > .st-body' + targetClass).addClass('is-current');
 
     $(popupWrap).css({
       opacity: '0',
       display: 'block'
     });
 
-    popupWidth = $(popupWrap + ' ' + targetClass).outerWidth(true);
+    popupWidth = $(popupWrap + ' > .st-body' + targetClass).outerWidth(true);
     totalLeftPosi = leftPosi + popupWidth;
     popupArrowPosi = triggerWidth / 2;
 
@@ -388,7 +397,7 @@ var popupHandler = {
       topPosi = topPosi - $(window).scrollTop();
       leftPosi = leftPosi + $(window).scrollLeft();
       //position
-      $(popupWrap + ' ' + targetClass).css({
+      $(popupWrap + ' > .st-body' + targetClass).css({
         position:'',
         top:' ',
         left:'',
@@ -403,7 +412,7 @@ var popupHandler = {
       }).addClass(popupPosiFIx);
     }else{
       //position
-      $(popupWrap + ' ' + targetClass).css({
+      $(popupWrap + ' > .st-body' + targetClass).css({
         position:'',
         top:'',
         left:'',
@@ -478,7 +487,7 @@ $('.js-modal-open').on('click', function(){
   targetClass = thisClassGet(clickThis, returnClass);
 
   var modalClass = $('.js-modal');
-  var modalTargetClass = $('.js-modal ' + targetClass);
+  var modalTargetClass = $('.js-modal > .st-body' + targetClass);
 
   //show contents
   $('.js-modal > .st-body').removeClass('is-current').css('margin-left', '');
@@ -508,7 +517,7 @@ $('.js-message-open').on('click', function(){
   targetClass = thisClassGet(clickThis, returnClass);
 
   $('.js-message > .st-body').removeClass('is-open');
-  $('.js-message > ' + targetClass).addClass('is-open');
+  $('.js-message > .st-body' + targetClass).addClass('is-open');
 });
 
 $('.js-message-close').on('click', function(){
@@ -521,26 +530,27 @@ var toastWrap = '.js-toast';
 var toastTrigger = '.js-toast-open';
 var speedFadeout = 700;
 var speedTimer = 4000;
-var timer;
+var toastTImer;
 
 $(toastTrigger).on('click', function(){
   clickThis = $(this);
   returnClass = 'js-tpl';
   targetClass = thisClassGet(clickThis, returnClass);
 
-  clearTimeout(timer);
+  clearTimeout(toastTImer);
   $( toastWrap + ' > .st-body').hide();
-  var targetWidth = $( toastWrap + ' > ' + targetClass).css('margin-left', '').show().outerWidth(true)/2;
-  $( toastWrap + ' > ' + targetClass).css('margin-left', -targetWidth);
+  var targetWidth = $( toastWrap + ' > .st-body' + targetClass).css('margin-left', '').show().outerWidth(true)/2;
+  $( toastWrap + ' > .st-body' + targetClass).css('margin-left', -targetWidth);
  
   //set　timer
-  timer = setTimeout( function(){ 
-    $( toastWrap + ' > ' + targetClass).fadeOut(speedFadeout);
+  toastTImer = setTimeout( function(){ 
+    console.log('is timer')
+    $( toastWrap + ' > .st-body' + targetClass).fadeOut(speedFadeout);
   }, speedTimer);
 
   $('.js-toast-close').on('click', function(){
-    $( toastWrap + ' > ' + targetClass).hide();
-    clearTimeout(timer);　
+    $( toastWrap + ' > .st-body' + targetClass).hide();
+    clearTimeout(toastTImer);　
   });
 });
 /*========================================================================
@@ -866,7 +876,7 @@ $('.js-check input').on('change', function(){
       var targetClass = thisClassGet(clickThis, returnClass);
 
       //after check
-      checkedHandler.trHightLight(targetClass)
+      checkedHandler.trHightLight(targetClass);
     }
   }
 });
@@ -966,14 +976,20 @@ $('.js-nav-block a').on('click', function(){
 ======================================================================== */
 var pagenation = '.js-pagination';
 var pagenationList = pagenation + ' li';
-var notouchClass, parentList, listNum;
+var notouchClass, parentList, listNum, pagenationGroup;
 $(pagenationList + ' a').on('click', function(){
+  clickThis = $(this).parents(pagenation);
+  returnClass = 'js-grp';
+  targetClass = thisClassGet(clickThis, returnClass);
+  pagenationGroup = targetClass;
+
   notouchClass = $(this).parents('li').hasClass('js-notouch');
+
   if(!notouchClass){
-    $(pagenationList).removeClass('is-current');
+    $(pagenationGroup + pagenationList).removeClass('is-current');
     parentList = $(this).parent('li');
     listNum = parentList.index();
-    $(pagenation).each(function(){
+    $(pagenation + pagenationGroup).each(function(){
       $(this).find('li').eq(listNum).addClass('is-current');
     });
   }
@@ -1092,16 +1108,65 @@ function numCounterRun(){
 /*========================================================================
   state current
 ======================================================================== */
-var stateCurrent = $('.js-state-current');
-var isCurrentTrigger = $('.js-state-current > a');
+var stateCurrentWrap = $('.js-state-current');
+var stateCurrent = '.js-state-current';
+var isCurrentTrigger = $(stateCurrent + ' a');
 var isCurrent = 'is-current';
 var thisParent;
-if(stateCurrent.length){
+if(stateCurrentWrap.length){
   $(isCurrentTrigger).on('click', function(){
-    thisParent = $(this).parent(stateCurrent);
+    thisParent = $(this).parents(stateCurrent);
+    thisParentList = $(this).parent('li');
     thisParent.find('.' + isCurrent).removeClass(isCurrent);
-    $(this).addClass(isCurrent);
+
+    if(thisParentList.length){
+      thisParentList.addClass(isCurrent);
+    }else{
+      $(this).addClass(isCurrent);
+    }
   })
+}
+/*========================================================================
+  ellipsis text size
+======================================================================== */
+var ellipsis = $('#js-ellipsis');
+var ellipsisWrap = $('.js-ellipsis');
+var afterTxt = '…';
+var textLimit,targetTxt,textLength,matchChaset;
+
+if(ellipsis.length){
+  $(ellipsisWrap).each(function(){
+    //return targetClass
+    clickThis = $(this);
+    returnClass = 'js-limit-txt';
+    targetClass = thisClassGet(clickThis, returnClass);
+    targetClass = targetClass.replace('.js-limit-txt', '');
+    
+    textLimit = parseInt(targetClass);
+    targetTxt = $(this).text();
+    matchChaset = inputChecker(targetTxt);
+
+    //analyze text
+    textLength = 0;
+    if(!matchChaset){
+      for(var i = 0; i < targetTxt.length; i++) {
+        textLength += targetTxt.charCodeAt(i) <= 255 ? 0.5 : 1;
+        if (textLength > textLimit) {
+          targetTxt = targetTxt.substr(0, i) + afterTxt;
+          break;
+        }
+      }
+    }else{ // only en
+      for(var i = 0; i < targetTxt.length; i++) {
+        textLength += targetTxt.charCodeAt(i) <= 255 ? 1 : 1;
+        if (textLength > textLimit) {
+          targetTxt = targetTxt.substr(0, i) + afterTxt;
+          break;
+        }
+      }
+    }
+    $(this).text(targetTxt);
+  });
 }
 /*========================================================================
   mediaquery aside

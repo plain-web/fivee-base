@@ -1,4 +1,4 @@
-﻿<section class="ef-mgb20">
+﻿<div class="ef-mgb20">
   <a class="cp-btn is-disabled" href="javascript:void(0);">
     btn: is-disabled
   </a>
@@ -8,8 +8,8 @@
   <a class="cp-btn ef-cp-theme is-disabled" href="javascript:void(0);">
     btn :is-disabled
   </a>
-</section>
-<section class="ef-mgb20">
+</div>
+<div class="ef-mgb20">
   <a class="cp-tag ef-cp-red is-disabled" href="javascript:void(0);">
     tag: is-disabled
   </a>
@@ -19,9 +19,9 @@
   <a class="cp-tag ef-cp-green is-disabled" href="javascript:void(0);">
     tag: is-disabled
   </a>
-</section>
-<section>
+</div>
+<div>
   <div class="is-disabled">
     text: is-disabled
   </div>
-</section>
+</div>

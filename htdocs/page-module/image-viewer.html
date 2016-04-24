@@ -4,7 +4,7 @@
 <!--[if gte IE 10]><!--><html lang="ja"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>image-viewer | レスポンシブ対応のcssフレームワーク | html,css,javascript</title>
+  <title>image-viewer | レスポンシブ対応のcssフレームワーク</title>
   <meta content="cssフレームワークはFivee-baseが便利です。レスポンシブでアプリケーションのフロントエンドやWebサイトを簡単に作る事ができます。" name="description">
   <meta content="css,フレームワーク,レスポンシブ,フロントエンド" name="keywords">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -189,7 +189,7 @@
     </div>
   </header>
   <!-- slide-nav////////////////////////////////////////////// -->
-  <section class="md-nav-slide rs1-show js-nav-slide">
+  <div class="md-nav-slide rs1-show js-nav-slide">
     <div class="st-body">
       <div class="st-inner">
         <ul class="ef-lh40">
@@ -248,9 +248,9 @@
         </ul>
       </div>
     </div>
-  </section>
+  </div>
   <!-- page-container////////////////////////////////////////////// -->
-  <section class="page-container">
+  <div class="page-container">
     <div class="st-body">
       <div class="st-inner ef-float">
         <!-- / page-nav////////////////////////////////////////////// -->
@@ -899,6 +899,15 @@
                             </ul>
                           </a>
                         </li>
+                        <li>
+                          <a href="../page-module/text-ellipsis.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                text-ellipsis
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
                       </ul>
                     </li>
                     <li>
@@ -952,22 +961,24 @@
           <div class="st-body js-page-contents">
             <div class="st-inner">
               <!-- / page title////////////////////////////////////////////// -->
-              <section class="cp-page-title ef-mgb10">
+              <div class="cp-page-title ef-mgb10">
                 <div class="st-inner">
-                  <ul class="ef-float20 ef-lh30">
-                    <li>
-                      <h1>
+                  <h1>
+                    <ul class="ef-float20 ef-lh30">
+                      <li>
                         image-viewer
-                      </h1>
-                    </li>
-                    <li>
-                      写真の拡大などにご利用ください。
-                    </li>
-                  </ul>
+                      </li>
+                      <li>
+                        <small class="is-nobold ef-fs14">
+                          写真の拡大などにご利用ください。
+                        </small>
+                      </li>
+                    </ul>
+                  </h1>
                 </div>
-              </section>
+              </div>
               <!-- / breadcrumb////////////////////////////////////////////// -->
-              <section class="cp-breadcrumb-model1 ef-mgb20">
+              <div class="cp-breadcrumb-model1 ef-mgb20">
                 <div class="st-inner ef-float">
                   <div class="ef-float-left ef-mxw80p">
                     <ul class="ef-float10 ef-lh24">
@@ -1006,9 +1017,9 @@
                     </ul>
                   </div>
                 </div>
-              </section>
+              </div>
               <!-- / panel////////////////////////////////////////////// -->
-              <section class="cp-panel ef-cp-white ef-w100p">
+              <div class="cp-panel ef-cp-white ef-w100p">
                 <div class="st-body">
                   <div class="st-inner ef-mh400">
                     <!-- / example00 ////////////////////////////////// -->
@@ -1017,9 +1028,9 @@
                         <div class="example-title ef-mgb3">
                           <ul class="ef-float ef-lh25">
                             <li>
-                              <h5>
+                              <h2>
                                 image-viewer
-                              </h5>
+                              </h2>
                             </li>
                           </ul>
                         </div>
@@ -1041,7 +1052,7 @@
                           </a>
                         </div>
                         <div class="example-remarks ef-mgb20">
-                          <section class="cp-remarks ef-cp-blue ef-w100p">
+                          <div class="cp-remarks ef-cp-blue ef-w100p">
                             <div class="st-inner">
                               <div class="st-outer ef-lh20">
                                 modalのテンプレートをimage-viewerに見せるには、htmlソースのクラス名
@@ -1055,7 +1066,7 @@
                                 を付与してください。
                               </div>
                             </div>
-                          </section>
+                          </div>
                         </div>
                         <div class="example-btn">
                           <ul class="ef-float7">
@@ -1078,13 +1089,13 @@
                     </section>
                   </div>
                 </div>
-              </section>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
   <!-- footer///////////////////////////////////////////// -->
   <footer class="page-footer">
     <div class="st-body ef-posi-fix">
@@ -1094,7 +1105,7 @@
     </div>
   </footer>
   <!-- popup///////////////////////////////////////////// -->
-  <section class="md-popup js-popup" style="display:none;">
+  <div class="md-popup js-popup" style="display:none;">
     <!-- popup contents type 'js-tpl0' -->
     <div class="st-body js-tpl0">
       <div class="st-inner ef-w120 ef-sdw02">
@@ -1214,7 +1225,7 @@
           </ul>
         </div>
         <div class="md-popup-body ef-pd10 ef-mgb10">
-          <section class="ef-mgb10">
+          <div class="ef-mgb10">
             <ul class="ef-float7 ef-lh30">
               <li class="ef-w50 ef-txt-right">
                 Title
@@ -1223,8 +1234,8 @@
                 <input class="cp-input ef-w150" type="text">
               </li>
             </ul>
-          </section>
-          <section>
+          </div>
+          <div class="div">
             <ul class="ef-float7 ef-lh30">
               <li class="ef-w50 ef-txt-right">
                 Folder
@@ -1237,7 +1248,7 @@
                 </select>
               </li>
             </ul>
-          </section>
+          </div>
         </div>
         <div class="md-popup-footer ef-pdb7">
           <div class="ef-txt-center">
@@ -1251,20 +1262,20 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
   <!-- tooltip///////////////////////////////////////////// -->
-  <section class="md-tooltip js-tooltip" style="display:none;">
+  <div class="md-tooltip js-tooltip" style="display:none;">
     <div class="st-body ef-mxw170">
       <div class="st-inner">
-        <section class="md-tooltip-wrap js-tooltip-wrap"></section>
-        <section class="md-balloon js-balloon">
+        <div class="md-tooltip-wrap js-tooltip-wrap"></div>
+        <div class="md-balloon js-balloon">
           <div class="md-triangle-bottom"></div>
-        </section>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
   <!-- scrolltop/////////////////////////////////////////// -->
-  <section class="md-scrolltop js-scrolltop" style="display:none;">
+  <div class="md-scrolltop js-scrolltop" style="display:none;">
     <div class="st-body ef-sdw01">
       <div class="st-inner">
         <a class="ef-fs16" href="javascript:void(0);" id="js-pageTop">
@@ -1272,9 +1283,9 @@
         </a>
       </div>
     </div>
-  </section>
+  </div>
   <!-- modal/////////////////////////////////////////////// -->
-  <section class="md-modal js-modal" style="display:none;">
+  <div class="md-modal js-modal" style="display:none;">
     <!-- modal contents type 'js-tpl0' -->
     <div class="st-body md-image-viewer ef-w500 js-tpl0">
       <div class="st-inner">
@@ -1295,9 +1306,9 @@
         </div>
         <!-- modal-body  //////////////////// -->
         <div class="md-modal-body ef-mh250 ef-pd20 ef-mxh350-ovf">
-          <section class="ef-txt-center">
+          <div class="ef-txt-center">
             <img class="ef-wauto" src="../img/test-01.png">
-          </section>
+          </div>
         </div>
         <!-- modal-footer ////////////////// -->
         <div class="md-modal-footer">
@@ -1309,14 +1320,12 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
   <!-- cartain//////////////////////////////////////////// -->
-  <section class="md-cartain js-cartain ef-bg-gray ef-op05" style="display:none;"></section>
+  <div class="md-cartain js-cartain ef-bg-gray ef-op05" style="display:none;"></div>
   <!-- script//////////////////////////////////////////// -->
   <!--[if gte IE 10]><!--><script src="../js/vendor/jquery/dist/jquery.min.js" type="text/javascript"></script><!--<![endif]-->
   <!--[if lte IE 9]> <script src="../js/vendor/jquery-legacy/dist/jquery.min.js" type="text/javascript"></script> <![endif]-->
+  <script src="../js/google-analytics.min.js" type="text/javascript"></script>
   <script src="../js/fivee-base.min.js" type="text/javascript"></script>
-  <!-- :javascript -->
-  <!-- $(function(){ -->
-  <!-- )); -->
 </body></html>

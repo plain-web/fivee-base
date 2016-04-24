@@ -1,5 +1,5 @@
 <!-- modal/////////////////////////////////////////////// -->
-<section class="md-modal js-modal" style="display:none;">
+<div class="md-modal js-modal" style="display:none;">
   <!-- modal contents type 'js-tpl0' -->
   <div class="st-body md-image-viewer ef-w500 js-tpl0">
     <div class="st-inner">
@@ -20,9 +20,9 @@
       </div>
       <!-- modal-body  //////////////////// -->
       <div class="md-modal-body ef-mh250 ef-pd20 ef-mxh350-ovf">
-        <section class="ef-txt-center">
+        <div class="ef-txt-center">
           <img class="ef-wauto" src="../img/test-01.png">
-        </section>
+        </div>
       </div>
       <!-- modal-footer ////////////////// -->
       <div class="md-modal-footer">
@@ -34,6 +34,6 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 <!-- cartain//////////////////////////////////////////// -->
-<section class="md-cartain js-cartain ef-bg-gray ef-op05" style="display:none;"></section>
+<div class="md-cartain js-cartain ef-bg-gray ef-op05" style="display:none;"></div>

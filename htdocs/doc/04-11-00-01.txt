@@ -1,5 +1,5 @@
 <!-- / collapse ////////////////////////////// -->
-<section class="ef-mgt3 js-collapse-child0" style="display:none;">
+<div class="ef-mgt3 js-collapse-child0" style="display:none;">
   <div class="st-inner ef-bg-gray ef-pd20">
     隠しコンテンツはここ
     <br>
@@ -7,4 +7,4 @@
     <br>
     隠しコンテンツはここ
   </div>
-</section>
+</div>

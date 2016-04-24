@@ -1,5 +1,5 @@
 ﻿<!-- message///////////////////////////////////////////// -->
-<section class="md-message js-message">
+<div class="md-message js-message">
   <!-- message contents type 'js-tpl0' -->
   <div class="st-body md-message-alert ef-mgt20 js-tpl0">
     <div class="st-inner ef-sdw01">
@@ -68,4 +68,4 @@
       </dl>
     </div>
   </div>
-</section>
+</div>

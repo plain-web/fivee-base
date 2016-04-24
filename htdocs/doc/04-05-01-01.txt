@@ -1,27 +1,27 @@
 <!-- nav block body//////////////////////// -->
-<section class="js-nav-block-content0 ef-mgb50">
+<div class="js-nav-block-content0 ef-mgb50">
   <div class="st-inner">
     <ul>
       <li class="js-nav-block-child0">
-        <section>
+        <div>
           ナビゲーションのコンテンツはここ
-        </section>
+        </div>
       </li>
       <li class="js-nav-block-child1" style="display:none;">
-        <section>
+        <div>
           ナビゲーション1のコンテンツはここ
-        </section>
+        </div>
       </li>
       <li class="js-nav-block-child2" style="display:none;">
-        <section>
+        <div>
           ナビゲーション2のコンテンツはここ
-        </section>
+        </div>
       </li>
       <li class="js-nav-block-child3" style="display:none;">
-        <section>
+        <div>
           ナビゲーション3のコンテンツはここ
-        </section>
+        </div>
       </li>
     </ul>
   </div>
-</section>
+</div>

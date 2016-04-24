@@ -1,4 +1,4 @@
-<section>
+<div>
   <ul class="ef-float10">
     <li>
       <div class="ef-w120 ef-cl-blue ef-rd3 ef-txt-center ef-txt-white" href="javascript:void(0);">
@@ -22,4 +22,4 @@
       </div>
     </li>
   </ul>
-</section>
+</div>

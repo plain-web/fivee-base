@@ -1,4 +1,4 @@
-<section class="ef-mgb20">
+<div class="ef-mgb20">
   【1】有効幅1で解除させるクラスは
   <span class="ef-txt-red">
     rs1-dl-nofloat
@@ -18,8 +18,8 @@
       about Fivee-base
     </dd>
   </dl>
-</section>
-<section class="ef-mgb20">
+</div>
+<div class="ef-mgb20">
   【2】有効幅2で解除させるクラスは
   <span class="ef-txt-red">
     rs2-dl-nofloat
@@ -39,8 +39,8 @@
       about Fivee-base
     </dd>
   </dl>
-</section>
-<section class="ef-mgb20">
+</div>
+<div class="ef-mgb20">
   【3】有効幅3で解除させるクラスは
   <span class="ef-txt-red">
     rs3-dl-nofloat
@@ -60,4 +60,4 @@
       about Fivee-base
     </dd>
   </dl>
-</section>
+</div>

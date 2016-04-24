@@ -1,5 +1,5 @@
-﻿<section class="ef-w130 ef-pd10 ef-bg-red">
+﻿<div class="ef-w130 ef-pd10 ef-bg-red">
   <div class="is-nowrap">
     折り返し禁止折り返し禁止折り返し禁止折り返し禁止
   </div>
-</section>
+</div>

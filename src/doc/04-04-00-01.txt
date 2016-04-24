@@ -1,11 +1,11 @@
 ﻿<!-- tooltip///////////////////////////////////////////// -->
-<section class="md-tooltip js-tooltip" style="display:none;">
+<div class="md-tooltip js-tooltip" style="display:none;">
   <div class="st-body ef-mxw170">
     <div class="st-inner">
-      <section class="md-tooltip-wrap js-tooltip-wrap"></section>
-      <section class="md-balloon js-balloon">
+      <div class="md-tooltip-wrap js-tooltip-wrap"></div>
+      <div class="md-balloon js-balloon">
         <div class="md-triangle-bottom"></div>
-      </section>
+      </div>
     </div>
   </div>
-</section>
+</div>

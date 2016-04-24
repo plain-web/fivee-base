@@ -1,5 +1,5 @@
 ﻿<!-- / pagination/////////////////////////// -->
-<div class="md-pagination ef-cp-blue js-pagination">
+<div class="md-pagination ef-cp-blue js-pagination js-grp0">
   <ul class="ef-float3">
     <li class="js-notouch">
       <a class="ef-mw30" href="javascript:void(0);">

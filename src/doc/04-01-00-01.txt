@@ -1,5 +1,5 @@
 ﻿<!-- modal/////////////////////////////////////////////// -->
-<section class="md-modal js-modal" style="display:none;">
+<div class="md-modal js-modal" style="display:none;">
   <!-- modal contents type 'js-tpl0' -->
   <div class="st-body ef-w500 js-tpl0">
     <div class="st-inner">
@@ -18,12 +18,12 @@
       </div>
       <!-- modal-body  //////////////////// -->
       <div class="md-modal-body ef-mh250 ef-pd20 ef-mxh300-ovf">
-        <section class="is-bold ef-mgb10">
+        <div class="is-bold ef-mgb10">
           Modal contents here
-        </section>
-        <section>
+        </div>
+        <div>
           Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents Modal contents
-        </section>
+        </div>
       </div>
       <!-- modal-footer ////////////////// -->
       <div class="md-modal-footer">
@@ -56,18 +56,18 @@
       </div>
       <!-- modal-body  //////////////////// -->
       <div class="md-modal-body ef-pd20 ef-mxh300-ovf">
-        <section class="ef-mgb10">
+        <div class="ef-mgb10">
           Modal contents here
-        </section>
-        <section class="ef-mgb10">
+        </div>
+        <div class="ef-mgb10">
           <input class="cp-input" type="text">
-        </section>
-        <section class="ef-mgb10">
+        </div>
+        <div class="ef-mgb10">
           <input class="cp-input" type="text">
-        </section>
-        <section class="ef-mgb10">
+        </div>
+        <div class="ef-mgb10">
           <textarea class="cp-textarea"></textarea>
-        </section>
+        </div>
       </div>
       <!-- modal-footer ////////////////// -->
       <div class="md-modal-footer">
@@ -82,4 +82,4 @@
       </div>
     </div>
   </div>
-</section>
+</div>

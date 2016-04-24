@@ -1,7 +1,7 @@
-﻿<section class="ef-mgb20">
+﻿<div class="ef-mgb20">
   <div class="ef-w80 ef-rotate15">
     <div class="ef-cl-red ef-txt-white ef-pd10">
       rotate15
     </div>
   </div>
-</section>
+</div>

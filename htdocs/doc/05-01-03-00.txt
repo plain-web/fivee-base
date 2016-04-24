@@ -1,4 +1,4 @@
-<section class="ef-mgb20">
+<div class="ef-mgb20">
   【1】有効幅1だけで表示させるクラスは
   <span class="ef-txt-red">
     rs1-show
@@ -7,8 +7,8 @@
   <div class="ef-cl-blue ef-txt-white ef-pd10 rs1-show">
     有効幅1だけで表示
   </div>
-</section>
-<section class="ef-mgb20">
+</div>
+<div class="ef-mgb20">
   【2】有効幅2だけで表示させるクラスは
   <span class="ef-txt-red">
     rs2-show
@@ -17,8 +17,8 @@
   <div class="ef-cl-blue ef-txt-white ef-pd10 rs2-show">
     有効幅2だけで表示
   </div>
-</section>
-<section class="ef-mgb20">
+</div>
+<div class="ef-mgb20">
   【3】有効幅3だけで表示させるクラスは
   <span class="ef-txt-red">
     rs3-show
@@ -27,4 +27,4 @@
   <div class="ef-cl-blue ef-txt-white ef-pd10 rs3-show">
     有効幅3だけで表示
   </div>
-</section>
+</div>

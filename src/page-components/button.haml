@@ -7,7 +7,7 @@
   <!--<![endif]-->
   %head
     %meta(charset="utf-8")
-    %title button | レスポンシブ対応のcssフレームワーク | html,css,javascript
+    %title button | レスポンシブ対応のcssフレームワーク
     %meta(name="description" content="cssフレームワークはFivee-baseが便利です。レスポンシブでアプリケーションのフロントエンドやWebサイトを簡単に作る事ができます。")
     %meta(name="keywords" content="css,フレームワーク,レスポンシブ,フロントエンド")
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
@@ -119,7 +119,7 @@
                     %li
                       %i.fa.fa-caret-down
     / slide-nav//////////////////////////////////////////////
-    %section.md-nav-slide.rs1-show.js-nav-slide
+    .md-nav-slide.rs1-show.js-nav-slide
       .st-body
         .st-inner
           %ul.ef-lh40
@@ -154,7 +154,7 @@
                   %li.js-ic-arrow
                     %i.fa.fa-caret-down
     / page-container//////////////////////////////////////////////
-    %section.page-container
+    .page-container
       .st-body
         .st-inner.ef-float
           // page-nav//////////////////////////////////////////////
@@ -524,6 +524,11 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   number-counter
+                          %li
+                            %a(href="../page-module/text-ellipsis.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  text-ellipsis
                       %li
                         .ef-fs11.ef-op05
                           State
@@ -552,16 +557,17 @@
             .st-body.js-page-contents
               .st-inner
                 // page title//////////////////////////////////////////////
-                %section.cp-page-title.ef-mgb10
+                .cp-page-title.ef-mgb10
                   .st-inner
-                    %ul.ef-float20.ef-lh30
-                      %li
-                        %h1
+                    %h1
+                      %ul.ef-float20.ef-lh30
+                        %li
                           button
-                      %li
-                        様々なボタンをご利用いただけます。
+                        %li
+                          %small.is-nobold.ef-fs14
+                            様々なボタンをご利用いただけます。
                 // breadcrumb//////////////////////////////////////////////
-                %section.cp-breadcrumb-model1.ef-mgb20
+                .cp-breadcrumb-model1.ef-mgb20
                   .st-inner.ef-float
                     .ef-float-left.ef-mxw80p
                       %ul.ef-float10.ef-lh24
@@ -585,7 +591,7 @@
                           %a.cp-btn-mini.ef-cp-white.ef-w30.js-bookmark-open.js-tpl3(href="#{v}")
                             %i.fa.fa-star-o.ef-fs14
                 // panel//////////////////////////////////////////////
-                %section.cp-panel.ef-cp-white.ef-w100p
+                .cp-panel.ef-cp-white.ef-w100p
                   .st-body
                     .st-inner.ef-mh400
                       // example00 //////////////////////////////////
@@ -594,7 +600,7 @@
                           .example-title.ef-mgb3
                             %ul.ef-float.ef-lh25
                               %li
-                                %h5
+                                %h2
                                   button
                           .example-summary.ef-fs12.ef-mgb30
                             高さを調整する事ができます。HTMLソースのクラス名
@@ -643,7 +649,7 @@
                                 %a.cp-btn.ef-cp-theme.ef-mw100(href="#{v}")
                                   theme
                           .example-remarks.ef-mgb20
-                            %section.cp-remarks.ef-cp-blue.ef-w100p
+                            .cp-remarks.ef-cp-blue.ef-w100p
                               .st-inner
                                 .st-outer.ef-lh20
                                   最小幅を変更する事ができます。HTMLソースの
@@ -669,7 +675,7 @@
                           .example-title.ef-mgb3
                             %ul.ef-float.ef-lh25
                               %li
-                                %h5
+                                %h2
                                   button
                                   %span.ef-fs14
                                     (mini)
@@ -720,7 +726,7 @@
                                 %a.cp-btn-mini.ef-cp-theme.ef-mw60(href="#{v}")
                                   theme
                           .example-remarks.ef-mgb20
-                            %section.cp-remarks.ef-cp-blue.ef-w100p
+                            .cp-remarks.ef-cp-blue.ef-w100p
                               .st-inner
                                 .st-outer.ef-lh20
                                   最小幅を変更する事ができます。HTMLソースの
@@ -746,7 +752,7 @@
                           .example-title.ef-mgb3
                             %ul.ef-float.ef-lh25
                               %li
-                                %h5
+                                %h2
                                   button
                                   %span.ef-fs14
                                     (large)
@@ -797,7 +803,7 @@
                                 %a.cp-btn-large.ef-cp-theme.ef-mw100(href="#{v}")
                                   theme
                           .example-remarks.ef-mgb20
-                            %section.cp-remarks.ef-cp-blue.ef-w100p
+                            .cp-remarks.ef-cp-blue.ef-w100p
                               .st-inner
                                 .st-outer.ef-lh20
                                   最小幅を変更する事ができます。HTMLソースの
@@ -823,7 +829,7 @@
                           .example-title.ef-mgb3
                             %ul.ef-float.ef-lh25
                               %li
-                                %h5
+                                %h2
                                   button
                                   %span.ef-fs14
                                     (fix)
@@ -874,7 +880,7 @@
                                 %a.cp-btn.ef-cp-theme.ef-w100p(href="#{v}")
                                   theme
                           .example-remarks.ef-mgb20
-                            %section.cp-remarks.ef-cp-blue.ef-w100p
+                            .cp-remarks.ef-cp-blue.ef-w100p
                               .st-inner
                                 .st-outer.ef-lh20
                                   幅は親要素の幅に追従します。
@@ -929,7 +935,7 @@
                           .example-title.ef-mgb3
                             %ul.ef-float.ef-lh25
                               %li
-                                %h5
+                                %h2
                                   button
                                   %span.ef-fs14
                                     (response)
@@ -961,7 +967,7 @@
                           .example-title.ef-mgb3
                             %ul.ef-float.ef-lh25
                               %li
-                                %h5
+                                %h2
                                   button
                                   %span.ef-fs14
                                     (input)
@@ -971,7 +977,7 @@
                             // example code ///////////////////////////
                             %input.cp-btn.ef-cp-white.ef-mw100(type="button" value="white")
                           .example-remarks.ef-mgb20
-                            %section.cp-remarks.ef-cp-blue.ef-w100p
+                            .cp-remarks.ef-cp-blue.ef-w100p
                               .st-inner
                                 .st-outer.ef-lh20
                                   form要素のボタンはアイコンをつける事ができません。
@@ -989,7 +995,7 @@
                           .example-title.ef-mgb3
                             %ul.ef-float.ef-lh25
                               %li
-                                %h5
+                                %h2
                                   button
                                   %span.ef-fs14
                                     (row)
@@ -997,7 +1003,7 @@
                             横一列に結合したボタンです。
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
-                            %section.cp-btn-row.js-state-current
+                            .cp-btn-row.js-state-current
                               %a.cp-btn.ef-cp-blue.ef-brdr0.ef-rdr0.is-current(href="#{v}")
                                 Fivee-base
                               %a.cp-btn.ef-cp-blue.ef-brdr0.ef-rd0(href="#{v}")
@@ -1007,7 +1013,7 @@
                               %a.cp-btn.ef-cp-blue.ef-brdl0.ef-rdl0(href="#{v}")
                                 Fivee-base
                           .example-remarks.ef-mgb20
-                            %section.cp-remarks.ef-cp-blue.ef-w100p
+                            .cp-remarks.ef-cp-blue.ef-w100p
                               .st-inner
                                 .st-outer.ef-lh20
                                   ページ読み込み時にボタンを選択状態にするにはクラス名
@@ -1041,7 +1047,7 @@
         .st-inner.ef-txt-center.ef-fs11.ef-lh14
           Copyright © 2016 plain-web all rights reserved.
     /popup/////////////////////////////////////////////
-    %section.md-popup.js-popup(style="display:none;")
+    .md-popup.js-popup(style="display:none;")
       /popup contents type 'js-tpl0'
       .st-body.js-tpl0
         .st-inner.ef-w120.ef-sdw02
@@ -1152,13 +1158,13 @@
                 %h6
                   Bookmark
           .md-popup-body.ef-pd10.ef-mgb10
-            %section.ef-mgb10
+            .ef-mgb10
               %ul.ef-float7.ef-lh30
                 %li.ef-w50.ef-txt-right
                   Title
                 %li
                   %input.cp-input.ef-w150(type="text")
-            %section
+            .div
               %ul.ef-float7.ef-lh30
                 %li.ef-w50.ef-txt-right
                   Folder
@@ -1173,14 +1179,14 @@
               %a.cp-btn.ef-w70.js-popup-close(href="#{v}")
                 Edit
     /tooltip/////////////////////////////////////////////
-    %section.md-tooltip.js-tooltip(style="display:none;")
+    .md-tooltip.js-tooltip(style="display:none;")
       .st-body.ef-mxw170
         .st-inner
-          %section.md-tooltip-wrap.js-tooltip-wrap
-          %section.md-balloon.js-balloon
+          .md-tooltip-wrap.js-tooltip-wrap
+          .md-balloon.js-balloon
             .md-triangle-bottom
     /scrolltop///////////////////////////////////////////
-    %section.md-scrolltop.js-scrolltop(style="display:none;")
+    .md-scrolltop.js-scrolltop(style="display:none;")
       .st-body.ef-sdw01
         .st-inner
           %a#js-pageTop.ef-fs16(href="#{v}")
@@ -1190,8 +1196,5 @@
     %script(src="../js/vendor/jquery/dist/jquery.min.js" type="text/javascript")<>
     <!--<![endif]-->
     /[if lte IE 9] <script src="../js/vendor/jquery-legacy/dist/jquery.min.js" type="text/javascript"></script>
+    %script(src="../js/google-analytics.min.js" type="text/javascript")
     %script(src="../js/fivee-base.min.js" type="text/javascript")
-    / :javascript
-    /   $(function(){
-
-    /   ));

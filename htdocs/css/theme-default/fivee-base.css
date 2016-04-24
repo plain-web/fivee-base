@@ -2,7 +2,7 @@
 /*! ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
  * Fivee-base
- * ver.1.5.8 / 2016.4.11
+ * ver.1.6.0 / 2016.4.20
  * http://plain-web.com/fivee-base/apps/
  * Released under MIT license. Copyright 2016 Yusuke Maruyama.
  *
@@ -347,7 +347,7 @@ h1 {
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 h3 {
@@ -2812,7 +2812,7 @@ table.md-table {
   line-height: 1.6;
   border-width: 1px;
   border-style: solid;
-  border-color: #ccc;
+  border-color: #bbb;
   border-collapse: collapse;
   border-spacing: 0;
   background: #fff;
@@ -2848,10 +2848,10 @@ table.md-table tr th, table.md-table colgroup th {
   background: #e5e5e5;
   border-right-width: 1px;
   border-right-style: solid;
-  border-right-color: #ccc;
+  border-right-color: #bbb;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: #ccc;
+  border-bottom-color: #bbb;
   font-weight: bold;
 }
 
@@ -2863,10 +2863,10 @@ table.md-table tr td, table.md-table colgroup td {
   padding: 5px;
   border-right-width: 1px;
   border-right-style: solid;
-  border-right-color: #ccc;
+  border-right-color: #bbb;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: #ccc;
+  border-bottom-color: #bbb;
 }
 
 table.md-table tr th:last-child,
@@ -4168,6 +4168,14 @@ table.md-table tr.ef-brdl0 th, table.md-table tr.ef-brdl0 td, table.md-table col
 
 .ef-cl-theme {
   background: #485169;
+}
+
+.ef-cl-theme1 {
+  background: #555;
+}
+
+.ef-cl-theme2 {
+  background: #111;
 }
 
 /* =============================================================
