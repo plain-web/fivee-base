@@ -443,7 +443,7 @@ var popupHandler = {
             popupClickCnt = 0;
             $(this).off();
           }
-          return false;
+          // return false;
         });
       }
     });
