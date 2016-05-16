@@ -1,7 +1,7 @@
 /*! ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
  * Fivee-base
- * ver.1.6.0 / 2016.4.20
+ * ver.1.6.3 / 2016.5.16
  * http://plain-web.com/fivee-base/apps/
  * Released under MIT license. Copyright 2016 Yusuke Maruyama.
  *
@@ -43,6 +43,23 @@ function thisClassGet(clickThis, returnClass){
   });
   targetClass = '.' + thisClass;
   return targetClass;
+}
+/*========================================================================
+  [common]get os
+======================================================================== */
+var getOs;
+function osSearch(getOs){
+  var ua = navigator.userAgent.toLowerCase();
+  var isiPhone = (ua.indexOf('iphone') > -1);
+  var isiPad = (ua.indexOf('ipad') > -1);
+  var isAndroid = (ua.indexOf('android') > -1) && (ua.indexOf('mobile') > -1);
+  var isAndroidTablet = (ua.indexOf('android') > -1) && (ua.indexOf('mobile') == -1);
+
+  if(isiPhone){getOs = 'iphone';}
+  if(isiPad){getOs = 'ipad';}
+  if(isAndroid){getOs = 'android';}
+  if(isAndroidTablet){getOs = 'androidTablet';}
+  return getOs;
 }
 /*========================================================================
   [common] input text chacker
@@ -237,34 +254,59 @@ var tip = $('.js-tooltip');
 var tipWrap = $('.js-tooltip-wrap');
 var tipBody = $('.js-tooltip > .st-body');
 var balloonBody = $('.js-balloon');
+var tipTrigger = '.js-tooltip-hover';
+var tipCloseSpeed = 300;
+var tipCloseTimer = 500;
+var target,checkStates;
+//search os
+getOs = osSearch(getOs);
+if(getOs === 'iphone' || getOs === 'ipad'){
+  //mouseover
+  $(tipTrigger).on('click', function(){
+    checkStates = $(this).hasClass('is-on');
+    if(!checkStates){
+      target = $(this);
+      toolTipOn(target);
 
-//mouseover
-$( ".js-tooltip-hover" ).on({
-  'mouseenter': function(){
-    var target = $(this);
-    toolTipOn(target);
+      toolTipFlg = 'on';
+      toolTipQuickOff(toolTipFlg);
+      $(tipTrigger).removeClass('is-on');
+      $(this).addClass('is-on');
+    }else{
+      toolTipFlg = 'off';
+      toolTipQuickOff(toolTipFlg);
+      $(tipTrigger).removeClass('is-on');
+    }
+  });
+}else{
+  //mouseover
+  $( ".js-tooltip-hover" ).on({
+    'mouseenter': function(){
+      target = $(this);
+      toolTipOn(target);
 
-    toolTipFlg = 'on';
-    toolTipOff(toolTipFlg);
-  },
-  'mouseleave': function(){
-    toolTipFlg = 'off';
-    toolTipOff(toolTipFlg);
-  }
-});
-//remove mouseover
-tip.on({
-  'mouseenter': function(){
-    toolTipFlg = 'on';
-    toolTipOff(toolTipFlg);
-  },
-  'mouseleave': function(){
-    toolTipFlg = 'off';
-    toolTipOff(toolTipFlg);
-  }
-});
+      toolTipFlg = 'on';
+      toolTipOff(toolTipFlg);
+    },
+    'mouseleave': function(){
+      toolTipFlg = 'off';
+      toolTipOff(toolTipFlg);
+    }
+  });
+  //remove mouseover
+  tip.on({
+    'mouseenter': function(){
+      toolTipFlg = 'on';
+      toolTipOff(toolTipFlg);
+    },
+    'mouseleave': function(){
+      toolTipFlg = 'off';
+      toolTipOff(toolTipFlg);
+    }
+  });
+}
 //hide tooltip
-function toolTipOff(toolTipFlg){
+function toolTipQuickOff(toolTipFlg){
   toolTipHiretsu.push(toolTipFlg);
   if( toolTipTimer !== false ) {
     clearTimeout(toolTipTimer);
@@ -272,7 +314,7 @@ function toolTipOff(toolTipFlg){
   toolTipTimer = setTimeout( function(){
     var lastFlg = toolTipHiretsu[toolTipHiretsu.length-1];
     if( lastFlg === 'off'){
-      tip.hide(300, function(){
+      tip.hide(tipCloseSpeed, function(){
         $(this).removeClass('is-show');
         tipBody.css({
           top: 0,
@@ -284,7 +326,30 @@ function toolTipOff(toolTipFlg){
     }else{
       return false;
     }
-  }, 500);
+  }, 0);
+}
+//hide tooltip
+function toolTipOff(toolTipFlg){
+  toolTipHiretsu.push(toolTipFlg);
+  if( toolTipTimer !== false ) {
+    clearTimeout(toolTipTimer);
+  }
+  toolTipTimer = setTimeout( function(){
+    var lastFlg = toolTipHiretsu[toolTipHiretsu.length-1];
+    if( lastFlg === 'off'){
+      tip.hide(tipCloseSpeed, function(){
+        $(this).removeClass('is-show');
+        tipBody.css({
+          top: 0,
+          left: 0,
+          marginTop:''
+        });
+      })
+      toolTipHiretsu = [];
+    }else{
+      return false;
+    }
+  }, tipCloseTimer);
 }
 //show tooltip
 function toolTipOn(target){
@@ -318,6 +383,7 @@ function toolTipOn(target){
 var popupClickCnt = 0;
 var popupTrigger = '.js-popup-open';
 var popupCloseTrigger = '.js-popup-close';
+var popupCloseTouch = 'body > *';
 var popupTriggerRemove = '.js-popup-open, .js-popup, .js-bookmark-open';
 var popupWrap = '.js-popup';
 var popupArrow = '.js-popup-arrow';
@@ -434,7 +500,7 @@ var popupHandler = {
       popupClickCnt++;
       if(popupClickCnt === 1){
         //find out 'js-popup-open'
-        $(document).on('click', function(e){
+        $(popupCloseTouch).on('click', function(e){
           var findOutTrigger = $(e.target).closest(popupTriggerRemove).length;
           // popupClickCnt++;
           if( !findOutTrigger ){
@@ -544,7 +610,6 @@ $(toastTrigger).on('click', function(){
  
   //set　timer
   toastTImer = setTimeout( function(){ 
-    console.log('is timer')
     $( toastWrap + ' > .st-body' + targetClass).fadeOut(speedFadeout);
   }, speedTimer);
 
@@ -1012,7 +1077,7 @@ if(promoFooter.length){
   //initial
   function initialPosi(){
     docHeight = $(document).outerHeight();
-    winHeight = $(window).outerHeight();
+    winHeight = window.innerHeight;
     noWheight = docHeight - winHeight;
     bottomPosition =  noWheight - $(window).scrollTop();
     if(pageFooterPosi.length){
@@ -1168,6 +1233,18 @@ if(ellipsis.length){
     $(this).text(targetTxt);
   });
 }
+/*========================================================================
+  clone 
+======================================================================== */
+var cloneWrap = '.js-clone';
+var cloneTri = '.js-clone-tri';
+var cloneTarget = '.js-clone-target';
+$(cloneTri + ' a').on('click', function(){
+  cloneWrap = $(this).parents(cloneWrap);
+  cloneTarget = cloneWrap.find(cloneTarget).clone(true);
+  cloneTri = cloneWrap.find(cloneTri);
+  cloneTri.before(cloneTarget);
+});
 /*========================================================================
   mediaquery aside
 ======================================================================== */

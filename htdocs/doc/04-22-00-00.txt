@@ -1,0 +1,19 @@
+<ul class="ef-float7 js-clone">
+  <li class="ef-mgb7">
+    <ul class="ef-float7">
+      <li class="ef-mgb7 js-clone-target">
+        <select class="cp-select">
+          <option value="">
+            複製対象
+          </option>
+        </select>
+      </li>
+      <li class="ef-mgb7 js-clone-tri">
+        <a class="cp-btn" href="javascript:void(0);">
+          <i class="fa fa-plus ef-op05"></i>
+          複製対象の追加
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>

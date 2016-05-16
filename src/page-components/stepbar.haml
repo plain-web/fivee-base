@@ -7,8 +7,8 @@
   <!--<![endif]-->
   %head
     %meta(charset="utf-8")
-    %title stepbar | レスポンシブ対応のcssフレームワーク
-    %meta(name="description" content="cssフレームワークはFivee-baseが便利です。レスポンシブでアプリケーションのフロントエンドやWebサイトを簡単に作る事ができます。")
+    %title stepbar | レスポンシブ対応のcssフレームワークFivee-base
+    %meta(name="description" content="stepbarはステップウィザードについての説明です。日本語の説明付きで初心者にも安心。軽量で豊富なパーツのcssフレームワークはFivee-baseが便利です。")
     %meta(name="keywords" content="css,フレームワーク,レスポンシブ,フロントエンド")
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
     %meta(content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport")
@@ -40,7 +40,7 @@
           .ef-float-right.rs3-show
             %ul.ef-float20.ef-lh30
               %li
-                %a(href="https://twitter.com/plain_web" target="_blank")
+                %a(href="https://twitter.com/plain_web/" target="_blank")
                   %ul.ef-float3
                     %li
                       %i.fa.fa-twitter
@@ -80,7 +80,7 @@
           .ef-float-right.rs2-show
             %ul.ef-float20.ef-lh30
               %li
-                %a(href="https://twitter.com/plain_web" target="_blank")
+                %a(href="https://twitter.com/plain_web/" target="_blank")
                   %ul.ef-float3
                     %li
                       %i.fa.fa-twitter.ef-fs18
@@ -124,7 +124,7 @@
         .st-inner
           %ul.ef-lh40
             %li
-              %a(href="https://twitter.com/plain_web" target="_blank")
+              %a(href="https://twitter.com/plain_web/" target="_blank")
                 %ul.ef-float3
                   %li
                     質問・感想
@@ -529,6 +529,11 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   text-ellipsis
+                          %li
+                            %a(href="../page-module/clone.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  clone
                       %li
                         .ef-fs11.ef-op05
                           State
@@ -559,13 +564,13 @@
                 // page title//////////////////////////////////////////////
                 .cp-page-title.ef-mgb10
                   .st-inner
-                    %h1
-                      %ul.ef-float20.ef-lh30
-                        %li
+                    %ul.ef-float20.ef-lh30
+                      %li
+                        %h1
                           stepbar
-                        %li
-                          %small.is-nobold.ef-fs14
-                            ステップウィザードについての説明です。
+                      %li
+                        %small.is-nobold.ef-fs14
+                          stepbarはステップウィザードについての説明です。
                 // breadcrumb//////////////////////////////////////////////
                 .cp-breadcrumb-model1.ef-mgb20
                   .st-inner.ef-float
@@ -675,8 +680,14 @@
           .md-popup-body
             %ul.cp-list-hover.ef-cp-gray
               %li
-                %a(href="https://github.com/plain-web/fivee-base" target="_blank")
+                %a(href="https://github.com/plain-web/fivee-base/" target="_blank")
                   Github
+              %li
+                %a(href="../../../memoru/")
+                  Memoru
+              %li
+                %a(href="../../../")
+                  Plain-Web
               %li
                 %a(href="#{v}")
                   My Account

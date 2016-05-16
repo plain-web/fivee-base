@@ -399,6 +399,11 @@ input[type="checkbox"]{margin:6px 0;}
     padding:0;
   }
 }
+//ios
+.cp-input,
+.cp-textarea{
+  -webkit-appearance : none;
+}
 //insert icon
 .cp-input-icon-left{
   position:relative;
