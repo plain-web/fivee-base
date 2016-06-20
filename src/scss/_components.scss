@@ -243,7 +243,8 @@ a{
   outline: 0;
   border:0;
   height:$form-height;
-  @include brd;
+  background:$cl-bg-form;
+  @include brd(1px,solid,$cl-brd-form);
   @include border-radius(3px);
   font-family: $ff-base;
   vertical-align:middle;

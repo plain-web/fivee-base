@@ -2,7 +2,7 @@
 /*! ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
  * Fivee-base
- * ver.1.6.3 / 2016.5.16
+ * ver.1.6.5 / 2016.6.20
  * http://plain-web.com/fivee-base/apps/
  * Released under MIT license. Copyright 2016 Yusuke Maruyama.
  *
@@ -409,6 +409,7 @@ a i:hover {
   outline: 0;
   border: 0;
   height: 33px;
+  background: #fff;
   border-width: 1px;
   border-style: solid;
   border-color: #ccc;
@@ -2961,7 +2962,7 @@ table.md-table tr .ef-bg-theme, table.md-table colgroup .ef-bg-theme {
 }
 
 table.md-table tr .is-focus, table.md-table colgroup .is-focus {
-  background: #EFFFEE;
+  background: #EEF0F5;
 }
 
 table.md-table tr .ef-brd1, table.md-table colgroup .ef-brd1 {
