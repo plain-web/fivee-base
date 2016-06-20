@@ -61,9 +61,6 @@ $fs-h3:21px;
 $fs-h2:20px;
 $fs-h1:24px;
 
-//default form height (rel default font-size)
-$form-height: $fs +20;
-
 //hover speed(img)
 $speed-hover:0s;
 
@@ -72,7 +69,7 @@ $cl-brd-focus :#8691C1;
 $cl-bg-focus :#EDF3F7;
 
 //shadow color
-$cl-shadow-base: #ccc;
+$cl-shadow: #ccc;
 
 //body background color
 $cl-bg-body: #f6f6f6;
@@ -97,8 +94,6 @@ $cl-txt-green:$cl-green;
 $cl-txt-yellow:#F4DD17;
 $cl-txt-brown:$cl-brown;
 $cl-txt-gray:#333;
-
-//text color
 $cl-txt: #333;
 $cl-txt-rev : $cl-white;
 $cl-txt-link:#448CCF;
@@ -127,6 +122,11 @@ $cl-brd-yellow:$cl-yellow;
 $cl-brd-brown:$cl-brown;
 $cl-brd-gray:$cl-gray;
 $cl-brd-theme: $cl-theme;
+
+//default form height (rel default font-size)
+$form-height: $fs +20;
+$cl-bg-form:#fff;
+$cl-brd-form:$cl-brd;
 
 //button color
 $cl-btn:#eee;
@@ -230,6 +230,7 @@ $cl-link-footer :#fff;
 //table
 $cl-bg-table-th : #e5e5e5;
 $cl-bg-table-td : $cl-white;
+$cl-bg-table-focus : $cl-bg-theme;
 $cl-bg-table-th-hover : $cl-bg-gray;
 $cl-bg-table-td-hover : $cl-bg-gray;
 $cl-bg-table-highlight : $cl-yellow;
@@ -246,6 +247,9 @@ $cl-bg-image-viewer-header: $cl-white;
 
 //popup
 $cl-bg-popup:$cl-white;
+$cl-brd-popup:$cl-brd;
+$cl-bg-popup-arrow:$cl-white;
+$cl-brd-popup-arrow:$cl-brd;
 $popup-arrow-height:10px;
 $popup-arrow-width:8px;
 

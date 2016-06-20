@@ -166,7 +166,7 @@
 .md-popup{
   >.st-body{
     @include posi-abs(0,auto,auto,auto);
-    border:1px solid $cl-brd;
+    border:1px solid $cl-brd-popup;
     @include border-radius(5px);
     background:$cl-bg-popup;
     display:none;
@@ -185,7 +185,7 @@
   @include posi-abs(-$popup-arrow-height + 2,auto,auto,9%);
   border-left: $popup-arrow-width solid transparent;
   border-right: $popup-arrow-width solid transparent;
-  border-bottom: $popup-arrow-height solid $cl-bg-white;
+  border-bottom: $popup-arrow-height solid $cl-bg-popup-arrow;
   margin-left: -$popup-arrow-width;
   z-index:1;
 }
@@ -193,7 +193,7 @@
   @include posi-abs(-$popup-arrow-height,auto,auto,9%);
   border-left: $popup-arrow-width solid transparent;
   border-right: $popup-arrow-width solid transparent;
-  border-bottom: $popup-arrow-height solid $cl-brd;
+  border-bottom: $popup-arrow-height solid $cl-brd-popup-arrow;
   margin-left: -$popup-arrow-width;
 }
 /*
@@ -318,7 +318,7 @@ table.md-table{
     .ef-bg-gray{background:$cl-bg-gray;}
     .ef-bg-theme{background:$cl-bg-theme;}
     //focus
-    .is-focus{background:$cl-bg-green;}
+    .is-focus{background:$cl-bg-table-focus;}
 
     //border(th,td)
     .ef-brd1{@include brd(1px, solid, $cl-brd);}
@@ -751,7 +751,7 @@ table.md-table{
   }
   &.is-open{
     @include transform(translateY($page-header-height));
-    @include box-shadow(rgba($cl-brd, 0.9) 0 0 60px);
+    @include box-shadow(rgba($cl-shadow, 0.9) 0 0 60px);
   }
   .st-inner{
     padding:10px 0;
