@@ -6,19 +6,25 @@
  * "header" "footer" "container"
  *
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "common"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+html,body,.page-container,.page-container > .st-body{height:100%;}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "header"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .page-header{
   .st-body{
-    @include min-width($app-minWidth);
+    @include min-width($mw-app);
     background:$cl-bg-header;
     &.ef-posi-fix{
       @include posi-fix(0,0,auto,0);
       z-index:5;
     }
     .st-inner{
-      padding:0 10px;
+      padding:5px 10px;
       a{
         display:block;
         color:$cl-link-header;
@@ -31,18 +37,27 @@
       //left////////////////////////////////////////
       .ef-float-left{
         >a{
-          padding-top:5px;
-          padding-bottom:5px;
+          padding:3px;
+          padding-left:0;
           .wrap-logo{
             .logo{
               width:25px;
               line-height:25px;
-              font-size:18px;
+              font-size:22px;
               text-align: center;
               @include border-radius(50%);
               margin-top: 2px;
               background:$cl-white;
-              i{color:$cl-bg-header;}
+              i{
+                color:$cl-bg-header;
+                font-size:18px;
+              }
+            }
+            strong{
+              font-size:22px;
+              font-weight:normal;
+              color:$cl-txt-rev;
+              margin-left:5px;
             }
           }
         }
@@ -53,22 +68,43 @@
           >li{
             >a{
               padding-top:5px;
-              padding-bottom:5px;
+              padding-bottom: 5px;
               i{
                 display:block;
                 line-height:30px;
               }
             }
-            .prof{
-              display: block;
-              width:25px;
-              margin-top: 3px;
-              @include border-radius(2px);
-            }
           }
         }
       }
     }
+  }
+}
+.page-header{
+  .prof{
+    display: block;
+    width:30px;
+    // margin-top: 3px;
+    @include border-radius(2px);
+  }
+  .notification{
+    .cp-badge{
+      margin-top:-10px;
+      margin-left:-10px;
+    }
+  }
+  .search{
+    width:200px;
+    margin-top: 6px;
+    .cp-input{
+      @include border-radius(10px);
+      height:28px;
+      font-size:12px;
+      border:0;
+      background:#bbb;
+    }
+    .cp-input:focus{background:#fff;}
+    i{right:9px;}
   }
 }
 /* =============================================================
@@ -109,34 +145,49 @@
 }
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * "aside"
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- */
-.md-aside-main{
-  >.st-body{
-    width:180px;
-    margin:20px 15px;
-  }
-}
-/*
- * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "container"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .page-container{
   >.st-body{
-    margin:$page-header-height 0 $page-footer-height;
+    background:$cl-bg-body;
+    >.st-inner{
+      display:table;
+      table-layout: fixed;
+      width:100%;
+      height: 100%;
+      .page-nav{
+        display:table-cell;
+        padding:$h-page-header 0 $h-page-footer;
+      }
+      .page-contents{
+        display:table-cell;
+        vertical-align:top;
+        padding:$h-page-header 0 $h-page-footer;
+      }
+    }
   }
 }
 // page-main ////////////////////////////
 .page-contents{
-  display:block;
-  margin-left:195px;
   >.st-body{
     >.st-inner{
       padding:20px 15px;
       background:$cl-bg-content;
     }
+  }
+}
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "aside"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+.md-aside-main{
+  width:$w-aside-main;
+  background:$cl-bg-nav;
+  >.st-body{
+    // width:$w-aside-main;
+    // >.st-inner{position:relative;}
   }
 }
 /* =============================================================
@@ -146,14 +197,18 @@
   >.st-inner{
     >ul{
       >li{
-        >ul{
-          max-height:300px;
-          overflow: auto;
+        border-bottom:1px solid $cl-bg-nav-current;
+        a{padding:7px 15px;}
+        font-size:13px;
+        >ul li{
+          font-weight:normal;
+          font-size:$fs;
         }
       }
     }
   }
 }
+.cp-list-hover > li a{padding:7px 15px;}
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "responsive"
@@ -162,21 +217,24 @@
 /* =============================================================
  ▼ pages
 ============================================================== */
-@media (max-width: $breakpoint2-3-max) {
+@media (max-width: $bp2-3-max) {
   .page-container{
     >.st-body{
       >.st-inner{
         // page-main ////////////////////////////
         >.page-contents{
-          margin-left:0;
+          // margin-left:0;
+          width:100%;
         }
       }
     }
   }
   .md-aside-main{
+    width:80%;
     >.st-body{
       width:100%;
-      margin:0;
+      // margin:0;
+      margin-bottom:$h-page-footer;
     }
   }
 }

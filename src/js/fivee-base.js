@@ -1248,27 +1248,41 @@ $(cloneTri + ' a').on('click', function(){
 /*========================================================================
   mediaquery aside
 ======================================================================== */
-var asideFlg = 0;
-$('.js-aside-main-open').on('click', function(){
-  asideFlg++;
-  if(asideFlg === 1){
-    $('.js-aside-main').addClass('is-transition').delay(500).addClass('is-open');
-    //click body
-    $('.js-page-contents:not(.js-aside-main)').on('click', function(){
-      $('.js-aside-main').removeClass('is-open').delay(1000).queue(function() {
-        $(this).removeClass('is-transition').dequeue();
+var asideTriClass = $('.js-aside-main-open');
+
+if(asideTriClass.length){
+  var asideFlg = 0;
+  var asideClass = $('.js-aside-main');
+  var removeTarget = '.js-aside-main, .js-aside-remove';
+
+  asideTriClass.on('click', function(){
+    asideFlg++;
+
+    // click trigger
+    if(asideFlg === 1){
+      asideClass.addClass('is-transition').delay(500).addClass('is-open');
+
+      // click document
+      $(document).on('click', function(e){
+        if( $(e.target).closest(removeTarget).length ){
+          return;
+        }
+        asideClose();
       });
-      asideFlg = 0;
-      $(this).off();
-    })
-  }
-  if(asideFlg === 2){
-    $('.js-aside-main').removeClass('is-open').delay(1000).queue(function() {
+    }
+    // click trigger
+    if(asideFlg === 2){asideClose();}
+  });
+
+  // close aside
+  function asideClose(){
+    asideClass.removeClass('is-open').delay(500).queue(function() {
       $(this).removeClass('is-transition').dequeue();
     });
     asideFlg = 0;
+    return asideFlg;
   }
-});
+}
 /*========================================================================
   mediaquery slide nav
 ======================================================================== */

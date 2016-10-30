@@ -13,8 +13,8 @@
 html,body {
   margin:0;
   padding: 0;
-  @include min-width($app-minWidth);
-  @include max-width($app-maxWidth);
+  @include min-width($mw-app);
+  @include max-width($mxw-app);
 }
 body {
   position: relative;

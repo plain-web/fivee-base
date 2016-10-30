@@ -28,10 +28,10 @@ a{
     text-decoration:underline;
     color: $cl-txt-hover;
     //@include opacity(0.8);
-    @include transition(all $speed-hover ease-in-out);
+    @include transition(all $sp-hover ease-in-out);
     img{
      @include opacity(0.8);
-     @include transition(all $speed-hover ease-in-out);
+     @include transition(all $sp-hover ease-in-out);
     }
   }
 }
@@ -196,6 +196,7 @@ hr{
 h1, h2, h3, h4, h5, h6{
   margin:0;
   padding:0;
+  font-weight:bold;
 }
 h1{font-size:$fs-h1;}
 h2{font-size:$fs-h2;}
@@ -242,7 +243,7 @@ a{
   vertical-align:middle;
   outline: 0;
   border:0;
-  height:$form-height;
+  height:$h-form;
   background:$cl-bg-form;
   @include brd(1px,solid,$cl-brd-form);
   @include border-radius(3px);
@@ -379,7 +380,7 @@ a{
   &.ef-rdl90p{@include border-left-radius(90%);}
   &.ef-rdl100p{@include border-left-radius(100%);}
 }
-.cp-select{padding:0 5px;height:$form-height;}
+.cp-select{padding:0 5px;height:$h-form;}
 .cp-select[size]{height:auto;}
 
 input[type="checkbox"]{margin:6px 0;}
@@ -475,7 +476,7 @@ input[type="checkbox"]{margin:6px 0;}
 ============================================================== */
 .cp-btn{
   text-align:center;
-  padding:5px 12px;
+  padding:$pd-btn;
   cursor: pointer;
   display: inline-block;
   white-space: nowrap;
@@ -487,8 +488,8 @@ input[type="checkbox"]{margin:6px 0;}
   i{color:$cl-txt;}
   background:$cl-btn; // for oldie
   font-family:$ff-base;
-  font-size:$fs;
-  line-height:$lh;
+  font-size:$fs-btn;
+  line-height:$lh-btn;
   @include brd(1px,solid,$cl-btn-border);
   @include border-radius(3px 3px);
   @include gradation($cl-btn-lighten, $cl-btn);
@@ -755,15 +756,16 @@ input[type="checkbox"]{margin:6px 0;}
 //mini
 .cp-btn-mini{
   @extend .cp-btn;
-  font-size:$fs-small;
-  padding:3px 7px;
+  font-size:$fs-btn-mini;
+  padding:$pd-btn-mini;
   line-height:$lh-btn-mini;
 }
 //large
 .cp-btn-large{
   @extend .cp-btn;
-  font-size:$fs-h6;
-  padding:7px 25px;
+  font-size:$fs-btn-large;
+  padding:$pd-btn-lerge;
+  line-height:$lh-btn-lerge;
 }
 .cp-btn-row{
   display:table;
@@ -778,6 +780,7 @@ input[type="checkbox"]{margin:6px 0;}
   .st-inner{
     padding-top:5px;
     padding-bottom:5px;
+    a{font-weight:bold;}
   }
 }
 .cp-breadcrumb-model0{
@@ -785,6 +788,7 @@ input[type="checkbox"]{margin:6px 0;}
     @include brd;
     @include border-radius(3px);
     padding:5px 10px;
+    a{font-weight:bold;}
   }
 }
 .cp-breadcrumb-model1{
@@ -792,6 +796,7 @@ input[type="checkbox"]{margin:6px 0;}
     @include brd-top;
     background:#eee;
     padding:5px 10px;
+    a{font-weight:bold;}
   }
 }
 /*
@@ -1152,22 +1157,22 @@ a.cp-tag.ef-cp-yellow{
     @include brd(1px,solid,$cl-brd);
     @include border-radius(3px);
     padding:7px 12px;
-    margin-left: $talkbox-arrow-width;
+    margin-left: $w-talkbox-arrow;
   }
   .cp-talkbox-arrow{
     @include posi-abs(50%,auto,auto,2px);
-    margin-top: -$talkbox-arrow-height;
-    border-top: $talkbox-arrow-height solid transparent;
-    border-bottom: $talkbox-arrow-height solid transparent;
-    border-right: $talkbox-arrow-width solid $cl-bg-white;
+    margin-top: -$h-talkbox-arrow;
+    border-top: $h-talkbox-arrow solid transparent;
+    border-bottom: $h-talkbox-arrow solid transparent;
+    border-right: $w-talkbox-arrow solid $cl-bg-white;
     z-index:1;
   }
   .cp-talkbox-arrow-back{
     @include posi-abs(50%,auto,auto,0);
-    margin-top: -$talkbox-arrow-height;
-    border-top: $talkbox-arrow-height solid transparent;
-    border-bottom: $talkbox-arrow-height solid transparent;
-    border-right: $talkbox-arrow-width solid $cl-brd;
+    margin-top: -$h-talkbox-arrow;
+    border-top: $h-talkbox-arrow solid transparent;
+    border-bottom: $h-talkbox-arrow solid transparent;
+    border-right: $w-talkbox-arrow solid $cl-brd;
   }
 }
 .cp-talkbox-left.ef-cp-white{
@@ -1216,22 +1221,22 @@ a.cp-tag.ef-cp-yellow{
     @include brd(1px,solid,$cl-brd);
     @include border-radius(3px);
     padding:7px 12px;
-    margin-right: $talkbox-arrow-width;
+    margin-right: $w-talkbox-arrow;
   }
   .cp-talkbox-arrow{
     @include posi-abs(50%,2px,auto,auto);
-    margin-top: -$talkbox-arrow-height;
-    border-top: $talkbox-arrow-height solid transparent;
-    border-bottom: $talkbox-arrow-height solid transparent;
-    border-left: $talkbox-arrow-width solid $cl-bg-white;
+    margin-top: -$h-talkbox-arrow;
+    border-top: $h-talkbox-arrow solid transparent;
+    border-bottom: $h-talkbox-arrow solid transparent;
+    border-left: $w-talkbox-arrow solid $cl-bg-white;
     z-index:1;
   }
   .cp-talkbox-arrow-back{
     @include posi-abs(50%,0,auto,auto);
-    margin-top: -$talkbox-arrow-height;
-    border-top: $talkbox-arrow-height solid transparent;
-    border-bottom: $talkbox-arrow-height solid transparent;
-    border-left: $talkbox-arrow-width solid $cl-brd;
+    margin-top: -$h-talkbox-arrow;
+    border-top: $h-talkbox-arrow solid transparent;
+    border-bottom: $h-talkbox-arrow solid transparent;
+    border-left: $w-talkbox-arrow solid $cl-brd;
   }
 }
 .cp-talkbox-right.ef-cp-white{

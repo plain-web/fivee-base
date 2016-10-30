@@ -18,16 +18,16 @@
     %link(href="css/theme-default/unique.min.css" rel="stylesheet" type="text/css")
     /[if lte IE 9] <link href="css/old-ie.min.css" rel="stylesheet">
   - v = 'javascript:void(0);'
-  %body.dashboad
+  %body.dashboard
     / header//////////////////////////////////////////////
     %header.page-header
-      .st-body.ef-posi-fix.js-posi-remove
+      .st-body.ef-posi-fix.js-posi-remove.js-aside-remove
         .st-inner.ef-float
           .ef-float-left.ef-mgl-10.ef-mgr7.rs3-hide
             %a.ef-w30.js-aside-main-open(href="#{v}")
               %ul.ef-float7
                 %li
-                  %i.fa.fa-bars.ef-fs18.ef-lh30
+                  %i.fa.fa-bars.ef-fs30
           .ef-float-left
             %a(href="index.html")
               %ul.ef-float3.wrap-logo
@@ -35,70 +35,73 @@
                   .logo
                     %i.fa.fa-puzzle-piece
                 %li
-                  %strong.ef-fs20.ef-lh30
+                  %strong.ef-lh30
                     Fivee-base
           .ef-float-right.rs3-show
             %ul.ef-float20.ef-lh30
               %li
+                %ul.search.cp-input-icon-right
+                  %li
+                    %i.fa.fa-fw.fa-search
+                  %li
+                    %input.cp-input.ef-w100p.js-search(type="text" placeholder="キーワード検索")
+              %li
                 %a(href="https://twitter.com/plain_web/" target="_blank")
                   %ul.ef-float3
                     %li
-                      %i.fa.fa-twitter
+                      %i.fa.fa-twitter.fa-fw.ef-fs20
                     %li
-                      質問・感想
+                      HELP
               %li
                 %a(href="index.html")
                   %ul.ef-float3
                     %li
-                      %i.fa.fa-info-circle
+                      %i.fa.fa-info-circle.ef-fs20
                     %li
                       導入方法
                     %li
                       %span.cp-badge.ef-cp-red
-                        53
+                        18
               %li
                 %a.js-popup-open.is-fixed.js-tpl1(href="#{v}")
-                  %ul.ef-float3
+                  %ul.notification.ef-float3
                     %li
-                      %i.fa.fa-envelope
-                    %li
-                      Message
+                      %i.fa.fa-bell.ef-fs20
                     %li
                       %span.cp-badge.ef-cp-red
                         2
-                    %li
-                      %i.fa.fa-caret-down
               %li
                 %a.js-popup-open.is-fixed.js-tpl0(href="#{v}")
                   %ul.ef-float3
                     %li
                       %img.prof(src="img/myprof.png" alt="profile")
                     %li
-                      Your name
-                    %li
                       %i.fa.fa-caret-down
           .ef-float-right.rs2-show
             %ul.ef-float20.ef-lh30
               %li
+                %a.js-popup-open.is-fixed.js-tpl4(href="#{v}")
+                  %ul.ef-float3
+                    %li
+                      %i.fa.fa-search.ef-fs20
+              %li
                 %a(href="https://twitter.com/plain_web/" target="_blank")
                   %ul.ef-float3
                     %li
-                      %i.fa.fa-twitter.ef-fs18
+                      %i.fa.fa-twitter.ef-fs20
               %li
                 %a(href="index.html")
-                  %ul.ef-float3
+                  %ul.notification.ef-float3
                     %li
-                      %i.fa.fa-info-circle.ef-fs18
+                      %i.fa.fa-info-circle.ef-fs20
                     %li
                       %span.cp-badge.ef-cp-red
-                        53
+                        18
               %li
                 %a.js-popup-open.is-fixed.js-tpl1(href="#{v}")
-                  %ul.ef-float3
+                  %ul.notification.ef-float3
                     %li
-                      %i.fa.fa-envelope.ef-fs18
-                    %li
-                      %i.fa.fa-caret-down
+                      %i.fa.fa-bell.ef-fs20
                     %li
                       %span.cp-badge.ef-cp-red
                         2
@@ -106,7 +109,7 @@
                 %a.js-popup-open.is-fixed.js-tpl0(href="#{v}")
                   %ul.ef-float3
                     %li
-                      %img.prof(src="img/myprof.png")
+                      %img.prof(src="img/myprof.png" alt="profile")
                     %li
                       %i.fa.fa-caret-down
           .ef-float-right.rs1-show
@@ -115,50 +118,15 @@
                 %a.js-nav-slide-open(href="#{v}")
                   %ul.ef-float3
                     %li
-                      %img.prof(src="img/myprof.png")
+                      %img.prof(src="img/myprof.png" alt="profile")
                     %li
                       %i.fa.fa-caret-down
-    / slide-nav//////////////////////////////////////////////
-    .md-nav-slide.rs1-show.js-nav-slide
-      .st-body
-        .st-inner
-          %ul.ef-lh40
-            %li
-              %a(href="https://twitter.com/plain_web/" target="_blank")
-                %ul.ef-float3
-                  %li
-                    質問・感想
-            %li
-              %a(href="index.html")
-                %ul.ef-float3
-                  %li
-                    導入方法
-                  %li
-                    %span.cp-badge.ef-cp-red
-                      53
-            %li
-              %a.js-popup-open.is-fixed.js-tpl1(href="#{v}")
-                %ul.ef-float3
-                  %li
-                    Message
-                  %li
-                    %span.cp-badge.ef-cp-red
-                      2
-                  %li.js-ic-arrow
-                    %i.fa.fa-caret-down
-            %li
-              %a.js-popup-open.is-fixed.js-tpl0(href="#{v}")
-                %ul.ef-float3
-                  %li
-                    Your name
-                  %li.js-ic-arrow
-                    %i.fa.fa-caret-down
     / page-container//////////////////////////////////////////////
     .page-container
       .st-body
-        .st-inner.ef-float
+        .st-inner
           // page-nav//////////////////////////////////////////////
-          %aside.page-nav.md-aside-main.ef-float-left.js-aside-main
+          %aside.page-nav.md-aside-main.js-aside-main
             .st-body
               .st-inner
                 // side-menu//////////////////////////////////////////////
@@ -172,9 +140,6 @@
                               %i.fa.fa-home
                             %li
                               Dashboard
-                      %li
-                        .ef-fs11.ef-op05
-                          Structure
                       %li.js-nav-main-parent0
                         %a(href="#{v}")
                           %ul.ef-float3
@@ -190,9 +155,6 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   layout
-                      %li
-                        .ef-fs11.ef-op05
-                          Components
                       %li.js-nav-main-parent1
                         %a(href="#{v}")
                           %ul.ef-float3
@@ -288,9 +250,6 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   talkbox
-                      %li
-                        .ef-fs11.ef-op05
-                          Effect
                       %li.js-nav-main-parent2
                         %a(href="#{v}")
                           %ul.ef-float3
@@ -411,9 +370,6 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   vertical
-                      %li
-                        .ef-fs11.ef-op05
-                          Module
                       %li.js-nav-main-parent3
                         %a(href="#{v}")
                           %ul.ef-float3
@@ -534,9 +490,6 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   clone
-                      %li
-                        .ef-fs11.ef-op05
-                          State
                       %li.js-nav-main-parent4
                         %a(href="#{v}")
                           %ul.ef-float3
@@ -1018,140 +971,186 @@
                                 ご相談はこちらから
     / footer/////////////////////////////////////////////
     %footer.page-footer
-      .st-body
+      .st-body.ef-posi-fix
         .st-inner.ef-txt-center.ef-fs11.ef-lh14
           Copyright © 2016 plain-web all rights reserved.
-    /popup/////////////////////////////////////////////
-    .md-popup.js-popup(style="display:none;")
-      /popup contents type 'js-tpl0'
-      .st-body.js-tpl0
-        .st-inner.ef-w120.ef-sdw02
-          .md-popup-arrow.js-popup-arrow
-          .md-popup-arrow-back.js-popup-arrow
-          .md-popup-body
-            %ul.cp-list-hover.ef-cp-gray
-              %li
-                %a(href="https://github.com/plain-web/fivee-base/" target="_blank")
-                  Github
-              %li
-                %a(href="../../memoru/")
-                  Memoru
-              %li
-                %a(href="../../")
-                  Plain-Web
-              %li
-                %a(href="#{v}")
-                  My Account
-              %li
-                %a(href="#{v}")
-                  ログアウト
-      /popup contents type 'js-tpl1'
-      .st-body.js-tpl1
-        .st-inner.ef-sdw02
-          .md-popup-arrow.js-popup-arrow
-          .md-popup-arrow-back.js-popup-arrow
-          .md-popup-body
-            %ul.cp-list-hover.ef-cp-gray
-              %li
-                %a(href="#{v}")
-                  %dl
-                    %dt.ef-txt-bold
-                      plain-web
-                    %dd.ef-txt-ellipsis
-                      システム予約は15：00にセットされました。
-                %hr.cp-hr1-dotted.ef-mgt3.ef-mgb3
-              %li
-                %a(href="#{v}")
-                  %dl
-                    %dt.ef-txt-bold
-                      plain-web
-                    %dd.ef-txt-ellipsis
-                      システム予約は15：00にセットされました。
-                %hr.cp-hr1-dotted.ef-mgt3.ef-mgb3
-              %li
-                %a(href="#{v}")
-                  %dl
-                    %dt.ef-txt-bold
-                      plain-web
-                    %dd.ef-txt-ellipsis
-                      システム予約は15：00にセットされました。
-                %hr.cp-hr1-dotted.ef-mgt3.ef-mgb3
-              %li
-                %a(href="#{v}")
-                  %dl
-                    %dt.ef-txt-bold
-                      plain-web
-                    %dd.ef-txt-ellipsis
-                      システム予約は15：00にセットされました。
-      /popup contents type 'js-tpl2'
-      .st-body.js-tpl2
-        .st-inner.ef-sdw02
-          .md-popup-arrow.js-popup-arrow
-          .md-popup-arrow-back.js-popup-arrow
-          .md-popup-body
-            %ul.cp-list-hover.ef-cp-gray
-              %li
-                %a(href="#js-pageTop0")
-                  概要
-              %li
-                %a(href="#js-pageTop1")
-                  導入方法
-              %li
-                %a(href="#js-pageTop2")
-                  対応ブラウザ
-              %li
-                %a(href="#js-pageTop3")
-                  Sassについて
-              %li
-                %a(href="#js-pageTop4")
-                  クラス名について
-              %li
-                %a(href="#js-pageTop5")
-                  導入サポート
-      /popup contents type 'js-tpl3'
-      .st-body.js-tpl3
-        .st-inner.ef-sdw02
-          .md-popup-arrow.js-popup-arrow
-          .md-popup-arrow-back.js-popup-arrow
-          .md-popup-header.ef-mgb10
-            %ul.ef-float
-              %li
-                %h6
-                  Bookmark
-          .md-popup-body.ef-pd10.ef-mgb10
-            .ef-mgb10
-              %ul.ef-float7.ef-lh30
-                %li.ef-w50.ef-txt-right
-                  Title
+    / page-modules/////////////////////////////////////////////
+    .page-modules
+      .st-body.js-aside-remove
+        / slide-nav//////////////////////////////////////////////
+        .md-nav-slide.rs1-show.js-nav-slide
+          .st-body
+            .st-inner
+              %ul.ef-lh40
                 %li
-                  %input.cp-input.ef-w150(type="text")
-            
-              %ul.ef-float7.ef-lh30
-                %li.ef-w50.ef-txt-right
-                  Folder
+                  %a(href="https://twitter.com/plain_web/" target="_blank")
+                    %ul.ef-float3
+                      %li
+                        質問・感想
                 %li
-                  %select.cp-input
-                    %option
-                      folder
-          .md-popup-footer.ef-pdb7
-            .ef-txt-center
-              %a.cp-btn.ef-cp-red.ef-w70.js-popup-close.js-bookmark-delete(href="#{v}")
-                Delete
-              %a.cp-btn.ef-w70.js-popup-close(href="#{v}")
-                Edit
-    /tooltip/////////////////////////////////////////////
-    .md-tooltip.js-tooltip(style="display:none;")
-      .st-body.ef-mxw300
-        .st-inner
-          .md-tooltip-wrap.js-tooltip-wrap
-          .md-balloon.js-balloon
-            .md-triangle-bottom
-    /scrolltop///////////////////////////////////////////
-    .md-scrolltop.js-scrolltop(style="display:none;")
-      .st-body.ef-sdw01
-        .st-inner
-          %a#js-pageTop.ef-fs16(href="#{v}")
-            %i.fa.fa-arrow-up
+                  %a(href="index.html")
+                    %ul.ef-float3
+                      %li
+                        導入方法
+                      %li
+                        %span.cp-badge.ef-cp-red
+                          53
+                %li
+                  %a.js-popup-open.is-fixed.js-tpl1(href="#{v}")
+                    %ul.ef-float3
+                      %li
+                        Message
+                      %li
+                        %span.cp-badge.ef-cp-red
+                          2
+                      %li.js-ic-arrow
+                        %i.fa.fa-caret-down
+                %li
+                  %a.js-popup-open.is-fixed.js-tpl0(href="#{v}")
+                    %ul.ef-float3
+                      %li
+                        Your name
+                      %li.js-ic-arrow
+                        %i.fa.fa-caret-down
+        / popup/////////////////////////////////////////////
+        .md-popup.js-popup(style="display:none;")
+          /popup contents type 'js-tpl0'
+          .st-body.js-tpl0
+            .st-inner.ef-w130.ef-sdw02
+              .md-popup-arrow.js-popup-arrow
+              .md-popup-arrow-back.js-popup-arrow
+              .md-popup-body
+                %ul.cp-list-hover.ef-cp-gray
+                  %li
+                    %a(href="https://github.com/plain-web/fivee-base/" target="_blank")
+                      Github
+                  %li
+                    %a(href="../../memoru/")
+                      Memoru
+                  %li
+                    %a(href="../../")
+                      Plain-Web
+                  %li
+                    %a(href="#{v}")
+                      ログアウト
+          /popup contents type 'js-tpl1'
+          .st-body.js-tpl1
+            .st-inner.ef-sdw02
+              .md-popup-arrow.js-popup-arrow
+              .md-popup-arrow-back.js-popup-arrow
+              .md-popup-body
+                %ul.cp-list-hover.ef-cp-gray
+                  %li
+                    %a(href="#{v}")
+                      %dl
+                        %dt.ef-txt-bold
+                          plain-web
+                        %dd.ef-txt-ellipsis
+                          システム予約は15：00にセットされました。
+                    %hr.cp-hr1-dotted.ef-mgt3.ef-mgb3
+                  %li
+                    %a(href="#{v}")
+                      %dl
+                        %dt.ef-txt-bold
+                          plain-web
+                        %dd.ef-txt-ellipsis
+                          システム予約は15：00にセットされました。
+                    %hr.cp-hr1-dotted.ef-mgt3.ef-mgb3
+                  %li
+                    %a(href="#{v}")
+                      %dl
+                        %dt.ef-txt-bold
+                          plain-web
+                        %dd.ef-txt-ellipsis
+                          システム予約は15：00にセットされました。
+                    %hr.cp-hr1-dotted.ef-mgt3.ef-mgb3
+                  %li
+                    %a(href="#{v}")
+                      %dl
+                        %dt.ef-txt-bold
+                          plain-web
+                        %dd.ef-txt-ellipsis
+                          システム予約は15：00にセットされました。
+          /popup contents type 'js-tpl2'
+          .st-body.js-tpl2
+            .st-inner.ef-sdw02
+              .md-popup-arrow.js-popup-arrow
+              .md-popup-arrow-back.js-popup-arrow
+              .md-popup-body
+                %ul.cp-list-hover.ef-cp-gray
+                  %li
+                    %a(href="#js-pageTop0")
+                      概要
+                  %li
+                    %a(href="#js-pageTop1")
+                      導入方法
+                  %li
+                    %a(href="#js-pageTop2")
+                      対応ブラウザ
+                  %li
+                    %a(href="#js-pageTop3")
+                      Sassについて
+                  %li
+                    %a(href="#js-pageTop4")
+                      クラス名について
+                  %li
+                    %a(href="#js-pageTop5")
+                      導入サポート
+          /popup contents type 'js-tpl3'
+          .st-body.js-tpl3
+            .st-inner.ef-sdw02
+              .md-popup-arrow.js-popup-arrow
+              .md-popup-arrow-back.js-popup-arrow
+              .md-popup-header.ef-mgb10
+                %ul.ef-float
+                  %li
+                    %h6
+                      Bookmark
+              .md-popup-body.ef-pd10.ef-mgb10
+                .ef-mgb10
+                  %ul.ef-float7.ef-lh30
+                    %li.ef-w50.ef-txt-right
+                      Title
+                    %li
+                      %input.cp-input.ef-w150(type="text")
+                
+                  %ul.ef-float7.ef-lh30
+                    %li.ef-w50.ef-txt-right
+                      Folder
+                    %li
+                      %select.cp-input
+                        %option
+                          folder
+              .md-popup-footer.ef-pdb7
+                .ef-txt-center
+                  %a.cp-btn.ef-cp-red.ef-w70.js-popup-close.js-bookmark-delete(href="#{v}")
+                    Delete
+                  %a.cp-btn.ef-w70.js-popup-close(href="#{v}")
+                    Edit
+          /popup contents type 'js-tpl4'
+          .st-body.js-tpl4
+            .st-inner.ef-sdw02.ef-w250
+              .md-popup-arrow.js-popup-arrow
+              .md-popup-arrow-back.js-popup-arrow
+              .md-popup-body
+                %ul.search.cp-input-icon-right
+                  %li
+                    %i.fa.fa-fw.fa-search
+                  %li
+                    %input.cp-input.ef-w100p.js-search(type="text" placeholder="キーワード検索")
+        / tooltip/////////////////////////////////////////////
+        .md-tooltip.js-tooltip(style="display:none;")
+          .st-body.ef-mxw300
+            .st-inner
+              .md-tooltip-wrap.js-tooltip-wrap
+              .md-balloon.js-balloon
+                .md-triangle-bottom
+        / scrolltop///////////////////////////////////////////
+        .md-scrolltop.js-scrolltop(style="display:none;")
+          .st-body.ef-sdw01
+            .st-inner
+              %a#js-pageTop.ef-fs16(href="#{v}")
+                %i.fa.fa-chevron-up
     / script////////////////////////////////////////////
     <!--[if gte IE 10]><!-->
     %script(src="js/vendor/jquery/dist/jquery.min.js" type="text/javascript")<>

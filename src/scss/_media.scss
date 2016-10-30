@@ -19,7 +19,7 @@
 .rs2-show,
 .rs3-hide{display:none;}
 //breackpoint2
-@media (max-width: $breakpoint2-3-max) {
+@media (max-width: $bp2-3-max) {
 	.rs3-show{display:none;}
 	.rs3-hide{display:block;}
 	.rs3-float{
@@ -49,7 +49,7 @@
 	  >dd{margin-left:0;}
 	}
 }
-@media (min-width: $breakpoint2-3-min){
+@media (min-width: $bp2-3-min){
 	.rs2-float,
 	.rs3-nofloat{
 	  >.ef-float-left,
@@ -81,7 +81,7 @@
 	}
 }
 //breackpoint1,2
-@media (min-width:  $breakpoint1-2-min) and (max-width: $breakpoint2-3-max) {
+@media (min-width:  $bp1-2-min) and (max-width: $bp2-3-max) {
 	.rs2-hide{display:none;}
 	.rs2-show{display:block;}
 	.rs2-nofloat{
@@ -112,7 +112,7 @@
 	}
 }
 //breackpoint1
-@media (min-width: $breakpoint1-2-min) {
+@media (min-width: $bp1-2-min) {
 	.rs1-float{
 	  >.ef-float-left,
 	  >.ef-float-right{
@@ -140,7 +140,7 @@
 	  >dd{margin-left:0;}
 	}
 }
-@media (max-width:  $breakpoint1-2-max) {
+@media (max-width:  $bp1-2-max) {
 	.rs1-hide{display:none;}
 	.rs1-show{display:block;}
 	.rs2-float,
@@ -176,23 +176,21 @@
 /* =============================================================
  ▼ parts
  ============================================================== */
-@media (max-width: $breakpoint2-3-max) {
+@media (max-width: $bp2-3-max) {
 	.md-nav-main{
 		border:0;
 		@include border-radius(0);
 	}
 	.md-aside-main{
-	  @include posi-abs(0,auto,0,0);
 	  z-index:2;
-	  background:$cl-bg-white;
+	  @include posi-abs(0,auto,0,0);
 	  @include transform(translateX(-100%));
-	  width:80%;
 	  &.is-transition{
 	    @include transition(transform 0.5s ease);
 	  }
 	  &.is-open{
 	    @include transform(translateX(0));
-	    @include box-shadow(rgba($cl-gray, 0.9) 0 10px 10px);
+	    @include box-shadow(rgba($cl-gray, 0.9) 0 5px 20px);
 	   }
 	}
 }
