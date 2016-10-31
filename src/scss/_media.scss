@@ -190,8 +190,15 @@
 	  }
 	  &.is-open{
 	    @include transform(translateX(0));
-	    @include box-shadow(rgba($cl-gray, 0.9) 0 5px 20px);
+	    // @include box-shadow(rgba($cl-gray, 0.9) 0 5px 20px);
 	   }
+	}
+	.page-contents{
+		>.st-body{
+			&.is-behind{
+				@include opacity(0.4);
+			}
+		}
 	}
 }
  //modal

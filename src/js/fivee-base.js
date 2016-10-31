@@ -1254,6 +1254,7 @@ if(asideTriClass.length){
   var asideFlg = 0;
   var asideClass = $('.js-aside-main');
   var removeTarget = '.js-aside-main, .js-aside-remove';
+  var pageContents = $('.js-page-contents')
 
   asideTriClass.on('click', function(){
     asideFlg++;
@@ -1261,6 +1262,7 @@ if(asideTriClass.length){
     // click trigger
     if(asideFlg === 1){
       asideClass.addClass('is-transition').delay(500).addClass('is-open');
+      pageContents.addClass('is-transition').addClass('is-behind');
 
       // click document
       $(document).on('click', function(e){
@@ -1277,6 +1279,9 @@ if(asideTriClass.length){
   // close aside
   function asideClose(){
     asideClass.removeClass('is-open').delay(500).queue(function() {
+      $(this).removeClass('is-transition').dequeue();
+    });
+    pageContents.removeClass('is-behind').delay(500).queue(function() {
       $(this).removeClass('is-transition').dequeue();
     });
     asideFlg = 0;
