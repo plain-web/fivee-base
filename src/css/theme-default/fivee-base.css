@@ -4026,15 +4026,18 @@ table.md-table tr.ef-brdl0 th, table.md-table tr.ef-brdl0 td, table.md-table col
   left: 0;
   z-index: 1;
   -ms-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
 }
 
 .md-nav-slide.is-transition {
+  transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
 }
 
 .md-nav-slide.is-open {
   -ms-transform: translateY(50px);
+  -webkit-transform: translateY(50px);
   transform: translateY(50px);
   box-shadow: rgba(204, 204, 204, 0.9) 0 0 60px;
 }
@@ -11867,66 +11870,79 @@ dl.ef-float > dd::after {
  ▼ rotate
 ============================================================= */
 .ef-rotate15 {
+  -webkit-transform: rotate(15deg);
   -ms-transform: rotate(15deg);
   transform: rotate(15deg);
 }
 
 .ef-rotate30 {
+  -webkit-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
   transform: rotate(30deg);
 }
 
 .ef-rotate45 {
+  -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .ef-rotate60 {
+  -webkit-transform: rotate(60deg);
   -ms-transform: rotate(60deg);
   transform: rotate(60deg);
 }
 
 .ef-rotate75 {
+  -webkit-transform: rotate(75deg);
   -ms-transform: rotate(75deg);
   transform: rotate(75deg);
 }
 
 .ef-rotate90 {
+  -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
 .ef-rotate105 {
+  -webkit-transform: rotate(105deg);
   -ms-transform: rotate(105deg);
   transform: rotate(105deg);
 }
 
 .ef-rotate120 {
+  -webkit-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
   transform: rotate(120deg);
 }
 
 .ef-rotate135 {
+  -webkit-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
 .ef-rotate150 {
+  -webkit-transform: rotate(150deg);
   -ms-transform: rotate(150deg);
   transform: rotate(150deg);
 }
 
 .ef-rotate165 {
+  -webkit-transform: rotate(165deg);
   -ms-transform: rotate(165deg);
   transform: rotate(165deg);
 }
 
 .ef-rotate180 {
+  -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .ef-rotate0 {
+  -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
 }
@@ -12190,13 +12206,16 @@ dl.ef-float > dd::after {
     bottom: 0;
     left: 0;
     -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
   .md-aside-main.is-transition {
+    transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
   }
   .md-aside-main.is-open {
     -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     box-shadow: rgba(102, 102, 102, 0.9) 0 5px 20px;
   }

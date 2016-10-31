@@ -156,6 +156,7 @@ html,body,.page-container,.page-container > .st-body{height:100%;}
       table-layout: fixed;
       width:100%;
       height: 100%;
+      position:relative;
       .page-nav{
         display:table-cell;
         padding:$h-page-header 0 $h-page-footer;
