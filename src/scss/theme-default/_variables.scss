@@ -13,7 +13,7 @@ $mh-app: auto;
 $mxw-app: auto;
 $mxh-app: auto;
 
-//page parts height
+//page parts height(if fixed header,footer)
 $h-page-header:50px;
 $h-page-footer:20px;
 
@@ -230,6 +230,9 @@ $cl-bg-nav: $cl-theme1;
 $cl-bg-nav-current: darken( $cl-bg-nav, 7%);
 $cl-bg-nav-hover:  darken( $cl-bg-nav-current, 5% );
 $cl-link-nav :#333;
+
+//slide down
+$cl-bg-slide:#fff;
 
 //tab
 $cl-tab-current: $cl-theme;

@@ -19,9 +19,10 @@ html,body,.page-container,.page-container > .st-body{height:100%;}
   .st-body{
     @include min-width($mw-app);
     background:$cl-bg-header;
+    position:relative;
+      z-index:5;
     &.ef-posi-fix{
       @include posi-fix(0,0,auto,0);
-      z-index:5;
     }
     .st-inner{
       padding:5px 10px;
@@ -117,9 +118,6 @@ html,body,.page-container,.page-container > .st-body{height:100%;}
         a{
           font-size: 15px;
           .cp-badge{color:$cl-white;}
-          &:hover{
-            background:$cl-bg-nav-hover;
-          }
         }
       }
     }
@@ -186,10 +184,6 @@ html,body,.page-container,.page-container > .st-body{height:100%;}
 .md-aside-main{
   width:$w-aside-main;
   background:$cl-bg-nav;
-  >.st-body{
-    // width:$w-aside-main;
-    // >.st-inner{position:relative;}
-  }
 }
 /* =============================================================
  ▼ nav-main
@@ -238,4 +232,7 @@ html,body,.page-container,.page-container > .st-body{height:100%;}
       margin-bottom:$h-page-footer;
     }
   }
+}
+@media (min-width: $bp2-3-min) {
+  .md-popup > .st-body.js-tpl4{display:none;}
 }
