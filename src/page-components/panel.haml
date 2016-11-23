@@ -11,6 +11,7 @@
     %meta(name="description" content="コンテンツを囲むパネルについての説明です。日本語の説明付きで初心者にも安心。軽量で豊富なパーツのcssフレームワークはFivee-baseが便利です。")
     %meta(name="keywords" content="css,フレームワーク,レスポンシブ,フロントエンド")
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    %meta(name="format-detection" content="telephone=no")
     %meta(content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport")
     /[if lte IE 9] <script src="../js/vendor/html5shiv/dist/html5shiv.min.js"></script>
     %link(href="../js/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css")
@@ -21,7 +22,7 @@
   %body.components-panel
     / header//////////////////////////////////////////////
     %header.page-header
-      .st-body.ef-posi-fix.js-aside-remove
+      .st-body.ef-posi-fix.js-aside-remove.js-posi-remove
         .st-inner.ef-float
           .ef-float-left.ef-mgl-10.ef-mgr7.rs3-hide
             %a.ef-w30.js-aside-main-open(href="#{v}")
@@ -370,6 +371,11 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   vertical
+                          %li
+                            %a(href="../page-effect/centered.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  centered
                       %li.js-nav-main-parent3
                         %a(href="#{v}")
                           %ul.ef-float3
@@ -877,7 +883,13 @@
         .md-nav-slide.rs1-show.js-nav-slide
           .st-body
             .st-inner
-              %ul.ef-lh40
+              .ef-mgb7.ef-pdl10.ef-pdr10
+                %ul.search.cp-input-icon-right
+                  %li
+                    %i.fa.fa-fw.fa-search
+                  %li
+                    %input.cp-input.ef-w100p.js-search(type="text" placeholder="キーワード検索")
+              %ul.ef-lh40.cp-list-hover.ef-cp-gray
                 %li
                   %a(href="https://twitter.com/plain_web/" target="_blank")
                     %ul.ef-float3
@@ -890,7 +902,7 @@
                         導入方法
                       %li
                         %span.cp-badge.ef-cp-red
-                          53
+                          18
                 %li
                   %a.js-popup-open.js-tpl1(href="#{v}")
                     %ul.ef-float3
@@ -902,12 +914,17 @@
                       %li.js-ic-arrow
                         %i.fa.fa-caret-down
                 %li
-                  %a.js-popup-open.is-fixed.js-tpl0(href="#{v}")
-                    %ul.ef-float3
-                      %li
-                        Your name
-                      %li.js-ic-arrow
-                        %i.fa.fa-caret-down
+                  %a(href="https://github.com/plain-web/fivee-base/" target="_blank")
+                    Github
+                %li
+                  %a(href="../../../memoru/")
+                    Memoru
+                %li
+                  %a(href="../../../")
+                    Plain-Web
+                %li
+                  %a(href="#{v}")
+                    ログアウト
         / popup/////////////////////////////////////////////
         .md-popup.js-popup(style="display:none;")
           /popup contents type 'js-tpl0'
@@ -992,48 +1009,48 @@
                       panel
                       %span.ef-fs11
                         (mini-fix)
-            /popup contents type 'js-tpl3'
-            .st-body.js-tpl3
-              .st-inner.ef-sdw02
-                .md-popup-arrow.js-popup-arrow
-                .md-popup-arrow-back.js-popup-arrow
-                .md-popup-header.ef-mgb10
-                  %ul.ef-float
+          /popup contents type 'js-tpl3'
+          .st-body.js-tpl3
+            .st-inner.ef-sdw02
+              .md-popup-arrow.js-popup-arrow
+              .md-popup-arrow-back.js-popup-arrow
+              .md-popup-header.ef-mgb10
+                %ul.ef-float
+                  %li
+                    %h6
+                      Bookmark
+              .md-popup-body.ef-pd10.ef-mgb10
+                .ef-mgb10
+                  %ul.ef-float7.ef-lh30
+                    %li.ef-w50.ef-txt-right
+                      Title
                     %li
-                      %h6
-                        Bookmark
-                .md-popup-body.ef-pd10.ef-mgb10
-                  .ef-mgb10
-                    %ul.ef-float7.ef-lh30
-                      %li.ef-w50.ef-txt-right
-                        Title
-                      %li
-                        %input.cp-input.ef-w150(type="text")
-                  .div
-                    %ul.ef-float7.ef-lh30
-                      %li.ef-w50.ef-txt-right
-                        Folder
-                      %li
-                        %select.cp-input
-                          %option
-                            folder
+                      %input.cp-input.ef-w150(type="text")
+                .div
+                  %ul.ef-float7.ef-lh30
+                    %li.ef-w50.ef-txt-right
+                      Folder
+                    %li
+                      %select.cp-input
+                        %option
+                          folder
                 .md-popup-footer.ef-pdb7
                   .ef-txt-center
                     %a.cp-btn.ef-cp-red.ef-w70.js-popup-close.js-bookmark-delete(href="#{v}")
                       Delete
                     %a.cp-btn.ef-w70.js-popup-close(href="#{v}")
                       Edit
-            /popup contents type 'js-tpl4'
-            .st-body.js-tpl4
-              .st-inner.ef-sdw02.ef-w250
-                .md-popup-arrow.js-popup-arrow
-                .md-popup-arrow-back.js-popup-arrow
-                .md-popup-body
-                  %ul.search.cp-input-icon-right
-                    %li
-                      %i.fa.fa-fw.fa-search
-                    %li
-                      %input.cp-input.ef-w100p.js-search(type="text" placeholder="キーワード検索")
+          /popup contents type 'js-tpl4'
+          .st-body.js-tpl4
+            .st-inner.ef-sdw02.ef-w250
+              .md-popup-arrow.js-popup-arrow
+              .md-popup-arrow-back.js-popup-arrow
+              .md-popup-body
+                %ul.search.cp-input-icon-right
+                  %li
+                    %i.fa.fa-fw.fa-search
+                  %li
+                    %input.cp-input.ef-w100p.js-search(type="text" placeholder="キーワード検索")
         / tooltip/////////////////////////////////////////////
         .md-tooltip.js-tooltip(style="display:none;")
           .st-body.ef-mxw170

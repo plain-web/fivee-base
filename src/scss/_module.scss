@@ -116,7 +116,7 @@
 ============================================================== */
 .md-modal{
   >.st-body{
-    @include posi-fix(80px,auto,auto,50%);
+    @include posi-fix(10%,auto,auto,50%);
     @include brd(1px,solid,$cl-brd);
     @include border-radius(5px);
     display:none;
@@ -143,7 +143,7 @@
 .md-modal-title{padding-right:10px;}
 .md-modal-close{
   @include posi-abs(50%,5px,auto,auto);
-  margin-top:-15px;
+  margin-top:-18px;
 }
 .md-modal-body{
   background:$cl-bg-modal-body;
@@ -267,7 +267,10 @@ table.md-table{
   }
   tr,colgroup{
     th{
-      padding:$pd-table;
+      padding-top:$pd-table-ver;
+      padding-bottom:$pd-table-ver;
+      padding-left:$pd-table-row;
+      padding-right:$pd-table-row;
       font-size:$fs;
       background:$cl-bg-table-th;
       @include brd-right(1px,solid,$cl-brd-table);
@@ -277,7 +280,10 @@ table.md-table{
       a,i{color:$cl-txt;}
     }
     td{
-      padding:$pd-table;
+      padding-top:$pd-table-ver;
+      padding-bottom:$pd-table-ver;
+      padding-left:$pd-table-row;
+      padding-right:$pd-table-row;
       @include brd-right(1px,solid,$cl-brd-table);
       @include brd-bottom(1px,solid,$cl-brd-table);
     }
@@ -488,7 +494,7 @@ table.md-table{
  * "toast"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
-.md-toast{
+.md-toast, .md-toast-centered{
   @include posi-fix(0,auto,auto,50%);
   >.st-body{
     position:relative;
@@ -535,6 +541,18 @@ table.md-table{
     background: $cl-bg-warning;
     color:$cl-warning;
     i{color:$cl-warning;}
+  }
+}
+// centered
+.md-toast-centered{
+  @include posi-fix(50%,7%,auto,7%);
+  z-index:1;
+  >.st-body{
+    width:100%;
+    .st-inner{
+      padding:18px 30px 18px 25px;
+      i{font-size:22px;}
+    }
   }
 }
 /*
@@ -808,7 +826,7 @@ table.md-table{
     .st-inner{
       a{
         @include border-radius(5px);
-        padding:$pd-scroll;
+        padding:$pd-arrow-scroll;
         background:$cl-bg-scroll;
         display: block;
         @include opacity(0.5);

@@ -22,7 +22,7 @@
   %body.dashboard
     / header//////////////////////////////////////////////
     %header.page-header
-      .st-body.ef-posi-fix.js-aside-remove
+      .st-body.ef-posi-fix.js-aside-remove.js-posi-remove
         .st-inner.ef-float
           .ef-float-left.ef-mgl-10.ef-mgr7.rs3-hide
             %a.ef-w30.js-aside-main-open(href="#{v}")
@@ -371,6 +371,11 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   vertical
+                          %li
+                            %a(href="page-effect/centered.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  centered
                       %li.js-nav-main-parent3
                         %a(href="#{v}")
                           %ul.ef-float3
@@ -783,28 +788,37 @@
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
                             %table.md-table.ef-w100p
-                              %thead
-                                /tr ///////////////////////
-                                %tr
-                                  %th
-                                    %a(href="#{v}")
-                                      %i.fa.fa-internet-explorer
-                                      Internet Explorer
-                                  %th
-                                    %a(href="#{v}")
-                                      %i.fa.fa-chrome
-                                      Chrome
-                                  %th
-                                    %a(href="#{v}")
-                                      %i.fa.fa-firefox
-                                      Firefox
                               %tbody
                                 /tr ///////////////////////
                                 %tr
+                                  %th.ef-txt-left.ef-w180
+                                    %a(href="#{v}")
+                                      %i.fa.fa-internet-explorer
+                                      Internet Explorer
                                   %td.ef-txt-center
                                     IE8,IE9,IE10,IE11,Edge
+                                /tr ///////////////////////
+                                %tr
+                                  %th.ef-txt-left
+                                    %a(href="#{v}")
+                                      %i.fa.fa-chrome
+                                      Chrome
                                   %td.ef-txt-center
                                     Edge
+                                /tr ///////////////////////
+                                %tr
+                                  %th.ef-txt-left
+                                    %a(href="#{v}")
+                                      %i.fa.fa-firefox
+                                      Firefox
+                                  %td.ef-txt-center
+                                    Edge
+                                /tr ///////////////////////
+                                %tr
+                                  %th.ef-txt-left
+                                    %a(href="#{v}")
+                                      %i.fa.fa-safari
+                                      safari
                                   %td.ef-txt-center
                                     Edge
                             .ef-op05.ef-txt-right.ef-mgt7.ef-fs10
@@ -982,7 +996,13 @@
         .md-nav-slide.rs1-show.js-nav-slide
           .st-body
             .st-inner
-              %ul.ef-lh40
+              .ef-mgb7.ef-pdl10.ef-pdr10
+                %ul.search.cp-input-icon-right
+                  %li
+                    %i.fa.fa-fw.fa-search
+                  %li
+                    %input.cp-input.ef-w100p.js-search(type="text" placeholder="キーワード検索")
+              %ul.ef-lh40.cp-list-hover.ef-cp-gray
                 %li
                   %a(href="https://twitter.com/plain_web/" target="_blank")
                     %ul.ef-float3
@@ -995,7 +1015,7 @@
                         導入方法
                       %li
                         %span.cp-badge.ef-cp-red
-                          53
+                          18
                 %li
                   %a.js-popup-open.is-fixed.js-tpl1(href="#{v}")
                     %ul.ef-float3
@@ -1007,12 +1027,17 @@
                       %li.js-ic-arrow
                         %i.fa.fa-caret-down
                 %li
-                  %a.js-popup-open.is-fixed.js-tpl0(href="#{v}")
-                    %ul.ef-float3
-                      %li
-                        Your name
-                      %li.js-ic-arrow
-                        %i.fa.fa-caret-down
+                  %a(href="https://github.com/plain-web/fivee-base/" target="_blank")
+                    Github
+                %li
+                  %a(href="../../memoru/")
+                    Memoru
+                %li
+                  %a(href="../../")
+                    Plain-Web
+                %li
+                  %a(href="#{v}")
+                    ログアウト
         / popup/////////////////////////////////////////////
         .md-popup.js-popup(style="display:none;")
           /popup contents type 'js-tpl0'
@@ -1114,7 +1139,7 @@
                       Title
                     %li
                       %input.cp-input.ef-w150(type="text")
-                
+                .div
                   %ul.ef-float7.ef-lh30
                     %li.ef-w50.ef-txt-right
                       Folder

@@ -14,7 +14,7 @@ $mxw-app: auto;
 $mxh-app: auto;
 
 //page parts height(if fixed header,footer)
-$h-page-header:50px;
+$h-page-header:46px;
 $h-page-footer:20px;
 
 //breakpoint border
@@ -43,7 +43,7 @@ $ff-base: Meiryo,メイリオ,Arial,Verdana,"Helvetica Neue",Helvetica,sans-seri
 
 //default line height
 $lh-reset:1.0;
-$lh:1.8; //default
+$lh:1.6; //default
 $lh-table:$lh;
 $lh-txt:$lh;
 
@@ -67,7 +67,7 @@ $cl-brd-focus :#8691C1;
 $cl-bg-focus :#EDF3F7;
 
 //shadow color
-$cl-shadow: #ccc;
+$cl-shadow: #333;
 
 //body background color
 $cl-bg-body: #f6f6f6;
@@ -125,6 +125,7 @@ $cl-brd-theme: $cl-theme;
 $h-form: $fs +20;
 $cl-bg-form:#fff;
 $cl-brd-form:$cl-brd;
+$cl-plh-form:#666; //placeholder
 
 // aside
 $w-aside-main:177px;
@@ -147,61 +148,61 @@ $pd-btn-lerge:7px 35px;
 //button color
 $cl-btn:#eee;
 $cl-btn-lighten: lighten( $cl-btn, 0 );
-$cl-btn-border: darken( $cl-btn, 7% );
+$cl-btn-brd: darken( $cl-btn, 7% );
 $cl-btn-hover: lighten( $cl-btn, 3% );
 $cl-btn-active: darken( $cl-btn, 3% );
 
 $cl-btn-white:#f9f9f9;
 $cl-btn-white-lighten: lighten( $cl-btn-white, 0 );
-$cl-btn-white-border: darken( $cl-btn-white, 10% );
+$cl-btn-white-brd: darken( $cl-btn-white, 10% );
 $cl-btn-white-hover: lighten( $cl-btn-white, 3% );
 $cl-btn-white-active: darken( $cl-btn-white, 3% );
 
 $cl-btn-red:#DF5A2B ;
 $cl-btn-red-lighten: lighten( $cl-btn-red, 0 );
-$cl-btn-red-border: darken( $cl-btn-red, 10% );
+$cl-btn-red-brd: darken( $cl-btn-red, 10% );
 $cl-btn-red-hover: lighten( $cl-btn-red, 13% );
 $cl-btn-red-active: darken( $cl-btn-red, 3% );
 
 $cl-btn-orange:#EAB339;
 $cl-btn-orange-lighten: lighten( $cl-btn-orange, 0 );
-$cl-btn-orange-border: darken( $cl-btn-orange, 5% );
+$cl-btn-orange-brd: darken( $cl-btn-orange, 5% );
 $cl-btn-orange-hover: lighten( $cl-btn-orange, 10% );
 $cl-btn-orange-active: darken( $cl-btn-orange, 3% );
 
 $cl-btn-blue:#68A6D8;
 $cl-btn-blue-lighten: lighten( $cl-btn-blue, 0 );
-$cl-btn-blue-border: darken( $cl-btn-blue, 7% );
+$cl-btn-blue-brd: darken( $cl-btn-blue, 7% );
 $cl-btn-blue-hover: lighten( $cl-btn-blue, 10% );
 $cl-btn-blue-active: darken( $cl-btn-blue, 3% );
 
 $cl-btn-green:#7EB966;
 $cl-btn-green-lighten: lighten( $cl-btn-green, 0 );
-$cl-btn-green-border: darken( $cl-btn-green, 7% );
+$cl-btn-green-brd: darken( $cl-btn-green, 7% );
 $cl-btn-green-hover: lighten( $cl-btn-green, 10% );
 $cl-btn-green-active: darken( $cl-btn-green, 3% );
 
 $cl-btn-yellow:#F9F638;
 $cl-btn-yellow-lighten: lighten( $cl-btn-yellow, 0);
-$cl-btn-yellow-border: darken( $cl-btn-yellow, 15% );
+$cl-btn-yellow-brd: darken( $cl-btn-yellow, 15% );
 $cl-btn-yellow-hover: lighten( $cl-btn-yellow, 15% );
 $cl-btn-yellow-active: darken( $cl-btn-yellow, 3% );
 
 $cl-btn-brown:#A46E57;
 $cl-btn-brown-lighten: lighten( $cl-btn-brown, 0 );
-$cl-btn-brown-border: darken( $cl-btn-brown, 5% );
+$cl-btn-brown-brd: darken( $cl-btn-brown, 5% );
 $cl-btn-brown-hover: lighten( $cl-btn-brown, 15% );
 $cl-btn-brown-active: darken( $cl-btn-brown, 3% );
 
 $cl-btn-gray:#6D6E78;
 $cl-btn-gray-lighten: lighten( $cl-btn-gray, 0 );
-$cl-btn-gray-border: darken( $cl-btn-gray, 10% );
+$cl-btn-gray-brd: darken( $cl-btn-gray, 10% );
 $cl-btn-gray-hover: lighten( $cl-btn-gray, 10% );
 $cl-btn-gray-active: darken( $cl-btn-gray, 3% );
 
 $cl-btn-theme:$cl-theme;
 $cl-btn-theme-lighten: lighten( $cl-btn-theme, 7% );
-$cl-btn-theme-border: darken( $cl-btn-theme, 10% );
+$cl-btn-theme-brd: darken( $cl-btn-theme, 10% );
 $cl-btn-theme-hover: lighten( $cl-btn-theme, 15% );
 $cl-btn-theme-active: darken( $cl-btn-theme, 3% );
 
@@ -255,12 +256,15 @@ $cl-bg-table-td-hover : $cl-bg-gray;
 $cl-bg-table-highlight : $cl-yellow;
 $cl-bg-table-select : $cl-bg-theme;
 $cl-brd-table:#bbb;
-$pd-table:5px;
+$pd-table-ver:7px;
+$pd-table-row:15px;
 
 //modal
 $cl-bg-modal-header: #CAD5D9;
 $cl-bg-modal-body: $cl-white;
 $cl-bg-modal-footer: #f6f6f6;
+$bp-modal:620px;
+
 //image-viewer
 $cl-bg-image-viewer-header: $cl-white;
 
@@ -300,6 +304,8 @@ $cl-tag-blue:$cl-blue;
 $cl-tag-yellow:$cl-yellow;
 $cl-tag-brown:$cl-brown;
 $cl-tag-theme:$cl-theme;
+$fs-tag:$fs;
+$fs-tag-mini:$fs-small;
 
 //progress-bar
 $cl-progress-bar-white:$cl-white;
@@ -320,7 +326,10 @@ $cl-stepbar-current:#098DB1;
 $h-talkbox-arrow:6px;
 $w-talkbox-arrow:13px;
 
-// scroll
+//scroll
 $cl-bg-scroll:#666;
 $cl-arrow-scroll:#fff;
-$pd-scroll:6px 15px;
+$pd-arrow-scroll:8px 15px;
+
+//box
+$rs-box-centered: 30%;

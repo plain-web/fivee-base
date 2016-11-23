@@ -14,11 +14,6 @@
           </ul>
         </a>
       </li>
-      <li>
-        <div class="ef-fs11 ef-op05">
-          Category
-        </div>
-      </li>
       <li class="js-nav-main-parent0">
         <a href="javascript:void(0);">
           <ul class="ef-float3">

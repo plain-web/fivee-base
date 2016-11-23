@@ -11,6 +11,7 @@
     %meta(name="description" content="verticalは縦揃えを調整できるクラスです。日本語の説明付きで初心者にも安心。軽量で豊富なパーツのcssフレームワークはFivee-baseが便利です。")
     %meta(name="keywords" content="css,フレームワーク,レスポンシブ,フロントエンド")
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    %meta(name="format-detection" content="telephone=no")
     %meta(content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport")
     /[if lte IE 9] <script src="../js/vendor/html5shiv/dist/html5shiv.min.js"></script>
     %link(href="../js/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css")
@@ -21,7 +22,7 @@
   %body.effect-class-vertical
     / header//////////////////////////////////////////////
     %header.page-header
-      .st-body.ef-posi-fix.js-aside-remove
+      .st-body.ef-posi-fix.js-aside-remove.js-posi-remove
         .st-inner.ef-float
           .ef-float-left.ef-mgl-10.ef-mgr7.rs3-hide
             %a.ef-w30.js-aside-main-open(href="#{v}")
@@ -370,6 +371,11 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   vertical
+                          %li
+                            %a(href="../page-effect/centered.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  centered
                       %li.js-nav-main-parent3
                         %a(href="#{v}")
                           %ul.ef-float3
@@ -593,7 +599,13 @@
         .md-nav-slide.rs1-show.js-nav-slide
           .st-body
             .st-inner
-              %ul.ef-lh40
+              .ef-mgb7.ef-pdl10.ef-pdr10
+                %ul.search.cp-input-icon-right
+                  %li
+                    %i.fa.fa-fw.fa-search
+                  %li
+                    %input.cp-input.ef-w100p.js-search(type="text" placeholder="キーワード検索")
+              %ul.ef-lh40.cp-list-hover.ef-cp-gray
                 %li
                   %a(href="https://twitter.com/plain_web/" target="_blank")
                     %ul.ef-float3
@@ -606,7 +618,7 @@
                         導入方法
                       %li
                         %span.cp-badge.ef-cp-red
-                          53
+                          18
                 %li
                   %a.js-popup-open.js-tpl1(href="#{v}")
                     %ul.ef-float3
@@ -618,12 +630,17 @@
                       %li.js-ic-arrow
                         %i.fa.fa-caret-down
                 %li
-                  %a.js-popup-open.is-fixed.js-tpl0(href="#{v}")
-                    %ul.ef-float3
-                      %li
-                        Your name
-                      %li.js-ic-arrow
-                        %i.fa.fa-caret-down
+                  %a(href="https://github.com/plain-web/fivee-base/" target="_blank")
+                    Github
+                %li
+                  %a(href="../../../memoru/")
+                    Memoru
+                %li
+                  %a(href="../../../")
+                    Plain-Web
+                %li
+                  %a(href="#{v}")
+                    ログアウト
         / popup/////////////////////////////////////////////
         .md-popup.js-popup(style="display:none;")
           /popup contents type 'js-tpl0'

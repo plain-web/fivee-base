@@ -18,37 +18,20 @@
 .rs1-show,
 .rs2-show,
 .rs3-hide{display:none;}
-//breackpoint2
-@media (max-width: $bp2-3-max) {
-	.rs3-show{display:none;}
-	.rs3-hide{display:block;}
-	.rs3-float{
-	  >.ef-float-left,
-	  >.ef-float-right{
-	  	float:none;
-	  	width:100%;
-	  	>.st-inner{padding:0;}
-	  }
-	}
-	ul.rs3-ul-float{
-	  >li,
-	  >li.ef-float-right{
-	  	float:none;
-	  	margin-left:0;
-	  	margin-right:0;
-	  }
-	}
-	dl.rs3-dl-float{
-	  >dt,
-	  >dd{
-	  	float:none;
-	  	width:100%;
-	  	>.st-inner,
-	  	>img{padding:0;}
-	  }
-	  >dd{margin-left:0;}
+//breackpoint3
+@media (min-width: $bp3-4-min){
+	.rs-box-centered{
+		padding-left: $rs-box-centered;
+		padding-right: $rs-box-centered;
 	}
 }
+@media (max-width: $bp3-4-max){
+	.rs-box-centered{
+		padding-left: $rs-box-centered / 1.2;
+		padding-right: $rs-box-centered / 1.2;
+	}
+}
+//breackpoint2
 @media (min-width: $bp2-3-min){
 	.rs2-float,
 	.rs3-nofloat{
@@ -78,6 +61,40 @@
 	  	>img{padding:0;}
 	  }
 	  >dd{margin-left:0;}
+	}
+}
+@media (max-width: $bp2-3-max) {
+	.rs3-show{display:none;}
+	.rs3-hide{display:block;}
+	.rs3-float{
+	  >.ef-float-left,
+	  >.ef-float-right{
+	  	float:none;
+	  	width:100%;
+	  	>.st-inner{padding:0;}
+	  }
+	}
+	ul.rs3-ul-float{
+	  >li,
+	  >li.ef-float-right{
+	  	float:none;
+	  	margin-left:0;
+	  	margin-right:0;
+	  }
+	}
+	dl.rs3-dl-float{
+	  >dt,
+	  >dd{
+	  	float:none;
+	  	width:100%;
+	  	>.st-inner,
+	  	>img{padding:0;}
+	  }
+	  >dd{margin-left:0;}
+	}
+	.rs-box-centered{
+		padding-left: $rs-box-centered / 1.5;
+		padding-right: $rs-box-centered / 1.5;
 	}
 }
 //breackpoint1,2
@@ -172,6 +189,13 @@
 	  }
 	  >dd{margin-left:0;}
 	}
+	.rs-box-centered{
+		padding-left: $rs-box-centered / 5;
+		padding-right: $rs-box-centered / 5;
+	}
+  h1{font-size:$fs-h1 / 1.2;}
+  h2{font-size:$fs-h2 / 1.2;}
+  h3{font-size:$fs-h3 / 1.2;}
 }
 /* =============================================================
  ▼ parts
@@ -202,11 +226,11 @@
 	}
 }
  //modal
- @media (max-width: 550px) {
+ @media (max-width: $bp-modal) {
   .md-modal{
   	>.st-body{
   		width:auto;
-  		@include posi-fix(100px,20px,auto,20px);
+  		@include posi-fix(10%,20px,auto,20px);
   		margin-left:0 !important;
   		min-width: auto;
   	}

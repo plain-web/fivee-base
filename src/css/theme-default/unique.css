@@ -43,7 +43,7 @@ html, body, .page-container, .page-container > .st-body {
 }
 
 .page-header .st-body .st-inner {
-  padding: 5px 10px;
+  padding: 3px 10px;
 }
 
 .page-header .st-body .st-inner a {
@@ -74,7 +74,7 @@ html, body, .page-container, .page-container > .st-body {
   font-size: 22px;
   text-align: center;
   border-radius: 50%;
-  margin-top: 2px;
+  margin-top: 3px;
   background: #fff;
 }
 
@@ -84,7 +84,7 @@ html, body, .page-container, .page-container > .st-body {
 }
 
 .page-header .st-body .st-inner .ef-float-left > a .wrap-logo strong {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: normal;
   color: #fff;
   margin-left: 5px;
@@ -185,13 +185,13 @@ html, body, .page-container, .page-container > .st-body {
 
 .page-container > .st-body > .st-inner .page-nav {
   display: table-cell;
-  padding: 50px 0 20px;
+  padding: 46px 0 20px;
 }
 
 .page-container > .st-body > .st-inner .page-contents {
   display: table-cell;
   vertical-align: top;
-  padding: 50px 0 20px;
+  padding: 46px 0 20px;
 }
 
 .page-contents > .st-body > .st-inner {

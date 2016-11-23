@@ -90,6 +90,11 @@ a.ef-txt-hover{color:$cl-txt-hover;i,i:hover{color:$cl-txt-hover;}}
 //bold
 .is-bold{font-weight:bold;}
 .is-nobold{font-weight:normal;}
+// breakword
+.is-breakword{
+	word-wrap: break-word;
+	overflow-wrap:break-word;
+}
 //link
 a.is-link{
 	color:$cl-txt-link !important;
@@ -1610,35 +1615,35 @@ a.is-notouch{
  ▼ shadow box
 ============================================================== */
 //all
-.ef-sdw01{@include box-shadow(0 0 5px rgba($cl-shadow, .1));}
-.ef-sdw02{@include box-shadow(0 0 5px rgba($cl-shadow, .2));}
-.ef-sdw03{@include box-shadow(0 0 5px rgba($cl-shadow, .3));}
-.ef-sdw04{@include box-shadow(0 0 5px rgba($cl-shadow, .4));}
-.ef-sdw05{@include box-shadow(0 0 5px rgba($cl-shadow, .5));}
-.ef-sdw06{@include box-shadow(0 0 5px rgba($cl-shadow, .6));}
-.ef-sdw07{@include box-shadow(0 0 5px rgba($cl-shadow, .7));}
-.ef-sdw08{@include box-shadow(0 0 5px rgba($cl-shadow, .8));}
-.ef-sdw09{@include box-shadow(0 0 5px rgba($cl-shadow, .9));}
+.ef-sdw01{@include box-shadow(0 0 7px rgba($cl-shadow, .1));}
+.ef-sdw02{@include box-shadow(0 0 7px rgba($cl-shadow, .2));}
+.ef-sdw03{@include box-shadow(0 0 7px rgba($cl-shadow, .3));}
+.ef-sdw04{@include box-shadow(0 0 7px rgba($cl-shadow, .4));}
+.ef-sdw05{@include box-shadow(0 0 7px rgba($cl-shadow, .5));}
+.ef-sdw06{@include box-shadow(0 0 7px rgba($cl-shadow, .6));}
+.ef-sdw07{@include box-shadow(0 0 7px rgba($cl-shadow, .7));}
+.ef-sdw08{@include box-shadow(0 0 7px rgba($cl-shadow, .8));}
+.ef-sdw09{@include box-shadow(0 0 7px rgba($cl-shadow, .9));}
 //right
-.ef-sdwr01{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow, .1));}
-.ef-sdwr02{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow, .2));}
-.ef-sdwr03{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow, .3));}
-.ef-sdwr04{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow, .4));}
-.ef-sdwr05{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow, .5));}
-.ef-sdwr06{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow, .6));}
-.ef-sdwr07{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow, .7));}
-.ef-sdwr08{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow, .8));}
-.ef-sdwr09{@include box-shadow(3px 3px 5px -2px rgba($cl-shadow, .9));}
+.ef-sdwr01{@include box-shadow(3px 3px 7px -2px rgba($cl-shadow, .1));}
+.ef-sdwr02{@include box-shadow(3px 3px 7px -2px rgba($cl-shadow, .2));}
+.ef-sdwr03{@include box-shadow(3px 3px 7px -2px rgba($cl-shadow, .3));}
+.ef-sdwr04{@include box-shadow(3px 3px 7px -2px rgba($cl-shadow, .4));}
+.ef-sdwr05{@include box-shadow(3px 3px 7px -2px rgba($cl-shadow, .5));}
+.ef-sdwr06{@include box-shadow(3px 3px 7px -2px rgba($cl-shadow, .6));}
+.ef-sdwr07{@include box-shadow(3px 3px 7px -2px rgba($cl-shadow, .7));}
+.ef-sdwr08{@include box-shadow(3px 3px 7px -2px rgba($cl-shadow, .8));}
+.ef-sdwr09{@include box-shadow(3px 3px 7px -2px rgba($cl-shadow, .9));}
 //bottom
-.ef-sdwb01{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow, .1));}
-.ef-sdwb02{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow, .2));}
-.ef-sdwb03{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow, .3));}
-.ef-sdwb04{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow, .4));}
-.ef-sdwb05{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow, .5));}
-.ef-sdwb06{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow, .6));}
-.ef-sdwb07{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow, .7));}
-.ef-sdwb08{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow, .8));}
-.ef-sdwb09{@include box-shadow(0px 6px 5px -4px rgba($cl-shadow, .9));}
+.ef-sdwb01{@include box-shadow(0px 6px 7px -4px rgba($cl-shadow, .1));}
+.ef-sdwb02{@include box-shadow(0px 6px 7px -4px rgba($cl-shadow, .2));}
+.ef-sdwb03{@include box-shadow(0px 6px 7px -4px rgba($cl-shadow, .3));}
+.ef-sdwb04{@include box-shadow(0px 6px 7px -4px rgba($cl-shadow, .4));}
+.ef-sdwb05{@include box-shadow(0px 6px 7px -4px rgba($cl-shadow, .5));}
+.ef-sdwb06{@include box-shadow(0px 6px 7px -4px rgba($cl-shadow, .6));}
+.ef-sdwb07{@include box-shadow(0px 6px 7px -4px rgba($cl-shadow, .7));}
+.ef-sdwb08{@include box-shadow(0px 6px 7px -4px rgba($cl-shadow, .8));}
+.ef-sdwb09{@include box-shadow(0px 6px 7px -4px rgba($cl-shadow, .9));}
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "view"
@@ -1678,7 +1683,7 @@ a.is-disabled{
 /* =============================================================
  ▼ centering
 ============================================================== */
-.ef-box-center{margin:auto;}
+.ef-box-centered{margin:auto;}
 /* =============================================================
  ▼ float
 ============================================================== */

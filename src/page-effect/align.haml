@@ -11,6 +11,7 @@
     %meta(name="description" content="alignはテキストとボックス要素のセンタリングの説明です。日本語の説明付きで初心者にも安心。軽量で豊富なパーツのcssフレームワークはFivee-baseが便利です。")
     %meta(name="keywords" content="css,フレームワーク,レスポンシブ,フロントエンド")
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    %meta(name="format-detection" content="telephone=no")
     %meta(content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport")
     /[if lte IE 9] <script src="../js/vendor/html5shiv/dist/html5shiv.min.js"></script>
     %link(href="../js/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css")
@@ -21,7 +22,7 @@
   %body.effect-class-align
     / header//////////////////////////////////////////////
     %header.page-header
-      .st-body.ef-posi-fix.js-aside-remove
+      .st-body.ef-posi-fix.js-aside-remove.js-posi-remove
         .st-inner.ef-float
           .ef-float-left.ef-mgl-10.ef-mgr7.rs3-hide
             %a.ef-w30.js-aside-main-open(href="#{v}")
@@ -370,6 +371,11 @@
                               %ul.ef-float3
                                 %li.ef-mgl3
                                   vertical
+                          %li
+                            %a(href="../page-effect/centered.html")
+                              %ul.ef-float3
+                                %li.ef-mgl3
+                                  centered
                       %li.js-nav-main-parent3
                         %a(href="#{v}")
                           %ul.ef-float3
@@ -523,7 +529,7 @@
                           align
                       %li
                         %small.is-nobold.ef-fs14
-                          alignはテキストとボックス要素のセンタリングの説明です。
+                          alignはテキストの配置位置を指定することができます。
                 // breadcrumb//////////////////////////////////////////////
                 .cp-breadcrumb-model1.ef-mgb20
                   .st-inner.ef-float
@@ -561,7 +567,7 @@
                                 %h2
                                   align
                           .example-summary.ef-fs12.ef-mgb30
-                            テキスト要素の位置指定についての説明です。
+                            テキスト要素を左、中央、右配置することができます。
                           .example-box.ef-mgb40
                             // example code ///////////////////////////
                             .ef-txt-left
@@ -577,31 +583,6 @@
                                   show html
                           .example-box-html.js-example-tag-num03-02-00(style="display:none;")
                             %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
-                          %hr.cp-hr1-dotted.ef-pdt60
-                      // example01 //////////////////////////////////
-                      %section#js-pageTop1.examle-wrap.ef-mgb20
-                        .st-inner
-                          .example-title.ef-mgb3
-                            %ul.ef-float.ef-lh25
-                              %li
-                                %h2
-                                  align
-                                  %span.ef-fs14
-                                    (box-center)
-                          .example-summary.ef-fs12.ef-mgb30
-                            ボックス要素のセンタリングについての説明です。
-                          .example-box.ef-mgb40
-                            // example code ///////////////////////////
-                            .ef-box-center.ef-w100
-                              .ef-cl-theme.ef-txt-white.ef-txt-center
-                                box-center
-                          .example-btn
-                            %ul.ef-float7
-                              %li
-                                %a.cp-btn.js-html-show.js-example-num03-02-01-00(href="#{v}")
-                                  show html
-                          .example-box-html.js-example-tag-num03-02-01(style="display:none;")
-                            %textarea.cp-textarea.ef-w100p.ef-h300.ef-mgt10
     / footer/////////////////////////////////////////////
     %footer.page-footer
       .st-body.ef-posi-fix
@@ -614,7 +595,13 @@
         .md-nav-slide.rs1-show.js-nav-slide
           .st-body
             .st-inner
-              %ul.ef-lh40
+              .ef-mgb7.ef-pdl10.ef-pdr10
+                %ul.search.cp-input-icon-right
+                  %li
+                    %i.fa.fa-fw.fa-search
+                  %li
+                    %input.cp-input.ef-w100p.js-search(type="text" placeholder="キーワード検索")
+              %ul.ef-lh40.cp-list-hover.ef-cp-gray
                 %li
                   %a(href="https://twitter.com/plain_web/" target="_blank")
                     %ul.ef-float3
@@ -627,7 +614,7 @@
                         導入方法
                       %li
                         %span.cp-badge.ef-cp-red
-                          53
+                          18
                 %li
                   %a.js-popup-open.js-tpl1(href="#{v}")
                     %ul.ef-float3
@@ -639,12 +626,17 @@
                       %li.js-ic-arrow
                         %i.fa.fa-caret-down
                 %li
-                  %a.js-popup-open.is-fixed.js-tpl0(href="#{v}")
-                    %ul.ef-float3
-                      %li
-                        Your name
-                      %li.js-ic-arrow
-                        %i.fa.fa-caret-down
+                  %a(href="https://github.com/plain-web/fivee-base/" target="_blank")
+                    Github
+                %li
+                  %a(href="../../../memoru/")
+                    Memoru
+                %li
+                  %a(href="../../../")
+                    Plain-Web
+                %li
+                  %a(href="#{v}")
+                    ログアウト
         / popup/////////////////////////////////////////////
         .md-popup.js-popup(style="display:none;")
           /popup contents type 'js-tpl0'

@@ -1,7 +1,7 @@
 /*! ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
  * Fivee-base
- * ver.1.6.5 / 2016.6.20
+ * ver.2.0.0 / 2016.11.23
  * http://plain-web.com/fivee-base/apps/
  * Released under MIT license. Copyright 2016 Yusuke Maruyama.
  *
@@ -373,7 +373,7 @@ function toolTipOn(target){
   tipBody.css({
     top: topPosi - tipHeight - 7,
     left: leftPosi,
-    marginTop:-fixContentsRemoveVal + 'px'
+    // marginTop:-fixContentsRemoveVal + 'px'
   });
   tip.addClass('is-show');
 };
@@ -489,7 +489,6 @@ var popupHandler = {
         bottom: 'auto',
         right: 'auto',
         left: leftPosi,
-        marginTop:-fixContentsRemoveVal + 'px'
       }).removeClass(popupPosiFIx);
     }
     //arrow
@@ -594,6 +593,8 @@ $('.js-message-close').on('click', function(){
 ======================================================================== */
 var toastWrap = '.js-toast';
 var toastTrigger = '.js-toast-open';
+var toastCenteredWrap = '.js-toast-centered';
+var toastCenteredTrigger = '.js-toast-centered-open';
 var speedFadeout = 700;
 var speedTimer = 4000;
 var toastTImer;
@@ -615,6 +616,31 @@ $(toastTrigger).on('click', function(){
 
   $('.js-toast-close').on('click', function(){
     $( toastWrap + ' > .st-body' + targetClass).hide();
+    clearTimeout(toastTImer);　
+  });
+});
+
+// centered
+$(toastCenteredTrigger).on('click', function(){
+  clickThis = $(this);
+  returnClass = 'js-tpl';
+  targetClass = thisClassGet(clickThis, returnClass);
+
+  clearTimeout(toastTImer);
+  $( toastCenteredWrap + ' > .st-body').hide();
+  var targetHeight = $( toastCenteredWrap + ' > .st-body' + targetClass).css('margin-top', '').show().outerHeight()/2;
+  $( toastCenteredWrap + ' > .st-body' + targetClass).css('margin-top', -targetHeight);
+  $('.js-cartain').show();
+ 
+  //set　timer
+  toastTImer = setTimeout( function(){ 
+    $( toastCenteredWrap + ' > .st-body' + targetClass).fadeOut(speedFadeout);
+    $('.js-cartain').fadeOut(speedFadeout);
+  }, speedTimer);
+
+  $('.js-toast-close, .js-cartain').on('click', function(){
+    $( toastCenteredWrap + ' > .st-body' + targetClass).hide();
+    $('.js-cartain').fadeOut(speedFadeout);
     clearTimeout(toastTImer);　
   });
 });
@@ -1254,6 +1280,7 @@ if(asideTriClass.length){
   var asideFlg = 0;
   var asideClass = $('.js-aside-main');
   var removeTarget = '.js-aside-main, .js-aside-remove';
+  var pageContents = $('.js-page-contents')
 
   asideTriClass.on('click', function(){
     asideFlg++;
@@ -1261,6 +1288,7 @@ if(asideTriClass.length){
     // click trigger
     if(asideFlg === 1){
       asideClass.addClass('is-transition').delay(500).addClass('is-open');
+      pageContents.addClass('is-transition').addClass('is-behind');
 
       // click document
       $(document).on('click', function(e){
@@ -1277,6 +1305,9 @@ if(asideTriClass.length){
   // close aside
   function asideClose(){
     asideClass.removeClass('is-open').delay(500).queue(function() {
+      $(this).removeClass('is-transition').dequeue();
+    });
+    pageContents.removeClass('is-behind').delay(500).queue(function() {
       $(this).removeClass('is-transition').dequeue();
     });
     asideFlg = 0;

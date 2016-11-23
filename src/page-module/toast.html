@@ -8,6 +8,7 @@
   <meta content="表示して数秒間で消えるメッセージの説明です。日本語の説明付きで初心者にも安心。軽量で豊富なパーツのcssフレームワークはFivee-baseが便利です。" name="description">
   <meta content="css,フレームワーク,レスポンシブ,フロントエンド" name="keywords">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="telephone=no" name="format-detection">
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
   <!--[if lte IE 9]> <script src="../js/vendor/html5shiv/dist/html5shiv.min.js"></script> <![endif]-->
   <link href="../js/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -18,7 +19,7 @@
 <body class="module-toast">
   <!-- header////////////////////////////////////////////// -->
   <header class="page-header">
-    <div class="st-body ef-posi-fix js-aside-remove">
+    <div class="st-body ef-posi-fix js-aside-remove js-posi-remove">
       <div class="st-inner ef-float">
         <div class="ef-float-left ef-mgl-10 ef-mgr7 rs3-hide">
           <a class="ef-w30 js-aside-main-open" href="javascript:void(0);">
@@ -628,6 +629,15 @@
                             </ul>
                           </a>
                         </li>
+                        <li>
+                          <a href="../page-effect/centered.html">
+                            <ul class="ef-float3">
+                              <li class="ef-mgl3">
+                                centered
+                              </li>
+                            </ul>
+                          </a>
+                        </li>
                       </ul>
                     </li>
                     <li class="js-nav-main-parent3">
@@ -1008,7 +1018,7 @@
                                 <span class="ef-txt-red">
                                   js-tpl*
                                 </span>
-                                で判定させています。（以後、これをテンプレートと呼びます。テンプレートは複数設置できます）
+                                で判定させています。toastの横幅、表示位置（画面上部からの距離）もこのクラスに指定します。
                                 <br>
                                 <br>
                                 toastを非表示にするクラス名は
@@ -1037,6 +1047,96 @@
                         <div class="example-box-html js-example-tag-num04-08-00" style="display:none;">
                           <textarea class="cp-textarea ef-w100p ef-h300 ef-mgt10"></textarea>
                         </div>
+                        <hr class="cp-hr1-dotted ef-pdt60">
+                      </div>
+                    </section>
+                    <!-- / example001 ////////////////////////////////// -->
+                    <section class="examle-wrap ef-mgb20" id="js-pageTop1">
+                      <div class="st-inner">
+                        <div class="example-title ef-mgb3">
+                          <ul class="ef-float ef-lh25">
+                            <li>
+                              <h2>
+                                toast
+                                <span class="ef-fs14">
+                                  (centered)
+                                </span>
+                              </h2>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="example-summary ef-fs12 ef-mgb30">
+                          toast(centered)は画面中央にメッセージを表示させます。
+                        </div>
+                        <div class="example-box ef-mgb40">
+                          <!-- / example code /////////////////////////// -->
+                          <ul class="ef-float10">
+                            <li>
+                              <a class="cp-btn js-toast-centered-open js-tpl0" href="javascript:void(0);">
+                                alert
+                              </a>
+                            </li>
+                            <li>
+                              <a class="cp-btn js-toast-centered-open js-tpl1" href="javascript:void(0);">
+                                success
+                              </a>
+                            </li>
+                            <li>
+                              <a class="cp-btn js-toast-centered-open js-tpl2" href="javascript:void(0);">
+                                info
+                              </a>
+                            </li>
+                            <li>
+                              <a class="cp-btn js-toast-centered-open js-tpl3" href="javascript:void(0);">
+                                warning
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="example-remarks ef-mgb20">
+                          <div class="cp-remarks ef-cp-blue ef-w100p">
+                            <div class="st-inner">
+                              <div class="st-outer ef-lh20">
+                                サンプルはtoast内に4つの
+                                <span class="ef-txt-red">
+                                  st-body
+                                </span>
+                                を用意して違うタイプのtoastに見せています。それぞれの
+                                <span class="ef-txt-red">
+                                  st-body
+                                </span>
+                                を呼び出すのはトリガーに付与された
+                                <span class="ef-txt-red">
+                                  js-tpl*
+                                </span>
+                                で判定させています。
+                                <br>
+                                centerdは
+                                <a href="cartain.html">
+                                  cartain
+                                </a>
+                                が必要です。背景をクリックする事でtoastを閉じることができます。toastとcartainはページ下部に配置させてください。
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="example-btn">
+                          <ul class="ef-float7">
+                            <li>
+                              <a class="cp-btn js-html-show js-example-num04-08-01-01" href="javascript:void(0);">
+                                show toast
+                              </a>
+                            </li>
+                            <li>
+                              <a class="cp-btn js-html-show js-example-num04-08-01-02" href="javascript:void(0);">
+                                show trigger
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="example-box-html js-example-tag-num04-08-01" style="display:none;">
+                          <textarea class="cp-textarea ef-w100p ef-h300 ef-mgt10"></textarea>
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1063,7 +1163,17 @@
       <div class="md-nav-slide rs1-show js-nav-slide">
         <div class="st-body">
           <div class="st-inner">
-            <ul class="ef-lh40">
+            <div class="ef-mgb7 ef-pdl10 ef-pdr10">
+              <ul class="search cp-input-icon-right">
+                <li>
+                  <i class="fa fa-fw fa-search"></i>
+                </li>
+                <li>
+                  <input class="cp-input ef-w100p js-search" placeholder="キーワード検索" type="text">
+                </li>
+              </ul>
+            </div>
+            <ul class="ef-lh40 cp-list-hover ef-cp-gray">
               <li>
                 <a href="https://twitter.com/plain_web/" target="_blank">
                   <ul class="ef-float3">
@@ -1081,7 +1191,7 @@
                     </li>
                     <li>
                       <span class="cp-badge ef-cp-red">
-                        53
+                        18
                       </span>
                     </li>
                   </ul>
@@ -1105,15 +1215,23 @@
                 </a>
               </li>
               <li>
-                <a class="js-popup-open is-fixed js-tpl0" href="javascript:void(0);">
-                  <ul class="ef-float3">
-                    <li>
-                      Your name
-                    </li>
-                    <li class="js-ic-arrow">
-                      <i class="fa fa-caret-down"></i>
-                    </li>
-                  </ul>
+                <a href="https://github.com/plain-web/fivee-base/" target="_blank">
+                  Github
+                </a>
+              </li>
+              <li>
+                <a href="../../../memoru/">
+                  Memoru
+                </a>
+              </li>
+              <li>
+                <a href="../../../">
+                  Plain-Web
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">
+                  ログアウト
                 </a>
               </li>
             </ul>
@@ -1225,6 +1343,14 @@
                 <li>
                   <a href="#js-pageTop0">
                     toast
+                  </a>
+                </li>
+                <li>
+                  <a href="#js-pageTop1">
+                    toast
+                    <span class="ef-fs11">
+                      (centered)
+                    </span>
                   </a>
                 </li>
               </ul>
@@ -1373,6 +1499,59 @@
           </div>
         </div>
       </div>
+      <!-- toast centered///////////////////////////////////////////// -->
+      <div class="md-toast-centered js-toast-centered">
+        <!-- toast contents type 'js-tpl0' -->
+        <div class="st-body md-toast-alert js-tpl0">
+          <div class="st-inner ef-sdw02">
+            <dl>
+              <dt class="ef-lh28 ef-fs18"><i class="fa fa-exclamation-triangle ef-mgr3"></i>Error
+              </dt>
+              <dd class="ef-fs16">
+                message here
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <!-- toast contents type 'js-tpl1' -->
+        <div class="st-body md-toast-success js-tpl1">
+          <div class="st-inner ef-sdw02">
+            <dl>
+              <dt class="ef-lh30 ef-fs24"><i class="fa fa-check-circle ef-mgr3"></i>Success
+              </dt>
+              <dd class="ef-fs16">
+                message here
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <!-- toast contents type 'js-tpl2' -->
+        <div class="st-body md-toast-info js-tpl2">
+          <div class="st-inner ef-sdw02">
+            <dl>
+              <dt class="ef-lh28 ef-fs18"><i class="fa fa-info-circle ef-mgr3"></i>Info
+              </dt>
+              <dd class="ef-fs16">
+                message here
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <!-- toast contents type 'js-tpl3' -->
+        <div class="st-body md-toast-warning js-tpl3">
+          <div class="st-inner ef-sdw02">
+            <dl>
+              <dt class="ef-lh28 ef-fs18"><i class="fa fa-exclamation-circle ef-mgr3"></i>Warning
+              </dt>
+              <dd class="ef-fs16">
+                message here
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <!-- cartain//////////////////////////////////////////// -->
+      <div class="md-cartain js-cartain ef-bg-gray ef-op05" style="display:none;"></div>
     </div>
   </div>
   <!-- script//////////////////////////////////////////// -->

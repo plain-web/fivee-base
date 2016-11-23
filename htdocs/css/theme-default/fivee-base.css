@@ -2,7 +2,7 @@
 /*! ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  *
  * Fivee-base
- * ver.1.6.5 / 2016.6.20
+ * ver.2.0.0 / 2016.11.23
  * http://plain-web.com/fivee-base/apps/
  * Released under MIT license. Copyright 2016 Yusuke Maruyama.
  *
@@ -37,7 +37,7 @@ body {
   background: #f6f6f6;
   font-size: 14px;
   color: #333;
-  line-height: 1.8;
+  line-height: 1.6;
   font-family: Meiryo, メイリオ, Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
 }
 
@@ -403,7 +403,7 @@ a i:hover {
 .cp-input,
 .cp-textarea {
   display: block;
-  line-height: 1.8;
+  line-height: 1.6;
   padding: 5px 7px;
   font-size: 100%;
   vertical-align: middle;
@@ -417,6 +417,36 @@ a i:hover {
   border-radius: 3px;
   font-family: Meiryo, メイリオ, Arial, Verdana, "Helvetica Neue", Helvetica, sans-serif;
   vertical-align: middle;
+}
+
+.cp-form:placeholder-shown, .cp-select:placeholder-shown,
+.cp-input:placeholder-shown,
+.cp-textarea:placeholder-shown {
+  color: #666;
+}
+
+.cp-form::-webkit-input-placeholder, .cp-select::-webkit-input-placeholder,
+.cp-input::-webkit-input-placeholder,
+.cp-textarea::-webkit-input-placeholder {
+  color: #666;
+}
+
+.cp-form:-moz-placeholder, .cp-select:-moz-placeholder,
+.cp-input:-moz-placeholder,
+.cp-textarea:-moz-placeholder {
+  color: #666;
+}
+
+.cp-form::-moz-placeholder, .cp-select::-moz-placeholder,
+.cp-input::-moz-placeholder,
+.cp-textarea::-moz-placeholder {
+  color: #666;
+}
+
+.cp-form:-ms-input-placeholder, .cp-select:-ms-input-placeholder,
+.cp-input:-ms-input-placeholder,
+.cp-textarea:-ms-input-placeholder {
+  color: #666;
 }
 
 .cp-select.ef-rd0,
@@ -2049,8 +2079,7 @@ a.cp-badge.ef-cp-yellow:hover {
   text-align: center;
   min-width: 15px;
   color: #fff;
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 14px;
   position: relative;
 }
 
@@ -2137,8 +2166,7 @@ a.cp-tag.ef-cp-yellow:hover i, a.ef-cp-yellow.cp-tag-mini:hover i {
 
 .cp-tag-mini {
   font-size: 11px;
-  line-height: 11px;
-  padding: 4px 7px;
+  padding: 2px 7px;
 }
 
 /*
@@ -2641,7 +2669,7 @@ a.cp-tag.ef-cp-yellow:hover i, a.ef-cp-yellow.cp-tag-mini:hover i {
 ============================================================== */
 .md-modal > .st-body {
   position: fixed;
-  top: 80px;
+  top: 10%;
   right: auto;
   bottom: auto;
   left: 50%;
@@ -2680,7 +2708,7 @@ a.cp-tag.ef-cp-yellow:hover i, a.ef-cp-yellow.cp-tag-mini:hover i {
   right: 5px;
   bottom: auto;
   left: auto;
-  margin-top: -15px;
+  margin-top: -18px;
 }
 
 .md-modal-body {
@@ -2829,7 +2857,7 @@ a.cp-tag.ef-cp-yellow:hover i, a.ef-cp-yellow.cp-tag-mini:hover i {
  ▼ default table
 ============================================================= */
 table.md-table {
-  line-height: 1.8;
+  line-height: 1.6;
   border-width: 1px;
   border-style: solid;
   border-color: #bbb;
@@ -2863,7 +2891,10 @@ table.md-table thead.is-hover tr.is-reset:hover td, table.md-table tbody.is-hove
 }
 
 table.md-table tr th, table.md-table colgroup th {
-  padding: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
   font-size: 14px;
   background: #e5e5e5;
   border-right-width: 1px;
@@ -2880,7 +2911,10 @@ table.md-table tr th a, table.md-table tr th i, table.md-table colgroup th a, ta
 }
 
 table.md-table tr td, table.md-table colgroup td {
-  padding: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
   border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #bbb;
@@ -3648,7 +3682,7 @@ table.md-table tr.ef-brdl0 th, table.md-table tr.ef-brdl0 td, table.md-table col
  * "toast"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
-.md-toast {
+.md-toast, .md-toast-centered {
   position: fixed;
   top: 0;
   right: auto;
@@ -3656,21 +3690,21 @@ table.md-table tr.ef-brdl0 th, table.md-table tr.ef-brdl0 td, table.md-table col
   left: 50%;
 }
 
-.md-toast > .st-body {
+.md-toast > .st-body, .md-toast-centered > .st-body {
   position: relative;
   display: none;
 }
 
-.md-toast > .st-body .st-inner {
+.md-toast > .st-body .st-inner, .md-toast-centered > .st-body .st-inner {
   padding: 10px 20px 10px 15px;
   border-radius: 3px;
 }
 
-.md-toast > .st-body .st-inner i {
+.md-toast > .st-body .st-inner i, .md-toast-centered > .st-body .st-inner i {
   font-size: 18px;
 }
 
-.md-toast > .st-body.is-open {
+.md-toast > .st-body.is-open, .md-toast-centered > .st-body.is-open {
   display: block;
 }
 
@@ -3733,6 +3767,27 @@ table.md-table tr.ef-brdl0 th, table.md-table tr.ef-brdl0 td, table.md-table col
 
 .md-toast-warning > .st-inner i {
   color: #857F6A;
+}
+
+.md-toast-centered {
+  position: fixed;
+  top: 50%;
+  right: 7%;
+  bottom: auto;
+  left: 7%;
+  z-index: 1;
+}
+
+.md-toast-centered > .st-body {
+  width: 100%;
+}
+
+.md-toast-centered > .st-body .st-inner {
+  padding: 18px 30px 18px 25px;
+}
+
+.md-toast-centered > .st-body .st-inner i {
+  font-size: 22px;
 }
 
 /*
@@ -4034,9 +4089,9 @@ table.md-table tr.ef-brdl0 th, table.md-table tr.ef-brdl0 td, table.md-table col
 }
 
 .md-nav-slide.is-open {
-  -ms-transform: translateY(50px);
-  transform: translateY(50px);
-  box-shadow: rgba(204, 204, 204, 0.9) 0 0 60px;
+  -ms-transform: translateY(46px);
+  transform: translateY(46px);
+  box-shadow: rgba(51, 51, 51, 0.9) 0 0 60px;
 }
 
 .md-nav-slide .st-inner {
@@ -4044,7 +4099,7 @@ table.md-table tr.ef-brdl0 th, table.md-table tr.ef-brdl0 td, table.md-table col
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #ccc;
-  background: #45779a;
+  background: #fff;
 }
 
 .md-nav-slide .st-inner i, .md-nav-slide .st-inner a {
@@ -4095,7 +4150,7 @@ table.md-table tr.ef-brdl0 th, table.md-table tr.ef-brdl0 td, table.md-table col
 
 .md-scrolltop .st-body .st-inner a {
   border-radius: 5px;
-  padding: 6px 15px;
+  padding: 8px 15px;
   background: #666;
   display: block;
   opacity: 0.5;
@@ -4467,6 +4522,11 @@ a.ef-txt-hover i:hover {
 
 .is-nobold {
   font-weight: normal;
+}
+
+.is-breakword {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 a.is-link {
@@ -10303,111 +10363,111 @@ a.is-notouch:hover {
  ▼ shadow box
 ============================================================== */
 .ef-sdw01 {
-  box-shadow: 0 0 5px rgba(204, 204, 204, 0.1);
+  box-shadow: 0 0 7px rgba(51, 51, 51, 0.1);
 }
 
 .ef-sdw02 {
-  box-shadow: 0 0 5px rgba(204, 204, 204, 0.2);
+  box-shadow: 0 0 7px rgba(51, 51, 51, 0.2);
 }
 
 .ef-sdw03 {
-  box-shadow: 0 0 5px rgba(204, 204, 204, 0.3);
+  box-shadow: 0 0 7px rgba(51, 51, 51, 0.3);
 }
 
 .ef-sdw04 {
-  box-shadow: 0 0 5px rgba(204, 204, 204, 0.4);
+  box-shadow: 0 0 7px rgba(51, 51, 51, 0.4);
 }
 
 .ef-sdw05 {
-  box-shadow: 0 0 5px rgba(204, 204, 204, 0.5);
+  box-shadow: 0 0 7px rgba(51, 51, 51, 0.5);
 }
 
 .ef-sdw06 {
-  box-shadow: 0 0 5px rgba(204, 204, 204, 0.6);
+  box-shadow: 0 0 7px rgba(51, 51, 51, 0.6);
 }
 
 .ef-sdw07 {
-  box-shadow: 0 0 5px rgba(204, 204, 204, 0.7);
+  box-shadow: 0 0 7px rgba(51, 51, 51, 0.7);
 }
 
 .ef-sdw08 {
-  box-shadow: 0 0 5px rgba(204, 204, 204, 0.8);
+  box-shadow: 0 0 7px rgba(51, 51, 51, 0.8);
 }
 
 .ef-sdw09 {
-  box-shadow: 0 0 5px rgba(204, 204, 204, 0.9);
+  box-shadow: 0 0 7px rgba(51, 51, 51, 0.9);
 }
 
 .ef-sdwr01 {
-  box-shadow: 3px 3px 5px -2px rgba(204, 204, 204, 0.1);
+  box-shadow: 3px 3px 7px -2px rgba(51, 51, 51, 0.1);
 }
 
 .ef-sdwr02 {
-  box-shadow: 3px 3px 5px -2px rgba(204, 204, 204, 0.2);
+  box-shadow: 3px 3px 7px -2px rgba(51, 51, 51, 0.2);
 }
 
 .ef-sdwr03 {
-  box-shadow: 3px 3px 5px -2px rgba(204, 204, 204, 0.3);
+  box-shadow: 3px 3px 7px -2px rgba(51, 51, 51, 0.3);
 }
 
 .ef-sdwr04 {
-  box-shadow: 3px 3px 5px -2px rgba(204, 204, 204, 0.4);
+  box-shadow: 3px 3px 7px -2px rgba(51, 51, 51, 0.4);
 }
 
 .ef-sdwr05 {
-  box-shadow: 3px 3px 5px -2px rgba(204, 204, 204, 0.5);
+  box-shadow: 3px 3px 7px -2px rgba(51, 51, 51, 0.5);
 }
 
 .ef-sdwr06 {
-  box-shadow: 3px 3px 5px -2px rgba(204, 204, 204, 0.6);
+  box-shadow: 3px 3px 7px -2px rgba(51, 51, 51, 0.6);
 }
 
 .ef-sdwr07 {
-  box-shadow: 3px 3px 5px -2px rgba(204, 204, 204, 0.7);
+  box-shadow: 3px 3px 7px -2px rgba(51, 51, 51, 0.7);
 }
 
 .ef-sdwr08 {
-  box-shadow: 3px 3px 5px -2px rgba(204, 204, 204, 0.8);
+  box-shadow: 3px 3px 7px -2px rgba(51, 51, 51, 0.8);
 }
 
 .ef-sdwr09 {
-  box-shadow: 3px 3px 5px -2px rgba(204, 204, 204, 0.9);
+  box-shadow: 3px 3px 7px -2px rgba(51, 51, 51, 0.9);
 }
 
 .ef-sdwb01 {
-  box-shadow: 0px 6px 5px -4px rgba(204, 204, 204, 0.1);
+  box-shadow: 0px 6px 7px -4px rgba(51, 51, 51, 0.1);
 }
 
 .ef-sdwb02 {
-  box-shadow: 0px 6px 5px -4px rgba(204, 204, 204, 0.2);
+  box-shadow: 0px 6px 7px -4px rgba(51, 51, 51, 0.2);
 }
 
 .ef-sdwb03 {
-  box-shadow: 0px 6px 5px -4px rgba(204, 204, 204, 0.3);
+  box-shadow: 0px 6px 7px -4px rgba(51, 51, 51, 0.3);
 }
 
 .ef-sdwb04 {
-  box-shadow: 0px 6px 5px -4px rgba(204, 204, 204, 0.4);
+  box-shadow: 0px 6px 7px -4px rgba(51, 51, 51, 0.4);
 }
 
 .ef-sdwb05 {
-  box-shadow: 0px 6px 5px -4px rgba(204, 204, 204, 0.5);
+  box-shadow: 0px 6px 7px -4px rgba(51, 51, 51, 0.5);
 }
 
 .ef-sdwb06 {
-  box-shadow: 0px 6px 5px -4px rgba(204, 204, 204, 0.6);
+  box-shadow: 0px 6px 7px -4px rgba(51, 51, 51, 0.6);
 }
 
 .ef-sdwb07 {
-  box-shadow: 0px 6px 5px -4px rgba(204, 204, 204, 0.7);
+  box-shadow: 0px 6px 7px -4px rgba(51, 51, 51, 0.7);
 }
 
 .ef-sdwb08 {
-  box-shadow: 0px 6px 5px -4px rgba(204, 204, 204, 0.8);
+  box-shadow: 0px 6px 7px -4px rgba(51, 51, 51, 0.8);
 }
 
 .ef-sdwb09 {
-  box-shadow: 0px 6px 5px -4px rgba(204, 204, 204, 0.9);
+  box-shadow: 0px 6px 7px -4px rgba(51, 51, 51, 0.9);
 }
 
 /*
@@ -10477,7 +10537,7 @@ a.is-notouch:hover {
 /* =============================================================
  ▼ centering
 ============================================================== */
-.ef-box-center {
+.ef-box-centered {
   margin: auto;
 }
 
@@ -11970,41 +12030,17 @@ dl.ef-float > dd::after {
   display: none;
 }
 
-@media (max-width: 767px) {
-  .rs3-show {
-    display: none;
+@media (min-width: 1040px) {
+  .rs-box-centered {
+    padding-left: 30%;
+    padding-right: 30%;
   }
-  .rs3-hide {
-    display: block;
-  }
-  .rs3-float > .ef-float-left,
-  .rs3-float > .ef-float-right {
-    float: none;
-    width: 100%;
-  }
-  .rs3-float > .ef-float-left > .st-inner,
-  .rs3-float > .ef-float-right > .st-inner {
-    padding: 0;
-  }
-  ul.rs3-ul-float > li,
-  ul.rs3-ul-float > li.ef-float-right {
-    float: none;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  dl.rs3-dl-float > dt,
-  dl.rs3-dl-float > dd {
-    float: none;
-    width: 100%;
-  }
-  dl.rs3-dl-float > dt > .st-inner,
-  dl.rs3-dl-float > dt > img,
-  dl.rs3-dl-float > dd > .st-inner,
-  dl.rs3-dl-float > dd > img {
-    padding: 0;
-  }
-  dl.rs3-dl-float > dd {
-    margin-left: 0;
+}
+
+@media (max-width: 1039px) {
+  .rs-box-centered {
+    padding-left: 25%;
+    padding-right: 25%;
   }
 }
 
@@ -12050,6 +12086,48 @@ dl.ef-float > dd::after {
   dl.rs2-dl-float > dd,
   dl.rs3-dl-nofloat > dd {
     margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .rs3-show {
+    display: none;
+  }
+  .rs3-hide {
+    display: block;
+  }
+  .rs3-float > .ef-float-left,
+  .rs3-float > .ef-float-right {
+    float: none;
+    width: 100%;
+  }
+  .rs3-float > .ef-float-left > .st-inner,
+  .rs3-float > .ef-float-right > .st-inner {
+    padding: 0;
+  }
+  ul.rs3-ul-float > li,
+  ul.rs3-ul-float > li.ef-float-right {
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  dl.rs3-dl-float > dt,
+  dl.rs3-dl-float > dd {
+    float: none;
+    width: 100%;
+  }
+  dl.rs3-dl-float > dt > .st-inner,
+  dl.rs3-dl-float > dt > img,
+  dl.rs3-dl-float > dd > .st-inner,
+  dl.rs3-dl-float > dd > img {
+    padding: 0;
+  }
+  dl.rs3-dl-float > dd {
+    margin-left: 0;
+  }
+  .rs-box-centered {
+    padding-left: 20%;
+    padding-right: 20%;
   }
 }
 
@@ -12172,6 +12250,19 @@ dl.ef-float > dd::after {
   dl.rs1-dl-nofloat > dd {
     margin-left: 0;
   }
+  .rs-box-centered {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 16.66667px;
+  }
+  h3 {
+    font-size: 17.5px;
+  }
 }
 
 /* =============================================================
@@ -12198,15 +12289,18 @@ dl.ef-float > dd::after {
   .md-aside-main.is-open {
     -ms-transform: translateX(0);
     transform: translateX(0);
-    box-shadow: rgba(102, 102, 102, 0.9) 0 10px 10px;
+  }
+  .page-contents > .st-body.is-behind {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 620px) {
   .md-modal > .st-body {
     width: auto;
     position: fixed;
-    top: 100px;
+    top: 10%;
     right: 20px;
     bottom: auto;
     left: 20px;

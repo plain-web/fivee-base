@@ -15,12 +15,23 @@
  * "header" "footer" "container"
  *
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ * "common"
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ */
+html, body, .page-container, .page-container > .st-body {
+  height: 100%;
+}
+
+/*
+ * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "header"
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .page-header .st-body {
   min-width: auto;
   background: #3B435B;
+  position: relative;
+  z-index: 5;
 }
 
 .page-header .st-body.ef-posi-fix {
@@ -29,11 +40,10 @@
   right: 0;
   bottom: auto;
   left: 0;
-  z-index: 5;
 }
 
 .page-header .st-body .st-inner {
-  padding: 5px 10px;
+  padding: 3px 10px;
 }
 
 .page-header .st-body .st-inner a {
@@ -64,7 +74,7 @@
   font-size: 22px;
   text-align: center;
   border-radius: 50%;
-  margin-top: 2px;
+  margin-top: 3px;
   background: #fff;
 }
 
@@ -74,7 +84,7 @@
 }
 
 .page-header .st-body .st-inner .ef-float-left > a .wrap-logo strong {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: normal;
   color: #fff;
   margin-left: 5px;
@@ -82,6 +92,7 @@
 
 .page-header .st-body .st-inner .ef-float-right > ul > li > a {
   padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .page-header .st-body .st-inner .ef-float-right > ul > li > a i {
@@ -132,10 +143,6 @@
   color: #fff;
 }
 
-.md-nav-slide .st-inner ul li a:hover {
-  background: #325670;
-}
-
 /*
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * "footer"
@@ -165,7 +172,6 @@
  * ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  */
 .page-container > .st-body {
-  margin: 50px 0 20px;
   background: #f6f6f6;
 }
 
@@ -174,15 +180,18 @@
   table-layout: fixed;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .page-container > .st-body > .st-inner .page-nav {
   display: table-cell;
+  padding: 46px 0 20px;
 }
 
 .page-container > .st-body > .st-inner .page-contents {
   display: table-cell;
   vertical-align: top;
+  padding: 46px 0 20px;
 }
 
 .page-contents > .st-body > .st-inner {
@@ -239,5 +248,11 @@
   .md-aside-main > .st-body {
     width: 100%;
     margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .md-popup > .st-body.js-tpl4 {
+    display: none;
   }
 }

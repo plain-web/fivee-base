@@ -249,6 +249,7 @@ a{
   @include border-radius(3px);
   font-family: $ff-base;
   vertical-align:middle;
+  @include placeholder($cl-plh-form);
   &:focus{
    @extend .ef-bg-focus;
    @extend .ef-brd-focus;
@@ -490,7 +491,7 @@ input[type="checkbox"]{margin:6px 0;}
   font-family:$ff-base;
   font-size:$fs-btn;
   line-height:$lh-btn;
-  @include brd(1px,solid,$cl-btn-border);
+  @include brd(1px,solid,$cl-btn-brd);
   @include border-radius(3px 3px);
   @include gradation($cl-btn-lighten, $cl-btn);
   //@include gradation-ie(#ffffffff, #ffeeeeee); // for oldie
@@ -520,13 +521,13 @@ input[type="checkbox"]{margin:6px 0;}
       color:$cl-txt;
       i{color:$cl-txt;}
       background:$cl-btn-hover; // for oldie
-      @include brd(1px,solid,$cl-btn-border);
+      @include brd(1px,solid,$cl-btn-brd);
       @include gradation($cl-btn-hover, $cl-btn-hover);
       //@include gradation-ie(#FFf2f2f2, #FFe1e1e1); // for oldie
     }
     &:active{
       background:$cl-btn-active; // for oldie
-      @include brd(1px,solid,$cl-btn-border);
+      @include brd(1px,solid,$cl-btn-brd);
       @include gradation($cl-btn-active, $cl-btn-active);
     }
     &.is-disabled{
@@ -542,7 +543,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt;
   i{color:$cl-txt;}
   background:$cl-btn-white; // for oldie
-  border-color:$cl-btn-white-border;
+  border-color:$cl-btn-white-brd;
   @include gradation($cl-btn-white-lighten, $cl-btn-white);
   &:hover,
   &.is-current{
@@ -566,7 +567,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-red; // for oldie
-  border-color:$cl-btn-red-border;
+  border-color:$cl-btn-red-brd;
   @include gradation($cl-btn-red-lighten, $cl-btn-red);
   &:hover,
   &.is-current{
@@ -590,7 +591,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-orange; // for oldie
-  border-color:$cl-btn-orange-border;
+  border-color:$cl-btn-orange-brd;
   @include gradation($cl-btn-orange-lighten, $cl-btn-orange);
   &:hover,
   &.is-current{
@@ -614,7 +615,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-blue; // for oldie
-  border-color:$cl-btn-blue-border;
+  border-color:$cl-btn-blue-brd;
   @include gradation($cl-btn-blue-lighten, $cl-btn-blue);
   &:hover,
   &.is-current{
@@ -638,7 +639,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-green; // for oldie
-  border-color:$cl-btn-green-border;
+  border-color:$cl-btn-green-brd;
   @include gradation($cl-btn-green-lighten, $cl-btn-green);
   &:hover,
   &.is-current{
@@ -662,7 +663,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt;
   i{color:$cl-txt;}
   background:$cl-btn-yellow; // for oldie
-  border-color:$cl-btn-yellow-border;
+  border-color:$cl-btn-yellow-brd;
   @include gradation($cl-btn-yellow-lighten, $cl-btn-yellow);
   &:hover,
   &.is-current{
@@ -686,7 +687,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-brown; // for oldie
-  border-color:$cl-btn-brown-border;
+  border-color:$cl-btn-brown-brd;
   @include gradation($cl-btn-brown-lighten, $cl-btn-brown);
   &:hover,
   &.is-current{
@@ -710,7 +711,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-gray; // for oldie
-  border-color:$cl-btn-gray-border;
+  border-color:$cl-btn-gray-brd;
   @include gradation($cl-btn-gray-lighten, $cl-btn-gray);
   &:hover,
   &.is-current{
@@ -734,7 +735,7 @@ input[type="checkbox"]{margin:6px 0;}
   color:$cl-txt-rev;
   i{color:$cl-txt-rev;}
   background:$cl-btn-theme; // for oldie
-  border-color:$cl-btn-theme-border;
+  border-color:$cl-btn-theme-brd;
   @include gradation($cl-btn-theme-lighten, $cl-btn-theme);
   &:hover,
   &.is-current{
@@ -1024,8 +1025,7 @@ a.cp-badge.ef-cp-yellow{
   text-align:center;
   min-width:15px;
   color:$cl-txt-rev;
-  font-size:12px;
-  line-height:20px;
+  font-size:$fs-tag;
   position:relative;
   i{color:$cl-txt-rev;}
 }
@@ -1068,9 +1068,8 @@ a.cp-tag.ef-cp-yellow{
 
 .cp-tag-mini{
   @extend .cp-tag;
-  font-size:11px;
-  line-height:11px;
-  padding:4px 7px;
+  font-size:$fs-tag-mini;
+  padding:2px 7px;
 }
 
 /*
