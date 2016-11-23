@@ -1,0 +1,3 @@
+﻿<div class="is-breakword ef-w250">
+  これは文章の折り返しを見る為のサンプルになります。これは文章の折り返しを見る為のサンプルになります。This will be a sample to see the return of the sentences.This will be a sample to see the return of the sentences.testtesttesttesttesttesttesttesttesttest
+</div>
